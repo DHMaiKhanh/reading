@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 20 — Luyện đề Nature &amp; Wildlife + Pollution &amp; Plastic Waste · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🐘 Tuần 4 · Ngày 3 — Nature &amp; Wildlife + Pollution &amp; Plastic Waste</h1>
+  <p>2 bài đọc độc lập → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~18 phút / bài</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · 18 câu · đủ dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~14–16/18</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài đọc #1 <span class="lvl">Nature &amp; Wildlife · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Race to Save Endangered Species</h3>
+    <p><span class="pn">[1]</span> Wildlife on every continent is under unprecedented pressure. Habitat destruction, poaching, and climate change have combined to push thousands of species toward extinction at a rate scientists say is far higher than the natural background level. Iconic animals such as tigers, rhinos, and elephants have seen their populations plummet over the past century, driven largely by the expansion of agriculture and human settlement into once-remote forests and savannas.</p>
+    <p class="vi-para">[1] Động vật hoang dã ở mọi lục địa đang chịu áp lực chưa từng có. Sự phá hủy môi trường sống, nạn săn bắt trộm và biến đổi khí hậu đã cùng nhau đẩy hàng nghìn loài đến bờ tuyệt chủng với tốc độ mà các nhà khoa học cho rằng cao hơn nhiều so với mức nền tự nhiên. Những loài động vật biểu tượng như hổ, tê giác và voi đã chứng kiến số lượng cá thể giảm mạnh trong thế kỷ qua, chủ yếu do sự mở rộng của nông nghiệp và khu dân cư vào các khu rừng và thảo nguyên từng biệt lập.</p>
+
+    <p><span class="pn">[2]</span> Conservationists have responded with a range of strategies, from establishing protected reserves to breeding endangered animals in captivity for eventual release into the wild. Anti-poaching units, often equipped with drones and satellite tracking, patrol vulnerable areas to deter illegal hunting. Meanwhile, community-based programmes attempt to give local residents a financial stake in preserving wildlife, on the theory that people who benefit from ecotourism are less likely to tolerate poaching.</p>
+    <p class="vi-para">[2] Các nhà bảo tồn đã ứng phó bằng nhiều chiến lược khác nhau, từ việc thành lập các khu bảo tồn đến việc nhân giống động vật nguy cấp trong điều kiện nuôi nhốt để sau đó thả về tự nhiên. Các đơn vị chống săn bắt trộm, thường được trang bị máy bay không người lái và theo dõi qua vệ tinh, tuần tra những khu vực dễ bị xâm hại để răn đe hoạt động săn bắn trái phép. Trong khi đó, các chương trình dựa vào cộng đồng cố gắng mang lại lợi ích tài chính cho người dân địa phương từ việc bảo vệ động vật hoang dã, với lý thuyết rằng những người hưởng lợi từ du lịch sinh thái sẽ ít có khả năng dung túng cho nạn săn trộm.</p>
+
+    <p><span class="pn">[3]</span> Despite these efforts, critics argue that conservation initiatives are frequently undermined by corruption, insufficient funding, and a lack of political will. In some countries, protected status exists only on paper, while enforcement remains lax. Furthermore, the illegal wildlife trade, worth billions of dollars annually, continues to thrive because demand for products such as ivory and rhino horn remains stubbornly high in certain markets.</p>
+    <p class="vi-para">[3] Dù có những nỗ lực này, những người chỉ trích cho rằng các sáng kiến bảo tồn thường xuyên bị suy yếu bởi nạn tham nhũng, nguồn tài trợ không đủ và thiếu ý chí chính trị. Ở một số quốc gia, tình trạng được bảo vệ chỉ tồn tại trên giấy tờ, trong khi việc thực thi vẫn lỏng lẻo. Hơn nữa, nạn buôn bán động vật hoang dã trái phép, trị giá hàng tỷ đô la mỗi năm, vẫn tiếp tục phát triển mạnh vì nhu cầu đối với các sản phẩm như ngà voi và sừng tê giác vẫn ở mức cao dai dẳng tại một số thị trường nhất định.</p>
+
+    <p><span class="pn">[4]</span> Nevertheless, there have been genuine success stories. The population of the southern white rhino, once reduced to a mere handful of individuals, has rebounded into the thousands thanks to decades of dedicated protection. Such cases demonstrate that extinction is not inevitable; with sufficient resources, cooperation, and public awareness, even critically endangered species can be pulled back from the brink.</p>
+    <p class="vi-para">[4] Tuy nhiên, cũng đã có những câu chuyện thành công thực sự. Số lượng tê giác trắng phương Nam, từng chỉ còn lại một số ít cá thể, đã phục hồi lên đến hàng nghìn con nhờ nhiều thập kỷ bảo vệ bền bỉ. Những trường hợp như vậy cho thấy tuyệt chủng không phải là điều tất yếu; với đủ nguồn lực, sự hợp tác và nhận thức của cộng đồng, ngay cả những loài đang nguy cấp nghiêm trọng vẫn có thể được cứu khỏi bờ vực.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. how tigers hunt in the wild</li><li>B. efforts and challenges in protecting endangered wildlife</li><li>C. the history of national parks</li><li>D. why elephants migrate seasonally</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài bàn về nguyên nhân suy giảm động vật hoang dã, các nỗ lực bảo tồn, khó khăn và thành công → ý bao trùm là B.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"plummet"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. increase steadily</li><li>B. drop sharply</li><li>C. stay stable</li><li>D. spread widely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "populations plummet" = số lượng giảm mạnh, đột ngột ≈ drop sharply.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, what is the main cause of the decline in animal populations?</div>
+    <ul><li>A. natural disasters</li><li>B. disease among animals</li><li>C. expansion of agriculture and human settlement</li><li>D. lack of food in forests</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 1: "driven largely by the expansion of agriculture and human settlement into once-remote forests and savannas."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"people who benefit"</b> refers to:</div>
+    <ul><li>A. poachers</li><li>B. conservation scientists</li><li>C. local residents who gain financially from ecotourism</li><li>D. tourists visiting zoos</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu trước nói về community-based programmes cho local residents lợi ích tài chính từ ecotourism.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that conservation laws:</div>
+    <ul><li>A. are always strictly enforced</li><li>B. sometimes exist without real enforcement</li><li>C. have eliminated the illegal wildlife trade</li><li>D. are unnecessary in most countries</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "protected status exists only on paper, while enforcement remains lax" → luật có nhưng không được thực thi nghiêm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"rebounded"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. recovered and increased again</li><li>B. disappeared completely</li><li>C. remained unchanged</li><li>D. became extinct</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "reduced to a mere handful... has rebounded into the thousands" → phục hồi và tăng trở lại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the southern white rhino in paragraph 4?</div>
+    <ul><li>A. To show that all conservation efforts fail</li><li>B. To give an example of a conservation success story</li><li>C. To describe how rhinos are hunted</li><li>D. To compare rhinos with elephants</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 mở đầu bằng "genuine success stories", rhino là ví dụ minh họa cho việc bảo tồn có thể thành công.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as conservation strategies EXCEPT:</div>
+    <ul><li>A. protected reserves</li><li>B. captive breeding programmes</li><li>C. anti-poaching drone patrols</li><li>D. banning international air travel</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều được nhắc ở đoạn 2. "Banning air travel" không được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall attitude toward the future of endangered species is best described as:</div>
+    <ul><li>A. completely hopeless</li><li>B. cautiously hopeful</li><li>C. totally indifferent</li><li>D. angrily critical of all conservationists</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài nêu cả khó khăn (đoạn 3) và thành công thực tế (đoạn 4), kết luận "extinction is not inevitable" → thận trọng nhưng lạc quan.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"pulled back from the brink"</b> (paragraph 4) implies that a species:</div>
+    <ul><li>A. was saved just before becoming extinct</li><li>B. was discovered for the first time</li><li>C. moved to a new habitat</li><li>D. was hunted more intensely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "brink" = bờ vực (tuyệt chủng); "pulled back from the brink" = được cứu vào phút chót trước khi tuyệt chủng.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 1 ============ -->
+  <h2>Từ vựng chủ đề Nature &amp; Wildlife</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>endangered species</td><td>(n phr)</td><td>loài có nguy cơ tuyệt chủng</td></tr>
+    <tr><td>habitat destruction</td><td>(n phr)</td><td>sự phá hủy môi trường sống</td></tr>
+    <tr><td>poaching</td><td>(n)</td><td>săn bắt trộm</td></tr>
+    <tr><td>plummet <span class="c1tag">C1</span></td><td>(v)</td><td>giảm mạnh, sụt nhanh</td></tr>
+    <tr><td>protected reserve</td><td>(n phr)</td><td>khu bảo tồn</td></tr>
+    <tr><td>captivity</td><td>(n)</td><td>tình trạng bị nuôi nhốt</td></tr>
+    <tr><td>deter</td><td>(v)</td><td>ngăn chặn, răn đe</td></tr>
+    <tr><td>ecotourism</td><td>(n)</td><td>du lịch sinh thái</td></tr>
+    <tr><td>corruption</td><td>(n)</td><td>tham nhũng</td></tr>
+    <tr><td>rebound <span class="c1tag">C1</span></td><td>(v)</td><td>phục hồi, tăng trở lại</td></tr>
+    <tr><td>on the brink of <span class="c1tag">C1</span></td><td>(phr)</td><td>trên bờ vực (của)</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài đọc #2 <span class="lvl">Pollution &amp; Plastic Waste · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Plastic Pollution and the Fight to Clean Our Oceans</h3>
+    <p><span class="pn">[1]</span> Since the mid-twentieth century, plastic has become ubiquitous, prized for being cheap, lightweight, and durable. These same qualities, however, have turned it into an environmental menace. An estimated eight million tonnes of plastic waste enter the oceans every year, accumulating in vast garbage patches and breaking down into microplastics that infiltrate the food chain, from plankton to the fish that humans eventually consume.</p>
+    <p class="vi-para">[1] Kể từ giữa thế kỷ 20, nhựa đã trở nên có mặt ở khắp mọi nơi, được ưa chuộng vì rẻ, nhẹ và bền. Tuy nhiên, chính những đặc tính này đã biến nó thành một mối đe dọa cho môi trường. Ước tính khoảng tám triệu tấn rác thải nhựa đổ ra đại dương mỗi năm, tích tụ thành những đảo rác khổng lồ và phân rã thành vi nhựa xâm nhập vào chuỗi thức ăn, từ sinh vật phù du đến loài cá mà con người cuối cùng sẽ tiêu thụ.</p>
+
+    <p><span class="pn">[2]</span> The consequences for marine life are severe. Sea turtles frequently mistake plastic bags for jellyfish and choke on them, while seabirds and whales have been found with stomachs full of indigestible debris. Beyond the visible harm, scientists are increasingly concerned about the long-term effects of microplastics, which have now been detected not only in seafood but also in drinking water and even human blood.</p>
+    <p class="vi-para">[2] Hậu quả đối với sinh vật biển là rất nghiêm trọng. Rùa biển thường nhầm túi nhựa với sứa và bị nghẹn khi nuốt phải, trong khi chim biển và cá voi được phát hiện có dạ dày đầy rác không tiêu hóa được. Ngoài những thiệt hại có thể nhìn thấy, các nhà khoa học ngày càng lo ngại về tác động lâu dài của vi nhựa, thứ hiện đã được phát hiện không chỉ trong hải sản mà còn trong nước uống và thậm chí trong máu người.</p>
+
+    <p><span class="pn">[3]</span> Governments and businesses have begun to respond. Numerous countries have banned single-use plastic bags and straws, while some companies have pledged to make all packaging recyclable or compostable by a set deadline. Nevertheless, critics contend that such measures amount to little more than a drop in the ocean unless accompanied by a fundamental shift away from a disposable culture and toward reducing plastic production at its source.</p>
+    <p class="vi-para">[3] Các chính phủ và doanh nghiệp đã bắt đầu có phản ứng. Nhiều quốc gia đã cấm túi nhựa và ống hút dùng một lần, trong khi một số công ty đã cam kết làm cho toàn bộ bao bì có thể tái chế hoặc phân hủy trong một thời hạn nhất định. Tuy nhiên, những người chỉ trích cho rằng các biện pháp này chỉ là muối bỏ biển nếu không đi kèm với một sự thay đổi căn bản, từ bỏ văn hóa dùng-rồi-vứt và hướng tới việc giảm sản xuất nhựa ngay từ gốc.</p>
+
+    <p><span class="pn">[4]</span> Individual behaviour also plays a role, though its impact is limited without systemic change. Reusing bags, refusing unnecessary packaging, and supporting recycling schemes can reduce personal contributions to the problem. Ultimately, however, experts agree that solving the plastic crisis will require coordinated international action, since ocean currents carry debris across borders, making pollution a shared responsibility rather than one confined to any single nation.</p>
+    <p class="vi-para">[4] Hành vi cá nhân cũng đóng một vai trò, dù tác động của nó bị hạn chế nếu không có sự thay đổi mang tính hệ thống. Việc tái sử dụng túi, từ chối bao bì không cần thiết và ủng hộ các chương trình tái chế có thể giảm bớt phần đóng góp cá nhân vào vấn đề này. Tuy nhiên, cuối cùng các chuyên gia đều đồng ý rằng để giải quyết cuộc khủng hoảng nhựa cần có hành động phối hợp trên phạm vi quốc tế, bởi vì dòng hải lưu mang rác thải vượt qua biên giới các quốc gia, khiến ô nhiễm trở thành trách nhiệm chung chứ không chỉ giới hạn ở một quốc gia đơn lẻ.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. how plastic is manufactured</li><li>B. the causes and effects of, and responses to, plastic ocean pollution</li><li>C. the diet of sea turtles</li><li>D. the history of recycling technology</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi từ nguyên nhân (đoạn 1), hậu quả (đoạn 2), đến phản ứng của chính phủ/cá nhân (đoạn 3–4) → ý bao trùm là B.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"ubiquitous"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. rare and expensive</li><li>B. present everywhere</li><li>C. dangerous to touch</li><li>D. recently invented</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "plastic has become ubiquitous" = có mặt khắp nơi, phổ biến ≈ present everywhere.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, how much plastic waste enters the oceans each year?</div>
+    <ul><li>A. eight thousand tonnes</li><li>B. eight million tonnes</li><li>C. eight billion tonnes</li><li>D. eight hundred tonnes</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "An estimated eight million tonnes of plastic waste enter the oceans every year."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"them"</b> (in "choke on them") refers to:</div>
+    <ul><li>A. jellyfish</li><li>B. sea turtles</li><li>C. plastic bags</li><li>D. seabirds</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "mistake plastic bags for jellyfish and choke on them" → "them" = plastic bags.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that microplastics:</div>
+    <ul><li>A. only affect fish, not humans</li><li>B. have entered the human body</li><li>C. are easily removed from water</li><li>D. no longer pose a threat</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "microplastics... have now been detected... in drinking water and even human blood" → đã xâm nhập vào cơ thể người.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The phrase <b class="k">"a drop in the ocean"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. an enormous, decisive action</li><li>B. a tiny, insufficient effort compared to the scale of the problem</li><li>C. a completely new solution</li><li>D. a very expensive project</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Thành ngữ "a drop in the ocean" = một hành động quá nhỏ bé so với quy mô vấn đề.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention that "ocean currents carry debris across borders" in paragraph 4?</div>
+    <ul><li>A. To explain why recycling is unnecessary</li><li>B. To justify why international cooperation is needed</li><li>C. To describe how ships navigate the ocean</li><li>D. To criticise a specific country</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này giải thích lý do vì sao cần "coordinated international action" — vì rác trôi qua biên giới quốc gia.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as harmed by plastic pollution EXCEPT:</div>
+    <ul><li>A. sea turtles</li><li>B. seabirds</li><li>C. whales</li><li>D. polar bears</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Sea turtles, seabirds, whales đều được nhắc ở đoạn 2. Polar bears không được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward government and corporate measures (paragraph 3) can best be described as:</div>
+    <ul><li>A. fully satisfied</li><li>B. skeptical that current measures are enough</li><li>C. completely dismissive of any progress</li><li>D. unaware of any measures taken</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả ghi nhận nỗ lực nhưng trích lời phê bình rằng chúng "amount to little more than a drop in the ocean" → hoài nghi mức độ đủ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> Paragraph 4 suggests that individual actions alone are:</div>
+    <ul><li>A. completely useless</li><li>B. sufficient to solve the plastic crisis</li><li>C. helpful but not enough without systemic and international change</li><li>D. more effective than government policy</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "Individual behaviour also plays a role, though its impact is limited without systemic change"... "will require coordinated international action" → cá nhân có ích nhưng chưa đủ.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 2 ============ -->
+  <h2>Từ vựng chủ đề Pollution &amp; Plastic Waste</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>ubiquitous <span class="c1tag">C1</span></td><td>(adj)</td><td>có mặt khắp nơi, phổ biến</td></tr>
+    <tr><td>durable</td><td>(adj)</td><td>bền, khó hỏng</td></tr>
+    <tr><td>garbage patch</td><td>(n phr)</td><td>đảo rác (trên đại dương)</td></tr>
+    <tr><td>microplastics</td><td>(n)</td><td>vi nhựa</td></tr>
+    <tr><td>infiltrate <span class="c1tag">C1</span></td><td>(v)</td><td>xâm nhập, thấm vào</td></tr>
+    <tr><td>indigestible</td><td>(adj)</td><td>không tiêu hóa được</td></tr>
+    <tr><td>single-use plastic</td><td>(n phr)</td><td>nhựa dùng một lần</td></tr>
+    <tr><td>compostable</td><td>(adj)</td><td>có thể phân hủy làm phân bón</td></tr>
+    <tr><td>a drop in the ocean <span class="c1tag">C1</span></td><td>(idiom)</td><td>hành động quá nhỏ bé, không đáng kể</td></tr>
+    <tr><td>disposable culture</td><td>(n phr)</td><td>văn hóa dùng-rồi-vứt</td></tr>
+    <tr><td>coordinated</td><td>(adj)</td><td>được phối hợp, đồng bộ</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1</th><td>1-B · 2-B · 3-C · 4-C · 5-B · 6-A · 7-B · 8-D · 9-B · 10-A</td></tr>
+      <tr><th>Bài #2</th><td>1-B · 2-B · 3-B · 4-C · 5-B · 6-B · 7-B · 8-D · 9-B · 10-C</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ (bài __) · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → buổi sau ưu tiên luyện lại dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 14–20 → nền rất tốt · 10–13 → ổn, đúng hướng · ≤9 → đọc lại cả 2 bài + học kỹ từ vựng trước khi qua ngày tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Tuần 4 · Ngày 3?</b> Quay lại lộ trình tick 4 ô của ngày hôm nay. Ghi lại các từ vựng C1 khó nhớ (proliferation, plummet, rebound, ubiquitous, infiltrate...) vào sổ tay riêng để ôn lại cuối tuần.
+  </div>
+
+</div>
+
+<footer>🐘🌊 Tuần 4 · Ngày 3 · VSTEP Reading — Nature &amp; Wildlife + Pollution &amp; Plastic Waste · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

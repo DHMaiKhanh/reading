@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lộ Trình Reading 2 Tháng · VSTEP B2 · 8 Tuần</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+    --pill: #2a3a5e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    padding-bottom: 60px;
+  }
+  a { color: var(--primary); }
+
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(11,18,32,0.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 14px; padding: 14px 22px;
+  }
+  .topbar .label { font-weight: 600; white-space: nowrap; }
+  .progress-track {
+    flex: 1; height: 12px; background: var(--bg-card-2);
+    border-radius: 8px; overflow: hidden; border: 1px solid var(--border);
+  }
+  .progress-fill {
+    height: 100%; width: 0%;
+    background: linear-gradient(90deg, var(--green), var(--primary));
+    transition: width 0.35s ease;
+  }
+  .progress-pct { font-weight: 700; min-width: 46px; text-align: right; color: var(--green); }
+  .topbar button {
+    background: var(--bg-card-2); color: var(--text);
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 7px 14px; cursor: pointer; font-size: 0.85rem; white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .topbar button:hover { background: var(--primary-soft); }
+
+  header { text-align: center; padding: 40px 22px 24px; }
+  header h1 { font-size: 1.9rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+  .meta .badge {
+    background: var(--primary-soft); border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 20px; font-size: 0.85rem;
+  }
+
+  .container { max-width: 980px; margin: 0 auto; padding: 0 18px; }
+
+  .note {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-left: 4px solid var(--accent); border-radius: 12px;
+    padding: 16px 20px; margin: 18px 0;
+  }
+  .note table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .note td { padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .note tr:last-child td { border-bottom: none; }
+  .note td:first-child { white-space: nowrap; color: var(--primary); font-weight: 600; }
+
+  .phase {
+    border-left: 4px solid var(--primary);
+    background: var(--bg-card); border-radius: 12px;
+    padding: 16px 20px; margin: 28px 0 10px;
+    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  }
+  .phase h2 { font-size: 1.35rem; }
+  .phase .range { color: var(--muted); font-size: 0.95rem; }
+
+  .week {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 14px; margin: 14px 0; overflow: hidden;
+  }
+  .week-head {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 20px; cursor: pointer; user-select: none; background: var(--bg-card-2);
+  }
+  .week-head .caret { transition: transform 0.2s; color: var(--muted); }
+  .week.collapsed .caret { transform: rotate(-90deg); }
+  .week.collapsed .week-body { display: none; }
+  .week-head h3 { font-size: 1.15rem; flex: 0 0 auto; }
+  .week-head .wlabel { color: var(--muted); margin-left: auto; font-size: 0.9rem; text-align: right; }
+  .week-mini {
+    width: 120px; height: 7px; background: var(--bg); border-radius: 6px;
+    overflow: hidden; border: 1px solid var(--border); margin-left: 10px;
+  }
+  .week-mini > div { height: 100%; width: 0%; background: var(--green); transition: width 0.3s; }
+  .week-body { padding: 8px 20px 18px; }
+
+  .day { margin-top: 16px; }
+  .day-title {
+    font-size: 1.02rem; font-weight: 600; margin-bottom: 8px;
+    color: var(--primary); display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .pill {
+    background: var(--pill); color: #cfe0ff; font-size: 0.72rem;
+    padding: 2px 10px; border-radius: 12px; font-weight: 600;
+  }
+  .pill.rev { background: #3a2c52; color: #e0ccff; }
+  .pill.test { background: #523524; color: #ffd9b0; }
+  .pill.topic { background: #2c4a3a; color: #b9f5d8; }
+  .pill.fix { background: #4a2c33; color: #ffc6d2; }
+
+  .task {
+    display: flex; align-items: center; gap: 12px;
+    padding: 9px 12px; border-radius: 9px; margin: 5px 0;
+    background: var(--bg-card-2); border: 1px solid transparent; transition: background 0.15s;
+  }
+  .task:hover { border-color: var(--border); }
+  .task input[type=checkbox] { width: 19px; height: 19px; flex: 0 0 auto; cursor: pointer; accent-color: var(--green); }
+  .task label { flex: 1; cursor: pointer; }
+  .task.done label { text-decoration: line-through; color: var(--muted); }
+  .time {
+    flex: 0 0 auto; background: var(--bg); border: 1px solid var(--border);
+    color: var(--muted); font-size: 0.78rem; padding: 2px 9px; border-radius: 8px; font-weight: 600;
+  }
+
+  .result {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-left: 4px solid var(--green); border-radius: 12px;
+    padding: 18px 22px; margin: 22px 0;
+  }
+  .result li { margin: 6px 0 6px 18px; }
+
+  footer { text-align: center; color: var(--muted); margin-top: 40px; font-size: 0.88rem; padding: 0 20px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="label">Tiến độ:</span>
+  <div class="progress-track"><div class="progress-fill" id="bar"></div></div>
+  <span class="progress-pct" id="pct">0%</span>
+  <button onclick="expandAll(true)">Mở tất cả</button>
+  <button onclick="expandAll(false)">Thu gọn</button>
+  <button onclick="resetProgress()">Xóa tiến độ</button>
+</div>
+
+<header>
+  <h1>📚 Lộ Trình Reading 2 Tháng — VSTEP B2</h1>
+  <p>Ngày 1 học gộp 8 dạng câu → từ Ngày 2 mỗi ngày 1 chủ đề · luyện đề + giải đề · tick xong tự lưu tiến độ</p>
+  <div class="meta">
+    <span class="badge">⏳ 8 tuần (2 tháng)</span>
+    <span class="badge">🕐 45–60 phút/ngày</span>
+    <span class="badge">🎯 ≥ 6.0/10 (Bậc 4 · B2)</span>
+    <span class="badge">📝 4 bài · 40 câu · 60 phút</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="note">
+    <strong>📌 Cách dùng lộ trình này:</strong> Tick ô vuông sau khi làm xong từng việc — thanh tiến độ trên cùng &amp; mỗi tuần tự cập nhật, lưu ngay trên trình duyệt. Mỗi ngày luyện đề đều gắn <strong>1 chủ đề cụ thể</strong> (pill xanh lá) để bạn xây từ vựng theo chủ đề ngay từ đầu.
+    <table>
+      <tr><td>3 nguyên tắc</td><td><strong>① Hiểu vì sao SAI</strong> (ghi "sổ lỗi") · <strong>② Từ vựng là xương sống</strong> (học theo chủ đề mỗi ngày) · <strong>③ Bấm giờ từ sớm</strong> (tốc độ quan trọng ngang độ chính xác).</td></tr>
+      <tr><td>Quan trọng nhất</td><td>Phần <strong>GIẢI ĐỀ</strong> còn quan trọng hơn làm đề — làm sai mà hiểu rõ vì sao mới lên trình.</td></tr>
+    </table>
+  </div>
+
+  <div class="note" style="border-left-color: var(--primary);">
+    <strong>📖 8 dạng câu hỏi &amp; chiến thuật</strong> (tra cứu nhanh khi luyện đề)
+    <table>
+      <tr><td>1. Main idea</td><td>"main idea / best title / mainly about" → đọc câu đầu/cuối mỗi đoạn, chọn đáp án bao trùm cả bài</td></tr>
+      <tr><td>2. Detail</td><td>"according to the passage / the author states" → scan từ khóa, đọc kỹ câu chứa nó</td></tr>
+      <tr><td>3. Vocabulary</td><td>"the word X is closest in meaning to" → che đáp án, đoán nghĩa qua ngữ cảnh, chọn từ gần nhất</td></tr>
+      <tr><td>4. Reference</td><td>"the word 'them/it' refers to" → danh từ phù hợp gần nhất phía trước, thử thay vào đọc lại</td></tr>
+      <tr><td>5. Inference</td><td>"can be inferred / implies / suggests" → dựa bằng chứng trong bài, tránh đáp án quá tuyệt đối (never/only)</td></tr>
+      <tr><td>6. Purpose</td><td>"why does the author mention / the purpose of" → hỏi "để làm gì?", tìm vai trò chi tiết trong đoạn</td></tr>
+      <tr><td>7. NOT / EXCEPT</td><td>"all EXCEPT / which is NOT mentioned" → tìm 3 đáp án CÓ trong bài để loại, cái còn lại là đáp án</td></tr>
+      <tr><td>8. Tone / Attitude</td><td>"the author's attitude / tone of the passage" → để ý từ ngữ mang cảm xúc (tích cực/tiêu cực/trung lập)</td></tr>
+    </table>
+  </div>
+
+  <div class="note" style="border-left-color: var(--green);">
+    <strong>🗂️ Ngân hàng chủ đề Reading VSTEP (24 chủ đề)</strong> — đã được rải đều vào từng ngày bên dưới; dùng bảng này để tra từ vựng &amp; chọn thêm bài luyện
+    <table>
+      <tr><td>🔬 Science &amp; Technology</td><td>AI &amp; robot, phát minh, nghiên cứu khoa học</td></tr>
+      <tr><td>💻 Internet &amp; Social Media</td><td>mạng xã hội, an ninh mạng, đời sống số</td></tr>
+      <tr><td>🚀 Space &amp; Astronomy</td><td>khám phá vũ trụ, hành tinh, du hành không gian</td></tr>
+      <tr><td>🎓 Education &amp; Learning</td><td>học trực tuyến, du học, phương pháp dạy học</td></tr>
+      <tr><td>🗣️ Language &amp; Linguistics</td><td>học ngoại ngữ, ngôn ngữ biến mất, dịch thuật</td></tr>
+      <tr><td>🌍 Environment &amp; Climate</td><td>biến đổi khí hậu, ô nhiễm, rác thải nhựa</td></tr>
+      <tr><td>⚡ Energy &amp; Resources</td><td>năng lượng tái tạo, nước, tài nguyên thiên nhiên</td></tr>
+      <tr><td>🐾 Nature &amp; Wildlife</td><td>động vật hoang dã, đại dương, bảo tồn, tuyệt chủng</td></tr>
+      <tr><td>🩺 Health &amp; Medicine</td><td>dịch bệnh, y học hiện đại, vắc-xin</td></tr>
+      <tr><td>🥗 Food &amp; Nutrition</td><td>dinh dưỡng, béo phì, an toàn thực phẩm</td></tr>
+      <tr><td>🧠 Psychology &amp; Behavior</td><td>thói quen, trí nhớ, hạnh phúc, động lực</td></tr>
+      <tr><td>👥 Society &amp; Social Issues</td><td>bình đẳng giới, di cư, nghèo đói</td></tr>
+      <tr><td>🏙️ Urbanization &amp; City Life</td><td>đô thị hóa, nhà ở, giao thông đô thị</td></tr>
+      <tr><td>👴 Ageing &amp; Population</td><td>già hóa dân số, tỉ lệ sinh, an sinh</td></tr>
+      <tr><td>💼 Business &amp; Economy</td><td>khởi nghiệp, thương mại điện tử, quảng cáo</td></tr>
+      <tr><td>💰 Money &amp; Globalization</td><td>tài chính cá nhân, toàn cầu hóa, thương mại</td></tr>
+      <tr><td>👨‍💻 Work &amp; Career</td><td>làm việc từ xa, nghề tương lai, cân bằng cuộc sống</td></tr>
+      <tr><td>🏛️ History &amp; Civilization</td><td>nền văn minh cổ, nhân vật lịch sử</td></tr>
+      <tr><td>⛏️ Archaeology &amp; Heritage</td><td>khảo cổ, di sản, bảo tồn văn hóa</td></tr>
+      <tr><td>🎨 Arts &amp; Music</td><td>hội họa, âm nhạc, văn học, bảo tàng</td></tr>
+      <tr><td>🏗️ Architecture &amp; Design</td><td>kiến trúc, thiết kế đô thị, công trình</td></tr>
+      <tr><td>📰 Media &amp; Communication</td><td>báo chí, tin giả (fake news), truyền thông</td></tr>
+      <tr><td>✈️ Travel &amp; Tourism</td><td>du lịch bền vững, du lịch sinh thái, văn hóa bản địa</td></tr>
+      <tr><td>⚖️ Crime, Law &amp; Sports</td><td>tội phạm, luật pháp, thể thao &amp; giải trí</td></tr>
+    </table>
+    <p style="margin-top:8px; color:var(--muted)">💡 <strong>Mẹo:</strong> mỗi đề VSTEP có 4 bài thuộc 4 chủ đề khác nhau → luân phiên nhiều chủ đề để không bị "tủ". Chủ đề nào đọc thấy lạ → ưu tiên học thêm từ vựng chủ đề đó.</p>
+  </div>
+
+  <!-- ===== GIAI ĐOẠN 1 ===== -->
+  <div class="phase"><h2>🟦 Giai đoạn 1 — Chiến thuật &amp; Luyện đề</h2><span class="range">Tuần 1–2 · mỗi ngày 1 chủ đề</span></div>
+
+  <!-- TUẦN 1 -->
+  <div class="week">
+    <div class="week-head" onclick="toggleWeek(this)">
+      <span class="caret">▾</span><h3>📅 Tuần 1</h3>
+      <span class="wlabel">Gộp 8 dạng câu → luyện đề theo chủ đề</span>
+      <span class="week-mini"><div></div></span>
+    </div>
+    <div class="week-body">
+      <div class="day">
+        <div class="day-title">Ngày 1 <span class="pill">Chiến thuật</span> — Học trọn 8 dạng câu (gộp)</div>
+        <div class="task"><input type="checkbox"><label>Kỹ năng nền: Skimming (ý chính) + Scanning (quét từ khóa) + đoán từ qua ngữ cảnh</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>4 dạng cơ bản: Main idea · Detail · Vocabulary · Reference</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>4 dạng nâng cao: Inference · Purpose · NOT/EXCEPT · Tone/Attitude</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 bài đọc đủ 8 dạng → mở "sổ lỗi" + học 10–15 từ mới</label><span class="time">20'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 2 <span class="pill test">Luyện đề</span> <span class="pill topic">🔬 Science &amp; Technology</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 đề (bài đọc chủ đề Science &amp; Technology) — chưa tra cứu, chưa bấm giờ</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + phân loại câu sai theo 8 dạng (biết dạng nào yếu)</label><span class="time">5'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải đề: mỗi câu sai → hiểu vì sao sai &amp; vì sao đáp án đúng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Rút 10–15 từ vựng chủ đề Science + cập nhật "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 3 <span class="pill test">Luyện đề</span> <span class="pill topic">🎓 Education &amp; Learning</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 đề (bài đọc chủ đề Education) — chưa tra cứu, chưa bấm giờ</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + phân loại câu sai theo 8 dạng</label><span class="time">5'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải đề chi tiết — vì sao sai &amp; vì sao đáp án đúng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Rút 10–15 từ vựng chủ đề Education + cập nhật "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 4 <span class="pill test">Luyện đề</span> <span class="pill topic">🌍 Environment &amp; Climate</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 đề (bài đọc chủ đề Environment) — chưa tra cứu, chưa bấm giờ</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + phân loại câu sai theo 8 dạng</label><span class="time">5'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải đề chi tiết — vì sao sai &amp; vì sao đáp án đúng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Rút 10–15 từ vựng chủ đề Environment + cập nhật "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 5 <span class="pill test">Luyện đề</span> <span class="pill topic">🩺 Health &amp; Medicine</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 đề (bài đọc chủ đề Health) — chưa tra cứu, chưa bấm giờ</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + phân loại câu sai theo 8 dạng</label><span class="time">5'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải đề chi tiết — vì sao sai &amp; vì sao đáp án đúng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Rút 10–15 từ vựng chủ đề Health + cập nhật "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 6–7 <span class="pill rev">Ôn</span> — Nghỉ &amp; ôn sổ lỗi</div>
+        <div class="task"><input type="checkbox"><label>Đọc thụ động 1 bài báo tiếng Anh dễ (BBC Learning English / VOA)</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Ôn lại "sổ lỗi" + từ vựng 4 chủ đề trong tuần</label><span class="time">20'</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUẦN 2 -->
+  <div class="week">
+    <div class="week-head" onclick="toggleWeek(this)">
+      <span class="caret">▾</span><h3>📅 Tuần 2</h3>
+      <span class="wlabel">Luyện đề theo chủ đề — bắt đầu canh giờ</span>
+      <span class="week-mini"><div></div></span>
+    </div>
+    <div class="week-body">
+      <div class="day">
+        <div class="day-title">Ngày 1 <span class="pill test">Luyện đề</span> <span class="pill topic">👥 Society &amp; Social Issues</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 đề (bài đọc chủ đề Society) — chưa tra cứu, chưa bấm giờ</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + phân loại câu sai theo 8 dạng</label><span class="time">5'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải đề chi tiết — vì sao sai &amp; vì sao đáp án đúng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Rút 10–15 từ vựng chủ đề Society + cập nhật "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 2 <span class="pill test">Luyện đề</span> <span class="pill topic">🏛️ History &amp; Civilization</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 đề (bài đọc chủ đề History &amp; Civilization) — chưa tra cứu, chưa bấm giờ</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + phân loại câu sai theo 8 dạng</label><span class="time">5'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải đề chi tiết — vì sao sai &amp; vì sao đáp án đúng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Rút 10–15 từ vựng chủ đề History + cập nhật "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 3 <span class="pill test">Luyện đề</span> <span class="pill topic">💼 Business &amp; Economy</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 đề (bài đọc chủ đề Business) — chưa tra cứu, chưa bấm giờ</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + phân loại câu sai theo 8 dạng</label><span class="time">5'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải đề chi tiết — vì sao sai &amp; vì sao đáp án đúng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Rút 10–15 từ vựng chủ đề Business + cập nhật "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 4 <span class="pill test">Luyện đề</span> <span class="pill topic">✈️ Travel &amp; Tourism</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 đề (bài đọc chủ đề Travel &amp; Tourism) — tự bấm giờ thử ~15 phút</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + phân loại câu sai theo 8 dạng</label><span class="time">5'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải đề chi tiết — vì sao sai &amp; vì sao đáp án đúng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Rút 10–15 từ vựng chủ đề Travel + cập nhật "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 5 <span class="pill test">Luyện đề</span> <span class="pill topic">📰 Media &amp; Communication</span></div>
+        <div class="task"><input type="checkbox"><label>Làm 1 đề (bài đọc chủ đề Media &amp; Communication) — tự bấm giờ thử ~15 phút</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + phân loại câu sai theo 8 dạng</label><span class="time">5'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải đề chi tiết — vì sao sai &amp; vì sao đáp án đúng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Rút 10–15 từ vựng chủ đề Media + cập nhật "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 6–7 <span class="pill rev">Ôn</span> — Nghỉ &amp; ôn sổ lỗi</div>
+        <div class="task"><input type="checkbox"><label>Đọc thụ động 1 bài báo tiếng Anh dễ + ôn "sổ lỗi"</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Xem lại dạng câu hay sai nhất 2 tuần qua → ghi chú</label><span class="time">20'</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GIAI ĐOẠN 2 ===== -->
+  <div class="phase"><h2>🟪 Giai đoạn 2 — Luyện sâu theo chủ đề</h2><span class="range">Tuần 3–5 · 2 bài/ngày, mỗi bài 1 chủ đề khác nhau</span></div>
+
+  <!-- TUẦN 3 -->
+  <div class="week">
+    <div class="week-head" onclick="toggleWeek(this)">
+      <span class="caret">▾</span><h3>📅 Tuần 3</h3>
+      <span class="wlabel">Cụm KHOA HỌC · CÔNG NGHỆ · GIÁO DỤC — ưu tiên ĐÚNG</span>
+      <span class="week-mini"><div></div></span>
+    </div>
+    <div class="week-body">
+      <div class="day">
+        <div class="day-title">Ngày 1 <span class="pill">Học</span> — Khởi động cụm chủ đề</div>
+        <div class="task"><input type="checkbox"><label>Học từ vựng cụm: Science · Technology · Education · Language</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Đọc 1 bài làm quen (Science &amp; Technology) → làm câu hỏi (chưa bấm giờ)</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi + ghi từ mới vào "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 2 <span class="pill topic">🔬 Science</span> + <span class="pill topic">🚀 Space</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Science &amp; Technology (AI, robot, phát minh) → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Space &amp; Astronomy (khám phá vũ trụ, hành tinh) → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 3 <span class="pill topic">💻 Internet</span> + <span class="pill topic">🗣️ Language</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Internet &amp; Social Media (an ninh mạng, đời sống số) → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Language &amp; Linguistics (học ngoại ngữ, dịch thuật) → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 4 <span class="pill topic">🎓 Education</span> + <span class="pill topic">👨‍💻 Work &amp; Career</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Education (học trực tuyến, du học) → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Work &amp; Career (nghề tương lai, làm việc từ xa) → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 5 <span class="pill topic">🧠 Psychology</span> + <span class="pill topic">🔬 Innovation</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Psychology &amp; Behavior (thói quen, trí nhớ, động lực) → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Innovation &amp; Inventions (phát minh thay đổi thế giới) → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 6 <span class="pill topic">💻 Tech &amp; Society</span> + <span class="pill topic">🚀 Space</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Technology &amp; Society (tác động công nghệ tới đời sống) → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: ôn lại 1 chủ đề đọc thấy yếu nhất tuần → làm câu hỏi</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi + cập nhật "sổ lỗi"</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 7 <span class="pill topic">🔀 Trộn cụm</span> — Tổng hợp tuần</div>
+        <div class="task"><input type="checkbox"><label>Làm 1 bài "luyện trộn" (chủ đề bất kỳ trong cụm Khoa học/Giáo dục)</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi kỹ + cập nhật "sổ lỗi"</label><span class="time">12'</span></div>
+        <div class="task"><input type="checkbox"><label>Ôn lại toàn bộ từ vựng cả tuần</label><span class="time">15'</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUẦN 4 -->
+  <div class="week">
+    <div class="week-head" onclick="toggleWeek(this)">
+      <span class="caret">▾</span><h3>📅 Tuần 4</h3>
+      <span class="wlabel">Cụm MÔI TRƯỜNG · SỨC KHỎE · XÃ HỘI — canh ~18'/bài</span>
+      <span class="week-mini"><div></div></span>
+    </div>
+    <div class="week-body">
+      <div class="day">
+        <div class="day-title">Ngày 1 <span class="pill">Học</span> — Khởi động cụm chủ đề</div>
+        <div class="task"><input type="checkbox"><label>Học từ vựng cụm: Environment · Energy · Health · Food · Society</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Đọc 1 bài làm quen (Environment) → làm câu hỏi (chưa bấm giờ)</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi + ghi từ mới vào "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 2 <span class="pill topic">🌍 Climate</span> + <span class="pill topic">⚡ Energy</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Climate Change (biến đổi khí hậu) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Energy &amp; Resources (năng lượng tái tạo, nước) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 3 <span class="pill topic">🐾 Wildlife</span> + <span class="pill topic">🌍 Pollution</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Nature &amp; Wildlife (động vật hoang dã, bảo tồn) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Pollution &amp; Plastic Waste (ô nhiễm, rác thải nhựa) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 4 <span class="pill topic">🩺 Health</span> + <span class="pill topic">🥗 Nutrition</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Health &amp; Medicine (dịch bệnh, y học hiện đại) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Food &amp; Nutrition (dinh dưỡng, béo phì) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 5 <span class="pill topic">🏙️ Urbanization</span> + <span class="pill topic">👴 Ageing</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Urbanization &amp; City Life (đô thị hóa, nhà ở) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Ageing &amp; Population (già hóa dân số, an sinh) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 6 <span class="pill topic">👥 Social Issues</span> + <span class="pill topic">🩺 Mental Health</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Society &amp; Social Issues (bình đẳng giới, di cư) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Mental Health (sức khỏe tinh thần, giấc ngủ) → làm câu hỏi (canh ~18')</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi + cập nhật "sổ lỗi"</label><span class="time">14'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 7 <span class="pill topic">🔀 Trộn cụm</span> — Tổng hợp tuần</div>
+        <div class="task"><input type="checkbox"><label>Làm 1 bài "luyện trộn" (chủ đề bất kỳ trong cụm Môi trường/Sức khỏe/Xã hội)</label><span class="time">18'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi kỹ + cập nhật "sổ lỗi"</label><span class="time">12'</span></div>
+        <div class="task"><input type="checkbox"><label>Ôn lại toàn bộ từ vựng cả tuần</label><span class="time">15'</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUẦN 5 -->
+  <div class="week">
+    <div class="week-head" onclick="toggleWeek(this)">
+      <span class="caret">▾</span><h3>📅 Tuần 5</h3>
+      <span class="wlabel">Cụm LỊCH SỬ · VĂN HÓA · KINH TẾ — canh ~15'/bài, ~70%</span>
+      <span class="week-mini"><div></div></span>
+    </div>
+    <div class="week-body">
+      <div class="day">
+        <div class="day-title">Ngày 1 <span class="pill">Học</span> — Khởi động cụm chủ đề</div>
+        <div class="task"><input type="checkbox"><label>Học từ vựng cụm: History · Archaeology · Arts · Architecture · Business</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Đọc 1 bài làm quen (History) → làm câu hỏi (chưa bấm giờ)</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi + ghi từ mới vào "sổ lỗi"</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 2 <span class="pill topic">🏛️ History</span> + <span class="pill topic">⛏️ Archaeology</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Ancient Civilizations (nền văn minh cổ) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Archaeology &amp; Heritage (khảo cổ, di sản) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 3 <span class="pill topic">🎨 Arts &amp; Music</span> + <span class="pill topic">🏗️ Architecture</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Arts &amp; Music (hội họa, âm nhạc, văn học) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Architecture &amp; Design (kiến trúc, công trình) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 4 <span class="pill topic">💼 Business</span> + <span class="pill topic">💰 Globalization</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Business &amp; Economy (khởi nghiệp, thương mại điện tử) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Money &amp; Globalization (tài chính, toàn cầu hóa) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 5 <span class="pill topic">✈️ Travel</span> + <span class="pill topic">⚖️ Crime &amp; Law</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Travel &amp; Tourism (du lịch bền vững, sinh thái) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Crime, Law &amp; Sports (tội phạm, luật, thể thao) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi 2 bài + học từ vựng 2 chủ đề</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 6 <span class="pill topic">🎨 Culture</span> + <span class="pill topic">📰 Media</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #1: Culture &amp; Traditions (phong tục, đa văn hóa) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Bài #2: Media &amp; Fake News (truyền thông, tin giả) → làm câu hỏi (canh ~15')</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi + cập nhật "sổ lỗi"</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 7 <span class="pill topic">🔀 Trộn tất cả</span> — Đo độ chính xác</div>
+        <div class="task"><input type="checkbox"><label>Làm 2 bài trộn mọi chủ đề (canh ~15'/bài) → mục tiêu ~70% đúng</label><span class="time">30'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi + cập nhật "sổ lỗi" + ôn từ vựng cả tuần</label><span class="time">15'</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GIAI ĐOẠN 3 ===== -->
+  <div class="phase"><h2>🟩 Giai đoạn 3 — Luyện đề FULL bấm giờ</h2><span class="range">Tuần 6–7 · mỗi đề 4 bài = 4 chủ đề khác nhau · 60 phút</span></div>
+
+  <!-- TUẦN 6 -->
+  <div class="week">
+    <div class="week-head" onclick="toggleWeek(this)">
+      <span class="caret">▾</span><h3>📅 Tuần 6</h3>
+      <span class="wlabel">Đề FULL #1–#3 — làm đề xen kẽ giải đề</span>
+      <span class="week-mini"><div></div></span>
+    </div>
+    <div class="week-body">
+      <div class="day">
+        <div class="day-title">Ngày 1 <span class="pill test">Đề full #1</span> — Science · Environment · Education · Society</div>
+        <div class="task"><input type="checkbox"><label>Làm đề full #1 — bấm giờ 60 phút (4 bài: Science / Environment / Education / Society)</label><span class="time">60'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm, ghi kết quả /40 vào bảng theo dõi</label><span class="time">5'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 2 <span class="pill fix">Giải đề #1</span> — Phân tích lỗi</div>
+        <div class="task"><input type="checkbox"><label>Phân loại câu sai theo 8 dạng — xác định dạng yếu</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Giải kỹ từng câu sai + luyện riêng dạng hay sai</label><span class="time">25'</span></div>
+        <div class="task"><input type="checkbox"><label>Ôn từ vựng 4 chủ đề gặp trong đề</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 3 <span class="pill test">Đề full #2</span> — Health · Business · History · Technology</div>
+        <div class="task"><input type="checkbox"><label>Làm đề full #2 — bấm giờ 60 phút (4 bài: Health / Business / History / Technology)</label><span class="time">60'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm, ghi kết quả /40 vào bảng theo dõi</label><span class="time">5'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 4 <span class="pill fix">Giải đề #2</span> — Phân tích lỗi</div>
+        <div class="task"><input type="checkbox"><label>Phân loại câu sai theo 8 dạng + giải kỹ từng câu</label><span class="time">30'</span></div>
+        <div class="task"><input type="checkbox"><label>Ôn từ vựng gặp trong đề + cập nhật "sổ lỗi"</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 5 <span class="pill test">Đề full #3</span> — Travel · Media · Psychology · Arts</div>
+        <div class="task"><input type="checkbox"><label>Làm đề full #3 — bấm giờ 60 phút (4 bài: Travel / Media / Psychology / Arts)</label><span class="time">60'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + giải nhanh câu sai</label><span class="time">20'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 6–7 <span class="pill rev">Ôn</span> — Nghỉ / xem lại sổ lỗi</div>
+        <div class="task"><input type="checkbox"><label>Xem lại "sổ lỗi" + theo dõi điểm có tăng không</label><span class="time">25'</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUẦN 7 -->
+  <div class="week">
+    <div class="week-head" onclick="toggleWeek(this)">
+      <span class="caret">▾</span><h3>📅 Tuần 7</h3>
+      <span class="wlabel">Đề FULL #4–#6 — lặp lại mẫu Tuần 6</span>
+      <span class="week-mini"><div></div></span>
+    </div>
+    <div class="week-body">
+      <div class="day">
+        <div class="day-title">Ngày 1 <span class="pill test">Đề full #4</span> — Energy · Urbanization · Work · Wildlife</div>
+        <div class="task"><input type="checkbox"><label>Làm đề full #4 — bấm giờ 60 phút (4 bài: Energy / Urbanization / Work / Wildlife)</label><span class="time">60'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm, ghi kết quả /40 vào bảng theo dõi</label><span class="time">5'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 2 <span class="pill fix">Giải đề #4</span> — Phân tích lỗi</div>
+        <div class="task"><input type="checkbox"><label>Phân loại câu sai + giải kỹ từng câu + luyện dạng yếu</label><span class="time">35'</span></div>
+        <div class="task"><input type="checkbox"><label>Ôn từ vựng 4 chủ đề gặp trong đề</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 3 <span class="pill test">Đề full #5</span> — Space · Globalization · Language · Food</div>
+        <div class="task"><input type="checkbox"><label>Làm đề full #5 — bấm giờ 60 phút (4 bài: Space / Globalization / Language / Food)</label><span class="time">60'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm, ghi kết quả /40 vào bảng theo dõi</label><span class="time">5'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 4 <span class="pill fix">Giải đề #5</span> — Phân tích lỗi</div>
+        <div class="task"><input type="checkbox"><label>Phân loại câu sai + giải kỹ từng câu</label><span class="time">30'</span></div>
+        <div class="task"><input type="checkbox"><label>Ôn từ vựng + cập nhật "sổ lỗi"</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 5 <span class="pill test">Đề full #6</span> — Crime &amp; Law · Architecture · Internet · Ageing</div>
+        <div class="task"><input type="checkbox"><label>Làm đề full #6 — bấm giờ 60 phút (4 bài: Crime &amp; Law / Architecture / Internet / Ageing)</label><span class="time">60'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + giải nhanh câu sai</label><span class="time">20'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 6–7 <span class="pill rev">Ôn</span> — Tổng kết giai đoạn luyện đề</div>
+        <div class="task"><input type="checkbox"><label>So sánh điểm 6 đề → xác định dạng câu &amp; chủ đề vẫn hay sai nhất</label><span class="time">25'</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TUẦN 8 ===== -->
+  <div class="phase"><h2>🟧 Tuần 8 — Tăng tốc &amp; Chiến thuật phòng thi</h2><span class="range">Tuần 8 · vá điểm yếu, sẵn sàng thi</span></div>
+
+  <div class="week">
+    <div class="week-head" onclick="toggleWeek(this)">
+      <span class="caret">▾</span><h3>📅 Tuần 8</h3>
+      <span class="wlabel">🎓 Tăng tốc + mô phỏng ngày thi</span>
+      <span class="week-mini"><div></div></span>
+    </div>
+    <div class="week-body">
+      <div class="day">
+        <div class="day-title">Ngày 1 <span class="pill fix">Vá điểm yếu</span> — Rà "sổ lỗi"</div>
+        <div class="task"><input type="checkbox"><label>Luyện riêng 2–3 dạng câu hay sai nhất (lấy bài ở chủ đề từng sai)</label><span class="time">35'</span></div>
+        <div class="task"><input type="checkbox"><label>Làm lại các câu từng sai → kiểm tra đã hiểu chưa</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 2 <span class="pill test">Tốc độ</span> — Ép nhanh hơn thi thật</div>
+        <div class="task"><input type="checkbox"><label>Đọc bài + làm câu trong 13 phút/bài (ép nhanh hơn 15') — chủ đề trộn</label><span class="time">40'</span></div>
+        <div class="task"><input type="checkbox"><label>Soi lỗi do vội → rút kinh nghiệm</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 3 <span class="pill test">Đề full</span> — Mô phỏng ngày thi (trộn chủ đề)</div>
+        <div class="task"><input type="checkbox"><label>Làm đề full đúng giờ, đúng điều kiện thi thật (60 phút, 4 chủ đề bất kỳ)</label><span class="time">60'</span></div>
+        <div class="task"><input type="checkbox"><label>Chấm điểm + ghi nhận cảm giác về thời gian</label><span class="time">10'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 4 <span class="pill">Chiến thuật</span> — Chiến thuật phòng thi</div>
+        <div class="task"><input type="checkbox"><label>Thứ tự làm bài (bài dễ/quen chủ đề trước) + câu Main idea làm sau cùng</label><span class="time">20'</span></div>
+        <div class="task"><input type="checkbox"><label>Đoán thông minh khi bí, KHÔNG bỏ trống câu nào (không trừ điểm sai)</label><span class="time">15'</span></div>
+        <div class="task"><input type="checkbox"><label>Luyện quy trình mỗi bài: skim 2' → đọc câu hỏi → scan 11' → soát 2'</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 5 <span class="pill test">Đề full</span> — Đề cuối + ôn nhẹ</div>
+        <div class="task"><input type="checkbox"><label>Làm đề full cuối (bấm giờ) — giữ tâm lý thoải mái</label><span class="time">60'</span></div>
+        <div class="task"><input type="checkbox"><label>Ôn nhẹ từ vựng hay gặp, không học thêm cái mới</label><span class="time">15'</span></div>
+      </div>
+      <div class="day">
+        <div class="day-title">Ngày 6–7 <span class="pill rev">Nghỉ</span> — Giữ sức trước thi</div>
+        <div class="task"><input type="checkbox"><label>Nghỉ ngơi, đọc nhẹ 1 bài báo tiếng Anh — ăn mừng đã hoàn thành! 🎉</label><span class="time">20'</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="result">
+    <h2 style="color:var(--green); margin-bottom:8px">✅ Sau 8 tuần bạn sẽ làm được gì?</h2>
+    <ul>
+      <li>Thành thạo <strong>8 dạng câu hỏi</strong> &amp; chiến thuật xử lý từng dạng</li>
+      <li>Có <strong>nền từ vựng 24 chủ đề</strong> hay ra trong đề VSTEP</li>
+      <li>Làm được <strong>4 bài đọc · 40 câu · trong 60 phút</strong> (≈ 15 phút/bài)</li>
+      <li>Đạt mục tiêu <strong>≥ 6.0/10</strong> phần Reading (Bậc 4 · B2), nhắm <strong>~28+/40 câu</strong></li>
+    </ul>
+    <p style="margin-top:10px; color:var(--muted)"><strong>⚠️ Lưu ý:</strong> Reading là kỹ năng bạn có lợi thế (đọc tài liệu kỹ thuật hằng ngày) → đừng chủ quan bỏ qua bấm giờ. <strong>Đều đặn &gt; cường độ</strong> — đừng để kiệt sức khi học song song nhiều thứ.</p>
+  </div>
+
+  <div class="note" style="border-left-color: var(--green);">
+    <strong>📚 Nguồn học gợi ý:</strong>
+    <table>
+      <tr><td>Đề thật VSTEP</td><td>ĐHQGHN · ĐH Ngoại ngữ — dùng cho Giai đoạn 3 (luyện đề full)</td></tr>
+      <tr><td>Từ vựng chủ đề</td><td>Bộ từ vựng theo 24 chủ đề ở trên — xây từ vựng nền hằng ngày</td></tr>
+      <tr><td>Bài mẫu 8 dạng</td><td>"The Appreciation of Art" (đã có) — luyện nhận diện 8 dạng câu</td></tr>
+      <tr><td>Đọc thụ động</td><td>BBC Learning English · VOA · National Geographic — tăng tốc độ &amp; từ vựng vào ngày nghỉ</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<footer>💾 Tiến độ tự lưu trên trình duyệt này. Tick xong là lưu — lần sau mở lại vẫn còn.</footer>
+
+<script>
+  const STORAGE_KEY = 'reading_2thang_progress';
+  const boxes = Array.from(document.querySelectorAll('.task input[type=checkbox]'));
+  boxes.forEach((b, i) => b.dataset.id = 'r' + i);
+
+  function load() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch (e) { return {}; } }
+  function save(state) { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+
+  function refreshTotals() {
+    const total = boxes.length;
+    const done = boxes.filter(b => b.checked).length;
+    const pct = total ? Math.round(done / total * 100) : 0;
+    document.getElementById('bar').style.width = pct + '%';
+    document.getElementById('pct').textContent = pct + '%';
+    document.querySelectorAll('.week').forEach(w => {
+      const wb = Array.from(w.querySelectorAll('.task input[type=checkbox]'));
+      const wd = wb.filter(b => b.checked).length;
+      const wp = wb.length ? Math.round(wd / wb.length * 100) : 0;
+      const mini = w.querySelector('.week-mini > div');
+      if (mini) mini.style.width = wp + '%';
+      const lbl = w.querySelector('.wlabel');
+      if (lbl && !lbl.dataset.base) lbl.dataset.base = lbl.textContent;
+      if (lbl) lbl.textContent = lbl.dataset.base + '  ·  ' + wd + '/' + wb.length;
+    });
+  }
+  function applyTaskStyle(b) { b.closest('.task').classList.toggle('done', b.checked); }
+
+  const state = load();
+  boxes.forEach(b => {
+    if (state[b.dataset.id]) b.checked = true;
+    applyTaskStyle(b);
+    b.addEventListener('change', () => {
+      const s = load();
+      if (b.checked) s[b.dataset.id] = 1; else delete s[b.dataset.id];
+      save(s); applyTaskStyle(b); refreshTotals();
+    });
+  });
+  refreshTotals();
+
+  function toggleWeek(head) { head.parentElement.classList.toggle('collapsed'); }
+  function expandAll(open) { document.querySelectorAll('.week').forEach(w => w.classList.toggle('collapsed', !open)); }
+  function resetProgress() {
+    if (!confirm('Xóa toàn bộ tiến độ đã tick?')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    boxes.forEach(b => { b.checked = false; applyTaskStyle(b); });
+    refreshTotals();
+  }
+</script>
+
+</body>
+</html>

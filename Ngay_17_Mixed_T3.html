@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 3 · Ngày 7 — Luyện trộn: Tổng hợp cụm Khoa học &amp; Giáo dục · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  .recap { margin: 6px 0 0 18px; }
+  .recap li { margin: 4px 0; }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧩 Tuần 3 · Ngày 7 — Luyện trộn: Tổng hợp cụm Khoa học &amp; Giáo dục</h1>
+  <p>1 đề tổng hợp cuối tuần → làm đề → giải đề → ôn lại toàn bộ từ vựng Tuần 3</p>
+  <div class="meta">
+    <span class="badge">🕐 ~45 phút</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 1 bài · 10 câu · đủ 8 dạng</span>
+    <span class="badge">📚 Ôn tập cả tuần</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Ôn từ vựng cả tuần</b> — lướt lại toàn bộ chủ đề đã học, đánh dấu từ nào còn quên.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b>.</p>
+  </div>
+
+  <!-- ============ ĐỀ ============ -->
+  <h2>Đề luyện <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>Why Do Languages Die Out?</h3>
+    <p><span class="pn">[1]</span> Of the roughly seven thousand languages spoken around the world today, linguists estimate that nearly half will disappear before the end of this century. A language is considered endangered when children stop learning it as their mother tongue, and it is deemed extinct once its last fluent speaker passes away. Unlike species loss, which is driven mainly by environmental factors, language death is almost always the result of social and political pressure exerted by a dominant tongue.</p>
+    <p class="vi-para">[1] Trong số khoảng bảy nghìn ngôn ngữ đang được sử dụng trên thế giới ngày nay, các nhà ngôn ngữ học ước tính gần một nửa sẽ biến mất trước cuối thế kỷ này. Một ngôn ngữ được coi là đang nguy cấp khi trẻ em không còn học nó như tiếng mẹ đẻ nữa, và bị coi là tuyệt chủng khi người nói thông thạo cuối cùng của nó qua đời. Khác với sự tuyệt chủng của các loài sinh vật, vốn chủ yếu do yếu tố môi trường gây ra, sự biến mất của ngôn ngữ hầu như luôn là kết quả của áp lực xã hội và chính trị từ một ngôn ngữ chiếm ưu thế.</p>
+
+    <p><span class="pn">[2]</span> Colonisation offers the clearest historical example. When European powers expanded overseas, they frequently imposed their own languages in schools, courts, and government offices, while indigenous tongues were dismissed as inferior or even banned outright. Generations of children were punished for speaking their native language at school, a policy that severed the transmission of vocabulary and grammar from parents to offspring within a single lifetime.</p>
+    <p class="vi-para">[2] Chủ nghĩa thực dân là ví dụ lịch sử rõ ràng nhất. Khi các cường quốc châu Âu mở rộng ra hải ngoại, họ thường xuyên áp đặt ngôn ngữ của mình trong trường học, tòa án và cơ quan chính quyền, trong khi các ngôn ngữ bản địa bị coi thường là thấp kém hoặc thậm chí bị cấm hoàn toàn. Nhiều thế hệ trẻ em bị trừng phạt vì nói tiếng mẹ đẻ của mình ở trường, một chính sách đã cắt đứt việc truyền lại từ vựng và ngữ pháp từ cha mẹ sang con cái chỉ trong một đời người.</p>
+
+    <p><span class="pn">[3]</span> More recently, globalisation and urban migration have accelerated the process. As young people move from rural villages to cities in search of employment, they often adopt the majority language to fit in and improve their economic prospects, leaving smaller regional languages spoken only by the elderly. Once a language is no longer used in the home, its survival becomes precarious, since children require constant exposure to acquire native fluency.</p>
+    <p class="vi-para">[3] Gần đây hơn, toàn cầu hóa và di cư ra thành thị đã đẩy nhanh quá trình này. Khi người trẻ rời các làng quê để đến thành phố tìm việc làm, họ thường tiếp thu ngôn ngữ đa số để hòa nhập và cải thiện triển vọng kinh tế, khiến những ngôn ngữ vùng miền nhỏ hơn chỉ còn được người già sử dụng. Một khi một ngôn ngữ không còn được dùng trong gia đình, sự tồn tại của nó trở nên bấp bênh, vì trẻ em cần được tiếp xúc thường xuyên mới có thể đạt được sự thông thạo như người bản ngữ.</p>
+
+    <p><span class="pn">[4]</span> Some linguists argue that this loss is simply the natural, if regrettable, consequence of a more interconnected world, and that resources would be better spent documenting dying languages than attempting to revive them. Others vehemently disagree, insisting that every language encodes a unique way of categorising reality, and that its disappearance represents an irreplaceable loss of human knowledge, comparable to the extinction of a species. Successful revitalisation efforts, such as the resurgence of Welsh and Hebrew, demonstrate that decline is not always irreversible when communities and governments commit sufficient resources.</p>
+    <p class="vi-para">[4] Một số nhà ngôn ngữ học cho rằng sự mất mát này chỉ đơn giản là hệ quả tự nhiên, dù đáng tiếc, của một thế giới ngày càng kết nối, và rằng nguồn lực nên được dùng để ghi chép lại các ngôn ngữ đang mai một thay vì cố gắng phục hồi chúng. Những người khác kịch liệt phản đối, cho rằng mỗi ngôn ngữ mã hóa một cách nhìn nhận thực tại độc đáo, và sự biến mất của nó là một mất mát không thể bù đắp đối với tri thức nhân loại, có thể so sánh với sự tuyệt chủng của một loài sinh vật. Những nỗ lực hồi sinh thành công, như sự trỗi dậy trở lại của tiếng Wales và tiếng Hebrew, cho thấy sự suy tàn không phải lúc nào cũng không thể đảo ngược khi cộng đồng và chính phủ đầu tư đủ nguồn lực.</p>
+
+    <p><span class="pn">[5]</span> Ultimately, the fate of an endangered language rests less on linguists than on the speakers themselves. Documentation projects can preserve grammar and vocabulary for scholarly purposes, but only continued daily use within families and communities can keep a language genuinely alive. As one activist for indigenous languages put it, "A language recorded in an archive is a language remembered; a language spoken by a child is a language that lives."</p>
+    <p class="vi-para">[5] Cuối cùng, số phận của một ngôn ngữ đang nguy cấp phụ thuộc vào chính những người nói nó nhiều hơn là vào các nhà ngôn ngữ học. Các dự án ghi chép tư liệu có thể lưu giữ ngữ pháp và từ vựng cho mục đích nghiên cứu, nhưng chỉ có việc tiếp tục sử dụng hàng ngày trong gia đình và cộng đồng mới thực sự giữ cho một ngôn ngữ sống động. Như một nhà hoạt động vì ngôn ngữ bản địa từng nói: "Một ngôn ngữ được lưu trong kho lưu trữ là một ngôn ngữ được ghi nhớ; một ngôn ngữ được một đứa trẻ nói ra mới là một ngôn ngữ đang sống."</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the number of species that go extinct each year</li><li>B. the causes and consequences of language death worldwide</li><li>C. how to teach children a second language</li><li>D. the grammar rules of Welsh and Hebrew</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài bàn về nguyên nhân (thuộc địa, di cư, toàn cầu hóa) và hệ quả của việc ngôn ngữ biến mất → ý bao trùm là B. A/C/D chỉ là chi tiết phụ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"imposed"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. forced upon</li><li>B. removed from</li><li>C. translated into</li><li>D. borrowed from</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "imposed their own languages in schools, courts..." = áp đặt ngôn ngữ của mình lên → forced upon.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, how did colonial policies damage indigenous languages?</div>
+    <ul><li>A. By translating them into European languages</li><li>B. By punishing children for speaking their native language at school</li><li>C. By funding research into indigenous grammar</li><li>D. By encouraging bilingual education</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "Generations of children were punished for speaking their native language at school..."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"its"</b> (in "its survival") refers to:</div>
+    <ul><li>A. the city</li><li>B. employment</li><li>C. the regional language</li><li>D. the elderly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu trước nói về "smaller regional languages"; "its survival" = sự tồn tại của ngôn ngữ đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that a language is most likely to survive when:</div>
+    <ul><li>A. it is banned in schools</li><li>B. it is still spoken regularly at home by children</li><li>C. only elderly people speak it</li><li>D. young people move away from their villages</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Once a language is no longer used in the home... children require constant exposure to acquire native fluency" → suy ra ngôn ngữ tồn tại khi trẻ em vẫn dùng nó ở nhà.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"precarious"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. secure and stable</li><li>B. uncertain and at risk</li><li>C. widely spoken</li><li>D. legally protected</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "its survival becomes precarious" — trong ngữ cảnh ngôn ngữ đang mất dần người nói → bấp bênh, dễ mất đi = uncertain and at risk.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">Welsh and Hebrew</b> in paragraph 4?</div>
+    <ul><li>A. To prove that all languages eventually die</li><li>B. To give examples showing that language decline can be reversed</li><li>C. To criticise government language policy</li><li>D. To compare grammar systems</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước nói "decline is not always irreversible"; Welsh/Hebrew là ví dụ minh chứng cho việc hồi sinh thành công.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as causes of language death EXCEPT:</div>
+    <ul><li>A. colonisation and banning native languages in schools</li><li>B. urban migration toward majority-language areas</li><li>C. globalisation and economic pressure to assimilate</li><li>D. a sudden shortage of paper for writing books</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Colonisation (đoạn 2), migration &amp; globalisation (đoạn 3) đều được nhắc → loại A, B, C. "Shortage of paper" không hề xuất hiện → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span><span class="c1tag">C1</span> The overall tone of the passage toward language loss can best be described as:</div>
+    <ul><li>A. dismissive and unconcerned</li><li>B. thoughtful, weighing different views while showing sympathy for endangered languages</li><li>C. purely celebratory</li><li>D. aggressively one-sided against linguists</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày cả hai quan điểm (đoạn 4: "some linguists argue... / others vehemently disagree") nhưng kết bài thiên về việc coi trọng việc gìn giữ ngôn ngữ ("a language spoken by a child is a language that lives") → thái độ cân nhắc, có phần đồng cảm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span> The quotation in paragraph 5 ("A language recorded in an archive is a language remembered; a language spoken by a child is a language that lives") implies that:</div>
+    <ul><li>A. archives are more valuable than living speakers</li><li>B. documentation alone cannot keep a language truly alive</li><li>C. children should not study archived languages</li><li>D. only linguists can save a language</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trích dẫn đối lập "remembered" (chỉ được ghi nhớ, lưu trữ) với "lives" (thực sự sống) → ngụ ý lưu trữ thôi chưa đủ, phải có người dùng sống mới giữ ngôn ngữ tồn tại.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG ============ -->
+  <h2>Từ vựng chủ đề Language &amp; Linguistics</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>endangered</td><td>(adj)</td><td>đang có nguy cơ tuyệt chủng/biến mất</td></tr>
+    <tr><td>mother tongue</td><td>(n)</td><td>tiếng mẹ đẻ</td></tr>
+    <tr><td>extinct</td><td>(adj)</td><td>tuyệt chủng, không còn tồn tại</td></tr>
+    <tr><td>impose <span class="c1tag">C1</span></td><td>(v)</td><td>áp đặt</td></tr>
+    <tr><td>indigenous</td><td>(adj)</td><td>bản địa, bản xứ</td></tr>
+    <tr><td>transmission</td><td>(n)</td><td>sự truyền lại (kiến thức, ngôn ngữ)</td></tr>
+    <tr><td>urban migration</td><td>(n phr)</td><td>di cư ra thành thị</td></tr>
+    <tr><td>precarious <span class="c1tag">C1</span></td><td>(adj)</td><td>bấp bênh, dễ mất/sụp đổ</td></tr>
+    <tr><td>fluency</td><td>(n)</td><td>sự thông thạo (ngôn ngữ)</td></tr>
+    <tr><td>vehemently <span class="c1tag">C1</span></td><td>(adv)</td><td>mạnh mẽ, kịch liệt (phản đối)</td></tr>
+    <tr><td>irreplaceable</td><td>(adj)</td><td>không thể thay thế</td></tr>
+    <tr><td>revitalisation <span class="c1tag">C1</span></td><td>(n)</td><td>sự phục hồi, hồi sinh (trở lại)</td></tr>
+    <tr><td>resurgence</td><td>(n)</td><td>sự hồi sinh, trỗi dậy trở lại</td></tr>
+    <tr><td>documentation</td><td>(n)</td><td>việc ghi chép, lưu trữ tư liệu</td></tr>
+    <tr><td>archive</td><td>(n)</td><td>kho lưu trữ</td></tr>
+  </table>
+
+  <!-- ============ ÔN LẠI TỪ VỰNG CẢ TUẦN ============ -->
+  <h2>📚 Ôn lại từ vựng cả tuần — Tuần 3</h2>
+  <div class="card">
+    <p style="margin-bottom:8px;">Trước khi bước sang Tuần 4, hãy lướt lại nhanh 6 chủ đề đã học trong tuần này. Với mỗi chủ đề, tự nhắm mắt nhớ lại 3–5 từ khoá — nếu quên, mở lại file tương ứng để ôn:</p>
+    <ul class="recap">
+      <li>🔬 <b>Science</b> — nghiên cứu khoa học nói chung: hypothesis, breakthrough, experiment, peer-reviewed, empirical...</li>
+      <li>🚀 <b>Space</b> — thiên văn &amp; du hành vũ trụ: orbit, telescope, launch, exploration, celestial...</li>
+      <li>🌐 <b>Internet &amp; Technology &amp; Society</b> — công nghệ số &amp; tác động xã hội: bandwidth, algorithm, cybersecurity, digital divide, connectivity...</li>
+      <li>🗣️ <b>Language &amp; Linguistics</b> — ngôn ngữ học (bài hôm nay): endangered, mother tongue, fluency, revitalisation, indigenous...</li>
+      <li>🎓 <b>Education</b> — giáo dục &amp; đào tạo: curriculum, literacy, tuition, assessment, pedagogy...</li>
+      <li>💼 <b>Work &amp; Psychology</b> — công việc &amp; tâm lý con người: burnout, motivation, productivity, cognitive, resilience...</li>
+    </ul>
+    <p style="margin-top:10px; color:var(--muted)">💡 Mẹo ôn nhanh: viết 1 câu ví dụ cho mỗi từ bạn còn nhớ mơ hồ — nhớ theo câu luôn bền hơn nhớ từ đơn lẻ.</p>
+  </div>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-A · 3-B · 4-C · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Đây là bài tổng kết tuần, hãy xem lại toàn bộ "sổ lỗi" của cả Tuần 3 để tìm dạng câu bạn hay sai nhất.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10 → nền rất tốt, sẵn sàng cho Tuần 4 · 6–7 → ổn, đúng hướng, nên ôn lại 1–2 dạng câu yếu · ≤5 → dành thêm 1 buổi đọc lại các bài Tuần 3 trước khi qua Tuần 4.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 7?</b> Chúc mừng bạn đã hoàn thành trọn vẹn Tuần 3! Hãy dành vài phút xem lại toàn bộ bảng từ vựng đã tích luỹ, đảm bảo bạn tự tin với ít nhất 80% số từ. Tuần 4 sẽ mở ra một cụm chủ đề mới — hãy giữ nhịp học đều đặn và tiếp tục phát huy!
+  </div>
+
+</div>
+
+<footer>🧩 Tuần 3 · Ngày 7 · VSTEP Reading — Luyện trộn tổng hợp · Ôn cũ để vững, học mới để tiến.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

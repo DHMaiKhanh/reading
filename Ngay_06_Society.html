@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 6 — Luyện đề Society &amp; Social Issues · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  /* Bản dịch tiếng Việt song ngữ */
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 0 0 14px 0;
+    font-size: 0.94rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .vi-para .pn { color: var(--accent); font-weight: 700; margin-right: 4px; font-style: normal; }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>👥 Ngày 6 — Luyện đề: Society &amp; Social Issues</h1>
+  <p>1 đề kết hợp chuẩn B2 + C1 → làm đề → giải đề → rút từ vựng (bản song ngữ Anh–Việt)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~45 phút</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 1 bài · 10 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b>. Bài đọc kèm bản dịch tiếng Việt (<i>chữ nghiêng, khung viền cam</i>) ngay dưới mỗi đoạn — chỉ nên đọc bản dịch SAU khi đã cố hiểu đoạn tiếng Anh trước.</p>
+  </div>
+
+  <!-- ============ ĐỀ ============ -->
+  <h2>Đề luyện <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>Bridging the Gaps: Gender, Migration, and Poverty in Modern Society</h3>
+
+    <p><span class="pn">[1]</span> Modern societies pride themselves on progress, yet deep inequalities persist beneath the surface of everyday life. Gender inequality remains one of the most stubborn of these problems. Although women now make up nearly half of the global workforce, they continue to be paid less than men for comparable work and remain underrepresented in senior leadership positions. Sociologists argue that this gap cannot be explained by differences in ability or ambition; rather, it reflects entrenched cultural attitudes about what roles women are supposed to occupy, both at work and at home.</p>
+    <p class="vi-para"><span class="pn">[1]</span> Các xã hội hiện đại tự hào về sự tiến bộ, nhưng những bất bình đẳng sâu sắc vẫn tồn tại dưới bề mặt của đời sống thường nhật. Bất bình đẳng giới vẫn là một trong những vấn đề dai dẳng nhất. Dù phụ nữ hiện chiếm gần một nửa lực lượng lao động toàn cầu, họ vẫn bị trả lương thấp hơn nam giới cho công việc tương đương và vẫn chưa có đủ đại diện ở các vị trí lãnh đạo cấp cao. Các nhà xã hội học cho rằng khoảng cách này không thể giải thích bằng sự khác biệt về năng lực hay tham vọng; thay vào đó, nó phản ánh những định kiến văn hóa đã ăn sâu về vai trò mà phụ nữ "nên" đảm nhận, cả ở nơi làm việc lẫn trong gia đình.</p>
+
+    <p><span class="pn">[2]</span> A second, closely related issue is migration. Every year, millions of people leave their home countries in search of safety or economic opportunity. Some are refugees fleeing conflict or persecution; others are economic migrants hoping to build a better future for their families. While migration can enrich host societies with new skills, languages, and cultural perspectives, it is often accompanied by tension. Newcomers may face discrimination, exploitation in low-wage jobs, or exclusion from social services, even when they contribute significantly to the local economy through taxes and labour.</p>
+    <p class="vi-para"><span class="pn">[2]</span> Vấn đề thứ hai, có liên quan chặt chẽ, là di cư. Mỗi năm, hàng triệu người rời quê hương để tìm kiếm sự an toàn hoặc cơ hội kinh tế. Một số là người tị nạn chạy trốn xung đột hoặc bị đàn áp; số khác là người di cư kinh tế mong muốn xây dựng tương lai tốt đẹp hơn cho gia đình. Dù di cư có thể làm phong phú thêm xã hội tiếp nhận bằng kỹ năng, ngôn ngữ và góc nhìn văn hóa mới, nó thường đi kèm với căng thẳng. Người mới đến có thể phải đối mặt với sự phân biệt đối xử, bị bóc lột trong các công việc lương thấp, hoặc bị loại khỏi các dịch vụ xã hội, ngay cả khi họ đóng góp đáng kể cho nền kinh tế địa phương qua thuế và sức lao động.</p>
+
+    <p><span class="pn">[3]</span> Poverty, meanwhile, continues to affect a significant proportion of the world's population, despite decades of economic growth. Poverty is rarely just a matter of insufficient income; it is a self-perpetuating cycle that limits access to education, healthcare, and stable housing, which in turn makes it harder to escape. Children raised in poor households are statistically more likely to leave school early and to earn low wages as adults, perpetuating the cycle across generations. Governments have experimented with various interventions, from cash transfer programmes to subsidised childcare, with mixed but generally encouraging results.</p>
+    <p class="vi-para"><span class="pn">[3]</span> Trong khi đó, nghèo đói vẫn tiếp tục ảnh hưởng đến một tỷ lệ đáng kể dân số thế giới, bất chấp nhiều thập kỷ tăng trưởng kinh tế. Nghèo đói hiếm khi chỉ đơn thuần là vấn đề thu nhập không đủ; đó là một vòng luẩn quẩn tự duy trì, hạn chế khả năng tiếp cận giáo dục, y tế và nhà ở ổn định, từ đó lại khiến việc thoát nghèo càng khó khăn hơn. Trẻ em lớn lên trong các hộ nghèo, theo thống kê, có nhiều khả năng bỏ học sớm hơn và khi trưởng thành nhận mức lương thấp hơn, khiến vòng luẩn quẩn này kéo dài qua nhiều thế hệ. Các chính phủ đã thử nghiệm nhiều biện pháp can thiệp khác nhau, từ chương trình trợ cấp tiền mặt đến hỗ trợ chi phí trông trẻ, với kết quả không đồng đều nhưng nhìn chung đáng khích lệ.</p>
+
+    <p><span class="pn">[4]</span> These three issues — gender inequality, migration, and poverty — are not isolated phenomena; they intersect and reinforce one another in complex ways. Female migrants, for example, often face a double disadvantage, being disadvantaged both as women and as newcomers, and are disproportionately concentrated in precarious, poorly paid sectors such as domestic work. Some critics contend that policymakers tend to address these problems separately, through narrowly defined programmes, when in fact a more holistic approach is required. Only by recognising how these forms of disadvantage overlap, they argue, can societies design interventions that genuinely reach the most vulnerable.</p>
+    <p class="vi-para"><span class="pn">[4]</span> Ba vấn đề này — bất bình đẳng giới, di cư, và nghèo đói — không phải là những hiện tượng riêng lẻ; chúng đan xen và củng cố lẫn nhau theo những cách phức tạp. Ví dụ, phụ nữ di cư thường phải chịu bất lợi kép, vừa bất lợi vì là phụ nữ vừa vì là người mới đến, và tập trung với tỷ lệ cao bất thường vào các lĩnh vực bấp bênh, lương thấp như giúp việc gia đình. Một số nhà phê bình cho rằng các nhà hoạch định chính sách có xu hướng giải quyết những vấn đề này một cách tách biệt, thông qua các chương trình có phạm vi hẹp, trong khi trên thực tế cần có một cách tiếp cận toàn diện hơn. Họ lập luận rằng chỉ khi nhận ra những hình thức bất lợi này chồng chéo lên nhau như thế nào, các xã hội mới có thể thiết kế được những biện pháp can thiệp thực sự tiếp cận được nhóm dễ bị tổn thương nhất.</p>
+
+    <p><span class="pn">[5]</span> There is no simple remedy for problems as deeply rooted as these, and progress is likely to remain gradual rather than dramatic. Still, the growing willingness of governments, businesses, and civil society to acknowledge these issues openly represents a meaningful shift from decades past, when such topics were frequently dismissed or ignored. Whether this newfound awareness translates into lasting structural change, however, will depend less on rhetoric than on sustained political will and adequate funding over the long term.</p>
+    <p class="vi-para"><span class="pn">[5]</span> Không có giải pháp đơn giản nào cho những vấn đề bám rễ sâu như thế này, và tiến bộ có lẽ sẽ vẫn diễn ra từ từ chứ không đột phá. Dù vậy, sự sẵn lòng ngày càng tăng của các chính phủ, doanh nghiệp và xã hội dân sự trong việc thẳng thắn thừa nhận những vấn đề này thể hiện một sự chuyển biến đáng kể so với nhiều thập kỷ trước, khi những chủ đề như vậy thường bị gạt bỏ hoặc phớt lờ. Tuy nhiên, việc nhận thức mới này có chuyển hóa thành thay đổi cấu trúc lâu dài hay không sẽ phụ thuộc không nhiều vào lời nói suông mà vào ý chí chính trị bền bỉ và nguồn tài trợ thỏa đáng về lâu dài.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. how governments fund childcare programmes</li><li>B. three interconnected social problems — gender inequality, migration, and poverty — in modern society</li><li>C. the history of women's rights movements</li><li>D. why refugees choose particular destination countries</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài lần lượt bàn về bất bình đẳng giới (đoạn 1), di cư (đoạn 2), nghèo đói (đoạn 3), rồi chỉ ra chúng đan xen với nhau (đoạn 4) → ý bao trùm là ba vấn đề xã hội có liên hệ với nhau. A/C/D chỉ là chi tiết nhỏ hoặc không được bàn tới.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"entrenched"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. temporary and easily changed</li><li>B. firmly established and hard to change</li><li>C. newly invented</li><li>D. officially banned</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "entrenched cultural attitudes" = những định kiến văn hóa đã ăn sâu, bám rễ vững chắc → khó thay đổi.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what is one benefit that migration can bring to host societies?</div>
+    <ul><li>A. Lower taxes for local citizens</li><li>B. New skills, languages, and cultural perspectives</li><li>C. Fewer job opportunities for newcomers</li><li>D. Complete elimination of discrimination</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "migration can enrich host societies with new skills, languages, and cultural perspectives."</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"it"</b> (in "it is a self-perpetuating cycle") refers to:</div>
+    <ul><li>A. education</li><li>B. healthcare</li><li>C. poverty</li><li>D. economic growth</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu trước đó nói "Poverty is rarely just a matter of insufficient income; it is a self-perpetuating cycle..." → "it" thay cho poverty.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that children raised in poor households:</div>
+    <ul><li>A. always outperform wealthier children academically</li><li>B. are statistically more likely to remain in poverty as adults</li><li>C. never have access to any education</li><li>D. are guaranteed subsidised childcare</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Children raised in poor households are statistically more likely to leave school early and to earn low wages as adults, perpetuating the cycle across generations" → suy ra nghèo đói có xu hướng tiếp diễn sang thế hệ sau. A/C quá tuyệt đối, D không được nói tới cho mọi trẻ em.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"precarious"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. secure and well-paid</li><li>B. unstable and insecure</li><li>C. highly respected</li><li>D. temporary but well-regulated</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "precarious, poorly paid sectors" — đi kèm với "poorly paid" nên precarious mang nghĩa tiêu cực: bấp bênh, thiếu ổn định.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"female migrants"</b> in paragraph 4?</div>
+    <ul><li>A. To argue that migration should be banned</li><li>B. To give a concrete example of how gender and migration disadvantages overlap</li><li>C. To criticise domestic workers</li><li>D. To describe a government childcare programme</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 lập luận rằng các vấn đề xã hội đan xen nhau; "female migrants" là ví dụ minh họa cụ thể cho bất lợi kép (vừa là phụ nữ, vừa là người di cư).</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as consequences or aspects of poverty EXCEPT:</div>
+    <ul><li>A. limited access to healthcare</li><li>B. children leaving school early</li><li>C. unstable housing</li><li>D. increased life expectancy</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 3 nhắc tới healthcare, education, housing, và trẻ em bỏ học sớm — tất cả đều liên quan đến nghèo đói (loại A, B, C). "Increased life expectancy" (tuổi thọ tăng) không được nhắc tới → đáp án D.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the possibility of solving these social problems is best described as:</div>
+    <ul><li>A. completely hopeless</li><li>B. cautiously realistic, acknowledging both progress and the difficulty ahead</li><li>C. wildly optimistic that change will happen quickly</li><li>D. indifferent and uninterested</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 5: "no simple remedy... progress is likely to remain gradual rather than dramatic," nhưng cũng ghi nhận "a meaningful shift" — thái độ thận trọng, thực tế, không bi quan tuyệt đối cũng không lạc quan mù quáng.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"less on rhetoric than on sustained political will"</b> (paragraph 5) implies that:</div>
+    <ul><li>A. speeches and promises alone are unlikely to bring lasting change</li><li>B. political speeches are more important than funding</li><li>C. rhetoric and political will are exactly the same thing</li><li>D. governments have already solved these problems</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Cấu trúc "less...than..." cho thấy tác giả coi "rhetoric" (lời nói suông) kém quan trọng hơn "sustained political will and adequate funding" (ý chí chính trị bền bỉ + tài trợ) → chỉ nói thôi thì chưa đủ để tạo ra thay đổi lâu dài.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG ============ -->
+  <h2>Từ vựng chủ đề Society &amp; Social Issues</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>inequality</td><td>(n)</td><td>sự bất bình đẳng</td></tr>
+    <tr><td>entrenched <span class="c1tag">C1</span></td><td>(adj)</td><td>ăn sâu bám rễ, khó thay đổi</td></tr>
+    <tr><td>underrepresented</td><td>(adj)</td><td>chưa được đại diện đầy đủ</td></tr>
+    <tr><td>migration</td><td>(n)</td><td>sự di cư</td></tr>
+    <tr><td>persecution <span class="c1tag">C1</span></td><td>(n)</td><td>sự đàn áp, ngược đãi</td></tr>
+    <tr><td>exploitation</td><td>(n)</td><td>sự bóc lột</td></tr>
+    <tr><td>self-perpetuating <span class="c1tag">C1</span></td><td>(adj)</td><td>tự duy trì, tự lặp lại (vòng luẩn quẩn)</td></tr>
+    <tr><td>perpetuate</td><td>(v)</td><td>duy trì, kéo dài (điều gì đó, thường tiêu cực)</td></tr>
+    <tr><td>subsidised</td><td>(adj)</td><td>được trợ cấp/hỗ trợ chi phí</td></tr>
+    <tr><td>intersect <span class="c1tag">C1</span></td><td>(v)</td><td>giao thoa, đan xen với nhau</td></tr>
+    <tr><td>disproportionately <span class="c1tag">C1</span></td><td>(adv)</td><td>với tỷ lệ không cân xứng, cao/thấp bất thường</td></tr>
+    <tr><td>precarious <span class="c1tag">C1</span></td><td>(adj)</td><td>bấp bênh, thiếu ổn định</td></tr>
+    <tr><td>holistic</td><td>(adj)</td><td>toàn diện, tổng thể</td></tr>
+    <tr><td>vulnerable</td><td>(adj)</td><td>dễ bị tổn thương</td></tr>
+    <tr><td>rhetoric <span class="c1tag">C1</span></td><td>(n)</td><td>lời lẽ hùng biện, lời nói suông</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-C · 5-B · 6-B · 7-B · 8-D · 9-B · 10-A</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10 → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài (kể cả bản dịch) + học kỹ từ vựng trước khi qua Ngày 7.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 6?</b> Quay lại lộ trình tick 4 ô của Ngày 6 (Tuần 2 · Ngày 1). Ngày 7 sẽ là đề chủ đề <b>History &amp; Civilization</b> theo đúng format này (1 đề kết hợp B2 + C1).
+  </div>
+
+</div>
+
+<footer>👥 Ngày 6 · VSTEP Reading — Society &amp; Social Issues · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

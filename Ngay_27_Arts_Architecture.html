@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 27 — Luyện đề Arts &amp; Music + Architecture &amp; Design · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎨 Tuần 5 · Ngày 3 — Arts &amp; Music + Architecture &amp; Design</h1>
+  <p>2 bài đọc kết hợp chuẩn B2 + C1 → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~30 phút (2 bài × ~15 phút)</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · 18 câu · đủ các dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, canh khoảng 15 phút/bài.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/9</b> mỗi bài.</p>
+  </div>
+
+  <!-- ============ BÀI #1 ============ -->
+  <h2>Bài #1 <span class="lvl">Arts &amp; Music · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Enduring Power of Art and Music</h3>
+    <p><span class="pn">[1]</span> Long before written language existed, human beings were already painting on cave walls and shaping crude instruments from bone and reed. This impulse to create has never faded; it has simply taken new forms, from Renaissance frescoes to symphonies to the digital art displayed in museums today. Art and music are often dismissed as mere entertainment, yet historians argue that they are indispensable records of how societies think, feel, and remember. A single painting can capture the anxieties of an era more vividly than a stack of history textbooks.</p>
+    <p class="vi-para">[1] Rất lâu trước khi chữ viết ra đời, con người đã vẽ tranh trên vách hang động và tạo ra những nhạc cụ thô sơ từ xương và cây sậy. Sự thôi thúc sáng tạo này chưa bao giờ phai nhạt; nó chỉ đơn giản khoác lên những hình thức mới, từ bích họa thời Phục hưng đến các bản giao hưởng và nghệ thuật số được trưng bày trong bảo tàng ngày nay. Nghệ thuật và âm nhạc thường bị xem nhẹ như chỉ là giải trí đơn thuần, nhưng các nhà sử học cho rằng chúng là những ghi chép không thể thiếu về cách các xã hội suy nghĩ, cảm nhận và ghi nhớ. Một bức tranh duy nhất có thể khắc họa nỗi lo âu của một thời đại sống động hơn cả một chồng sách giáo khoa lịch sử.</p>
+    <p><span class="pn">[2]</span> Museums play a crucial role in preserving this legacy, but their function has evolved considerably. Once regarded as quiet repositories for the privileged few, many museums now strive to be interactive and inclusive spaces. Curators increasingly design exhibitions that invite visitors to touch replicas, listen to soundscapes, or contribute their own reflections. This shift reflects a broader recognition that art should not be confined to an elite audience but made accessible to everyone, regardless of background or education.</p>
+    <p class="vi-para">[2] Bảo tàng đóng vai trò then chốt trong việc gìn giữ di sản này, nhưng chức năng của chúng đã thay đổi đáng kể. Từng được xem là những kho lưu trữ yên tĩnh dành cho tầng lớp đặc quyền, nhiều bảo tàng ngày nay nỗ lực trở thành không gian tương tác và mở rộng cho mọi người. Các giám tuyển ngày càng thiết kế những triển lãm mời gọi khách tham quan chạm vào bản sao hiện vật, nghe cảnh âm thanh, hoặc đóng góp suy nghĩ của riêng mình. Sự chuyển hướng này phản ánh một nhận thức rộng hơn rằng nghệ thuật không nên chỉ bó hẹp trong một tầng lớp tinh hoa mà cần được phổ cập cho tất cả mọi người, bất kể xuất thân hay trình độ học vấn.</p>
+    <p><span class="pn">[3]</span> Music, meanwhile, has undergone its own transformation through technology. Streaming platforms have democratized access to an almost limitless catalogue of recordings, allowing listeners to discover genres they might never have encountered otherwise. Critics, however, contend that this abundance has come at a cost: algorithms tend to favour short, catchy tracks, potentially discouraging composers from producing longer, more ambitious works. Some musicians worry that streaming royalties are so meagre that only a handful of superstar artists can earn a viable living, while countless others struggle to make ends meet.</p>
+    <p class="vi-para">[3] Trong khi đó, âm nhạc cũng trải qua sự chuyển mình riêng nhờ công nghệ. Các nền tảng nghe nhạc trực tuyến đã phổ cập hóa việc tiếp cận một kho thu âm gần như vô tận, cho phép người nghe khám phá những thể loại mà họ có thể chưa từng biết đến. Tuy nhiên, giới phê bình cho rằng sự dồi dào này phải trả giá: các thuật toán có xu hướng ưu ái những bản nhạc ngắn, dễ nghe, có thể khiến các nhà soạn nhạc e ngại sáng tác những tác phẩm dài hơi và tham vọng hơn. Một số nhạc sĩ lo ngại rằng tiền bản quyền từ streaming quá ít ỏi đến mức chỉ một số ít ngôi sao mới có thể sống được bằng nghề, trong khi vô số người khác phải vật lộn để trang trải cuộc sống.</p>
+    <p><span class="pn">[4]</span> Despite these tensions, few doubt that art and music will continue to flourish in some form. Every generation reinvents artistic expression to suit its own concerns, whether through protest songs, immersive installations, or literature that grapples with contemporary anxieties. What remains constant is the underlying human need to communicate emotion and meaning through creative means — a need that no amount of technological disruption seems able to extinguish.</p>
+    <p class="vi-para">[4] Dù có những căng thẳng này, ít ai nghi ngờ rằng nghệ thuật và âm nhạc sẽ tiếp tục phát triển dưới một hình thức nào đó. Mỗi thế hệ đều tái tạo cách thể hiện nghệ thuật để phù hợp với những mối quan tâm riêng của mình, dù là qua các bài hát phản kháng, những sắp đặt nghệ thuật đắm chìm, hay văn học vật lộn với những nỗi lo âu đương đại. Điều không đổi chính là nhu cầu sâu xa của con người muốn truyền tải cảm xúc và ý nghĩa qua các phương tiện sáng tạo — một nhu cầu mà dường như không cơn sóng gián đoạn công nghệ nào có thể dập tắt.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the main idea of the passage?</div>
+    <ul><li>A. Museums are becoming obsolete institutions</li><li>B. Art and music remain vital forms of human expression despite changing forms and challenges</li><li>C. Streaming platforms have destroyed the music industry</li><li>D. Cave paintings are more valuable than modern art</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài xoay quanh việc nghệ thuật/âm nhạc tồn tại lâu dài qua nhiều hình thức, dù gặp thách thức (đoạn 3) vẫn tiếp tục phát triển (đoạn 4). A, C, D chỉ là chi tiết bị phóng đại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"indispensable"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. unnecessary</li><li>B. absolutely essential</li><li>C. expensive</li><li>D. temporary</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "indispensable records" = những ghi chép không thể thiếu → absolutely essential.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, how have museums changed?</div>
+    <ul><li>A. They have become quieter and more exclusive</li><li>B. They now charge much higher entrance fees</li><li>C. They have shifted toward interactive and inclusive experiences</li><li>D. They no longer display historical artefacts</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 2: "many museums now strive to be interactive and inclusive spaces."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"this shift"</b> refers to:</div>
+    <ul><li>A. curators designing exhibitions with touchable replicas and soundscapes</li><li>B. museums closing permanently</li><li>C. paintings being sold to private collectors</li><li>D. the invention of written language</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Câu trước đó mô tả curators thiết kế trải nghiệm tương tác → "this shift" chỉ sự thay đổi đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that streaming platforms:</div>
+    <ul><li>A. have brought only benefits with no drawbacks</li><li>B. have both broadened access and created new economic problems</li><li>C. have eliminated the need for musicians entirely</li><li>D. only distribute classical music</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn nêu cả lợi ích (democratized access) lẫn hạn chế (royalties meagre, favour short tracks) → cân bằng hai mặt.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"meagre"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. abundant</li><li>B. insufficient, small in amount</li><li>C. guaranteed</li><li>D. flexible</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "streaming royalties are so meagre that only a handful... can earn a viable living" → tiền bản quyền quá ít ỏi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "protest songs" and "immersive installations" in paragraph 4?</div>
+    <ul><li>A. To criticize modern artists</li><li>B. To give examples of how each generation reinvents artistic expression</li><li>C. To argue that music is more important than visual art</li><li>D. To explain the history of cave painting</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu văn: "Every generation reinvents artistic expression... whether through protest songs, immersive installations..." — đây là các ví dụ minh họa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as changes or effects EXCEPT:</div>
+    <ul><li>A. museums becoming more interactive</li><li>B. streaming making music more accessible</li><li>C. algorithms favouring short tracks</li><li>D. governments banning digital art</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 2), B và C (đoạn 3) đều được nhắc; việc "chính phủ cấm nghệ thuật số" không hề xuất hiện trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span><span class="c1tag">C1</span> The author's overall tone toward the future of art and music is:</div>
+    <ul><li>A. pessimistic and hopeless</li><li>B. cautiously confident that creative expression will persist</li><li>C. completely neutral and uninterested</li><li>D. dismissive of all modern technology</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Dù nêu khó khăn (đoạn 3), tác giả kết luận "few doubt that art and music will continue to flourish" và nhấn mạnh nhu cầu sáng tạo là bất diệt → lạc quan có cân nhắc.</p></details>
+  </div>
+
+  <h3>Từ vựng — Bài #1 (Arts &amp; Music)</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>impulse</td><td>(n)</td><td>sự thôi thúc, bản năng</td></tr>
+    <tr><td>indispensable <span class="c1tag">C1</span></td><td>(adj)</td><td>không thể thiếu, thiết yếu</td></tr>
+    <tr><td>repository</td><td>(n)</td><td>kho lưu trữ</td></tr>
+    <tr><td>curator</td><td>(n)</td><td>người phụ trách trưng bày (bảo tàng)</td></tr>
+    <tr><td>confined to</td><td>(phr)</td><td>giới hạn/bó hẹp trong</td></tr>
+    <tr><td>democratize</td><td>(v)</td><td>phổ cập hóa, đại chúng hóa</td></tr>
+    <tr><td>catalogue</td><td>(n)</td><td>danh mục, bộ sưu tập</td></tr>
+    <tr><td>meagre <span class="c1tag">C1</span></td><td>(adj)</td><td>ít ỏi, nghèo nàn</td></tr>
+    <tr><td>viable</td><td>(adj)</td><td>khả thi, có thể tồn tại được</td></tr>
+    <tr><td>grapple with <span class="c1tag">C1</span></td><td>(phr v)</td><td>vật lộn, đối mặt với (vấn đề khó)</td></tr>
+  </table>
+
+  <!-- ============ BÀI #2 ============ -->
+  <h2>Bài #2 <span class="lvl">Architecture &amp; Design · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Rethinking the Cities We Build</h3>
+    <p><span class="pn">[1]</span> For much of the twentieth century, architecture was dominated by a single conviction: that taller, faster, and more efficient buildings represented progress. Skyscrapers sprouted across skylines as symbols of economic ambition, while urban planners prioritised highways designed to move cars quickly between suburbs and city centres. Few questioned whether this model of growth was sustainable, since the benefits — speed, convenience, and visible prosperity — seemed self-evident at the time.</p>
+    <p class="vi-para">[1] Trong phần lớn thế kỷ 20, kiến trúc bị chi phối bởi một niềm tin duy nhất: những tòa nhà càng cao, càng nhanh và càng hiệu quả thì càng thể hiện sự tiến bộ. Các tòa nhà chọc trời mọc lên khắp đường chân trời như biểu tượng của tham vọng kinh tế, trong khi các nhà quy hoạch đô thị ưu tiên xây dựng đường cao tốc để đưa xe cộ di chuyển nhanh chóng giữa ngoại ô và trung tâm thành phố. Ít ai đặt câu hỏi liệu mô hình tăng trưởng này có bền vững hay không, bởi những lợi ích — tốc độ, sự tiện lợi và sự thịnh vượng rõ ràng — dường như là hiển nhiên vào thời điểm đó.</p>
+    <p><span class="pn">[2]</span> In recent decades, however, a quieter but no less significant movement has emerged, one that emphasises human scale over sheer size. Architects and urban designers increasingly advocate for walkable neighbourhoods, mixed-use developments, and green spaces woven directly into the urban fabric. Proponents argue that cities designed around pedestrians rather than automobiles foster stronger communities, reduce pollution, and even improve residents' mental health by encouraging casual social interaction.</p>
+    <p class="vi-para">[2] Tuy nhiên, trong những thập kỷ gần đây, một phong trào lặng lẽ hơn nhưng không kém phần quan trọng đã xuất hiện, nhấn mạnh quy mô phù hợp với con người thay vì kích thước thuần túy. Các kiến trúc sư và nhà thiết kế đô thị ngày càng ủng hộ những khu dân cư có thể đi bộ được, các khu phát triển đa chức năng, và không gian xanh được đan cài trực tiếp vào cấu trúc đô thị. Những người ủng hộ cho rằng các thành phố được thiết kế xoay quanh người đi bộ thay vì ô tô sẽ thúc đẩy cộng đồng gắn kết hơn, giảm ô nhiễm, và thậm chí cải thiện sức khỏe tinh thần của cư dân nhờ khuyến khích tương tác xã hội thường ngày.</p>
+    <p><span class="pn">[3]</span> This philosophy has found concrete expression in projects that repurpose obsolete infrastructure. Elevated railway lines once destined for demolition have been transformed into linear parks; abandoned factories have become galleries, markets, or affordable housing. Such adaptive reuse is often praised as environmentally responsible, since it avoids the enormous carbon footprint associated with demolishing and rebuilding from scratch. Sceptics, nonetheless, caution that these celebrated projects can inadvertently drive up property values, pricing out the very communities they were meant to serve — a paradox now known as "green gentrification."</p>
+    <p class="vi-para">[3] Triết lý này đã được thể hiện cụ thể trong các dự án tái sử dụng hạ tầng đã lỗi thời. Những tuyến đường sắt trên cao từng chuẩn bị bị phá bỏ đã được biến thành công viên dạng tuyến tính; các nhà máy bỏ hoang trở thành phòng trưng bày, chợ, hoặc nhà ở giá rẻ. Kiểu tái sử dụng thích ứng này thường được ca ngợi là có trách nhiệm với môi trường, vì nó tránh được lượng khí thải carbon khổng lồ liên quan đến việc phá dỡ và xây dựng lại từ đầu. Tuy nhiên, những người hoài nghi cảnh báo rằng các dự án được ca tụng này có thể vô tình đẩy giá bất động sản lên cao, khiến chính những cộng đồng mà chúng nhằm phục vụ bị đẩy ra ngoài — một nghịch lý nay được gọi là "quý tộc hóa xanh".</p>
+    <p><span class="pn">[4]</span> Looking ahead, architects face the formidable task of reconciling aesthetic ambition with practical necessity: buildings must be resilient to climate change, affordable to construct, and adaptable to needs that cannot yet be foreseen. Some believe that modular construction and locally sourced materials offer a promising path forward, while others insist that no single technique will suffice without a fundamental rethinking of how cities allocate space and resources among their inhabitants.</p>
+    <p class="vi-para">[4] Nhìn về phía trước, các kiến trúc sư đối mặt với nhiệm vụ đầy thách thức là dung hòa tham vọng thẩm mỹ với nhu cầu thực tiễn: các tòa nhà phải có khả năng chống chịu biến đổi khí hậu, chi phí xây dựng phải hợp lý, và phải thích ứng được với những nhu cầu chưa thể lường trước. Một số người tin rằng xây dựng module và vật liệu khai thác tại chỗ mang lại một hướng đi đầy hứa hẹn, trong khi những người khác khẳng định rằng không một kỹ thuật đơn lẻ nào là đủ nếu thiếu một sự tư duy lại căn bản về cách các thành phố phân bổ không gian và nguồn lực cho cư dân của mình.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of skyscraper construction</li><li>B. a shift in architectural philosophy from car-centred growth toward human-centred, sustainable design</li><li>C. why highways should be built wider</li><li>D. the cost of demolishing old factories</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi từ mô hình cũ (skyscraper, ô tô) sang xu hướng mới (human scale, adaptive reuse) và thách thức tương lai → ý chính là sự chuyển dịch triết lý kiến trúc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"sprouted"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. disappeared</li><li>B. appeared and grew rapidly</li><li>C. collapsed suddenly</li><li>D. remained unchanged</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Skyscrapers sprouted across skylines" — mọc lên nhanh chóng, ví như cây mọc mầm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what do proponents of human-scale design claim?</div>
+    <ul><li>A. It makes cars move faster</li><li>B. It fosters community, reduces pollution, and benefits mental health</li><li>C. It eliminates the need for public parks</li><li>D. It is cheaper than any other urban model</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2 liệt kê rõ ba lợi ích: "foster stronger communities, reduce pollution, and even improve residents' mental health."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the phrase <b class="k">"this philosophy"</b> refers to:</div>
+    <ul><li>A. the belief that taller buildings show progress</li><li>B. the preference for highways over railways</li><li>C. the emphasis on human-scale, walkable, green urban design</li><li>D. the decision to demolish old factories</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "This philosophy" nối tiếp ý ở đoạn 2 về thiết kế đô thị lấy con người làm trung tâm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that adaptive reuse projects:</div>
+    <ul><li>A. always benefit the original residents of the area</li><li>B. can unintentionally raise property values and displace long-time residents</li><li>C. are illegal in most cities</li><li>D. require more carbon emissions than new construction</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "these celebrated projects can inadvertently drive up property values, pricing out the very communities they were meant to serve" — nghịch lý "green gentrification".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"formidable"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. simple and easy</li><li>B. very challenging or demanding</li><li>C. inexpensive</li><li>D. outdated</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the formidable task of reconciling aesthetic ambition with practical necessity" — nhiệm vụ khó khăn, đòi hỏi nhiều nỗ lực.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention elevated railway lines becoming linear parks in paragraph 3?</div>
+    <ul><li>A. To criticize environmentalists</li><li>B. To give a concrete example of adaptive reuse</li><li>C. To argue that trains are obsolete</li><li>D. To explain how skyscrapers are built</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu văn minh họa cụ thể cho khái niệm "adaptive reuse" vừa nêu ở đầu đoạn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as features of the new urban design movement EXCEPT:</div>
+    <ul><li>A. walkable neighbourhoods</li><li>B. mixed-use developments</li><li>C. green spaces</li><li>D. wider highways for cars</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều được nhắc ở đoạn 2; "wider highways" thuộc mô hình cũ (đoạn 1), trái ngược với xu hướng mới.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span><span class="c1tag">C1</span> The author's attitude toward the future challenges of architecture is best described as:</div>
+    <ul><li>A. dismissive, believing the problems are exaggerated</li><li>B. realistic, acknowledging genuine difficulties without offering a simple solution</li><li>C. entirely pessimistic with no hope for improvement</li><li>D. certain that modular construction alone will solve everything</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 thừa nhận nhiệm vụ khó khăn và trình bày các quan điểm khác nhau (modular construction vs. cần "rethinking" toàn diện) mà không khẳng định giải pháp duy nhất.</p></details>
+  </div>
+
+  <h3>Từ vựng — Bài #2 (Architecture &amp; Design)</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>conviction</td><td>(n)</td><td>niềm tin vững chắc</td></tr>
+    <tr><td>sprout</td><td>(v)</td><td>mọc lên, xuất hiện nhanh</td></tr>
+    <tr><td>urban fabric</td><td>(phr)</td><td>cấu trúc/kết cấu đô thị</td></tr>
+    <tr><td>proponent</td><td>(n)</td><td>người ủng hộ</td></tr>
+    <tr><td>foster</td><td>(v)</td><td>thúc đẩy, nuôi dưỡng</td></tr>
+    <tr><td>adaptive reuse <span class="c1tag">C1</span></td><td>(phr)</td><td>tái sử dụng thích ứng (công trình cũ)</td></tr>
+    <tr><td>carbon footprint</td><td>(n)</td><td>dấu chân carbon (khí thải)</td></tr>
+    <tr><td>gentrification <span class="c1tag">C1</span></td><td>(n)</td><td>hiện tượng "quý tộc hóa" khu dân cư</td></tr>
+    <tr><td>formidable <span class="c1tag">C1</span></td><td>(adj)</td><td>khó khăn, đáng gờm</td></tr>
+    <tr><td>reconcile</td><td>(v)</td><td>dung hòa, điều hòa (hai điều đối lập)</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1</th><td>1-B · 2-B · 3-C · 4-A · 5-B · 6-B · 7-B · 8-D · 9-B</td></tr>
+      <tr><th>Bài #2</th><td>1-B · 2-B · 3-B · 4-C · 5-B · 6-B · 7-B · 8-D · 9-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → buổi tới để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 7–9/bài → nền rất tốt · 5–6 → ổn, đúng hướng · ≤4 → đọc lại bài + học kỹ từ vựng trước khi qua ngày tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Mẹo đọc nhanh:</b> Với dạng "Reference" (this/its/they), luôn quay lại 1-2 câu trước để tìm danh từ được thay thế — đừng đoán theo trí nhớ. Với dạng "NOT/EXCEPT", gạch chân từng đáp án A/B/C trong bài trước, đáp án còn lại không xuất hiện chính là D.
+  </div>
+
+</div>
+
+<footer>🎨 Tuần 5 · Ngày 3 · VSTEP Reading — Arts &amp; Music + Architecture &amp; Design · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

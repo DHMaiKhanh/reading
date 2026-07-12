@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 4 · Ngày 7 — Luyện trộn: Tổng hợp cụm Môi trường &amp; Sức khỏe &amp; Xã hội · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+
+  .weekbox ul { margin: 8px 0 0 18px; }
+  .weekbox li { margin: 4px 0; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🔀 Tuần 4 · Ngày 7 — Luyện trộn: Tổng hợp cụm Môi trường &amp; Sức khỏe &amp; Xã hội</h1>
+  <p>1 đề tổng hợp chủ đề Energy → làm đề → giải đề → ôn lại toàn bộ từ vựng Tuần 4</p>
+  <div class="meta">
+    <span class="badge">🕐 ~45 phút</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 1 bài · 10 câu · đủ 8 dạng</span>
+    <span class="badge">🔁 Ôn tập cả tuần</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Ôn lại từ vựng cả tuần</b> — rà lại toàn bộ chủ đề Tuần 4 trước khi bước sang Tuần 5.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đây là ngày <b>trộn cụm cuối tuần</b>: bài đọc hôm nay không lặp lại chủ đề đã ra trong tuần, giúp kiểm tra khả năng đọc hiểu độc lập với "học tủ" theo topic. Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b>.</p>
+  </div>
+
+  <!-- ============ ĐỀ ============ -->
+  <h2>Đề luyện <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>The Race Toward Renewable Energy</h3>
+    <p><span class="pn">[1]</span> For more than a century, fossil fuels such as coal, oil, and natural gas have powered the world's factories, vehicles, and homes. Yet as scientific evidence of climate change has mounted, governments and businesses alike have been compelled to reconsider this dependence. Renewable energy sources — solar, wind, hydroelectric, and geothermal power — have consequently moved from the margins of energy policy to its very centre, promising a future less reliant on finite, polluting resources.</p>
+    <p class="vi-para">[1] Trong hơn một thế kỷ, các nhiên liệu hóa thạch như than đá, dầu mỏ và khí đốt tự nhiên đã cung cấp năng lượng cho các nhà máy, phương tiện và hộ gia đình trên khắp thế giới. Tuy nhiên, khi bằng chứng khoa học về biến đổi khí hậu ngày càng gia tăng, cả chính phủ lẫn doanh nghiệp đều buộc phải xem xét lại sự phụ thuộc này. Vì vậy, các nguồn năng lượng tái tạo — năng lượng mặt trời, gió, thủy điện và địa nhiệt — đã chuyển từ vị trí bên lề của chính sách năng lượng sang vị trí trung tâm, hứa hẹn một tương lai ít phụ thuộc hơn vào các nguồn tài nguyên hữu hạn và gây ô nhiễm.</p>
+
+    <p><span class="pn">[2]</span> Solar power has advanced with particular speed. The cost of photovoltaic panels has plummeted over the past decade, a decline driven by improved manufacturing techniques and economies of scale. In many regions, solar electricity is now cheaper to generate than electricity from coal-fired power plants, a milestone that would have seemed unthinkable a generation ago. Wind energy has followed a similar trajectory, with vast offshore turbine farms now supplying electricity to millions of households.</p>
+    <p class="vi-para">[2] Năng lượng mặt trời đã phát triển với tốc độ đặc biệt nhanh. Chi phí của các tấm pin quang điện đã giảm mạnh trong thập kỷ qua, nhờ vào các kỹ thuật sản xuất được cải tiến và lợi thế theo quy mô. Ở nhiều khu vực, điện mặt trời hiện nay rẻ hơn để sản xuất so với điện từ các nhà máy nhiệt điện than, một cột mốc mà cách đây một thế hệ tưởng chừng không thể xảy ra. Năng lượng gió cũng đi theo một quỹ đạo phát triển tương tự, với các trang trại tua-bin ngoài khơi rộng lớn hiện đang cung cấp điện cho hàng triệu hộ gia đình.</p>
+
+    <p><span class="pn">[3]</span> Despite this progress, the transition to renewables is far from straightforward. Both solar and wind power are intermittent, generating electricity only when the sun shines or the wind blows. This variability necessitates substantial investment in energy storage — chiefly large-scale batteries — as well as in modernised electrical grids capable of distributing power efficiently across wide areas. Without such infrastructure, renewable energy alone cannot guarantee a stable, round-the-clock supply.</p>
+    <p class="vi-para">[3] Mặc dù đã có những tiến bộ này, quá trình chuyển đổi sang năng lượng tái tạo còn lâu mới đơn giản. Cả năng lượng mặt trời và gió đều gián đoạn, chỉ tạo ra điện khi có nắng hoặc có gió. Sự không ổn định này đòi hỏi khoản đầu tư đáng kể vào lưu trữ năng lượng — chủ yếu là các hệ thống pin quy mô lớn — cũng như vào các lưới điện được hiện đại hóa, có khả năng phân phối điện hiệu quả trên diện rộng. Nếu thiếu hạ tầng như vậy, năng lượng tái tạo một mình không thể đảm bảo nguồn cung ổn định suốt ngày đêm.</p>
+
+    <p><span class="pn">[4]</span> Critics also point out that manufacturing solar panels and wind turbines requires mining rare minerals, a process that carries its own environmental costs and raises questions about the fairness of global supply chains. Proponents concede these drawbacks but argue that they pale in comparison to the long-term damage inflicted by continued reliance on fossil fuels. They further contend that innovation in battery technology and recycling methods will progressively mitigate these concerns.</p>
+    <p class="vi-para">[4] Những người chỉ trích cũng chỉ ra rằng việc sản xuất tấm pin mặt trời và tua-bin gió đòi hỏi khai thác các khoáng sản hiếm, một quá trình gây ra những tổn hại môi trường riêng và đặt ra câu hỏi về tính công bằng của chuỗi cung ứng toàn cầu. Những người ủng hộ thừa nhận các nhược điểm này nhưng cho rằng chúng không đáng kể so với thiệt hại lâu dài do tiếp tục phụ thuộc vào nhiên liệu hóa thạch gây ra. Họ cũng lập luận thêm rằng những đổi mới trong công nghệ pin và phương pháp tái chế sẽ dần làm giảm bớt những lo ngại này.</p>
+
+    <p><span class="pn">[5]</span> Ultimately, the shift toward renewable energy is likely to be gradual rather than instantaneous, shaped as much by political will and public investment as by technological breakthroughs. Whether nations can accelerate this transition quickly enough to curb the worst effects of climate change remains an open question, but few experts dispute that the direction of travel is now firmly set.</p>
+    <p class="vi-para">[5] Cuối cùng, sự chuyển đổi sang năng lượng tái tạo nhiều khả năng sẽ diễn ra dần dần thay vì tức thời, chịu tác động không kém phần quan trọng bởi ý chí chính trị và đầu tư công so với những đột phá công nghệ. Liệu các quốc gia có thể đẩy nhanh quá trình chuyển đổi này đủ nhanh để hạn chế những tác động tồi tệ nhất của biến đổi khí hậu hay không vẫn còn là một câu hỏi bỏ ngỏ, nhưng ít chuyên gia nào phủ nhận rằng hướng đi này giờ đây đã được xác lập vững chắc.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of coal mining</li><li>B. the progress and challenges of shifting to renewable energy</li><li>C. why solar panels are difficult to manufacture</li><li>D. how governments regulate electricity prices</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài trình bày tiến bộ của năng lượng tái tạo (đoạn 2) lẫn thách thức đi kèm (đoạn 3–4) → ý bao trùm là quá trình chuyển đổi sang năng lượng tái tạo, gồm cả tiến bộ và khó khăn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"plummeted"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. increased slowly</li><li>B. remained stable</li><li>C. dropped sharply</li><li>D. became unpredictable</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "The cost ... has plummeted" đi kèm với "a decline" ngay sau đó → plummeted = giảm mạnh, giảm nhanh.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 3, why do solar and wind power require large-scale storage and modernised grids?</div>
+    <ul><li>A. Because they are more expensive than coal</li><li>B. Because they are intermittent, depending on sun and wind</li><li>C. Because governments demand it by law</li><li>D. Because rare minerals must be transported</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Both solar and wind power are intermittent ... This variability necessitates substantial investment in energy storage ... and ... modernised electrical grids."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 4, the word <b class="k">"these drawbacks"</b> refers to:</div>
+    <ul><li>A. falling costs of solar panels</li><li>B. the environmental costs of mining rare minerals and supply-chain fairness issues</li><li>C. offshore wind turbine farms</li><li>D. modernised electrical grids</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó nói về việc khai thác khoáng sản hiếm gây tổn hại môi trường và vấn đề công bằng chuỗi cung ứng → "these drawbacks" chỉ các vấn đề đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 5 that the transition to renewable energy:</div>
+    <ul><li>A. will happen instantly once new technology appears</li><li>B. depends only on scientific breakthroughs, not politics</li><li>C. will likely take time and depends on political and financial factors as well as technology</li><li>D. has already been completed in most countries</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "the shift ... is likely to be gradual rather than instantaneous, shaped as much by political will and public investment as by technological breakthroughs."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"mitigate"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. make worse</li><li>B. lessen or reduce</li><li>C. completely eliminate immediately</li><li>D. ignore</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "innovation in battery technology and recycling methods will progressively mitigate these concerns" — công nghệ mới sẽ dần làm giảm bớt các lo ngại đó → mitigate = làm giảm nhẹ, giảm bớt.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention that critics point to the mining of rare minerals in paragraph 4?</div>
+    <ul><li>A. To argue that renewable energy has no benefits at all</li><li>B. To present a counterargument/limitation to the case for renewables before addressing it</li><li>C. To explain how coal is mined</li><li>D. To recommend banning solar panels</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 nêu quan điểm phản biện (critics) rồi ngay sau đó đưa phản hồi của proponents ("Proponents concede ... but argue that...") — kỹ thuật lập luận cân bằng hai chiều.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as renewable energy sources EXCEPT:</div>
+    <ul><li>A. solar</li><li>B. wind</li><li>C. hydroelectric</li><li>D. nuclear</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 1 liệt kê: "solar, wind, hydroelectric, and geothermal power" → nuclear KHÔNG được nhắc đến trong danh sách này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall attitude toward the transition to renewable energy is best described as:</div>
+    <ul><li>A. dismissive and mocking</li><li>B. cautiously optimistic while acknowledging real challenges</li><li>C. entirely pessimistic about renewable energy</li><li>D. completely uninterested in the topic</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày tiến bộ đáng kể (đoạn 2) nhưng vẫn nêu rõ khó khăn (đoạn 3–4), kết luận trung lập nhưng có xu hướng tin tưởng vào hướng đi ("the direction of travel is now firmly set").</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"the direction of travel is now firmly set"</b> (paragraph 5) implies that:</div>
+    <ul><li>A. renewable energy adoption will inevitably reverse soon</li><li>B. experts disagree completely about whether renewables will grow</li><li>C. the overall trend toward renewable energy is unlikely to change, even if the pace is uncertain</li><li>D. fossil fuels will regain dominance within a decade</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "Whether nations can accelerate this transition quickly enough ... remains an open question, but few experts dispute that the direction of travel is now firmly set" → tốc độ chưa chắc chắn nhưng xu hướng chung (chuyển sang tái tạo) thì gần như không thể đảo ngược.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG ============ -->
+  <h2>Từ vựng chủ đề Energy</h2>
+  <table>
+    <tr><th width="30%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>fossil fuel</td><td>(n)</td><td>nhiên liệu hóa thạch</td></tr>
+    <tr><td>renewable energy</td><td>(n)</td><td>năng lượng tái tạo</td></tr>
+    <tr><td>finite <span class="c1tag">C1</span></td><td>(adj)</td><td>hữu hạn, có giới hạn</td></tr>
+    <tr><td>photovoltaic panel</td><td>(n)</td><td>tấm pin quang điện (pin mặt trời)</td></tr>
+    <tr><td>plummet <span class="c1tag">C1</span></td><td>(v)</td><td>giảm mạnh, giảm nhanh</td></tr>
+    <tr><td>economies of scale</td><td>(phr)</td><td>lợi thế theo quy mô</td></tr>
+    <tr><td>trajectory <span class="c1tag">C1</span></td><td>(n)</td><td>quỹ đạo, chiều hướng phát triển</td></tr>
+    <tr><td>intermittent <span class="c1tag">C1</span></td><td>(adj)</td><td>gián đoạn, không liên tục</td></tr>
+    <tr><td>necessitate</td><td>(v)</td><td>đòi hỏi, làm cho cần thiết</td></tr>
+    <tr><td>electrical grid</td><td>(n)</td><td>lưới điện</td></tr>
+    <tr><td>rare mineral</td><td>(n)</td><td>khoáng sản hiếm</td></tr>
+    <tr><td>supply chain</td><td>(n)</td><td>chuỗi cung ứng</td></tr>
+    <tr><td>concede <span class="c1tag">C1</span></td><td>(v)</td><td>thừa nhận (dù không muốn)</td></tr>
+    <tr><td>mitigate <span class="c1tag">C1</span></td><td>(v)</td><td>làm giảm nhẹ, giảm bớt</td></tr>
+    <tr><td>curb</td><td>(v)</td><td>kiềm chế, hạn chế</td></tr>
+  </table>
+
+  <!-- ============ ÔN TẬP CẢ TUẦN ============ -->
+  <h2>🔁 Ôn lại từ vựng cả tuần (Tuần 4)</h2>
+  <div class="card weekbox">
+    <p>Trước khi chuyển sang Tuần 5, hãy dành 10–15 phút rà lại nhanh các chủ đề đã học trong Tuần 4. Với mỗi chủ đề, thử tự nhớ 3–5 từ vựng chủ chốt mà không xem lại bài — nếu quên, mở lại file tương ứng để củng cố.</p>
+    <ul>
+      <li>🌡️ <b>Climate</b> — biến đổi khí hậu, hiện tượng nóng lên toàn cầu, phát thải khí nhà kính.</li>
+      <li>⚡ <b>Energy</b> — năng lượng tái tạo vs. nhiên liệu hóa thạch (chủ đề vừa ôn hôm nay).</li>
+      <li>🦁 <b>Wildlife</b> — bảo tồn động vật hoang dã, đa dạng sinh học, môi trường sống bị đe dọa.</li>
+      <li>🏭 <b>Pollution</b> — ô nhiễm không khí/nước, chất thải công nghiệp, sức khỏe cộng đồng.</li>
+      <li>🩺 <b>Health</b> — hệ thống y tế, phòng bệnh, chăm sóc sức khỏe cộng đồng.</li>
+      <li>🍽️ <b>Food</b> — an ninh lương thực, dinh dưỡng, sản xuất thực phẩm bền vững.</li>
+      <li>🏙️ <b>Urbanization</b> — đô thị hóa, di dân ra thành thị, hạ tầng đô thị.</li>
+      <li>👵 <b>Ageing</b> — già hóa dân số, an sinh xã hội cho người cao tuổi.</li>
+      <li>🤝 <b>Society</b> — bất bình đẳng xã hội, gắn kết cộng đồng, chính sách xã hội.</li>
+      <li>🧠 <b>Mental Health</b> — sức khỏe tâm thần, căng thẳng (stress), hỗ trợ tâm lý.</li>
+    </ul>
+    <p style="margin-top:10px; color:var(--muted)">💡 Mẹo: gộp các từ đồng nghĩa/liên quan giữa các chủ đề (ví dụ: <i>sustainable</i> xuất hiện ở cả Climate, Energy, Food) thành một nhóm "từ xuyên chủ đề" — đây thường là các từ hay được VSTEP paraphrase.</p>
+  </div>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-C · 3-B · 4-B · 5-C · 6-B · 7-B · 8-D · 9-B · 10-C</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → tuần tới để ý kỹ dạng đó ngay từ Ngày 1.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10 → nền rất tốt, sẵn sàng cho Tuần 5 · 6–7 → ổn, đúng hướng, nhớ ôn lại phần yếu · ≤5 → dành thêm buổi tối nay đọc lại toàn bộ 6 bài của Tuần 4 trước khi qua tuần mới.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 7 — hoàn thành Tuần 4!</b> Quay lại lộ trình tick đủ 4 ô của ngày trộn cụm này. Trước khi bước sang <b>Tuần 5</b>, hãy chắc chắn: (1) đã giải hết các câu sai của tuần, (2) đã ôn lại bảng từ vựng của cả 10 chủ đề bên trên, (3) sổ lỗi đã được cập nhật đầy đủ. Tuần 5 sẽ nâng độ khó với các chủ đề và dạng câu hỏi mới — nền tảng vững ở Tuần 4 sẽ giúp việc học tiếp theo nhẹ nhàng hơn nhiều.
+  </div>
+
+</div>
+
+<footer>🔀 Tuần 4 · Ngày 7 · VSTEP Reading — Luyện trộn cụm Môi trường &amp; Sức khỏe &amp; Xã hội · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

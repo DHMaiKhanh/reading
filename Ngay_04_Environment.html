@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 4 — Luyện đề Environment &amp; Climate · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  /* Bản dịch tiếng Việt song ngữ sau mỗi đoạn */
+  .vi-para {
+    background: #172038; border: 1px solid var(--border); border-left: 4px solid var(--green);
+    border-radius: 10px; padding: 10px 16px; margin: 4px 0 14px; font-size: 0.94rem;
+    color: var(--muted); font-style: italic;
+  }
+  .vi-para .vi-tag {
+    display: inline-block; font-style: normal; font-weight: 700; font-size: 0.68rem;
+    color: var(--green); background: #10331f; border-radius: 8px; padding: 1px 8px; margin-right: 8px;
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🌍 Ngày 4 — Luyện đề: Environment &amp; Climate</h1>
+  <p>1 đề kết hợp chuẩn B2 + C1 · chế độ song ngữ → làm đề → giải đề → rút từ vựng</p>
+  <div class="meta">
+    <span class="badge">🕐 ~45 phút</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 1 bài · 10 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ. Cố đọc tiếng Anh trước, chỉ xem bản dịch (.vi-para) khi thực sự bí.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b>.</p>
+  </div>
+
+  <!-- ============ ĐỀ ============ -->
+  <h2>Đề luyện <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>The Plastic Tide: Rethinking Our Relationship with Waste</h3>
+
+    <p><span class="pn">[1]</span> For decades, plastic has been celebrated as one of the most versatile materials ever invented: it is cheap to produce, light to transport, and remarkably durable. Yet that very durability has become an environmental curse. Because most plastics do not decompose naturally, virtually every piece of plastic ever manufactured still exists somewhere on the planet, whether buried in landfill, drifting across the ocean, or broken down into microscopic fragments. Scientists estimate that several million tonnes of plastic waste enter the oceans every year, choking marine ecosystems and threatening the food chain on which humans ultimately depend.</p>
+    <div class="vi-para"><span class="vi-tag">VI</span>Trong nhiều thập kỷ, nhựa được ca ngợi là một trong những vật liệu linh hoạt nhất từng được phát minh: rẻ để sản xuất, nhẹ để vận chuyển và cực kỳ bền. Thế nhưng chính độ bền đó lại trở thành một lời nguyền với môi trường. Vì hầu hết các loại nhựa không phân hủy tự nhiên, gần như mọi mẩu nhựa từng được sản xuất vẫn còn tồn tại đâu đó trên hành tinh này, dù là bị chôn ở bãi rác, trôi dạt ngoài đại dương, hay bị phân rã thành những mảnh siêu nhỏ. Các nhà khoa học ước tính mỗi năm có hàng triệu tấn rác thải nhựa đổ ra đại dương, làm nghẹt các hệ sinh thái biển và đe dọa chuỗi thức ăn mà cuối cùng con người cũng phụ thuộc vào.</div>
+
+    <p><span class="pn">[2]</span> The consequences of this accumulation are far-reaching. Seabirds mistake floating fragments for food and starve with stomachs full of indigestible debris. Fish ingest tiny particles known as microplastics, which then travel up the food chain and, according to recent studies, have even been detected in human blood and tissue. Coral reefs, already weakened by rising sea temperatures, become further entangled in discarded fishing nets, a phenomenon researchers grimly refer to as "ghost fishing" because the nets continue to trap and kill marine life long after they have been abandoned.</p>
+    <div class="vi-para"><span class="vi-tag">VI</span>Hậu quả của sự tích tụ này rất sâu rộng. Chim biển nhầm những mảnh nhựa trôi nổi là thức ăn và chết đói với cái dạ dày đầy rác không tiêu hóa được. Cá nuốt phải những hạt nhỏ li ti gọi là vi nhựa (microplastics), sau đó những hạt này di chuyển lên trên chuỗi thức ăn và theo các nghiên cứu gần đây, thậm chí đã được phát hiện trong máu và mô của con người. Các rạn san hô, vốn đã suy yếu do nhiệt độ biển tăng, càng bị vướng thêm vào những tấm lưới đánh cá bị vứt bỏ — một hiện tượng mà các nhà nghiên cứu gọi một cách u ám là "đánh bắt cá bằng bóng ma" vì những tấm lưới đó vẫn tiếp tục bẫy và giết chết sinh vật biển rất lâu sau khi bị bỏ lại.</div>
+
+    <p><span class="pn">[3]</span> Governments and corporations have begun to respond, though critics argue that progress remains painfully slow. Several countries have banned single-use plastic bags and straws, while some beverage companies have pledged to make their packaging fully recyclable within the next decade. Skeptics, however, point out that recycling alone cannot solve the crisis: only a small fraction of plastic waste is actually reprocessed, and much of what is labelled "recyclable" ends up incinerated or shipped to countries with weaker environmental regulations. Genuine progress, they insist, will require reducing plastic production at its source rather than merely managing waste after the fact.</p>
+    <div class="vi-para"><span class="vi-tag">VI</span>Các chính phủ và tập đoàn đã bắt đầu phản ứng, dù những người chỉ trích cho rằng tiến độ vẫn chậm đến mức đáng buồn. Một số quốc gia đã cấm túi nhựa và ống hút dùng một lần, trong khi một số công ty nước giải khát đã cam kết làm cho bao bì của họ hoàn toàn có thể tái chế trong thập kỷ tới. Tuy nhiên, những người hoài nghi chỉ ra rằng chỉ riêng việc tái chế không thể giải quyết được cuộc khủng hoảng này: chỉ một phần nhỏ rác thải nhựa thực sự được xử lý lại, và phần lớn những gì được gắn nhãn "có thể tái chế" cuối cùng bị đốt hoặc được vận chuyển tới các quốc gia có quy định môi trường lỏng lẻo hơn. Họ khẳng định rằng tiến bộ thực sự sẽ đòi hỏi phải giảm sản xuất nhựa ngay từ gốc, thay vì chỉ quản lý rác thải sau khi nó đã phát sinh.</div>
+
+    <p><span class="pn">[4]</span> Meanwhile, plastic pollution cannot be separated from the broader climate crisis. Manufacturing plastic relies heavily on fossil fuels, so every new bottle or bag produced adds to greenhouse gas emissions long before it ever reaches a consumer. As global temperatures continue to rise, some scientists warn of a vicious cycle: a warming planet intensifies droughts and storms, which in turn disrupt waste-management infrastructure, allowing even more debris to wash into rivers and seas. Addressing plastic waste, then, is not a side issue but an integral part of the fight against climate change.</p>
+    <div class="vi-para"><span class="vi-tag">VI</span>Trong khi đó, ô nhiễm nhựa không thể tách rời khỏi cuộc khủng hoảng khí hậu rộng lớn hơn. Việc sản xuất nhựa phụ thuộc nặng nề vào nhiên liệu hóa thạch, vì vậy mỗi chai hay túi nhựa mới được sản xuất đều góp phần vào phát thải khí nhà kính từ rất lâu trước khi nó đến tay người tiêu dùng. Khi nhiệt độ toàn cầu tiếp tục tăng, một số nhà khoa học cảnh báo về một vòng luẩn quẩn: một hành tinh nóng lên làm gia tăng hạn hán và bão tố, điều này đến lượt nó lại phá vỡ cơ sở hạ tầng quản lý rác thải, khiến càng nhiều rác trôi vào sông ngòi và biển cả. Vì vậy, giải quyết rác thải nhựa không phải là một vấn đề phụ, mà là một phần không thể tách rời của cuộc chiến chống biến đổi khí hậu.</div>
+
+    <p><span class="pn">[5]</span> There is, nonetheless, cause for cautious hope. Grassroots movements have pressured multinational corporations into rethinking their packaging strategies, and innovative entrepreneurs are developing biodegradable alternatives derived from seaweed, mushrooms, and agricultural waste. Individual habits matter too: carrying a reusable bottle or refusing a plastic straw may seem trivial in isolation, but multiplied across billions of people, small choices can exert real pressure on markets. The plastic crisis was created by human decisions over the course of a single century, and many experts believe it can, with sufficient political will and public awareness, be substantially reversed within the next few decades — provided that action is taken decisively rather than postponed indefinitely.</p>
+    <div class="vi-para"><span class="vi-tag">VI</span>Tuy nhiên, vẫn có lý do để hy vọng một cách thận trọng. Các phong trào từ cơ sở đã gây áp lực buộc các tập đoàn đa quốc gia phải suy nghĩ lại chiến lược bao bì của họ, và những doanh nhân sáng tạo đang phát triển các giải pháp thay thế có thể phân hủy sinh học được chiết xuất từ tảo biển, nấm và phế phẩm nông nghiệp. Thói quen cá nhân cũng quan trọng: mang theo một chai nước tái sử dụng hay từ chối một ống hút nhựa có thể có vẻ nhỏ nhặt nếu xét riêng lẻ, nhưng khi nhân lên trên hàng tỷ người, những lựa chọn nhỏ có thể tạo ra áp lực thực sự lên thị trường. Cuộc khủng hoảng nhựa được tạo ra bởi các quyết định của con người chỉ trong vòng một thế kỷ, và nhiều chuyên gia tin rằng nó có thể, với đủ ý chí chính trị và nhận thức cộng đồng, được đảo ngược đáng kể trong vài thập kỷ tới — miễn là hành động được thực hiện một cách quyết đoán thay vì bị trì hoãn vô thời hạn.</div>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of how plastic was invented</li><li>B. the causes, effects, and possible solutions to the plastic waste crisis</li><li>C. why beverage companies prefer plastic packaging</li><li>D. the diet of seabirds and fish</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi từ nguyên nhân (độ bền của nhựa, đoạn 1), hậu quả (đoạn 2, 4), phản ứng của chính phủ/doanh nghiệp (đoạn 3), đến giải pháp/hy vọng (đoạn 5) → ý bao trùm là toàn bộ vấn đề rác thải nhựa. A/C/D chỉ là chi tiết nhỏ.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"durability"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. the ability to be recycled easily</li><li>B. the ability to last a long time without breaking down</li><li>C. the low cost of production</li><li>D. the light weight of a material</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó nói nhựa "durable" (bền), và câu sau giải thích "does not decompose naturally" → durability = độ bền, khả năng tồn tại lâu dài.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why do seabirds sometimes starve?</div>
+    <ul><li>A. They are poisoned by microplastics in their blood</li><li>B. They are caught in abandoned fishing nets</li><li>C. They mistake floating plastic fragments for food and fill their stomachs with indigestible debris</li><li>D. Rising sea temperatures destroy their food supply</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 2: "Seabirds mistake floating fragments for food and starve with stomachs full of indigestible debris."</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"they"</b> (in "long after they have been abandoned") refers to:</div>
+    <ul><li>A. seabirds</li><li>B. microplastics</li><li>C. coral reefs</li><li>D. fishing nets</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Câu nói về "discarded fishing nets" và hiện tượng "ghost fishing" vì "the nets continue to trap and kill marine life long after they have been abandoned" → "they" = fishing nets.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that recycling programs:</div>
+    <ul><li>A. have completely solved the plastic crisis</li><li>B. are, by themselves, an insufficient solution to the plastic crisis</li><li>C. are illegal in most countries</li><li>D. are more effective than reducing plastic production</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "recycling alone cannot solve the crisis... Genuine progress...will require reducing plastic production at its source" → tái chế không đủ, cần giảm sản xuất từ gốc. A/C/D quá tuyệt đối hoặc ngược với bài.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"integral"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. optional and unimportant</li><li>B. essential and inseparable from something larger</li><li>C. temporary and short-lived</li><li>D. controversial and disputed</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "not a side issue but an integral part of the fight against climate change" — đối lập với "side issue" (vấn đề phụ) → integral = thiết yếu, gắn liền không thể tách rời.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the term <b class="k">"ghost fishing"</b> in paragraph 2?</div>
+    <ul><li>A. To recommend a new fishing technique</li><li>B. To illustrate how abandoned nets keep harming marine life long after being discarded</li><li>C. To criticize the fishing industry's profits</li><li>D. To explain the origin of the word "ghost"</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn giải thích rõ: nets "continue to trap and kill marine life long after they have been abandoned" — thuật ngữ được dùng để minh họa tác hại kéo dài của lưới bị bỏ.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as effects or aspects of plastic pollution EXCEPT:</div>
+    <ul><li>A. microplastics detected in human blood</li><li>B. coral reefs being entangled in fishing nets</li><li>C. plastic production contributing to greenhouse gas emissions</li><li>D. plastic waste reducing global unemployment rates</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 2), B (đoạn 2), C (đoạn 4) đều được nhắc đến trong bài. "Reducing unemployment" hoàn toàn KHÔNG được đề cập → đáp án D.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall attitude toward solving the plastic crisis is best described as:</div>
+    <ul><li>A. completely pessimistic and hopeless</li><li>B. cautiously hopeful, provided decisive action is taken</li><li>C. entirely unconcerned about the issue</li><li>D. certain that the crisis will resolve itself without any effort</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 5 mở đầu bằng "cause for cautious hope" và kết luận "can... be substantially reversed... provided that action is taken decisively rather than postponed indefinitely" → thái độ lạc quan có điều kiện, thận trọng.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"a vicious cycle"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. climate change and plastic waste worsen each other in a repeating, self-reinforcing pattern</li><li>B. plastic waste has no connection to climate change</li><li>C. storms only occur in countries with poor recycling systems</li><li>D. the situation will improve automatically over time</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "a warming planet intensifies droughts and storms, which in turn disrupt waste-management infrastructure, allowing even more debris to wash into rivers and seas" → một vòng lặp trong đó hai vấn đề liên tục làm trầm trọng thêm lẫn nhau.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG ============ -->
+  <h2>Từ vựng chủ đề Environment &amp; Climate</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>versatile</td><td>(adj)</td><td>đa năng, linh hoạt</td></tr>
+    <tr><td>durable / durability</td><td>(adj/n)</td><td>bền, độ bền</td></tr>
+    <tr><td>decompose</td><td>(v)</td><td>phân hủy</td></tr>
+    <tr><td>microplastics</td><td>(n)</td><td>vi nhựa, hạt nhựa siêu nhỏ</td></tr>
+    <tr><td>ecosystem</td><td>(n)</td><td>hệ sinh thái</td></tr>
+    <tr><td>indigestible</td><td>(adj)</td><td>không thể tiêu hóa</td></tr>
+    <tr><td>ingest</td><td>(v)</td><td>nuốt, hấp thụ vào cơ thể</td></tr>
+    <tr><td>entangled <span class="c1tag">C1</span></td><td>(adj)</td><td>bị vướng, mắc kẹt</td></tr>
+    <tr><td>ghost fishing</td><td>(n phr)</td><td>hiện tượng lưới đánh cá bị bỏ vẫn tiếp tục bẫy sinh vật biển</td></tr>
+    <tr><td>single-use plastic</td><td>(n phr)</td><td>nhựa dùng một lần</td></tr>
+    <tr><td>incinerate <span class="c1tag">C1</span></td><td>(v)</td><td>đốt (rác)</td></tr>
+    <tr><td>fossil fuels</td><td>(n)</td><td>nhiên liệu hóa thạch</td></tr>
+    <tr><td>greenhouse gas emissions</td><td>(n phr)</td><td>khí thải nhà kính</td></tr>
+    <tr><td>vicious cycle <span class="c1tag">C1</span></td><td>(idiom)</td><td>vòng luẩn quẩn</td></tr>
+    <tr><td>integral <span class="c1tag">C1</span></td><td>(adj)</td><td>thiết yếu, không thể tách rời</td></tr>
+    <tr><td>grassroots movement</td><td>(n phr)</td><td>phong trào từ cơ sở/quần chúng</td></tr>
+    <tr><td>biodegradable</td><td>(adj)</td><td>có thể phân hủy sinh học</td></tr>
+    <tr><td>reverse (a trend)</td><td>(v)</td><td>đảo ngược (một xu hướng)</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-C · 4-D · 5-B · 6-B · 7-B · 8-D · 9-B · 10-A</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10 → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài + học kỹ từ vựng trước khi qua Ngày 5.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 4?</b> Quay lại lộ trình tick 4 ô của Ngày 4. Ngày 5 sẽ là đề chủ đề <b>Health &amp; Medicine</b> theo đúng format này (1 đề kết hợp B2 + C1).
+  </div>
+
+</div>
+
+<footer>🌍 Ngày 4 · VSTEP Reading — Environment &amp; Climate · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

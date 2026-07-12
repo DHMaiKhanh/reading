@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 15 — Luyện đề Psychology &amp; Innovation · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧠 Ngày 15 — Tuần 3 · Ngày 5: Psychology &amp; Behavior + Innovation &amp; Inventions</h1>
+  <p>2 bài đọc chuẩn B2+C1 → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~36 phút (2 × 18 phút)</span>
+    <span class="badge">🟠 B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · 18 câu · đủ 7 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước, làm cho từng bài):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, bấm giờ ~18 phút/bài.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi từ mới của cả 2 bài + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~14–16/18</b>.</p>
+  </div>
+
+  <!-- ============ BÀI #1 ============ -->
+  <h2>Bài #1 <span class="lvl">Psychology &amp; Behavior · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Hidden Science of Habits</h3>
+    <p><span class="pn">[1]</span> Every day, people repeat dozens of small actions without conscious thought: reaching for a phone upon waking, taking the same route to work, or snacking while watching television. Psychologists estimate that as much as forty percent of daily behaviour is driven not by deliberate decisions but by habit. Rather than reflecting weak willpower, this reliance on automatic routines is, in fact, an efficient use of mental resources, freeing the brain to focus on more demanding tasks.</p>
+    <p class="vi-para">[1] Mỗi ngày, con người lặp lại hàng chục hành động nhỏ mà không hề suy nghĩ có chủ ý: với lấy điện thoại ngay khi thức dậy, đi cùng một tuyến đường đến chỗ làm, hay ăn vặt trong lúc xem tivi. Các nhà tâm lý học ước tính rằng tới bốn mươi phần trăm hành vi hằng ngày không xuất phát từ những quyết định có cân nhắc mà từ thói quen. Thay vì phản ánh ý chí yếu kém, việc dựa vào các thói quen tự động này thực chất là một cách sử dụng nguồn lực tinh thần hiệu quả, giúp bộ não rảnh rang để tập trung vào những nhiệm vụ đòi hỏi nhiều hơn.</p>
+
+    <p><span class="pn">[2]</span> At the core of habit formation lies a simple neurological loop consisting of a cue, a routine, and a reward. A cue—such as the buzz of a notification—triggers a routine, checking the phone, which in turn delivers a reward, perhaps a brief dose of social validation. Repeated often enough, this loop becomes so deeply ingrained that the behaviour persists even when the reward diminishes. This helps explain why habits, once established, prove remarkably resistant to willpower alone.</p>
+    <p class="vi-para">[2] Cốt lõi của việc hình thành thói quen là một vòng lặp thần kinh đơn giản gồm tín hiệu kích hoạt, hành động lặp lại và phần thưởng. Một tín hiệu — chẳng hạn tiếng rung thông báo — sẽ kích hoạt một hành động, như việc kiểm tra điện thoại, và hành động đó đến lượt nó mang lại phần thưởng, có thể chỉ là một chút cảm giác được công nhận trên mạng xã hội. Khi được lặp đi lặp lại đủ nhiều, vòng lặp này trở nên ăn sâu đến mức hành vi vẫn tiếp diễn ngay cả khi phần thưởng đã giảm sút. Điều này giúp lý giải vì sao một khi thói quen đã hình thành, chúng lại vô cùng khó bị đánh bại chỉ bằng ý chí.</p>
+
+    <p><span class="pn">[3]</span> Understanding this loop has practical implications for anyone hoping to change entrenched patterns. Rather than attempting to eliminate a habit outright, behavioural scientists recommend altering the routine while keeping the cue and reward intact. A person wishing to curb late-night snacking, for instance, might replace chips with fruit, thereby preserving the comforting ritual while reducing its harm. Such incremental substitutions tend to succeed far more often than approaches relying on sheer determination.</p>
+    <p class="vi-para">[3] Việc hiểu rõ vòng lặp này mang lại ý nghĩa thực tiễn cho bất kỳ ai muốn thay đổi những khuôn mẫu đã ăn sâu. Thay vì cố loại bỏ hoàn toàn một thói quen, các nhà khoa học hành vi khuyên nên thay đổi hành động lặp lại trong khi vẫn giữ nguyên tín hiệu kích hoạt và phần thưởng. Chẳng hạn, một người muốn hạn chế thói quen ăn vặt vào đêm khuya có thể thay khoai tây chiên bằng trái cây, nhờ đó vẫn giữ được nghi thức quen thuộc mang lại cảm giác dễ chịu trong khi giảm bớt tác hại. Những thay đổi nhỏ dần như vậy thường thành công nhiều hơn hẳn so với các cách tiếp cận chỉ dựa vào quyết tâm thuần túy.</p>
+
+    <p><span class="pn">[4]</span> Critics caution, however, against viewing habits as a panacea for every behavioural problem. Complex issues such as addiction often involve biological and emotional factors that a simple cue-routine-reward model cannot fully capture. Nevertheless, most researchers agree that recognising the mechanics behind everyday habits equips individuals with a valuable, evidence-based starting point for reshaping their lives—one small, deliberate substitution at a time.</p>
+    <p class="vi-para">[4] Tuy nhiên, những người phản biện cảnh báo không nên xem thói quen là giải pháp vạn năng cho mọi vấn đề hành vi. Những vấn đề phức tạp như nghiện ngập thường liên quan đến các yếu tố sinh học và cảm xúc mà một mô hình đơn giản gồm tín hiệu - hành động - phần thưởng không thể nắm bắt hết được. Dù vậy, hầu hết các nhà nghiên cứu đều đồng ý rằng việc nhận ra cơ chế đằng sau những thói quen hằng ngày trang bị cho mỗi người một điểm khởi đầu quý giá, dựa trên bằng chứng, để thay đổi cuộc sống — từng bước thay thế nhỏ, có chủ đích một.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage primarily discusses:</div>
+    <ul><li>A. why willpower is the only way to change behaviour</li><li>B. how habits form and how they can be changed</li><li>C. the history of psychology as a science</li><li>D. why social media notifications should be banned</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cơ chế hình thành thói quen (đoạn 2) và cách thay đổi chúng (đoạn 3), đây là ý bao trùm toàn bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Detail</span> According to paragraph 1, relying on habits is beneficial because it:</div>
+    <ul><li>A. proves a person has strong willpower</li><li>B. frees mental resources for more demanding tasks</li><li>C. eliminates the need for sleep</li><li>D. increases the number of decisions made daily</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "freeing the brain to focus on more demanding tasks" — câu cuối đoạn 1.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Vocabulary</span> The word <b class="k">"ingrained"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. newly formed</li><li>B. deeply fixed or established</li><li>C. easily forgotten</li><li>D. financially costly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "this loop becomes so deeply ingrained" = ăn sâu, bám chắc ≈ deeply fixed.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"it"</b> (in "even when the reward diminishes") — the pronoun <b class="k">"this"</b> in "This helps explain" refers to:</div>
+    <ul><li>A. the cue alone</li><li>B. the fact that habits become deeply ingrained through repetition</li><li>C. the buzz of a notification</li><li>D. social validation</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "This" tóm lược ý ngay trước: vòng lặp trở nên ăn sâu qua lặp lại → giải thích vì sao habit khó bỏ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that behavioural scientists believe:</div>
+    <ul><li>A. habits should always be eliminated completely</li><li>B. changing the routine while keeping cue and reward is more effective than pure willpower</li><li>C. willpower alone is the best method to change habits</li><li>D. rewards should always be removed</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "recommend altering the routine while keeping the cue and reward intact... succeed far more often than approaches relying on sheer determination."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"panacea"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. a universal solution for all problems</li><li>B. a rare disease</li><li>C. a scientific experiment</li><li>D. a type of medication</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "viewing habits as a panacea for every behavioural problem" = thuốc chữa bách bệnh, giải pháp vạn năng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">addiction</b> in paragraph 4?</div>
+    <ul><li>A. To prove the cue-routine-reward model explains everything</li><li>B. To show a limitation of the simple habit model</li><li>C. To recommend a treatment for addiction</li><li>D. To criticise behavioural scientists</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Addiction được nêu như ví dụ về vấn đề phức tạp mà mô hình đơn giản "cannot fully capture" → giới hạn của mô hình.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as part of the habit loop EXCEPT:</div>
+    <ul><li>A. a cue</li><li>B. a routine</li><li>C. a reward</li><li>D. a punishment</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 2 chỉ nêu cue, routine, reward — không có "punishment".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the science of habits is best described as:</div>
+    <ul><li>A. dismissive and sceptical</li><li>B. balanced, acknowledging both value and limits</li><li>C. purely emotional</li><li>D. completely uncritical</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài vừa nêu lợi ích/ứng dụng thực tế (đoạn 2-3) vừa nêu giới hạn (đoạn 4, "Critics caution").</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Detail</span><span class="c1tag">C1</span> According to the passage, replacing chips with fruit is an example of:</div>
+    <ul><li>A. eliminating the cue entirely</li><li>B. altering the routine while preserving the ritual</li><li>C. removing the reward completely</li><li>D. ignoring the habit loop</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "might replace chips with fruit, thereby preserving the comforting ritual while reducing its harm" — thay đổi routine, giữ nguyên cue/reward.</p></details>
+  </div>
+
+  <h3>Từ vựng — Psychology &amp; Behavior</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>deliberate</td><td>(adj)</td><td>có chủ ý, cân nhắc</td></tr>
+    <tr><td>willpower</td><td>(n)</td><td>ý chí</td></tr>
+    <tr><td>cue</td><td>(n)</td><td>tín hiệu kích hoạt</td></tr>
+    <tr><td>ingrained <span class="c1tag">C1</span></td><td>(adj)</td><td>ăn sâu, bám chặt</td></tr>
+    <tr><td>entrenched <span class="c1tag">C1</span></td><td>(adj)</td><td>cố hữu, khó thay đổi</td></tr>
+    <tr><td>curb</td><td>(v)</td><td>kiềm chế, hạn chế</td></tr>
+    <tr><td>incremental</td><td>(adj)</td><td>từng bước nhỏ, tăng dần</td></tr>
+    <tr><td>sheer determination</td><td>(phr)</td><td>quyết tâm thuần túy</td></tr>
+    <tr><td>panacea <span class="c1tag">C1</span></td><td>(n)</td><td>giải pháp vạn năng</td></tr>
+    <tr><td>evidence-based</td><td>(adj)</td><td>dựa trên bằng chứng</td></tr>
+  </table>
+
+  <!-- ============ BÀI #2 ============ -->
+  <h2>Bài #2 <span class="lvl">Innovation &amp; Inventions · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Inventions That Reshaped the World</h3>
+    <p><span class="pn">[1]</span> Throughout history, a handful of inventions have altered the trajectory of civilisation so profoundly that life before them seems almost unrecognisable. The printing press, the electric light bulb, and the internet each triggered waves of change that extended far beyond their original purpose. What unites these breakthroughs is not merely technical ingenuity but their capacity to democratise access to something previously scarce—information, illumination, or connectivity.</p>
+    <p class="vi-para">[1] Trong suốt lịch sử, một số ít phát minh đã làm thay đổi chiều hướng phát triển của nền văn minh sâu sắc đến mức cuộc sống trước khi chúng xuất hiện dường như gần như không thể nhận ra được nữa. Máy in, bóng đèn điện và internet mỗi thứ đều tạo ra những làn sóng thay đổi vượt xa mục đích ban đầu của chúng. Điểm chung của những đột phá này không chỉ nằm ở sự khéo léo về kỹ thuật mà còn ở khả năng phổ cập hóa quyền tiếp cận thứ vốn trước đây khan hiếm — thông tin, ánh sáng, hay kết nối.</p>
+
+    <p><span class="pn">[2]</span> Consider the printing press, introduced in the fifteenth century. Before its invention, books were painstakingly copied by hand, making literacy the privilege of a wealthy elite. Once printing became mechanised, texts could be reproduced cheaply and rapidly, and literacy rates gradually climbed across Europe. The resulting spread of ideas is widely credited with fuelling the Renaissance and, later, the Reformation, demonstrating how a single technological leap can reshape entire societies.</p>
+    <p class="vi-para">[2] Hãy xét đến máy in, ra đời vào thế kỷ mười lăm. Trước khi nó được phát minh, sách phải được chép tay một cách công phu, khiến khả năng đọc viết trở thành đặc quyền của tầng lớp giàu có. Khi việc in ấn được cơ khí hóa, văn bản có thể được sao chép rẻ và nhanh, và tỷ lệ biết chữ dần tăng lên khắp châu Âu. Sự lan tỏa ý tưởng nhờ đó được nhiều người công nhận là đã thúc đẩy thời kỳ Phục Hưng và sau này là phong trào Cải cách tôn giáo, cho thấy một bước nhảy vọt công nghệ đơn lẻ có thể định hình lại cả xã hội như thế nào.</p>
+
+    <p><span class="pn">[3]</span> A similar pattern unfolded with electricity. Early inventors did not merely create a novel curiosity; they enabled factories to operate around the clock and cities to remain illuminated after dusk, fundamentally altering the rhythm of daily life. Critics at the time dismissed such innovations as impractical or dangerous, a reaction that has recurred, ironically, with nearly every subsequent breakthrough, from automobiles to smartphones.</p>
+    <p class="vi-para">[3] Một khuôn mẫu tương tự đã diễn ra với điện. Những nhà phát minh thời đầu không chỉ đơn thuần tạo ra một thứ mới lạ tò mò; họ đã giúp các nhà máy hoạt động suốt ngày đêm và các thành phố vẫn sáng đèn sau hoàng hôn, làm thay đổi căn bản nhịp sống hằng ngày. Những người phản đối vào thời điểm đó đã bác bỏ các phát minh này là thiếu thực tế hoặc nguy hiểm, một phản ứng trớ trêu thay đã lặp lại ở gần như mọi đột phá sau này, từ ô tô đến điện thoại thông minh.</p>
+
+    <p><span class="pn">[4]</span> Today, emerging technologies such as artificial intelligence and gene editing provoke comparable scepticism, alongside genuine excitement. History suggests that disruptive inventions are rarely embraced without resistance, yet those that endure tend to share a common trait: they expand human capability rather than merely automating existing tasks. Whether current innovations will prove as transformative as the printing press remains uncertain, but their potential to redefine everyday existence should not be underestimated.</p>
+    <p class="vi-para">[4] Ngày nay, các công nghệ mới nổi như trí tuệ nhân tạo và chỉnh sửa gen cũng gây ra sự hoài nghi tương tự, song song với sự phấn khích thực sự. Lịch sử cho thấy những phát minh mang tính đột phá hiếm khi được đón nhận mà không vấp phải sự phản kháng, nhưng những phát minh tồn tại lâu dài thường có chung một đặc điểm: chúng mở rộng năng lực con người thay vì chỉ đơn thuần tự động hóa các công việc sẵn có. Liệu những đổi mới hiện nay có chứng minh được sức ảnh hưởng lớn như máy in hay không vẫn còn chưa chắc chắn, nhưng tiềm năng định hình lại cuộc sống thường nhật của chúng không nên bị đánh giá thấp.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. why the printing press failed</li><li>B. how certain inventions have transformed society throughout history</li><li>C. the dangers of artificial intelligence</li><li>D. the biography of famous inventors</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài xuyên suốt trình bày cách các phát minh (in ấn, điện, AI) thay đổi xã hội.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"democratise"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. make available to more people</li><li>B. restrict to a small group</li><li>C. make more expensive</li><li>D. destroy completely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "democratise access to something previously scarce" = mở rộng khả năng tiếp cận cho nhiều người hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, before the printing press, literacy was:</div>
+    <ul><li>A. available to everyone equally</li><li>B. limited mainly to a wealthy elite</li><li>C. taught in public schools</li><li>D. unnecessary for daily life</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "making literacy the privilege of a wealthy elite" — đoạn 2.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"its"</b> (in "Once printing became mechanised") and the phrase <b class="k">"its invention"</b> refer to:</div>
+    <ul><li>A. literacy</li><li>B. the wealthy elite</li><li>C. the printing press</li><li>D. the Renaissance</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Toàn đoạn nói về printing press → "its invention" = sự phát minh ra máy in.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that public reactions to new inventions:</div>
+    <ul><li>A. have always been immediately positive</li><li>B. often begin with scepticism before acceptance</li><li>C. never change over time</li><li>D. are irrelevant to how inventions succeed</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Critics at the time dismissed such innovations... a reaction that has recurred... with nearly every subsequent breakthrough."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"disruptive"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. causing major, often unsettling change</li><li>B. quiet and unnoticeable</li><li>C. inexpensive</li><li>D. temporary and short-lived</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "disruptive inventions are rarely embraced without resistance" = phát minh gây xáo trộn/thay đổi lớn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention automobiles and smartphones in paragraph 3?</div>
+    <ul><li>A. To compare their prices to electricity</li><li>B. To give examples of later inventions that faced similar early scepticism</li><li>C. To criticise modern technology</li><li>D. To explain how cars are manufactured</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Chúng minh họa cho việc phản ứng hoài nghi ban đầu "has recurred... with nearly every subsequent breakthrough".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following inventions are mentioned in the passage EXCEPT:</div>
+    <ul><li>A. the printing press</li><li>B. the electric light bulb</li><li>C. the steam engine</li><li>D. the internet</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 1 nêu printing press, light bulb, internet — "steam engine" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall tone toward technological innovation is:</div>
+    <ul><li>A. dismissive of its impact</li><li>B. cautiously appreciative of its transformative potential</li><li>C. entirely fearful</li><li>D. neutral to the point of indifference</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả công nhận giá trị to lớn của phát minh nhưng thừa nhận sự bất định ("remains uncertain") và phản kháng ban đầu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> According to paragraph 4, inventions that endure tend to:</div>
+    <ul><li>A. simply automate existing tasks</li><li>B. expand human capability</li><li>C. avoid public scepticism entirely</li><li>D. remain unaffordable to most people</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "those that endure tend to share a common trait: they expand human capability rather than merely automating existing tasks."</p></details>
+  </div>
+
+  <h3>Từ vựng — Innovation &amp; Inventions</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>trajectory <span class="c1tag">C1</span></td><td>(n)</td><td>quỹ đạo, chiều hướng phát triển</td></tr>
+    <tr><td>ingenuity</td><td>(n)</td><td>sự khéo léo, sáng tạo</td></tr>
+    <tr><td>democratise</td><td>(v)</td><td>phổ cập hóa, mở rộng tiếp cận</td></tr>
+    <tr><td>scarce</td><td>(adj)</td><td>khan hiếm</td></tr>
+    <tr><td>painstakingly</td><td>(adv)</td><td>tỉ mỉ, công phu</td></tr>
+    <tr><td>literacy</td><td>(n)</td><td>khả năng đọc viết</td></tr>
+    <tr><td>fuel</td><td>(v)</td><td>thúc đẩy, tiếp sức</td></tr>
+    <tr><td>dismiss</td><td>(v)</td><td>bác bỏ, gạt bỏ</td></tr>
+    <tr><td>disruptive <span class="c1tag">C1</span></td><td>(adj)</td><td>gây xáo trộn/đột phá lớn</td></tr>
+    <tr><td>underestimate</td><td>(v)</td><td>đánh giá thấp</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề (gộp 2 bài)</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-A · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài #2</th><td>1-B · 2-A · 3-B · 4-C · 5-B · 6-A · 7-B · 8-C · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Bài __ · Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu (cả 2 bài cộng lại) → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá (trên 18 câu):</b> đúng 15–18 → nền rất tốt · 11–14 → ổn, đúng hướng · ≤10 → đọc lại 2 bài + học kỹ từ vựng trước khi qua Ngày 16.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 15?</b> Habits hình thành qua vòng lặp cue–routine–reward, và mỗi phát minh lớn (in ấn, điện, internet) đều từng vấp phải hoài nghi trước khi được chấp nhận — hai bài học tưởng chừng khác nhau nhưng đều nói về cách con người thích nghi với cái mới. Ngày 16 sẽ chuyển sang chủ đề <b>Health &amp; Medicine</b> theo đúng format 2 bài/ngày này.
+  </div>
+
+</div>
+
+<footer>🧠 Ngày 15 · VSTEP Reading — Psychology &amp; Behavior + Innovation &amp; Inventions · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

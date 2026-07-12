@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 18 — Khởi động Tuần 4 · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+  .topictag { display:inline-block; font-size:0.7rem; font-weight:700; padding:2px 9px; border-radius:10px; background:#1e3a2f; color:#a8f0d4; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🌍🩺 Tuần 4 · Ngày 1 — Khởi động cụm: Environment · Energy · Health · Food · Society</h1>
+  <p>Làm quen 5 chủ đề mới trước khi bước vào luyện đề dày ở các ngày tiếp theo</p>
+  <div class="meta">
+    <span class="badge">🕐 ~30 phút</span>
+    <span class="badge">🟢 Khởi động, chưa cần bấm giờ</span>
+    <span class="badge">📚 20 từ vựng · 1 bài đọc · 6 câu hỏi</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Mục tiêu hôm nay:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Làm quen <b>20 từ vựng nền</b> trải đều 5 chủ đề sẽ gặp suốt Tuần 4.</li>
+      <li>Đọc 1 bài ngắn (~300 từ) chủ đề <b>Environment</b> để "khởi động não" theo văn phong VSTEP.</li>
+      <li>Trả lời 6 câu hỏi cơ bản (chưa cần đủ 8 dạng — sẽ luyện đủ dạng từ Ngày 19 trở đi).</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Từ <b>Ngày 2 của Tuần 4 (Ngày 19)</b>, mỗi ngày sẽ luyện <b>2 bài đọc thuộc 2 chủ đề khác nhau</b> trong 5 chủ đề trên, xen kẽ liên tục.</p>
+  </div>
+
+  <!-- ============ TỪ VỰNG CỤM ============ -->
+  <h2>Phần 1 · Học từ vựng cụm <span class="lvl">5 chủ đề</span></h2>
+  <table>
+    <tr><th width="14%">Chủ đề</th><th width="22%">Từ / cụm</th><th width="12%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td><span class="topictag">Environment</span></td><td>climate change</td><td>(n phr)</td><td>biến đổi khí hậu</td></tr>
+    <tr><td><span class="topictag">Environment</span></td><td>greenhouse gas</td><td>(n phr)</td><td>khí nhà kính</td></tr>
+    <tr><td><span class="topictag">Environment</span></td><td>deforestation</td><td>(n)</td><td>nạn phá rừng</td></tr>
+    <tr><td><span class="topictag">Environment</span></td><td>sustainable</td><td>(adj)</td><td>bền vững</td></tr>
+    <tr><td><span class="topictag">Environment</span></td><td>mitigate <span class="c1tag">C1</span></td><td>(v)</td><td>giảm nhẹ, làm dịu bớt</td></tr>
+    <tr><td><span class="topictag">Energy</span></td><td>renewable energy</td><td>(n phr)</td><td>năng lượng tái tạo</td></tr>
+    <tr><td><span class="topictag">Energy</span></td><td>fossil fuel</td><td>(n phr)</td><td>nhiên liệu hóa thạch</td></tr>
+    <tr><td><span class="topictag">Energy</span></td><td>consumption</td><td>(n)</td><td>sự tiêu thụ</td></tr>
+    <tr><td><span class="topictag">Energy</span></td><td>efficient</td><td>(adj)</td><td>hiệu quả, tiết kiệm</td></tr>
+    <tr><td><span class="topictag">Energy</span></td><td>phase out <span class="c1tag">C1</span></td><td>(phr v)</td><td>loại bỏ dần</td></tr>
+    <tr><td><span class="topictag">Health</span></td><td>chronic disease</td><td>(n phr)</td><td>bệnh mãn tính</td></tr>
+    <tr><td><span class="topictag">Health</span></td><td>well-being</td><td>(n)</td><td>sức khỏe, sự khỏe mạnh toàn diện</td></tr>
+    <tr><td><span class="topictag">Health</span></td><td>sedentary <span class="c1tag">C1</span></td><td>(adj)</td><td>ít vận động</td></tr>
+    <tr><td><span class="topictag">Health</span></td><td>immune system</td><td>(n phr)</td><td>hệ miễn dịch</td></tr>
+    <tr><td><span class="topictag">Health</span></td><td>outbreak</td><td>(n)</td><td>đợt bùng phát (dịch bệnh)</td></tr>
+    <tr><td><span class="topictag">Food</span></td><td>malnutrition</td><td>(n)</td><td>suy dinh dưỡng</td></tr>
+    <tr><td><span class="topictag">Food</span></td><td>food security</td><td>(n phr)</td><td>an ninh lương thực</td></tr>
+    <tr><td><span class="topictag">Food</span></td><td>processed food</td><td>(n phr)</td><td>thực phẩm chế biến sẵn</td></tr>
+    <tr><td><span class="topictag">Society</span></td><td>inequality</td><td>(n)</td><td>sự bất bình đẳng</td></tr>
+    <tr><td><span class="topictag">Society</span></td><td>urbanization</td><td>(n)</td><td>đô thị hóa</td></tr>
+  </table>
+
+  <!-- ============ BÀI ĐỌC ============ -->
+  <h2>Phần 2 · Bài đọc làm quen <span class="topictag">Environment</span></h2>
+
+  <div class="passage">
+    <h3>Understanding Climate Change</h3>
+    <p><span class="pn">[1]</span> Climate change refers to long-term shifts in temperatures and weather patterns, and although such shifts can occur naturally, human activity has been the main driver since the industrial era. Burning fossil fuels such as coal, oil, and gas releases greenhouse gases that trap heat in the atmosphere, gradually raising the planet's average temperature. Scientists have measured this warming trend for decades, and the evidence is now considered overwhelming by the vast majority of climate researchers.</p>
+    <p class="vi-para">[1] Biến đổi khí hậu đề cập đến những thay đổi dài hạn về nhiệt độ và các kiểu thời tiết, và mặc dù những thay đổi như vậy có thể xảy ra một cách tự nhiên, hoạt động của con người đã là nguyên nhân chính kể từ thời kỳ công nghiệp hóa. Việc đốt các nhiên liệu hóa thạch như than, dầu và khí đốt thải ra khí nhà kính giữ nhiệt lại trong khí quyển, khiến nhiệt độ trung bình của hành tinh dần tăng lên. Các nhà khoa học đã đo lường xu hướng ấm lên này suốt nhiều thập kỷ, và bằng chứng hiện được đại đa số các nhà nghiên cứu khí hậu coi là hết sức thuyết phục.</p>
+
+    <p><span class="pn">[2]</span> The consequences of a warming planet are already visible. Glaciers are shrinking, sea levels are rising, and extreme weather events — from prolonged droughts to intense storms — are becoming more frequent in many regions. Deforestation compounds the problem, since trees that would otherwise absorb carbon dioxide are cut down, often to clear land for agriculture or urban expansion.</p>
+    <p class="vi-para">[2] Hậu quả của một hành tinh đang nóng lên đã hiện rõ. Các sông băng đang thu hẹp, mực nước biển đang dâng cao, và các hiện tượng thời tiết cực đoan — từ hạn hán kéo dài đến bão dữ dội — đang trở nên thường xuyên hơn ở nhiều khu vực. Nạn phá rừng càng làm vấn đề trầm trọng thêm, vì những cây lẽ ra có thể hấp thụ khí carbon dioxide lại bị đốn hạ, thường là để lấy đất cho nông nghiệp hoặc mở rộng đô thị.</p>
+
+    <p><span class="pn">[3]</span> Governments and organizations around the world have begun to respond. International agreements set targets for reducing emissions, while many countries are investing heavily in renewable energy sources such as solar and wind power to replace fossil fuels. Individuals, too, can contribute by reducing waste, conserving energy, and supporting sustainable practices in their daily lives.</p>
+    <p class="vi-para">[3] Các chính phủ và tổ chức trên khắp thế giới đã bắt đầu có phản ứng. Các hiệp định quốc tế đặt ra chỉ tiêu giảm phát thải, trong khi nhiều quốc gia đang đầu tư mạnh vào các nguồn năng lượng tái tạo như điện mặt trời và điện gió để thay thế nhiên liệu hóa thạch. Các cá nhân cũng có thể đóng góp bằng cách giảm lãng phí, tiết kiệm năng lượng và ủng hộ các thói quen bền vững trong cuộc sống hằng ngày.</p>
+
+    <p><span class="pn">[4]</span> Nevertheless, experts caution that current efforts may not be enough to mitigate the worst effects of climate change. Without more ambitious action, they warn, future generations could face far more severe consequences, including food shortages, mass displacement, and irreversible damage to ecosystems. For this reason, many scientists argue that the coming decade is critical for determining the planet's long-term future.</p>
+    <p class="vi-para">[4] Tuy nhiên, các chuyên gia cảnh báo rằng những nỗ lực hiện tại có thể chưa đủ để giảm nhẹ những tác động tồi tệ nhất của biến đổi khí hậu. Họ cảnh báo rằng nếu không có hành động mạnh mẽ hơn, các thế hệ tương lai có thể phải đối mặt với những hậu quả nghiêm trọng hơn nhiều, bao gồm thiếu lương thực, di dời hàng loạt dân cư, và tổn hại không thể phục hồi đối với hệ sinh thái. Vì lý do này, nhiều nhà khoa học cho rằng thập kỷ tới có tính quyết định đối với tương lai lâu dài của hành tinh.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of industrial factories</li><li>B. the causes, effects, and responses to climate change</li><li>C. how glaciers are formed</li><li>D. why solar power is expensive</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi qua nguyên nhân (đoạn 1), hậu quả (đoạn 2), và các phản ứng/giải pháp (đoạn 3–4) → ý bao trùm là B.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"trap"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. release</li><li>B. hold in, prevent from escaping</li><li>C. measure</li><li>D. destroy</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "greenhouse gases that trap heat" = giữ nhiệt lại, không cho thoát ra ≈ hold in.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what makes the effects of deforestation worse?</div>
+    <ul><li>A. Trees absorb carbon dioxide, so cutting them down reduces this absorption</li><li>B. Trees cause more storms</li><li>C. Trees increase sea levels directly</li><li>D. Trees are used to build houses</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "trees that would otherwise absorb carbon dioxide are cut down" → mất khả năng hấp thụ CO2 khiến vấn đề nghiêm trọng hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"their"</b> (in "their daily lives") refers to:</div>
+    <ul><li>A. governments</li><li>B. organizations</li><li>C. individuals</li><li>D. countries</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu trước nói "Individuals, too, can contribute..." → "their" chỉ các cá nhân đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"mitigate"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. worsen</li><li>B. reduce the severity of</li><li>C. completely eliminate</li><li>D. ignore</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "mitigate the worst effects" = làm giảm nhẹ mức độ nghiêm trọng của hậu quả, không có nghĩa là loại bỏ hoàn toàn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Inference</span> It can be inferred from the passage that the author believes:</div>
+    <ul><li>A. climate change is not a real problem</li><li>B. urgent action in the near future is important</li><li>C. only governments can solve climate change</li><li>D. renewable energy has already replaced fossil fuels</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn cuối nhấn mạnh "the coming decade is critical" và cảnh báo hậu quả nếu không hành động mạnh mẽ hơn → tác giả cho rằng hành động khẩn cấp là quan trọng.</p></details>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 1 Tuần 4?</b> Từ Ngày 2 mỗi ngày luyện 2 bài (2 chủ đề khác nhau) trong số 5 chủ đề: Environment · Energy · Health · Food · Society.
+  </div>
+
+</div>
+
+<footer>🌍🩺 Tuần 4 · Ngày 1 · VSTEP Reading — Khởi động cụm chủ đề trước khi vào luyện đề dày.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

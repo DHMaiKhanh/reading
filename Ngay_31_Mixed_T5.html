@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 5 · Ngày 7 — Luyện trộn tất cả chủ đề · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧩 Tuần 5 · Ngày 7 — Luyện trộn tất cả chủ đề · Đo độ chính xác</h1>
+  <p>2 bài đọc chủ đề khác nhau, canh giờ độc lập → chấm điểm gộp → xác định điểm mạnh/yếu trước khi bước sang Giai đoạn 3 (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~15 phút / bài · ~30 phút cả 2 bài</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · ~19 câu · đủ 8 dạng</span>
+    <span class="badge">🎯 Mục tiêu ~70% đúng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Bài 1</b> — đặt giờ 15 phút, làm hết, KHÔNG tra cứu.</li>
+      <li><b>Bài 2</b> — đặt lại giờ 15 phút, làm độc lập với Bài 1 (không xem lại đáp án Bài 1 trước).</li>
+      <li><b>Chấm điểm gộp</b> — đối chiếu đáp án cả 2 bài, tính % đúng trên tổng ~19 câu.</li>
+      <li><b>Giải đề &amp; rút từ vựng</b> — với mỗi câu sai, quay lại đoạn chứa đáp án, hiểu vì sao sai; ghi từ mới vào "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đây là bài tổng kết Tuần 5. Mục tiêu: đạt <b>≥70%</b> tổng số câu đúng trước khi bước vào Giai đoạn 3 (đề FULL bấm giờ).</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài #1 <span class="lvl">Crime &amp; Law · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Rise of Restorative Justice</h3>
+    <p><span class="pn">[1]</span> For most of the twentieth century, criminal justice systems in Western countries operated on a single guiding principle: when a crime is committed, the offender must be punished. Courts focused on determining guilt and assigning a sentence, while the victim's role was largely reduced to that of a witness. In recent decades, however, an alternative approach known as restorative justice has gained considerable traction, challenging the assumption that punishment alone can heal the harm caused by crime.</p>
+    <p class="vi-para">[1] Trong phần lớn thế kỷ 20, hệ thống tư pháp hình sự ở các nước phương Tây vận hành theo một nguyên tắc chủ đạo duy nhất: khi tội phạm xảy ra, kẻ phạm tội phải bị trừng phạt. Tòa án chỉ tập trung vào việc xác định tội danh và tuyên án, trong khi vai trò của nạn nhân gần như chỉ là nhân chứng. Tuy nhiên, trong những thập kỷ gần đây, một cách tiếp cận khác gọi là "tư pháp phục hồi" đã ngày càng được ủng hộ, thách thức giả định rằng chỉ riêng hình phạt có thể chữa lành tổn hại do tội phạm gây ra.</p>
+    <p><span class="pn">[2]</span> Restorative justice brings victims, offenders, and sometimes members of the community together in a structured dialogue, often mediated by a trained facilitator. Rather than asking only "what law was broken and how should the offender be punished," the process asks "who was harmed, what are their needs, and whose obligation is it to address them." Offenders are encouraged to acknowledge the consequences of their actions directly to the people they affected, while victims are given a voice that traditional courtroom procedures rarely afford them.</p>
+    <p class="vi-para">[2] Tư pháp phục hồi đưa nạn nhân, kẻ phạm tội và đôi khi cả thành viên cộng đồng ngồi lại đối thoại theo một quy trình có cấu trúc, thường do một người điều phối được đào tạo dẫn dắt. Thay vì chỉ hỏi "luật nào đã bị vi phạm và kẻ phạm tội nên bị trừng phạt ra sao," quy trình này đặt câu hỏi "ai bị tổn hại, họ cần gì, và ai có trách nhiệm đáp ứng những nhu cầu đó." Kẻ phạm tội được khuyến khích thừa nhận trực tiếp với những người bị ảnh hưởng về hậu quả hành vi của mình, trong khi nạn nhân được trao tiếng nói mà các thủ tục tòa án truyền thống hiếm khi dành cho họ.</p>
+    <p><span class="pn">[3]</span> Proponents argue that this model yields several benefits. Studies conducted in countries such as New Zealand and Canada suggest that victims who participate in restorative processes report higher satisfaction than those who go through conventional trials, partly because they finally feel heard. Reoffending rates, particularly among juvenile offenders, also appear to drop when restorative measures are used instead of, or alongside, custodial sentences. Furthermore, the approach is considerably cheaper than lengthy imprisonment, easing the burden on overcrowded prison systems.</p>
+    <p class="vi-para">[3] Những người ủng hộ cho rằng mô hình này mang lại nhiều lợi ích. Các nghiên cứu tại những nước như New Zealand và Canada cho thấy nạn nhân tham gia quy trình phục hồi có mức độ hài lòng cao hơn so với những người trải qua phiên tòa thông thường, một phần vì họ cuối cùng cảm thấy được lắng nghe. Tỷ lệ tái phạm, đặc biệt ở người phạm tội vị thành niên, cũng có xu hướng giảm khi biện pháp phục hồi được áp dụng thay thế hoặc song song với án tù giam. Hơn nữa, cách tiếp cận này rẻ hơn đáng kể so với việc giam giữ lâu dài, giảm bớt gánh nặng cho hệ thống nhà tù quá tải.</p>
+    <p><span class="pn">[4]</span> Critics, however, caution against viewing restorative justice as a panacea. They point out that the process depends heavily on the offender's genuine willingness to take responsibility; if remorse is feigned merely to secure a lighter outcome, the victim may be further traumatised rather than healed. Some legal scholars also worry that informal proceedings could inadvertently pressure victims into forgiving offenders before they are emotionally ready, or that serious crimes such as violent assault may be inappropriately diverted away from formal prosecution. Despite these reservations, many jurisdictions continue to expand restorative programmes, convinced that they complement rather than replace conventional justice.</p>
+    <p class="vi-para">[4] Tuy nhiên, những người phản đối cảnh báo không nên xem tư pháp phục hồi là giải pháp toàn năng cho mọi trường hợp. Họ chỉ ra rằng quy trình này phụ thuộc rất nhiều vào thiện chí thực sự của kẻ phạm tội trong việc nhận trách nhiệm; nếu sự hối lỗi chỉ là giả vờ nhằm đạt kết quả nhẹ hơn, nạn nhân có thể càng bị tổn thương thêm thay vì được chữa lành. Một số học giả luật còn lo ngại rằng các thủ tục phi chính thức có thể vô tình gây áp lực buộc nạn nhân tha thứ cho kẻ phạm tội trước khi họ sẵn sàng về mặt cảm xúc, hoặc những tội nghiêm trọng như bạo hành có thể bị chuyển hướng không thỏa đáng khỏi quy trình truy tố chính thức. Bất chấp những lo ngại này, nhiều khu vực tài phán vẫn tiếp tục mở rộng các chương trình phục hồi, tin rằng chúng bổ sung chứ không thay thế hệ thống tư pháp truyền thống.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. The history of prisons in Western countries</li><li>B. An alternative justice model that involves victims and offenders directly</li><li>C. Why juvenile offenders should never be punished</li><li>D. The cost of building new courtrooms</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài giới thiệu và đánh giá mô hình restorative justice, so sánh với hệ thống tòa án truyền thống.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Detail</span> According to paragraph 1, what was the victim's traditional role in court?</div>
+    <ul><li>A. Judge</li><li>B. Facilitator</li><li>C. Mainly a witness</li><li>D. Sentencing officer</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "the victim's role was largely reduced to that of a witness."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Vocabulary</span> The phrase <b class="k">"gained considerable traction"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. lost most of its support</li><li>B. become increasingly accepted/popular</li><li>C. become illegal</li><li>D. remained unknown</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "gained traction" = được ủng hộ/chấp nhận ngày càng nhiều.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, what does <b class="k">"them"</b> in "addressing them" refer to?</div>
+    <ul><li>A. offenders</li><li>B. facilitators</li><li>C. the victims' needs</li><li>D. courts</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu trước nói "what are their [victims'] needs" → "them" chỉ những nhu cầu đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Detail</span> According to paragraph 3, which of the following is mentioned as a benefit of restorative justice?</div>
+    <ul><li>A. It always eliminates crime completely</li><li>B. It is more expensive than imprisonment</li><li>C. It can lower reoffending rates among young offenders</li><li>D. It removes the need for facilitators</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "Reoffending rates, particularly among juvenile offenders, also appear to drop..."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"panacea"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. a universal solution to every problem</li><li>B. a type of legal punishment</li><li>C. a serious crime</li><li>D. a court document</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "caution against viewing restorative justice as a panacea" — nghĩa là không nên coi nó là phương thuốc chữa bách bệnh/giải pháp toàn năng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Inference</span> It can be inferred that critics worry restorative justice may fail when:</div>
+    <ul><li>A. offenders show genuine remorse</li><li>B. offenders only pretend to feel sorry to get a lighter outcome</li><li>C. victims refuse to attend at all</li><li>D. costs are too low</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "if remorse is feigned merely to secure a lighter outcome, the victim may be further traumatised."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · Purpose</span> Why does the author mention New Zealand and Canada in paragraph 3?</div>
+    <ul><li>A. To criticize their prison systems</li><li>B. To provide research evidence supporting restorative justice's benefits</li><li>C. To compare their tax systems</li><li>D. To explain the history of colonization</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Các nước này được nêu ra kèm "studies suggest" nhằm dẫn chứng cho lợi ích của mô hình.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · NOT/EXCEPT</span> All of the following are mentioned as concerns about restorative justice EXCEPT:</div>
+    <ul><li>A. offenders may fake remorse</li><li>B. victims might feel pressured to forgive too soon</li><li>C. serious crimes might be wrongly diverted from prosecution</li><li>D. facilitators are too expensive to train</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều xuất hiện ở đoạn 4. Chi phí đào tạo facilitator không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Tone</span> The author's overall tone toward restorative justice is:</div>
+    <ul><li>A. entirely dismissive</li><li>B. balanced, presenting both benefits and limitations</li><li>C. purely promotional, ignoring criticism</li><li>D. angry and sarcastic</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày rõ lợi ích (đoạn 3) và hạn chế (đoạn 4) một cách cân bằng, kết luận trung dung.</p></details>
+  </div>
+
+  <h3>Từ vựng Bài #1 — Crime &amp; Law</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>offender</td><td>(n)</td><td>người phạm tội</td></tr>
+    <tr><td>gain traction</td><td>(phr)</td><td>được ủng hộ/chấp nhận ngày càng nhiều</td></tr>
+    <tr><td>facilitator</td><td>(n)</td><td>người điều phối, hòa giải viên</td></tr>
+    <tr><td>acknowledge</td><td>(v)</td><td>thừa nhận</td></tr>
+    <tr><td>reoffend</td><td>(v)</td><td>tái phạm</td></tr>
+    <tr><td>custodial sentence <span class="c1tag">C1</span></td><td>(n)</td><td>án tù giam</td></tr>
+    <tr><td>panacea <span class="c1tag">C1</span></td><td>(n)</td><td>giải pháp toàn năng, thuốc chữa bách bệnh</td></tr>
+    <tr><td>feigned <span class="c1tag">C1</span></td><td>(adj)</td><td>giả vờ, không thật lòng</td></tr>
+    <tr><td>traumatised</td><td>(adj)</td><td>bị tổn thương tâm lý</td></tr>
+    <tr><td>divert</td><td>(v)</td><td>chuyển hướng, làm chệch hướng</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài #2 <span class="lvl">Culture · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Quiet Erosion of Local Traditions</h3>
+    <p><span class="pn">[1]</span> Anthropologists have long observed that cultural practices, once thought to be timeless, are in fact remarkably fragile. Festivals, dialects, culinary customs, and rituals that took centuries to develop can vanish within a single generation once the social conditions sustaining them disappear. This phenomenon, often described as cultural erosion, has accelerated dramatically over the past fifty years as urbanisation, mass media, and international travel have brought previously isolated communities into constant contact with dominant global cultures.</p>
+    <p class="vi-para">[1] Các nhà nhân học từ lâu đã nhận thấy rằng những tập tục văn hóa, vốn được cho là bất biến, thực chất lại rất mong manh. Lễ hội, phương ngữ, ẩm thực truyền thống và nghi lễ phải mất hàng thế kỷ để hình thành có thể biến mất chỉ trong một thế hệ một khi điều kiện xã hội duy trì chúng không còn nữa. Hiện tượng này, thường được gọi là "xói mòn văn hóa," đã tăng tốc mạnh mẽ trong năm mươi năm qua khi đô thị hóa, truyền thông đại chúng và du lịch quốc tế đưa các cộng đồng vốn biệt lập vào tiếp xúc liên tục với các nền văn hóa toàn cầu chiếm ưu thế.</p>
+    <p><span class="pn">[2]</span> Young people, in particular, often find themselves caught between two worlds. On one hand, they feel a pull toward the traditions passed down by their parents and grandparents; on the other, they are drawn to the perceived prestige of global youth culture, expressed through fashion, music, and language. In many communities, fluency in a minority language is quietly abandoned in favour of a national or international language perceived as more useful for employment, leaving grandparents and grandchildren unable to converse fluently with one another.</p>
+    <p class="vi-para">[2] Giới trẻ, đặc biệt, thường thấy mình bị mắc kẹt giữa hai thế giới. Một mặt, họ cảm nhận sức hút từ những truyền thống được cha mẹ và ông bà truyền lại; mặt khác, họ bị cuốn hút bởi uy tín được cho là của văn hóa giới trẻ toàn cầu, thể hiện qua thời trang, âm nhạc và ngôn ngữ. Ở nhiều cộng đồng, khả năng nói thông thạo ngôn ngữ thiểu số dần bị từ bỏ để nhường chỗ cho ngôn ngữ quốc gia hoặc quốc tế được xem là hữu ích hơn cho công việc, khiến ông bà và cháu không thể trò chuyện trôi chảy với nhau.</p>
+    <p><span class="pn">[3]</span> Governments and cultural institutions have responded in varied ways. Some have established heritage museums and funded folk festivals intended to keep traditions visible, though critics argue that such efforts can reduce living customs to museum exhibits, stripped of the everyday context that once gave them meaning. Other initiatives have proved more effective, notably community-led language nests, where young children are immersed in an endangered language from infancy, a strategy credited with reviving Māori in New Zealand and Hawaiian in the United States.</p>
+    <p class="vi-para">[3] Chính phủ và các tổ chức văn hóa đã có nhiều cách phản ứng khác nhau. Một số đã lập bảo tàng di sản và tài trợ lễ hội dân gian nhằm giữ cho truyền thống được hiện diện, dù người phê bình cho rằng những nỗ lực này có thể biến các phong tục sống động thành hiện vật bảo tàng, bị tước bỏ bối cảnh đời thường vốn từng mang lại ý nghĩa cho chúng. Những sáng kiến khác đã tỏ ra hiệu quả hơn, nổi bật là mô hình "tổ ngôn ngữ" do cộng đồng dẫn dắt, nơi trẻ nhỏ được đắm mình trong một ngôn ngữ có nguy cơ biến mất ngay từ thuở sơ sinh, chiến lược được ghi nhận đã hồi sinh tiếng Māori ở New Zealand và tiếng Hawaii ở Hoa Kỳ.</p>
+    <p><span class="pn">[4]</span> Ultimately, the fate of a tradition rests less on official policy than on whether ordinary people continue to find it meaningful in daily life. A custom preserved only for tourists or ceremonial occasions is, in a sense, already dead, even if it is still performed. Genuine survival requires that a practice remain woven into the fabric of everyday existence — cooked in home kitchens, spoken at family dinners, sung without an audience — rather than merely archived for posterity.</p>
+    <p class="vi-para">[4] Suy cho cùng, số phận của một truyền thống phụ thuộc ít vào chính sách chính thức hơn là vào việc liệu người dân bình thường có tiếp tục thấy nó có ý nghĩa trong đời sống hằng ngày hay không. Một phong tục chỉ được duy trì cho khách du lịch hoặc dịp lễ nghi, theo một nghĩa nào đó, đã chết, dù nó vẫn được trình diễn. Sự tồn tại thực sự đòi hỏi một tập tục phải được dệt vào cấu trúc của đời sống thường nhật — được nấu trong bếp gia đình, được nói trong bữa cơm gia đình, được hát mà không cần khán giả — chứ không chỉ được lưu trữ cho hậu thế.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. how governments fund museums</li><li>B. why local cultural traditions are disappearing and how they might survive</li><li>C. the history of the Māori language</li><li>D. why young people dislike their grandparents</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài bàn về nguyên nhân xói mòn văn hóa và điều kiện để truyền thống thực sự tồn tại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"fragile"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. permanent and unchangeable</li><li>B. easily broken or lost</li><li>C. extremely valuable</li><li>D. widely celebrated</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "remarkably fragile" đối lập với "timeless" (bất biến) → dễ mất đi, mong manh.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, what has accelerated cultural erosion?</div>
+    <ul><li>A. Slower internet speeds</li><li>B. Urbanisation, mass media, and international travel</li><li>C. Fewer festivals being organised</li><li>D. Stricter government censorship</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "as urbanisation, mass media, and international travel have brought previously isolated communities into constant contact..."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, what does <b class="k">"such"</b> in "perceived as more useful" (implicitly the language) refer back to?</div>
+    <ul><li>A. minority language</li><li>B. national or international language</li><li>C. fashion</li><li>D. grandparents</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu văn nói ngôn ngữ quốc gia/quốc tế được xem là hữu ích hơn cho việc làm, dẫn tới bỏ ngôn ngữ thiểu số.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that language loss can lead to:</div>
+    <ul><li>A. better job opportunities for everyone</li><li>B. a communication gap between generations</li><li>C. stronger family bonds</li><li>D. more funding for museums</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "leaving grandparents and grandchildren unable to converse fluently with one another."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The phrase <b class="k">"stripped of"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. covered with</li><li>B. having something removed from</li><li>C. proud of</li><li>D. paid for by</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "stripped of the everyday context" = bị tước bỏ/mất đi bối cảnh đời thường.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "language nests" and the revival of Māori and Hawaiian in paragraph 3?</div>
+    <ul><li>A. To criticize New Zealand's government</li><li>B. To give a successful example of preserving an endangered language</li><li>C. To argue that museums are useless</li><li>D. To explain why tourism is harmful</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Chúng được nêu như minh chứng cho một chiến lược "credited with reviving" — tức là hiệu quả.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT/EXCEPT</span> All of the following are mentioned as examples of cultural practice EXCEPT:</div>
+    <ul><li>A. festivals</li><li>B. dialects</li><li>C. culinary customs</li><li>D. legal court procedures</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 1 liệt kê "Festivals, dialects, culinary customs, and rituals" — không có "legal court procedures".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Inference</span> According to paragraph 4, a tradition performed only for tourists is considered:</div>
+    <ul><li>A. more valuable than ever</li><li>B. essentially already dead in a meaningful sense</li><li>C. the best way to preserve culture</li><li>D. impossible to document</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "A custom preserved only for tourists or ceremonial occasions is, in a sense, already dead."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Tone</span> The author's tone in the final paragraph is best described as:</div>
+    <ul><li>A. purely celebratory</li><li>B. reflective, emphasizing what genuine cultural survival requires</li><li>C. mocking traditional communities</li><li>D. indifferent to the topic</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả suy ngẫm và đưa ra tiêu chí cho sự "sống sót" thực sự của văn hóa, không mang tính châm biếm hay thờ ơ.</p></details>
+  </div>
+
+  <h3>Từ vựng Bài #2 — Culture</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>erosion</td><td>(n)</td><td>sự xói mòn</td></tr>
+    <tr><td>fragile</td><td>(adj)</td><td>mong manh, dễ vỡ/mất</td></tr>
+    <tr><td>ritual</td><td>(n)</td><td>nghi lễ, nghi thức</td></tr>
+    <tr><td>urbanisation</td><td>(n)</td><td>đô thị hóa</td></tr>
+    <tr><td>fluency</td><td>(n)</td><td>sự thông thạo (ngôn ngữ)</td></tr>
+    <tr><td>heritage</td><td>(n)</td><td>di sản</td></tr>
+    <tr><td>stripped of <span class="c1tag">C1</span></td><td>(phr)</td><td>bị tước bỏ, mất đi</td></tr>
+    <tr><td>immersed</td><td>(adj)</td><td>được đắm mình/hòa mình vào</td></tr>
+    <tr><td>endangered</td><td>(adj)</td><td>có nguy cơ biến mất</td></tr>
+    <tr><td>posterity <span class="c1tag">C1</span></td><td>(n)</td><td>hậu thế, các thế hệ sau</td></tr>
+  </table>
+
+  <!-- ============ ÔN TỪ VỰNG CẢ TUẦN ============ -->
+  <h2>Ôn lại từ vựng cả tuần — Tuần 5</h2>
+  <div class="card">
+    <p>Trước khi chấm điểm, hãy tự nhắc lại nhanh 10 chủ đề đã học trong Tuần 5 — nếu quên chủ đề nào, quay lại bài tương ứng để ôn:</p>
+    <ul style="margin:8px 0 0 18px; list-style: disc;">
+      <li><b>History</b> — sự kiện lịch sử, niên đại, di sản</li>
+      <li><b>Archaeology</b> — khảo cổ học, khai quật, hiện vật</li>
+      <li><b>Arts</b> — nghệ thuật, trường phái, phê bình</li>
+      <li><b>Architecture</b> — kiến trúc, phong cách xây dựng, đô thị</li>
+      <li><b>Business</b> — kinh doanh, thị trường, quản trị</li>
+      <li><b>Globalization</b> — toàn cầu hóa, thương mại quốc tế</li>
+      <li><b>Travel</b> — du lịch, văn hóa bản địa, ngành dịch vụ</li>
+      <li><b>Crime &amp; Law</b> — tội phạm, pháp luật, tư pháp (Bài #1 hôm nay)</li>
+      <li><b>Culture</b> — văn hóa, phong tục, bản sắc (Bài #2 hôm nay)</li>
+      <li><b>Media</b> — truyền thông, báo chí, mạng xã hội</li>
+    </ul>
+  </div>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm chung &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1</th><td>1-B · 2-C · 3-B · 4-C · 5-C · 6-A · 7-B · 8-B · 9-D · 10-B</td></tr>
+      <tr><th>Bài #2</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;">Tổng cộng <b>20 câu</b> (10 + 10). Đếm số câu đúng, tính phần trăm: <i>số câu đúng ÷ 20 × 100%</i>.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Mốc tự đánh giá theo %:</b></p>
+    <ul style="margin:4px 0 0 18px; color:var(--muted)">
+      <li><b>≥ 85% (17–20 câu)</b> — Xuất sắc, sẵn sàng bước sang Giai đoạn 3.</li>
+      <li><b>70–84% (14–16 câu)</b> — Đạt mục tiêu tuần, có thể tiến tiếp; chú ý ôn lại dạng câu hay sai.</li>
+      <li><b>50–69% (10–13 câu)</b> — Ổn nhưng chưa đạt; nên dành 1–2 ngày ôn lại từ vựng &amp; kỹ thuật đọc trước khi qua Tuần 6.</li>
+      <li><b>&lt; 50% (dưới 10 câu)</b> — Cần quay lại các bài Tuần 5 luyện thêm, đặc biệt các dạng NOT/EXCEPT và Inference.</li>
+    </ul>
+    <p style="margin-top:8px;">Với mỗi câu sai, ghi vào "sổ lỗi" theo mẫu: <i>"Bài __ · Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai lặp lại nhiều lần → đó là điểm yếu cần ưu tiên khắc phục.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Tuần 5?</b> Nếu đạt <b>≥70%</b>, bạn đã sẵn sàng bước vào <b>Giai đoạn 3 (Tuần 6)</b> — nơi các đề sẽ chuyển sang dạng <b>FULL bấm giờ</b>, mô phỏng sát điều kiện thi thật (đọc + trả lời trong thời gian giới hạn nghiêm ngặt, không dừng giữa chừng). Hãy dành thời gian ôn lại "sổ lỗi" của cả 5 tuần trước khi bắt đầu.
+  </div>
+
+</div>
+
+<footer>🧩 Tuần 5 · Ngày 7 · VSTEP Reading — Trộn tất cả chủ đề, đo độ chính xác. Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

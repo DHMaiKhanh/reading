@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 5 — Luyện đề Health &amp; Medicine · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: 8px; padding: 10px 16px; margin: 4px 0 16px; font-size: 0.94rem; color: var(--muted);
+  }
+  .vi-para .vn { color: var(--accent); font-weight: 700; margin-right: 4px; }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🩺 Ngày 5 — Luyện đề: Health &amp; Medicine</h1>
+  <p>1 đề kết hợp chuẩn B2 + C1 → làm đề → giải đề → rút từ vựng (bản song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~45 phút</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 1 bài · 10 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b>. Bản dịch tiếng Việt bên dưới mỗi đoạn chỉ dùng để đối chiếu <i>sau khi</i> làm bài, đừng đọc trước.</p>
+  </div>
+
+  <!-- ============ ĐỀ ============ -->
+  <h2>Đề luyện <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>The Fight Against Infectious Disease</h3>
+    <p><span class="pn">[1]</span> For most of human history, infectious diseases were the leading cause of death, sweeping through populations with little warning and even less mercy. Plagues, smallpox, and cholera could wipe out entire communities within weeks. It was only with the advent of modern medicine — particularly the discovery of vaccines and antibiotics — that humanity began to gain the upper hand over these invisible killers. Yet, as recent pandemics have shown, the battle is far from over.</p>
+    <div class="vi-para"><span class="vn">[VI]</span> Trong phần lớn lịch sử loài người, bệnh truyền nhiễm là nguyên nhân gây tử vong hàng đầu, càn quét qua các cộng đồng dân cư mà hầu như không báo trước và cũng chẳng hề nương tay. Dịch hạch, đậu mùa và tả có thể xóa sổ cả một cộng đồng chỉ trong vài tuần. Chỉ đến khi y học hiện đại ra đời — đặc biệt là việc phát minh ra vắc-xin và kháng sinh — con người mới bắt đầu giành được thế thượng phong trước những kẻ giết người vô hình này. Thế nhưng, như các đại dịch gần đây đã cho thấy, cuộc chiến này còn lâu mới kết thúc.</div>
+
+    <p><span class="pn">[2]</span> Vaccines work by training the immune system to recognise a pathogen before an actual infection occurs. A small, harmless component of the virus or bacterium — or sometimes a weakened version of it — is introduced into the body, prompting the immune system to produce antibodies. Should the real pathogen ever appear, the body is already primed to mount a rapid defence. This elegant mechanism has eradicated smallpox entirely and brought diseases such as polio to the brink of extinction.</p>
+    <div class="vi-para"><span class="vn">[VI]</span> Vắc-xin hoạt động bằng cách huấn luyện hệ miễn dịch nhận diện một mầm bệnh trước khi sự lây nhiễm thực sự xảy ra. Một thành phần nhỏ, vô hại của virus hoặc vi khuẩn — hoặc đôi khi là một phiên bản đã bị làm suy yếu của nó — được đưa vào cơ thể, kích thích hệ miễn dịch sản sinh kháng thể. Nếu mầm bệnh thật sự xuất hiện, cơ thể đã sẵn sàng để triển khai một cuộc phòng vệ nhanh chóng. Cơ chế tinh vi này đã xóa sổ hoàn toàn bệnh đậu mùa và đưa các bệnh như bại liệt đến bờ vực tuyệt chủng.</div>
+
+    <p><span class="pn">[3]</span> Despite this remarkable track record, vaccines have become a surprisingly contentious subject. A vocal minority questions their safety, sometimes citing debunked studies or anecdotal reports rather than rigorous scientific evidence. Public health officials argue that such scepticism, however sincere, can be dangerous: when vaccination rates fall below a certain threshold, "herd immunity" breaks down, and outbreaks of diseases once thought conquered can resurface. Measles, for example, has re-emerged in several countries where vaccination coverage declined.</p>
+    <div class="vi-para"><span class="vn">[VI]</span> Bất chấp thành tích đáng nể này, vắc-xin đã trở thành một chủ đề gây tranh cãi đến bất ngờ. Một bộ phận thiểu số nhưng lên tiếng mạnh mẽ đặt nghi vấn về độ an toàn của vắc-xin, đôi khi viện dẫn các nghiên cứu đã bị bác bỏ hoặc những lời kể cá nhân thay vì bằng chứng khoa học nghiêm ngặt. Các quan chức y tế công cộng lập luận rằng sự hoài nghi như vậy, dù có thể xuất phát từ thiện chí, vẫn có thể nguy hiểm: khi tỷ lệ tiêm chủng giảm xuống dưới một ngưỡng nhất định, "miễn dịch cộng đồng" sẽ sụp đổ, và các đợt bùng phát của những căn bệnh từng được cho là đã bị đẩy lùi có thể tái xuất hiện. Ví dụ, bệnh sởi đã quay trở lại ở một số quốc gia nơi tỷ lệ bao phủ tiêm chủng suy giảm.</div>
+
+    <p><span class="pn">[4]</span> Beyond vaccination, modern medicine has developed an arsenal of other tools to combat infectious disease, from antibiotics that kill bacteria to antiviral drugs that slow the replication of viruses. However, the overuse and misuse of antibiotics — often prescribed unnecessarily or taken incorrectly — has given rise to a worrying phenomenon known as antibiotic resistance. Bacteria that survive exposure to a drug can evolve and multiply, eventually rendering that drug ineffective. Health experts warn that without more prudent use of antibiotics, humanity could one day face a "post-antibiotic era," in which routine infections and minor injuries become life-threatening once again.</p>
+    <div class="vi-para"><span class="vn">[VI]</span> Ngoài tiêm chủng, y học hiện đại còn phát triển cả một kho vũ khí khác để chống lại bệnh truyền nhiễm, từ kháng sinh tiêu diệt vi khuẩn đến thuốc kháng virus làm chậm sự nhân lên của virus. Tuy nhiên, việc lạm dụng và sử dụng sai kháng sinh — thường được kê đơn không cần thiết hoặc dùng không đúng cách — đã làm nảy sinh một hiện tượng đáng lo ngại được gọi là kháng kháng sinh. Những vi khuẩn sống sót sau khi tiếp xúc với một loại thuốc có thể tiến hóa và nhân lên, cuối cùng khiến loại thuốc đó trở nên vô hiệu. Các chuyên gia y tế cảnh báo rằng nếu không sử dụng kháng sinh thận trọng hơn, nhân loại một ngày nào đó có thể phải đối mặt với "kỷ nguyên hậu kháng sinh", trong đó những nhiễm trùng thông thường và chấn thương nhỏ lại trở nên đe dọa tính mạng như xưa.</div>
+
+    <p><span class="pn">[5]</span> Ultimately, the history of infectious disease is a reminder that medical progress is never permanent; it must be actively maintained. Global cooperation, sustained investment in research, and public trust in science all play indispensable roles in keeping humanity one step ahead of the pathogens that have shadowed our species since its earliest days. As one epidemiologist observed, "We are not fighting a single war against disease — we are locked in an endless arms race, and complacency is our greatest vulnerability."</p>
+    <div class="vi-para"><span class="vn">[VI]</span> Xét cho cùng, lịch sử của bệnh truyền nhiễm là lời nhắc nhở rằng tiến bộ y học không bao giờ là vĩnh viễn; nó phải được chủ động duy trì. Sự hợp tác toàn cầu, đầu tư bền vững vào nghiên cứu, và niềm tin của công chúng vào khoa học đều đóng vai trò không thể thiếu trong việc giúp nhân loại luôn đi trước một bước so với những mầm bệnh đã bám theo bóng loài người từ những ngày đầu tiên. Như một nhà dịch tễ học đã nhận xét: "Chúng ta không chỉ đang chiến đấu trong một cuộc chiến đơn lẻ chống lại bệnh tật — chúng ta đang bị cuốn vào một cuộc chạy đua vũ trang không hồi kết, và sự chủ quan chính là điểm yếu lớn nhất của chúng ta."</div>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of smallpox eradication only</li><li>B. humanity's ongoing struggle against infectious disease through vaccines, antibiotics, and vigilance</li><li>C. why measles is more dangerous than polio</li><li>D. the biography of a famous epidemiologist</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi qua nhiều khía cạnh: lịch sử dịch bệnh, cơ chế vắc-xin, tranh cãi về vắc-xin, kháng kháng sinh, và lời nhắc phải luôn cảnh giác → ý bao trùm là cuộc chiến liên tục chống bệnh truyền nhiễm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"eradicated"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. spread widely</li><li>B. completely eliminated</li><li>C. slightly reduced</li><li>D. temporarily hidden</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "has eradicated smallpox entirely" — xóa sổ hoàn toàn ≈ completely eliminated.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, how do vaccines help the immune system?</div>
+    <ul><li>A. By curing an infection after it has already spread</li><li>B. By introducing a harmless component so the body produces antibodies in advance</li><li>C. By destroying all bacteria in the body immediately</li><li>D. By replacing the need for a natural immune system</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "A small, harmless component... is introduced into the body, prompting the immune system to produce antibodies."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"such scepticism"</b> refers to:</div>
+    <ul><li>A. public health officials' warnings</li><li>B. the vocal minority's doubts about vaccine safety</li><li>C. the re-emergence of measles</li><li>D. rigorous scientific evidence</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó nói về "a vocal minority questions their safety" → "such scepticism" chỉ sự hoài nghi/nghi ngờ đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that herd immunity:</div>
+    <ul><li>A. only matters for diseases that no longer exist</li><li>B. depends on a sufficiently high vaccination rate within a population</li><li>C. is unrelated to vaccination coverage</li><li>D. has never protected any community</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "when vaccination rates fall below a certain threshold, herd immunity breaks down" → suy ra herd immunity phụ thuộc vào tỷ lệ tiêm chủng đủ cao.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"prudent"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. careless and excessive</li><li>B. sensible and cautious</li><li>C. expensive and rare</li><li>D. illegal and secretive</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "without more prudent use of antibiotics" — sử dụng thận trọng, khôn ngoan hơn ≈ sensible and cautious.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the example of measles re-emerging in paragraph 3?</div>
+    <ul><li>A. To argue that measles is a new disease</li><li>B. To illustrate the real-world consequence of declining vaccination coverage</li><li>C. To praise countries with low vaccination rates</li><li>D. To describe how vaccines are manufactured</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Ví dụ sởi được đưa ra ngay sau câu nói về herd immunity sụp đổ khi tỷ lệ tiêm chủng giảm → minh họa hậu quả thực tế.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as tools or factors in fighting infectious disease EXCEPT:</div>
+    <ul><li>A. vaccines</li><li>B. antibiotics and antiviral drugs</li><li>C. global cooperation and research investment</li><li>D. genetic engineering of human embryos</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Vắc-xin (đoạn 2), kháng sinh/thuốc kháng virus (đoạn 4), hợp tác toàn cầu &amp; đầu tư nghiên cứu (đoạn 5) đều được nhắc → loại A, B, C. "Genetic engineering of human embryos" KHÔNG xuất hiện trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the fight against infectious disease is best described as:</div>
+    <ul><li>A. dismissive, believing the problem is exaggerated</li><li>B. respectful of past progress but cautious about future complacency</li><li>C. purely pessimistic with no acknowledgment of achievements</li><li>D. indifferent to public health issues</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả ca ngợi thành tựu (xóa sổ đậu mùa, đẩy lùi bại liệt) nhưng liên tục cảnh báo về kháng kháng sinh và "complacency is our greatest vulnerability" ở đoạn kết.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"endless arms race"</b> (paragraph 5) implies that:</div>
+    <ul><li>A. the fight against pathogens will one day be permanently won</li><li>B. humanity and pathogens are engaged in a continuous cycle of adaptation with no final victory</li><li>C. only military technology can defeat disease</li><li>D. vaccines are no longer necessary</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "endless arms race" gợi ý một cuộc đua không có hồi kết, con người và mầm bệnh liên tục thích nghi/đối phó lẫn nhau, không có chiến thắng cuối cùng vĩnh viễn — phù hợp với câu mở đầu đoạn "medical progress is never permanent."</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG ============ -->
+  <h2>Từ vựng chủ đề Health &amp; Medicine</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>infectious disease</td><td>(n)</td><td>bệnh truyền nhiễm</td></tr>
+    <tr><td>gain the upper hand</td><td>(phr)</td><td>giành thế thượng phong</td></tr>
+    <tr><td>pathogen</td><td>(n)</td><td>mầm bệnh</td></tr>
+    <tr><td>antibody</td><td>(n)</td><td>kháng thể</td></tr>
+    <tr><td>primed <span class="c1tag">C1</span></td><td>(adj)</td><td>đã được chuẩn bị/sẵn sàng</td></tr>
+    <tr><td>eradicate</td><td>(v)</td><td>xóa sổ, tận diệt</td></tr>
+    <tr><td>contentious <span class="c1tag">C1</span></td><td>(adj)</td><td>gây tranh cãi</td></tr>
+    <tr><td>debunked</td><td>(adj)</td><td>đã bị bác bỏ (là sai)</td></tr>
+    <tr><td>herd immunity</td><td>(n)</td><td>miễn dịch cộng đồng</td></tr>
+    <tr><td>re-emerge</td><td>(v)</td><td>tái xuất hiện</td></tr>
+    <tr><td>antibiotic resistance</td><td>(n)</td><td>kháng kháng sinh</td></tr>
+    <tr><td>render ... ineffective <span class="c1tag">C1</span></td><td>(phr)</td><td>khiến trở nên vô hiệu</td></tr>
+    <tr><td>prudent <span class="c1tag">C1</span></td><td>(adj)</td><td>thận trọng, khôn ngoan</td></tr>
+    <tr><td>indispensable <span class="c1tag">C1</span></td><td>(adj)</td><td>không thể thiếu</td></tr>
+    <tr><td>complacency <span class="c1tag">C1</span></td><td>(n)</td><td>sự tự mãn, chủ quan</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10 → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài + học kỹ từ vựng trước khi qua tuần sau.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 5?</b> Quay lại lộ trình tick 4 ô của Ngày 5 (Tuần 1). Tuần 2 Ngày 1 sẽ là chủ đề <b>Society &amp; Social Issues</b> theo đúng format này (1 đề kết hợp B2 + C1).
+  </div>
+
+</div>
+
+<footer>🩺 Ngày 5 · VSTEP Reading — Health &amp; Medicine · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

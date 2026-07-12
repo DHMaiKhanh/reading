@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 35 — ĐỀ FULL #4 · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🗂️ Tuần 7 · Ngày 1 — ĐỀ FULL #4</h1>
+  <p>Energy &amp; Resources · Urbanization &amp; City Life · Work &amp; Career · Nature &amp; Wildlife</p>
+  <div class="meta">
+    <span class="badge">🕐 Bấm giờ NGHIÊM 60 phút</span>
+    <span class="badge">📝 4 bài · 40 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy tắc làm đề nghiêm túc:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Bấm giờ đúng <b>60 phút</b> cho cả 4 bài — không dừng giữa chừng, không tra từ điển.</li>
+      <li>Làm theo thứ tự hoặc tự phân bổ thời gian (~15 phút/bài), nhưng phải nộp bài khi hết giờ.</li>
+      <li>Sau khi nộp mới được mở đáp án trong các thẻ <code>&lt;details&gt;</code>.</li>
+      <li>Chấm điểm bằng bảng đáp án nhanh cuối trang, ghi lại dạng câu hay sai vào "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>, có xen một số câu/từ <span class="c1tag">C1</span> để kéo trần. Mục tiêu: đúng <b>~28–32/40</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1: ENERGY ============ -->
+  <h2>Bài đọc 1 <span class="lvl">Energy &amp; Resources</span></h2>
+
+  <div class="passage">
+    <h3>The Race to Reinvent Global Energy</h3>
+    <p><span class="pn">[1]</span> For more than a century, fossil fuels such as coal, oil, and natural gas have powered the world's factories, vehicles, and homes. Their abundance and relatively low cost made them the obvious choice during the industrial age. Today, however, the environmental cost of burning these fuels has become impossible to ignore, as rising carbon dioxide levels are widely linked to global warming, melting ice caps, and increasingly extreme weather events.</p>
+    <p class="vi-para">[1] Trong hơn một thế kỷ qua, các nhiên liệu hóa thạch như than đá, dầu mỏ và khí tự nhiên đã cung cấp năng lượng cho nhà máy, phương tiện và hộ gia đình trên khắp thế giới. Sự dồi dào và chi phí tương đối thấp đã khiến chúng trở thành lựa chọn hiển nhiên trong thời đại công nghiệp. Tuy nhiên, ngày nay cái giá về môi trường của việc đốt các nhiên liệu này đã trở nên không thể phớt lờ, khi mức CO2 tăng cao được cho là liên quan mật thiết đến hiện tượng nóng lên toàn cầu, băng tan và các hiện tượng thời tiết cực đoan ngày càng gia tăng.</p>
+
+    <p><span class="pn">[2]</span> In response, governments and private companies have poured billions into renewable alternatives. Solar panels, once prohibitively expensive, now generate electricity at a fraction of their former cost thanks to improved manufacturing techniques. Wind farms, both onshore and offshore, have likewise expanded rapidly, and some countries already generate over a third of their electricity from wind alone. Even so, renewables face a persistent obstacle: intermittency. The sun does not always shine, nor does the wind always blow, which means energy storage — usually in the form of large-scale batteries — has become just as crucial as generation itself.</p>
+    <p class="vi-para">[2] Đáp lại, chính phủ và các công ty tư nhân đã đổ hàng tỷ đô la vào các giải pháp năng lượng tái tạo. Tấm pin mặt trời, vốn từng đắt đỏ đến mức không thể chi trả, nay tạo ra điện với chi phí chỉ bằng một phần nhỏ so với trước, nhờ kỹ thuật sản xuất được cải tiến. Các trang trại điện gió, cả trên bờ lẫn ngoài khơi, cũng đã mở rộng nhanh chóng, và một số quốc gia hiện đã sản xuất hơn một phần ba lượng điện chỉ từ gió. Tuy vậy, năng lượng tái tạo vẫn gặp phải một trở ngại dai dẳng: tính gián đoạn. Mặt trời không phải lúc nào cũng chiếu sáng, gió cũng không phải lúc nào cũng thổi, điều đó có nghĩa là việc lưu trữ năng lượng — thường dưới dạng pin quy mô lớn — đã trở nên quan trọng không kém gì việc sản xuất năng lượng.</p>
+
+    <p><span class="pn">[3]</span> Nuclear power occupies an uneasy middle ground in this debate. It produces vast amounts of reliable, low-carbon electricity, yet it remains haunted by the memory of disasters such as Chernobyl and Fukushima. Advocates argue that modern reactor designs are far safer and that nuclear energy is indispensable if the world hopes to abandon fossil fuels quickly enough to avert catastrophic warming. Critics counter that the enormous cost of building new plants, together with the unresolved question of radioactive waste disposal, makes nuclear power an unattractive long-term solution.</p>
+    <p class="vi-para">[3] Điện hạt nhân chiếm một vị trí trung gian đầy khó xử trong cuộc tranh luận này. Nó tạo ra lượng điện đáng tin cậy và ít carbon với quy mô lớn, nhưng vẫn còn bị ám ảnh bởi ký ức về các thảm họa như Chernobyl và Fukushima. Người ủng hộ cho rằng các thiết kế lò phản ứng hiện đại an toàn hơn nhiều và điện hạt nhân là không thể thiếu nếu thế giới muốn từ bỏ nhiên liệu hóa thạch đủ nhanh để ngăn chặn tình trạng nóng lên thảm khốc. Người phản đối lại cho rằng chi phí khổng lồ để xây dựng nhà máy mới, cùng với vấn đề chưa có lời giải về xử lý chất thải phóng xạ, khiến điện hạt nhân trở thành một giải pháp lâu dài kém hấp dẫn.</p>
+
+    <p><span class="pn">[4]</span> Ultimately, most experts agree that no single technology will solve the energy crisis on its own. A diversified mix — combining solar, wind, hydroelectric, and possibly nuclear power, supported by smarter grids and better storage — appears to be the most pragmatic path forward. What is certain is that the transition will not be instantaneous; it demands sustained investment, international cooperation, and a willingness among consumers to adapt to new habits of energy use.</p>
+    <p class="vi-para">[4] Cuối cùng, hầu hết các chuyên gia đều đồng ý rằng không một công nghệ đơn lẻ nào có thể tự mình giải quyết khủng hoảng năng lượng. Một sự kết hợp đa dạng — bao gồm điện mặt trời, điện gió, thủy điện và có thể cả điện hạt nhân, được hỗ trợ bởi lưới điện thông minh hơn và khả năng lưu trữ tốt hơn — dường như là con đường thực tế nhất phía trước. Điều chắc chắn là quá trình chuyển đổi này sẽ không diễn ra tức thời; nó đòi hỏi đầu tư liên tục, hợp tác quốc tế, và sự sẵn lòng của người tiêu dùng trong việc thích nghi với thói quen sử dụng năng lượng mới.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. The history of coal mining</li><li>B. The challenges and options in shifting toward cleaner energy</li><li>C. Why nuclear disasters happen</li><li>D. How to build a wind farm</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài bàn về việc chuyển đổi từ nhiên liệu hóa thạch sang năng lượng sạch, cùng những thách thức của từng lựa chọn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"abundance"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. shortage</li><li>B. large supply</li><li>C. high price</li><li>D. poor quality</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "abundance and relatively low cost" — nguồn cung dồi dào, sẵn có nhiều.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what is a major problem with renewable energy?</div>
+    <ul><li>A. It is too expensive to install</li><li>B. It cannot be stored at all</li><li>C. Its generation is inconsistent (intermittency)</li><li>D. Governments refuse to fund it</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "renewables face a persistent obstacle: intermittency" — nắng, gió không ổn định.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"which"</b> (in "does not always blow, which means") refers to:</div>
+    <ul><li>A. the cost of solar panels</li><li>B. the fact that sun and wind are inconsistent</li><li>C. the manufacturing techniques</li><li>D. large-scale batteries</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "which" thay cho cả ý trước: mặt trời/gió không ổn định → cần lưu trữ năng lượng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred that the author's view on nuclear power is:</div>
+    <ul><li>A. It is completely safe and should replace all other sources</li><li>B. It has both notable benefits and serious drawbacks</li><li>C. It should be banned immediately worldwide</li><li>D. It is cheaper than any renewable source</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3 trình bày cả lập luận ủng hộ (an toàn hơn, ít carbon) lẫn phản đối (chi phí, chất thải phóng xạ) — cách nhìn cân bằng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"indispensable"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. optional</li><li>B. absolutely necessary</li><li>C. outdated</li><li>D. harmful</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "nuclear energy is indispensable if the world hopes to abandon fossil fuels" — không thể thiếu được.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention Chernobyl and Fukushima in paragraph 3?</div>
+    <ul><li>A. To show why nuclear power still carries a negative image</li><li>B. To recommend building more nuclear plants</li><li>C. To describe how electricity is generated</li><li>D. To praise government energy policy</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Đây là ví dụ giải thích vì sao nuclear power "remains haunted by the memory of disasters".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as part of a possible energy mix EXCEPT:</div>
+    <ul><li>A. solar power</li><li>B. wind power</li><li>C. hydroelectric power</li><li>D. geothermal power</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 4 chỉ nhắc solar, wind, hydroelectric, và nuclear — không có "geothermal".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The overall tone of the passage is best described as:</div>
+    <ul><li>A. alarmist and pessimistic</li><li>B. dismissive of climate concerns</li><li>C. balanced and pragmatic</li><li>D. purely promotional for nuclear energy</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Bài trình bày ưu/nhược điểm của từng nguồn năng lượng, kết luận thực tế: cần kết hợp nhiều giải pháp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final sentence of paragraph 4 implies that the energy transition:</div>
+    <ul><li>A. will happen automatically without effort</li><li>B. requires long-term commitment and cooperation</li><li>C. is impossible to achieve</li><li>D. depends only on new battery technology</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "it demands sustained investment, international cooperation, and a willingness among consumers to adapt" → cần nỗ lực dài hạn, không tự nhiên xảy ra.</p></details>
+  </div>
+
+  <h2>Từ vựng — Energy &amp; Resources</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>fossil fuel</td><td>(n)</td><td>nhiên liệu hóa thạch</td></tr>
+    <tr><td>abundance</td><td>(n)</td><td>sự dồi dào, phong phú</td></tr>
+    <tr><td>intermittency <span class="c1tag">C1</span></td><td>(n)</td><td>tính gián đoạn, không liên tục</td></tr>
+    <tr><td>renewable</td><td>(adj)</td><td>tái tạo được</td></tr>
+    <tr><td>indispensable <span class="c1tag">C1</span></td><td>(adj)</td><td>không thể thiếu</td></tr>
+    <tr><td>avert <span class="c1tag">C1</span></td><td>(v)</td><td>ngăn chặn (điều xấu)</td></tr>
+    <tr><td>diversified</td><td>(adj)</td><td>đa dạng hóa</td></tr>
+    <tr><td>sustained investment</td><td>(phr)</td><td>đầu tư liên tục, bền vững</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2: URBANIZATION ============ -->
+  <h2>Bài đọc 2 <span class="lvl">Urbanization &amp; City Life</span></h2>
+
+  <div class="passage">
+    <h3>The Unstoppable Growth of Cities</h3>
+    <p><span class="pn">[1]</span> For the first time in human history, more than half of the world's population now lives in urban areas, and this proportion is projected to keep rising over the coming decades. Cities have long served as magnets for opportunity, drawing people with the promise of better jobs, education, and healthcare. Yet this rapid influx has also placed immense strain on urban infrastructure, often outpacing the capacity of housing, transport, and sanitation systems to keep up.</p>
+    <p class="vi-para">[1] Lần đầu tiên trong lịch sử nhân loại, hơn một nửa dân số thế giới hiện đang sống ở khu vực đô thị, và tỷ lệ này được dự báo sẽ tiếp tục tăng trong những thập kỷ tới. Các thành phố từ lâu đã đóng vai trò như thỏi nam châm thu hút cơ hội, lôi kéo con người bằng lời hứa về công việc, giáo dục và chăm sóc sức khỏe tốt hơn. Tuy nhiên, dòng người đổ về nhanh chóng này cũng đã tạo áp lực khổng lồ lên cơ sở hạ tầng đô thị, thường vượt quá khả năng đáp ứng của hệ thống nhà ở, giao thông và vệ sinh môi trường.</p>
+
+    <p><span class="pn">[2]</span> One of the most visible consequences of unchecked urban growth is the proliferation of informal settlements, sometimes called slums, where residents lack secure housing, clean water, or reliable electricity. Municipal governments frequently struggle to extend basic services to these areas quickly enough, leaving millions vulnerable to disease outbreaks and natural disasters. At the same time, in wealthier districts, skyrocketing property prices have pushed even middle-class families to the margins of the city, forcing long, exhausting commutes.</p>
+    <p class="vi-para">[2] Một trong những hậu quả dễ thấy nhất của tình trạng đô thị hóa không kiểm soát là sự lan rộng của các khu định cư tự phát, đôi khi được gọi là khu ổ chuột, nơi cư dân thiếu nhà ở an toàn, nước sạch hoặc điện ổn định. Chính quyền địa phương thường gặp khó khăn trong việc mở rộng các dịch vụ cơ bản đến những khu vực này đủ nhanh, khiến hàng triệu người dễ bị tổn thương trước dịch bệnh và thiên tai. Đồng thời, ở các khu vực giàu có hơn, giá bất động sản tăng vọt đã đẩy ngay cả các gia đình trung lưu ra ngoại vi thành phố, buộc họ phải đi làm với quãng đường dài và mệt mỏi.</p>
+
+    <p><span class="pn">[3]</span> Urban planners have responded with a range of strategies aimed at making cities more livable. Investment in public transportation, for instance, can dramatically reduce traffic congestion and air pollution, while mixed-use zoning — combining residential, commercial, and recreational spaces — encourages walkability and reduces reliance on cars. Green spaces, far from being a mere aesthetic luxury, have been shown to improve mental health and even lower urban temperatures, mitigating the "heat island" effect common in densely built environments.</p>
+    <p class="vi-para">[3] Các nhà quy hoạch đô thị đã ứng phó bằng nhiều chiến lược nhằm khiến thành phố trở nên đáng sống hơn. Chẳng hạn, đầu tư vào giao thông công cộng có thể giảm đáng kể tình trạng ùn tắc và ô nhiễm không khí, trong khi quy hoạch đa chức năng — kết hợp không gian ở, thương mại và giải trí — khuyến khích việc đi bộ và giảm phụ thuộc vào ô tô. Không gian xanh, không chỉ đơn thuần mang tính thẩm mỹ, đã được chứng minh là cải thiện sức khỏe tinh thần và thậm chí làm giảm nhiệt độ đô thị, giảm nhẹ hiệu ứng "đảo nhiệt" thường thấy ở các khu vực xây dựng dày đặc.</p>
+
+    <p><span class="pn">[4]</span> Nevertheless, no single blueprint suits every city, given the vastly different histories, economies, and cultures involved. What works in a compact European capital may prove wholly impractical in a sprawling megacity of the developing world. What most experts do agree on, however, is that thoughtful, inclusive planning — one that prioritizes the needs of low-income residents alongside those of wealthier ones — is essential if cities are to remain both prosperous and humane.</p>
+    <p class="vi-para">[4] Dù vậy, không có một khuôn mẫu duy nhất nào phù hợp với mọi thành phố, do sự khác biệt rất lớn về lịch sử, kinh tế và văn hóa. Những gì hiệu quả ở một thủ đô châu Âu nhỏ gọn có thể hoàn toàn không khả thi ở một siêu đô thị trải rộng của thế giới đang phát triển. Tuy nhiên, điều mà hầu hết các chuyên gia đồng ý là quy hoạch chu đáo, mang tính bao trùm — ưu tiên nhu cầu của cư dân thu nhập thấp cùng với những người khá giả hơn — là điều thiết yếu để thành phố vừa thịnh vượng vừa nhân văn.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">11 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. the history of ancient cities</li><li>B. the challenges of rapid urbanization and possible solutions</li><li>C. why people prefer rural life</li><li>D. the design of European capitals</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày vấn đề đô thị hóa nhanh và các chiến lược quy hoạch để giải quyết.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">12 · Vocabulary</span> The word <b class="k">"influx"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. a sudden departure</li><li>B. a large inward flow (of people)</li><li>C. a shortage</li><li>D. a small decline</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "this rapid influx" = dòng người đổ vào nhanh chóng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">13 · Detail</span> According to paragraph 2, what problem do wealthier districts face?</div>
+    <ul><li>A. Lack of clean water</li><li>B. Frequent disease outbreaks</li><li>C. Skyrocketing property prices pushing families to the margins</li><li>D. Complete absence of electricity</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 2: "skyrocketing property prices have pushed even middle-class families to the margins of the city".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">14 · Reference</span> In paragraph 3, the word <b class="k">"it"</b> (in "reduces reliance on cars") most likely refers to:</div>
+    <ul><li>A. public transportation</li><li>B. traffic congestion</li><li>C. mixed-use zoning</li><li>D. air pollution</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu gốc: "mixed-use zoning ... encourages walkability and reduces reliance on cars" → "it" = mixed-use zoning.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">15 · Inference</span> It can be inferred from paragraph 3 that green spaces are:</div>
+    <ul><li>A. only decorative and offer no practical benefit</li><li>B. functionally important for health and climate, not just appearance</li><li>C. too expensive for any city to build</li><li>D. only useful in rural areas</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "far from being a mere aesthetic luxury, have been shown to improve mental health and even lower urban temperatures" → không chỉ để đẹp mà còn có lợi ích thiết thực.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">16 · Vocabulary</span><span class="c1tag">C1</span> The phrase <b class="k">"heat island" effect</b> (paragraph 3) most likely refers to:</div>
+    <ul><li>A. a tropical island resort</li><li>B. urban areas being significantly warmer than surrounding regions</li><li>C. a type of renewable energy plant</li><li>D. a natural disaster caused by flooding</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Ngữ cảnh: green spaces "lower urban temperatures, mitigating the 'heat island' effect ... in densely built environments" → hiệu ứng đảo nhiệt đô thị.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">17 · Purpose</span> Why does the author contrast a "compact European capital" with a "sprawling megacity" in paragraph 4?</div>
+    <ul><li>A. To argue that European cities are always better planned</li><li>B. To illustrate that no single urban planning solution fits every city</li><li>C. To criticize developing countries</li><li>D. To recommend banning car use everywhere</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu ngay trước: "no single blueprint suits every city" → ví dụ minh họa cho luận điểm này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">18 · NOT / EXCEPT</span> All of the following are mentioned as urban planning strategies EXCEPT:</div>
+    <ul><li>A. investment in public transportation</li><li>B. mixed-use zoning</li><li>C. creating more green spaces</li><li>D. banning all private car ownership</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 3 chỉ nhắc 3 chiến lược đầu; "banning all private car ownership" không được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">19 · Tone / Attitude</span> The author's tone toward the problem of urbanization is:</div>
+    <ul><li>A. dismissive, treating it as unimportant</li><li>B. concerned but constructive, offering realistic solutions</li><li>C. purely celebratory of city growth</li><li>D. resigned, believing nothing can be done</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả nêu rõ vấn đề (slums, giá nhà) nhưng cũng đưa ra hướng giải quyết cụ thể, thiết thực.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">20 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"both prosperous and humane"</b> at the end of paragraph 4 suggests that ideal cities should:</div>
+    <ul><li>A. focus solely on economic growth</li><li>B. balance economic success with fairness for all residents</li><li>C. avoid all industrial development</li><li>D. eliminate low-income neighborhoods entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "prioritizes the needs of low-income residents alongside those of wealthier ones" → cân bằng giữa phát triển và công bằng xã hội.</p></details>
+  </div>
+
+  <h2>Từ vựng — Urbanization &amp; City Life</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>influx</td><td>(n)</td><td>dòng người/vật đổ vào</td></tr>
+    <tr><td>informal settlement</td><td>(phr)</td><td>khu định cư tự phát (slum)</td></tr>
+    <tr><td>skyrocketing</td><td>(adj)</td><td>tăng vọt</td></tr>
+    <tr><td>mixed-use zoning <span class="c1tag">C1</span></td><td>(n phr)</td><td>quy hoạch đa chức năng</td></tr>
+    <tr><td>walkability</td><td>(n)</td><td>khả năng đi bộ thuận tiện</td></tr>
+    <tr><td>mitigate <span class="c1tag">C1</span></td><td>(v)</td><td>giảm nhẹ, làm dịu</td></tr>
+    <tr><td>blueprint</td><td>(n)</td><td>bản kế hoạch, khuôn mẫu</td></tr>
+    <tr><td>sprawling</td><td>(adj)</td><td>lan rộng, trải dài (thiếu quy hoạch)</td></tr>
+  </table>
+
+  <!-- ============ BÀI 3: WORK & CAREER ============ -->
+  <h2>Bài đọc 3 <span class="lvl">Work &amp; Career</span></h2>
+
+  <div class="passage">
+    <h3>Rethinking the Modern Workplace</h3>
+    <p><span class="pn">[1]</span> The traditional nine-to-five office job, once regarded as the bedrock of a stable career, has come under increasing scrutiny in recent years. The COVID-19 pandemic forced millions of employees to work remotely almost overnight, and many discovered, somewhat to their surprise, that productivity did not necessarily suffer outside the confines of a conventional office. This unplanned experiment has since prompted a broader reassessment of where, when, and how work ought to be performed.</p>
+    <p class="vi-para">[1] Công việc văn phòng truyền thống theo giờ hành chính, vốn từng được xem là nền tảng vững chắc của một sự nghiệp ổn định, đã bị xem xét ngày càng kỹ lưỡng trong những năm gần đây. Đại dịch COVID-19 đã buộc hàng triệu nhân viên phải làm việc từ xa gần như chỉ sau một đêm, và nhiều người phát hiện ra, có phần bất ngờ, rằng năng suất không nhất thiết sụt giảm khi ra khỏi khuôn khổ văn phòng truyền thống. Thí nghiệm ngoài kế hoạch này kể từ đó đã thúc đẩy một sự nhìn nhận lại rộng hơn về việc công việc nên được thực hiện ở đâu, khi nào và như thế nào.</p>
+
+    <p><span class="pn">[2]</span> Proponents of remote and hybrid arrangements point to numerous benefits: employees save time and money otherwise spent commuting, companies can recruit talent from a far wider geographic pool, and workers often report greater satisfaction when granted more autonomy over their schedules. Critics, however, caution that remote work can erode the sense of camaraderie that develops naturally among colleagues sharing a physical space, and that spontaneous collaboration — the kind of chance encounter that sparks a new idea — is far harder to replicate over a video call.</p>
+    <p class="vi-para">[2] Những người ủng hộ hình thức làm việc từ xa và kết hợp chỉ ra nhiều lợi ích: nhân viên tiết kiệm được thời gian và tiền bạc lẽ ra phải dùng để di chuyển, công ty có thể tuyển dụng nhân tài từ một phạm vi địa lý rộng hơn nhiều, và người lao động thường cho biết họ hài lòng hơn khi được trao quyền tự chủ nhiều hơn về lịch làm việc. Tuy nhiên, những người chỉ trích cảnh báo rằng làm việc từ xa có thể làm xói mòn tình đồng nghiệp vốn hình thành tự nhiên giữa những người cùng chia sẻ không gian vật lý, và rằng sự hợp tác tự phát — kiểu gặp gỡ tình cờ làm nảy sinh ý tưởng mới — khó có thể tái hiện qua một cuộc gọi video.</p>
+
+    <p><span class="pn">[3]</span> Beyond the question of location, the very nature of careers is shifting. Whereas earlier generations often spent decades with a single employer, climbing a predictable ladder toward retirement, today's workers are far more likely to change jobs, industries, or even entire career paths multiple times. This fluidity is partly driven by economic necessity, as automation and globalization render certain occupations redundant, but it also reflects a cultural shift: many younger employees now prioritize meaningful work and personal fulfilment over the job security once considered paramount.</p>
+    <p class="vi-para">[3] Vượt ra ngoài câu hỏi về địa điểm làm việc, chính bản chất của sự nghiệp cũng đang thay đổi. Trong khi các thế hệ trước đây thường gắn bó hàng thập kỷ với một nhà tuyển dụng duy nhất, leo lên từng nấc thang có thể đoán trước cho đến khi nghỉ hưu, người lao động ngày nay có nhiều khả năng thay đổi công việc, ngành nghề, thậm chí toàn bộ con đường sự nghiệp nhiều lần. Tính linh hoạt này một phần bị thúc đẩy bởi nhu cầu kinh tế, khi tự động hóa và toàn cầu hóa khiến một số nghề nghiệp trở nên dư thừa, nhưng nó cũng phản ánh một sự chuyển dịch văn hóa: nhiều nhân viên trẻ hiện nay ưu tiên công việc có ý nghĩa và sự thỏa mãn cá nhân hơn là sự ổn định công việc từng được xem là tối quan trọng.</p>
+
+    <p><span class="pn">[4]</span> Employers, for their part, are being compelled to adapt. Rigid hierarchies are gradually giving way to flatter organizational structures that emphasize collaboration and rapid decision-making. Meanwhile, continuous learning has become indispensable, since skills that were valuable a decade ago may already be obsolete. Whatever shape the future workplace ultimately takes, one truth seems unavoidable: the era of a single, unchanging career path is drawing to a close.</p>
+    <p class="vi-para">[4] Về phía mình, các nhà tuyển dụng cũng đang bị buộc phải thích nghi. Các hệ thống phân cấp cứng nhắc đang dần nhường chỗ cho cơ cấu tổ chức phẳng hơn, chú trọng sự hợp tác và ra quyết định nhanh chóng. Trong khi đó, việc học tập liên tục đã trở nên không thể thiếu, vì những kỹ năng có giá trị cách đây một thập kỷ có thể đã trở nên lỗi thời. Dù nơi làm việc tương lai cuối cùng sẽ có hình dạng ra sao, một sự thật dường như không thể tránh khỏi: kỷ nguyên của một con đường sự nghiệp duy nhất, không thay đổi đang dần khép lại.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">21 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. why office buildings should be demolished</li><li>B. how work arrangements and careers are changing</li><li>C. the history of the nine-to-five schedule</li><li>D. a comparison of video-calling software</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài bàn về sự thay đổi trong cách làm việc (remote/hybrid) và bản chất sự nghiệp hiện đại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">22 · Vocabulary</span> The word <b class="k">"scrutiny"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. praise</li><li>B. careful examination</li><li>C. total neglect</li><li>D. financial support</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "come under increasing scrutiny" = bị xem xét/soi xét kỹ lưỡng hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">23 · Detail</span> According to paragraph 2, what is one benefit of remote work mentioned?</div>
+    <ul><li>A. Employees save time and money from not commuting</li><li>B. Companies pay lower taxes</li><li>C. Collaboration always improves</li><li>D. Office rent disappears completely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Đoạn 2: "employees save time and money otherwise spent commuting".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">24 · Reference</span> In paragraph 2, the word <b class="k">"that"</b> (in "the kind of chance encounter that sparks a new idea") refers to:</div>
+    <ul><li>A. a video call</li><li>B. a chance encounter</li><li>C. remote work</li><li>D. camaraderie</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "that" là mệnh đề quan hệ bổ nghĩa trực tiếp cho "chance encounter".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">25 · Inference</span> It can be inferred from paragraph 3 that younger workers today:</div>
+    <ul><li>A. value job security above all else</li><li>B. never change careers</li><li>C. often value meaningful work over long-term job security</li><li>D. prefer to work for a single company forever</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "many younger employees now prioritize meaningful work and personal fulfilment over the job security once considered paramount."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">26 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"fluidity"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. rigidity and permanence</li><li>B. tendency to change and adapt easily</li><li>C. financial difficulty</li><li>D. lack of ambition</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "This fluidity" ám chỉ việc người lao động dễ dàng thay đổi công việc/ngành nghề — tính linh hoạt, dễ biến đổi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">27 · Purpose</span> Why does the author mention "flatter organizational structures" in paragraph 4?</div>
+    <ul><li>A. To show how employers are adapting to workplace changes</li><li>B. To criticize modern management styles</li><li>C. To describe how salaries are calculated</li><li>D. To explain the history of hierarchies</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Đoạn 4 mở đầu: "Employers ... are being compelled to adapt" — flatter structures là một ví dụ về sự thích ứng đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">28 · NOT / EXCEPT</span> All of the following are mentioned as benefits of remote/hybrid work EXCEPT:</div>
+    <ul><li>A. saving commuting time and money</li><li>B. access to a wider talent pool</li><li>C. greater employee autonomy</li><li>D. guaranteed higher salaries</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều có trong đoạn 2; "guaranteed higher salaries" không được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">29 · Tone / Attitude</span> The author's attitude toward the changes in the modern workplace is best described as:</div>
+    <ul><li>A. nostalgic for the old office model with no acknowledgment of change</li><li>B. balanced, acknowledging both benefits and drawbacks</li><li>C. entirely negative and pessimistic</li><li>D. indifferent and uninterested</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày cả lợi ích (đoạn 2) lẫn hạn chế (mất camaraderie), và mô tả xu hướng một cách khách quan.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">30 · Inference</span><span class="c1tag">C1</span> The final sentence of the passage implies that:</div>
+    <ul><li>A. workers will keep the same job for life in the future</li><li>B. the concept of one fixed, lifelong career is fading away</li><li>C. companies will stop hiring new employees</li><li>D. continuous learning is no longer necessary</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the era of a single, unchanging career path is drawing to a close" → mô hình sự nghiệp cố định trọn đời đang dần biến mất.</p></details>
+  </div>
+
+  <h2>Từ vựng — Work &amp; Career</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>scrutiny</td><td>(n)</td><td>sự xem xét kỹ lưỡng</td></tr>
+    <tr><td>bedrock</td><td>(n)</td><td>nền tảng vững chắc</td></tr>
+    <tr><td>camaraderie <span class="c1tag">C1</span></td><td>(n)</td><td>tình đồng nghiệp, sự thân thiết</td></tr>
+    <tr><td>autonomy</td><td>(n)</td><td>quyền tự chủ</td></tr>
+    <tr><td>fluidity <span class="c1tag">C1</span></td><td>(n)</td><td>tính linh hoạt, dễ biến đổi</td></tr>
+    <tr><td>redundant</td><td>(adj)</td><td>dư thừa, không còn cần thiết (mất việc)</td></tr>
+    <tr><td>paramount</td><td>(adj)</td><td>tối quan trọng</td></tr>
+    <tr><td>compelled</td><td>(adj)</td><td>bị buộc phải (làm gì)</td></tr>
+  </table>
+
+  <!-- ============ BÀI 4: NATURE & WILDLIFE ============ -->
+  <h2>Bài đọc 4 <span class="lvl">Nature &amp; Wildlife</span></h2>
+
+  <div class="passage">
+    <h3>Guardians of a Fragile Balance</h3>
+    <p><span class="pn">[1]</span> Wildlife across the globe faces an unprecedented combination of threats, from habitat destruction and poaching to the more insidious effects of climate change. Scientists estimate that species are currently vanishing at a rate far exceeding the natural background rate of extinction, a phenomenon some have controversially dubbed the "sixth mass extinction." Unlike previous extinction events caused by asteroids or volcanic eruptions, this one is driven almost entirely by human activity.</p>
+    <p class="vi-para">[1] Động vật hoang dã trên toàn cầu đang đối mặt với một tổ hợp các mối đe dọa chưa từng có, từ việc phá hủy môi trường sống và săn bắt trộm cho đến những tác động âm thầm hơn của biến đổi khí hậu. Các nhà khoa học ước tính rằng các loài hiện đang biến mất với tốc độ vượt xa tốc độ tuyệt chủng tự nhiên vốn có, một hiện tượng mà một số người gây tranh cãi khi gọi là "cuộc đại tuyệt chủng thứ sáu." Không giống như các sự kiện tuyệt chủng trước đây do thiên thạch hay núi lửa phun trào gây ra, sự kiện lần này gần như hoàn toàn do hoạt động của con người.</p>
+
+    <p><span class="pn">[2]</span> Habitat loss remains the single greatest threat to biodiversity. As forests are cleared for agriculture, logging, or urban expansion, countless species lose not only their homes but also the intricate web of relationships — with prey, predators, and plants — upon which their survival depends. Fragmentation compounds the problem: even when patches of habitat remain, they are often too small and isolated to sustain viable populations, leaving animals vulnerable to inbreeding and local extinction.</p>
+    <p class="vi-para">[2] Mất môi trường sống vẫn là mối đe dọa lớn nhất đối với đa dạng sinh học. Khi rừng bị chặt phá để làm nông nghiệp, khai thác gỗ hoặc mở rộng đô thị, vô số loài không chỉ mất nơi cư trú mà còn mất đi mạng lưới quan hệ phức tạp — với con mồi, kẻ săn mồi và thực vật — mà sự sống còn của chúng phụ thuộc vào. Sự chia cắt môi trường sống càng làm trầm trọng thêm vấn đề: ngay cả khi vẫn còn những mảng môi trường sống sót lại, chúng thường quá nhỏ và cô lập để duy trì quần thể khả thi, khiến động vật dễ bị giao phối cận huyết và tuyệt chủng cục bộ.</p>
+
+    <p><span class="pn">[3]</span> Conservationists have developed a variety of strategies to counter these trends. Protected areas, such as national parks and marine reserves, aim to shield critical habitats from destructive human activity. Corridors linking fragmented habitats allow animals to migrate and interbreed, thereby maintaining genetic diversity. Meanwhile, captive breeding programs have occasionally succeeded in rescuing species from the very brink of extinction, as demonstrated by the recovery of the California condor, whose population had dwindled to a mere handful of individuals before intensive intervention.</p>
+    <p class="vi-para">[3] Các nhà bảo tồn đã phát triển nhiều chiến lược khác nhau để đối phó với những xu hướng này. Các khu bảo tồn, như vườn quốc gia và khu bảo tồn biển, nhằm che chở các môi trường sống quan trọng khỏi hoạt động phá hoại của con người. Các hành lang sinh thái nối các môi trường sống bị chia cắt cho phép động vật di cư và giao phối, qua đó duy trì sự đa dạng di truyền. Trong khi đó, các chương trình nhân giống nuôi nhốt đôi khi đã thành công trong việc cứu các loài khỏi bờ vực tuyệt chủng, như minh chứng qua sự hồi phục của loài kền kền California, vốn có quần thể từng giảm chỉ còn một số ít cá thể trước khi có sự can thiệp mạnh mẽ.</p>
+
+    <p><span class="pn">[4]</span> Yet conservation efforts alone cannot reverse the crisis without addressing its underlying causes. Curbing deforestation, reducing carbon emissions, and combating the illegal wildlife trade are all essential complements to on-the-ground protection work. Ultimately, safeguarding biodiversity is not merely an act of altruism toward other species; it is also a matter of self-interest, since human societies depend, often invisibly, on the ecosystem services — from pollination to water purification — that a healthy natural world provides.</p>
+    <p class="vi-para">[4] Tuy nhiên, chỉ riêng nỗ lực bảo tồn không thể đảo ngược cuộc khủng hoảng này nếu không giải quyết các nguyên nhân sâu xa. Hạn chế phá rừng, giảm phát thải carbon và chống lại nạn buôn bán động vật hoang dã trái phép đều là những biện pháp bổ trợ thiết yếu cho công tác bảo vệ thực địa. Cuối cùng, bảo vệ đa dạng sinh học không đơn thuần là hành động vị tha đối với các loài khác; đó còn là vấn đề của chính lợi ích con người, vì xã hội loài người phụ thuộc, thường một cách vô hình, vào các dịch vụ hệ sinh thái — từ thụ phấn đến lọc nước — mà một thế giới tự nhiên khỏe mạnh mang lại.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">31 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the causes of wildlife decline and efforts to protect biodiversity</li><li>B. the extinction of dinosaurs</li><li>C. how national parks earn money from tourism</li><li>D. the diet of the California condor</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Bài trình bày nguyên nhân suy giảm động vật hoang dã và các nỗ lực bảo tồn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">32 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"insidious"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. obvious and sudden</li><li>B. harmful in a gradual, hard-to-notice way</li><li>C. beneficial and helpful</li><li>D. temporary and minor</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "insidious effects of climate change" = tác động âm thầm, nguy hiểm nhưng khó nhận ra ngay.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">33 · Detail</span> According to paragraph 2, what problem does habitat fragmentation cause?</div>
+    <ul><li>A. It increases the size of animal populations</li><li>B. It leaves populations vulnerable to inbreeding and local extinction</li><li>C. It has no effect on genetic diversity</li><li>D. It helps species migrate more easily</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "leaving animals vulnerable to inbreeding and local extinction."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">34 · Reference</span> In paragraph 3, the word <b class="k">"whose"</b> (in "the California condor, whose population had dwindled") refers to:</div>
+    <ul><li>A. conservationists</li><li>B. protected areas</li><li>C. the California condor</li><li>D. captive breeding programs</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "whose" thay cho tính từ sở hữu của "the California condor" ngay trước đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">35 · Inference</span> It can be inferred from paragraph 3 that captive breeding programs:</div>
+    <ul><li>A. always fail to help endangered species</li><li>B. can sometimes successfully save species near extinction</li><li>C. are illegal in most countries</li><li>D. are more effective than protected areas in every case</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "captive breeding programs have occasionally succeeded in rescuing species from the very brink of extinction" — ví dụ condor California.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">36 · Vocabulary</span> The word <b class="k">"dwindled"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. increased rapidly</li><li>B. decreased gradually</li><li>C. remained stable</li><li>D. disappeared instantly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "population had dwindled to a mere handful" = giảm dần xuống chỉ còn một số ít.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">37 · Purpose</span> Why does the author mention "ecosystem services" in paragraph 4?</div>
+    <ul><li>A. To argue that biodiversity protection benefits humans too, not just animals</li><li>B. To describe how national parks are funded</li><li>C. To criticize captive breeding programs</li><li>D. To explain the history of pollination</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Câu này minh họa cho luận điểm: bảo vệ đa dạng sinh học "is also a matter of self-interest" cho con người.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">38 · NOT / EXCEPT</span> All of the following are mentioned as conservation strategies EXCEPT:</div>
+    <ul><li>A. protected areas / national parks</li><li>B. habitat corridors</li><li>C. captive breeding programs</li><li>D. genetic engineering of new species</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 3 chỉ nhắc protected areas, corridors, và captive breeding — không có "genetic engineering".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">39 · Tone / Attitude</span> The author's overall tone can best be described as:</div>
+    <ul><li>A. indifferent to wildlife loss</li><li>B. concerned but ultimately hopeful about solutions</li><li>C. entirely hopeless about the future</li><li>D. dismissive of conservation efforts</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài nêu rõ khủng hoảng (đoạn 1-2) nhưng cũng trình bày các giải pháp cụ thể và thành công (đoạn 3), kết luận mang tính xây dựng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">40 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"a matter of self-interest"</b> (paragraph 4) implies that protecting biodiversity is:</div>
+    <ul><li>A. only important to conservationists, not ordinary people</li><li>B. beneficial to humans themselves, not only to other species</li><li>C. financially costly with no return</li><li>D. irrelevant to human survival</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "human societies depend ... on the ecosystem services ... that a healthy natural world provides" → bảo vệ thiên nhiên cũng là bảo vệ chính con người.</p></details>
+  </div>
+
+  <h2>Từ vựng — Nature &amp; Wildlife</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>poaching</td><td>(n)</td><td>săn bắt trộm</td></tr>
+    <tr><td>insidious <span class="c1tag">C1</span></td><td>(adj)</td><td>âm thầm nguy hại</td></tr>
+    <tr><td>fragmentation</td><td>(n)</td><td>sự chia cắt (môi trường sống)</td></tr>
+    <tr><td>corridor</td><td>(n)</td><td>hành lang (sinh thái, kết nối môi trường sống)</td></tr>
+    <tr><td>dwindle</td><td>(v)</td><td>giảm dần, teo lại</td></tr>
+    <tr><td>brink of extinction</td><td>(phr)</td><td>bờ vực tuyệt chủng</td></tr>
+    <tr><td>curb</td><td>(v)</td><td>hạn chế, kiềm chế</td></tr>
+    <tr><td>ecosystem services <span class="c1tag">C1</span></td><td>(n phr)</td><td>dịch vụ hệ sinh thái</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM TOÀN ĐỀ ============ -->
+  <h2>Chấm điểm toàn đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh (40 câu):</b>
+    <table>
+      <tr><th>Bài 1 · Energy</th><td>1-B · 2-B · 3-C · 4-B · 5-B · 6-B · 7-A · 8-D · 9-C · 10-B</td></tr>
+      <tr><th>Bài 2 · Urbanization</th><td>11-B · 12-B · 13-C · 14-C · 15-B · 16-B · 17-B · 18-D · 19-B · 20-B</td></tr>
+      <tr><th>Bài 3 · Work &amp; Career</th><td>21-B · 22-B · 23-A · 24-B · 25-C · 26-B · 27-A · 28-D · 29-B · 30-B</td></tr>
+      <tr><th>Bài 4 · Nature &amp; Wildlife</th><td>31-A · 32-B · 33-B · 34-C · 35-B · 36-B · 37-A · 38-D · 39-B · 40-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · bài __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai lặp lại ở nhiều bài → đây chính là điểm yếu cần luyện thêm.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Mốc tự đánh giá /40:</b> 34–40 → nền rất vững, sẵn sàng thi thật · 26–33 → ổn, cần rà soát vài dạng còn yếu · 18–25 → cần ôn lại từ vựng &amp; kỹ năng đọc lướt/đọc quét · ≤17 → nên quay lại các Ngày luyện dạng câu trước khi làm đề full tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Đề full #4?</b> Đối chiếu kỹ từng câu sai bằng các thẻ giải thích ở trên. <b>Ngày 2 (Tuần 7)</b> sẽ là <b>Giải đề #4</b> — phân tích sâu từng câu, đào từ vựng, và tổng kết lỗi sai theo 8 dạng câu hỏi.
+  </div>
+
+</div>
+
+<footer>🗂️ Tuần 7 · Ngày 1 · VSTEP Reading — Đề full #4 · Bấm giờ nghiêm túc hôm nay, để tự tin hơn trong phòng thi thật.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

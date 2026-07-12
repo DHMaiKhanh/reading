@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 1 — Học trọn 8 dạng câu &amp; chiến thuật · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+
+  /* —— phần gộp: dịch song ngữ + từ vựng chi tiết —— */
+  .en-block { background:#0e1830; border:1px solid var(--border); border-left:4px solid var(--primary); border-radius:10px; padding:12px 16px; margin:14px 0 6px; font-style:italic; }
+  .vi-block { background:#15233b; border:1px solid var(--border); border-left:4px solid var(--accent); border-radius:10px; padding:12px 16px; margin:0 0 12px; }
+  .vocab td .w { color: var(--primary); font-weight: 700; }
+  .vocab td:first-child { color: var(--muted); }
+  .ipa { color: var(--muted); font-size: 0.86rem; }
+  .ex { color: #cdd8ea; font-style: italic; }
+  .exvi { color: #ffd9a8; }
+  .spk { cursor: pointer; margin-left: 6px; font-size: 0.92em; opacity: 0.6; user-select: none; transition: opacity .15s, transform .1s; }
+  .spk:hover { opacity: 1; transform: scale(1.18); }
+  .spk:active { transform: scale(0.92); }
+  .spk.lead { margin: 0 7px 0 0; font-size: 1em; }
+  .spk.speaking { opacity: 1; color: var(--green); animation: spkpulse 0.8s ease-in-out infinite; }
+  @keyframes spkpulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.22); } }
+
+  /* dịch câu hỏi & đáp án */
+  .qvi { color: var(--accent); font-style: italic; font-size: 0.9rem; margin: 2px 0 4px; }
+  .q li .ovi { color: var(--muted); font-style: italic; font-size: 0.86rem; }
+
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📘 Ngày 1 — Học trọn 8 dạng câu &amp; chiến thuật</h1>
+  <p>Bài học gộp · VSTEP B2 Reading · mục tiêu: HIỂU ĐÚNG, chưa cần nhanh</p>
+  <div class="meta">
+    <span class="badge">🕐 ~70 phút</span>
+    <span class="badge">🎯 Nắm 8 dạng câu</span>
+    <span class="badge">📖 1 bài đọc thực hành</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ===== PHẦN 1 ===== -->
+  <h2>① Kỹ năng nền — Skimming · Scanning · Đoán từ <span style="color:var(--muted);font-size:0.85rem">(~20')</span></h2>
+
+  <h3>1. Skimming — đọc lướt lấy ý chính</h3>
+  <div class="card">
+    <b>Là gì:</b> đọc <b>nhanh</b> để nắm <b>ý tổng quát</b>, KHÔNG đọc từng từ.<br>
+    <b>Cách làm:</b> đọc <b class="k">câu đầu + câu cuối</b> mỗi đoạn, lướt qua phần giữa; chú ý từ in đậm, tên riêng, con số.<br>
+    <b>Dùng khi:</b> trả lời câu hỏi <b>Main idea / Best title</b>, hoặc đọc 1 lượt đầu để biết bài nói về gì.<br>
+    <b>Tốc độ mục tiêu:</b> ~2 phút/bài cho lượt skim đầu tiên.
+  </div>
+
+  <h3>2. Scanning — quét tìm thông tin cụ thể</h3>
+  <div class="card">
+    <b>Là gì:</b> mắt <b>quét nhanh</b> để tìm <b>1 từ khóa / con số / tên</b> cụ thể, bỏ qua mọi thứ khác.<br>
+    <b>Cách làm:</b> lấy <b class="k">từ khóa trong câu hỏi</b> → quét tìm từ đó (hoặc từ đồng nghĩa) trong bài → đọc kỹ câu chứa nó.<br>
+    <b>Dùng khi:</b> câu hỏi <b>Detail</b> (chi tiết), <b>NOT/EXCEPT</b>, ngày tháng, số liệu.
+  </div>
+
+  <h3>3. Đoán nghĩa từ qua ngữ cảnh</h3>
+  <div class="card tip">
+    Gặp từ lạ <b>đừng hoảng</b>. Đoán nghĩa bằng:<br>
+    • <b>Dấu hiệu xung quanh:</b> ví dụ (such as), định nghĩa (means, is), từ trái nghĩa (but, however).<br>
+    • <b>Sắc thái:</b> câu đang khen hay chê? → từ đó mang nghĩa tích cực hay tiêu cực.<br>
+    • <b>Gốc từ:</b> "un-/dis-" (phủ định), "-less" (không có), "re-" (lại).<br>
+    <b>Mẹo vàng:</b> với câu hỏi Vocabulary — <b class="k">che 4 đáp án lại</b>, tự đoán nghĩa trước, rồi mới mở ra chọn từ gần nhất.
+  </div>
+
+  <!-- ===== PHẦN 2 ===== -->
+  <h2>② 8 dạng câu hỏi &amp; chiến thuật <span style="color:var(--muted);font-size:0.85rem">(~30')</span></h2>
+
+  <h3>🔹 4 dạng cơ bản</h3>
+  <table>
+    <tr><th width="20%">Dạng</th><th width="33%">Dấu hiệu nhận biết</th><th>Chiến thuật xử lý</th></tr>
+    <tr><td>1. Main idea<br>(ý chính)</td><td>"main idea", "best title", "mainly about", "the passage is about"</td><td>Skim câu đầu/cuối mỗi đoạn → chọn đáp án <b>bao trùm CẢ bài</b>. Loại đáp án quá hẹp (chỉ 1 đoạn) hoặc quá rộng (ngoài bài).</td></tr>
+    <tr><td>2. Detail<br>(chi tiết)</td><td>"according to the passage", "the author states", "what / when / where"</td><td>Scan từ khóa trong câu hỏi → đọc kỹ câu chứa nó. Đáp án thường là <b>paraphrase</b> (diễn đạt lại) của câu trong bài.</td></tr>
+    <tr><td>3. Vocabulary<br>(từ vựng)</td><td>"the word X is closest in meaning to"</td><td>Che đáp án → đọc câu chứa từ → đoán nghĩa qua ngữ cảnh → chọn từ gần nhất. Thử thay từng đáp án vào câu đọc lại.</td></tr>
+    <tr><td>4. Reference<br>(đại từ)</td><td>"the word 'it / them / this' refers to"</td><td>Tìm <b>danh từ phù hợp gần nhất phía trước</b> đại từ → thay vào đọc lại xem có hợp nghĩa không.</td></tr>
+  </table>
+
+  <h3>🔸 4 dạng nâng cao</h3>
+  <table>
+    <tr><th width="20%">Dạng</th><th width="33%">Dấu hiệu nhận biết</th><th>Chiến thuật xử lý</th></tr>
+    <tr><td>5. Inference<br>(suy luận)</td><td>"can be inferred", "implies", "suggests", "we can conclude"</td><td>Đáp án KHÔNG có sẵn trong bài mà phải <b>suy ra từ bằng chứng</b>. Tránh đáp án quá tuyệt đối (always, never, only).</td></tr>
+    <tr><td>6. Purpose<br>(mục đích)</td><td>"why does the author mention", "the purpose of paragraph"</td><td>Hỏi <b>"để làm gì?"</b> — tìm vai trò của chi tiết đó: làm ví dụ? chứng minh? so sánh? Nhìn câu TRƯỚC nó.</td></tr>
+    <tr><td>7. NOT / EXCEPT</td><td>"all of the following EXCEPT", "which is NOT mentioned"</td><td>Tìm <b>3 đáp án CÓ</b> trong bài để loại → cái <b>còn lại</b> (không có trong bài) là đáp án đúng.</td></tr>
+    <tr><td>8. Tone / Attitude<br>(thái độ)</td><td>"the author's attitude", "the tone of the passage"</td><td>Để ý <b>từ ngữ cảm xúc</b>: tích cực / tiêu cực / trung lập (khách quan). Bài khoa học thường "neutral / objective".</td></tr>
+  </table>
+
+  <!-- ===== PHẦN 3 ===== -->
+  <h2>③ Bài đọc thực hành — đủ 8 dạng câu <span style="color:var(--muted);font-size:0.85rem">(~20')</span></h2>
+  <div class="card warn">📝 <b>Làm trước, xem đáp án sau.</b> Tự đọc bài, trả lời 8 câu, rồi mới bấm "Xem đáp án &amp; giải thích" ở mỗi câu. Ghi lại câu sai vào <b>"sổ lỗi"</b>.</div>
+
+  <div class="passage">
+    <h3>The Rise of Online Learning</h3>
+    <p><span class="pn">[1]</span> Over the past decade, online learning has transformed the way people acquire knowledge. What was once considered a poor substitute for traditional classrooms is now embraced by millions of students worldwide. Universities, private companies, and independent educators have all rushed to offer courses through digital platforms, making education more accessible than ever before.</p>
+    <p><span class="pn">[2]</span> One of the greatest advantages of online learning is flexibility. Students can study at their own pace, revisiting difficult lessons as often as they need. This is particularly valuable for working adults, who often struggle to attend fixed classes. For them, the ability to learn during evenings or weekends can mean the difference between completing a course and abandoning it altogether.</p>
+    <p><span class="pn">[3]</span> However, online learning is not without its drawbacks. Critics point out that it demands a high degree of self-discipline. Without a teacher physically present, some learners lose motivation and fall behind. Moreover, subjects that require hands-on practice, such as laboratory science or medicine, are difficult to teach effectively through a screen.</p>
+    <p><span class="pn">[4]</span> Despite these challenges, technology continues to narrow the gap. Interactive simulations, live video discussions, and instant feedback tools now allow students to engage with material in ways that were unimaginable a generation ago. Many educators believe that the most effective approach combines the convenience of online study with the personal interaction of the classroom — a model known as "blended learning".</p>
+    <p><span class="pn">[5]</span> As internet access spreads to remote regions, online learning may soon reach communities that have never had a school nearby. For these learners, a laptop and a stable connection could open doors that were previously firmly closed.</p>
+  </div>
+
+  <!-- Q1 -->
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <div class="qvi">Bài đọc này chủ yếu nói về điều gì?</div>
+    <ul>
+      <li>A. The history of universities <span class="ovi">— Lịch sử của các trường đại học</span></li>
+      <li>B. The growth and impact of online learning <span class="ovi">— Sự phát triển và tác động của học trực tuyến</span></li>
+      <li>C. Why traditional classrooms are always better <span class="ovi">— Vì sao lớp học truyền thống luôn tốt hơn</span></li>
+      <li>D. How to set up an internet connection <span class="ovi">— Cách thiết lập kết nối internet</span></li>
+    </ul>
+    <details><summary>Xem đáp án &amp; giải thích</summary>
+      <p><span class="ans">Đáp án: B</span></p>
+      <p>Cả bài nói về sự phát triển, ưu/nhược điểm và tương lai của online learning → B "bao trùm cả bài". A, D chỉ là chi tiết nhỏ; C sai vì bài cân bằng, không khẳng định lớp truyền thống luôn tốt hơn.</p>
+    </details>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Detail</span> According to paragraph 2, why is flexibility valuable for working adults?</div>
+    <div class="qvi">Theo đoạn 2, vì sao tính linh hoạt lại giá trị với người đi làm?</div>
+    <ul>
+      <li>A. They can study during evenings or weekends <span class="ovi">— Họ có thể học vào buổi tối hoặc cuối tuần</span></li>
+      <li>B. They prefer laboratory science <span class="ovi">— Họ thích môn khoa học thí nghiệm hơn</span></li>
+      <li>C. They do not like teachers <span class="ovi">— Họ không thích giáo viên</span></li>
+      <li>D. They always have fast internet <span class="ovi">— Họ luôn có internet tốc độ cao</span></li>
+    </ul>
+    <details><summary>Xem đáp án &amp; giải thích</summary>
+      <p><span class="ans">Đáp án: A</span></p>
+      <p>Scan "working adults" → đoạn 2: "the ability to learn during evenings or weekends...". A là paraphrase trực tiếp. B, C, D không được nhắc đến.</p>
+    </details>
+  </div>
+
+  <!-- Q3 -->
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Vocabulary</span> The word <b class="k">"embraced"</b> (paragraph 1) is closest in meaning to:</div>
+    <div class="qvi">Từ <b>"embraced"</b> (đoạn 1) gần nghĩa nhất với:</div>
+    <ul>
+      <li>A. rejected <span class="ovi">— bị từ chối</span></li>
+      <li>B. accepted <span class="ovi">— được chấp nhận</span></li>
+      <li>C. forgotten <span class="ovi">— bị lãng quên</span></li>
+      <li>D. questioned <span class="ovi">— bị nghi ngờ/chất vấn</span></li>
+    </ul>
+    <details><summary>Xem đáp án &amp; giải thích</summary>
+      <p><span class="ans">Đáp án: B</span></p>
+      <p>Ngữ cảnh: "now embraced by millions of students" — đang nói điều tích cực (được hàng triệu người dùng). "Embrace" = đón nhận nhiệt tình ≈ <b>accepted</b>. A "rejected" trái nghĩa.</p>
+    </details>
+  </div>
+
+  <!-- Q4 -->
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"them"</b> refers to:</div>
+    <div class="qvi">Trong đoạn 2, từ <b>"them"</b> ám chỉ:</div>
+    <ul>
+      <li>A. universities <span class="ovi">— các trường đại học</span></li>
+      <li>B. working adults <span class="ovi">— người đi làm</span></li>
+      <li>C. teachers <span class="ovi">— giáo viên</span></li>
+      <li>D. difficult lessons <span class="ovi">— những bài học khó</span></li>
+    </ul>
+    <details><summary>Xem đáp án &amp; giải thích</summary>
+      <p><span class="ans">Đáp án: B</span></p>
+      <p>Câu trước "them" nói về <b>working adults</b> ("...valuable for working adults, who... For <u>them</u>..."). Thay "working adults" vào đọc lại → hợp nghĩa.</p>
+    </details>
+  </div>
+
+  <!-- Q5 -->
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from the passage that online learning:</div>
+    <div class="qvi">Có thể suy ra từ bài đọc rằng học trực tuyến:</div>
+    <ul>
+      <li>A. will completely replace classrooms <span class="ovi">— sẽ thay thế hoàn toàn lớp học</span></li>
+      <li>B. is useless for every science subject <span class="ovi">— vô dụng với mọi môn khoa học</span></li>
+      <li>C. works best when combined with classroom interaction <span class="ovi">— hiệu quả nhất khi kết hợp với tương tác lớp học</span></li>
+      <li>D. is suitable only for young students <span class="ovi">— chỉ phù hợp với học sinh trẻ tuổi</span></li>
+    </ul>
+    <details><summary>Xem đáp án &amp; giải thích</summary>
+      <p><span class="ans">Đáp án: C</span></p>
+      <p>Đoạn 4: "the most effective approach combines... online study with the personal interaction of the classroom" → suy ra C. A, B, D quá tuyệt đối (completely / every / only) — dấu hiệu của bẫy Inference.</p>
+    </details>
+  </div>
+
+  <!-- Q6 -->
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Purpose</span> Why does the author mention <b class="k">"laboratory science or medicine"</b> in paragraph 3?</div>
+    <div class="qvi">Vì sao tác giả nhắc đến <b>"khoa học thí nghiệm hay y khoa"</b> ở đoạn 3?</div>
+    <ul>
+      <li>A. To prove online learning is always superior <span class="ovi">— Để chứng minh học online luôn vượt trội</span></li>
+      <li>B. To give examples of subjects that are hard to teach online <span class="ovi">— Để nêu ví dụ các môn khó dạy online</span></li>
+      <li>C. To recommend studying medicine <span class="ovi">— Để khuyên nên học ngành y</span></li>
+      <li>D. To criticize all teachers <span class="ovi">— Để chỉ trích tất cả giáo viên</span></li>
+    </ul>
+    <details><summary>Xem đáp án &amp; giải thích</summary>
+      <p><span class="ans">Đáp án: B</span></p>
+      <p>Câu trước nói "subjects that require hands-on practice... are difficult to teach through a screen" → hai môn này là <b>ví dụ minh họa</b> cho nhược điểm đó. Vai trò = đưa ví dụ → B.</p>
+    </details>
+  </div>
+
+  <!-- Q7 -->
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · NOT / EXCEPT</span> All of the following are mentioned as technology tools EXCEPT:</div>
+    <div class="qvi">Tất cả những thứ sau đều được nhắc đến như công cụ công nghệ, NGOẠI TRỪ:</div>
+    <ul>
+      <li>A. interactive simulations <span class="ovi">— mô phỏng tương tác</span></li>
+      <li>B. live video discussions <span class="ovi">— thảo luận video trực tiếp</span></li>
+      <li>C. instant feedback tools <span class="ovi">— công cụ phản hồi tức thì</span></li>
+      <li>D. printed textbooks <span class="ovi">— sách giáo khoa in giấy</span></li>
+    </ul>
+    <details><summary>Xem đáp án &amp; giải thích</summary>
+      <p><span class="ans">Đáp án: D</span></p>
+      <p>Đoạn 4 liệt kê A, B, C → loại 3 cái này. "Printed textbooks" KHÔNG xuất hiện → D là đáp án (cái không được nhắc đến).</p>
+    </details>
+  </div>
+
+  <!-- Q8 -->
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · Tone / Attitude</span> The author's attitude toward online learning is best described as:</div>
+    <div class="qvi">Thái độ của tác giả với học trực tuyến được mô tả đúng nhất là:</div>
+    <ul>
+      <li>A. completely negative <span class="ovi">— hoàn toàn tiêu cực</span></li>
+      <li>B. balanced but ultimately optimistic <span class="ovi">— cân bằng nhưng rốt cuộc vẫn lạc quan</span></li>
+      <li>C. bored and uninterested <span class="ovi">— chán nản và thờ ơ</span></li>
+      <li>D. angry and critical <span class="ovi">— giận dữ và chỉ trích</span></li>
+    </ul>
+    <details><summary>Xem đáp án &amp; giải thích</summary>
+      <p><span class="ans">Đáp án: B</span></p>
+      <p>Tác giả nêu cả ưu điểm (đoạn 2, 4) lẫn nhược điểm (đoạn 3) → cân bằng; nhưng đoạn 4–5 hướng tích cực ("narrow the gap", "open doors") → <b>balanced but optimistic</b>.</p>
+    </details>
+  </div>
+
+  <!-- ===== PHẦN 4 ===== -->
+  <h2>④ Từ vựng cần nhớ — 15 từ trọng tâm <span style="color:var(--muted);font-size:0.85rem">(ghi vào sổ + Anki · bấm 🔊 để nghe)</span></h2>
+  <table class="vocab">
+    <tr><th width="4%">#</th><th width="17%">Từ / Cụm</th><th width="15%">Phiên âm</th><th width="7%">Loại</th><th width="22%">Nghĩa</th><th>Ví dụ (Anh – Việt)</th></tr>
+    <tr><td>1</td><td><span class="w">acquire</span></td><td>(ờ khoái ơ)<br /><span class="ipa">/əˈkwaɪər/</span></td><td>v</td><td>thu nạp, có được (kiến thức)</td><td><span class="ex">the way people <b>acquire</b> knowledge.</span><br /><span class="exvi">cách con người tiếp thu kiến thức.</span></td></tr>
+    <tr><td>2</td><td><span class="w">substitute</span></td><td>(sấp tơ tiu)<br /><span class="ipa">/ˈsʌbstɪtuːt/</span></td><td>n</td><td>vật/cách thay thế</td><td><span class="ex">a poor <b>substitute</b> for traditional classrooms...</span><br /><span class="exvi">một sự thay thế kém cỏi cho lớp học truyền thống...</span></td></tr>
+    <tr><td>3</td><td><span class="w">embrace</span></td><td>(ìm rây sờ)<br /><span class="ipa">/ɪmˈbreɪs/</span></td><td>v</td><td>đón nhận, chấp nhận nhiệt tình</td><td><span class="ex">...is now <b>embraced</b> by millions of students worldwide.</span><br /><span class="exvi">...nay được hàng triệu học viên trên thế giới đón nhận.</span></td></tr>
+    <tr><td>4</td><td><span class="w">accessible</span></td><td>(ạt xét sơ bồ)<br /><span class="ipa">/əkˈsesəbl/</span></td><td>adj</td><td>dễ tiếp cận, dễ tới được</td><td><span class="ex">making education more <b>accessible</b> than ever before.</span><br /><span class="exvi">khiến giáo dục trở nên dễ tiếp cận hơn bao giờ hết.</span></td></tr>
+    <tr><td>5</td><td><span class="w">flexibility</span></td><td>(phléc xơ bí lơ ty)<br /><span class="ipa">/ˌfleksəˈbɪləti/</span></td><td>n</td><td>tính linh hoạt</td><td><span class="ex">...the greatest advantages of online learning is <b>flexibility</b>.</span><br /><span class="exvi">...lợi thế lớn nhất của học trực tuyến là tính linh hoạt.</span></td></tr>
+    <tr><td>6</td><td><span class="w">at one's own pace</span></td><td>—</td><td>cụm</td><td>theo tốc độ riêng của mình</td><td><span class="ex">Students can study <b>at their own pace</b>...</span><br /><span class="exvi">Học viên có thể học theo tốc độ riêng...</span></td></tr>
+    <tr><td>7</td><td><span class="w">revisit</span></td><td>(ri ví zịt)<br /><span class="ipa">/ˌriːˈvɪzɪt/</span></td><td>v</td><td>xem/học lại</td><td><span class="ex"><b>revisiting</b> difficult lessons as often as they need.</span><br /><span class="exvi">xem lại những bài khó bao nhiêu lần tùy ý.</span></td></tr>
+    <tr><td>8</td><td><span class="w">drawback</span></td><td>(đro bách)<br /><span class="ipa">/ˈdrɔːbæk/</span></td><td>n</td><td>nhược điểm, mặt hạn chế</td><td><span class="ex">online learning is not without its <b>drawbacks</b>.</span><br /><span class="exvi">học trực tuyến không phải không có nhược điểm.</span></td></tr>
+    <tr><td>9</td><td><span class="w">self-discipline</span></td><td>(seo đí xơ plịn)<br /><span class="ipa">/ˌselfˈdɪsəplɪn/</span></td><td>n</td><td>tính kỷ luật tự giác</td><td><span class="ex">it demands a high degree of <b>self-discipline</b>.</span><br /><span class="exvi">nó đòi hỏi tính kỷ luật tự giác cao.</span></td></tr>
+    <tr><td>10</td><td><span class="w">motivation</span></td><td>(mâu ti vấy sần)<br /><span class="ipa">/ˌmoʊtɪˈveɪʃn/</span></td><td>n</td><td>động lực</td><td><span class="ex">some learners lose <b>motivation</b> and fall behind.</span><br /><span class="exvi">một số người học mất động lực và tụt lại phía sau.</span></td></tr>
+    <tr><td>11</td><td><span class="w">fall behind</span></td><td>(phôl bi hai nờ)<br /><span class="ipa">/ˌfɔːl bɪˈhaɪnd/</span></td><td>phr v</td><td>tụt lại phía sau</td><td><span class="ex">some learners lose motivation and <b>fall behind</b>.</span><br /><span class="exvi">một số người học mất động lực và tụt lại phía sau.</span></td></tr>
+    <tr><td>12</td><td><span class="w">hands-on</span></td><td>(hen zon)<br /><span class="ipa">/ˌhændzˈɒn/</span></td><td>adj</td><td>thực hành trực tiếp (động tay vào)</td><td><span class="ex">subjects that require <b>hands-on</b> practice...</span><br /><span class="exvi">những môn cần thực hành trực tiếp...</span></td></tr>
+    <tr><td>13</td><td><span class="w">narrow the gap</span></td><td>(na râu đờ gáp)<br /><span class="ipa">/ˈnæroʊ ðə ɡæp/</span></td><td>cụm</td><td>thu hẹp khoảng cách</td><td><span class="ex">technology continues to <b>narrow the gap</b>.</span><br /><span class="exvi">công nghệ vẫn không ngừng thu hẹp khoảng cách.</span></td></tr>
+    <tr><td>14</td><td><span class="w">blended learning</span></td><td>(blen địt lơ ning)<br /><span class="ipa">/ˌblendɪd ˈlɜːrnɪŋ/</span></td><td>n (cụm)</td><td>học kết hợp (online + lớp học)</td><td><span class="ex">a model known as "<b>blended learning</b>".</span><br /><span class="exvi">một mô hình gọi là "học kết hợp".</span></td></tr>
+    <tr><td>15</td><td><span class="w">remote</span></td><td>(ri mâu tờ)<br /><span class="ipa">/rɪˈmoʊt/</span></td><td>adj</td><td>xa xôi, hẻo lánh</td><td><span class="ex">...internet access spreads to <b>remote</b> regions.</span><br /><span class="exvi">...truy cập internet lan tới các vùng xa xôi.</span></td></tr>
+  </table>
+
+  <!-- ===== PHẦN 5: DỊCH SONG NGỮ + TỪ VỰNG CHI TIẾT ===== -->
+  <h2>⑤ Dịch song ngữ &amp; phân tích từ vựng chi tiết <span style="color:var(--muted);font-size:0.85rem">(tham khảo sâu)</span></h2>
+  <div class="card warn">
+    Bài đọc ở Phần ③ được dịch lại theo <b>từng đoạn</b> (Anh → Việt thu gọn) kèm
+    <b>bảng từ vựng chi tiết</b>: STT · Từ/Cụm · Phiên âm (kiểu Việt + IPA) · Loại ·
+    Nghĩa · Ví dụ Anh–Việt. Học theo thứ tự: đọc đoạn → soi nghĩa → tra bảng.
+  </div>
+
+  <!-- Đoạn 1 -->
+  <h3>Đoạn 1 — Online learning đã thay đổi cách học</h3>
+  <div class="en-block">
+    Over the past decade, online learning has transformed the way people acquire
+    knowledge. What was once considered a poor substitute for traditional
+    classrooms is now embraced by millions of students worldwide. Universities,
+    private companies, and independent educators have all rushed to offer courses
+    through digital platforms, making education more accessible than ever before.
+  </div>
+  <div class="vi-block">
+    Trong thập kỷ qua, học trực tuyến đã thay đổi cách con người tiếp thu kiến
+    thức. Thứ từng bị coi là một sự thay thế kém cỏi cho lớp học truyền thống nay
+    được hàng triệu học viên trên thế giới đón nhận. Các trường đại học, công ty tư
+    nhân và những nhà giáo dục độc lập đều đổ xô mở khóa học qua nền tảng số, khiến
+    giáo dục trở nên dễ tiếp cận hơn bao giờ hết.
+  </div>
+  <table class="vocab">
+    <tr><th width="4%">#</th><th width="17%">Từ / Cụm</th><th width="15%">Phiên âm</th><th width="7%">Loại</th><th width="22%">Nghĩa</th><th>Ví dụ (Anh – Việt)</th></tr>
+    <tr><td>1</td><td><span class="w">decade</span></td><td>(đé khây đờ)<br /><span class="ipa">/ˈdekeɪd/</span></td><td>n</td><td>thập kỷ (10 năm)</td><td><span class="ex">Over the past <b>decade</b>, online learning has transformed...</span><br /><span class="exvi">Trong thập kỷ qua, học trực tuyến đã thay đổi...</span></td></tr>
+    <tr><td>2</td><td><span class="w">transform</span></td><td>(trén phơm)<br /><span class="ipa">/trænsˈfɔːrm/</span></td><td>v</td><td>biến đổi, thay đổi hoàn toàn</td><td><span class="ex">online learning has <b>transformed</b> the way people acquire knowledge.</span><br /><span class="exvi">học trực tuyến đã thay đổi cách con người tiếp thu kiến thức.</span></td></tr>
+    <tr><td>3</td><td><span class="w">acquire</span></td><td>(ờ khoái ơ)<br /><span class="ipa">/əˈkwaɪər/</span></td><td>v</td><td>thu nạp, có được (kiến thức)</td><td><span class="ex">the way people <b>acquire</b> knowledge.</span><br /><span class="exvi">cách con người tiếp thu kiến thức.</span></td></tr>
+    <tr><td>4</td><td><span class="w">substitute</span></td><td>(sấp tơ tiu)<br /><span class="ipa">/ˈsʌbstɪtuːt/</span></td><td>n</td><td>vật/cách thay thế</td><td><span class="ex">a poor <b>substitute</b> for traditional classrooms...</span><br /><span class="exvi">một sự thay thế kém cỏi cho lớp học truyền thống...</span></td></tr>
+    <tr><td>5</td><td><span class="w">embrace</span></td><td>(ìm rây sờ)<br /><span class="ipa">/ɪmˈbreɪs/</span></td><td>v</td><td>đón nhận, chấp nhận nhiệt tình</td><td><span class="ex">...is now <b>embraced</b> by millions of students worldwide.</span><br /><span class="exvi">...nay được hàng triệu học viên trên thế giới đón nhận.</span></td></tr>
+    <tr><td>6</td><td><span class="w">accessible</span></td><td>(ạt xét sơ bồ)<br /><span class="ipa">/əkˈsesəbl/</span></td><td>adj</td><td>dễ tiếp cận, dễ tới được</td><td><span class="ex">making education more <b>accessible</b> than ever before.</span><br /><span class="exvi">khiến giáo dục trở nên dễ tiếp cận hơn bao giờ hết.</span></td></tr>
+    <tr><td>7</td><td><span class="w">be considered (a)...</span></td><td>(khần sí đơ)</td><td>cụm</td><td>bị/được coi là...</td><td><span class="ex">What was once <b>considered a</b> poor substitute...</span><br /><span class="exvi">Thứ từng bị coi là một sự thay thế kém cỏi...</span></td></tr>
+    <tr><td>8</td><td><span class="w">traditional classroom</span></td><td>—</td><td>cụm</td><td>lớp học truyền thống</td><td><span class="ex">a poor substitute for <b>traditional classrooms</b>.</span><br /><span class="exvi">một sự thay thế kém cỏi cho lớp học truyền thống.</span></td></tr>
+    <tr><td>9</td><td><span class="w">rush to + V</span></td><td>(rớt)</td><td>cụm</td><td>đổ xô / vội vã làm gì</td><td><span class="ex">...have all <b>rushed to</b> offer courses through digital platforms.</span><br /><span class="exvi">...đều đổ xô mở khóa học qua nền tảng số.</span></td></tr>
+    <tr><td>10</td><td><span class="w">digital platform</span></td><td>—</td><td>cụm</td><td>nền tảng số (web/app học online)</td><td><span class="ex">offer courses through <b>digital platforms</b>.</span><br /><span class="exvi">mở khóa học qua nền tảng số.</span></td></tr>
+    <tr><td>11</td><td><span class="w">more ... than ever before</span></td><td>—</td><td>cụm</td><td>... hơn bao giờ hết</td><td><span class="ex">making education <b>more</b> accessible <b>than ever before</b>.</span><br /><span class="exvi">khiến giáo dục dễ tiếp cận hơn bao giờ hết.</span></td></tr>
+    <tr><td>12</td><td><span class="w">offer</span></td><td>(ó phơ)<br /><span class="ipa">/ˈɔːfər/</span></td><td>v</td><td>cung cấp, đưa ra, mở (khóa học)</td><td><span class="ex">...have all rushed to <b>offer</b> courses through digital platforms.</span><br /><span class="exvi">...đều đổ xô mở các khóa học qua nền tảng số.</span></td></tr>
+  </table>
+
+  <!-- Đoạn 2 -->
+  <h3>Đoạn 2 — Ưu điểm lớn nhất: tính linh hoạt</h3>
+  <div class="en-block">
+    One of the greatest advantages of online learning is flexibility. Students can
+    study at their own pace, revisiting difficult lessons as often as they need.
+    This is particularly valuable for working adults, who often struggle to attend
+    fixed classes. For them, the ability to learn during evenings or weekends can
+    mean the difference between completing a course and abandoning it altogether.
+  </div>
+  <div class="vi-block">
+    Một trong những lợi thế lớn nhất của học trực tuyến là tính linh hoạt. Học viên
+    có thể học theo tốc độ riêng, xem lại những bài khó bao nhiêu lần tùy ý. Điều
+    này đặc biệt giá trị với người đi làm — những người thường vất vả mới dự được
+    các lớp giờ cố định. Với họ, khả năng học vào buổi tối hay cuối tuần có thể tạo
+    nên khác biệt giữa việc hoàn thành một khóa học và bỏ dở hoàn toàn.
+  </div>
+  <table class="vocab">
+    <tr><th width="4%">#</th><th width="17%">Từ / Cụm</th><th width="15%">Phiên âm</th><th width="7%">Loại</th><th width="22%">Nghĩa</th><th>Ví dụ (Anh – Việt)</th></tr>
+    <tr><td>13</td><td><span class="w">advantage</span></td><td>(ơd van tị giờ)<br /><span class="ipa">/ədˈvæntɪdʒ/</span></td><td>n</td><td>lợi thế, ưu điểm</td><td><span class="ex">One of the greatest <b>advantages</b> of online learning is flexibility.</span><br /><span class="exvi">Một trong những lợi thế lớn nhất của học trực tuyến là tính linh hoạt.</span></td></tr>
+    <tr><td>14</td><td><span class="w">flexibility</span></td><td>(phléc xơ bí lơ ty)<br /><span class="ipa">/ˌfleksəˈbɪləti/</span></td><td>n</td><td>tính linh hoạt</td><td><span class="ex">...the greatest advantages of online learning is <b>flexibility</b>.</span><br /><span class="exvi">...lợi thế lớn nhất của học trực tuyến là tính linh hoạt.</span></td></tr>
+    <tr><td>15</td><td><span class="w">revisit</span></td><td>(ri ví zịt)<br /><span class="ipa">/ˌriːˈvɪzɪt/</span></td><td>v</td><td>xem/học lại</td><td><span class="ex"><b>revisiting</b> difficult lessons as often as they need.</span><br /><span class="exvi">xem lại những bài khó bao nhiêu lần tùy ý.</span></td></tr>
+    <tr><td>16</td><td><span class="w">valuable</span></td><td>(va liu ơ bồ)<br /><span class="ipa">/ˈvæljuəbl/</span></td><td>adj</td><td>quý giá, có giá trị</td><td><span class="ex">This is particularly <b>valuable</b> for working adults.</span><br /><span class="exvi">Điều này đặc biệt giá trị với người đi làm.</span></td></tr>
+    <tr><td>17</td><td><span class="w">struggle</span></td><td>(s-trắc gồ)<br /><span class="ipa">/ˈstrʌɡl/</span></td><td>v</td><td>vật lộn, chật vật</td><td><span class="ex">...who often <b>struggle</b> to attend fixed classes.</span><br /><span class="exvi">...những người thường vất vả mới dự được các lớp giờ cố định.</span></td></tr>
+    <tr><td>18</td><td><span class="w">abandon</span></td><td>(ơ ban đần)<br /><span class="ipa">/əˈbændən/</span></td><td>v</td><td>bỏ dở, từ bỏ</td><td><span class="ex">...completing a course and <b>abandoning</b> it altogether.</span><br /><span class="exvi">...hoàn thành một khóa học và bỏ dở nó hoàn toàn.</span></td></tr>
+    <tr><td>19</td><td><span class="w">altogether</span></td><td>(ôn tu ghe đờ)<br /><span class="ipa">/ˌɔːltəˈɡeðər/</span></td><td>adv</td><td>hoàn toàn, hẳn</td><td><span class="ex">...and abandoning it <b>altogether</b>.</span><br /><span class="exvi">...và bỏ dở nó hoàn toàn.</span></td></tr>
+    <tr><td>20</td><td><span class="w">at one's own pace</span></td><td>—</td><td>cụm</td><td>theo tốc độ riêng của mình</td><td><span class="ex">Students can study <b>at their own pace</b>...</span><br /><span class="exvi">Học viên có thể học theo tốc độ riêng...</span></td></tr>
+    <tr><td>21</td><td><span class="w">as often as they need</span></td><td>—</td><td>cụm</td><td>bao nhiêu lần tùy nhu cầu</td><td><span class="ex">revisiting difficult lessons <b>as often as they need</b>.</span><br /><span class="exvi">xem lại những bài khó bao nhiêu lần tùy ý.</span></td></tr>
+    <tr><td>22</td><td><span class="w">working adults</span></td><td>—</td><td>cụm</td><td>người đi làm</td><td><span class="ex">This is particularly valuable for <b>working adults</b>.</span><br /><span class="exvi">Điều này đặc biệt giá trị với người đi làm.</span></td></tr>
+    <tr><td>23</td><td><span class="w">attend (fixed) classes</span></td><td>—</td><td>cụm</td><td>dự / tham gia các lớp (giờ cố định)</td><td><span class="ex">...struggle to <b>attend fixed classes</b>.</span><br /><span class="exvi">...vất vả mới dự được các lớp giờ cố định.</span></td></tr>
+    <tr><td>24</td><td><span class="w">during evenings or weekends</span></td><td>—</td><td>cụm</td><td>vào buổi tối hoặc cuối tuần</td><td><span class="ex">the ability to learn <b>during evenings or weekends</b>...</span><br /><span class="exvi">khả năng học vào buổi tối hay cuối tuần...</span></td></tr>
+    <tr><td>25</td><td><span class="w">mean the difference between A and B</span></td><td>—</td><td>cụm</td><td>tạo nên khác biệt giữa A và B (quyết định kết quả)</td><td><span class="ex">...can <b>mean the difference between</b> completing a course <b>and</b> abandoning it.</span><br /><span class="exvi">...có thể tạo nên khác biệt giữa việc hoàn thành khóa học và bỏ dở.</span></td></tr>
+  </table>
+
+  <!-- Đoạn 3 -->
+  <h3>Đoạn 3 — Nhược điểm: cần kỷ luật &amp; khó dạy môn thực hành</h3>
+  <div class="en-block">
+    However, online learning is not without its drawbacks. Critics point out that
+    it demands a high degree of self-discipline. Without a teacher physically
+    present, some learners lose motivation and fall behind. Moreover, subjects that
+    require hands-on practice, such as laboratory science or medicine, are
+    difficult to teach effectively through a screen.
+  </div>
+  <div class="vi-block">
+    Tuy nhiên, học trực tuyến không phải không có nhược điểm. Những người phê bình
+    chỉ ra rằng nó đòi hỏi tính kỷ luật tự giác cao. Khi không có giáo viên hiện
+    diện trực tiếp, một số người học mất động lực và tụt lại phía sau. Hơn nữa,
+    những môn cần thực hành trực tiếp — như khoa học thí nghiệm hay y khoa — rất
+    khó dạy hiệu quả qua màn hình.
+  </div>
+  <table class="vocab">
+    <tr><th width="4%">#</th><th width="17%">Từ / Cụm</th><th width="15%">Phiên âm</th><th width="7%">Loại</th><th width="22%">Nghĩa</th><th>Ví dụ (Anh – Việt)</th></tr>
+    <tr><td>26</td><td><span class="w">drawback</span></td><td>(đro bách)<br /><span class="ipa">/ˈdrɔːbæk/</span></td><td>n</td><td>nhược điểm, mặt hạn chế</td><td><span class="ex">online learning is not without its <b>drawbacks</b>.</span><br /><span class="exvi">học trực tuyến không phải không có nhược điểm.</span></td></tr>
+    <tr><td>27</td><td><span class="w">critic</span></td><td>(kri tịc)<br /><span class="ipa">/ˈkrɪtɪk/</span></td><td>n</td><td>người phê bình, người chỉ trích</td><td><span class="ex"><b>Critics</b> point out that it demands a high degree of self-discipline.</span><br /><span class="exvi">Những người phê bình chỉ ra rằng nó đòi hỏi tính kỷ luật cao.</span></td></tr>
+    <tr><td>28</td><td><span class="w">demand</span></td><td>(đi man đờ)<br /><span class="ipa">/dɪˈmænd/</span></td><td>v</td><td>đòi hỏi, yêu cầu</td><td><span class="ex">it <b>demands</b> a high degree of self-discipline.</span><br /><span class="exvi">nó đòi hỏi tính kỷ luật tự giác cao.</span></td></tr>
+    <tr><td>29</td><td><span class="w">self-discipline</span></td><td>(seo đí xơ plịn)<br /><span class="ipa">/ˌselfˈdɪsəplɪn/</span></td><td>n</td><td>tính kỷ luật tự giác</td><td><span class="ex">it demands a high degree of <b>self-discipline</b>.</span><br /><span class="exvi">nó đòi hỏi tính kỷ luật tự giác cao.</span></td></tr>
+    <tr><td>30</td><td><span class="w">motivation</span></td><td>(mâu ti vấy sần)<br /><span class="ipa">/ˌmoʊtɪˈveɪʃn/</span></td><td>n</td><td>động lực</td><td><span class="ex">some learners lose <b>motivation</b> and fall behind.</span><br /><span class="exvi">một số người học mất động lực và tụt lại phía sau.</span></td></tr>
+    <tr><td>31</td><td><span class="w">laboratory</span></td><td>(láp rơ to ri)<br /><span class="ipa">/ˈlæbrətɔːri/</span></td><td>n</td><td>phòng thí nghiệm</td><td><span class="ex">such as <b>laboratory</b> science or medicine...</span><br /><span class="exvi">như khoa học thí nghiệm hay y khoa...</span></td></tr>
+    <tr><td>32</td><td><span class="w">medicine</span></td><td>(mé đơ sần)<br /><span class="ipa">/ˈmedsn/</span></td><td>n</td><td>y học, y khoa</td><td><span class="ex">laboratory science or <b>medicine</b>...</span><br /><span class="exvi">khoa học thí nghiệm hay y khoa...</span></td></tr>
+    <tr><td>33</td><td><span class="w">not without (its) drawbacks</span></td><td>—</td><td>cụm</td><td>không phải không có nhược điểm</td><td><span class="ex">online learning is <b>not without its drawbacks</b>.</span><br /><span class="exvi">học trực tuyến không phải không có nhược điểm.</span></td></tr>
+    <tr><td>34</td><td><span class="w">point out (that)...</span></td><td>—</td><td>phr v</td><td>chỉ ra rằng...</td><td><span class="ex">Critics <b>point out that</b> it demands self-discipline.</span><br /><span class="exvi">Những người phê bình chỉ ra rằng nó đòi hỏi kỷ luật.</span></td></tr>
+    <tr><td>35</td><td><span class="w">a high degree of...</span></td><td>—</td><td>cụm</td><td>mức độ cao của..., rất nhiều...</td><td><span class="ex">it demands <b>a high degree of</b> self-discipline.</span><br /><span class="exvi">nó đòi hỏi tính kỷ luật tự giác cao.</span></td></tr>
+    <tr><td>36</td><td><span class="w">physically present</span></td><td>—</td><td>cụm</td><td>hiện diện trực tiếp (có mặt thân thể)</td><td><span class="ex">Without a teacher <b>physically present</b>...</span><br /><span class="exvi">Khi không có giáo viên hiện diện trực tiếp...</span></td></tr>
+    <tr><td>37</td><td><span class="w">fall behind</span></td><td>—</td><td>phr v</td><td>tụt lại phía sau</td><td><span class="ex">some learners lose motivation and <b>fall behind</b>.</span><br /><span class="exvi">một số người học mất động lực và tụt lại phía sau.</span></td></tr>
+    <tr><td>38</td><td><span class="w">hands-on practice</span></td><td>—</td><td>cụm</td><td>thực hành trực tiếp (động tay vào)</td><td><span class="ex">subjects that require <b>hands-on practice</b>...</span><br /><span class="exvi">những môn cần thực hành trực tiếp...</span></td></tr>
+    <tr><td>39</td><td><span class="w">through a screen</span></td><td>—</td><td>cụm</td><td>qua màn hình</td><td><span class="ex">...difficult to teach effectively <b>through a screen</b>.</span><br /><span class="exvi">...rất khó dạy hiệu quả qua màn hình.</span></td></tr>
+  </table>
+
+  <!-- Đoạn 4 -->
+  <h3>Đoạn 4 — Công nghệ thu hẹp khoảng cách: blended learning</h3>
+  <div class="en-block">
+    Despite these challenges, technology continues to narrow the gap. Interactive
+    simulations, live video discussions, and instant feedback tools now allow
+    students to engage with material in ways that were unimaginable a generation
+    ago. Many educators believe that the most effective approach combines the
+    convenience of online study with the personal interaction of the classroom — a
+    model known as "blended learning".
+  </div>
+  <div class="vi-block">
+    Bất chấp những thách thức này, công nghệ vẫn không ngừng thu hẹp khoảng cách.
+    Các mô phỏng tương tác, thảo luận video trực tiếp và công cụ phản hồi tức thì
+    giờ đây cho phép học viên tiếp xúc với tài liệu theo những cách mà một thế hệ
+    trước không thể tưởng tượng nổi. Nhiều nhà giáo dục tin rằng cách tiếp cận hiệu
+    quả nhất là kết hợp sự tiện lợi của học online với sự tương tác trực tiếp của
+    lớp học — một mô hình gọi là "học kết hợp".
+  </div>
+  <table class="vocab">
+    <tr><th width="4%">#</th><th width="17%">Từ / Cụm</th><th width="15%">Phiên âm</th><th width="7%">Loại</th><th width="22%">Nghĩa</th><th>Ví dụ (Anh – Việt)</th></tr>
+    <tr><td>40</td><td><span class="w">challenge</span></td><td>(cha lần giờ)<br /><span class="ipa">/ˈtʃælɪndʒ/</span></td><td>n</td><td>thách thức, khó khăn</td><td><span class="ex">Despite these <b>challenges</b>, technology continues to narrow the gap.</span><br /><span class="exvi">Bất chấp những thách thức này, công nghệ vẫn không ngừng thu hẹp khoảng cách.</span></td></tr>
+    <tr><td>41</td><td><span class="w">interactive</span></td><td>(in tơ rác tịv)<br /><span class="ipa">/ˌɪntərˈæktɪv/</span></td><td>adj</td><td>mang tính tương tác</td><td><span class="ex"><b>Interactive</b> simulations, live video discussions...</span><br /><span class="exvi">Các mô phỏng tương tác, thảo luận video trực tiếp...</span></td></tr>
+    <tr><td>42</td><td><span class="w">simulation</span></td><td>(si miu lấy sần)<br /><span class="ipa">/ˌsɪmjuˈleɪʃn/</span></td><td>n</td><td>sự mô phỏng</td><td><span class="ex">Interactive <b>simulations</b>... now allow students to engage with material.</span><br /><span class="exvi">Các mô phỏng tương tác... giờ cho phép học viên tiếp xúc với tài liệu.</span></td></tr>
+    <tr><td>43</td><td><span class="w">unimaginable</span></td><td>(ăn i ma gi nơ bồ)<br /><span class="ipa">/ˌʌnɪˈmædʒɪnəbl/</span></td><td>adj</td><td>không thể tưởng tượng nổi</td><td><span class="ex">...in ways that were <b>unimaginable</b> a generation ago.</span><br /><span class="exvi">...theo những cách mà một thế hệ trước không thể tưởng tượng nổi.</span></td></tr>
+    <tr><td>44</td><td><span class="w">educator</span></td><td>(é giu khây tơ)<br /><span class="ipa">/ˈedʒukeɪtər/</span></td><td>n</td><td>nhà giáo dục</td><td><span class="ex">Many <b>educators</b> believe that the most effective approach combines...</span><br /><span class="exvi">Nhiều nhà giáo dục tin rằng cách tiếp cận hiệu quả nhất là kết hợp...</span></td></tr>
+    <tr><td>45</td><td><span class="w">approach</span></td><td>(ơ prâu tjờ)<br /><span class="ipa">/əˈproʊtʃ/</span></td><td>n</td><td>cách tiếp cận, phương pháp</td><td><span class="ex">the most effective <b>approach</b> combines the convenience of online study...</span><br /><span class="exvi">cách tiếp cận hiệu quả nhất là kết hợp sự tiện lợi của học online...</span></td></tr>
+    <tr><td>46</td><td><span class="w">convenience</span></td><td>(khơn vi ni ần sờ)<br /><span class="ipa">/kənˈviːniəns/</span></td><td>n</td><td>sự tiện lợi</td><td><span class="ex">...combines the <b>convenience</b> of online study with the personal interaction of the classroom.</span><br /><span class="exvi">...kết hợp sự tiện lợi của học online với sự tương tác trực tiếp của lớp học.</span></td></tr>
+    <tr><td>47</td><td><span class="w">narrow the gap</span></td><td>—</td><td>cụm</td><td>thu hẹp khoảng cách</td><td><span class="ex">technology continues to <b>narrow the gap</b>.</span><br /><span class="exvi">công nghệ vẫn không ngừng thu hẹp khoảng cách.</span></td></tr>
+    <tr><td>48</td><td><span class="w">instant feedback</span></td><td>—</td><td>cụm</td><td>phản hồi tức thì</td><td><span class="ex">...and <b>instant feedback</b> tools now allow students to engage.</span><br /><span class="exvi">...và công cụ phản hồi tức thì giờ cho phép học viên tiếp xúc.</span></td></tr>
+    <tr><td>49</td><td><span class="w">engage with material</span></td><td>—</td><td>cụm</td><td>tiếp xúc / tương tác với tài liệu học</td><td><span class="ex">allow students to <b>engage with material</b> in new ways.</span><br /><span class="exvi">cho phép học viên tiếp xúc với tài liệu theo những cách mới.</span></td></tr>
+    <tr><td>50</td><td><span class="w">a generation ago</span></td><td>—</td><td>cụm</td><td>một thế hệ trước (~25-30 năm)</td><td><span class="ex">...in ways that were unimaginable <b>a generation ago</b>.</span><br /><span class="exvi">...theo những cách mà một thế hệ trước không thể tưởng tượng nổi.</span></td></tr>
+    <tr><td>51</td><td><span class="w">personal interaction</span></td><td>—</td><td>cụm</td><td>sự tương tác trực tiếp giữa người với người</td><td><span class="ex">...with the <b>personal interaction</b> of the classroom.</span><br /><span class="exvi">...với sự tương tác trực tiếp của lớp học.</span></td></tr>
+    <tr><td>52</td><td><span class="w">blended learning</span></td><td>—</td><td>n (cụm)</td><td>học kết hợp (online + lớp học)</td><td><span class="ex">a model known as "<b>blended learning</b>".</span><br /><span class="exvi">một mô hình gọi là "học kết hợp".</span></td></tr>
+  </table>
+
+  <!-- Đoạn 5 -->
+  <h3>Đoạn 5 — Tương lai: vươn tới vùng xa</h3>
+  <div class="en-block">
+    As internet access spreads to remote regions, online learning may soon reach
+    communities that have never had a school nearby. For these learners, a laptop
+    and a stable connection could open doors that were previously firmly closed.
+  </div>
+  <div class="vi-block">
+    Khi truy cập internet lan tới các vùng xa xôi, học trực tuyến có thể sớm chạm
+    đến những cộng đồng chưa từng có trường học gần kề. Với những người học này, một
+    chiếc laptop và một kết nối ổn định có thể mở ra những cánh cửa trước đây từng
+    đóng chặt.
+  </div>
+  <table class="vocab">
+    <tr><th width="4%">#</th><th width="17%">Từ / Cụm</th><th width="15%">Phiên âm</th><th width="7%">Loại</th><th width="22%">Nghĩa</th><th>Ví dụ (Anh – Việt)</th></tr>
+    <tr><td>53</td><td><span class="w">spread</span></td><td>(s-pré đờ)<br /><span class="ipa">/spred/</span></td><td>v</td><td>lan ra, lan rộng</td><td><span class="ex">As internet access <b>spreads</b> to remote regions...</span><br /><span class="exvi">Khi truy cập internet lan tới các vùng xa xôi...</span></td></tr>
+    <tr><td>54</td><td><span class="w">remote</span></td><td>(ri mâu tờ)<br /><span class="ipa">/rɪˈmoʊt/</span></td><td>adj</td><td>xa xôi, hẻo lánh</td><td><span class="ex">...internet access spreads to <b>remote</b> regions.</span><br /><span class="exvi">...truy cập internet lan tới các vùng xa xôi.</span></td></tr>
+    <tr><td>55</td><td><span class="w">community</span></td><td>(khơ miu nơ ty)<br /><span class="ipa">/kəˈmjuːnəti/</span></td><td>n</td><td>cộng đồng</td><td><span class="ex">...may soon reach <b>communities</b> that have never had a school nearby.</span><br /><span class="exvi">...có thể sớm chạm đến những cộng đồng chưa từng có trường học gần kề.</span></td></tr>
+    <tr><td>56</td><td><span class="w">stable</span></td><td>(s-tây bồ)<br /><span class="ipa">/ˈsteɪbl/</span></td><td>adj</td><td>ổn định</td><td><span class="ex">a laptop and a <b>stable</b> connection could open doors...</span><br /><span class="exvi">một chiếc laptop và một kết nối ổn định có thể mở ra những cánh cửa...</span></td></tr>
+    <tr><td>57</td><td><span class="w">previously</span></td><td>(pri vi ợt ly)<br /><span class="ipa">/ˈpriːviəsli/</span></td><td>adv</td><td>trước đây, trước kia</td><td><span class="ex">doors that were <b>previously</b> firmly closed.</span><br /><span class="exvi">những cánh cửa trước đây từng đóng chặt.</span></td></tr>
+    <tr><td>58</td><td><span class="w">internet access</span></td><td>—</td><td>cụm</td><td>quyền/khả năng truy cập internet</td><td><span class="ex">As <b>internet access</b> spreads to remote regions...</span><br /><span class="exvi">Khi truy cập internet lan tới các vùng xa xôi...</span></td></tr>
+    <tr><td>59</td><td><span class="w">a school nearby</span></td><td>—</td><td>cụm</td><td>một ngôi trường ở gần</td><td><span class="ex">communities that have never had <b>a school nearby</b>.</span><br /><span class="exvi">những cộng đồng chưa từng có trường học gần kề.</span></td></tr>
+    <tr><td>60</td><td><span class="w">stable connection</span></td><td>—</td><td>cụm</td><td>kết nối (mạng) ổn định</td><td><span class="ex">a laptop and a <b>stable connection</b> could open doors...</span><br /><span class="exvi">một chiếc laptop và một kết nối ổn định có thể mở ra những cánh cửa...</span></td></tr>
+    <tr><td>61</td><td><span class="w">open doors</span></td><td>—</td><td>cụm</td><td>mở ra cơ hội (nghĩa bóng)</td><td><span class="ex">a stable connection could <b>open doors</b> that were previously firmly closed.</span><br /><span class="exvi">một kết nối ổn định có thể mở ra những cánh cửa (cơ hội) trước đây từng đóng chặt.</span></td></tr>
+    <tr><td>62</td><td><span class="w">firmly closed</span></td><td>—</td><td>cụm</td><td>đóng chặt, đóng kín</td><td><span class="ex">doors that were previously <b>firmly closed</b>.</span><br /><span class="exvi">những cánh cửa trước đây từng đóng chặt.</span></td></tr>
+  </table>
+
+  <div class="card tip" style="margin-top:18px;">
+    ✅ <b>Hoàn thành Ngày 1?</b> Quay lại lộ trình và tick 4 ô của Ngày 1. Ngày 2 bạn sẽ luyện 1 đề chủ đề <b>Science &amp; Technology</b> theo đúng quy trình: làm đề → chấm → giải đề → rút từ vựng.
+  </div>
+
+</div>
+
+<footer>📘 Ngày 1 · VSTEP B2 Reading — Học chắc 8 dạng câu là nền cho cả 8 tuần.</footer>
+
+<script>
+  // Phát âm bằng Web Speech API của trình duyệt (không cần file audio)
+  // btn (tùy chọn): nút đang bấm — sẽ sáng lên trong lúc đọc
+  function say(text, btn) {
+    if (!('speechSynthesis' in window)) { alert('Trình duyệt không hỗ trợ phát âm.'); return; }
+    window.speechSynthesis.cancel();
+    document.querySelectorAll('.spk.speaking').forEach(function (s) { s.classList.remove('speaking'); });
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = 0.9;
+    if (btn) {
+      btn.classList.add('speaking');
+      u.onend = u.onerror = function () { btn.classList.remove('speaking'); };
+    }
+    window.speechSynthesis.speak(u);
+  }
+
+  // Tạo 1 nút loa phát âm gắn vào phần tử el; lead=true cho nút đứng đầu đoạn
+  function makeSpk(el, getText, title, lead) {
+    var btn = document.createElement('span');
+    btn.className = lead ? 'spk lead' : 'spk';
+    btn.textContent = '🔊';
+    btn.title = title;
+    btn.setAttribute('role', 'button');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      say(getText(), btn);
+    });
+    if (lead) el.insertBefore(btn, el.firstChild); else el.appendChild(btn);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // 1) Nút 🔊 cho mọi từ/cụm trong bảng .vocab
+    document.querySelectorAll('.vocab td .w').forEach(function (el) {
+      var word = el.textContent
+        .replace(/\.\.\./g, '')        // bỏ dấu ...
+        .replace(/\([^)]*\)/g, '')      // bỏ phần trong ngoặc
+        .replace(/\+\s*V/gi, '')        // bỏ "+ V"
+        .replace(/\bA and B\b/g, '')    // bỏ placeholder "A and B"
+        .trim();
+      if (!word) return;
+      makeSpk(el, function () { return word; }, 'Nghe phát âm', false);
+    });
+
+    // 2) Nút 🔊 cho từng đoạn bài đọc gốc (.passage p) — đọc cả đoạn, bỏ số [1]
+    document.querySelectorAll('.passage p').forEach(function (p) {
+      makeSpk(p, function () {
+        return p.textContent.replace(/\[\d+\]/g, '').replace(/🔊/g, '').replace(/\s+/g, ' ').trim();
+      }, 'Nghe cả đoạn', true);
+    });
+
+    // 3) Nút 🔊 cho khối tiếng Anh song ngữ (.en-block)
+    document.querySelectorAll('.en-block').forEach(function (b) {
+      makeSpk(b, function () {
+        return b.textContent.replace(/🔊/g, '').replace(/\s+/g, ' ').trim();
+      }, 'Nghe cả đoạn', true);
+    });
+  });
+</script>
+
+</body>
+</html>

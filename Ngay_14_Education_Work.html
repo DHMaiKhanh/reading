@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 3 · Ngày 4 — Education + Work &amp; Career · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎓💼 Tuần 3 · Ngày 4 — Education + Work &amp; Career</h1>
+  <p>2 bài đọc độc lập (mỗi bài ~18 phút) → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~40 phút / bài</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · 20 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước / bài):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu mỗi bài: đúng <b>~7–8/10</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1: EDUCATION ============ -->
+  <h2>Bài #1 <span class="lvl">Education · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Rise of Micro-credentials</h3>
+    <p><span class="pn">[1]</span> For most of the twentieth century, a university degree served as the standard proof that someone was qualified for a professional career. In recent years, however, a new alternative has emerged: the micro-credential. These short, focused certificates — often completed in a matter of weeks rather than years — allow learners to demonstrate a specific, narrowly defined skill, such as data analysis or digital marketing, without committing to a full degree programme. Their rapid growth has been driven partly by rising tuition costs and partly by employers who increasingly care more about what a candidate can actually do than which institution issued their diploma.</p>
+    <p class="vi-para">[1] Trong phần lớn thế kỷ 20, tấm bằng đại học là bằng chứng chuẩn mực cho thấy một người đủ trình độ để theo đuổi sự nghiệp chuyên nghiệp. Tuy nhiên, những năm gần đây, một lựa chọn thay thế mới đã xuất hiện: chứng chỉ ngắn hạn (micro-credential). Những chứng chỉ ngắn, tập trung này — thường hoàn thành trong vài tuần thay vì vài năm — cho phép người học chứng minh một kỹ năng cụ thể, được xác định hẹp, chẳng hạn như phân tích dữ liệu hay marketing số, mà không cần cam kết theo học cả một chương trình bằng cấp đầy đủ. Sự tăng trưởng nhanh chóng của chúng một phần do học phí ngày càng tăng, một phần do nhà tuyển dụng ngày càng quan tâm đến việc ứng viên thực sự làm được gì hơn là họ tốt nghiệp từ trường nào.</p>
+    <p><span class="pn">[2]</span> Many universities, initially wary of a trend that seemed to threaten their traditional business model, have since embraced micro-credentials themselves, <b class="k">bundling</b> them into larger degree pathways or offering them as stand-alone courses through online partners. Some even allow the credits earned from a certificate to be later applied toward a full degree, effectively letting students test the waters before making a larger financial commitment. This flexibility has proven especially attractive to working adults who wish to change careers without abandoning their current income.</p>
+    <p class="vi-para">[2] Nhiều trường đại học, ban đầu thận trọng trước một xu hướng dường như đe dọa mô hình kinh doanh truyền thống của họ, sau đó đã đón nhận chính các chứng chỉ ngắn hạn này, gộp chúng vào các lộ trình bằng cấp lớn hơn hoặc cung cấp riêng lẻ thông qua các đối tác trực tuyến. Một số trường thậm chí còn cho phép tín chỉ tích lũy từ một chứng chỉ được tính vào một tấm bằng đầy đủ sau này, giúp sinh viên "thử trước" trước khi đưa ra cam kết tài chính lớn hơn. Sự linh hoạt này đặc biệt hấp dẫn với người đi làm muốn chuyển nghề mà không phải từ bỏ thu nhập hiện tại.</p>
+    <p><span class="pn">[3]</span> Nevertheless, sceptics caution that the credential market has become <b class="k">saturated</b>, with so many overlapping certificates on offer that employers struggle to judge which ones genuinely indicate competence. A survey of hiring managers found that fewer than half could confidently distinguish a rigorous, well-regarded programme from one that demanded little more than watching a handful of videos. Without some form of external quality control, critics warn, the very credibility that makes micro-credentials appealing could eventually be undermined by an oversupply of low-value options.</p>
+    <p class="vi-para">[3] Tuy nhiên, những người hoài nghi cảnh báo rằng thị trường chứng chỉ đã trở nên bão hòa, với quá nhiều chứng chỉ trùng lặp được chào bán khiến nhà tuyển dụng khó đánh giá cái nào thực sự phản ánh năng lực thật sự. Một khảo sát với các nhà quản lý tuyển dụng cho thấy chưa đến một nửa có thể tự tin phân biệt một chương trình nghiêm túc, uy tín với một chương trình chỉ yêu cầu xem vài đoạn video. Nếu không có một hình thức kiểm soát chất lượng bên ngoài nào đó, các nhà phê bình cảnh báo, chính uy tín đã làm nên sức hấp dẫn của chứng chỉ ngắn hạn có thể bị xói mòn bởi tình trạng dư thừa các lựa chọn kém giá trị.</p>
+    <p><span class="pn">[4]</span> Supporters respond that this is simply a natural growing pain of a young market, and that reputable accrediting bodies are already stepping in to set standards. They point out that traditional degrees, too, vary enormously in quality, yet society has learned to navigate that variation through rankings, reputation, and word of mouth. Given time, they argue, the market will likewise learn to separate the credentials worth pursuing from those that are not — and in the meantime, learners who choose carefully stand to gain a faster, cheaper route into skilled, well-paid work.</p>
+    <p class="vi-para">[4] Những người ủng hộ đáp lại rằng đây chỉ đơn giản là "cơn đau tăng trưởng" tự nhiên của một thị trường còn non trẻ, và các tổ chức kiểm định uy tín đã bắt đầu can thiệp để thiết lập tiêu chuẩn. Họ chỉ ra rằng ngay cả bằng cấp truyền thống cũng có chất lượng chênh lệch rất lớn, vậy mà xã hội đã học được cách nhận biết sự chênh lệch đó qua bảng xếp hạng, danh tiếng và truyền miệng. Họ lập luận rằng, theo thời gian, thị trường cũng sẽ học được cách phân biệt chứng chỉ nào đáng theo đuổi và chứng chỉ nào không — và trong lúc đó, những người học biết lựa chọn kỹ càng sẽ có được con đường nhanh hơn, rẻ hơn để đến với công việc có tay nghề, lương cao.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. why university degrees should be abolished</li><li>B. the rise, benefits, and risks of micro-credentials as an alternative to degrees</li><li>C. how to write a strong résumé</li><li>D. the history of online video platforms</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày sự trỗi dậy của micro-credential, lợi ích (đoạn 1–2), rủi ro (đoạn 3), và phản biện (đoạn 4) → ý bao trùm là B.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"bundling"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. deleting</li><li>B. grouping together</li><li>C. selling separately</li><li>D. criticising</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "bundling them into larger degree pathways" = gộp/nhóm chúng vào các lộ trình bằng cấp lớn hơn ≈ grouping together.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, what has driven the growth of micro-credentials?</div>
+    <ul><li>A. Government subsidies only</li><li>B. Rising tuition costs and employers valuing practical skills</li><li>C. A shortage of university professors</li><li>D. New immigration laws</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 1: "driven partly by rising tuition costs and partly by employers who increasingly care more about what a candidate can actually do."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"themselves"</b> (in "embraced micro-credentials themselves") refers to:</div>
+    <ul><li>A. employers</li><li>B. universities</li><li>C. working adults</li><li>D. hiring managers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Chủ ngữ của câu là "Many universities" → "themselves" nhấn mạnh lại chính các trường đại học đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that some students use micro-credentials to:</div>
+    <ul><li>A. avoid ever earning a degree</li><li>B. try out a field before committing to a full degree</li><li>C. replace their current job immediately</li><li>D. avoid paying any tuition at all</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "effectively letting students test the waters before making a larger financial commitment" → dùng để thử trước khi cam kết học đầy đủ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"saturated"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. completely full/overcrowded</li><li>B. empty</li><li>C. well-regulated</li><li>D. inexpensive</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "the credential market has become saturated, with so many overlapping certificates" → thị trường đã quá tải/bão hòa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the survey of hiring managers in paragraph 3?</div>
+    <ul><li>A. To prove that all micro-credentials are worthless</li><li>B. To support the claim that employers struggle to judge credential quality</li><li>C. To recommend a specific certificate programme</li><li>D. To describe how universities set tuition fees</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Khảo sát được dùng làm bằng chứng cụ thể cho luận điểm trước đó rằng nhà tuyển dụng khó phân biệt chất lượng chứng chỉ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as reasons for the popularity of micro-credentials EXCEPT:</div>
+    <ul><li>A. lower cost than a full degree</li><li>B. shorter completion time</li><li>C. guaranteed government funding</li><li>D. appeal to working adults changing careers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Chi phí thấp, thời gian ngắn, và sự hấp dẫn với người đi làm đều được nhắc; "government funding" không hề xuất hiện trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward micro-credentials is best described as:</div>
+    <ul><li>A. entirely dismissive</li><li>B. balanced, acknowledging both promise and risk</li><li>C. blindly enthusiastic with no reservations</li><li>D. indifferent</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày cả lợi ích (đoạn 1–2) lẫn rủi ro (đoạn 3), rồi kết luận cân bằng ở đoạn 4.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The comparison to traditional degrees in paragraph 4 implies that:</div>
+    <ul><li>A. traditional degrees have never varied in quality</li><li>B. quality variation is not unique to micro-credentials and can eventually be managed</li><li>C. traditional degrees should be replaced entirely</li><li>D. rankings and reputation are useless for degrees</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "traditional degrees, too, vary enormously in quality, yet society has learned to navigate that variation" → tương tự, thị trường micro-credential rồi cũng sẽ tự điều chỉnh.</p></details>
+  </div>
+
+  <h3>Từ vựng chủ đề Education (bài #1)</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>micro-credential</td><td>(n)</td><td>chứng chỉ ngắn hạn, tập trung một kỹ năng</td></tr>
+    <tr><td>tuition costs</td><td>(n)</td><td>học phí</td></tr>
+    <tr><td>wary <span class="c1tag">C1</span></td><td>(adj)</td><td>thận trọng, cảnh giác</td></tr>
+    <tr><td>bundle</td><td>(v)</td><td>gộp, đóng gói chung</td></tr>
+    <tr><td>stand-alone</td><td>(adj)</td><td>độc lập, riêng lẻ</td></tr>
+    <tr><td>test the waters</td><td>(idiom)</td><td>thử trước khi quyết định</td></tr>
+    <tr><td>saturated <span class="c1tag">C1</span></td><td>(adj)</td><td>bão hòa, quá tải</td></tr>
+    <tr><td>competence</td><td>(n)</td><td>năng lực</td></tr>
+    <tr><td>undermine <span class="c1tag">C1</span></td><td>(v)</td><td>làm suy yếu, phá hoại (ngầm)</td></tr>
+    <tr><td>accrediting body</td><td>(n phr)</td><td>tổ chức kiểm định chất lượng</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2: WORK & CAREER ============ -->
+  <h2>Bài #2 <span class="lvl">Work &amp; Career · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Redrawing the Boundaries of Work</h3>
+    <p><span class="pn">[1]</span> A decade ago, working from home was widely regarded as a rare perk reserved for a fortunate few. Today, remote and hybrid arrangements have become firmly embedded in the expectations of millions of employees, many of whom now consider a daily commute to an office an outdated relic rather than a professional norm. Companies that once insisted on full-time office attendance have been forced to reconsider, as talented staff increasingly weigh flexibility as heavily as salary when deciding whether to accept — or remain in — a job.</p>
+    <p class="vi-para">[1] Một thập kỷ trước, làm việc tại nhà từng được xem là một đặc quyền hiếm hoi chỉ dành cho số ít người may mắn. Ngày nay, hình thức làm việc từ xa và kết hợp đã ăn sâu vào kỳ vọng của hàng triệu người lao động, nhiều người trong số họ giờ đây xem việc đi lại hàng ngày đến văn phòng là một "di tích" lỗi thời hơn là một chuẩn mực nghề nghiệp. Các công ty từng khăng khăng yêu cầu nhân viên có mặt toàn thời gian tại văn phòng đã buộc phải xem xét lại, khi nhân tài ngày càng cân nhắc sự linh hoạt nặng ký ngang với mức lương khi quyết định nhận — hay tiếp tục gắn bó với — một công việc.</p>
+    <p><span class="pn">[2]</span> This shift has not been without friction. Some executives argue that spontaneous, in-person collaboration is difficult to <b class="k">replicate</b> over a video call, and that younger employees in particular lose valuable mentorship opportunities when they rarely set foot in the office. Others counter that productivity data from several large firms show no meaningful decline, and that employees who are trusted to manage their own schedules often report greater job satisfaction and lower rates of burnout.</p>
+    <p class="vi-para">[2] Sự thay đổi này không phải là không có mâu thuẫn. Một số lãnh đạo cho rằng sự hợp tác trực tiếp, tự phát rất khó tái hiện qua một cuộc gọi video, và rằng nhân viên trẻ đặc biệt mất đi những cơ hội được cố vấn quý giá khi hiếm khi đặt chân đến văn phòng. Những người khác phản bác rằng dữ liệu năng suất từ nhiều công ty lớn không cho thấy sự sụt giảm đáng kể nào, và rằng nhân viên được tin tưởng tự quản lý lịch trình của mình thường cho biết họ hài lòng hơn với công việc và ít bị kiệt sức hơn.</p>
+    <p><span class="pn">[3]</span> At the same time, the very definition of a "career" is evolving. Rather than climbing a single corporate ladder for decades, many workers now assemble a patchwork of freelance projects, short-term contracts, and side ventures — a pattern sometimes called the "gig economy." Advocates praise this arrangement for the autonomy it grants, allowing people to pursue several interests simultaneously and to pivot quickly when a particular industry declines. Critics, however, note that gig workers frequently lack the job security, health insurance, and retirement benefits that traditional employment typically provides.</p>
+    <p class="vi-para">[3] Đồng thời, chính định nghĩa về "sự nghiệp" cũng đang thay đổi. Thay vì leo lên một nấc thang công danh duy nhất trong hàng chục năm, nhiều người lao động giờ đây ghép nối nhiều dự án tự do, hợp đồng ngắn hạn và công việc tay trái — một mô hình đôi khi được gọi là "nền kinh tế việc làm tự do" (gig economy). Người ủng hộ ca ngợi mô hình này vì quyền tự chủ mà nó mang lại, cho phép mọi người theo đuổi nhiều mối quan tâm cùng lúc và nhanh chóng chuyển hướng khi một ngành nào đó suy thoái. Tuy nhiên, người phản đối chỉ ra rằng lao động tự do thường thiếu sự ổn định công việc, bảo hiểm y tế và các quyền lợi hưu trí mà việc làm truyền thống thường mang lại.</p>
+    <p><span class="pn">[4]</span> Looking ahead, experts largely agree that automation and artificial intelligence will continue to <b class="k">reshape</b> which jobs exist and which skills are prized. Roles that involve repetitive, predictable tasks are expected to shrink, while demand grows for skills that machines still struggle to replicate, such as creative problem-solving, emotional intelligence, and complex negotiation. Rather than fearing this transition outright, many career counsellors now advise workers to treat learning as a lifelong habit, continually updating their skills rather than assuming that any single qualification will remain relevant forever.</p>
+    <p class="vi-para">[4] Nhìn về tương lai, các chuyên gia hầu như đều đồng ý rằng tự động hóa và trí tuệ nhân tạo sẽ tiếp tục định hình lại những công việc nào tồn tại và những kỹ năng nào được coi trọng. Các vai trò liên quan đến công việc lặp đi lặp lại, có thể dự đoán được kỳ vọng sẽ thu hẹp lại, trong khi nhu cầu tăng lên đối với những kỹ năng mà máy móc vẫn khó lòng thay thế, như giải quyết vấn đề sáng tạo, trí tuệ cảm xúc và đàm phán phức tạp. Thay vì hoàn toàn lo sợ trước sự chuyển đổi này, nhiều chuyên gia tư vấn nghề nghiệp hiện khuyên người lao động nên xem việc học là một thói quen suốt đời, liên tục cập nhật kỹ năng thay vì cho rằng bất kỳ bằng cấp đơn lẻ nào sẽ mãi còn phù hợp.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. how to negotiate a higher salary</li><li>B. how work arrangements and career structures are changing, along with future skill demands</li><li>C. the history of corporate offices</li><li>D. why remote work should be banned</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đề cập remote work (đoạn 1–2), gig economy (đoạn 3), và tương lai kỹ năng (đoạn 4) → ý bao trùm là B.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"replicate"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. reproduce/recreate</li><li>B. destroy</li><li>C. forbid</li><li>D. postpone</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "difficult to replicate over a video call" = khó tái tạo/lặp lại qua cuộc gọi video ≈ reproduce.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, what do many employees now weigh as heavily as salary?</div>
+    <ul><li>A. Company reputation</li><li>B. Flexibility in work arrangements</li><li>C. Length of the daily commute only</li><li>D. Office building design</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "talented staff increasingly weigh flexibility as heavily as salary when deciding whether to accept... a job."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"this arrangement"</b> refers to:</div>
+    <ul><li>A. climbing a single corporate ladder</li><li>B. the gig economy pattern of freelance and short-term work</li><li>C. mandatory office attendance</li><li>D. retirement benefits</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước mô tả "a patchwork of freelance projects, short-term contracts... the gig economy" → "this arrangement" trỏ về mô hình đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that productivity concerns about remote work are:</div>
+    <ul><li>A. universally agreed upon</li><li>B. disputed, with data suggesting no clear decline</li><li>C. proven false by every study</li><li>D. irrelevant to the debate</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "productivity data from several large firms show no meaningful decline" đối lập với lo ngại của một số giám đốc → vấn đề còn gây tranh cãi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"autonomy"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. self-determination/independence</li><li>B. financial loss</li><li>C. strict supervision</li><li>D. job insecurity</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "praise this arrangement for the autonomy it grants, allowing people to pursue several interests" → autonomy = quyền tự chủ, độc lập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "job security, health insurance, and retirement benefits" in paragraph 3?</div>
+    <ul><li>A. To list the drawbacks that critics associate with gig work</li><li>B. To recommend that everyone become a freelancer</li><li>C. To explain how automation works</li><li>D. To describe office design trends</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Câu này nêu những gì gig workers thường thiếu, làm ví dụ minh họa cho lời phê phán của "Critics".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as skills likely to grow in demand EXCEPT:</div>
+    <ul><li>A. creative problem-solving</li><li>B. emotional intelligence</li><li>C. complex negotiation</li><li>D. repetitive data entry</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 4 nêu creative problem-solving, emotional intelligence, negotiation là các kỹ năng máy móc khó thay thế; "repetitive tasks" được nói là sẽ THU HẸP, không phải tăng nhu cầu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the changing nature of work is best described as:</div>
+    <ul><li>A. alarmist and fearful</li><li>B. measured, presenting both opportunities and challenges</li><li>C. dismissive of all change</li><li>D. certain that offices will disappear completely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày cả lợi ích lẫn khó khăn của remote work và gig economy, kết bài bằng lời khuyên thực tế thay vì lo sợ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The advice to "treat learning as a lifelong habit" (paragraph 4) implies that:</div>
+    <ul><li>A. a single qualification will always remain sufficient</li><li>B. workers should continually update their skills as job demands change</li><li>C. formal education is no longer necessary</li><li>D. automation will eliminate the need for any human skills</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "continually updating their skills rather than assuming that any single qualification will remain relevant forever" → hàm ý phải học suốt đời để thích ứng.</p></details>
+  </div>
+
+  <h3>Từ vựng chủ đề Work &amp; Career (bài #2)</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>hybrid arrangement</td><td>(n phr)</td><td>hình thức làm việc kết hợp (văn phòng + từ xa)</td></tr>
+    <tr><td>relic</td><td>(n)</td><td>tàn tích, thứ lỗi thời</td></tr>
+    <tr><td>replicate</td><td>(v)</td><td>tái tạo, lặp lại</td></tr>
+    <tr><td>burnout</td><td>(n)</td><td>kiệt sức (do công việc)</td></tr>
+    <tr><td>gig economy</td><td>(n phr)</td><td>nền kinh tế việc làm tự do/ngắn hạn</td></tr>
+    <tr><td>autonomy <span class="c1tag">C1</span></td><td>(n)</td><td>quyền tự chủ, độc lập</td></tr>
+    <tr><td>pivot</td><td>(v)</td><td>chuyển hướng (nghề nghiệp)</td></tr>
+    <tr><td>job security</td><td>(n)</td><td>sự ổn định công việc</td></tr>
+    <tr><td>reshape</td><td>(v)</td><td>định hình lại, tái cấu trúc</td></tr>
+    <tr><td>lifelong (learning)</td><td>(adj)</td><td>suốt đời, trọn đời (việc học)</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1 · Education</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-A · 7-B · 8-C · 9-B · 10-B</td></tr>
+      <tr><th>Bài #2 · Work &amp; Career</th><td>1-B · 2-A · 3-B · 4-B · 5-B · 6-A · 7-A · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · bài __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu ở cả 2 bài → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá (mỗi bài):</b> đúng 8–10 → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài + học kỹ từ vựng trước khi qua ngày tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Tuần 3 · Ngày 4?</b> Quay lại lộ trình tick 4 ô cho từng bài. Nhớ so sánh chủ đề Education hôm nay với Ngày 3 để thấy góc tiếp cận khác nhau (phương pháp học/du học vs. micro-credential), và chủ đề Work &amp; Career sẽ còn quay lại ở các tuần sau với độ khó tăng dần.
+  </div>
+
+</div>
+
+<footer>🎓💼 Tuần 3 · Ngày 4 · VSTEP Reading — Education + Work &amp; Career · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

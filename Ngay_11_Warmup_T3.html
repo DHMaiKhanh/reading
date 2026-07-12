@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 3 · Ngày 1 — Khởi động cụm: Science · Technology · Education · Language</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+  .topictag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; margin-left:6px; }
+  .t-sci { background:#1e3a2f; color:#a6f0c8; }
+  .t-tech { background:#1e2f52; color:#cfe0ff; }
+  .t-edu { background:#4a3320; color:#ffd9a0; }
+  .t-lang { background:#3a1e42; color:#e0b8ff; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎓🔬 Tuần 3 · Ngày 1 — Khởi động cụm: Science · Technology · Education · Language</h1>
+  <p>Học từ vựng nền cho cả cụm chủ đề + 1 bài đọc làm quen nhẹ nhàng, chưa cần bấm giờ</p>
+  <div class="meta">
+    <span class="badge">🕐 ~50 phút</span>
+    <span class="badge">🟡 B2</span>
+    <span class="badge">📚 Học từ vựng + 1 bài làm quen (không bấm giờ)</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Vì sao hôm nay khác mọi ngày?</b>
+    <p style="margin-top:6px;">Tuần 3 sẽ luyện xoay quanh 4 chủ đề liên quan nhau: <b>Science, Technology, Education, Language</b>. Trước khi lao vào làm đề có tính giờ, hôm nay dành để:</p>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Học một lượt từ vựng nền của cả 4 chủ đề (nhiều từ sẽ lặp lại xuyên suốt các bài sau).</li>
+      <li>Đọc thử 1 bài ngắn, nhẹ nhàng, không tính giờ — chỉ để làm quen giọng văn &amp; cách ra câu hỏi.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Từ <b>Ngày 2</b> trở đi, mỗi ngày sẽ có <b>2 bài đọc</b> (2 chủ đề khác nhau trong cụm), có bấm giờ.</p>
+  </div>
+
+  <!-- ============ TỪ VỰNG CỤM ============ -->
+  <h2>Phần 1 · Học từ vựng cụm chủ đề</h2>
+  <div class="card">
+    <p>Bảng dưới gồm ~20 từ chia đều cho 4 chủ đề. Học kỹ trước khi đọc bài ở Phần 2 — nhiều từ sẽ xuất hiện lại.</p>
+  </div>
+  <table>
+    <tr><th width="14%">Chủ đề</th><th width="22%">Từ / cụm</th><th width="12%">Loại</th><th>Nghĩa</th></tr>
+
+    <tr><td><span class="topictag t-sci">Science</span></td><td>hypothesis</td><td>(n)</td><td>giả thuyết</td></tr>
+    <tr><td><span class="topictag t-sci">Science</span></td><td>experiment</td><td>(n/v)</td><td>thí nghiệm</td></tr>
+    <tr><td><span class="topictag t-sci">Science</span></td><td>evidence</td><td>(n)</td><td>bằng chứng</td></tr>
+    <tr><td><span class="topictag t-sci">Science</span></td><td>breakthrough</td><td>(n)</td><td>bước đột phá</td></tr>
+    <tr><td><span class="topictag t-sci">Science</span></td><td>phenomenon <span class="c1tag">C1</span></td><td>(n)</td><td>hiện tượng</td></tr>
+
+    <tr><td><span class="topictag t-tech">Technology</span></td><td>innovation</td><td>(n)</td><td>sự đổi mới, cải tiến</td></tr>
+    <tr><td><span class="topictag t-tech">Technology</span></td><td>artificial intelligence</td><td>(n)</td><td>trí tuệ nhân tạo</td></tr>
+    <tr><td><span class="topictag t-tech">Technology</span></td><td>algorithm</td><td>(n)</td><td>thuật toán</td></tr>
+    <tr><td><span class="topictag t-tech">Technology</span></td><td>automate</td><td>(v)</td><td>tự động hóa</td></tr>
+    <tr><td><span class="topictag t-tech">Technology</span></td><td>obsolete <span class="c1tag">C1</span></td><td>(adj)</td><td>lỗi thời</td></tr>
+
+    <tr><td><span class="topictag t-edu">Education</span></td><td>curriculum</td><td>(n)</td><td>chương trình học</td></tr>
+    <tr><td><span class="topictag t-edu">Education</span></td><td>literacy</td><td>(n)</td><td>khả năng đọc viết / hiểu biết cơ bản</td></tr>
+    <tr><td><span class="topictag t-edu">Education</span></td><td>tuition</td><td>(n)</td><td>học phí</td></tr>
+    <tr><td><span class="topictag t-edu">Education</span></td><td>enrol(l)</td><td>(v)</td><td>ghi danh, nhập học</td></tr>
+    <tr><td><span class="topictag t-edu">Education</span></td><td>pedagogy <span class="c1tag">C1</span></td><td>(n)</td><td>phương pháp giảng dạy</td></tr>
+
+    <tr><td><span class="topictag t-lang">Language</span></td><td>fluency</td><td>(n)</td><td>sự trôi chảy (ngôn ngữ)</td></tr>
+    <tr><td><span class="topictag t-lang">Language</span></td><td>bilingual</td><td>(adj)</td><td>song ngữ</td></tr>
+    <tr><td><span class="topictag t-lang">Language</span></td><td>dialect</td><td>(n)</td><td>phương ngữ</td></tr>
+    <tr><td><span class="topictag t-lang">Language</span></td><td>vocabulary acquisition</td><td>(phr)</td><td>sự tiếp thu từ vựng</td></tr>
+    <tr><td><span class="topictag t-lang">Language</span></td><td>linguistic <span class="c1tag">C1</span></td><td>(adj)</td><td>thuộc về ngôn ngữ học</td></tr>
+  </table>
+
+  <!-- ============ BÀI ĐỌC LÀM QUEN ============ -->
+  <h2>Phần 2 · Bài đọc làm quen <span class="lvl">B2 · chưa bấm giờ</span></h2>
+
+  <div class="passage">
+    <h3>Robots in the Classroom</h3>
+    <p><span class="pn">[1]</span> For decades, science and technology have transformed the way people live, and now they are beginning to reshape education itself. Schools around the world are experimenting with small robots designed to help students practise reading, mathematics, and even foreign languages. Unlike a human tutor, a robot never grows impatient, and it can repeat the same explanation as many times as a child needs without showing the slightest frustration.</p>
+    <p class="vi-para">[1] Trong nhiều thập kỷ, khoa học và công nghệ đã làm thay đổi cách con người sống, và giờ đây chúng đang bắt đầu định hình lại chính giáo dục. Các trường học trên khắp thế giới đang thử nghiệm những robot nhỏ được thiết kế để giúp học sinh luyện đọc, toán học, và thậm chí cả ngoại ngữ. Không giống như một gia sư con người, robot không bao giờ mất kiên nhẫn, và nó có thể lặp lại cùng một lời giải thích bao nhiêu lần tùy theo nhu cầu của trẻ mà không hề tỏ ra khó chịu.</p>
+
+    <p><span class="pn">[2]</span> Researchers who study this new field argue that robots are most useful with young learners who are still building basic literacy and confidence. A shy child who hesitates to answer a teacher's question in front of classmates may feel far more relaxed speaking to a small, friendly machine. Early studies suggest that this comfort can lead to noticeably faster vocabulary acquisition, particularly when children are learning a second language.</p>
+    <p class="vi-para">[2] Các nhà nghiên cứu trong lĩnh vực mới này cho rằng robot hữu ích nhất đối với những học sinh nhỏ tuổi vẫn đang xây dựng khả năng đọc viết cơ bản và sự tự tin. Một đứa trẻ nhút nhát ngần ngại trả lời câu hỏi của giáo viên trước mặt các bạn cùng lớp có thể cảm thấy thoải mái hơn nhiều khi nói chuyện với một cỗ máy nhỏ, thân thiện. Các nghiên cứu ban đầu cho thấy sự thoải mái này có thể giúp việc tiếp thu từ vựng diễn ra nhanh hơn rõ rệt, đặc biệt khi trẻ đang học ngôn ngữ thứ hai.</p>
+
+    <p><span class="pn">[3]</span> Critics, however, caution that technology should support teachers rather than replace them. They point out that human educators do far more than deliver facts: they notice when a student is struggling emotionally, adapt their pedagogy on the spot, and build the kind of trust that no algorithm can fully imitate. If schools rely too heavily on robots, some worry, students might master vocabulary lists while missing the deeper social skills that classrooms are meant to cultivate.</p>
+    <p class="vi-para">[3] Tuy nhiên, những người phản đối cảnh báo rằng công nghệ nên hỗ trợ giáo viên chứ không phải thay thế họ. Họ chỉ ra rằng các nhà giáo dục con người làm nhiều hơn hẳn việc truyền đạt kiến thức: họ nhận ra khi nào một học sinh đang gặp khó khăn về mặt cảm xúc, điều chỉnh phương pháp giảng dạy ngay tại chỗ, và xây dựng loại niềm tin mà không thuật toán nào có thể bắt chước hoàn toàn. Một số người lo ngại rằng nếu các trường học phụ thuộc quá nhiều vào robot, học sinh có thể thông thạo danh sách từ vựng nhưng lại bỏ lỡ những kỹ năng xã hội sâu sắc hơn mà lớp học vốn được sinh ra để vun đắp.</p>
+
+    <p><span class="pn">[4]</span> For now, most experts agree that robots work best as a supplement, not a substitute. A typical lesson might combine a short session with a robot tutor, focused narrowly on repetitive practice, followed by discussion led by a human teacher, who can address nuance, culture, and context that a machine still struggles to grasp. As one educator put it, technology can lighten the load, but it cannot yet replace the human touch at the heart of good teaching.</p>
+    <p class="vi-para">[4] Hiện tại, hầu hết các chuyên gia đều đồng ý rằng robot phát huy tác dụng tốt nhất khi đóng vai trò bổ trợ, chứ không phải thay thế. Một tiết học điển hình có thể kết hợp một phiên học ngắn với gia sư robot, tập trung hẹp vào luyện tập lặp lại, tiếp theo là phần thảo luận do một giáo viên con người dẫn dắt, người có thể xử lý những sắc thái, văn hóa và bối cảnh mà máy móc vẫn còn gặp khó khăn để nắm bắt. Như một nhà giáo dục đã nói, công nghệ có thể giảm bớt gánh nặng, nhưng nó chưa thể thay thế được sự chạm tay của con người vốn là cốt lõi của việc dạy học tốt.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. the history of robots in factories</li><li>B. the use of robots to support language and learning in schools</li><li>C. why children dislike human teachers</li><li>D. the cost of building classroom robots</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài xoay quanh việc dùng robot hỗ trợ học tập (đọc, toán, ngôn ngữ) trong lớp học. A, C, D không phải ý chính.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"cultivate"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. destroy</li><li>B. ignore</li><li>C. develop, foster</li><li>D. sell</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "the deeper social skills that classrooms are meant to cultivate" = vun đắp/phát triển kỹ năng xã hội ≈ develop, foster.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why might a shy child benefit from talking to a robot?</div>
+    <ul><li>A. Robots give better grades</li><li>B. Robots can speak many languages fluently</li><li>C. The child may feel more relaxed than in front of classmates</li><li>D. Robots are cheaper than books</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 2: "may feel far more relaxed speaking to a small, friendly machine" thay vì trả lời trước lớp.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 4, the word <b class="k">"it"</b> (in "it cannot yet replace") refers to:</div>
+    <ul><li>A. a lesson</li><li>B. technology</li><li>C. a human teacher</li><li>D. vocabulary</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước nói "technology can lighten the load, but it cannot yet replace..." → "it" = technology.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred that critics in paragraph 3 believe:</div>
+    <ul><li>A. robots should completely replace teachers</li><li>B. technology should support, not replace, human teachers</li><li>C. classrooms no longer need teachers</li><li>D. children should not learn vocabulary</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "technology should support teachers rather than replace them" — nêu rõ quan điểm này ngay đầu đoạn 3.</p></details>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Attitude</span> The author's overall attitude toward classroom robots is best described as:</div>
+    <ul><li>A. completely against using them</li><li>B. balanced, seeing them as a useful supplement</li><li>C. certain they will replace all teachers</li><li>D. indifferent, with no clear opinion</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài nêu lợi ích (đoạn 2) lẫn cảnh báo (đoạn 3), kết luận đoạn 4: robot là "a supplement, not a substitute" → thái độ cân bằng.</p></details>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 1 Tuần 3?</b> Từ <b>Ngày 2</b> mỗi ngày sẽ luyện <b>2 bài</b> (2 chủ đề khác nhau) trong cụm Science · Technology · Education · Language, có bấm giờ đầy đủ.
+  </div>
+
+</div>
+
+<footer>🎓🔬 Tuần 3 · Ngày 1 · VSTEP Reading — Khởi động cụm Science · Technology · Education · Language.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

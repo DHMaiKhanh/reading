@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 6 · Ngày 1 — ĐỀ FULL #1 · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⏱️📝 Tuần 6 · Ngày 1 — ĐỀ FULL #1: Science · Environment · Education · Society</h1>
+  <p>Mô phỏng đề thi thật VSTEP Reading — 4 bài đọc độc lập, 40 câu, làm liền mạch 1 lần</p>
+  <div class="meta">
+    <span class="badge">🕐 Bấm giờ NGHIÊM 60 phút</span>
+    <span class="badge">📝 4 bài · 40 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Hướng dẫn làm đề:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Làm <b>liền mạch cả 4 bài trong đúng 60 phút</b>, không tra từ điển, không tra Google.</li>
+      <li>Ghi lại <b>thời điểm bắt đầu</b> và <b>thời điểm kết thúc</b> ra giấy/note để tự kiểm tra tốc độ làm bài (mục tiêu: mỗi bài ~15 phút).</li>
+      <li>Làm hết 40 câu rồi mới mở đáp án — không xem <code>&lt;details&gt;</code> giữa chừng.</li>
+      <li>Sau khi nộp giờ: chấm điểm bằng bảng đáp án tổng hợp cuối trang, rồi bắt đầu giải đề từng câu sai.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đây là đề thi thử ĐẦY ĐỦ đầu tiên trong lộ trình — dùng để đo trình độ thật trước khi bước vào giai đoạn luyện chuyên sâu. Không cần lo lắng nếu điểm chưa cao, quan trọng là giải đề kỹ ở Ngày 2.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài đọc 1 — Science &amp; Technology</h2>
+
+  <div class="passage">
+    <h3>Gene Editing and the Promise of CRISPR</h3>
+    <p><span class="pn">[1]</span> For decades, altering the genetic code of living organisms was a slow, imprecise, and expensive undertaking. That changed dramatically with the discovery of CRISPR, a gene-editing tool adapted from a natural defence mechanism found in bacteria. CRISPR allows scientists to locate a specific sequence of DNA and cut it with remarkable precision, effectively functioning as a pair of molecular scissors. Within a few years of its discovery, the technique had spread to laboratories worldwide, transforming fields as varied as agriculture, medicine, and basic biological research.</p>
+    <p class="vi-para">[1] Trong nhiều thập kỷ, việc thay đổi mã di truyền của sinh vật sống là một công việc chậm chạp, thiếu chính xác và tốn kém. Điều đó đã thay đổi mạnh mẽ với sự ra đời của CRISPR, một công cụ chỉnh sửa gen được phỏng theo cơ chế phòng vệ tự nhiên tìm thấy ở vi khuẩn. CRISPR cho phép các nhà khoa học xác định một trình tự DNA cụ thể và cắt nó với độ chính xác đáng kinh ngạc, hoạt động giống như một chiếc kéo phân tử. Chỉ vài năm sau khi được phát hiện, kỹ thuật này đã lan rộng đến các phòng thí nghiệm trên toàn thế giới, làm thay đổi nhiều lĩnh vực khác nhau như nông nghiệp, y học và nghiên cứu sinh học cơ bản.</p>
+    <p><span class="pn">[2]</span> In medicine, CRISPR holds particular promise for treating genetic disorders that were once considered incurable. Diseases caused by a single faulty gene, such as sickle cell anaemia, are now being targeted directly: researchers extract a patient's cells, correct the mutation, and reintroduce the modified cells into the body. Early clinical trials have produced encouraging results, and some patients who received the treatment have remained symptom-free for years afterward.</p>
+    <p class="vi-para">[2] Trong y học, CRISPR đặc biệt hứa hẹn trong việc điều trị các rối loạn di truyền từng được coi là không thể chữa khỏi. Các bệnh do một gen bị lỗi duy nhất gây ra, chẳng hạn như thiếu máu hồng cầu hình liềm, hiện đang được nhắm đến trực tiếp: các nhà nghiên cứu lấy tế bào của bệnh nhân, sửa chữa đột biến, rồi đưa các tế bào đã chỉnh sửa trở lại cơ thể. Các thử nghiệm lâm sàng ban đầu đã cho kết quả khả quan, và một số bệnh nhân được điều trị vẫn không có triệu chứng trong nhiều năm sau đó.</p>
+    <p><span class="pn">[3]</span> Agriculture, too, has benefited considerably. Crops can be edited to resist drought, pests, or disease, potentially easing the burden on farmers who face increasingly unpredictable weather patterns. Because CRISPR edits an organism's own genes rather than inserting foreign DNA, some scientists argue that the resulting crops should not be regulated as strictly as older genetically modified organisms. This argument, however, remains contentious among regulators and the public alike.</p>
+    <p class="vi-para">[3] Nông nghiệp cũng được hưởng lợi đáng kể. Cây trồng có thể được chỉnh sửa để kháng hạn hán, sâu bệnh hoặc dịch bệnh, có khả năng giảm bớt gánh nặng cho nông dân đang đối mặt với thời tiết ngày càng khó lường. Vì CRISPR chỉnh sửa chính gen của sinh vật thay vì chèn DNA lạ vào, một số nhà khoa học cho rằng các loại cây trồng này không nên bị quản lý chặt chẽ như các sinh vật biến đổi gen kiểu cũ. Tuy nhiên, lập luận này vẫn còn gây tranh cãi giữa các nhà quản lý và công chúng.</p>
+    <p><span class="pn">[4]</span> Despite its potential, CRISPR raises thorny ethical questions. The prospect of editing embryos to eliminate disease inevitably invites speculation about editing for other traits, such as height or intelligence, a practice widely condemned as a step toward "designer babies." A well-publicised case in which a scientist secretly edited the genomes of twin babies provoked global outrage and led to calls for stricter international oversight. Most researchers agree that the technology's power demands caution: CRISPR should be pursued vigorously for therapeutic purposes, but safeguards must be established before it is used to reshape human traits that have nothing to do with disease.</p>
+    <p class="vi-para">[4] Dù đầy tiềm năng, CRISPR đặt ra những vấn đề đạo đức hóc búa. Viễn cảnh chỉnh sửa phôi thai để loại bỏ bệnh tật tất yếu dẫn đến suy đoán về việc chỉnh sửa các đặc điểm khác, như chiều cao hay trí tuệ, một việc làm bị lên án rộng rãi như một bước tiến tới "em bé được thiết kế theo ý muốn". Một vụ việc từng gây xôn xao dư luận, trong đó một nhà khoa học bí mật chỉnh sửa bộ gen của cặp song sinh, đã gây phẫn nộ toàn cầu và dẫn đến lời kêu gọi giám sát quốc tế chặt chẽ hơn. Hầu hết các nhà nghiên cứu đồng ý rằng sức mạnh của công nghệ này đòi hỏi sự thận trọng: CRISPR nên được theo đuổi mạnh mẽ cho mục đích trị liệu, nhưng cần thiết lập các biện pháp bảo vệ trước khi dùng nó để thay đổi những đặc điểm con người không liên quan đến bệnh tật.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. The history of bacteria and their defence mechanisms</li><li>B. How CRISPR gene editing works and its benefits and risks</li><li>C. Why sickle cell anaemia is difficult to cure</li><li>D. The regulation of genetically modified crops in Europe</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày tổng quan: CRISPR là gì, ứng dụng trong y học/nông nghiệp, và các vấn đề đạo đức đi kèm. A, C, D chỉ là chi tiết nhỏ trong từng đoạn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"imprecise"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. very accurate</li><li>B. lacking exactness</li><li>C. extremely fast</li><li>D. widely accepted</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "slow, imprecise, and expensive" mô tả kỹ thuật cũ kém chính xác → imprecise = không chính xác, thiếu chuẩn xác.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, how do researchers treat diseases like sickle cell anaemia using CRISPR?</div>
+    <ul><li>A. By replacing the patient's entire genome</li><li>B. By extracting cells, correcting the mutation, and reintroducing them</li><li>C. By giving patients daily medication</li><li>D. By transplanting organs from healthy donors</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2 mô tả rõ quy trình: "researchers extract a patient's cells, correct the mutation, and reintroduce the modified cells into the body."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"This argument"</b> refers to:</div>
+    <ul><li>A. the claim that edited crops need not be regulated as strictly as older GMOs</li><li>B. the claim that farmers dislike unpredictable weather</li><li>C. the claim that CRISPR was discovered in bacteria</li><li>D. the claim that sickle cell anaemia is incurable</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Câu trước đó nói CRISPR chỉnh sửa gene sẵn có nên "should not be regulated as strictly" — "This argument" chỉ lại chính quan điểm đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 4 that most researchers believe:</div>
+    <ul><li>A. CRISPR should never be used on humans</li><li>B. editing for non-medical traits should proceed without restriction</li><li>C. therapeutic use should continue, but non-disease-related editing needs safeguards</li><li>D. only wealthy countries should be allowed to use CRISPR</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu cuối đoạn 4 nêu rõ: theo đuổi mục đích trị liệu nhưng cần rào chắn (safeguards) trước khi dùng để thay đổi đặc điểm không liên quan bệnh tật.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"contentious"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. widely agreed upon</li><li>B. likely to cause disagreement</li><li>C. easily forgotten</li><li>D. financially costly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "remains contentious among regulators and the public" — vẫn còn gây tranh cãi → contentious = gây tranh cãi, bất đồng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the case of the scientist who edited the genomes of twin babies?</div>
+    <ul><li>A. To show that CRISPR is completely safe</li><li>B. To illustrate the ethical dangers and controversy surrounding gene editing</li><li>C. To praise the scientist's achievement</li><li>D. To explain how sickle cell anaemia is diagnosed</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Ví dụ này minh họa cho lo ngại đạo đức được nêu ở đầu đoạn 4 và dẫn đến việc kêu gọi giám sát chặt chẽ hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following fields are mentioned as benefiting from CRISPR EXCEPT:</div>
+    <ul><li>A. medicine</li><li>B. agriculture</li><li>C. basic biological research</li><li>D. space exploration</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 1 nhắc "agriculture, medicine, and basic biological research" → A, B, C đều có mặt; "space exploration" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward CRISPR technology can best be described as:</div>
+    <ul><li>A. entirely dismissive</li><li>B. cautiously optimistic, acknowledging both benefits and risks</li><li>C. completely uncritical and enthusiastic</li><li>D. indifferent to its consequences</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày lợi ích rõ ràng (đoạn 2-3) nhưng cũng nêu rủi ro đạo đức nghiêm túc (đoạn 4) → thái độ cân bằng, thận trọng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"designer babies"</b> (paragraph 4) implies a concern that:</div>
+    <ul><li>A. babies might be dressed in expensive clothing</li><li>B. parents might select non-medical traits for their children through gene editing</li><li>C. hospitals will become too expensive for average families</li><li>D. all babies will be born with the same disease</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Designer babies" ám chỉ việc chọn lựa/thiết kế đặc điểm con người (chiều cao, trí tuệ...) chứ không phải vì mục đích y tế, điều bị lên án trong đoạn.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Science &amp; Technology</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>imprecise</td><td>(adj)</td><td>không chính xác</td></tr>
+    <tr><td>precision</td><td>(n)</td><td>độ chính xác</td></tr>
+    <tr><td>mutation</td><td>(n)</td><td>đột biến gen</td></tr>
+    <tr><td>clinical trial</td><td>(n)</td><td>thử nghiệm lâm sàng</td></tr>
+    <tr><td>contentious <span class="c1tag">C1</span></td><td>(adj)</td><td>gây tranh cãi</td></tr>
+    <tr><td>oversight</td><td>(n)</td><td>sự giám sát</td></tr>
+    <tr><td>thorny</td><td>(adj)</td><td>hóc búa, nan giải</td></tr>
+    <tr><td>safeguard <span class="c1tag">C1</span></td><td>(n/v)</td><td>biện pháp/bảo vệ, rào chắn an toàn</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài đọc 2 — Environment &amp; Climate</h2>
+
+  <div class="passage">
+    <h3>The Silent Threat of Urban Heat Islands</h3>
+    <p><span class="pn">[1]</span> As cities have expanded over the past century, many have inadvertently created their own microclimates. Known as urban heat islands, these are areas where temperatures can be several degrees higher than in surrounding rural regions, particularly at night. The phenomenon arises largely because concrete, asphalt, and glass absorb and retain heat far more efficiently than natural vegetation, releasing it slowly after the sun has set. Combined with the heat generated by vehicles, air conditioners, and industrial activity, this creates a persistent thermal bubble over densely built areas.</p>
+    <p class="vi-para">[1] Khi các thành phố mở rộng trong thế kỷ qua, nhiều nơi đã vô tình tạo ra vi khí hậu riêng của mình. Được gọi là đảo nhiệt đô thị, đây là những khu vực có nhiệt độ có thể cao hơn vài độ so với các vùng nông thôn xung quanh, đặc biệt là vào ban đêm. Hiện tượng này phần lớn xuất phát từ việc bê tông, nhựa đường và kính hấp thụ và giữ nhiệt hiệu quả hơn nhiều so với thảm thực vật tự nhiên, rồi thải nhiệt ra từ từ sau khi mặt trời lặn. Kết hợp với nhiệt lượng sinh ra từ xe cộ, máy điều hòa và hoạt động công nghiệp, điều này tạo ra một "bong bóng nhiệt" dai dẳng bao trùm các khu vực xây dựng dày đặc.</p>
+    <p><span class="pn">[2]</span> The consequences extend well beyond mere discomfort. Elevated urban temperatures exacerbate heatwaves, placing vulnerable populations — the elderly, young children, and those with pre-existing health conditions — at heightened risk of heat-related illness. Studies have linked heat islands to increased hospital admissions during summer months, and in the most extreme cases, to a measurable rise in mortality rates. Furthermore, the additional demand for air conditioning drives up electricity consumption, which in turn contributes to further greenhouse gas emissions in a troubling feedback loop.</p>
+    <p class="vi-para">[2] Hậu quả của hiện tượng này vượt xa sự khó chịu đơn thuần. Nhiệt độ đô thị tăng cao làm trầm trọng thêm các đợt nắng nóng, khiến những nhóm dân cư dễ bị tổn thương — người già, trẻ nhỏ và những người có bệnh nền — có nguy cơ cao mắc các bệnh liên quan đến nhiệt. Các nghiên cứu đã liên kết đảo nhiệt đô thị với việc gia tăng số ca nhập viện trong những tháng hè, và trong những trường hợp cực đoan nhất, với sự gia tăng đáng kể tỷ lệ tử vong. Hơn nữa, nhu cầu sử dụng điều hòa tăng thêm làm tăng mức tiêu thụ điện, từ đó góp phần làm tăng phát thải khí nhà kính, tạo thành một vòng lặp phản hồi đáng lo ngại.</p>
+    <p><span class="pn">[3]</span> Fortunately, urban planners have developed a range of strategies to mitigate the effect. Expanding green spaces, such as parks and street trees, provides natural shade and cooling through a process called evapotranspiration. Reflective or "cool" roofing materials, painted in light colours, reflect sunlight rather than absorbing it, while permeable pavements allow rainwater to cool the ground as it evaporates. Some cities have even begun installing green roofs, covering buildings with vegetation that insulates against heat while simultaneously improving air quality.</p>
+    <p class="vi-para">[3] May mắn thay, các nhà quy hoạch đô thị đã phát triển nhiều chiến lược để giảm nhẹ tác động này. Mở rộng không gian xanh, như công viên và cây xanh đường phố, mang lại bóng mát tự nhiên và làm mát thông qua quá trình gọi là thoát hơi nước qua lá cây. Vật liệu mái phản chiếu hay mái "mát", được sơn màu sáng, phản chiếu ánh nắng thay vì hấp thụ nó, trong khi vỉa hè thấm nước cho phép nước mưa làm mát mặt đất khi bốc hơi. Một số thành phố thậm chí đã bắt đầu lắp đặt mái nhà xanh, phủ thực vật lên các tòa nhà để cách nhiệt đồng thời cải thiện chất lượng không khí.</p>
+    <p><span class="pn">[4]</span> Implementing these measures on a citywide scale, however, requires substantial investment and sustained political commitment, which not every municipality can muster. Critics argue that without binding regulations mandating green infrastructure in new developments, voluntary efforts alone will prove insufficient to counteract the pace of urban growth. Advocates respond that even modest, incremental changes — a single row of trees along a street, for example — can produce a noticeable cooling effect, suggesting that meaningful progress need not wait for sweeping policy reform.</p>
+    <p class="vi-para">[4] Tuy nhiên, việc triển khai các biện pháp này trên quy mô toàn thành phố đòi hỏi đầu tư đáng kể và cam kết chính trị bền vững, điều mà không phải chính quyền địa phương nào cũng có thể huy động được. Những người chỉ trích cho rằng nếu không có quy định bắt buộc về hạ tầng xanh trong các dự án phát triển mới, thì chỉ riêng nỗ lực tự nguyện sẽ không đủ để đối phó với tốc độ đô thị hóa. Những người ủng hộ đáp lại rằng ngay cả những thay đổi nhỏ, từng bước — chẳng hạn như một hàng cây dọc theo một con phố — cũng có thể tạo ra hiệu ứng làm mát rõ rệt, cho thấy tiến bộ thực sự không cần phải chờ đến cải cách chính sách toàn diện.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">11 · Main idea</span> The passage primarily discusses:</div>
+    <ul><li>A. why cities are more populated than rural areas</li><li>B. the causes, effects, and possible solutions to urban heat islands</li><li>C. the history of air conditioning technology</li><li>D. how hospitals treat heat-related illnesses</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi theo trình tự: nguyên nhân (đoạn 1) → hậu quả (đoạn 2) → giải pháp (đoạn 3) → thách thức thực hiện (đoạn 4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">12 · Vocabulary</span> The word <b class="k">"inadvertently"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. deliberately</li><li>B. unintentionally</li><li>C. quickly</li><li>D. permanently</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "cities...have inadvertently created their own microclimates" — không cố ý tạo ra hiện tượng này → inadvertently = một cách vô tình, không chủ ý.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">13 · Detail</span> According to paragraph 1, why do urban areas retain more heat than rural areas?</div>
+    <ul><li>A. Because cities have more trees than the countryside</li><li>B. Because materials like concrete and asphalt absorb and release heat more than vegetation</li><li>C. Because rural areas have more vehicles</li><li>D. Because the sun shines more brightly over cities</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 1 giải thích rõ: bê tông, nhựa đường, kính hấp thụ và giữ nhiệt hiệu quả hơn thảm thực vật tự nhiên.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">14 · Reference</span> In paragraph 2, the phrase <b class="k">"a troubling feedback loop"</b> refers to the cycle in which:</div>
+    <ul><li>A. hospitals admit more patients each year</li><li>B. heat increases AC use, which increases emissions, which increases heat further</li><li>C. children play outside more often in summer</li><li>D. cities build more parks to reduce heat</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước mô tả: nhiệt độ cao → dùng điều hòa nhiều hơn → tăng phát thải khí nhà kính → nhiệt độ càng cao hơn, tạo thành vòng lặp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">15 · Inference</span> It can be inferred from paragraph 4 that:</div>
+    <ul><li>A. all cities have already solved the heat island problem</li><li>B. small-scale actions can help even without large government policies</li><li>C. green roofs are illegal in most countries</li><li>D. urban heat islands only affect coastal cities</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Advocates cho rằng "even modest, incremental changes...can produce a noticeable cooling effect" — không cần chờ cải cách chính sách lớn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">16 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"exacerbate"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. reduce</li><li>B. worsen</li><li>C. ignore</li><li>D. measure</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Elevated urban temperatures exacerbate heatwaves" — làm cho đợt nắng nóng trở nên nghiêm trọng hơn → exacerbate = làm trầm trọng thêm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">17 · Purpose</span> Why does the author mention "green roofs" in paragraph 3?</div>
+    <ul><li>A. To criticise building owners for wasting space</li><li>B. To give an example of a strategy used to reduce urban heat</li><li>C. To explain why vegetation causes pollution</li><li>D. To compare housing prices in different cities</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Green roofs được liệt kê cùng với cây xanh, mái phản chiếu, vỉa hè thấm nước như một trong các giải pháp giảm nhiệt đô thị.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">18 · NOT / EXCEPT</span> All of the following are mentioned as strategies to reduce urban heat EXCEPT:</div>
+    <ul><li>A. expanding green spaces</li><li>B. reflective "cool" roofing</li><li>C. permeable pavements</li><li>D. banning private car ownership</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 3 nêu A, B, C rõ ràng; "banning private car ownership" không được đề cập trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">19 · Tone / Attitude</span> The overall tone of the passage is:</div>
+    <ul><li>A. alarmist and hopeless</li><li>B. informative, presenting problems alongside practical solutions</li><li>C. purely humorous</li><li>D. dismissive of the issue's seriousness</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày vấn đề nghiêm túc nhưng cân bằng bằng các giải pháp khả thi, không mang tính hoảng loạn hay coi nhẹ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">20 · Inference</span><span class="c1tag">C1</span> The word <b class="k">"muster"</b> (paragraph 4) suggests that political commitment is:</div>
+    <ul><li>A. easy and automatic for every city</li><li>B. something that must be gathered or summoned with effort</li><li>C. unnecessary for solving the heat island problem</li><li>D. only relevant to wealthy nations</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "which not every municipality can muster" — muster = huy động, gom góp (nỗ lực/nguồn lực) → ngụ ý không phải thành phố nào cũng dễ dàng có được cam kết chính trị này.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Environment &amp; Climate</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>inadvertently <span class="c1tag">C1</span></td><td>(adv)</td><td>một cách vô tình</td></tr>
+    <tr><td>vegetation</td><td>(n)</td><td>thảm thực vật</td></tr>
+    <tr><td>exacerbate <span class="c1tag">C1</span></td><td>(v)</td><td>làm trầm trọng thêm</td></tr>
+    <tr><td>mortality rate</td><td>(n)</td><td>tỷ lệ tử vong</td></tr>
+    <tr><td>mitigate</td><td>(v)</td><td>giảm nhẹ, làm dịu bớt</td></tr>
+    <tr><td>evapotranspiration <span class="c1tag">C1</span></td><td>(n)</td><td>quá trình thoát hơi nước qua lá cây</td></tr>
+    <tr><td>permeable</td><td>(adj)</td><td>có khả năng thấm nước</td></tr>
+    <tr><td>muster <span class="c1tag">C1</span></td><td>(v)</td><td>huy động, gom góp (nỗ lực)</td></tr>
+  </table>
+
+  <!-- ============ BÀI 3 ============ -->
+  <h2>Bài đọc 3 — Education</h2>
+
+  <div class="passage">
+    <h3>Rethinking the Value of Standardized Testing</h3>
+    <p><span class="pn">[1]</span> For much of the past century, standardized tests have served as the primary yardstick by which students, teachers, and even entire school systems are judged. Proponents argue that such tests provide an objective, consistent measure of academic achievement, allowing comparisons across schools, regions, and countries that would otherwise be impossible. Because every student answers the same questions under the same conditions, the argument goes, standardized testing offers a fairer alternative to subjective methods such as teacher-assigned grades, which can vary considerably depending on an individual instructor's expectations.</p>
+    <p class="vi-para">[1] Trong phần lớn thế kỷ qua, các bài kiểm tra chuẩn hóa đã đóng vai trò là thước đo chính để đánh giá học sinh, giáo viên, thậm chí cả toàn bộ hệ thống trường học. Những người ủng hộ cho rằng các bài kiểm tra này cung cấp một thước đo khách quan, nhất quán về thành tích học tập, cho phép so sánh giữa các trường, khu vực và quốc gia mà nếu không có nó thì không thể thực hiện được. Vì mọi học sinh đều trả lời cùng câu hỏi trong cùng điều kiện, lập luận này cho rằng kiểm tra chuẩn hóa là một lựa chọn công bằng hơn so với các phương pháp mang tính chủ quan như điểm số do giáo viên tự chấm, vốn có thể khác nhau đáng kể tùy theo kỳ vọng của từng giáo viên.</p>
+    <p><span class="pn">[2]</span> Critics, however, contend that this apparent objectivity masks deeper flaws. A single test administered on a single day cannot capture the full range of a student's abilities, particularly creativity, collaboration, and critical thinking — skills increasingly valued in the modern workplace but notoriously difficult to quantify. Moreover, students from disadvantaged backgrounds often lack access to the test-preparation resources available to their wealthier peers, meaning that scores may reflect socioeconomic status as much as genuine learning.</p>
+    <p class="vi-para">[2] Tuy nhiên, những người phản đối cho rằng tính khách quan bề ngoài này che giấu những khiếm khuyết sâu xa hơn. Một bài kiểm tra duy nhất, diễn ra trong một ngày duy nhất, không thể phản ánh đầy đủ năng lực của học sinh, đặc biệt là sự sáng tạo, khả năng hợp tác và tư duy phản biện — những kỹ năng ngày càng được coi trọng trong môi trường làm việc hiện đại nhưng lại nổi tiếng là khó định lượng. Hơn nữa, học sinh từ hoàn cảnh khó khăn thường thiếu khả năng tiếp cận các nguồn lực ôn luyện mà bạn bè khá giả hơn có được, nghĩa là điểm số có thể phản ánh tình trạng kinh tế xã hội chẳng kém gì việc học thực sự.</p>
+    <p><span class="pn">[3]</span> Perhaps the most contentious issue is the phenomenon known as "teaching to the test." When high stakes are attached to test results — funding decisions, teacher evaluations, or even school closures — educators may feel compelled to narrow the curriculum, devoting disproportionate time to tested subjects while neglecting art, music, and physical education. Some researchers warn that this narrowing produces students who excel at answering multiple-choice questions but struggle with the open-ended problem-solving that characterizes real-world challenges.</p>
+    <p class="vi-para">[3] Có lẽ vấn đề gây tranh cãi nhất là hiện tượng được gọi là "dạy để thi". Khi kết quả kiểm tra gắn liền với những hậu quả lớn — quyết định về ngân sách, đánh giá giáo viên, hay thậm chí đóng cửa trường học — giáo viên có thể cảm thấy buộc phải thu hẹp chương trình học, dành thời gian không cân xứng cho các môn thi trong khi bỏ bê nghệ thuật, âm nhạc và thể dục. Một số nhà nghiên cứu cảnh báo rằng việc thu hẹp này tạo ra những học sinh giỏi trả lời câu hỏi trắc nghiệm nhưng lại gặp khó khăn với việc giải quyết vấn đề mở, vốn là đặc trưng của các thách thức trong thực tế.</p>
+    <p><span class="pn">[4]</span> In response to these concerns, a growing number of educational systems have begun experimenting with alternative or supplementary assessment methods, including portfolios of student work, project-based evaluations, and teacher observations conducted over an extended period. Advocates of reform do not necessarily call for the abolition of standardized testing altogether; rather, they argue for a more balanced approach in which test scores form just one component of a broader, more holistic picture of student achievement. Whether such reforms can be implemented without sacrificing the comparability that made standardized tests appealing in the first place remains an open question.</p>
+    <p class="vi-para">[4] Để đáp lại những lo ngại này, ngày càng nhiều hệ thống giáo dục đã bắt đầu thử nghiệm các phương pháp đánh giá thay thế hoặc bổ sung, bao gồm hồ sơ tác phẩm của học sinh, đánh giá theo dự án, và quan sát của giáo viên trong một thời gian dài. Những người ủng hộ cải cách không nhất thiết kêu gọi loại bỏ hoàn toàn kiểm tra chuẩn hóa; thay vào đó, họ ủng hộ một cách tiếp cận cân bằng hơn, trong đó điểm kiểm tra chỉ là một thành phần trong bức tranh toàn diện hơn về thành tích học tập của học sinh. Việc liệu những cải cách này có thể được thực hiện mà không đánh mất khả năng so sánh vốn là điều làm cho kiểm tra chuẩn hóa hấp dẫn ngay từ đầu vẫn còn là một câu hỏi bỏ ngỏ.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">21 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. the history of school funding systems</li><li>B. the arguments for and against standardized testing, and possible reforms</li><li>C. how teachers grade student essays</li><li>D. the benefits of project-based learning only</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả ưu điểm (đoạn 1), nhược điểm (đoạn 2-3) và hướng cải cách (đoạn 4) của kiểm tra chuẩn hóa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">22 · Vocabulary</span> The word <b class="k">"yardstick"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. a type of examination room</li><li>B. a standard used for measuring or judging</li><li>C. a piece of school furniture</li><li>D. a government regulation</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the primary yardstick by which students...are judged" — yardstick = thước đo, tiêu chuẩn đánh giá.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">23 · Detail</span> According to paragraph 2, why might standardized test scores reflect socioeconomic status?</div>
+    <ul><li>A. Because wealthy students are naturally more intelligent</li><li>B. Because disadvantaged students lack access to test-preparation resources</li><li>C. Because tests are only given in wealthy neighbourhoods</li><li>D. Because teachers grade wealthy students more favourably</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2 nêu rõ: học sinh khó khăn thường thiếu nguồn lực ôn luyện mà bạn bè giàu có hơn có được.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">24 · Reference</span> In paragraph 3, the phrase <b class="k">"this narrowing"</b> refers to:</div>
+    <ul><li>A. the reduction of school funding nationwide</li><li>B. the narrowing of the curriculum to focus mainly on tested subjects</li><li>C. the decrease in the number of students taking tests</li><li>D. the shrinking size of classrooms</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước mô tả việc giáo viên "narrow the curriculum" (thu hẹp chương trình học) để tập trung vào môn thi → "this narrowing" chỉ lại hiện tượng đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">25 · Inference</span> It can be inferred from paragraph 4 that most reform advocates want to:</div>
+    <ul><li>A. completely eliminate standardized testing</li><li>B. combine test scores with other forms of assessment</li><li>C. increase the number of standardized tests each year</li><li>D. rely solely on teacher observations</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "they argue for a more balanced approach in which test scores form just one component of a broader...picture" — không loại bỏ hoàn toàn mà kết hợp nhiều hình thức đánh giá.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">26 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"quantify"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. to express or measure as a number</li><li>B. to ignore completely</li><li>C. to teach in a classroom</li><li>D. to celebrate publicly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Kỹ năng như sáng tạo, hợp tác "notoriously difficult to quantify" — quantify = định lượng, biểu diễn bằng con số.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">27 · Purpose</span> Why does the author mention "portfolios of student work" and "project-based evaluations" in paragraph 4?</div>
+    <ul><li>A. To criticise schools that use them</li><li>B. To give examples of alternative assessment methods being tried</li><li>C. To argue that standardized tests should be banned</li><li>D. To describe a typical school timetable</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đây là các ví dụ cụ thể minh họa cho "alternative or supplementary assessment methods" được nêu ở đầu câu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">28 · NOT / EXCEPT</span> All of the following are mentioned as criticisms of standardized testing EXCEPT:</div>
+    <ul><li>A. it cannot measure creativity or collaboration well</li><li>B. it may reflect socioeconomic background rather than learning</li><li>C. it can lead to a narrowed curriculum</li><li>D. it is more expensive than hiring extra teachers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 2), B (đoạn 2), C (đoạn 3) đều được nêu; chi phí so với thuê thêm giáo viên không được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">29 · Tone / Attitude</span> The author's attitude toward standardized testing can best be described as:</div>
+    <ul><li>A. strongly in favour, with no reservations</li><li>B. balanced, presenting both sides and suggesting moderate reform</li><li>C. completely hostile toward all forms of testing</li><li>D. indifferent and uninterested in the debate</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày cả lý lẽ ủng hộ (đoạn 1) và phản đối (đoạn 2-3), rồi kết luận bằng hướng cải cách cân bằng (đoạn 4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">30 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"teaching to the test"</b> (paragraph 3) implies that:</div>
+    <ul><li>A. teachers focus instruction narrowly on what will be tested, at the expense of broader learning</li><li>B. teachers refuse to give any tests at all</li><li>C. students are taught only outside the classroom</li><li>D. schools have stopped grading students entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Cụm này ám chỉ việc giáo viên dạy tập trung vào nội dung sẽ được kiểm tra, làm hẹp phạm vi học tập thực sự (bỏ qua nghệ thuật, âm nhạc, thể dục...).</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Education</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>yardstick</td><td>(n)</td><td>thước đo, tiêu chuẩn</td></tr>
+    <tr><td>objective</td><td>(adj)</td><td>khách quan</td></tr>
+    <tr><td>quantify <span class="c1tag">C1</span></td><td>(v)</td><td>định lượng, đo lường bằng số</td></tr>
+    <tr><td>disadvantaged</td><td>(adj)</td><td>thiệt thòi, bất lợi (về kinh tế xã hội)</td></tr>
+    <tr><td>curriculum</td><td>(n)</td><td>chương trình học</td></tr>
+    <tr><td>high stakes</td><td>(phr)</td><td>mức độ rủi ro/hậu quả cao</td></tr>
+    <tr><td>holistic <span class="c1tag">C1</span></td><td>(adj)</td><td>toàn diện, tổng thể</td></tr>
+    <tr><td>comparability <span class="c1tag">C1</span></td><td>(n)</td><td>khả năng so sánh được</td></tr>
+  </table>
+
+  <!-- ============ BÀI 4 ============ -->
+  <h2>Bài đọc 4 — Society &amp; Social Issues</h2>
+
+  <div class="passage">
+    <h3>The Gig Economy: Freedom or Precarity?</h3>
+    <p><span class="pn">[1]</span> Over the past decade, the so-called gig economy — a labour market characterised by short-term contracts and freelance work rather than permanent jobs — has expanded at a remarkable pace. Ride-hailing drivers, food-delivery couriers, and freelance designers exemplify a growing segment of the workforce that operates outside the traditional employer-employee relationship. Digital platforms have made it easier than ever for individuals to find work on demand, matching supply and demand within minutes through a smartphone app.</p>
+    <p class="vi-para">[1] Trong thập kỷ qua, cái gọi là nền kinh tế gig — một thị trường lao động đặc trưng bởi các hợp đồng ngắn hạn và công việc tự do thay vì việc làm ổn định — đã mở rộng với tốc độ đáng kể. Tài xế xe công nghệ, người giao đồ ăn và nhà thiết kế tự do là ví dụ điển hình cho một bộ phận ngày càng lớn của lực lượng lao động, hoạt động bên ngoài mối quan hệ chủ-thợ truyền thống. Các nền tảng số đã giúp việc tìm kiếm công việc theo nhu cầu trở nên dễ dàng hơn bao giờ hết, khớp cung và cầu chỉ trong vài phút thông qua một ứng dụng điện thoại.</p>
+    <p><span class="pn">[2]</span> Supporters of this model emphasise the flexibility it affords. Workers can choose their own hours, take on as much or as little work as they wish, and, in theory, become their own boss. For students, parents balancing childcare, and those seeking supplementary income, gig work can provide a level of autonomy that conventional employment rarely allows. Some economists further argue that the gig economy lowers barriers to entry into the workforce, since anyone with a vehicle or a laptop can begin earning almost immediately.</p>
+    <p class="vi-para">[2] Những người ủng hộ mô hình này nhấn mạnh sự linh hoạt mà nó mang lại. Người lao động có thể tự chọn giờ làm, nhận nhiều hay ít việc tùy ý, và về lý thuyết, trở thành ông chủ của chính mình. Đối với sinh viên, cha mẹ đang cân bằng việc chăm con, và những người muốn có thêm thu nhập, công việc gig có thể mang lại mức độ tự chủ mà việc làm truyền thống hiếm khi cho phép. Một số nhà kinh tế học còn cho rằng nền kinh tế gig hạ thấp rào cản gia nhập thị trường lao động, vì bất kỳ ai có xe hoặc máy tính xách tay đều có thể bắt đầu kiếm tiền gần như ngay lập tức.</p>
+    <p><span class="pn">[3]</span> Yet this flexibility comes at a considerable cost. Gig workers are typically classified as independent contractors rather than employees, which means they are frequently excluded from benefits such as health insurance, paid sick leave, and retirement contributions. Income can fluctuate unpredictably from week to week, leaving many workers in a state of chronic financial insecurity. Labour unions and advocacy groups have long campaigned for reclassifying gig workers as employees, arguing that companies exploit the "independent contractor" label to avoid the costs associated with a traditional workforce.</p>
+    <p class="vi-para">[3] Tuy nhiên, sự linh hoạt này phải trả giá đáng kể. Người lao động gig thường được xếp loại là nhà thầu độc lập thay vì nhân viên chính thức, nghĩa là họ thường bị loại khỏi các phúc lợi như bảo hiểm y tế, nghỉ ốm có lương và đóng góp hưu trí. Thu nhập có thể biến động khó lường từ tuần này sang tuần khác, khiến nhiều người lao động rơi vào tình trạng bất ổn tài chính kéo dài. Các công đoàn và tổ chức vận động đã từ lâu vận động để xếp loại lại người lao động gig thành nhân viên chính thức, cho rằng các công ty lợi dụng nhãn "nhà thầu độc lập" để tránh các chi phí liên quan đến lực lượng lao động truyền thống.</p>
+    <p><span class="pn">[4]</span> Governments around the world have responded with varying degrees of urgency. Some jurisdictions have introduced legislation requiring platforms to provide minimum earnings guarantees or limited benefits, while others have left the matter largely unregulated, wary of stifling an industry that has created substantial employment opportunities. Finding a middle ground — one that preserves the flexibility valued by workers while affording them greater security — remains one of the defining labour challenges of the digital age.</p>
+    <p class="vi-para">[4] Các chính phủ trên thế giới đã phản ứng với mức độ khẩn cấp khác nhau. Một số khu vực pháp lý đã ban hành luật yêu cầu các nền tảng đảm bảo mức thu nhập tối thiểu hoặc phúc lợi hạn chế, trong khi những nơi khác vẫn để vấn đề này phần lớn không được quản lý, vì lo ngại kìm hãm một ngành công nghiệp đã tạo ra nhiều cơ hội việc làm đáng kể. Việc tìm ra một điểm cân bằng — vừa giữ được sự linh hoạt mà người lao động coi trọng, vừa mang lại cho họ sự an toàn lớn hơn — vẫn là một trong những thách thức lao động mang tính quyết định của thời đại số.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">31 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. how to become a ride-hailing driver</li><li>B. the benefits and drawbacks of the gig economy, and the regulatory challenge it poses</li><li>C. the history of smartphone technology</li><li>D. why students should avoid part-time work</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày định nghĩa (đoạn 1), lợi ích (đoạn 2), bất lợi (đoạn 3), và phản ứng của chính phủ (đoạn 4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">32 · Vocabulary</span> The word <b class="k">"exemplify"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. to be a typical example of</li><li>B. to completely oppose</li><li>C. to financially support</li><li>D. to permanently ban</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "Ride-hailing drivers...exemplify a growing segment of the workforce" — họ là ví dụ điển hình cho xu hướng lao động mới này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">33 · Detail</span> According to paragraph 3, why are gig workers often excluded from benefits like health insurance?</div>
+    <ul><li>A. Because they refuse to pay for insurance</li><li>B. Because they are classified as independent contractors rather than employees</li><li>C. Because they work too few hours per week</li><li>D. Because governments have banned all benefits for gig workers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3 nêu rõ: được xếp loại là nhà thầu độc lập (independent contractors) thay vì nhân viên chính thức nên không được hưởng các phúc lợi này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">34 · Reference</span> In paragraph 3, the word <b class="k">"this flexibility"</b> refers to:</div>
+    <ul><li>A. the flexibility of smartphone apps</li><li>B. the flexibility described in paragraph 2, such as choosing one's own hours</li><li>C. the flexibility of government regulations</li><li>D. the flexibility of labour unions' demands</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "this flexibility" nối tiếp ý ở đoạn 2 về việc người lao động tự chọn giờ làm, tự do làm việc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">35 · Inference</span> It can be inferred from paragraph 4 that governments face a challenge because:</div>
+    <ul><li>A. gig work has become completely illegal everywhere</li><li>B. they must balance worker security with preserving flexibility and job creation</li><li>C. no country has ever regulated gig work</li><li>D. gig economy platforms have all gone bankrupt</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 nói rõ thách thức là tìm "middle ground" giữ được sự linh hoạt nhưng vẫn tăng an toàn cho người lao động.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">36 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"stifling"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. supporting and encouraging</li><li>B. suppressing or restricting</li><li>C. financing generously</li><li>D. publicly praising</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "wary of stifling an industry" — lo ngại việc bóp nghẹt/kìm hãm một ngành công nghiệp → stifling = kìm hãm, bóp nghẹt.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">37 · Purpose</span> Why does the author mention labour unions campaigning to reclassify gig workers in paragraph 3?</div>
+    <ul><li>A. To show that unions oppose all forms of technology</li><li>B. To illustrate one response to the financial insecurity faced by gig workers</li><li>C. To prove that gig work is illegal in most countries</li><li>D. To describe how ride-hailing apps are designed</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đây là ví dụ về hành động cụ thể nhằm giải quyết vấn đề bất ổn tài chính của lao động gig được nêu trước đó trong cùng đoạn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">38 · NOT / EXCEPT</span> All of the following are mentioned as benefits of gig work EXCEPT:</div>
+    <ul><li>A. flexible working hours</li><li>B. low barriers to entry into the workforce</li><li>C. guaranteed retirement pensions</li><li>D. suitability for students and parents balancing childcare</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> A, B, D đều nêu ở đoạn 2; "guaranteed retirement pensions" thực ra là điều gig workers THIẾU (đoạn 3), không phải lợi ích.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">39 · Tone / Attitude</span> The author's attitude toward the gig economy can best be described as:</div>
+    <ul><li>A. entirely negative and condemning</li><li>B. balanced, weighing genuine benefits against real risks</li><li>C. wholly enthusiastic with no criticism</li><li>D. sarcastic and mocking throughout</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài nêu rõ cả lợi ích (linh hoạt, tự chủ) lẫn bất lợi (thiếu phúc lợi, bất ổn thu nhập) một cách cân bằng, khách quan.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">40 · Inference</span><span class="c1tag">C1</span> The title <b class="k">"Freedom or Precarity?"</b> suggests that the gig economy involves a trade-off between:</div>
+    <ul><li>A. high pay and low pay</li><li>B. personal autonomy and job/financial insecurity</li><li>C. legal work and illegal work</li><li>D. urban jobs and rural jobs</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Freedom" ứng với sự tự do/linh hoạt (đoạn 2), "precarity" (sự bấp bênh) ứng với mất an toàn tài chính và phúc lợi (đoạn 3) → tiêu đề tóm tắt sự đánh đổi giữa hai yếu tố này.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Society &amp; Social Issues</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>gig economy</td><td>(n)</td><td>nền kinh tế việc làm tự do/ngắn hạn</td></tr>
+    <tr><td>exemplify</td><td>(v)</td><td>là ví dụ điển hình cho</td></tr>
+    <tr><td>autonomy <span class="c1tag">C1</span></td><td>(n)</td><td>quyền tự chủ</td></tr>
+    <tr><td>independent contractor</td><td>(n)</td><td>nhà thầu độc lập, lao động tự do</td></tr>
+    <tr><td>fluctuate</td><td>(v)</td><td>biến động lên xuống</td></tr>
+    <tr><td>reclassify</td><td>(v)</td><td>phân loại/xếp loại lại</td></tr>
+    <tr><td>stifle <span class="c1tag">C1</span></td><td>(v)</td><td>kìm hãm, bóp nghẹt</td></tr>
+    <tr><td>precarity <span class="c1tag">C1</span></td><td>(n)</td><td>sự bấp bênh, thiếu ổn định</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM TOÀN ĐỀ ============ -->
+  <h2>Chấm điểm toàn đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh — 40 câu:</b>
+    <table>
+      <tr><th>Bài 1 (1–10)</th><td>1-B · 2-B · 3-B · 4-A · 5-C · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 2 (11–20)</th><td>11-B · 12-B · 13-B · 14-B · 15-B · 16-B · 17-B · 18-D · 19-B · 20-B</td></tr>
+      <tr><th>Bài 3 (21–30)</th><td>21-B · 22-B · 23-B · 24-B · 25-B · 26-A · 27-B · 28-D · 29-B · 30-A</td></tr>
+      <tr><th>Bài 4 (31–40)</th><td>31-B · 32-A · 33-B · 34-B · 35-B · 36-B · 37-B · 38-C · 39-B · 40-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Cách chấm:</b> đếm số câu đúng trên tổng 40 câu, sau đó phân loại theo từng bài (mỗi bài /10) để biết chủ đề nào mình còn yếu.</p>
+    <p style="margin-top:8px; color:var(--muted)">📊 <b>Mốc tự đánh giá theo /40:</b></p>
+    <ul style="margin:4px 0 0 18px; color:var(--muted)">
+      <li><b>32–40/40 (80–100%):</b> Trình độ tốt, tương đương B2 vững hoặc chớm C1 — tập trung giải đề để nâng tốc độ.</li>
+      <li><b>24–31/40 (60–79%):</b> Đạt mức B2 cơ bản — cần giải đề kỹ từng câu sai và ôn lại các dạng câu hay nhầm.</li>
+      <li><b>16–23/40 (40–59%):</b> Nền tảng chưa vững — nên quay lại ôn từ vựng chủ đề và luyện lại từng dạng câu riêng lẻ.</li>
+      <li><b>≤15/40 (dưới 40%):</b> Cần củng cố lại kỹ năng đọc hiểu cơ bản trước khi luyện đề tiếp theo.</li>
+    </ul>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Đề full #1?</b> Ngày 2 sẽ là <b>Giải đề #1</b> — phân tích kỹ từng câu sai, tìm lại vị trí đáp án trong bài, và rút ra "sổ lỗi" theo từng dạng câu hỏi.
+  </div>
+
+</div>
+
+<footer>⏱️📝 Tuần 6 · Ngày 1 · VSTEP Reading — Đề full #1 · Làm nghiêm túc trong giờ, giải đề kỹ sau khi chấm.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 36 — ĐỀ FULL #5 · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚀 Tuần 7 · Ngày 3 — ĐỀ FULL #5: Space · Globalization · Language · Food</h1>
+  <p>4 bài đọc độc lập · làm nghiêm túc như thi thật → chấm điểm → chuẩn bị giải đề Ngày 4</p>
+  <div class="meta">
+    <span class="badge">🕐 Bấm giờ NGHIÊM 60 phút</span>
+    <span class="badge">📝 4 bài · 40 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy tắc làm ĐỀ FULL (bắt buộc nghiêm túc):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Bấm giờ đúng <b>60 phút</b> cho cả 4 bài — không dừng giữa chừng, không tra từ điển.</li>
+      <li>Làm theo thứ tự bài, phân bổ ~15 phút/bài; nếu kẹt câu nào, khoanh tạm rồi làm tiếp, quay lại sau.</li>
+      <li>Hết giờ phải nộp bài (dừng bút) dù chưa xong hết — đây là kỹ năng quản lý thời gian thi thật.</li>
+      <li>Chấm điểm ngay sau khi hết giờ bằng bảng đáp án cuối trang; KHÔNG xem đáp án trước khi làm xong.</li>
+      <li>Ngày 4 sẽ dành trọn để <b>giải đề</b> — vì vậy hôm nay chỉ tập trung làm bài và chấm điểm thô.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Nền tảng bài đọc là <b>B2</b>, xen vài câu/từ <span class="c1tag">C1</span> để kéo trần năng lực.</p>
+  </div>
+
+  <!-- ============ BÀI 1: SPACE & ASTRONOMY ============ -->
+  <h2>Bài 1 <span class="lvl">Space &amp; Astronomy</span></h2>
+
+  <div class="passage">
+    <h3>The Search for Habitable Exoplanets</h3>
+    <p><span class="pn">[1]</span> For most of human history, the question of whether life exists beyond Earth remained purely philosophical, since no telescope could detect planets orbiting distant stars. That changed dramatically in the 1990s, when astronomers confirmed the first exoplanet orbiting a Sun-like star. Since then, space missions such as Kepler and TESS have catalogued thousands of these worlds, transforming an abstract question into an active field of scientific inquiry.</p>
+    <p class="vi-para">[1] Trong phần lớn lịch sử loài người, câu hỏi liệu sự sống có tồn tại ngoài Trái Đất hay không vẫn chỉ mang tính triết học thuần túy, vì không có kính viễn vọng nào có thể phát hiện các hành tinh quay quanh những ngôi sao xa xôi. Điều đó đã thay đổi mạnh mẽ vào thập niên 1990, khi các nhà thiên văn học xác nhận hành tinh ngoài hệ Mặt Trời đầu tiên quay quanh một ngôi sao giống Mặt Trời. Kể từ đó, các sứ mệnh không gian như Kepler và TESS đã lập danh mục hàng nghìn thế giới như vậy, biến một câu hỏi trừu tượng thành một lĩnh vực nghiên cứu khoa học sôi động.</p>
+    <p><span class="pn">[2]</span> Not every exoplanet is a promising candidate for life, however. Scientists focus on the so-called "habitable zone," the narrow band of distance from a star where temperatures could allow liquid water to persist on a planet's surface. Too close, and any water would evaporate; too far, and it would freeze solid. Even within this zone, a planet also needs a suitable atmosphere and a stable orbit to sustain conditions favourable to life as we understand it.</p>
+    <p class="vi-para">[2] Tuy nhiên, không phải hành tinh ngoài hệ Mặt Trời nào cũng là ứng viên đầy hứa hẹn cho sự sống. Các nhà khoa học tập trung vào cái gọi là "vùng có thể sống được" — dải khoảng cách hẹp tính từ một ngôi sao, nơi nhiệt độ có thể cho phép nước lỏng tồn tại trên bề mặt hành tinh. Nếu quá gần, nước sẽ bốc hơi; nếu quá xa, nước sẽ đóng băng. Ngay cả trong vùng này, một hành tinh cũng cần có bầu khí quyển phù hợp và quỹ đạo ổn định để duy trì các điều kiện thuận lợi cho sự sống như chúng ta hiểu.</p>
+    <p><span class="pn">[3]</span> Detecting such planets is an extraordinary technical feat, given the vast distances involved. Astronomers rarely see exoplanets directly; instead, they infer a planet's existence by observing the tiny dimming of starlight as it passes in front of its star, a technique known as the transit method. Analysing this dimming, along with the wobble it induces in the star's motion, allows scientists to estimate the planet's size, mass, and even hints about its atmospheric composition.</p>
+    <p class="vi-para">[3] Việc phát hiện những hành tinh như vậy là một kỳ tích kỹ thuật phi thường, xét đến khoảng cách khổng lồ liên quan. Các nhà thiên văn hiếm khi nhìn thấy trực tiếp các hành tinh ngoài hệ Mặt Trời; thay vào đó, họ suy ra sự tồn tại của một hành tinh bằng cách quan sát ánh sao mờ đi nhẹ khi hành tinh đi qua phía trước ngôi sao của nó, một kỹ thuật được gọi là phương pháp quá cảnh (transit). Phân tích sự mờ đi này, cùng với dao động lắc lư mà nó gây ra trong chuyển động của ngôi sao, cho phép các nhà khoa học ước tính kích thước, khối lượng, và thậm chí cả những dấu hiệu về thành phần khí quyển của hành tinh.</p>
+    <p><span class="pn">[4]</span> Excitement about these discoveries must nevertheless be tempered with caution. Finding a planet in the habitable zone does not guarantee it harbours life, and the enormous distances involved mean that even the nearest candidates lie many years away at the speed of light, ruling out any near-term visit. Still, many researchers argue that simply confirming Earth is not unique in its capacity to support life would be one of the most profound discoveries in scientific history, reshaping humanity's understanding of its place in the cosmos.</p>
+    <p class="vi-para">[4] Tuy nhiên, sự phấn khích về những phát hiện này cần được điều tiết bằng sự thận trọng. Việc tìm thấy một hành tinh nằm trong vùng có thể sống được không đảm bảo rằng nó chứa đựng sự sống, và khoảng cách khổng lồ liên quan có nghĩa là ngay cả những ứng viên gần nhất cũng cách xa nhiều năm ánh sáng, loại trừ khả năng ghé thăm trong tương lai gần. Dù vậy, nhiều nhà nghiên cứu cho rằng chỉ riêng việc xác nhận Trái Đất không phải là duy nhất trong khả năng nuôi dưỡng sự sống cũng đã là một trong những phát hiện sâu sắc nhất trong lịch sử khoa học, làm thay đổi cách nhân loại hiểu về vị trí của mình trong vũ trụ.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. The history of telescope manufacturing</li><li>B. Efforts to find planets outside our solar system that could support life</li><li>C. Why the Sun is unique among stars</li><li>D. The cost of space missions like Kepler</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài xoay quanh việc tìm kiếm exoplanet có thể sống được — từ lịch sử phát hiện đến phương pháp và giới hạn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"catalogued"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. destroyed</li><li>B. recorded and listed systematically</li><li>C. sold</li><li>D. ignored</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "catalogued thousands of these worlds" = ghi nhận, lập danh sách một cách có hệ thống.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what happens if a planet is too far from its star?</div>
+    <ul><li>A. Water on its surface would evaporate</li><li>B. Its atmosphere disappears completely</li><li>C. Water would freeze solid</li><li>D. Its orbit becomes unstable</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "too far, and it would freeze solid" — quá xa thì nước sẽ đóng băng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"it"</b> (in "as it passes in front of its star") refers to:</div>
+    <ul><li>A. starlight</li><li>B. the transit method</li><li>C. the planet</li><li>D. the wobble</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Chủ thể "đi qua phía trước ngôi sao" chính là hành tinh (planet), gây ra hiện tượng mờ sáng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that direct observation of exoplanets is:</div>
+    <ul><li>A. the standard method used by most astronomers</li><li>B. uncommon, so scientists rely on indirect evidence</li><li>C. impossible under any circumstances</li><li>D. more accurate than the transit method</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Astronomers rarely see exoplanets directly; instead, they infer..." → chủ yếu dùng phương pháp gián tiếp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"tempered"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. increased greatly</li><li>B. moderated or balanced</li><li>C. completely removed</li><li>D. celebrated publicly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Excitement...must nevertheless be tempered with caution" — sự phấn khích cần được điều tiết/kiềm chế bởi sự thận trọng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the distance "many years away at the speed of light" in paragraph 4?</div>
+    <ul><li>A. To praise the speed of modern spacecraft</li><li>B. To explain why visiting these planets soon is not feasible</li><li>C. To criticise the Kepler mission</li><li>D. To argue that exoplanets do not exist</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này minh họa lý do "ruling out any near-term visit" — không thể ghé thăm trong tương lai gần.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as requirements for a habitable planet EXCEPT:</div>
+    <ul><li>A. a suitable atmosphere</li><li>B. a stable orbit</li><li>C. presence of liquid water</li><li>D. a large number of moons</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 2 nhắc atmosphere, stable orbit, liquid water — không hề nhắc số lượng mặt trăng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the search for habitable exoplanets is best described as:</div>
+    <ul><li>A. dismissive and skeptical</li><li>B. cautiously hopeful</li><li>C. completely certain of success</li><li>D. indifferent</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả nhắc cả giới hạn (khoảng cách, chưa chắc có sự sống) lẫn kỳ vọng ("one of the most profound discoveries") → thận trọng nhưng lạc quan.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> What does the final sentence of the passage suggest about scientists' motivation?</div>
+    <ul><li>A. They mainly want financial profit from space missions</li><li>B. They are driven partly by a desire to understand humanity's place in the universe</li><li>C. They believe Earth is definitely the only planet with life</li><li>D. They plan to abandon exoplanet research soon</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "reshaping humanity's understanding of its place in the cosmos" → động lực triết học/khoa học sâu xa, không phải lợi nhuận.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Space &amp; Astronomy</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>exoplanet</td><td>(n)</td><td>hành tinh ngoài hệ Mặt Trời</td></tr>
+    <tr><td>habitable zone</td><td>(n phr)</td><td>vùng có thể sống được (quanh một ngôi sao)</td></tr>
+    <tr><td>catalogue <span class="c1tag">C1</span></td><td>(v)</td><td>ghi danh mục, hệ thống hóa</td></tr>
+    <tr><td>evaporate</td><td>(v)</td><td>bốc hơi</td></tr>
+    <tr><td>transit method</td><td>(n phr)</td><td>phương pháp quá cảnh (quan sát độ mờ ánh sáng sao)</td></tr>
+    <tr><td>wobble</td><td>(n/v)</td><td>sự lắc lư, dao động nhẹ</td></tr>
+    <tr><td>temper <span class="c1tag">C1</span></td><td>(v)</td><td>điều tiết, làm dịu bớt</td></tr>
+    <tr><td>harbour (life)</td><td>(v)</td><td>chứa đựng, nuôi dưỡng (sự sống)</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2: MONEY & GLOBALIZATION ============ -->
+  <h2>Bài 2 <span class="lvl">Money &amp; Globalization</span></h2>
+
+  <div class="passage">
+    <h3>The Double-Edged Sword of Economic Globalization</h3>
+    <p><span class="pn">[1]</span> Over the past few decades, globalization has knitted together economies that were once largely separate, allowing goods, capital, and information to flow across borders with unprecedented ease. A shirt sold in a European shopping mall might be designed in Italy, manufactured in Bangladesh, and financed through a bank headquartered in the United States. This intricate web of interdependence has lowered prices for consumers and lifted millions out of poverty in developing nations.</p>
+    <p class="vi-para">[1] Trong vài thập kỷ qua, toàn cầu hóa đã gắn kết các nền kinh tế vốn từng phần lớn tách biệt với nhau, cho phép hàng hóa, vốn và thông tin lưu chuyển qua biên giới với sự dễ dàng chưa từng có. Một chiếc áo sơ mi bán trong một trung tâm mua sắm ở châu Âu có thể được thiết kế tại Ý, sản xuất tại Bangladesh, và được tài trợ vốn qua một ngân hàng có trụ sở tại Hoa Kỳ. Mạng lưới phụ thuộc lẫn nhau phức tạp này đã làm giảm giá cho người tiêu dùng và giúp hàng triệu người ở các nước đang phát triển thoát nghèo.</p>
+    <p><span class="pn">[2]</span> Proponents of globalization point to remarkable gains in efficiency. When companies can manufacture goods wherever labour and materials are cheapest, they lower production costs, and much of that saving is eventually passed on to consumers. Furthermore, the spread of foreign investment has brought new jobs, technology, and infrastructure to regions that previously lacked them, accelerating economic development in ways that would have been unimaginable a century ago.</p>
+    <p class="vi-para">[2] Những người ủng hộ toàn cầu hóa chỉ ra những lợi ích đáng kể về hiệu quả. Khi các công ty có thể sản xuất hàng hóa ở bất cứ nơi nào có nhân công và nguyên liệu rẻ nhất, họ giảm được chi phí sản xuất, và phần lớn khoản tiết kiệm đó cuối cùng được chuyển sang cho người tiêu dùng. Hơn nữa, sự lan rộng của đầu tư nước ngoài đã mang lại việc làm mới, công nghệ và cơ sở hạ tầng cho những khu vực trước đây còn thiếu thốn, thúc đẩy phát triển kinh tế theo cách mà một thế kỷ trước không thể tưởng tượng nổi.</p>
+    <p><span class="pn">[3]</span> Critics, however, contend that the benefits of globalization have been distributed unevenly. Workers in wealthier countries sometimes see their jobs relocated overseas, while factory employees in developing nations may endure poor wages and hazardous conditions. Moreover, the free movement of capital allows corporations to shift profits to countries with lower taxes, a practice that has drawn accusations of eroding the tax base that governments rely on to fund public services.</p>
+    <p class="vi-para">[3] Tuy nhiên, những người phản đối cho rằng lợi ích của toàn cầu hóa được phân bổ không đồng đều. Người lao động ở các nước giàu đôi khi thấy công việc của mình bị chuyển ra nước ngoài, trong khi công nhân nhà máy ở các nước đang phát triển có thể phải chịu mức lương thấp và điều kiện làm việc nguy hiểm. Hơn nữa, dòng vốn di chuyển tự do cho phép các tập đoàn chuyển lợi nhuận sang những quốc gia có thuế suất thấp hơn — một hành vi bị cáo buộc là làm xói mòn nguồn thu thuế mà các chính phủ dựa vào để tài trợ cho dịch vụ công.</p>
+    <p><span class="pn">[4]</span> The debate has grown more urgent as global supply chains have proved vulnerable to disruption, whether from pandemics, wars, or natural disasters. Consequently, some governments are now reconsidering the wisdom of relying so heavily on distant suppliers, favouring policies that encourage domestic production even at higher cost. Whether this marks a genuine retreat from globalization or merely a recalibration of its excesses remains a matter of considerable debate among economists.</p>
+    <p class="vi-para">[4] Cuộc tranh luận trở nên cấp bách hơn khi các chuỗi cung ứng toàn cầu đã cho thấy sự dễ tổn thương trước gián đoạn, dù là do đại dịch, chiến tranh hay thiên tai. Do đó, một số chính phủ hiện đang cân nhắc lại sự khôn ngoan của việc phụ thuộc quá nhiều vào các nhà cung cấp xa xôi, ưu tiên các chính sách khuyến khích sản xuất trong nước dù chi phí cao hơn. Liệu điều này đánh dấu một sự rút lui thực sự khỏi toàn cầu hóa hay chỉ đơn thuần là sự điều chỉnh lại những thái quá của nó vẫn còn là vấn đề gây tranh cãi đáng kể giữa các nhà kinh tế học.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. how to design fashionable clothing</li><li>B. the benefits and drawbacks of economic globalization</li><li>C. why banks should be located in the United States</li><li>D. the history of Bangladesh's economy</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả lợi ích (đoạn 2) và bất lợi (đoạn 3), cùng tranh luận hiện tại (đoạn 4) về toàn cầu hóa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"interdependence"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. total isolation</li><li>B. mutual reliance between parties</li><li>C. financial loss</li><li>D. competition without cooperation</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "intricate web of interdependence" = mạng lưới phụ thuộc lẫn nhau phức tạp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why do companies manufacture goods in certain locations?</div>
+    <ul><li>A. Because the government forces them to</li><li>B. Because labour and materials are cheaper there</li><li>C. Because consumers demand it</li><li>D. Because of climate conditions</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "manufacture goods wherever labour and materials are cheapest" — chọn nơi có chi phí thấp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"this practice"</b> refers to:</div>
+    <ul><li>A. relocating factory jobs overseas</li><li>B. shifting corporate profits to lower-tax countries</li><li>C. paying higher wages to workers</li><li>D. investing in infrastructure</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó nói về "shift profits to countries with lower taxes" → "this practice" = việc chuyển lợi nhuận đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that globalization's critics believe:</div>
+    <ul><li>A. all workers benefit equally from globalization</li><li>B. the gains and losses of globalization are unequally shared</li><li>C. corporations always pay high taxes</li><li>D. governments have unlimited funds for public services</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "benefits...have been distributed unevenly" và các ví dụ tiếp theo củng cố ý này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span> The word <b class="k">"eroding"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. strengthening</li><li>B. gradually weakening or reducing</li><li>C. celebrating</li><li>D. expanding rapidly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "eroding the tax base" = làm xói mòn/suy yếu dần nguồn thu thuế.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention pandemics, wars, and natural disasters in paragraph 4?</div>
+    <ul><li>A. To list unrelated world events</li><li>B. To explain why global supply chains have proved vulnerable</li><li>C. To argue that globalization has no risks</li><li>D. To criticise domestic production policies</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Các sự kiện này được nêu như nguyên nhân gây gián đoạn chuỗi cung ứng toàn cầu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as effects of globalization EXCEPT:</div>
+    <ul><li>A. lower consumer prices</li><li>B. new jobs in developing regions</li><li>C. relocated jobs in wealthier countries</li><li>D. a sharp decline in international trade agreements</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều xuất hiện trong bài; việc "hiệp định thương mại suy giảm mạnh" không được nhắc tới.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall tone toward globalization is best described as:</div>
+    <ul><li>A. one-sidedly negative</li><li>B. balanced, presenting both sides of the debate</li><li>C. purely celebratory</li><li>D. sarcastic and mocking</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả lập luận ủng hộ (đoạn 2) và phản đối (đoạn 3), không nghiêng hẳn về phía nào.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final sentence of the passage ("Whether this marks...recalibration of its excesses") implies that:</div>
+    <ul><li>A. economists universally agree globalization is ending</li><li>B. the future direction of globalization is still uncertain and debated</li><li>C. domestic production has already failed everywhere</li><li>D. supply chain disruptions have stopped completely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "remains a matter of considerable debate" → chưa có sự đồng thuận, tương lai còn bỏ ngỏ.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Money &amp; Globalization</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>knit together</td><td>(phr v)</td><td>gắn kết, liên kết chặt chẽ</td></tr>
+    <tr><td>interdependence <span class="c1tag">C1</span></td><td>(n)</td><td>sự phụ thuộc lẫn nhau</td></tr>
+    <tr><td>proponent</td><td>(n)</td><td>người ủng hộ</td></tr>
+    <tr><td>foreign investment</td><td>(n phr)</td><td>đầu tư nước ngoài</td></tr>
+    <tr><td>relocate</td><td>(v)</td><td>di dời, chuyển địa điểm</td></tr>
+    <tr><td>erode <span class="c1tag">C1</span></td><td>(v)</td><td>xói mòn, làm suy yếu dần</td></tr>
+    <tr><td>tax base</td><td>(n)</td><td>cơ sở/nguồn thu thuế</td></tr>
+    <tr><td>recalibration <span class="c1tag">C1</span></td><td>(n)</td><td>sự điều chỉnh lại</td></tr>
+  </table>
+
+  <!-- ============ BÀI 3: LANGUAGE & LINGUISTICS ============ -->
+  <h2>Bài 3 <span class="lvl">Language &amp; Linguistics</span></h2>
+
+  <div class="passage">
+    <h3>Why Languages Die — and Why It Matters</h3>
+    <p><span class="pn">[1]</span> Of the roughly seven thousand languages spoken worldwide today, linguists estimate that nearly half could vanish by the end of this century. A language is considered endangered when it is no longer being passed on to children, and it becomes extinct once its last fluent speaker dies. While this process has occurred throughout history, the rate of language loss has accelerated dramatically in recent decades, driven largely by globalization and the dominance of a small number of major world languages.</p>
+    <p class="vi-para">[1] Trong số khoảng bảy nghìn ngôn ngữ đang được sử dụng trên toàn thế giới ngày nay, các nhà ngôn ngữ học ước tính rằng gần một nửa có thể biến mất vào cuối thế kỷ này. Một ngôn ngữ được coi là có nguy cơ biến mất khi nó không còn được truyền lại cho trẻ em, và nó trở nên tuyệt chủng khi người nói thông thạo cuối cùng qua đời. Mặc dù quá trình này đã diễn ra xuyên suốt lịch sử, tốc độ mất ngôn ngữ đã tăng nhanh đáng kể trong những thập kỷ gần đây, phần lớn do toàn cầu hóa và sự thống trị của một số ít ngôn ngữ lớn trên thế giới.</p>
+    <p><span class="pn">[2]</span> The causes of language death are varied but interconnected. Economic pressures often push speakers of minority languages to adopt a dominant tongue in order to access education, employment, or government services. In many cases, national policies have historically discouraged or even banned the use of indigenous languages in schools, hastening their decline. Migration to cities further erodes linguistic diversity, as younger generations abandon their ancestral language in favour of one shared more widely by their new community.</p>
+    <p class="vi-para">[2] Nguyên nhân dẫn đến sự biến mất của ngôn ngữ rất đa dạng nhưng có liên quan mật thiết với nhau. Áp lực kinh tế thường thúc đẩy người nói các ngôn ngữ thiểu số chuyển sang dùng ngôn ngữ thống trị để có thể tiếp cận giáo dục, việc làm, hoặc dịch vụ công. Trong nhiều trường hợp, các chính sách quốc gia trong lịch sử đã ngăn cản hoặc thậm chí cấm sử dụng ngôn ngữ bản địa trong trường học, đẩy nhanh sự suy tàn của chúng. Việc di cư lên thành phố càng làm xói mòn thêm sự đa dạng ngôn ngữ, khi thế hệ trẻ từ bỏ ngôn ngữ tổ tiên để dùng ngôn ngữ được cộng đồng mới của họ sử dụng rộng rãi hơn.</p>
+    <p><span class="pn">[3]</span> Linguists argue that the loss of a language represents far more than the disappearance of a communication tool. Each language encodes a unique way of categorising the world, from intricate kinship terms to vocabulary describing local plants, animals, and weather patterns accumulated over centuries. When a language dies, this store of cultural and ecological knowledge frequently disappears with it, since much of it was never written down.</p>
+    <p class="vi-para">[3] Các nhà ngôn ngữ học cho rằng việc mất một ngôn ngữ không chỉ đơn thuần là mất đi một công cụ giao tiếp. Mỗi ngôn ngữ mã hóa một cách nhìn nhận thế giới độc đáo, từ những thuật ngữ chỉ quan hệ họ hàng phức tạp cho đến vốn từ mô tả thực vật, động vật và các hình thái thời tiết địa phương được tích lũy qua nhiều thế kỷ. Khi một ngôn ngữ chết đi, kho tàng tri thức văn hóa và sinh thái này thường biến mất cùng với nó, vì phần lớn tri thức đó chưa từng được ghi chép lại.</p>
+    <p><span class="pn">[4]</span> Efforts to reverse this trend have met with mixed success. Some communities have launched revitalization programmes, recording elderly speakers, creating dictionaries, and teaching the language in schools. Hebrew's revival as a living, everyday language after centuries of being used primarily for religious texts is often cited as a rare example of an endangered language being restored to widespread use. Yet such successes remain exceptional, and most linguists agree that without sustained investment and genuine community will, the twenty-first century is likely to witness the permanent silencing of thousands of tongues.</p>
+    <p class="vi-para">[4] Những nỗ lực đảo ngược xu hướng này đã đạt được thành công không đồng đều. Một số cộng đồng đã triển khai các chương trình phục hồi, ghi âm những người cao tuổi nói ngôn ngữ đó, biên soạn từ điển và dạy ngôn ngữ trong trường học. Sự hồi sinh của tiếng Hebrew như một ngôn ngữ sống, dùng hằng ngày sau nhiều thế kỷ chủ yếu chỉ được dùng cho các văn bản tôn giáo, thường được nhắc đến như một ví dụ hiếm hoi về việc một ngôn ngữ có nguy cơ biến mất được khôi phục để sử dụng rộng rãi. Tuy nhiên, những thành công như vậy vẫn là ngoại lệ, và hầu hết các nhà ngôn ngữ học đồng ý rằng nếu không có đầu tư bền vững và ý chí thực sự từ cộng đồng, thế kỷ hai mươi mốt nhiều khả năng sẽ chứng kiến sự im lặng vĩnh viễn của hàng nghìn ngôn ngữ.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is primarily concerned with:</div>
+    <ul><li>A. the grammar rules of endangered languages</li><li>B. why languages disappear and why this loss matters</li><li>C. the history of the Hebrew language only</li><li>D. how to teach children a second language</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi từ nguyên nhân (đoạn 2), hậu quả/ý nghĩa (đoạn 3), đến nỗ lực khôi phục (đoạn 4) — đúng chủ đề "tại sao ngôn ngữ biến mất và vì sao điều đó quan trọng".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"endangered"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. widely spoken</li><li>B. at risk of disappearing</li><li>C. newly created</li><li>D. officially recognized</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu định nghĩa ngay sau: "no longer being passed on to children" → có nguy cơ biến mất.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why do speakers of minority languages often adopt a dominant tongue?</div>
+    <ul><li>A. To preserve their cultural heritage</li><li>B. To gain access to education, employment, or government services</li><li>C. Because dominant languages are easier to learn</li><li>D. Because minority languages have no grammar</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "push speakers...to adopt a dominant tongue in order to access education, employment, or government services."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"it"</b> (in "this store of...knowledge frequently disappears with it") refers to:</div>
+    <ul><li>A. the community</li><li>B. the language</li><li>C. the vocabulary</li><li>D. the weather</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "When a language dies, this store...disappears with it" → "it" = ngôn ngữ đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that much traditional ecological knowledge is lost because:</div>
+    <ul><li>A. it was deliberately destroyed by governments</li><li>B. it was never recorded in writing</li><li>C. scientists refused to study it</li><li>D. it was translated into other languages</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "since much of it was never written down" — thông tin không được ghi chép lại nên mất theo ngôn ngữ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"hastening"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. slowing down</li><li>B. speeding up</li><li>C. reversing</li><li>D. preventing</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "hastening their decline" = làm cho sự suy tàn diễn ra nhanh hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the revival of Hebrew in paragraph 4?</div>
+    <ul><li>A. To argue that all languages can be easily revived</li><li>B. To provide a rare successful example of language revitalization</li><li>C. To criticise religious use of language</li><li>D. To explain why Hebrew is difficult to learn</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Được giới thiệu như "a rare example of an endangered language being restored to widespread use."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as causes of language death EXCEPT:</div>
+    <ul><li>A. economic pressure to adopt dominant languages</li><li>B. government policies discouraging indigenous languages</li><li>C. migration to cities</li><li>D. a global shortage of language teachers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều được nêu trong đoạn 2; "thiếu giáo viên ngôn ngữ toàn cầu" không được nhắc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the future of endangered languages is best described as:</div>
+    <ul><li>A. entirely optimistic</li><li>B. largely pessimistic but acknowledging some success</li><li>C. completely indifferent</li><li>D. angrily accusatory</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "such successes remain exceptional" và dự báo "permanent silencing of thousands of tongues" → nghiêng về bi quan, dù có ghi nhận thành công hiếm hoi (Hebrew).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> What does the passage imply about the relationship between language and culture?</div>
+    <ul><li>A. They are completely unrelated</li><li>B. A language's disappearance often means the loss of unique cultural and ecological knowledge</li><li>C. Culture always survives even after a language disappears</li><li>D. Only written languages carry cultural knowledge</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3 khẳng định mất ngôn ngữ kéo theo mất "cultural and ecological knowledge" tích lũy qua nhiều thế kỷ.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Language &amp; Linguistics</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>endangered</td><td>(adj)</td><td>có nguy cơ tuyệt chủng/biến mất</td></tr>
+    <tr><td>extinct</td><td>(adj)</td><td>đã tuyệt chủng, không còn tồn tại</td></tr>
+    <tr><td>indigenous</td><td>(adj)</td><td>bản địa</td></tr>
+    <tr><td>hasten <span class="c1tag">C1</span></td><td>(v)</td><td>đẩy nhanh, thúc đẩy nhanh hơn</td></tr>
+    <tr><td>kinship terms</td><td>(n phr)</td><td>từ ngữ chỉ quan hệ họ hàng</td></tr>
+    <tr><td>revitalization <span class="c1tag">C1</span></td><td>(n)</td><td>sự phục hồi sức sống (cho ngôn ngữ)</td></tr>
+    <tr><td>fluent speaker</td><td>(n phr)</td><td>người nói thông thạo</td></tr>
+    <tr><td>sustained investment</td><td>(n phr)</td><td>sự đầu tư bền vững, liên tục</td></tr>
+  </table>
+
+  <!-- ============ BÀI 4: FOOD & NUTRITION ============ -->
+  <h2>Bài 4 <span class="lvl">Food &amp; Nutrition</span></h2>
+
+  <div class="passage">
+    <h3>Ultra-Processed Foods and the Modern Diet</h3>
+    <p><span class="pn">[1]</span> Walk down almost any supermarket aisle today and shelves are dominated by products that bear little resemblance to the raw ingredients from which they were made. These items, commonly labelled "ultra-processed foods," typically undergo extensive industrial transformation and contain additives such as preservatives, artificial flavourings, and emulsifiers rarely found in a home kitchen. Convenient, affordable, and often engineered to be highly palatable, they now constitute a substantial share of daily caloric intake in many countries.</p>
+    <p class="vi-para">[1] Đi dọc theo hầu như bất kỳ lối đi nào trong siêu thị ngày nay, ta sẽ thấy các kệ hàng chủ yếu là những sản phẩm hầu như không còn giống với nguyên liệu thô ban đầu tạo ra chúng. Những sản phẩm này, thường được gọi là "thực phẩm siêu chế biến," thường trải qua quá trình biến đổi công nghiệp sâu rộng và chứa các chất phụ gia như chất bảo quản, hương liệu nhân tạo và chất nhũ hóa hiếm khi có trong bếp gia đình. Tiện lợi, giá cả phải chăng, và thường được thiết kế để có hương vị hấp dẫn, chúng hiện chiếm một phần đáng kể trong lượng calo tiêu thụ hằng ngày ở nhiều quốc gia.</p>
+    <p><span class="pn">[2]</span> Nutrition researchers have grown increasingly concerned about the health consequences of this shift. A growing body of evidence links high consumption of ultra-processed foods with elevated risks of obesity, type 2 diabetes, and cardiovascular disease. Some scientists suspect that these foods are engineered to override the body's natural satiety signals, encouraging people to eat more than they otherwise would, though the precise biological mechanisms remain an active area of investigation.</p>
+    <p class="vi-para">[2] Các nhà nghiên cứu dinh dưỡng ngày càng lo ngại về hậu quả sức khỏe của sự thay đổi này. Ngày càng có nhiều bằng chứng cho thấy việc tiêu thụ nhiều thực phẩm siêu chế biến liên quan đến nguy cơ gia tăng béo phì, tiểu đường tuýp 2, và bệnh tim mạch. Một số nhà khoa học nghi ngờ rằng những thực phẩm này được thiết kế để lấn át tín hiệu no tự nhiên của cơ thể, khiến người ta ăn nhiều hơn mức bình thường, dù các cơ chế sinh học chính xác vẫn đang được tích cực nghiên cứu.</p>
+    <p><span class="pn">[3]</span> Not everyone agrees, however, on how the term "ultra-processed" should be defined or applied. Critics of the classification argue that lumping together vastly different products — from sugary sodas to fortified breakfast cereals — obscures important nutritional distinctions and may unfairly stigmatise foods that, while processed, still provide valuable nutrients. Industry representatives further contend that processing itself is not inherently harmful, pointing out that techniques such as pasteurisation and freezing have long improved food safety and reduced waste.</p>
+    <p class="vi-para">[3] Tuy nhiên, không phải ai cũng đồng ý về cách định nghĩa hay áp dụng thuật ngữ "siêu chế biến." Những người phê phán cách phân loại này cho rằng việc gộp chung các sản phẩm rất khác nhau — từ nước ngọt có đường đến ngũ cốc ăn sáng bổ sung dinh dưỡng — làm mờ đi những khác biệt dinh dưỡng quan trọng và có thể gán nhãn tiêu cực một cách bất công cho những thực phẩm dù đã qua chế biến nhưng vẫn cung cấp dưỡng chất có giá trị. Đại diện ngành công nghiệp cũng lập luận thêm rằng bản thân việc chế biến không vốn dĩ có hại, chỉ ra rằng các kỹ thuật như tiệt trùng Pasteur và đông lạnh từ lâu đã cải thiện an toàn thực phẩm và giảm lãng phí.</p>
+    <p><span class="pn">[4]</span> Despite this disagreement, public health authorities in several countries have begun recommending that consumers reduce their reliance on heavily processed products in favour of whole or minimally processed foods. Achieving this shift, however, is far from straightforward, since ultra-processed foods are often cheaper and more accessible than fresh alternatives, particularly for low-income households. Addressing the problem, most experts agree, will require not only individual dietary changes but also broader reforms to food pricing, labelling, and availability.</p>
+    <p class="vi-para">[4] Bất chấp sự bất đồng này, cơ quan y tế công cộng ở một số quốc gia đã bắt đầu khuyến nghị người tiêu dùng giảm sự phụ thuộc vào các sản phẩm chế biến nặng, thay vào đó ưu tiên thực phẩm nguyên chất hoặc ít qua chế biến. Tuy nhiên, việc thực hiện thay đổi này không hề đơn giản, vì thực phẩm siêu chế biến thường rẻ hơn và dễ tiếp cận hơn so với các lựa chọn thực phẩm tươi, đặc biệt đối với các hộ gia đình thu nhập thấp. Hầu hết các chuyên gia đồng ý rằng để giải quyết vấn đề này sẽ cần không chỉ thay đổi chế độ ăn của từng cá nhân mà còn cả những cải cách rộng hơn về giá cả, nhãn mác, và khả năng tiếp cận thực phẩm.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. recipes for home cooking</li><li>B. the rise of ultra-processed foods and the debate over their health effects</li><li>C. the history of supermarkets</li><li>D. how to grow vegetables at home</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày sự phổ biến của thực phẩm siêu chế biến, lo ngại sức khỏe, tranh cãi về định nghĩa, và giải pháp chính sách.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"palatable"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. expensive</li><li>B. pleasant to taste</li><li>C. difficult to digest</li><li>D. brightly coloured</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "engineered to be highly palatable" = được thiết kế để có hương vị hấp dẫn, dễ ăn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, high consumption of ultra-processed foods is linked to which health risks?</div>
+    <ul><li>A. Obesity, type 2 diabetes, and cardiovascular disease</li><li>B. Only minor skin irritation</li><li>C. Improved digestion</li><li>D. Reduced risk of all diseases</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Nêu rõ trong câu: "elevated risks of obesity, type 2 diabetes, and cardiovascular disease."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"this classification"</b> refers to:</div>
+    <ul><li>A. pasteurisation techniques</li><li>B. the "ultra-processed" category</li><li>C. cardiovascular disease</li><li>D. food pricing reforms</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Critics of the classification argue..." — ám chỉ cách phân loại "ultra-processed" nêu ở câu trước.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that some critics believe the "ultra-processed" label:</div>
+    <ul><li>A. is scientifically flawless and needs no revision</li><li>B. may oversimplify meaningful differences between food products</li><li>C. only applies to sugary sodas</li><li>D. was created by food companies</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "lumping together vastly different products...obscures important nutritional distinctions" → nhãn này có thể che khuất sự khác biệt quan trọng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"stigmatise"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. promote positively</li><li>B. unfairly label as bad or shameful</li><li>C. financially reward</li><li>D. scientifically test</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "unfairly stigmatise foods" = gán nhãn tiêu cực một cách bất công.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention pasteurisation and freezing in paragraph 3?</div>
+    <ul><li>A. To show that all processing improves food safety with no drawbacks</li><li>B. To support the industry argument that processing is not inherently harmful</li><li>C. To criticise public health authorities</li><li>D. To explain how sodas are manufactured</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Được nêu như ví dụ minh họa cho lập luận của ngành công nghiệp rằng chế biến tự nó không có hại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as challenges to reducing ultra-processed food consumption EXCEPT:</div>
+    <ul><li>A. these foods are often cheaper than fresh alternatives</li><li>B. they are more accessible, especially for low-income households</li><li>C. the need for broader reforms in pricing and labelling</li><li>D. a total absence of any scientific research on the topic</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều được nêu trong đoạn 4; ngược lại, bài cho thấy có "a growing body of evidence" — nghiên cứu khoa học tồn tại, không thiếu hoàn toàn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's tone throughout the passage is best described as:</div>
+    <ul><li>A. alarmist and one-sided</li><li>B. balanced, presenting scientific concern alongside industry counterarguments</li><li>C. purely promotional of processed foods</li><li>D. humorous and light-hearted</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả lo ngại sức khỏe (đoạn 2) và phản biện từ ngành công nghiệp/nhà phê bình (đoạn 3), kết bằng giải pháp thực tế (đoạn 4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final paragraph implies that solving the problem of ultra-processed food consumption requires:</div>
+    <ul><li>A. only personal willpower from individuals</li><li>B. banning all processed foods immediately</li><li>C. a combination of individual choices and systemic policy changes</li><li>D. relying solely on the food industry to self-regulate</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "will require not only individual dietary changes but also broader reforms to food pricing, labelling, and availability" → cần cả hai cấp độ, cá nhân và chính sách.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Food &amp; Nutrition</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>ultra-processed food</td><td>(n phr)</td><td>thực phẩm siêu chế biến</td></tr>
+    <tr><td>additive</td><td>(n)</td><td>chất phụ gia</td></tr>
+    <tr><td>palatable <span class="c1tag">C1</span></td><td>(adj)</td><td>ngon miệng, dễ ăn</td></tr>
+    <tr><td>satiety signal</td><td>(n phr)</td><td>tín hiệu no (cơ thể)</td></tr>
+    <tr><td>stigmatise <span class="c1tag">C1</span></td><td>(v)</td><td>gán nhãn tiêu cực, kỳ thị</td></tr>
+    <tr><td>pasteurisation</td><td>(n)</td><td>phương pháp tiệt trùng Pasteur</td></tr>
+    <tr><td>minimally processed</td><td>(adj phr)</td><td>ít qua chế biến</td></tr>
+    <tr><td>reliance on</td><td>(n phr)</td><td>sự phụ thuộc vào</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM TOÀN ĐỀ ============ -->
+  <h2>Chấm điểm toàn đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh (40 câu):</b>
+    <table>
+      <tr><th>Bài 1 · Space</th><td>1-B · 2-B · 3-C · 4-C · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 2 · Globalization</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 3 · Language</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 4 · Food</th><td>1-B · 2-B · 3-A · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-C</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> đếm tổng số câu đúng/40 và ghi lại số câu sai theo từng dạng (Main idea, Vocabulary, Detail, Reference, Inference, Purpose, NOT/EXCEPT, Tone) vào "sổ lỗi". Đây sẽ là nguyên liệu chính cho buổi giải đề Ngày 4.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Mốc tự đánh giá:</b> 32–40/40 → nền rất vững, sẵn sàng lên đề khó hơn · 24–31/40 → ổn, cần giải đề kỹ những dạng hay sai · 16–23/40 → nắm được cấu trúc nhưng từ vựng/suy luận còn yếu, nên đọc lại kỹ cả 4 bài · dưới 16/40 → nên ôn lại các Ngày luyện tập trước khi tiếp tục đề full tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Đề full #5?</b> Ngày 4 sẽ là <b>Giải đề #5</b> — cùng đi lại từng câu sai, phân tích bẫy, và bổ sung từ vựng còn thiếu. Đừng bỏ qua bước này, nó quan trọng hơn cả việc làm đề!
+  </div>
+
+</div>
+
+<footer>🚀 Tuần 7 · Ngày 3 · VSTEP Reading — ĐỀ FULL #5 · Bấm giờ nghiêm túc hôm nay, hiểu sâu vào ngày mai.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

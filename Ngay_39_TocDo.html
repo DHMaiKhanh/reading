@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 8 · Ngày 2 — Luyện tốc độ 13 phút/bài · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+  .timetag { display:inline-block; font-size:0.72rem; font-weight:700; padding:2px 10px; border-radius:10px; background:#3a1f1f; color:#ffb4b4; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+  .danger { border-left: 4px solid #ff5d5d; }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+
+  .checklist { margin: 6px 0 0 0; list-style: none; }
+  .checklist li { padding: 8px 10px 8px 34px; margin: 6px 0; position: relative; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 8px; }
+  .checklist li::before { content: "☐"; position: absolute; left: 10px; color: var(--accent); font-size: 1.1rem; top: 6px; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⏱️ Tuần 8 · Ngày 2 — Luyện tốc độ: 13 phút/bài (nhanh hơn thi thật)</h1>
+  <p>Ép tốc độ đọc + xử lý câu hỏi nhanh hơn thời gian thi thật, chủ đề trộn</p>
+  <div class="meta">
+    <span class="badge">🕐 13 phút/bài × 2 bài</span>
+    <span class="badge">🟠 B2 chuẩn VSTEP</span>
+    <span class="badge">📝 2 bài · 10 câu/bài · chủ đề trộn</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card danger">
+    <b>⚡ Quy tắc hôm nay — LUYỆN TỐC ĐỘ:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Bấm giờ <b>nghiêm ngặt 13 phút</b> cho mỗi bài (đề thi thật cho 15 phút/bài — hôm nay ép nhanh hơn 2 phút).</li>
+      <li>Trong 13 phút đó: đọc bài + làm hết 10 câu — <b>không được dừng đồng hồ</b>.</li>
+      <li>Hết giờ là hết giờ: câu nào chưa làm thì khoanh đại rồi <b>dừng bút ngay</b>, không nán lại "làm thêm chút".</li>
+      <li><b>Không quay lại sửa</b> đáp án đã chọn sau khi đã đọc xong câu tiếp theo — giữ đúng phản xạ tốc độ như phòng thi.</li>
+      <li>Nghỉ 2–3 phút giữa 2 bài rồi mới bấm giờ bài 2 (giống giờ giải lao thật).</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">🎯 Mục tiêu: giữ được <b>~7/10</b> điểm dù bị ép thời gian → nghĩa là tốc độ đọc thật của bạn đã vượt yêu cầu đề thi, phòng hờ khi vào phòng thi bị mất thời gian vì lý do khác (tô đáp án, đọc đề chậm phút đầu…).</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài 1 <span class="lvl">Innovation</span> <span class="timetag">⏱ 13 phút</span></h2>
+
+  <div class="passage">
+    <h3>Rethinking the Wheel: Everyday Innovation</h3>
+    <p><span class="pn">[1]</span> When people picture innovation, they often imagine dramatic breakthroughs like the smartphone or the electric car. Yet many of the most influential inventions are far more modest, born from a simple frustration with an everyday task. The wheeled suitcase is a classic example: for centuries, travellers hauled heavy trunks by hand, and it was not until the 1970s that someone finally attached wheels to a case, saving countless backs and shoulders. What is striking is how obvious the idea seems in hindsight, which raises the question of why it took so long to appear.</p>
+    <p class="vi-para">[1] Khi nghĩ đến sự đổi mới, người ta thường hình dung những bước đột phá lớn lao như điện thoại thông minh hay xe điện. Nhưng nhiều phát minh có ảnh hưởng nhất lại khiêm tốn hơn nhiều, ra đời từ một sự bực bội đơn giản với một công việc thường nhật. Chiếc vali có bánh xe là một ví dụ điển hình: suốt nhiều thế kỷ, người đi đường phải kéo lê những chiếc rương nặng bằng tay, và mãi đến những năm 1970 mới có người gắn bánh xe vào vali, giúp cứu vô số tấm lưng và bờ vai. Điều đáng chú ý là ý tưởng đó có vẻ hiển nhiên đến thế nào khi nhìn lại, khiến người ta đặt câu hỏi vì sao nó lại xuất hiện muộn đến vậy.</p>
+    <p><span class="pn">[2]</span> One explanation lies in the psychology of habit. People tend to accept inconvenience as normal once they have grown accustomed to it, rarely stopping to ask whether a better way might exist. Innovators, by contrast, are distinguished less by superior intelligence than by a persistent dissatisfaction with the status quo. They notice friction that others have learned to ignore, and they refuse to treat it as unavoidable.</p>
+    <p class="vi-para">[2] Một cách lý giải nằm ở tâm lý thói quen. Con người có xu hướng chấp nhận sự bất tiện như điều bình thường một khi đã quen với nó, hiếm khi dừng lại để tự hỏi liệu có cách nào tốt hơn hay không. Ngược lại, những người đổi mới không hẳn nổi bật vì thông minh hơn người khác, mà vì sự bất mãn dai dẳng với hiện trạng. Họ nhận ra những trở ngại mà người khác đã học cách phớt lờ, và họ từ chối coi đó là điều không thể tránh khỏi.</p>
+    <p><span class="pn">[3]</span> Companies have increasingly tried to institutionalise this mindset. Many now dedicate a portion of employees' time to open-ended experimentation, on the theory that useful ideas rarely emerge under the pressure of rigid deadlines. Google's famous "20 percent time" policy, which allowed engineers to spend part of their week on personal projects, reportedly gave rise to several widely used products. Critics argue that such schemes are difficult to sustain once a company grows large and revenue targets tighten, yet even skeptics concede that some space for undirected thinking tends to pay dividends over time.</p>
+    <p class="vi-para">[3] Các công ty ngày càng cố gắng chính thức hóa lối tư duy này. Nhiều nơi hiện dành một phần thời gian của nhân viên cho việc thử nghiệm tự do, dựa trên lý thuyết rằng những ý tưởng hữu ích hiếm khi nảy sinh dưới áp lực của những deadline cứng nhắc. Chính sách "20% thời gian" nổi tiếng của Google, cho phép kỹ sư dành một phần tuần làm việc cho các dự án cá nhân, được cho là đã tạo ra nhiều sản phẩm được sử dụng rộng rãi. Những người chỉ trích cho rằng các mô hình như vậy khó duy trì khi công ty phát triển lớn và chỉ tiêu doanh thu bị siết chặt, nhưng ngay cả người hoài nghi cũng thừa nhận rằng một khoảng không gian cho tư duy tự do thường mang lại lợi ích về lâu dài.</p>
+    <p><span class="pn">[4]</span> Ultimately, everyday innovation reminds us that progress does not always require vast budgets or advanced laboratories. It often begins with a single individual who looks at a familiar object and asks a deceptively simple question: does this really have to be so difficult? History suggests that answering that question honestly, rather than dismissing it, is where meaningful change usually starts.</p>
+    <p class="vi-para">[4] Xét cho cùng, sự đổi mới đời thường nhắc chúng ta rằng tiến bộ không phải lúc nào cũng cần ngân sách khổng lồ hay phòng thí nghiệm hiện đại. Nó thường bắt đầu từ một cá nhân đơn lẻ nhìn vào một vật dụng quen thuộc và đặt ra một câu hỏi tưởng chừng đơn giản: liệu điều này có thực sự cần phải khó khăn đến vậy? Lịch sử cho thấy việc trả lời câu hỏi đó một cách trung thực, thay vì gạt bỏ nó, chính là nơi những thay đổi có ý nghĩa thường bắt đầu.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. The history of the smartphone</li><li>B. How small, everyday inventions arise from noticing overlooked inconvenience</li><li>C. Why large companies always outperform small inventors</li><li>D. The technical design of wheeled suitcases</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài xoay quanh việc cải tiến nhỏ (vali có bánh xe) và tâm lý người đổi mới — không phải lịch sử điện thoại hay kỹ thuật vali.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"hauled"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. carried with effort</li><li>B. sold cheaply</li><li>C. designed elegantly</li><li>D. abandoned</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "hauled heavy trunks by hand" — kéo/vác nặng nhọc bằng tay ≈ carried with effort.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, when did the wheeled suitcase appear?</div>
+    <ul><li>A. In ancient times</li><li>B. In the 1970s</li><li>C. It has always existed</li><li>D. It has not been invented yet</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "it was not until the 1970s that someone finally attached wheels to a case".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"it"</b> (in "treat it as unavoidable") refers to:</div>
+    <ul><li>A. intelligence</li><li>B. friction/inconvenience that others ignore</li><li>C. the wheeled suitcase</li><li>D. companies</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "They notice friction that others have learned to ignore, and they refuse to treat it as unavoidable" — "it" thay cho friction đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that innovators:</div>
+    <ul><li>A. are always more intelligent than others</li><li>B. accept inconvenience more easily than most people</li><li>C. are less willing to accept everyday inconvenience as normal</li><li>D. never work at large companies</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "distinguished less by superior intelligence than by a persistent dissatisfaction with the status quo" → không dễ chấp nhận sự bất tiện.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"institutionalise"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. to ban officially</li><li>B. to make something a formal, regular part of an organisation</li><li>C. to keep something secret</li><li>D. to sell to another company</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Companies have increasingly tried to institutionalise this mindset" — biến tư duy đó thành chính sách/quy trình chính thức trong công ty.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention Google's "20 percent time" policy in paragraph 3?</div>
+    <ul><li>A. To criticise Google for wasting money</li><li>B. To give a concrete example of how companies try to encourage open-ended innovation</li><li>C. To explain how wheeled suitcases were invented</li><li>D. To argue that only large companies can innovate</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đây là ví dụ minh hoạ cho ý "companies have tried to institutionalise this mindset" ở đầu đoạn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned in the passage EXCEPT:</div>
+    <ul><li>A. the wheeled suitcase</li><li>B. Google's "20 percent time" policy</li><li>C. the psychology of habit</li><li>D. government funding for research labs</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 1), B và C (đoạn 2–3) đều xuất hiện. "Government funding" không được nhắc ở đâu trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Attitude</span> The author's attitude toward everyday innovation is best described as:</div>
+    <ul><li>A. dismissive</li><li>B. appreciative and encouraging</li><li>C. strongly critical</li><li>D. completely neutral and indifferent</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Giọng văn tích cực, ca ngợi sự đổi mới nhỏ bé bắt nguồn từ một câu hỏi đơn giản — không hề chê bai hay trung lập tuyệt đối.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final question "does this really have to be so difficult?" (paragraph 4) mainly suggests that:</div>
+    <ul><li>A. most everyday problems cannot be solved</li><li>B. questioning accepted inconvenience is often the starting point of innovation</li><li>C. only scientists are allowed to ask questions</li><li>D. innovation always requires large laboratories</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu kết nối trực tiếp với ý chính của đoạn 4: đổi mới thường bắt đầu từ một câu hỏi đơn giản, không cần ngân sách lớn.</p></details>
+  </div>
+
+  <h3>Từ vựng — Bài 1 (Innovation)</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>breakthrough</td><td>(n)</td><td>đột phá</td></tr>
+    <tr><td>hindsight</td><td>(n)</td><td>sự nhìn lại (sau khi sự việc đã xảy ra)</td></tr>
+    <tr><td>status quo <span class="c1tag">C1</span></td><td>(n)</td><td>hiện trạng</td></tr>
+    <tr><td>friction</td><td>(n)</td><td>sự cản trở, bất tiện (nghĩa bóng)</td></tr>
+    <tr><td>institutionalise <span class="c1tag">C1</span></td><td>(v)</td><td>chính thức hóa, đưa vào quy trình</td></tr>
+    <tr><td>open-ended</td><td>(adj)</td><td>mở, không giới hạn khuôn khổ</td></tr>
+    <tr><td>sustain</td><td>(v)</td><td>duy trì</td></tr>
+    <tr><td>pay dividends <span class="c1tag">C1</span></td><td>(idiom)</td><td>đem lại lợi ích về sau</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài 2 <span class="lvl">Nutrition</span> <span class="timetag">⏱ 13 phút</span></h2>
+
+  <div class="passage">
+    <h3>The Rise of Ultra-Processed Food</h3>
+    <p><span class="pn">[1]</span> Supermarket shelves today are dominated by products that would be unrecognisable to a shopper from a century ago: brightly packaged snacks, ready-made meals, and drinks engineered for maximum flavour at minimum cost. Nutritionists refer to these items as ultra-processed foods, a category defined less by any single ingredient than by the industrial techniques used to manufacture them. Unlike simply cooking or freezing, ultra-processing typically involves extracting substances from raw ingredients and then reassembling them with additives designed to enhance taste, texture, and shelf life.</p>
+    <p class="vi-para">[1] Ngày nay, kệ hàng siêu thị bị chiếm lĩnh bởi những sản phẩm mà một người mua sắm từ một thế kỷ trước sẽ không thể nhận ra: đồ ăn vặt đóng gói bắt mắt, bữa ăn chế biến sẵn, và đồ uống được thiết kế để có hương vị tối đa với chi phí tối thiểu. Các chuyên gia dinh dưỡng gọi những sản phẩm này là thực phẩm chế biến siêu sâu, một nhóm được xác định không phải bởi một thành phần đơn lẻ nào mà bởi các kỹ thuật công nghiệp dùng để sản xuất chúng. Khác với việc chỉ nấu chín hay cấp đông, chế biến siêu sâu thường bao gồm việc chiết xuất các chất từ nguyên liệu thô rồi tái tổ hợp chúng với các chất phụ gia được thiết kế để tăng cường hương vị, kết cấu và hạn sử dụng.</p>
+    <p><span class="pn">[2]</span> Research over the past decade has linked heavy consumption of such foods to a range of health problems, including obesity, heart disease, and type 2 diabetes. One widely cited study found that participants who ate mostly ultra-processed meals consumed several hundred more calories per day than those eating minimally processed food, even when the meals were matched for overall nutrients. Scientists suspect that the soft texture and intense flavour of these products may encourage people to eat faster and stop later, undermining the body's natural signals of fullness.</p>
+    <p class="vi-para">[2] Nghiên cứu trong thập kỷ qua đã liên hệ việc tiêu thụ nhiều loại thực phẩm này với hàng loạt vấn đề sức khỏe, bao gồm béo phì, bệnh tim mạch và tiểu đường tuýp 2. Một nghiên cứu được trích dẫn rộng rãi cho thấy những người tham gia ăn chủ yếu thực phẩm chế biến siêu sâu tiêu thụ nhiều hơn vài trăm calo mỗi ngày so với những người ăn thực phẩm ít qua chế biến, ngay cả khi các bữa ăn được cân bằng về tổng dưỡng chất. Các nhà khoa học nghi ngờ rằng kết cấu mềm và hương vị đậm đà của những sản phẩm này có thể khiến người ta ăn nhanh hơn và dừng lại muộn hơn, làm suy yếu tín hiệu no tự nhiên của cơ thể.</p>
+    <p><span class="pn">[3]</span> Food manufacturers, for their part, argue that ultra-processed products play a valuable role in modern life, offering convenience and affordability to households with limited time or money. They also note that not all such foods are unhealthy; some fortified cereals and plant-based meat substitutes, for example, fall into the same broad category yet provide genuine nutritional benefits. Critics respond that these exceptions should not obscure the wider pattern, since the vast majority of ultra-processed items on sale are high in sugar, salt, or unhealthy fats.</p>
+    <p class="vi-para">[3] Về phần mình, các nhà sản xuất thực phẩm lập luận rằng các sản phẩm chế biến siêu sâu đóng vai trò quan trọng trong đời sống hiện đại, mang lại sự tiện lợi và giá cả phải chăng cho các hộ gia đình có ít thời gian hoặc tiền bạc. Họ cũng chỉ ra rằng không phải mọi loại thực phẩm như vậy đều không tốt cho sức khỏe; chẳng hạn, một số loại ngũ cốc bổ sung vi chất và các sản phẩm thay thế thịt từ thực vật cũng thuộc nhóm rộng này nhưng vẫn mang lại lợi ích dinh dưỡng thực sự. Những người chỉ trích đáp lại rằng những trường hợp ngoại lệ này không nên che khuất xu hướng chung, vì phần lớn các sản phẩm chế biến siêu sâu được bày bán đều chứa nhiều đường, muối hoặc chất béo không lành mạnh.</p>
+    <p><span class="pn">[4]</span> Public health authorities in several countries have begun responding with new labelling requirements and taxes on sugary drinks, hoping to nudge consumers toward less processed alternatives. Whether such measures will meaningfully shift eating habits remains uncertain, given how deeply convenience foods are embedded in busy modern lifestyles. What seems clear, however, is that the debate over ultra-processed food is unlikely to fade any time soon, as evidence linking it to chronic disease continues to accumulate.</p>
+    <p class="vi-para">[4] Cơ quan y tế công cộng ở một số quốc gia đã bắt đầu phản ứng bằng các yêu cầu ghi nhãn mới và thuế đánh vào đồ uống có đường, với hy vọng thúc đẩy nhẹ nhàng người tiêu dùng chuyển sang các lựa chọn ít chế biến hơn. Liệu những biện pháp này có thực sự thay đổi được thói quen ăn uống hay không vẫn còn chưa chắc chắn, do thực phẩm tiện lợi đã ăn sâu vào lối sống bận rộn hiện đại đến mức nào. Tuy nhiên, điều có vẻ rõ ràng là cuộc tranh luận về thực phẩm chế biến siêu sâu khó có thể lắng xuống trong thời gian gần, khi bằng chứng liên hệ nó với các bệnh mãn tính vẫn tiếp tục tích lũy.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. the history of supermarket design</li><li>B. the rise of ultra-processed food and its health implications</li><li>C. how to cook traditional meals at home</li><li>D. the economics of grocery store pricing</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài nói về ultra-processed food: định nghĩa, tác hại sức khỏe, tranh luận, và chính sách — không phải siêu thị hay nấu ăn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"reassembling"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. putting parts back together in a new form</li><li>B. throwing away completely</li><li>C. growing naturally</li><li>D. selling at a discount</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "extracting substances ... and then reassembling them with additives" = lắp ráp/kết hợp lại thành sản phẩm mới.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why might ultra-processed food lead people to eat more?</div>
+    <ul><li>A. It is always more expensive</li><li>B. Its soft texture and strong flavour may disrupt signals of fullness</li><li>C. It contains no calories at all</li><li>D. It is only sold in large packages</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the soft texture and intense flavour... may encourage people to eat faster and stop later, undermining the body's natural signals of fullness".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"these exceptions"</b> refers to:</div>
+    <ul><li>A. all ultra-processed foods without exception</li><li>B. fortified cereals and plant-based meat substitutes</li><li>C. sugary drinks and taxes</li><li>D. public health authorities</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó nêu ví dụ "fortified cereals and plant-based meat substitutes" — đó chính là "these exceptions".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that critics of manufacturers believe:</div>
+    <ul><li>A. all ultra-processed food is equally healthy</li><li>B. the healthy exceptions do not represent most ultra-processed products sold</li><li>C. manufacturers should stop producing any food at all</li><li>D. plant-based substitutes are the most harmful category</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "these exceptions should not obscure the wider pattern, since the vast majority... are high in sugar, salt, or unhealthy fats."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"nudge"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. to force someone violently</li><li>B. to gently encourage someone toward a behaviour</li><li>C. to punish severely</li><li>D. to completely ignore</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "hoping to nudge consumers toward less processed alternatives" — thúc đẩy nhẹ nhàng, không phải ép buộc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "fortified cereals and plant-based meat substitutes" in paragraph 3?</div>
+    <ul><li>A. To prove that ultra-processed food is always dangerous</li><li>B. To acknowledge a counterpoint before critics respond to it</li><li>C. To recommend a specific diet plan</li><li>D. To describe a new government tax</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này trình bày lập luận của nhà sản xuất (không phải mọi thực phẩm chế biến sẵn đều xấu) trước khi phần "Critics respond that..." phản bác.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as being linked to ultra-processed food EXCEPT:</div>
+    <ul><li>A. obesity</li><li>B. heart disease</li><li>C. type 2 diabetes</li><li>D. skin allergies</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 2 chỉ nêu "obesity, heart disease, and type 2 diabetes" — không hề nhắc đến dị ứng da.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Attitude</span> The author's tone toward the topic can best be described as:</div>
+    <ul><li>A. alarmist and one-sided</li><li>B. balanced, presenting both industry and health perspectives</li><li>C. purely humorous</li><li>D. completely dismissive of scientific research</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả góc nhìn nhà sản xuất (đoạn 3) và giới nghiên cứu/y tế công (đoạn 2, 4) một cách cân bằng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> What does the passage suggest about the future of the debate over ultra-processed food?</div>
+    <ul><li>A. It will end soon because scientists have reached full agreement</li><li>B. It is likely to continue as more evidence accumulates</li><li>C. Governments have already solved the problem completely</li><li>D. No further research is currently being conducted</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the debate...is unlikely to fade any time soon, as evidence linking it to chronic disease continues to accumulate" — đoạn cuối bài.</p></details>
+  </div>
+
+  <h3>Từ vựng — Bài 2 (Nutrition)</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>ultra-processed</td><td>(adj)</td><td>chế biến công nghiệp sâu</td></tr>
+    <tr><td>additive</td><td>(n)</td><td>chất phụ gia</td></tr>
+    <tr><td>shelf life</td><td>(n)</td><td>hạn sử dụng, thời gian bảo quản</td></tr>
+    <tr><td>obesity</td><td>(n)</td><td>bệnh béo phì</td></tr>
+    <tr><td>undermine</td><td>(v)</td><td>làm suy yếu, phá hoại ngầm</td></tr>
+    <tr><td>fortified</td><td>(adj)</td><td>được bổ sung (vi chất dinh dưỡng)</td></tr>
+    <tr><td>obscure <span class="c1tag">C1</span></td><td>(v)</td><td>che khuất, làm lu mờ</td></tr>
+    <tr><td>nudge <span class="c1tag">C1</span></td><td>(v)</td><td>thúc đẩy nhẹ nhàng</td></tr>
+  </table>
+
+  <!-- ============ SOI LỖI ============ -->
+  <h2>🔍 Soi lỗi do vội</h2>
+  <div class="card warn">
+    <p style="margin-bottom:8px;">Khi bị ép tốc độ, não có xu hướng "lười" và mắc các lỗi lặp đi lặp lại. Sau khi làm xong 2 bài, tự kiểm tra xem mình có dính lỗi nào dưới đây không:</p>
+    <ul class="checklist">
+      <li><b>Đọc sót từ phủ định / giới hạn:</b> bỏ qua "NOT", "EXCEPT", "only", "never", "unless" trong câu hỏi hoặc đáp án → chọn ngược nghĩa.</li>
+      <li><b>Chọn đáp án đầu tiên "nghe có vẻ đúng":</b> dừng đọc ở đáp án A/B vì thấy quen mắt, không xem tiếp C/D — thường C/D mới đúng hoặc đúng hơn.</li>
+      <li><b>Không đọc hết cả 4 phương án:</b> đặc biệt với câu NOT/EXCEPT và Main Idea — phải loại trừ đủ 4 mới chắc chắn.</li>
+      <li><b>Nhầm lẫn "được nhắc đến" với "đúng":</b> đáp án có từ xuất hiện y hệt trong bài nhưng bị đặt sai ngữ cảnh (bẫy "word match").</li>
+      <li><b>Bỏ qua từ nối then chốt:</b> lướt qua "however", "yet", "nevertheless" nên hiểu sai chiều lập luận của đoạn.</li>
+      <li><b>Đoán nghĩa từ vựng chỉ dựa vào gốc từ quen thuộc:</b> không đọc câu chứa từ đó để xác nhận nghĩa trong ngữ cảnh.</li>
+      <li><b>Trả lời câu Reference mà không tìm lại danh từ được thay thế:</b> đoán bừa theo cảm giác thay vì quay lại câu trước đó.</li>
+      <li><b>Vội tô đáp án sai dòng</b> khi dồn thời gian ở phút cuối — luôn kiểm tra số thứ tự câu trước khi tô.</li>
+    </ul>
+  </div>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm chung</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài 1 (Innovation)</th><td>1-B · 2-A · 3-B · 4-B · 5-C · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 2 (Nutrition)</th><td>1-B · 2-A · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Cách chấm:</b> cộng tổng số câu đúng của cả 2 bài (/20). So sánh với thời gian thực tế mỗi bài mất — nếu vượt 13 phút, ghi lại vượt bao nhiêu để theo dõi tiến bộ qua các ngày luyện tốc độ tiếp theo.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> ≥16/20 → tốc độ đọc đã vượt yêu cầu đề thi thật, rất tốt · 12–15/20 → ổn, cần luyện thêm phản xạ loại trừ đáp án · ≤11/20 → quay lại làm với 15 phút/bài (tốc độ chuẩn) trước khi ép tốc độ tiếp.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    💡 <b>Mẹo tốc độ:</b> đọc lướt (skim) toàn bài trong 30–40 giây đầu để nắm ý chính từng đoạn, sau đó đọc câu hỏi và quay lại đoạn tương ứng để tìm chi tiết — đừng đọc kỹ từng chữ ngay từ đầu. Càng luyện nhiều lần với đồng hồ đếm ngược, phản xạ "định vị thông tin nhanh" càng chắc, và 15 phút thi thật sẽ cảm giác rất thoải mái.
+  </div>
+
+</div>
+
+<footer>⏱️ Tuần 8 · Ngày 2 · VSTEP Reading — Luyện tốc độ 13 phút/bài · Nhanh mà vẫn chắc mới là mục tiêu thật sự.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

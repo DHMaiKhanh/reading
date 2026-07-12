@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 5 · Ngày 2 — Ancient Civilizations + Archaeology &amp; Heritage · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏺 Tuần 5 · Ngày 2 — Ancient Civilizations + Archaeology &amp; Heritage</h1>
+  <p>2 bài đọc độc lập, mỗi bài canh ~15 phút → làm đề → giải đề → rút từ vựng</p>
+  <div class="meta">
+    <span class="badge">🕐 ~30 phút (2 × ~15 phút)</span>
+    <span class="badge">🟠 Chuẩn B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · ~18 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước) — áp dụng cho từng bài:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, canh khoảng 15 phút/bài.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10 từ mới của mỗi bài + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b> mỗi bài.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài #1 <span class="lvl">Ancient Civilizations · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Rise and Puzzle of the Indus Valley Civilization</h3>
+    <p><span class="pn">[1]</span> While the civilizations of Mesopotamia and Egypt are widely celebrated in popular imagination, an equally sophisticated society flourished along the Indus River in what is now Pakistan and northwestern India nearly 4,500 years ago. At its height, the Indus Valley Civilization boasted cities such as Mohenjo-daro and Harappa, each home to tens of thousands of inhabitants. What distinguishes these settlements from many of their contemporaries is their remarkable degree of urban planning: streets were laid out in orderly grids, and houses were connected to an intricate network of covered drains, a sanitation system that would not be matched in some parts of the world for millennia.</p>
+    <p class="vi-para">[1] Trong khi các nền văn minh Lưỡng Hà và Ai Cập được ca ngợi rộng rãi trong trí tưởng tượng đại chúng, một xã hội không kém phần tinh vi cũng đã phát triển thịnh vượng dọc theo sông Indus, ở khu vực nay là Pakistan và tây bắc Ấn Độ, gần 4.500 năm trước. Ở thời kỳ đỉnh cao, nền văn minh thung lũng Indus tự hào có những thành phố như Mohenjo-daro và Harappa, mỗi nơi là nhà của hàng chục nghìn cư dân. Điều làm cho những khu định cư này khác biệt so với nhiều nền văn minh cùng thời là mức độ quy hoạch đô thị đáng kinh ngạc: đường phố được bố trí theo lưới ngay ngắn, và nhà cửa được kết nối với một mạng lưới cống rãnh có nắp đậy phức tạp, một hệ thống vệ sinh mà nhiều nơi trên thế giới phải mất hàng thiên niên kỷ mới theo kịp.</p>
+
+    <p><span class="pn">[2]</span> Equally striking is the apparent absence of the grandiose monuments and lavish royal tombs that typify other early civilizations. Archaeologists have found no unmistakable palaces, no towering pyramids, and no inscriptions boasting of conquering kings. This scarcity of overt displays of power has led some scholars to speculate that Indus society may have been governed collectively, perhaps by councils of merchants or priests, rather than by an all-powerful monarch. Such a theory, however, remains contentious, since the absence of evidence is not necessarily evidence of absence.</p>
+    <p class="vi-para">[2] Không kém phần đáng chú ý là sự vắng mặt rõ rệt của những công trình hoành tráng và lăng mộ hoàng gia xa hoa vốn là đặc trưng của các nền văn minh cổ đại khác. Các nhà khảo cổ chưa từng tìm thấy cung điện rõ ràng nào, không có kim tự tháp cao vút, cũng không có bia khắc ca ngợi các vị vua chinh phạt. Sự khan hiếm những biểu hiện quyền lực công khai này đã khiến một số học giả suy đoán rằng xã hội Indus có thể đã được cai trị theo hình thức tập thể, có lẽ bởi các hội đồng thương nhân hoặc tu sĩ, thay vì bởi một quân vương toàn quyền. Tuy nhiên, giả thuyết này vẫn còn gây tranh cãi, bởi việc thiếu bằng chứng không nhất thiết đồng nghĩa với bằng chứng của sự không tồn tại.</p>
+
+    <p><span class="pn">[3]</span> Adding to the intrigue is the Indus script, a system of brief inscriptions found on seals, pottery, and small tablets. Despite decades of effort, no scholar has yet succeeded in deciphering it conclusively, partly because the surviving texts are extremely short, rarely exceeding a handful of symbols, and partly because no bilingual inscription comparable to a famous decoding key has ever been discovered. Some researchers even debate whether the symbols constitute a genuine writing system at all, or merely a set of religious or trade-related emblems.</p>
+    <p class="vi-para">[3] Càng làm tăng thêm sự bí ẩn là chữ viết Indus, một hệ thống các dòng khắc ngắn được tìm thấy trên con dấu, đồ gốm và các tấm bảng nhỏ. Dù đã bỏ ra hàng chục năm nỗ lực, chưa có học giả nào giải mã được nó một cách chắc chắn, một phần vì các văn bản còn sót lại quá ngắn, hiếm khi vượt quá vài ký hiệu, và một phần vì chưa từng tìm thấy một bia khắc song ngữ nào có thể đóng vai trò như chìa khóa giải mã nổi tiếng. Một số nhà nghiên cứu thậm chí còn tranh luận liệu các ký hiệu này có thực sự là một hệ thống chữ viết hay chỉ đơn thuần là các biểu tượng tôn giáo hoặc thương mại.</p>
+
+    <p><span class="pn">[4]</span> Around 1900 BC, the civilization began a gradual decline whose causes remain debated. Proposed explanations range from shifting river courses and prolonged drought to the disruption of long-distance trade networks that had once linked the Indus cities with Mesopotamia. Whatever combination of factors was responsible, the disappearance of such an advanced urban culture serves as a sobering reminder that even highly organized societies are vulnerable to environmental and economic upheaval. Today, ongoing excavations continue to reshape our understanding, proving that this ancient civilization still has secrets left to reveal.</p>
+    <p class="vi-para">[4] Khoảng năm 1900 trước Công nguyên, nền văn minh này bắt đầu suy tàn dần với những nguyên nhân vẫn còn gây tranh cãi. Các giả thuyết được đưa ra trải dài từ việc dòng sông đổi hướng, hạn hán kéo dài, cho đến sự gián đoạn của các mạng lưới thương mại đường dài từng kết nối các thành phố Indus với Lưỡng Hà. Dù nguyên nhân là sự kết hợp của những yếu tố nào, sự biến mất của một nền văn hóa đô thị tiên tiến như vậy là lời nhắc nhở đáng suy ngẫm rằng ngay cả những xã hội được tổ chức chặt chẽ cũng dễ bị tổn thương trước biến động môi trường và kinh tế. Ngày nay, các cuộc khai quật vẫn đang tiếp diễn và không ngừng định hình lại hiểu biết của chúng ta, chứng minh rằng nền văn minh cổ đại này vẫn còn những bí mật chưa được hé lộ.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the royal tombs of Mesopotamia and Egypt</li><li>B. the achievements and unresolved mysteries of the Indus Valley Civilization</li><li>C. modern excavation techniques used in Pakistan</li><li>D. why river droughts occur in South Asia</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày về đô thị hóa (đoạn 1), thiếu vắng biểu tượng quyền lực (đoạn 2), chữ viết chưa giải mã (đoạn 3) và sự suy tàn (đoạn 4) — tất cả xoay quanh thành tựu và bí ẩn của nền văn minh Indus.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"intricate"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. simple and plain</li><li>B. complex and detailed</li><li>C. broken and unusable</li><li>D. newly built</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "an intricate network of covered drains" — một hệ thống cống rãnh phức tạp, tinh vi ≈ complex and detailed.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, what made Indus cities stand out from other ancient settlements?</div>
+    <ul><li>A. Their enormous pyramids</li><li>B. Their orderly street grids and advanced drainage system</li><li>C. Their large armies</li><li>D. Their trade with Egypt</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 1: "streets were laid out in orderly grids... connected to an intricate network of covered drains."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the phrase <b class="k">"such a theory"</b> refers to:</div>
+    <ul><li>A. the idea that Indus society may have been ruled collectively rather than by a monarch</li><li>B. the discovery of Mohenjo-daro</li><li>C. the theory that pyramids once existed in the Indus Valley</li><li>D. the belief that drains were used for religious rituals</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Câu trước: "Indus society may have been governed collectively... rather than by an all-powerful monarch" → "such a theory" chỉ ý này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that the Indus script:</div>
+    <ul><li>A. has been fully translated by modern scholars</li><li>B. remains undeciphered partly due to the brevity of surviving texts</li><li>C. was borrowed directly from Egyptian hieroglyphs</li><li>D. was never used for trade purposes</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "no scholar has yet succeeded in deciphering it conclusively, partly because the surviving texts are extremely short" → chưa giải mã được, một phần vì văn bản quá ngắn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"contentious"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. widely accepted without doubt</li><li>B. likely to cause disagreement</li><li>C. completely false</li><li>D. extremely boring</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Such a theory, however, remains contentious" — vẫn còn gây tranh cãi ≈ likely to cause disagreement.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention that "the absence of evidence is not necessarily evidence of absence" in paragraph 2?</div>
+    <ul><li>A. To prove that Indus society definitely had no kings</li><li>B. To caution readers against drawing overly confident conclusions from missing evidence</li><li>C. To criticize archaeologists for laziness</li><li>D. To argue that Mesopotamia was more advanced</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này nhắc nhở rằng việc chưa tìm thấy bằng chứng (như cung điện) không có nghĩa là chắc chắn nó không tồn tại → thận trọng khi kết luận.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> According to paragraph 4, all of the following are mentioned as possible causes of the civilization's decline EXCEPT:</div>
+    <ul><li>A. shifting river courses</li><li>B. prolonged drought</li><li>C. disruption of trade networks</li><li>D. a devastating military invasion</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 4 nêu shifting rivers (A), drought (B), disrupted trade (C) — đều được nhắc. "Military invasion" KHÔNG được đề cập → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's tone throughout the passage is best described as:</div>
+    <ul><li>A. dismissive of archaeological research</li><li>B. inquisitive and open to ongoing uncertainty</li><li>C. angry about lost history</li><li>D. purely humorous</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả liên tục nhấn mạnh các giả thuyết chưa chắc chắn, tranh cãi học thuật, và kết bài bằng "still has secrets left to reveal" → thái độ tò mò, cởi mở với sự chưa rõ ràng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final sentence of the passage most strongly suggests that:</div>
+    <ul><li>A. archaeologists have already learned everything about the Indus Valley</li><li>B. research into the Indus Valley Civilization is likely to continue producing new discoveries</li><li>C. the Indus Valley Civilization will never be understood</li><li>D. excavations in Pakistan have been permanently halted</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "ongoing excavations continue to reshape our understanding, proving that this ancient civilization still has secrets left to reveal" → nghiên cứu vẫn đang tiếp diễn và có thể mang lại phát hiện mới.</p></details>
+  </div>
+
+  <h3>Từ vựng chủ đề Ancient Civilizations</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>flourish</td><td>(v)</td><td>phát triển thịnh vượng</td></tr>
+    <tr><td>urban planning</td><td>(n phr)</td><td>quy hoạch đô thị</td></tr>
+    <tr><td>intricate</td><td>(adj)</td><td>phức tạp, tinh vi</td></tr>
+    <tr><td>sanitation</td><td>(n)</td><td>hệ thống vệ sinh</td></tr>
+    <tr><td>grandiose <span class="c1tag">C1</span></td><td>(adj)</td><td>hoành tráng, phô trương</td></tr>
+    <tr><td>speculate</td><td>(v)</td><td>suy đoán, phỏng đoán</td></tr>
+    <tr><td>contentious <span class="c1tag">C1</span></td><td>(adj)</td><td>gây tranh cãi</td></tr>
+    <tr><td>decipher</td><td>(v)</td><td>giải mã</td></tr>
+    <tr><td>emblem</td><td>(n)</td><td>biểu tượng, huy hiệu</td></tr>
+    <tr><td>upheaval <span class="c1tag">C1</span></td><td>(n)</td><td>biến động lớn, xáo trộn</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài #2 <span class="lvl">Archaeology &amp; Heritage · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Preserving the Past: The Challenges of Cultural Heritage Conservation</h3>
+    <p><span class="pn">[1]</span> Every year, archaeologists unearth artifacts and structures that offer priceless glimpses into humanity's past, yet the moment an object is exposed to open air, its slow deterioration often begins. Paradoxically, excavation itself can accelerate decay: buried textiles that survived for centuries in stable, oxygen-poor soil may crumble within days once removed, while painted surfaces exposed to sunlight and humidity can fade dramatically. For this reason, modern archaeology increasingly emphasizes preservation alongside discovery, recognizing that unearthing an object is only the first step in a much longer responsibility.</p>
+    <p class="vi-para">[1] Mỗi năm, các nhà khảo cổ khai quật được những hiện vật và công trình mang lại cái nhìn vô giá về quá khứ của nhân loại, nhưng ngay khi một hiện vật bị phơi ra không khí, quá trình hư hại chậm rãi của nó thường bắt đầu. Trớ trêu thay, chính việc khai quật lại có thể đẩy nhanh sự phân hủy: những mảnh vải bị chôn vùi đã tồn tại qua nhiều thế kỷ trong lớp đất ổn định, ít oxy có thể vụn nát chỉ trong vài ngày sau khi được đưa ra ngoài, trong khi các bề mặt sơn phơi dưới ánh nắng và độ ẩm có thể phai màu nhanh chóng. Vì lý do này, ngành khảo cổ hiện đại ngày càng chú trọng việc bảo tồn song song với việc khai quật, nhận thức rằng khai quật một hiện vật chỉ là bước đầu tiên của một trách nhiệm dài hơn nhiều.</p>
+
+    <p><span class="pn">[2]</span> Heritage conservation extends well beyond individual artifacts to encompass entire sites, from ancient temples to historic city centers. Organizations such as UNESCO maintain lists of sites deemed to have "outstanding universal value," granting them international recognition and, in theory, additional protection. Critics argue, however, that such designations can be a double-edged sword: while they attract funding and tourism revenue, the resulting influx of visitors sometimes places unsustainable strain on fragile structures, ironically endangering the very heritage the designation was meant to safeguard.</p>
+    <p class="vi-para">[2] Việc bảo tồn di sản không chỉ dừng lại ở từng hiện vật riêng lẻ mà còn bao gồm toàn bộ các khu di tích, từ đền đài cổ đại đến trung tâm thành phố lịch sử. Các tổ chức như UNESCO duy trì danh sách những địa điểm được coi là có "giá trị nổi bật toàn cầu", qua đó trao cho chúng sự công nhận quốc tế và, về lý thuyết, sự bảo vệ bổ sung. Tuy nhiên, những người chỉ trích cho rằng danh hiệu như vậy có thể là con dao hai lưỡi: trong khi chúng thu hút nguồn tài trợ và doanh thu du lịch, làn sóng du khách đổ về đôi khi lại tạo áp lực quá tải lên các công trình mong manh, trớ trêu thay lại đe dọa chính di sản mà danh hiệu ấy vốn nhằm bảo vệ.</p>
+
+    <p><span class="pn">[3]</span> Another persistent challenge is the illicit trade in antiquities. Looters, often operating in regions destabilized by conflict or poverty, frequently strip sites of valuable objects before archaeologists ever arrive, severing artifacts from the context that gives them scholarly meaning. A vase divorced from its original burial site, for instance, may fetch a high price on the black market, yet it loses much of the information that a controlled excavation would have preserved, such as its exact age or its relationship to nearby objects. International treaties have attempted to curb this trade, but enforcement remains notoriously difficult across borders.</p>
+    <p class="vi-para">[3] Một thách thức dai dẳng khác là nạn buôn bán trái phép cổ vật. Những kẻ trộm đồ cổ, thường hoạt động ở những khu vực bất ổn vì xung đột hoặc nghèo đói, hay lấy đi các vật quý khỏi di tích trước khi các nhà khảo cổ kịp đến, cắt đứt hiện vật khỏi bối cảnh vốn mang lại ý nghĩa học thuật cho chúng. Chẳng hạn, một chiếc bình bị tách khỏi nơi chôn cất ban đầu có thể được bán với giá cao trên thị trường chợ đen, nhưng nó lại mất đi phần lớn thông tin mà một cuộc khai quật có kiểm soát lẽ ra đã lưu giữ được, chẳng hạn như niên đại chính xác hay mối liên hệ của nó với các vật thể lân cận. Các hiệp ước quốc tế đã cố gắng ngăn chặn hoạt động buôn bán này, nhưng việc thực thi vẫn nổi tiếng là khó khăn khi vượt qua biên giới các quốc gia.</p>
+
+    <p><span class="pn">[4]</span> Despite these obstacles, technological innovation offers grounds for cautious optimism. Techniques such as 3D laser scanning now allow researchers to create detailed digital replicas of monuments before disasters or vandalism strike, as demonstrated when digital models proved invaluable after fires damaged historic landmarks. Meanwhile, community-based conservation programs, which train local residents to protect nearby sites, have shown particular promise, since those who live closest to a heritage site often have the strongest incentive to ensure its survival for future generations.</p>
+    <p class="vi-para">[4] Bất chấp những trở ngại này, đổi mới công nghệ mang lại cơ sở cho một sự lạc quan thận trọng. Các kỹ thuật như quét laser 3D nay cho phép các nhà nghiên cứu tạo ra những bản sao kỹ thuật số chi tiết của các công trình trước khi thảm họa hoặc hành vi phá hoại xảy ra, như đã được chứng minh khi các mô hình số tỏ ra vô cùng hữu ích sau khi hỏa hoạn làm hư hại các di tích lịch sử. Trong khi đó, các chương trình bảo tồn dựa vào cộng đồng, vốn đào tạo cư dân địa phương để bảo vệ các di tích gần nơi họ sinh sống, đã cho thấy nhiều triển vọng đặc biệt, bởi những người sống gần một di tích di sản thường có động lực mạnh mẽ nhất để đảm bảo sự tồn tại của nó cho các thế hệ tương lai.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the discovery of new archaeological sites around the world</li><li>B. the challenges and evolving strategies involved in preserving cultural heritage</li><li>C. the history of UNESCO as an organization</li><li>D. how vases are made in ancient cultures</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đề cập đến rủi ro sau khai quật (đoạn 1), vấn đề với danh hiệu di sản (đoạn 2), buôn bán trái phép cổ vật (đoạn 3), và giải pháp công nghệ/cộng đồng (đoạn 4) — tất cả xoay quanh thách thức và chiến lược bảo tồn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"crumble"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. improve in quality</li><li>B. break apart into small pieces</li><li>C. increase in value</li><li>D. become more colorful</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "buried textiles... may crumble within days once removed" — vải vóc có thể vụn nát/tan rã ≈ break apart.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, why can excavation itself sometimes harm artifacts?</div>
+    <ul><li>A. Archaeologists often use damaging chemicals</li><li>B. Removing objects from stable buried conditions can expose them to conditions that speed up decay</li><li>C. Artifacts are usually fake</li><li>D. Museums refuse to store old objects</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "buried textiles that survived for centuries in stable, oxygen-poor soil may crumble within days once removed" — điều kiện ổn định dưới đất bị phá vỡ khi khai quật.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the phrase <b class="k">"a double-edged sword"</b> refers to:</div>
+    <ul><li>A. an ancient weapon found at heritage sites</li><li>B. UNESCO designation, which brings benefits but also risks to fragile sites</li><li>C. the illicit trade in antiquities</li><li>D. 3D laser scanning technology</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu: "such designations can be a double-edged sword: while they attract funding and tourism... the resulting influx of visitors sometimes places unsustainable strain" — vừa lợi vừa hại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that an artifact sold on the black market:</div>
+    <ul><li>A. is always more valuable than one found through proper excavation</li><li>B. typically loses important scholarly information about its origin and context</li><li>C. is usually returned to its original site voluntarily</li><li>D. cannot be dated by any method</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "it loses much of the information that a controlled excavation would have preserved, such as its exact age or its relationship to nearby objects."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"notoriously"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. surprisingly easily</li><li>B. famously and undesirably</li><li>C. secretly and quietly</li><li>D. rarely and occasionally</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "enforcement remains notoriously difficult across borders" — nổi tiếng/được biết đến rộng rãi là khó khăn (theo hướng tiêu cực) ≈ famously and undesirably.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the case of digital models proving valuable "after fires damaged historic landmarks" in paragraph 4?</div>
+    <ul><li>A. To criticize governments for failing to prevent fires</li><li>B. To provide a concrete example of how technology can aid preservation efforts</li><li>C. To argue that all monuments will eventually be destroyed</li><li>D. To explain how ancient buildings were originally constructed</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Ví dụ này minh họa cụ thể cho luận điểm "technological innovation offers grounds for cautious optimism" trong bảo tồn di sản.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> According to the passage, all of the following are mentioned as challenges to heritage conservation EXCEPT:</div>
+    <ul><li>A. rapid deterioration after excavation</li><li>B. overcrowding of tourist sites</li><li>C. illicit trade in antiquities</li><li>D. a global shortage of trained archaeologists</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Deterioration (đoạn 1), overcrowding/tourism strain (đoạn 2), illicit trade (đoạn 3) đều được nêu. "Thiếu hụt nhà khảo cổ toàn cầu" không hề được nhắc đến → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall attitude toward the future of heritage conservation is best described as:</div>
+    <ul><li>A. entirely pessimistic</li><li>B. cautiously optimistic despite significant challenges</li><li>C. completely indifferent</li><li>D. dismissive of new technology</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 mở đầu bằng "technological innovation offers grounds for cautious optimism" — thừa nhận khó khăn nhưng vẫn có hy vọng nhờ công nghệ và cộng đồng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> It can be inferred from paragraph 4 that community-based conservation programs are considered promising mainly because:</div>
+    <ul><li>A. local residents receive high salaries for participating</li><li>B. local residents have a strong personal motivation to protect sites near where they live</li><li>C. they eliminate the need for any technology</li><li>D. they are funded exclusively by UNESCO</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "those who live closest to a heritage site often have the strongest incentive to ensure its survival for future generations" → động lực cá nhân mạnh mẽ của cư dân địa phương.</p></details>
+  </div>
+
+  <h3>Từ vựng chủ đề Archaeology &amp; Heritage</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>unearth</td><td>(v)</td><td>khai quật, phát hiện (dưới đất)</td></tr>
+    <tr><td>deterioration</td><td>(n)</td><td>sự xuống cấp, hư hại dần</td></tr>
+    <tr><td>crumble</td><td>(v)</td><td>vụn nát, tan rã</td></tr>
+    <tr><td>encompass <span class="c1tag">C1</span></td><td>(v)</td><td>bao gồm, bao quát</td></tr>
+    <tr><td>designation</td><td>(n)</td><td>sự chỉ định, danh hiệu (công nhận)</td></tr>
+    <tr><td>influx</td><td>(n)</td><td>dòng người/vật đổ vào</td></tr>
+    <tr><td>illicit</td><td>(adj)</td><td>bất hợp pháp, trái phép</td></tr>
+    <tr><td>sever <span class="c1tag">C1</span></td><td>(v)</td><td>cắt đứt, tách rời</td></tr>
+    <tr><td>curb</td><td>(v)</td><td>kiềm chế, hạn chế</td></tr>
+    <tr><td>incentive</td><td>(n)</td><td>động lực, động cơ thúc đẩy</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh — Bài #1 (Ancient Civilizations):</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-A · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <b style="display:block; margin-top:12px;">Bảng đáp án nhanh — Bài #2 (Archaeology &amp; Heritage):</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu (ở cả 2 bài cộng lại) → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10/10 mỗi bài → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài + học kỹ từ vựng trước khi qua ngày tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Tuần 5 · Ngày 2?</b> Quay lại lộ trình tick 4 ô cho mỗi bài. Ghi nhớ: chữ viết Indus và cổ vật bị đánh cắp đều nhấn mạnh cùng một bài học — hiểu quá khứ luôn cần công phu bảo tồn và giải mã cẩn trọng.
+  </div>
+
+</div>
+
+<footer>🏺 Tuần 5 · Ngày 2 · VSTEP Reading — Ancient Civilizations + Archaeology &amp; Heritage · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

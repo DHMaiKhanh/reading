@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 40 — ĐỀ FULL Mô phỏng ngày thi · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏁 Tuần 8 · Ngày 3 — ĐỀ FULL Mô phỏng ngày thi</h1>
+  <p>4 bài đọc độc lập · làm liền một mạch như thi thật · chấm điểm toàn đề ở cuối (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 Bấm giờ NGHIÊM 60 phút</span>
+    <span class="badge">📝 4 bài · 40 câu · giống hệt điều kiện thi thật</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Làm đúng điều kiện thi thật:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Đặt đồng hồ đếm ngược <b>60 phút</b> cho cả 4 bài — không dừng, không tạm nghỉ giữa chừng.</li>
+      <li><b>Không tra từ điển, không tua lại</b> bài trước khi hết giờ — giống phòng thi thật.</li>
+      <li>Làm theo đúng thứ tự: Health → Space → Culture → Innovation.</li>
+      <li>Hết giờ (hoặc làm xong) mới mở đáp án trong <code>&lt;details&gt;</code> để chấm.</li>
+      <li>Sau khi chấm, đọc phần <b>"Ghi nhận cảm giác về thời gian"</b> ở cuối để tự đánh giá tốc độ.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">🎯 Mục tiêu điểm: <b>≥ 28/40</b> câu đúng trong đúng 60 phút là đạt chuẩn để bước vào ngày thi thật.</p>
+  </div>
+
+  <!-- ============ BÀI 1: HEALTH ============ -->
+  <h2>Bài đọc 1 <span class="lvl">Health · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Hidden Cost of Sleep Deprivation</h3>
+    <p><span class="pn">[1]</span> For decades, popular culture celebrated people who could function on minimal sleep, treating exhaustion as a badge of hard work. Scientists now regard this attitude as dangerously misguided. Chronic sleep deprivation, defined as regularly sleeping fewer than six hours a night, has been linked to a startling array of health problems, from obesity and diabetes to cardiovascular disease and impaired immune function. Far from being a harmless lifestyle choice, insufficient sleep appears to erode the body's ability to repair and regulate itself.</p>
+    <p class="vi-para">[1] Trong nhiều thập kỷ, văn hóa đại chúng đã tôn vinh những người có thể hoạt động với rất ít giấc ngủ, xem sự kiệt sức như một huy hiệu của sự chăm chỉ. Các nhà khoa học ngày nay xem thái độ này là sai lầm và nguy hiểm. Tình trạng thiếu ngủ mạn tính, được định nghĩa là ngủ đều đặn dưới sáu tiếng mỗi đêm, đã được liên hệ với một loạt vấn đề sức khỏe đáng kinh ngạc, từ béo phì và tiểu đường cho đến bệnh tim mạch và suy giảm chức năng miễn dịch. Không hề là một lựa chọn lối sống vô hại, việc ngủ không đủ giấc dường như bào mòn khả năng tự sửa chữa và điều hòa của cơ thể.</p>
+
+    <p><span class="pn">[2]</span> The brain, in particular, suffers disproportionately. During deep sleep, the glymphatic system flushes metabolic waste, including proteins associated with Alzheimer's disease, out of neural tissue. When sleep is curtailed night after night, this cleansing process is disrupted, and waste products may gradually accumulate. Cognitive consequences follow swiftly: memory consolidation falters, reaction times slow, and the capacity for sound judgement diminishes, sometimes to a degree comparable with mild intoxication.</p>
+    <p class="vi-para">[2] Đặc biệt, não bộ chịu ảnh hưởng nặng nề hơn hẳn. Trong giấc ngủ sâu, hệ thống glymphatic đẩy các chất thải chuyển hóa, bao gồm cả những protein liên quan đến bệnh Alzheimer, ra khỏi mô thần kinh. Khi giấc ngủ bị cắt giảm đêm này qua đêm khác, quá trình thanh lọc này bị gián đoạn và chất thải có thể tích tụ dần. Hậu quả về nhận thức xuất hiện nhanh chóng: khả năng củng cố trí nhớ suy yếu, thời gian phản ứng chậm lại, và khả năng phán đoán đúng đắn giảm sút, đôi khi ở mức độ tương đương với say nhẹ.</p>
+
+    <p><span class="pn">[3]</span> Workplaces have been slow to acknowledge these findings. Many employers still equate long hours with dedication, inadvertently pressuring staff to sacrifice rest. Yet research consistently shows that sleep-deprived employees are less productive, more prone to errors, and more likely to be involved in workplace accidents. A handful of forward-thinking companies have begun experimenting with nap rooms and flexible schedules, reporting measurable gains in both morale and output.</p>
+    <p class="vi-para">[3] Các nơi làm việc vẫn chậm chạp trong việc thừa nhận những phát hiện này. Nhiều nhà tuyển dụng vẫn đánh đồng giờ làm việc dài với sự tận tâm, vô tình gây áp lực khiến nhân viên phải hy sinh giấc nghỉ. Thế nhưng nghiên cứu liên tục cho thấy nhân viên thiếu ngủ làm việc kém năng suất hơn, dễ mắc lỗi hơn và có nguy cơ gặp tai nạn lao động cao hơn. Một số ít công ty có tư duy tiến bộ đã bắt đầu thử nghiệm phòng ngủ trưa và lịch làm việc linh hoạt, và ghi nhận những cải thiện rõ rệt cả về tinh thần lẫn hiệu suất.</p>
+
+    <p><span class="pn">[4]</span> Reversing entrenched attitudes toward sleep will not happen overnight. Public health campaigns must contend with a culture that glamorises busyness, as well as with the pervasive glow of screens that delays the release of melatonin, the hormone that signals bedtime to the brain. Still, as evidence mounts, a growing number of physicians argue that sleep deserves to be treated as a pillar of health on a par with diet and exercise, rather than as an expendable luxury squeezed in around other priorities.</p>
+    <p class="vi-para">[4] Việc đảo ngược những thái độ đã ăn sâu về giấc ngủ sẽ không thể xảy ra trong một sớm một chiều. Các chiến dịch y tế công cộng phải đối mặt với một nền văn hóa tôn vinh sự bận rộn, cũng như ánh sáng lan tỏa khắp nơi từ màn hình làm chậm việc tiết melatonin, hormone báo hiệu cho não bộ biết đã đến giờ đi ngủ. Tuy vậy, khi bằng chứng ngày càng nhiều, số lượng bác sĩ cho rằng giấc ngủ xứng đáng được coi là một trụ cột sức khỏe ngang hàng với chế độ ăn và tập luyện, thay vì một thứ xa xỉ có thể hy sinh, chỉ được chen vào giữa các ưu tiên khác, ngày càng tăng.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the main purpose of the passage?</div>
+    <ul><li>A. To celebrate people who sleep very little</li><li>B. To argue that sleep deprivation seriously harms health and productivity</li><li>C. To describe the history of nap rooms in offices</li><li>D. To explain how melatonin is produced</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả 4 đoạn xoay quanh tác hại của thiếu ngủ đối với sức khỏe, não bộ và năng suất làm việc — đây là ý chính bao trùm. A trái ngược, C/D chỉ là chi tiết nhỏ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"erode"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. strengthen gradually</li><li>B. wear away or weaken gradually</li><li>C. speed up suddenly</li><li>D. repair completely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "insufficient sleep appears to erode the body's ability to repair and regulate itself" — erode = làm suy yếu/bào mòn dần.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what happens during deep sleep?</div>
+    <ul><li>A. Melatonin is destroyed</li><li>B. The glymphatic system removes metabolic waste from the brain</li><li>C. Reaction times become slower</li><li>D. Employees become more productive</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "the glymphatic system flushes metabolic waste... out of neural tissue" trong lúc ngủ sâu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"these findings"</b> refers to:</div>
+    <ul><li>A. nap rooms and flexible schedules</li><li>B. the research showing sleep deprivation harms productivity and safety</li><li>C. the glymphatic system's function</li><li>D. public health campaigns</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó nói về nghiên cứu chứng minh tác hại của thiếu ngủ (đoạn 1-2); "these findings" chỉ về những kết quả nghiên cứu đó mà nơi làm việc chậm công nhận.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that some employers:</div>
+    <ul><li>A. fully understand the dangers of sleep deprivation</li><li>B. mistakenly associate long working hours with commitment</li><li>C. always provide nap rooms</li><li>D. prefer employees who sleep more</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Many employers still equate long hours with dedication, inadvertently pressuring staff to sacrifice rest" → họ nhầm lẫn giờ làm dài với sự tận tâm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"entrenched"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. new and untested</li><li>B. firmly established and hard to change</li><li>C. temporary and weak</li><li>D. secret</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Reversing entrenched attitudes toward sleep will not happen overnight" — entrenched = ăn sâu, bén rễ, khó thay đổi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"the pervasive glow of screens"</b> in paragraph 4?</div>
+    <ul><li>A. To recommend buying new phones</li><li>B. To give another reason why changing sleep habits is difficult</li><li>C. To praise modern technology</li><li>D. To describe how melatonin is manufactured commercially</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 liệt kê các rào cản khiến thói quen ngủ khó thay đổi: văn hóa đề cao bận rộn và ánh sáng màn hình làm chậm tiết melatonin.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as consequences of sleep deprivation EXCEPT:</div>
+    <ul><li>A. impaired immune function</li><li>B. slower reaction times</li><li>C. higher risk of workplace accidents</li><li>D. increased life expectancy</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 1), B (đoạn 2), C (đoạn 3) đều được nhắc. "Increased life expectancy" hoàn toàn không xuất hiện và trái với tinh thần bài → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the current cultural view of sleep is best described as:</div>
+    <ul><li>A. fully approving</li><li>B. critical, urging a change in perception</li><li>C. indifferent</li><li>D. amused</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả gọi thái độ cũ là "dangerously misguided" và cho rằng ngủ nên được coi trọng như dinh dưỡng, thể thao — thể hiện lập trường phê phán nhưng mang tính xây dựng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"an expendable luxury"</b> (paragraph 4) implies that sleep is often viewed as:</div>
+    <ul><li>A. essential and irreplaceable</li><li>B. something that can be sacrificed without serious consequence</li><li>C. more important than diet</li><li>D. a legal requirement</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "expendable luxury squeezed in around other priorities" đối lập với "a pillar of health" mà tác giả đề xuất → ngụ ý hiện nay giấc ngủ bị coi là thứ có thể hy sinh dễ dàng, không thiết yếu.</p></details>
+  </div>
+
+  <h3>Từ vựng — Health</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>sleep deprivation</td><td>(n)</td><td>tình trạng thiếu ngủ</td></tr>
+    <tr><td>erode</td><td>(v)</td><td>bào mòn, làm suy yếu dần</td></tr>
+    <tr><td>curtail <span class="c1tag">C1</span></td><td>(v)</td><td>cắt giảm, hạn chế</td></tr>
+    <tr><td>consolidation</td><td>(n)</td><td>sự củng cố (trí nhớ)</td></tr>
+    <tr><td>intoxication</td><td>(n)</td><td>tình trạng say, ngộ độc</td></tr>
+    <tr><td>equate ... with</td><td>(v-phr)</td><td>đánh đồng cái này với cái kia</td></tr>
+    <tr><td>entrenched <span class="c1tag">C1</span></td><td>(adj)</td><td>ăn sâu, bén rễ, khó thay đổi</td></tr>
+    <tr><td>expendable <span class="c1tag">C1</span></td><td>(adj)</td><td>có thể hy sinh/bỏ đi</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2: SPACE ============ -->
+  <h2>Bài đọc 2 <span class="lvl">Space · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The New Race to the Moon</h3>
+    <p><span class="pn">[1]</span> More than half a century after humans first walked on the Moon, a fresh wave of lunar missions is underway, driven this time not solely by superpower rivalry but by a mixture of scientific curiosity, commercial ambition, and national prestige. Several countries, alongside a growing number of private companies, have announced plans to land spacecraft near the lunar south pole, a region long overlooked but now considered strategically valuable.</p>
+    <p class="vi-para">[1] Hơn nửa thế kỷ sau khi con người lần đầu đặt chân lên Mặt Trăng, một làn sóng sứ mệnh lên Mặt Trăng mới đang diễn ra, lần này không chỉ do sự cạnh tranh giữa các siêu cường thúc đẩy mà còn bởi sự pha trộn giữa tò mò khoa học, tham vọng thương mại và uy tín quốc gia. Nhiều quốc gia, cùng với số lượng ngày càng tăng các công ty tư nhân, đã công bố kế hoạch đưa tàu vũ trụ hạ cánh gần cực nam Mặt Trăng, một khu vực từ lâu bị bỏ qua nhưng giờ đây được coi là có giá trị chiến lược.</p>
+
+    <p><span class="pn">[2]</span> The renewed interest stems largely from the discovery of water ice trapped in permanently shadowed craters. Water could be split into hydrogen and oxygen, potentially supplying breathable air and rocket fuel for future missions, thereby reducing the crippling cost of transporting every resource from Earth. Some scientists envisage the Moon eventually serving as a refuelling station for missions bound for Mars, a proposition that seemed fanciful only a generation ago.</p>
+    <p class="vi-para">[2] Sự quan tâm trở lại này chủ yếu bắt nguồn từ việc phát hiện băng nước bị mắc kẹt trong các miệng hố luôn nằm trong bóng tối. Nước có thể được tách thành hydro và oxy, có khả năng cung cấp không khí để thở và nhiên liệu tên lửa cho các sứ mệnh tương lai, nhờ đó giảm bớt chi phí tốn kém khủng khiếp của việc vận chuyển mọi nguồn lực từ Trái Đất. Một số nhà khoa học hình dung Mặt Trăng cuối cùng sẽ đóng vai trò như một trạm tiếp nhiên liệu cho các sứ mệnh hướng tới Sao Hỏa, một ý tưởng mà chỉ một thế hệ trước còn có vẻ viển vông.</p>
+
+    <p><span class="pn">[3]</span> This ambition, however, is not without complications. Unlike the original space race, today's missions involve a tangle of competing national programmes and commercial ventures, raising thorny questions about who owns lunar resources and how disputes should be resolved. Existing international treaties, drafted decades before anyone seriously contemplated mining the Moon, offer only vague guidance, leaving a legal vacuum that some fear could breed conflict rather than cooperation.</p>
+    <p class="vi-para">[3] Tuy nhiên, tham vọng này không phải không có những phức tạp. Không giống như cuộc đua không gian ban đầu, các sứ mệnh ngày nay bao gồm một mớ hỗn độn các chương trình quốc gia cạnh tranh nhau và các dự án thương mại, làm nảy sinh những câu hỏi hóc búa về việc ai sở hữu tài nguyên trên Mặt Trăng và tranh chấp nên được giải quyết như thế nào. Các hiệp ước quốc tế hiện có, được soạn thảo từ hàng chục năm trước khi ai đó nghiêm túc nghĩ đến việc khai thác Mặt Trăng, chỉ đưa ra hướng dẫn mơ hồ, để lại một khoảng trống pháp lý mà một số người lo ngại có thể gây ra xung đột thay vì hợp tác.</p>
+
+    <p><span class="pn">[4]</span> Despite these uncertainties, momentum continues to build. Robotic landers have already touched down successfully, and crewed missions are scheduled within the next few years. Advocates argue that a permanent lunar presence could serve as a proving ground for technologies essential to deeper space exploration, while sceptics caution that enthusiasm has outpaced both the funding and the diplomatic groundwork required to sustain it. Whichever view prevails, the Moon has unmistakably re-entered the centre of humanity's spacefaring ambitions.</p>
+    <p class="vi-para">[4] Bất chấp những điều bất định này, đà tiến vẫn tiếp tục được xây dựng. Các tàu đổ bộ robot đã hạ cánh thành công, và các sứ mệnh có phi hành đoàn được lên lịch trong vài năm tới. Người ủng hộ cho rằng sự hiện diện lâu dài trên Mặt Trăng có thể là bãi thử nghiệm cho các công nghệ thiết yếu cho việc khám phá không gian sâu hơn, trong khi người hoài nghi cảnh báo rằng sự hào hứng đã vượt xa cả nguồn tài trợ lẫn nền tảng ngoại giao cần thiết để duy trì nó. Dù quan điểm nào chiếm ưu thế, Mặt Trăng chắc chắn đã quay trở lại vị trí trung tâm trong tham vọng chinh phục không gian của nhân loại.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. The history of the original 1960s space race</li><li>B. Renewed international and commercial interest in returning to the Moon</li><li>C. How rockets are built</li><li>D. Why Mars is more habitable than the Moon</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài tập trung vào làn sóng mới quay lại Mặt Trăng, động lực (băng nước), thách thức pháp lý và triển vọng tương lai — đây là ý chính.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"crippling"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. minor and easily managed</li><li>B. extremely damaging or severely limiting</li><li>C. beneficial</li><li>D. temporary</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "reducing the crippling cost of transporting every resource" — crippling = gây tổn hại nặng nề, ở đây chỉ chi phí cực kỳ tốn kém.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why is water ice on the Moon important?</div>
+    <ul><li>A. It can be sold to tourists</li><li>B. It could provide breathable air and rocket fuel</li><li>C. It proves the Moon once had oceans</li><li>D. It makes the Moon warmer</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: nước có thể tách thành hydro và oxy, "potentially supplying breathable air and rocket fuel".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"this ambition"</b> refers to:</div>
+    <ul><li>A. the plan to use the Moon as a refuelling station and resource base</li><li>B. the desire to visit Mars only</li><li>C. building international treaties</li><li>D. the original 1960s Moon landing</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Đoạn 2 vừa nói về tham vọng dùng Mặt Trăng làm trạm tiếp nhiên liệu; đoạn 3 mở đầu "This ambition, however, is not without complications" — chỉ về tham vọng đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that current international space treaties:</div>
+    <ul><li>A. clearly define who owns lunar resources</li><li>B. were written with mining the Moon fully in mind</li><li>C. do not adequately address today's commercial lunar activities</li><li>D. forbid any country from exploring the Moon</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "drafted decades before anyone seriously contemplated mining the Moon, offer only vague guidance" → các hiệp ước hiện tại không đủ để giải quyết vấn đề khai thác tài nguyên hiện nay.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"fanciful"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. realistic and well-planned</li><li>B. unlikely or imaginative, not based on fact</li><li>C. inexpensive</li><li>D. officially approved</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a proposition that seemed fanciful only a generation ago" — fanciful = viển vông, xa vời, mang tính tưởng tượng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention that <b class="k">"robotic landers have already touched down successfully"</b> in paragraph 4?</div>
+    <ul><li>A. To prove that human missions are impossible</li><li>B. To provide evidence that lunar momentum is real and progressing</li><li>C. To criticise robotic technology</li><li>D. To explain how treaties are written</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này minh chứng cho luận điểm "momentum continues to build" ở đầu đoạn 4.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as motivations for the new lunar missions EXCEPT:</div>
+    <ul><li>A. scientific curiosity</li><li>B. commercial ambition</li><li>C. national prestige</li><li>D. military invasion planning</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 1 nêu rõ "scientific curiosity, commercial ambition, and national prestige" → A, B, C đều có. "Military invasion planning" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall tone toward the new lunar missions is:</div>
+    <ul><li>A. dismissive and mocking</li><li>B. balanced, acknowledging both promise and risk</li><li>C. purely celebratory with no reservations</li><li>D. entirely pessimistic</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài nêu cả cơ hội (nước, nhiên liệu, tiến bộ công nghệ) lẫn rủi ro (tranh chấp pháp lý, thiếu tài trợ) — giọng văn cân bằng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"enthusiasm has outpaced... funding and... diplomatic groundwork"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. funding and diplomacy have progressed faster than public excitement</li><li>B. excitement about lunar missions has grown faster than the practical support needed to sustain them</li><li>C. there is no enthusiasm for lunar missions</li><li>D. diplomatic issues have already been fully resolved</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "outpaced" = vượt qua về tốc độ; nghĩa là sự hào hứng phát triển nhanh hơn tài trợ và nền tảng ngoại giao cần thiết, tạo ra khoảng cách rủi ro.</p></details>
+  </div>
+
+  <h3>Từ vựng — Space</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>lunar</td><td>(adj)</td><td>thuộc về Mặt Trăng</td></tr>
+    <tr><td>prestige</td><td>(n)</td><td>uy tín, danh tiếng</td></tr>
+    <tr><td>crippling</td><td>(adj)</td><td>gây tổn hại/tốn kém nghiêm trọng</td></tr>
+    <tr><td>envisage <span class="c1tag">C1</span></td><td>(v)</td><td>hình dung, dự tính</td></tr>
+    <tr><td>fanciful <span class="c1tag">C1</span></td><td>(adj)</td><td>viển vông, xa vời</td></tr>
+    <tr><td>thorny</td><td>(adj)</td><td>gai góc, khó giải quyết</td></tr>
+    <tr><td>legal vacuum <span class="c1tag">C1</span></td><td>(n-phr)</td><td>khoảng trống pháp lý</td></tr>
+    <tr><td>outpace</td><td>(v)</td><td>vượt qua về tốc độ</td></tr>
+  </table>
+
+  <!-- ============ BÀI 3: CULTURE ============ -->
+  <h2>Bài đọc 3 <span class="lvl">Culture · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Cultural Globalization: Enrichment or Erosion?</h3>
+    <p><span class="pn">[1]</span> Walk through almost any major city today and the signs of cultural globalization are unmistakable: American fast-food chains beside Japanese noodle bars, K-pop blaring from shop speakers, and street murals inspired by Latin American muralists. This intermingling of traditions, once confined largely to trade routes and empires, now travels at the speed of a single upload, reaching audiences across continents within hours. Proponents celebrate this as an unprecedented exchange of ideas, while critics worry that something valuable is quietly being lost.</p>
+    <p class="vi-para">[1] Đi dạo qua hầu như bất kỳ thành phố lớn nào ngày nay, dấu hiệu của toàn cầu hóa văn hóa đều hiện rõ không thể nhầm lẫn: các chuỗi thức ăn nhanh Mỹ nằm cạnh quán mì Nhật Bản, nhạc K-pop vang lên từ loa cửa hàng, và những bức tranh tường trên phố lấy cảm hứng từ các họa sĩ tranh tường Mỹ Latinh. Sự hòa trộn các truyền thống này, từng chỉ giới hạn phần lớn trong các tuyến đường thương mại và đế chế, giờ đây lan truyền với tốc độ của một lần tải lên duy nhất, tiếp cận khán giả khắp các châu lục chỉ trong vài giờ. Người ủng hộ ca ngợi đây là sự trao đổi ý tưởng chưa từng có, trong khi người chỉ trích lo ngại rằng có điều gì đó quý giá đang âm thầm mất đi.</p>
+
+    <p><span class="pn">[2]</span> The optimistic view holds that exposure to diverse cultures fosters empathy and broadens horizons. A teenager in a small town can now sample cuisines, music, and films from dozens of countries without ever leaving home, and such exposure, advocates argue, cultivates a more tolerant, cosmopolitan outlook. Moreover, globalization has given minority artists unprecedented platforms; a folk singer from a remote village can, in principle, reach millions through streaming services that would have been unimaginable a generation ago.</p>
+    <p class="vi-para">[2] Quan điểm lạc quan cho rằng việc tiếp xúc với các nền văn hóa đa dạng nuôi dưỡng sự đồng cảm và mở rộng tầm nhìn. Một thiếu niên ở một thị trấn nhỏ giờ đây có thể thưởng thức ẩm thực, âm nhạc và phim ảnh từ hàng chục quốc gia mà không cần rời khỏi nhà, và những người ủng hộ cho rằng sự tiếp xúc đó vun đắp một cái nhìn khoan dung và mang tính quốc tế hơn. Hơn nữa, toàn cầu hóa đã trao cho các nghệ sĩ thiểu số những nền tảng chưa từng có; về nguyên tắc, một ca sĩ dân gian từ một ngôi làng xa xôi có thể tiếp cận hàng triệu người thông qua các dịch vụ phát trực tuyến vốn không thể tưởng tượng nổi chỉ một thế hệ trước.</p>
+
+    <p><span class="pn">[3]</span> Sceptics, however, point to a homogenizing undercurrent. When a handful of dominant cultural exports, often from wealthy nations, saturate global markets, local traditions can struggle to compete, and younger generations may gradually lose fluency in indigenous languages or customs. UNESCO estimates that a language disappears roughly every two weeks, and while economic pressures are the primary cause, the dominance of a few global cultural narratives is frequently cited as a contributing factor.</p>
+    <p class="vi-para">[3] Tuy nhiên, những người hoài nghi chỉ ra một dòng chảy ngầm khiến mọi thứ trở nên đồng nhất. Khi một số ít sản phẩm văn hóa xuất khẩu chiếm ưu thế, thường đến từ các quốc gia giàu có, tràn ngập thị trường toàn cầu, các truyền thống địa phương có thể gặp khó khăn để cạnh tranh, và các thế hệ trẻ hơn có thể dần mất đi sự thông thạo với ngôn ngữ hay phong tục bản địa. UNESCO ước tính rằng cứ khoảng hai tuần lại có một ngôn ngữ biến mất, và mặc dù áp lực kinh tế là nguyên nhân chính, sự thống trị của một số ít câu chuyện văn hóa toàn cầu thường được xem là một yếu tố góp phần.</p>
+
+    <p><span class="pn">[4]</span> Reconciling these opposing perspectives may be less about choosing a side than about fostering deliberate stewardship. Some governments now fund initiatives to document endangered languages and subsidize local artists, aiming to ensure that globalization broadens rather than flattens cultural diversity. Whether such measures can counterbalance the sheer scale of global media remains uncertain, but few would dispute that the outcome will shape what "culture" means for generations to come.</p>
+    <p class="vi-para">[4] Việc dung hòa hai quan điểm đối lập này có lẽ không nằm ở việc chọn phe, mà nằm ở việc thúc đẩy sự quản lý có chủ đích. Một số chính phủ hiện đang tài trợ cho các sáng kiến ghi lại các ngôn ngữ có nguy cơ biến mất và hỗ trợ nghệ sĩ địa phương, nhằm đảm bảo rằng toàn cầu hóa mở rộng chứ không làm phẳng đi sự đa dạng văn hóa. Liệu những biện pháp như vậy có thể cân bằng lại với quy mô khổng lồ của truyền thông toàn cầu hay không vẫn còn chưa chắc chắn, nhưng ít ai phủ nhận rằng kết quả sẽ định hình ý nghĩa của "văn hóa" cho các thế hệ mai sau.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. The popularity of fast-food chains worldwide</li><li>B. The debate over whether cultural globalization enriches or endangers local cultures</li><li>C. How UNESCO funds museums</li><li>D. The history of Latin American muralists</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả hai quan điểm đối lập về toàn cầu hóa văn hóa: làm phong phú (đoạn 2) và làm xói mòn (đoạn 3), rồi đề xuất hướng cân bằng (đoạn 4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"cosmopolitan"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. narrow-minded and isolated</li><li>B. open to and familiar with many different cultures</li><li>C. poor and undeveloped</li><li>D. strictly traditional</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a more tolerant, cosmopolitan outlook" — cosmopolitan = mang tính quốc tế, cởi mở với nhiều nền văn hóa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what advantage does globalization offer minority artists?</div>
+    <ul><li>A. Guaranteed record deals</li><li>B. Unprecedented platforms to reach global audiences</li><li>C. Free musical instruments</li><li>D. Government censorship protection</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "globalization has given minority artists unprecedented platforms... reach millions through streaming services".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"such measures"</b> (paragraph 4) refers to:</div>
+    <ul><li>A. dominant cultural exports from wealthy nations</li><li>B. government initiatives to document endangered languages and support local artists</li><li>C. streaming services used by folk singers</li><li>D. UNESCO's estimate about language loss</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó mô tả các sáng kiến của chính phủ (tài trợ ghi lại ngôn ngữ nguy cấp, hỗ trợ nghệ sĩ địa phương); "such measures" chỉ về các sáng kiến này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that the decline of indigenous languages is:</div>
+    <ul><li>A. caused solely by cultural globalization</li><li>B. mainly caused by economic pressures, with globalization as one contributing factor</li><li>C. not related to any external factor</li><li>D. slowing down due to streaming services</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "economic pressures are the primary cause, [and] the dominance of a few global cultural narratives is frequently cited as a contributing factor" → nguyên nhân chính là kinh tế, toàn cầu hóa chỉ là yếu tố góp phần.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"homogenizing"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. making increasingly similar or uniform</li><li>B. making more diverse</li><li>C. destroying completely</li><li>D. accelerating economic growth</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "a homogenizing undercurrent" gắn với ý các nền văn hóa trở nên đồng nhất khi bị các nền văn hóa lớn lấn át — homogenize = làm cho đồng nhất, giống nhau.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author cite UNESCO's estimate about a language disappearing every two weeks?</div>
+    <ul><li>A. To criticize UNESCO's funding policy</li><li>B. To support the sceptics' concern about cultural erosion with concrete evidence</li><li>C. To prove globalization has no negative effects</li><li>D. To promote streaming services</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Số liệu này minh họa cho luận điểm của "sceptics" ở đầu đoạn 3 về việc các truyền thống địa phương đang mai một.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as effects of cultural globalization EXCEPT:</div>
+    <ul><li>A. broader access to diverse cuisines and music</li><li>B. new platforms for minority artists</li><li>C. weakening of some local languages and customs</li><li>D. a decline in international trade</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B (đoạn 2), C (đoạn 3) đều được nhắc. "A decline in international trade" không xuất hiện và trái với bối cảnh toàn cầu hóa gia tăng → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the debate on cultural globalization is best described as:</div>
+    <ul><li>A. one-sidedly in favor of globalization</li><li>B. balanced, presenting both benefits and risks before urging careful management</li><li>C. entirely dismissive of the topic</li><li>D. strongly nostalgic for the past</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày công bằng cả hai phía (đoạn 2 và 3) rồi kết luận bằng đề xuất "deliberate stewardship" — thể hiện quan điểm cân bằng, không thiên vị.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"broadens rather than flattens cultural diversity"</b> (paragraph 4) implies that without careful stewardship, globalization risks:</div>
+    <ul><li>A. making cultures more distinct from one another</li><li>B. reducing cultural variety and making cultures more similar</li><li>C. having no impact on culture at all</li><li>D. increasing the number of endangered languages preserved</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "flattens cultural diversity" đối lập với "broadens" — nếu không quản lý cẩn thận, toàn cầu hóa có thể làm giảm sự đa dạng văn hóa, khiến các nền văn hóa trở nên giống nhau hơn.</p></details>
+  </div>
+
+  <h3>Từ vựng — Culture</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>intermingling</td><td>(n)</td><td>sự hòa trộn, đan xen</td></tr>
+    <tr><td>cosmopolitan</td><td>(adj)</td><td>mang tính quốc tế, cởi mở đa văn hóa</td></tr>
+    <tr><td>unprecedented</td><td>(adj)</td><td>chưa từng có tiền lệ</td></tr>
+    <tr><td>homogenize <span class="c1tag">C1</span></td><td>(v)</td><td>làm cho đồng nhất, giống nhau</td></tr>
+    <tr><td>saturate</td><td>(v)</td><td>bão hòa, tràn ngập</td></tr>
+    <tr><td>indigenous</td><td>(adj)</td><td>bản địa, bản xứ</td></tr>
+    <tr><td>stewardship <span class="c1tag">C1</span></td><td>(n)</td><td>sự quản lý, giám sát có trách nhiệm</td></tr>
+    <tr><td>counterbalance <span class="c1tag">C1</span></td><td>(v)</td><td>cân bằng lại, bù trừ</td></tr>
+  </table>
+
+  <!-- ============ BÀI 4: INNOVATION ============ -->
+  <h2>Bài đọc 4 <span class="lvl">Innovation · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Why Most Breakthrough Innovations Fail First</h3>
+    <p><span class="pn">[1]</span> The popular narrative of innovation often features a lone inventor whose brilliant idea succeeds almost immediately. Reality is considerably messier. Historical records reveal that most transformative technologies, from the light bulb to the personal computer, endured years, sometimes decades, of costly failure before achieving commercial viability. Early electric cars, for instance, appeared on roads well before the internal combustion engine dominated the market, only to be abandoned for nearly a century due to limited battery technology and cheap petrol.</p>
+    <p class="vi-para">[1] Câu chuyện phổ biến về đổi mới thường khắc họa một nhà phát minh đơn độc có ý tưởng xuất sắc thành công gần như ngay lập tức. Thực tế phức tạp hơn nhiều. Các ghi chép lịch sử cho thấy hầu hết các công nghệ mang tính biến đổi sâu sắc, từ bóng đèn cho đến máy tính cá nhân, đều phải trải qua nhiều năm, thậm chí nhiều thập kỷ, thất bại tốn kém trước khi đạt được tính khả thi về mặt thương mại. Chẳng hạn, những chiếc ô tô điện đời đầu đã xuất hiện trên đường phố từ trước khi động cơ đốt trong thống trị thị trường, nhưng rồi bị bỏ rơi gần một thế kỷ do công nghệ pin còn hạn chế và giá xăng rẻ.</p>
+
+    <p><span class="pn">[2]</span> Understanding this pattern matters because it reshapes how organisations should approach risk. Companies that punish failure harshly tend to discourage the very experimentation that breakthroughs require, inadvertently steering employees toward safe, incremental improvements rather than ambitious leaps. By contrast, organisations that treat failed experiments as valuable data, provided lessons are extracted and shared, often outperform more risk-averse competitors over the long run, even though their failure rate in any given year may appear alarmingly high.</p>
+    <p class="vi-para">[2] Việc hiểu được khuôn mẫu này quan trọng bởi nó định hình lại cách các tổ chức nên tiếp cận rủi ro. Những công ty trừng phạt thất bại một cách gay gắt có xu hướng làm nản lòng chính hoạt động thử nghiệm mà những đột phá cần đến, vô tình hướng nhân viên đến những cải tiến an toàn, tăng dần từng chút thay vì những bước nhảy vọt táo bạo. Ngược lại, các tổ chức xem những thử nghiệm thất bại là dữ liệu quý giá, miễn là bài học được rút ra và chia sẻ, thường vượt trội hơn các đối thủ né tránh rủi ro về lâu dài, dù tỷ lệ thất bại của họ trong một năm bất kỳ có thể trông đáng báo động.</p>
+
+    <p><span class="pn">[3]</span> This is not to suggest that failure should be celebrated indiscriminately. The distinction that matters is between intelligent failure, which arises from well-designed experiments testing genuine uncertainty, and careless failure, which stems from negligence or poor planning. Seasoned innovators cultivate the former while relentlessly working to minimise the latter, recognising that not all setbacks carry equal instructive value.</p>
+    <p class="vi-para">[3] Điều này không có nghĩa là thất bại nên được tán dương một cách bừa bãi. Sự phân biệt quan trọng nằm giữa thất bại thông minh, phát sinh từ những thử nghiệm được thiết kế tốt nhằm kiểm tra sự bất định thực sự, và thất bại cẩu thả, bắt nguồn từ sự sơ suất hoặc kế hoạch kém. Những nhà đổi mới dày dạn kinh nghiệm nuôi dưỡng loại thất bại thứ nhất trong khi không ngừng nỗ lực giảm thiểu loại thứ hai, nhận thức rằng không phải mọi thất bại đều mang giá trị bài học ngang nhau.</p>
+
+    <p><span class="pn">[4]</span> Ultimately, cultivating a culture receptive to intelligent failure requires more than slogans; it demands structural changes, such as allocating dedicated budgets for exploratory projects and protecting teams from short-term performance metrics that would otherwise smother nascent ideas. Firms that succeed in institutionalising this patience, historical evidence suggests, are disproportionately likely to produce the rare breakthroughs that redefine entire industries.</p>
+    <p class="vi-para">[4] Cuối cùng, việc nuôi dưỡng một văn hóa cởi mở với thất bại thông minh đòi hỏi nhiều hơn những khẩu hiệu; nó đòi hỏi những thay đổi mang tính cấu trúc, chẳng hạn như phân bổ ngân sách riêng cho các dự án mang tính khám phá và bảo vệ các nhóm khỏi những chỉ số hiệu suất ngắn hạn vốn có thể bóp nghẹt những ý tưởng còn non trẻ. Bằng chứng lịch sử cho thấy các công ty thành công trong việc thể chế hóa sự kiên nhẫn này có khả năng cao hơn hẳn tạo ra những đột phá hiếm hoi làm thay đổi toàn bộ ngành công nghiệp.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the main idea of the passage?</div>
+    <ul><li>A. Breakthrough innovations usually succeed on the first attempt</li><li>B. Repeated failure is often a necessary part of achieving major innovation</li><li>C. Electric cars are more reliable than combustion engines</li><li>D. Companies should never take financial risks</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài lập luận rằng thất bại lặp lại là bước cần thiết trên con đường tới đổi mới đột phá — đây là ý chính xuyên suốt 4 đoạn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"viability"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. failure</li><li>B. the ability to succeed or be workable</li><li>C. high price</li><li>D. popularity among critics</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "before achieving commercial viability" — viability = khả năng tồn tại/khả thi về mặt thương mại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, why were early electric cars abandoned?</div>
+    <ul><li>A. Because of limited battery technology and cheap petrol</li><li>B. Because governments banned them</li><li>C. Because no one wanted a car without an engine</li><li>D. Because they were too expensive to produce</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Đoạn 1: "abandoned for nearly a century due to limited battery technology and cheap petrol".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"the former"</b> refers to:</div>
+    <ul><li>A. careless failure</li><li>B. intelligent failure</li><li>C. negligence</li><li>D. poor planning</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước liệt kê hai loại: "intelligent failure... and careless failure"; "the former" chỉ về loại được nêu trước = intelligent failure.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that companies which harshly punish failure:</div>
+    <ul><li>A. tend to produce more breakthrough innovations</li><li>B. unintentionally discourage employees from taking ambitious risks</li><li>C. always outperform competitors</li><li>D. have lower failure rates because they innovate more</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Companies that punish failure harshly tend to discourage the very experimentation that breakthroughs require, inadvertently steering employees toward safe, incremental improvements."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"nascent"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. fully developed and mature</li><li>B. just beginning to develop</li><li>C. abandoned and forgotten</li><li>D. extremely profitable</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "short-term performance metrics that would otherwise smother nascent ideas" — nascent = mới chớm nở, còn non trẻ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author distinguish between "intelligent failure" and "careless failure" in paragraph 3?</div>
+    <ul><li>A. To argue that all failure should be punished equally</li><li>B. To clarify that not all failure is equally valuable, avoiding an oversimplified celebration of failure</li><li>C. To criticize seasoned innovators</li><li>D. To prove that failure never leads to success</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3 mở đầu bằng "This is not to suggest that failure should be celebrated indiscriminately" rồi phân biệt hai loại thất bại để làm rõ luận điểm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as structural changes needed to support intelligent failure EXCEPT:</div>
+    <ul><li>A. dedicated budgets for exploratory projects</li><li>B. protecting teams from short-term performance metrics</li><li>C. sharing lessons learned from failed experiments</li><li>D. eliminating all financial risk from projects</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B (đoạn 4) và C (đoạn 2, "provided lessons are extracted and shared") đều được nhắc. "Eliminating all financial risk" không được đề cập và mâu thuẫn với tinh thần chấp nhận rủi ro của bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward organisations that institutionalise patience with intelligent failure is:</div>
+    <ul><li>A. critical and disapproving</li><li>B. approving, viewing it as key to major breakthroughs</li><li>C. indifferent</li><li>D. uncertain and confused</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu cuối bài: "Firms that succeed in institutionalising this patience... are disproportionately likely to produce the rare breakthroughs" — thể hiện thái độ tán đồng rõ ràng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"smother nascent ideas"</b> (paragraph 4) implies that short-term performance metrics can:</div>
+    <ul><li>A. help new ideas grow faster</li><li>B. prevent new ideas from developing by demanding immediate results</li><li>C. have no effect on innovation</li><li>D. only apply to failed projects</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "smother" = bóp nghẹt, dập tắt; áp lực hiệu suất ngắn hạn có thể giết chết các ý tưởng còn non trẻ trước khi chúng kịp phát triển.</p></details>
+  </div>
+
+  <h3>Từ vựng — Innovation</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>transformative</td><td>(adj)</td><td>mang tính biến đổi sâu sắc</td></tr>
+    <tr><td>viability</td><td>(n)</td><td>tính khả thi</td></tr>
+    <tr><td>incremental</td><td>(adj)</td><td>tăng dần từng chút một</td></tr>
+    <tr><td>risk-averse <span class="c1tag">C1</span></td><td>(adj)</td><td>e ngại/né tránh rủi ro</td></tr>
+    <tr><td>indiscriminately <span class="c1tag">C1</span></td><td>(adv)</td><td>một cách bừa bãi, không phân biệt</td></tr>
+    <tr><td>negligence</td><td>(n)</td><td>sự cẩu thả, sơ suất</td></tr>
+    <tr><td>nascent <span class="c1tag">C1</span></td><td>(adj)</td><td>mới chớm nở, non trẻ</td></tr>
+    <tr><td>institutionalise <span class="c1tag">C1</span></td><td>(v)</td><td>thể chế hóa, đưa vào thành nề nếp</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM TOÀN ĐỀ ============ -->
+  <h2>Chấm điểm toàn đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài 1 · Health</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 2 · Space</th><td>1-B · 2-B · 3-B · 4-A · 5-C · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 3 · Culture</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-A · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 4 · Innovation</th><td>1-B · 2-B · 3-A · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Cách chấm:</b> Đếm tổng số câu đúng trên 40. Với mỗi câu sai, ghi vào "sổ lỗi" theo mẫu: <i>"Bài __ · Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥3 câu trên toàn đề → đây là dạng cần luyện lại kỹ trước khi thi thật.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> 32–40 đúng → sẵn sàng thi thật · 24–31 → khá ổn, cần rà lại vài dạng yếu · ≤23 → nên dành thêm 1-2 buổi ôn tập trọng điểm trước khi thi.</p>
+  </div>
+
+  <div class="card">
+    <b>⏱️ Ghi nhận cảm giác về thời gian:</b>
+    <p style="margin-top:6px;">Ngay sau khi làm xong (hoặc hết giờ), hãy trả lời nhanh các câu hỏi sau vào sổ tay của bạn:</p>
+    <ul style="margin:8px 0 0 18px; list-style:disc;">
+      <li>Mình có làm hết cả 4 bài trong 60 phút không? Nếu không, bị chậm ở bài nào?</li>
+      <li>Bài nào khiến mình mất nhiều thời gian đọc lại đoạn văn nhất? Vì sao (từ khó, câu dài, cấu trúc lạ)?</li>
+      <li>Có câu nào mình đoán bừa vì hết giờ không? Đánh dấu lại để xem đoán đúng hay sai.</li>
+      <li>Cảm giác áp lực thời gian có khiến mình đọc lướt và bỏ sót chi tiết không?</li>
+      <li>So với các đề luyện trước đó, tốc độ đọc của mình đã cải thiện hay vẫn giữ nguyên?</li>
+    </ul>
+    <p style="margin-top:8px; color:var(--muted)">Ghi lại thật thà — đây chính là dữ liệu quan trọng nhất để điều chỉnh chiến thuật trước ngày thi thật.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong đề FULL Ngày 3?</b> Đối chiếu kỹ bảng đáp án, hoàn thành "sổ lỗi" và phần ghi nhận thời gian ở trên. Ngày 4 sẽ là buổi học <b>Chiến thuật phòng thi</b> — tổng hợp mẹo quản lý thời gian, thứ tự làm bài và cách xử lý câu khó dựa trên chính những gì bạn vừa trải qua hôm nay.
+  </div>
+
+</div>
+
+<footer>🏁 Tuần 8 · Ngày 3 · VSTEP Reading — Đề FULL mô phỏng ngày thi · Quen với áp lực 60 phút hôm nay để tự tin ngày thi thật.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

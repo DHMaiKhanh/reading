@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 19 — Luyện đề Climate Change + Energy &amp; Resources · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🌡️ Ngày 19 — Luyện đề: Climate Change + Energy &amp; Resources</h1>
+  <p>2 bài đọc chuẩn B2 + C1, mỗi bài canh ~18 phút → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~40 phút (2 × ~18 phút)</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · 18 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết cả 2 bài, KHÔNG tra cứu, canh khoảng 18 phút/bài.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 20 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~14–16/18</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài #1 <span class="lvl">B2 + C1 · Climate Change</span></h2>
+
+  <div class="passage">
+    <h3>Tipping Points: Why Small Changes in Climate Can Have Outsized Effects</h3>
+    <p><span class="pn">[1]</span> For much of the twentieth century, climate change was widely discussed as a gradual process: temperatures would creep upward by fractions of a degree each decade, and societies would have ample time to adjust. Recent research, however, has forced scientists to reconsider this comforting assumption. Certain elements of the Earth's climate system, they warn, do not respond in a smooth, linear fashion. Instead, once a critical threshold is crossed, these systems can shift abruptly into a radically different state — a phenomenon known as a "tipping point." Unlike ordinary warming, which can in theory be reversed by cooling the planet back down, many tipping points are effectively irreversible on any timescale relevant to human civilisation.</p>
+    <p class="vi-para">[1] Trong phần lớn thế kỷ 20, biến đổi khí hậu thường được bàn đến như một quá trình diễn ra từ từ: nhiệt độ sẽ tăng lên từng phần nhỏ của độ mỗi thập kỷ, và xã hội sẽ có đủ thời gian để thích nghi. Tuy nhiên, các nghiên cứu gần đây đã buộc giới khoa học phải xem lại giả định an ủi này. Họ cảnh báo rằng một số thành phần trong hệ thống khí hậu Trái Đất không phản ứng theo cách trơn tru, tuyến tính. Thay vào đó, một khi vượt qua một ngưỡng tới hạn, các hệ thống này có thể chuyển đột ngột sang một trạng thái hoàn toàn khác — hiện tượng được gọi là "điểm bùng phát" (tipping point). Không giống như hiện tượng nóng lên thông thường, về lý thuyết có thể đảo ngược bằng cách làm mát hành tinh trở lại, nhiều điểm bùng phát gần như không thể đảo ngược trong bất kỳ khoảng thời gian nào có ý nghĩa với nền văn minh nhân loại.</p>
+    <p><span class="pn">[2]</span> The Greenland and Antarctic ice sheets illustrate this danger vividly. As surface ice melts, the exposed land or ocean beneath absorbs far more sunlight than the bright, reflective ice once did, accelerating further melting in a self-reinforcing loop. Beyond a certain point, scientists suspect, the ice sheet's collapse would continue even if global temperatures stopped rising, locking in metres of sea-level rise over subsequent centuries. Similarly, the Amazon rainforest generates roughly half of its own rainfall through moisture released by its dense canopy; if deforestation and drought push the forest past a certain threshold, large sections could dry out and convert to savanna, releasing vast stores of carbon in the process.</p>
+    <p class="vi-para">[2] Các tảng băng ở Greenland và Nam Cực minh họa rõ ràng cho mối nguy này. Khi lớp băng bề mặt tan chảy, phần đất hoặc đại dương lộ ra bên dưới hấp thụ ánh sáng mặt trời nhiều hơn hẳn so với lớp băng sáng, phản chiếu trước đó, khiến quá trình tan chảy tiếp tục tăng tốc theo một vòng lặp tự củng cố. Các nhà khoa học nghi ngờ rằng vượt qua một điểm nhất định, sự sụp đổ của tảng băng sẽ tiếp diễn ngay cả khi nhiệt độ toàn cầu ngừng tăng, khiến mực nước biển dâng thêm nhiều mét trở thành điều không thể tránh khỏi trong các thế kỷ tiếp theo. Tương tự, rừng nhiệt đới Amazon tự tạo ra khoảng một nửa lượng mưa của chính nó nhờ hơi ẩm thoát ra từ tán rừng rậm rạp; nếu nạn phá rừng và hạn hán đẩy khu rừng vượt qua một ngưỡng nhất định, nhiều khu vực rộng lớn có thể khô cạn và biến thành đồng cỏ xavan, giải phóng một lượng carbon khổng lồ trong quá trình đó.</p>
+    <p><span class="pn">[3]</span> What makes tipping points especially unsettling is the difficulty of predicting exactly where they lie. Climate models can estimate rough ranges, but the precise threshold for any given system remains uncertain until it has already been crossed — at which point intervention is generally too late. Some researchers compare the situation to walking across a frozen lake in fading light: one cannot be certain exactly where the ice becomes too thin to bear weight, yet stepping onto the wrong patch can have catastrophic and immediate consequences. This uncertainty has led a growing number of scientists to argue for a precautionary approach, in which policymakers act well before the estimated threshold rather than waiting for definitive proof.</p>
+    <p class="vi-para">[3] Điều khiến các điểm bùng phát trở nên đặc biệt đáng lo ngại là khó có thể dự đoán chính xác chúng nằm ở đâu. Các mô hình khí hậu có thể ước tính khoảng giá trị tương đối, nhưng ngưỡng chính xác của bất kỳ hệ thống nào cũng vẫn còn bất định cho đến khi nó đã bị vượt qua — và lúc đó việc can thiệp thường đã quá muộn. Một số nhà nghiên cứu ví tình huống này như việc bước qua một hồ băng trong ánh sáng chạng vạng: người ta không thể chắc chắn chính xác chỗ nào lớp băng đã quá mỏng để chịu được trọng lượng, nhưng bước nhầm vào chỗ đó có thể gây ra hậu quả thảm khốc và tức thì. Sự bất định này đã khiến ngày càng nhiều nhà khoa học ủng hộ một cách tiếp cận phòng ngừa, trong đó các nhà hoạch định chính sách hành động từ rất sớm, trước ngưỡng ước tính, thay vì chờ đợi bằng chứng chắc chắn.</p>
+    <p><span class="pn">[4]</span> Not everyone agrees on how urgently governments should respond. Some economists caution that overly aggressive climate policies could impose severe short-term costs on industries and workers, particularly in developing nations still reliant on fossil fuels for growth. Climate scientists counter that the cost of inaction dwarfs the cost of prevention, since reversing a crossed tipping point — if it is possible at all — would likely require efforts far more expensive and disruptive than those needed to avoid it in the first place. What is increasingly clear is that treating climate change as a slow, linear problem may drastically underestimate the risks that lie ahead, and that the margin for delay may be considerably narrower than earlier assumed.</p>
+    <p class="vi-para">[4] Không phải ai cũng đồng ý về mức độ khẩn cấp mà chính phủ cần phản ứng. Một số nhà kinh tế học cảnh báo rằng các chính sách khí hậu quá quyết liệt có thể gây ra chi phí ngắn hạn nặng nề cho các ngành công nghiệp và người lao động, đặc biệt ở các nước đang phát triển vẫn còn phụ thuộc vào nhiên liệu hóa thạch để tăng trưởng. Các nhà khoa học khí hậu phản bác rằng cái giá của việc không hành động lớn hơn nhiều so với cái giá của việc phòng ngừa, bởi vì việc đảo ngược một điểm bùng phát đã bị vượt qua — nếu điều đó còn khả thi — nhiều khả năng sẽ đòi hỏi nỗ lực tốn kém và gây xáo trộn hơn nhiều so với việc ngăn chặn nó ngay từ đầu. Điều ngày càng trở nên rõ ràng là việc xem biến đổi khí hậu như một vấn đề chậm rãi, tuyến tính có thể đánh giá thấp nghiêm trọng những rủi ro phía trước, và khoảng thời gian còn lại để trì hoãn có thể hẹp hơn nhiều so với những gì từng được cho là như vậy.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of ice sheet formation</li><li>B. the danger that certain climate systems could shift abruptly and irreversibly past critical thresholds</li><li>C. how economists calculate the cost of fossil fuels</li><li>D. why the Amazon rainforest produces oxygen</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài xoay quanh khái niệm "tipping point" — sự thay đổi đột ngột, khó dự đoán và khó đảo ngược của các hệ thống khí hậu. A/C/D chỉ là chi tiết phụ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"threshold"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. a gradual decline</li><li>B. a critical point or limit at which something changes</li><li>C. a scientific measurement tool</li><li>D. a type of ice sheet</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "once a critical threshold is crossed, these systems can shift abruptly" → threshold = ngưỡng, điểm giới hạn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why does melting ice accelerate further melting?</div>
+    <ul><li>A. Because ocean currents grow warmer near the poles</li><li>B. Because the exposed land or ocean beneath absorbs more sunlight than the reflective ice did</li><li>C. Because rainfall increases over ice sheets</li><li>D. Because governments have reduced funding for research</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "the exposed land or ocean beneath absorbs far more sunlight than the bright, reflective ice once did, accelerating further melting."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"its"</b> (in "generates roughly half of its own rainfall") refers to:</div>
+    <ul><li>A. the Amazon rainforest</li><li>B. the ice sheet</li><li>C. global temperatures</li><li>D. deforestation</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Câu này đang nói về "the Amazon rainforest generates...its own rainfall through moisture released by its dense canopy" → "its" chỉ rừng Amazon.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that predicting tipping points:</div>
+    <ul><li>A. is a simple task with precise, guaranteed results</li><li>B. is inherently uncertain, which supports acting cautiously before thresholds are confirmed</li><li>C. is unnecessary because tipping points do not really exist</li><li>D. has already been solved by climate models</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the precise threshold...remains uncertain until it has already been crossed" và "argue for a precautionary approach" → tính bất định ủng hộ hành động phòng ngừa sớm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"dwarfs"</b> (paragraph 4, "the cost of inaction dwarfs the cost of prevention") is closest in meaning to:</div>
+    <ul><li>A. is far smaller than</li><li>B. is far greater than</li><li>C. is roughly equal to</li><li>D. cannot be compared to</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "dwarf" (v) = làm cho thứ khác trông nhỏ bé hơn hẳn → chi phí không hành động lớn hơn nhiều so với chi phí phòng ngừa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"walking across a frozen lake in fading light"</b> in paragraph 3?</div>
+    <ul><li>A. To describe a recreational activity</li><li>B. To provide an analogy illustrating the danger of not knowing exactly where a threshold lies</li><li>C. To criticize winter sports</li><li>D. To explain how ice sheets are measured</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đây là phép so sánh (analogy) minh họa việc không biết chính xác ranh giới nguy hiểm nằm ở đâu, giống như không biết tipping point chính xác ở đâu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as examples or effects of tipping points EXCEPT:</div>
+    <ul><li>A. collapse of ice sheets continuing even after temperatures stabilise</li><li>B. the Amazon rainforest converting to savanna</li><li>C. release of large stores of carbon from drying forest</li><li>D. a permanent global ban on fossil fuel use</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều được nhắc ở đoạn 2. Việc "cấm hoàn toàn nhiên liệu hóa thạch trên toàn cầu" không được đề cập trong bài → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall tone toward the risk of climate tipping points is best described as:</div>
+    <ul><li>A. dismissive and unconcerned</li><li>B. seriously cautionary, urging earlier and more decisive action</li><li>C. purely celebratory</li><li>D. neutral to the point of having no viewpoint</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài liên tục nhấn mạnh tính không thể đảo ngược, sự bất định, và kết luận "the margin for delay may be considerably narrower than earlier assumed" → giọng cảnh báo nghiêm túc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"lock in"</b> (paragraph 2, "locking in metres of sea-level rise") implies that the outcome would be:</div>
+    <ul><li>A. easily reversed with minor policy changes</li><li>B. fixed and unavoidable once triggered</li><li>C. dependent on annual rainfall patterns</li><li>D. beneficial for coastal cities</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "lock in" = khóa chặt, ấn định không thể thay đổi — phù hợp với ý "the ice sheet's collapse would continue even if global temperatures stopped rising."</p></details>
+  </div>
+
+  <h3>Từ vựng Bài #1</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>gradual</td><td>(adj)</td><td>từ từ, dần dần</td></tr>
+    <tr><td>threshold</td><td>(n)</td><td>ngưỡng, điểm giới hạn</td></tr>
+    <tr><td>tipping point</td><td>(n phr)</td><td>điểm bùng phát/điểm không thể quay lại</td></tr>
+    <tr><td>irreversible <span class="c1tag">C1</span></td><td>(adj)</td><td>không thể đảo ngược</td></tr>
+    <tr><td>self-reinforcing loop <span class="c1tag">C1</span></td><td>(n phr)</td><td>vòng lặp tự củng cố/tự tăng cường</td></tr>
+    <tr><td>canopy</td><td>(n)</td><td>tán rừng, tán cây</td></tr>
+    <tr><td>savanna</td><td>(n)</td><td>đồng cỏ xavan</td></tr>
+    <tr><td>precautionary <span class="c1tag">C1</span></td><td>(adj)</td><td>mang tính phòng ngừa</td></tr>
+    <tr><td>dwarf (v) <span class="c1tag">C1</span></td><td>(v)</td><td>làm cho nhỏ bé hơn hẳn (so sánh)</td></tr>
+    <tr><td>lock in</td><td>(phr v)</td><td>khóa chặt, ấn định cố định</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài #2 <span class="lvl">B2 + C1 · Energy &amp; Resources</span></h2>
+
+  <div class="passage">
+    <h3>The Uneven Race Toward Renewable Energy</h3>
+    <p><span class="pn">[1]</span> A decade ago, renewable energy sources such as solar and wind power were routinely dismissed as expensive niche technologies, suitable only for wealthy nations willing to pay a premium for cleaner electricity. That assumption has since been overturned. The cost of solar panels has fallen by roughly ninety per cent since 2010, while wind turbines have grown taller and more efficient, allowing them to capture stronger, steadier winds at higher altitudes. In many regions, building new solar or wind capacity is now cheaper than continuing to operate existing coal-fired power plants, a reversal that would have seemed implausible only fifteen years ago.</p>
+    <p class="vi-para">[1] Một thập kỷ trước, các nguồn năng lượng tái tạo như điện mặt trời và điện gió thường bị coi là công nghệ ngách đắt đỏ, chỉ phù hợp với các quốc gia giàu có sẵn sàng trả thêm tiền để có điện sạch hơn. Từ đó đến nay, giả định này đã bị đảo ngược hoàn toàn. Chi phí tấm pin mặt trời đã giảm khoảng chín mươi phần trăm kể từ năm 2010, trong khi tua-bin gió ngày càng cao hơn và hiệu quả hơn, cho phép chúng thu được luồng gió mạnh và ổn định hơn ở độ cao lớn. Ở nhiều khu vực, xây dựng công suất điện mặt trời hoặc điện gió mới nay đã rẻ hơn so với việc tiếp tục vận hành các nhà máy nhiệt điện than hiện có — một sự đảo chiều mà chỉ mười lăm năm trước đây có vẻ khó tin.</p>
+    <p><span class="pn">[2]</span> Yet falling costs alone do not guarantee a smooth transition away from fossil fuels. Solar and wind are intermittent: panels generate no electricity after dark, and turbines fall idle when the wind dies down. Without adequate storage, such as large-scale batteries, or without a diverse mix of energy sources spread across a wide geographic area, grids reliant on renewables risk power shortages during periods of low sunlight or calm weather. Engineers are racing to develop cheaper, longer-lasting batteries, but the technology has not yet advanced quickly enough to fully offset the variability inherent in wind and solar generation.</p>
+    <p class="vi-para">[2] Tuy nhiên, chi phí giảm không thôi không đảm bảo một quá trình chuyển đổi suôn sẻ khỏi nhiên liệu hóa thạch. Điện mặt trời và điện gió đều mang tính gián đoạn: tấm pin không tạo ra điện sau khi trời tối, còn tua-bin ngừng hoạt động khi gió lặng. Nếu thiếu hệ thống lưu trữ đầy đủ, chẳng hạn như pin quy mô lớn, hoặc thiếu sự đa dạng nguồn năng lượng trải rộng trên một khu vực địa lý rộng lớn, các lưới điện phụ thuộc vào năng lượng tái tạo có nguy cơ thiếu điện trong những giai đoạn ít nắng hoặc lặng gió. Các kỹ sư đang chạy đua phát triển loại pin rẻ hơn và bền hơn, nhưng công nghệ này vẫn chưa tiến bộ đủ nhanh để bù đắp hoàn toàn tính biến động vốn có của việc phát điện từ gió và mặt trời.</p>
+    <p><span class="pn">[3]</span> Water, too, has become entangled with the future of energy. Hydropower remains one of the world's largest sources of renewable electricity, yet dams can disrupt river ecosystems, displace communities, and become less reliable as droughts, intensified by climate change, reduce river flow. Meanwhile, the mining of lithium and cobalt, both essential for the batteries that power electric vehicles and store renewable energy, consumes enormous quantities of water and has drawn criticism for polluting local water supplies in the regions where these minerals are extracted. Advocates of renewable energy therefore face an uncomfortable paradox: solving one environmental crisis can inadvertently strain a different, equally finite resource.</p>
+    <p class="vi-para">[3] Nước cũng đã trở nên gắn chặt với tương lai của năng lượng. Thủy điện vẫn là một trong những nguồn điện tái tạo lớn nhất thế giới, nhưng các đập thủy điện có thể phá vỡ hệ sinh thái sông ngòi, buộc cộng đồng dân cư phải di dời, và trở nên kém tin cậy hơn khi hạn hán — bị làm trầm trọng thêm bởi biến đổi khí hậu — làm giảm lưu lượng dòng sông. Trong khi đó, việc khai thác lithium và cobalt, cả hai đều thiết yếu cho pin cung cấp năng lượng cho xe điện và lưu trữ năng lượng tái tạo, tiêu tốn một lượng nước khổng lồ và đã bị chỉ trích vì gây ô nhiễm nguồn nước địa phương tại các khu vực khai thác khoáng sản này. Do đó, những người ủng hộ năng lượng tái tạo phải đối mặt với một nghịch lý khó chịu: giải quyết một cuộc khủng hoảng môi trường này có thể vô tình gây áp lực lên một nguồn tài nguyên hữu hạn khác.</p>
+    <p><span class="pn">[4]</span> Despite these complications, most energy analysts remain convinced that the shift toward renewables is not merely desirable but inevitable. Even accounting for the costs of storage and the environmental toll of mineral extraction, renewable sources still emit dramatically less carbon over their lifetime than coal, oil, or natural gas. What analysts increasingly stress, however, is that the transition must be managed thoughtfully: investing in recycling technologies for batteries, diversifying the sources of critical minerals, and ensuring that vulnerable communities near mines and dams are not left to bear a disproportionate share of the burden. A genuinely sustainable energy future, they argue, depends as much on how the transition is managed as on the technologies themselves.</p>
+    <p class="vi-para">[4] Bất chấp những phức tạp này, hầu hết các nhà phân tích năng lượng vẫn tin rằng việc chuyển dịch sang năng lượng tái tạo không chỉ là điều mong muốn mà còn là điều tất yếu. Ngay cả khi tính đến chi phí lưu trữ và tổn hại môi trường từ việc khai thác khoáng sản, các nguồn năng lượng tái tạo vẫn thải ra lượng carbon ít hơn đáng kể trong suốt vòng đời so với than, dầu hoặc khí tự nhiên. Tuy nhiên, điều mà các nhà phân tích ngày càng nhấn mạnh là quá trình chuyển đổi phải được quản lý một cách thận trọng: đầu tư vào công nghệ tái chế pin, đa dạng hóa nguồn cung khoáng sản thiết yếu, và đảm bảo rằng các cộng đồng dễ bị tổn thương sống gần các mỏ khai thác và đập thủy điện không phải gánh chịu một phần gánh nặng không tương xứng. Họ lập luận rằng một tương lai năng lượng thực sự bền vững phụ thuộc vào cách quản lý quá trình chuyển đổi cũng nhiều như phụ thuộc vào chính bản thân các công nghệ.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the declining cost of coal power plants</li><li>B. the progress and remaining challenges of the shift toward renewable energy</li><li>C. the history of hydropower dam construction</li><li>D. why electric vehicles are more expensive than petrol cars</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả tiến bộ (giá giảm, đoạn 1) lẫn thách thức (tính gián đoạn, nước, khoáng sản — đoạn 2–3) và kết luận về cách quản lý quá trình chuyển đổi (đoạn 4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"intermittent"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. constant and unchanging</li><li>B. occurring at irregular intervals, not continuous</li><li>C. extremely powerful</li><li>D. completely reliable</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu tiếp theo giải thích: "panels generate no electricity after dark, and turbines fall idle when the wind dies down" → intermittent = không liên tục, gián đoạn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 3, what problem is associated with mining lithium and cobalt?</div>
+    <ul><li>A. It produces too much electricity</li><li>B. It consumes large quantities of water and pollutes local water supplies</li><li>C. It has made electric vehicles too cheap</li><li>D. It has completely replaced hydropower</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3: mining "consumes enormous quantities of water and has drawn criticism for polluting local water supplies."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"these minerals"</b> refers to:</div>
+    <ul><li>A. coal and oil</li><li>B. lithium and cobalt</li><li>C. solar panels and wind turbines</li><li>D. rivers and dams</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó nói về "the mining of lithium and cobalt"; "these minerals" nhắc lại chính hai khoáng sản này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that a power grid relying heavily on solar and wind alone, without storage, would:</div>
+    <ul><li>A. never experience any electricity shortages</li><li>B. be vulnerable to shortages during dark or calm weather periods</li><li>C. become more expensive than coal power immediately</li><li>D. eliminate the need for batteries entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Without adequate storage...grids reliant on renewables risk power shortages during periods of low sunlight or calm weather."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"paradox"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. a straightforward and expected outcome</li><li>B. a situation that seems contradictory or self-defeating</li><li>C. a financial profit</li><li>D. a type of renewable technology</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "solving one environmental crisis can inadvertently strain a different...resource" → mâu thuẫn nghịch lý, đúng nghĩa của "paradox."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention that <b class="k">dams can displace communities and reduce river flow reliability</b> in paragraph 3?</div>
+    <ul><li>A. To argue that hydropower should be the only energy source used</li><li>B. To show that even renewable sources like hydropower carry their own environmental and social costs</li><li>C. To criticize electric vehicle owners</li><li>D. To explain how solar panels are manufactured</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3 nêu ra mặt trái của cả thủy điện lẫn khai thác khoáng sản — minh họa rằng năng lượng tái tạo cũng có chi phí môi trường/xã hội riêng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as challenges facing renewable energy EXCEPT:</div>
+    <ul><li>A. intermittency of solar and wind generation</li><li>B. water consumption and pollution from mineral extraction</li><li>C. disruption of river ecosystems by dams</li><li>D. a global shortage of skilled solar panel engineers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 2), B và C (đoạn 3) đều được nêu. "Thiếu kỹ sư lắp đặt pin mặt trời" không hề được nhắc đến trong bài → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The overall attitude of energy analysts described in the passage toward the renewable transition is best described as:</div>
+    <ul><li>A. fundamentally opposed to any use of renewables</li><li>B. convinced it is inevitable, but stressing it must be managed carefully</li><li>C. indifferent to environmental consequences</li><li>D. certain that no challenges remain to be solved</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4: "the shift toward renewables is not merely desirable but inevitable," nhưng "the transition must be managed thoughtfully" → lạc quan có điều kiện.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The statement <b class="k">"depends as much on how the transition is managed as on the technologies themselves"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. technology alone is sufficient to guarantee a sustainable energy future</li><li>B. good management and policy choices are just as important as technological progress</li><li>C. management decisions are irrelevant compared to new inventions</li><li>D. renewable technologies have stopped improving</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu so sánh "as much...as" đặt "cách quản lý" ngang hàng với "công nghệ" — cả hai đều quan trọng như nhau cho tương lai bền vững.</p></details>
+  </div>
+
+  <h3>Từ vựng Bài #2</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>niche technology</td><td>(n phr)</td><td>công nghệ ngách, ít phổ biến</td></tr>
+    <tr><td>premium (pay a)</td><td>(n)</td><td>khoản phụ trội, trả thêm</td></tr>
+    <tr><td>implausible <span class="c1tag">C1</span></td><td>(adj)</td><td>khó tin, khó xảy ra</td></tr>
+    <tr><td>intermittent</td><td>(adj)</td><td>gián đoạn, không liên tục</td></tr>
+    <tr><td>offset (v)</td><td>(v)</td><td>bù đắp, cân bằng lại</td></tr>
+    <tr><td>hydropower</td><td>(n)</td><td>thủy điện</td></tr>
+    <tr><td>displace (communities)</td><td>(v)</td><td>buộc di dời, di tản (dân cư)</td></tr>
+    <tr><td>extraction</td><td>(n)</td><td>sự khai thác (khoáng sản)</td></tr>
+    <tr><td>paradox <span class="c1tag">C1</span></td><td>(n)</td><td>nghịch lý</td></tr>
+    <tr><td>finite (resource)</td><td>(adj)</td><td>hữu hạn, có giới hạn</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1</th><td>1-B · 2-B · 3-B · 4-A · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài #2</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · bài __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu (trên cả 2 bài) → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 14–18 → nền rất tốt · 10–13 → ổn, đúng hướng · ≤9 → đọc lại cả 2 bài + học kỹ từ vựng trước khi qua Ngày 20.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 19?</b> Quay lại lộ trình tick 4 ô của Ngày 19. Từ Ngày 19 trở đi, mỗi ngày luyện 2 bài đọc để tăng dần độ bền khi làm bài thi thật (thường có nhiều hơn 1 passage).
+  </div>
+
+</div>
+
+<footer>🌡️ Ngày 19 · VSTEP Reading — Climate Change + Energy &amp; Resources · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

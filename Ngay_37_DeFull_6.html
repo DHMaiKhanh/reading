@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 37 — Tuần 7 · Ngày 5 — ĐỀ FULL #6 · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⚖️ Tuần 7 · Ngày 5 — ĐỀ FULL #6: Crime &amp; Law · Architecture · Internet · Ageing</h1>
+  <p>4 bài đọc độc lập — làm nghiêm túc trong 1 lượt như thi thật</p>
+  <div class="meta">
+    <span class="badge">🕐 Bấm giờ NGHIÊM 60 phút</span>
+    <span class="badge">📝 4 bài · 40 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy tắc làm đề nghiêm túc:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Bấm giờ đúng <b>60 phút</b> cho cả 4 bài — không dừng giữa chừng, không tra từ điển.</li>
+      <li>Làm hết 40 câu rồi mới xem đáp án — kể cả câu chưa chắc, hãy chọn phương án tốt nhất.</li>
+      <li>Sau khi hết giờ: chấm điểm bằng bảng đáp án nhanh ở cuối trang, tính điểm theo mốc tự đánh giá.</li>
+      <li>Với mỗi câu sai — quay lại đoạn văn, đọc <b>&lt;details&gt;</b>, hiểu rõ bẫy trước khi ghi vào sổ lỗi.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Nền B2 + vài câu <span class="c1tag">C1</span> để kéo trần. Mục tiêu tổng: đúng <b>≥ 30/40</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1: CRIME & LAW ============ -->
+  <h2>Bài 1 <span class="lvl">Crime &amp; Law · Sports</span></h2>
+
+  <div class="passage">
+    <h3>The Rise of Sports-Related Cybercrime</h3>
+    <p><span class="pn">[1]</span> When people think of crime in sport, match-fixing or doping scandals usually come to mind. In recent years, however, a subtler threat has emerged: cybercrime targeting the sports industry itself. Ticketing platforms, fan databases, and even the systems used to broadcast live matches have all become lucrative targets for hackers seeking financial gain or simply wishing to cause disruption on a grand stage.</p>
+    <p class="vi-para">[1] Khi nghĩ đến tội phạm trong thể thao, người ta thường nghĩ ngay đến dàn xếp tỉ số hay các vụ bê bối doping. Tuy nhiên, những năm gần đây, một mối đe dọa kín đáo hơn đã xuất hiện: tội phạm mạng nhắm vào chính ngành công nghiệp thể thao. Các nền tảng bán vé, cơ sở dữ liệu người hâm mộ, và cả hệ thống dùng để phát sóng trực tiếp các trận đấu đều đã trở thành mục tiêu béo bở của tin tặc, những kẻ tìm kiếm lợi ích tài chính hoặc đơn giản là muốn gây rối trên một sân khấu lớn.</p>
+    <p><span class="pn">[2]</span> One common scheme involves the resale of counterfeit tickets through fraudulent websites that closely mimic official vendors. Fans who purchase these tickets often discover, only upon arriving at the stadium, that their barcodes are invalid or have already been used. Law enforcement agencies have struggled to keep pace, partly because such operations are frequently run from abroad, placing them beyond the immediate reach of domestic courts.</p>
+    <p class="vi-para">[2] Một thủ đoạn phổ biến là bán lại vé giả thông qua các trang web lừa đảo mô phỏng gần giống các nhà cung cấp chính thức. Người hâm mộ mua phải những chiếc vé này thường chỉ phát hiện ra khi đã đến sân vận động rằng mã vạch của họ không hợp lệ hoặc đã bị sử dụng. Các cơ quan thực thi pháp luật đã gặp khó khăn trong việc theo kịp, một phần vì các hoạt động này thường được điều hành từ nước ngoài, khiến chúng nằm ngoài tầm với trực tiếp của tòa án trong nước.</p>
+    <p><span class="pn">[3]</span> Betting fraud represents an equally pressing concern. Criminal syndicates have been known to bribe players or officials to manipulate outcomes, then exploit inside knowledge on unregulated betting sites. Sporting bodies have responded by introducing integrity units tasked with monitoring suspicious betting patterns, yet critics argue that penalties remain too lenient to serve as an effective deterrent.</p>
+    <p class="vi-para">[3] Gian lận cá cược cũng là một mối lo ngại cấp bách không kém. Các băng nhóm tội phạm được biết là đã hối lộ cầu thủ hoặc quan chức để thao túng kết quả, sau đó khai thác thông tin nội bộ trên các trang cá cược không được quản lý. Các tổ chức thể thao đã đáp lại bằng cách thành lập các đơn vị liêm chính có nhiệm vụ giám sát các mô hình cá cược đáng ngờ, nhưng những người chỉ trích cho rằng các hình phạt vẫn còn quá nhẹ để có thể răn đe hiệu quả.</p>
+    <p><span class="pn">[4]</span> Perhaps the most alarming development is the hacking of athletes' personal data, including medical records and biometric information collected by wearable devices. Such breaches not only violate privacy but could, in theory, be exploited to blackmail competitors or leak confidential team strategies. Governing bodies increasingly acknowledge that safeguarding sport now requires expertise once reserved for banks and government agencies — a sign of how thoroughly digital crime has infiltrated an arena once thought to be purely physical.</p>
+    <p class="vi-para">[4] Có lẽ diễn biến đáng báo động nhất là việc dữ liệu cá nhân của vận động viên bị tấn công, bao gồm hồ sơ y tế và thông tin sinh trắc học thu thập được từ các thiết bị đeo. Những vụ xâm phạm như vậy không chỉ vi phạm quyền riêng tư mà về lý thuyết còn có thể bị lợi dụng để tống tiền đối thủ hoặc rò rỉ chiến thuật bí mật của đội. Các tổ chức quản lý ngày càng thừa nhận rằng việc bảo vệ thể thao hiện nay đòi hỏi chuyên môn từng chỉ dành riêng cho ngân hàng và cơ quan chính phủ — một dấu hiệu cho thấy tội phạm số đã xâm nhập sâu đến mức nào vào một lĩnh vực từng được xem là hoàn toàn mang tính thể chất.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. doping scandals in professional sport</li><li>B. how cybercrime has spread into the sports industry</li><li>C. why stadiums are difficult to build</li><li>D. the history of ticket prices</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả 4 đoạn xoay quanh các hình thức tội phạm mạng trong thể thao (vé giả, cá cược, hack dữ liệu). A chỉ là ý mở đầu để đối lập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"lucrative"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. dangerous</li><li>B. profitable</li><li>C. illegal</li><li>D. boring</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "lucrative targets for hackers seeking financial gain" → mang lại lợi nhuận = profitable.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why is it hard for law enforcement to stop counterfeit ticket sellers?</div>
+    <ul><li>A. Fans refuse to report the crime</li><li>B. The websites are too expensive to investigate</li><li>C. The operations are often run from abroad</li><li>D. Barcodes cannot be checked at stadiums</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "such operations are frequently run from abroad, placing them beyond the immediate reach of domestic courts."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the phrase <b class="k">"such operations"</b> refers to:</div>
+    <ul><li>A. official ticket vendors</li><li>B. stadium security teams</li><li>C. fraudulent ticket-selling schemes</li><li>D. domestic courts</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "such operations" nhắc lại "schemes involving resale of counterfeit tickets" ở câu trước.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that integrity units:</div>
+    <ul><li>A. have completely eliminated betting fraud</li><li>B. are seen by some as not strict enough</li><li>C. are illegal in most countries</li><li>D. only monitor athletes' medical data</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "critics argue that penalties remain too lenient to serve as an effective deterrent" → chưa đủ mạnh.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"deterrent"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. something that encourages an action</li><li>B. something that discourages an action</li><li>C. a financial reward</li><li>D. a type of betting</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Deterrent = yếu tố răn đe, ngăn chặn hành vi xấu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention wearable devices in paragraph 4?</div>
+    <ul><li>A. To advertise a new sports product</li><li>B. To explain how athletes train</li><li>C. To show a source of sensitive data that could be hacked</li><li>D. To criticise referees</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 4 nói về dữ liệu y tế/sinh trắc học từ thiết bị đeo bị hack.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as sports-related cybercrimes EXCEPT:</div>
+    <ul><li>A. counterfeit ticket sales</li><li>B. betting fraud</li><li>C. hacking of athletes' personal data</li><li>D. illegal transfer of players between clubs</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 2), B (đoạn 3), C (đoạn 4) đều có; chuyển nhượng cầu thủ không được nhắc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's tone toward the growth of sports cybercrime is best described as:</div>
+    <ul><li>A. dismissive</li><li>B. concerned and analytical</li><li>C. celebratory</li><li>D. neutral and uninterested</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả liệt kê nhiều bằng chứng lo ngại kèm phân tích nguyên nhân, không hề thờ ơ hay ăn mừng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final sentence of paragraph 4 implies that:</div>
+    <ul><li>A. sport is no longer a physical activity</li><li>B. banks should sponsor more sports teams</li><li>C. protecting sport now demands skills once limited to finance and government</li><li>D. athletes no longer need privacy protection</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "requires expertise once reserved for banks and government agencies" → thể thao nay cần chuyên môn an ninh mạng như tài chính/chính phủ.</p></details>
+  </div>
+
+  <h3>Từ vựng — Crime &amp; Law</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>match-fixing</td><td>(n)</td><td>dàn xếp tỉ số</td></tr>
+    <tr><td>lucrative</td><td>(adj)</td><td>sinh lợi, béo bở</td></tr>
+    <tr><td>counterfeit</td><td>(adj)</td><td>giả mạo</td></tr>
+    <tr><td>fraudulent</td><td>(adj)</td><td>lừa đảo</td></tr>
+    <tr><td>syndicate <span class="c1tag">C1</span></td><td>(n)</td><td>băng nhóm, tổ chức tội phạm</td></tr>
+    <tr><td>deterrent <span class="c1tag">C1</span></td><td>(n)</td><td>biện pháp răn đe</td></tr>
+    <tr><td>biometric</td><td>(adj)</td><td>sinh trắc học</td></tr>
+    <tr><td>infiltrate <span class="c1tag">C1</span></td><td>(v)</td><td>xâm nhập</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2: ARCHITECTURE & DESIGN ============ -->
+  <h2>Bài 2 <span class="lvl">Architecture &amp; Design</span></h2>
+
+  <div class="passage">
+    <h3>Designing Buildings for a Warming World</h3>
+    <p><span class="pn">[1]</span> As global temperatures climb, architects are being forced to rethink long-held assumptions about how buildings should be designed. For decades, glass-fronted skyscrapers were celebrated as symbols of modernity, yet these structures often trap heat and rely heavily on air conditioning, making them poorly suited to an era of extreme weather. A new generation of designers is instead looking to strategies that reduce energy consumption while keeping occupants comfortable.</p>
+    <p class="vi-para">[1] Khi nhiệt độ toàn cầu tăng lên, các kiến trúc sư buộc phải xem xét lại những giả định lâu đời về cách thiết kế công trình. Trong nhiều thập kỷ, các tòa nhà chọc trời mặt kính từng được ca ngợi như biểu tượng của sự hiện đại, nhưng những công trình này thường giữ nhiệt và phụ thuộc nặng nề vào điều hòa không khí, khiến chúng không phù hợp với thời đại thời tiết cực đoan. Thay vào đó, một thế hệ nhà thiết kế mới đang hướng tới những chiến lược giúp giảm tiêu thụ năng lượng trong khi vẫn giữ cho người sử dụng cảm thấy thoải mái.</p>
+    <p><span class="pn">[2]</span> One approach, known as passive design, uses the building's orientation, shape, and materials to regulate temperature naturally. Thick walls, shaded courtyards, and strategically placed windows can dramatically cut the need for mechanical cooling. Interestingly, many of these techniques are not new inventions but adaptations of traditional building methods used in hot climates for centuries, long before electricity made air conditioning possible.</p>
+    <p class="vi-para">[2] Một cách tiếp cận, được gọi là thiết kế thụ động, sử dụng hướng, hình dạng và vật liệu của công trình để điều chỉnh nhiệt độ một cách tự nhiên. Tường dày, sân trong có bóng râm, và cửa sổ được đặt vị trí chiến lược có thể giảm đáng kể nhu cầu làm mát bằng máy móc. Điều thú vị là nhiều kỹ thuật trong số này không phải là phát minh mới mà là sự biến tấu từ các phương pháp xây dựng truyền thống đã được dùng ở vùng khí hậu nóng suốt nhiều thế kỷ, từ rất lâu trước khi điện khiến điều hòa không khí trở nên khả thi.</p>
+    <p><span class="pn">[3]</span> Green roofs and vertical gardens have also gained popularity, offering insulation while absorbing rainwater and improving air quality. Critics, however, caution that such features can be costly to install and maintain, and that without careful engineering they may add unnecessary weight to a structure or attract pests. Proponents counter that the long-term savings in energy bills, combined with environmental benefits, justify the initial expense.</p>
+    <p class="vi-para">[3] Mái nhà xanh và vườn thẳng đứng cũng ngày càng phổ biến, vừa cách nhiệt vừa hấp thụ nước mưa và cải thiện chất lượng không khí. Tuy nhiên, những người chỉ trích cảnh báo rằng các đặc điểm này có thể tốn kém khi lắp đặt và bảo trì, và nếu không có kỹ thuật cẩn thận, chúng có thể làm tăng trọng lượng không cần thiết cho công trình hoặc thu hút sâu bọ. Người ủng hộ phản bác rằng khoản tiết kiệm hóa đơn năng lượng lâu dài, cộng với lợi ích môi trường, biện minh cho chi phí ban đầu.</p>
+    <p><span class="pn">[4]</span> Beyond individual buildings, urban planners are reconsidering how entire neighbourhoods are laid out, favouring dense, walkable districts over sprawling suburbs that necessitate constant car use. Some architects argue that true sustainability cannot be achieved through isolated green buildings alone; rather, it demands a wholesale rethinking of how cities function, from transport networks to the very materials used in construction.</p>
+    <p class="vi-para">[4] Ngoài các công trình riêng lẻ, các nhà quy hoạch đô thị cũng đang xem xét lại cách bố trí toàn bộ khu dân cư, ưu tiên các khu vực dày đặc, thuận tiện đi bộ hơn là các vùng ngoại ô trải rộng buộc người dân phải liên tục dùng xe hơi. Một số kiến trúc sư cho rằng sự bền vững thực sự không thể đạt được chỉ bằng những công trình xanh đơn lẻ; thay vào đó, nó đòi hỏi phải xem xét lại toàn diện cách các thành phố vận hành, từ mạng lưới giao thông cho đến chính vật liệu dùng trong xây dựng.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage primarily discusses:</div>
+    <ul><li>A. the history of glass skyscrapers</li><li>B. how architecture is adapting to climate change</li><li>C. the cost of green roofs</li><li>D. why cities need more cars</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài xoay quanh việc kiến trúc thích ứng với biến đổi khí hậu (passive design, green roofs, quy hoạch đô thị).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"regulate"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. destroy</li><li>B. control</li><li>C. ignore</li><li>D. sell</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "regulate temperature naturally" = điều chỉnh/kiểm soát nhiệt độ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, why are glass-fronted skyscrapers poorly suited to extreme weather?</div>
+    <ul><li>A. They are too cheap to build</li><li>B. They trap heat and require heavy air conditioning</li><li>C. They cannot be built in cities</li><li>D. They are always green-coloured</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "these structures often trap heat and rely heavily on air conditioning."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the phrase <b class="k">"these techniques"</b> refers to:</div>
+    <ul><li>A. air conditioning systems</li><li>B. glass skyscraper designs</li><li>C. passive design strategies such as orientation and shading</li><li>D. urban transport networks</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu trước liệt kê thick walls, shaded courtyards, windows — đó là "these techniques".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that passive design:</div>
+    <ul><li>A. was invented very recently</li><li>B. draws on building methods used long before modern technology</li><li>C. only works in cold climates</li><li>D. requires more electricity than air conditioning</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "adaptations of traditional building methods used in hot climates for centuries, long before electricity."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"sprawling"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. compact and organised</li><li>B. spreading out over a large, disorganised area</li><li>C. tall and narrow</li><li>D. environmentally friendly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "sprawling suburbs that necessitate constant car use" — vùng ngoại ô trải rộng lộn xộn, đối lập với "dense, walkable districts".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention critics' concerns in paragraph 3?</div>
+    <ul><li>A. To prove green roofs are always a bad idea</li><li>B. To present a balanced view of green roofs' costs and benefits</li><li>C. To argue that pests are harmless</li><li>D. To recommend removing all green roofs</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3 nêu cả nhược điểm (chi phí, sâu bọ) lẫn phản biện của người ủng hộ → cái nhìn cân bằng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as sustainable design features EXCEPT:</div>
+    <ul><li>A. shaded courtyards</li><li>B. green roofs</li><li>C. walkable neighbourhoods</li><li>D. underground parking garages</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều xuất hiện; bãi đỗ xe ngầm không được nhắc tới.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's stance is best described as:</div>
+    <ul><li>A. dismissive of architecture's role in climate change</li><li>B. supportive of holistic, climate-conscious design</li><li>C. strongly against all modern buildings</li><li>D. indifferent to urban planning</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài kết luận cần "wholesale rethinking" toàn diện, cho thấy tác giả ủng hộ cách tiếp cận tổng thể, bền vững.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final sentence of the passage implies that:</div>
+    <ul><li>A. individual green buildings alone are enough for sustainability</li><li>B. cities need comprehensive change beyond single buildings</li><li>C. construction materials do not matter</li><li>D. transport networks are unrelated to sustainability</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "true sustainability cannot be achieved through isolated green buildings alone; rather, it demands a wholesale rethinking."</p></details>
+  </div>
+
+  <h3>Từ vựng — Architecture &amp; Design</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>skyscraper</td><td>(n)</td><td>tòa nhà chọc trời</td></tr>
+    <tr><td>passive design</td><td>(n)</td><td>thiết kế thụ động (tận dụng tự nhiên)</td></tr>
+    <tr><td>orientation</td><td>(n)</td><td>hướng (của công trình)</td></tr>
+    <tr><td>insulation</td><td>(n)</td><td>sự cách nhiệt</td></tr>
+    <tr><td>proponent <span class="c1tag">C1</span></td><td>(n)</td><td>người ủng hộ</td></tr>
+    <tr><td>sprawling <span class="c1tag">C1</span></td><td>(adj)</td><td>trải rộng, lan tràn không kiểm soát</td></tr>
+    <tr><td>necessitate <span class="c1tag">C1</span></td><td>(v)</td><td>đòi hỏi, buộc phải có</td></tr>
+    <tr><td>wholesale <span class="c1tag">C1</span></td><td>(adj)</td><td>toàn diện, trên diện rộng</td></tr>
+  </table>
+
+  <!-- ============ BÀI 3: INTERNET & SOCIAL MEDIA ============ -->
+  <h2>Bài 3 <span class="lvl">Internet &amp; Social Media</span></h2>
+
+  <div class="passage">
+    <h3>The Attention Economy and Its Discontents</h3>
+    <p><span class="pn">[1]</span> Social media platforms generate revenue primarily through advertising, which means their success depends on keeping users engaged for as long as possible. This simple business model has given rise to what commentators now call the "attention economy," in which human attention itself is treated as a scarce commodity to be captured, measured, and sold to the highest bidder. Features such as infinite scrolling and autoplay videos were deliberately engineered to minimise natural stopping points.</p>
+    <p class="vi-para">[1] Các nền tảng mạng xã hội tạo ra doanh thu chủ yếu thông qua quảng cáo, nghĩa là thành công của họ phụ thuộc vào việc giữ chân người dùng càng lâu càng tốt. Mô hình kinh doanh đơn giản này đã làm nảy sinh cái mà các nhà bình luận nay gọi là "nền kinh tế chú ý", trong đó chính sự chú ý của con người được xem như một loại hàng hóa khan hiếm cần được thu hút, đo lường và bán cho người trả giá cao nhất. Các tính năng như cuộn vô hạn và video tự động phát được thiết kế có chủ đích để giảm thiểu những điểm dừng tự nhiên.</p>
+    <p><span class="pn">[2]</span> Researchers studying the psychological effects of these platforms have found troubling patterns, particularly among adolescents. Constant exposure to curated images of other people's lives can foster feelings of inadequacy, while the unpredictable timing of likes and notifications mimics the reward mechanisms exploited by slot machines. Some former industry insiders have publicly admitted that they knowingly designed products to be, in their own words, "as addictive as possible."</p>
+    <p class="vi-para">[2] Các nhà nghiên cứu tìm hiểu tác động tâm lý của những nền tảng này đã phát hiện những mô hình đáng lo ngại, đặc biệt ở thanh thiếu niên. Việc liên tục tiếp xúc với những hình ảnh được chọn lọc kỹ càng về cuộc sống của người khác có thể gây ra cảm giác thua kém, trong khi thời điểm không thể đoán trước của lượt thích và thông báo bắt chước cơ chế phần thưởng mà máy đánh bạc khai thác. Một số người từng làm trong ngành đã công khai thừa nhận rằng họ đã cố tình thiết kế sản phẩm để, theo lời họ, "gây nghiện nhất có thể."</p>
+    <p><span class="pn">[3]</span> In response, several governments have begun exploring regulation, ranging from mandatory time limits for minors to stricter rules on data collection. Technology companies have often resisted such measures, arguing that they infringe on personal freedom and that parents, not legislators, should decide how much screen time is appropriate for their children. Meanwhile, a growing number of users are voluntarily adopting so-called "digital detoxes," temporarily disabling accounts or removing apps altogether.</p>
+    <p class="vi-para">[3] Để đáp lại, một số chính phủ đã bắt đầu xem xét các quy định, từ giới hạn thời gian bắt buộc đối với trẻ vị thành niên đến các quy tắc chặt chẽ hơn về thu thập dữ liệu. Các công ty công nghệ thường phản đối những biện pháp này, cho rằng chúng xâm phạm quyền tự do cá nhân và rằng cha mẹ, chứ không phải nhà lập pháp, mới nên là người quyết định thời lượng sử dụng màn hình phù hợp cho con cái họ. Trong khi đó, ngày càng nhiều người dùng tự nguyện áp dụng cái gọi là "cai nghiện thiết bị số", tạm thời vô hiệu hóa tài khoản hoặc gỡ bỏ hoàn toàn ứng dụng.</p>
+    <p><span class="pn">[4]</span> Whether meaningful reform will emerge remains uncertain, not least because the platforms in question wield enormous political and economic influence. What is increasingly clear, however, is that the initial optimism surrounding social media as a tool for connection has given way to a more complicated reckoning — one that weighs its undeniable benefits against a mounting body of evidence concerning its psychological costs.</p>
+    <p class="vi-para">[4] Liệu một cuộc cải cách thực chất có xuất hiện hay không vẫn còn chưa chắc chắn, một phần không nhỏ vì các nền tảng liên quan nắm giữ ảnh hưởng chính trị và kinh tế to lớn. Tuy nhiên, điều ngày càng rõ ràng là sự lạc quan ban đầu về mạng xã hội như một công cụ kết nối đã nhường chỗ cho một sự nhìn nhận phức tạp hơn — một sự cân nhắc giữa những lợi ích không thể phủ nhận và ngày càng nhiều bằng chứng về cái giá tâm lý mà nó gây ra.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. how advertising works in newspapers</li><li>B. the design and consequences of the "attention economy" in social media</li><li>C. the history of slot machines</li><li>D. government funding for technology companies</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài phân tích cách mạng xã hội thiết kế để giữ chân người dùng và hệ quả tâm lý/chính sách.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"commodity"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. a legal document</li><li>B. something that can be bought, sold, or traded</li><li>C. a type of software bug</li><li>D. a government regulation</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "attention itself is treated as a scarce commodity to be captured...and sold" = hàng hóa có thể mua bán.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what did some former industry insiders admit?</div>
+    <ul><li>A. Their products were completely safe for teenagers</li><li>B. They designed products to be as addictive as possible</li><li>C. Notifications have no psychological effect</li><li>D. Advertising revenue was declining</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "publicly admitted that they knowingly designed products to be...'as addictive as possible.'"</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"such measures"</b> refers to:</div>
+    <ul><li>A. digital detoxes</li><li>B. government regulations like time limits and data rules</li><li>C. advertising strategies</li><li>D. reward mechanisms in slot machines</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "such measures" nhắc lại "regulation, ranging from mandatory time limits...to stricter rules on data collection."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that technology companies:</div>
+    <ul><li>A. fully support government regulation of screen time</li><li>B. tend to oppose government restrictions on their platforms</li><li>C. have stopped collecting user data</li><li>D. believe legislators should replace parents entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Technology companies have often resisted such measures, arguing that they infringe on personal freedom."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"reckoning"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. a joyful celebration</li><li>B. a serious assessment or confrontation with reality</li><li>C. a new invention</li><li>D. a financial profit</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a more complicated reckoning — one that weighs...benefits against...psychological costs" = sự đánh giá/nhìn nhận nghiêm túc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author compare notifications to slot machines in paragraph 2?</div>
+    <ul><li>A. To recommend gambling as a hobby</li><li>B. To illustrate how unpredictable rewards can create addictive behaviour</li><li>C. To criticise casino regulations</li><li>D. To explain how advertising revenue is calculated</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> So sánh nhằm minh họa cơ chế phần thưởng ngẫu nhiên gây nghiện, giống máy đánh bạc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as responses to concerns about social media EXCEPT:</div>
+    <ul><li>A. mandatory time limits for minors</li><li>B. stricter data collection rules</li><li>C. voluntary digital detoxes</li><li>D. a complete worldwide ban on social media</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều xuất hiện ở đoạn 3; lệnh cấm toàn cầu không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall tone can best be described as:</div>
+    <ul><li>A. uncritically enthusiastic about social media</li><li>B. critical and reflective, weighing benefits against costs</li><li>C. purely humorous</li><li>D. entirely focused on technical details</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài kết bằng việc cân nhắc lợi ích và cái giá tâm lý → thái độ phản biện, cân nhắc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final paragraph implies that meaningful reform of social media is uncertain mainly because:</div>
+    <ul><li>A. users no longer care about privacy</li><li>B. platforms hold significant political and economic power</li><li>C. governments have already solved the problem</li><li>D. digital detoxes have made regulation unnecessary</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "not least because the platforms in question wield enormous political and economic influence."</p></details>
+  </div>
+
+  <h3>Từ vựng — Internet &amp; Social Media</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>engage</td><td>(v)</td><td>thu hút, giữ chân sự chú ý</td></tr>
+    <tr><td>commodity</td><td>(n)</td><td>hàng hóa, thứ có thể mua bán</td></tr>
+    <tr><td>curated</td><td>(adj)</td><td>được chọn lọc, biên tập kỹ</td></tr>
+    <tr><td>inadequacy</td><td>(n)</td><td>cảm giác thua kém, thiếu năng lực</td></tr>
+    <tr><td>infringe <span class="c1tag">C1</span></td><td>(v)</td><td>xâm phạm (quyền)</td></tr>
+    <tr><td>digital detox</td><td>(n)</td><td>cai nghiện thiết bị số</td></tr>
+    <tr><td>wield <span class="c1tag">C1</span></td><td>(v)</td><td>nắm giữ, vận dụng (quyền lực)</td></tr>
+    <tr><td>reckoning <span class="c1tag">C1</span></td><td>(n)</td><td>sự nhìn nhận/đánh giá nghiêm túc</td></tr>
+  </table>
+
+  <!-- ============ BÀI 4: AGEING & POPULATION ============ -->
+  <h2>Bài 4 <span class="lvl">Ageing &amp; Population</span></h2>
+
+  <div class="passage">
+    <h3>The Economics of an Ageing Population</h3>
+    <p><span class="pn">[1]</span> Across much of the developed world, populations are ageing at an unprecedented rate. Falling birth rates combined with longer life expectancy mean that the proportion of elderly citizens relative to working-age adults is steadily rising. Economists warn that this demographic shift carries profound implications for pension systems, healthcare provision, and overall economic growth, since fewer workers will eventually be supporting a larger number of retirees.</p>
+    <p class="vi-para">[1] Ở phần lớn các nước phát triển, dân số đang già đi với tốc độ chưa từng có. Tỷ lệ sinh giảm kết hợp với tuổi thọ tăng khiến tỷ lệ người cao tuổi so với người trong độ tuổi lao động ngày càng tăng đều đặn. Các nhà kinh tế cảnh báo rằng sự thay đổi nhân khẩu học này mang theo những hệ lụy sâu sắc đối với hệ thống lương hưu, dịch vụ y tế và tăng trưởng kinh tế nói chung, vì cuối cùng sẽ có ít người lao động hơn phải gánh vác một số lượng người nghỉ hưu lớn hơn.</p>
+    <p><span class="pn">[2]</span> One immediate concern is the sustainability of public pension schemes, many of which rely on current workers' contributions to fund the payments of today's retirees. As the ratio of workers to pensioners narrows, governments face difficult choices: raising the retirement age, increasing taxes, or reducing benefits, none of which is politically popular. Some countries have already begun phasing in later retirement ages, though such reforms often provoke public protest.</p>
+    <p class="vi-para">[2] Một mối lo ngại trước mắt là tính bền vững của các chế độ lương hưu công, vốn phần lớn dựa vào đóng góp của người lao động hiện tại để chi trả cho người nghỉ hưu ngày nay. Khi tỷ lệ người lao động trên người hưởng lương hưu thu hẹp lại, các chính phủ phải đối mặt với những lựa chọn khó khăn: tăng tuổi nghỉ hưu, tăng thuế, hoặc giảm phúc lợi — không lựa chọn nào được lòng dân về mặt chính trị. Một số quốc gia đã bắt đầu áp dụng dần tuổi nghỉ hưu muộn hơn, dù những cải cách như vậy thường gây ra phản đối từ công chúng.</p>
+    <p><span class="pn">[3]</span> Healthcare systems, too, must adapt to a population that increasingly suffers from chronic, age-related conditions rather than acute illnesses. This shift demands a different allocation of medical resources, favouring long-term care facilities and home-based support over hospitals designed primarily for emergencies. Innovative solutions, such as robotic caregiving assistants and telemedicine, are being piloted in several countries, though their affordability and reliability remain subjects of ongoing debate.</p>
+    <p class="vi-para">[3] Hệ thống y tế cũng phải thích ứng với một dân số ngày càng mắc nhiều bệnh mãn tính liên quan đến tuổi tác hơn là bệnh cấp tính. Sự thay đổi này đòi hỏi cách phân bổ nguồn lực y tế khác đi, ưu tiên các cơ sở chăm sóc dài hạn và hỗ trợ tại nhà hơn là các bệnh viện vốn được thiết kế chủ yếu cho trường hợp khẩn cấp. Các giải pháp sáng tạo, như trợ lý chăm sóc bằng robot và y tế từ xa, đang được thí điểm ở một số quốc gia, dù tính khả thi về chi phí và độ tin cậy của chúng vẫn còn là đề tài tranh luận.</p>
+    <p><span class="pn">[4]</span> Not everyone views ageing populations purely as a burden, however. Some economists point out that older citizens continue to contribute meaningfully through volunteering, caregiving for grandchildren, and continued part-time employment well past traditional retirement age. Rather than framing ageing solely as a crisis, they argue, societies should reconsider outdated assumptions about productivity and design policies that enable people to remain active and engaged for as long as they are willing and able.</p>
+    <p class="vi-para">[4] Tuy nhiên, không phải ai cũng xem dân số già hóa thuần túy là một gánh nặng. Một số nhà kinh tế chỉ ra rằng người cao tuổi vẫn tiếp tục đóng góp có ý nghĩa thông qua hoạt động tình nguyện, chăm sóc cháu, và tiếp tục làm việc bán thời gian ngay cả sau tuổi nghỉ hưu truyền thống. Họ cho rằng thay vì coi già hóa dân số đơn thuần là một cuộc khủng hoảng, xã hội nên xem xét lại những giả định lỗi thời về năng suất lao động và thiết kế các chính sách giúp con người duy trì sự năng động và gắn kết chừng nào họ còn sẵn lòng và có khả năng.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly focuses on:</div>
+    <ul><li>A. the causes and consequences of population ageing</li><li>B. how to lower birth rates</li><li>C. the history of pension systems</li><li>D. why hospitals should be closed</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Bài trình bày nguyên nhân (tỷ lệ sinh giảm, tuổi thọ tăng) và hệ quả (lương hưu, y tế, năng suất).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"sustainability"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. the ability to be maintained over time</li><li>B. the speed of decline</li><li>C. total collapse</li><li>D. immediate profit</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "sustainability of public pension schemes" = khả năng duy trì lâu dài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what choices do governments face as the worker-to-pensioner ratio narrows?</div>
+    <ul><li>A. Building more hospitals</li><li>B. Raising the retirement age, increasing taxes, or reducing benefits</li><li>C. Encouraging more immigration only</li><li>D. Banning part-time employment</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "raising the retirement age, increasing taxes, or reducing benefits."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"this shift"</b> refers to:</div>
+    <ul><li>A. the rise in birth rates</li><li>B. the change toward more chronic, age-related illnesses</li><li>C. the reduction of pension payments</li><li>D. the increase in hospital emergency visits</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước nói dân số ngày càng mắc bệnh mãn tính thay vì cấp tính — "this shift" chỉ sự thay đổi đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that raising the retirement age:</div>
+    <ul><li>A. is always welcomed enthusiastically by the public</li><li>B. can be politically controversial</li><li>C. has no effect on pension sustainability</li><li>D. is illegal in most countries</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "such reforms often provoke public protest" → gây tranh cãi chính trị.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"acute"</b> (paragraph 3), as used to describe illnesses, is closest in meaning to:</div>
+    <ul><li>A. long-lasting and slow-developing</li><li>B. sudden and severe, requiring immediate treatment</li><li>C. mild and unnoticeable</li><li>D. related only to old age</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "acute illnesses" đối lập với "chronic, age-related conditions" → bệnh cấp tính, xảy ra đột ngột cần điều trị ngay.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention volunteering and caregiving for grandchildren in paragraph 4?</div>
+    <ul><li>A. To argue that older people are a financial burden</li><li>B. To show that older citizens can still contribute meaningfully to society</li><li>C. To recommend that grandparents stop working</li><li>D. To criticise government pension policy</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 đưa ví dụ để chứng minh người già vẫn đóng góp có ý nghĩa, không chỉ là gánh nặng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as consequences or responses to ageing populations EXCEPT:</div>
+    <ul><li>A. reforms to retirement age</li><li>B. increased use of telemedicine and robotic care</li><li>C. continued contribution through part-time work</li><li>D. a global ban on immigration</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 2), B (đoạn 3), C (đoạn 4) đều có; cấm nhập cư không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The overall tone of the passage is best described as:</div>
+    <ul><li>A. alarmist and one-sided</li><li>B. balanced, acknowledging both challenges and opportunities</li><li>C. purely celebratory of ageing</li><li>D. dismissive of economic concerns</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài nêu rõ thách thức (đoạn 1-3) và cả góc nhìn tích cực (đoạn 4) → cân bằng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final sentence of the passage implies that societies should:</div>
+    <ul><li>A. force all elderly people to retire immediately</li><li>B. rethink assumptions about productivity to keep older people engaged</li><li>C. ignore the economic effects of ageing</li><li>D. reduce healthcare spending for the elderly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "reconsider outdated assumptions about productivity and design policies that enable people to remain active and engaged."</p></details>
+  </div>
+
+  <h3>Từ vựng — Ageing &amp; Population</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>life expectancy</td><td>(n)</td><td>tuổi thọ trung bình</td></tr>
+    <tr><td>demographic</td><td>(adj)</td><td>thuộc về nhân khẩu học</td></tr>
+    <tr><td>pension scheme</td><td>(n)</td><td>chế độ lương hưu</td></tr>
+    <tr><td>sustainability</td><td>(n)</td><td>tính bền vững, khả năng duy trì</td></tr>
+    <tr><td>chronic</td><td>(adj)</td><td>mãn tính</td></tr>
+    <tr><td>acute <span class="c1tag">C1</span></td><td>(adj)</td><td>cấp tính, nghiêm trọng đột ngột</td></tr>
+    <tr><td>allocation <span class="c1tag">C1</span></td><td>(n)</td><td>sự phân bổ (nguồn lực)</td></tr>
+    <tr><td>outdated</td><td>(adj)</td><td>lỗi thời</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM TOÀN ĐỀ ============ -->
+  <h2>Chấm điểm toàn đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh — 40 câu:</b>
+    <table>
+      <tr><th>Bài 1 · Crime &amp; Law</th><td>1-B · 2-B · 3-C · 4-C · 5-B · 6-B · 7-C · 8-D · 9-B · 10-C</td></tr>
+      <tr><th>Bài 2 · Architecture</th><td>1-B · 2-B · 3-B · 4-C · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 3 · Internet &amp; Social Media</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 4 · Ageing &amp; Population</th><td>1-A · 2-A · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Bài __ · Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai lặp lại ở nhiều bài → đó chính là điểm yếu cần luyện thêm.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Mốc tự đánh giá (/40):</b> 34–40 → xuất sắc, sẵn sàng thi thật · 28–33 → khá tốt, còn vài lỗ hổng cần vá · 20–27 → trung bình, cần ôn lại kỹ cả 4 chủ đề · &lt;20 → quay lại học từ vựng &amp; luyện từng dạng riêng lẻ trước khi làm đề full tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Đề full #6?</b> Ngày 6–7 tổng kết, chuẩn bị Tuần 8.
+  </div>
+
+</div>
+
+<footer>⚖️ Ngày 37 · Tuần 7 · Ngày 5 — VSTEP Reading · ĐỀ FULL #6 · Làm nghiêm túc, chấm kỹ, sửa từng lỗi mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

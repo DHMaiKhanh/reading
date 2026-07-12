@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 4 · Ngày 6 — Society &amp; Social Issues + Mental Health · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧭 Tuần 4 · Ngày 6 — Society &amp; Social Issues + Mental Health</h1>
+  <p>2 bài đọc gốc, mỗi bài canh ~18 phút → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~40 phút (2 × 18')</span>
+    <span class="badge">🟠 B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · mỗi bài 8–10 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước, lặp lại cho mỗi bài):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, canh khoảng 18 phút/bài.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10 từ mới của mỗi bài + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu mỗi bài: đúng <b>~7–8/10</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài #1 <span class="lvl">Society &amp; Social Issues · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Cities, Housing, and the New Face of Inequality</h3>
+    <p><span class="pn">[1]</span> Across much of the world, cities have become both the engines of prosperity and the stage on which some of the sharpest inequalities are played out. As rural populations migrate toward urban centres in search of employment, housing markets have struggled to keep pace with demand, driving rents to levels that would have been unthinkable a generation ago. In many metropolitan areas, even full-time workers in respectable professions now find themselves priced out of neighbourhoods close to their jobs, forced instead into lengthy commutes or overcrowded shared accommodation.</p>
+    <p class="vi-para">[1] Ở phần lớn thế giới, các thành phố vừa là đầu tàu của sự thịnh vượng vừa là sân khấu diễn ra một số bất bình đẳng gay gắt nhất. Khi dân cư nông thôn di cư về các trung tâm đô thị để tìm việc làm, thị trường nhà ở đã chật vật để theo kịp nhu cầu, đẩy giá thuê lên những mức mà một thế hệ trước đây khó có thể tưởng tượng nổi. Ở nhiều khu vực đô thị lớn, ngay cả những người làm việc toàn thời gian trong các ngành nghề đáng nể cũng thấy mình không còn đủ khả năng thuê nhà gần nơi làm việc, buộc phải di chuyển quãng đường dài hoặc ở chung nhà quá đông đúc.</p>
+    <p><span class="pn">[2]</span> This housing squeeze does not affect everyone equally. Lower-income households, who typically spend a much larger share of their earnings on rent, are the first to be pushed to the margins when prices rise. Some end up in informal settlements lacking reliable sanitation or electricity; others cycle between temporary shelters and the homes of relatives, a precarious existence sociologists describe as "housing insecurity." Meanwhile, a shrinking supply of public and subsidised housing means that governments have fewer tools available to cushion the impact.</p>
+    <p class="vi-para">[2] Áp lực nhà ở này không ảnh hưởng đến tất cả mọi người như nhau. Các hộ gia đình thu nhập thấp, vốn thường dành một phần thu nhập lớn hơn hẳn cho tiền thuê nhà, là những người đầu tiên bị đẩy ra bên lề khi giá cả tăng. Một số người rơi vào các khu định cư tự phát thiếu điều kiện vệ sinh hoặc điện ổn định; những người khác xoay vòng giữa nơi trú tạm và nhà người thân, một cuộc sống bấp bênh mà các nhà xã hội học gọi là "tình trạng bấp bênh về chỗ ở." Trong khi đó, nguồn cung nhà ở công và nhà ở trợ cấp ngày càng thu hẹp khiến chính phủ có ít công cụ hơn để giảm nhẹ tác động.</p>
+    <p><span class="pn">[3]</span> Urban inequality is not solely about shelter, however; it also shapes access to opportunity more broadly. Wealthier districts tend to attract better-funded schools, cleaner parks, and more reliable public transport, while poorer neighbourhoods are frequently left with underfunded services and longer commute times. Over the years, this uneven distribution can entrench a kind of geographic segregation, whereby a person's postcode becomes almost as influential in shaping their life chances as their level of education.</p>
+    <p class="vi-para">[3] Tuy nhiên, bất bình đẳng đô thị không chỉ xoay quanh chuyện chỗ ở; nó còn định hình khả năng tiếp cận cơ hội một cách rộng hơn. Các khu vực giàu có hơn thường thu hút trường học được đầu tư tốt hơn, công viên sạch đẹp hơn và giao thông công cộng đáng tin cậy hơn, trong khi các khu vực nghèo hơn thường xuyên phải chịu dịch vụ thiếu kinh phí và thời gian di chuyển dài hơn. Qua nhiều năm, sự phân bổ không đồng đều này có thể làm cố định một kiểu phân tách theo địa lý, khi mã bưu điện của một người trở nên gần như có ảnh hưởng đến cơ hội sống của họ ngang với trình độ học vấn.</p>
+    <p><span class="pn">[4]</span> Policymakers have proposed a range of remedies, from rent controls and inclusionary zoning to large-scale investment in public transit that connects outlying districts to city centres. None of these measures is a silver bullet, and each carries trade-offs: rent controls, for instance, may discourage the construction of new housing even as they protect existing tenants. What most urban planners agree on, nonetheless, is that leaving housing entirely to market forces tends to widen rather than narrow the gap between rich and poor, making deliberate, coordinated intervention essential if cities are to remain liveable for all their residents.</p>
+    <p class="vi-para">[4] Các nhà hoạch định chính sách đã đề xuất nhiều biện pháp khắc phục, từ kiểm soát giá thuê nhà và quy hoạch bắt buộc dành quỹ nhà giá rẻ cho đến đầu tư quy mô lớn vào giao thông công cộng kết nối các khu vực ngoại vi với trung tâm thành phố. Không biện pháp nào trong số này là giải pháp hoàn hảo, và mỗi biện pháp đều có sự đánh đổi: chẳng hạn, kiểm soát giá thuê có thể làm nản lòng việc xây dựng nhà ở mới ngay cả khi nó bảo vệ người thuê hiện tại. Dù vậy, điều mà hầu hết các nhà quy hoạch đô thị đồng ý là việc phó mặc hoàn toàn nhà ở cho các lực lượng thị trường có xu hướng nới rộng chứ không thu hẹp khoảng cách giàu nghèo, khiến sự can thiệp có chủ đích và phối hợp trở nên cần thiết nếu muốn các thành phố vẫn đáng sống cho tất cả cư dân của nó.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. why rural areas are more prosperous than cities</li><li>B. how urban housing shortages contribute to and reflect wider inequality</li><li>C. the history of public transport systems</li><li>D. techniques for building affordable schools</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài xoay quanh việc nhà ở đô thị đắt đỏ, ảnh hưởng không đồng đều đến người thu nhập thấp, và cách điều này liên quan tới bất bình đẳng rộng hơn (giáo dục, dịch vụ công). A/C/D chỉ là chi tiết phụ hoặc không được bàn kỹ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"priced out"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. unable to afford</li><li>B. given a discount</li><li>C. legally banned from</li><li>D. specially invited to</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "priced out of neighbourhoods" = không còn đủ khả năng tài chính để sống ở khu vực đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why are lower-income households the first to be affected by rising rents?</div>
+    <ul><li>A. They own more property than others</li><li>B. They spend a much larger share of their earnings on rent</li><li>C. They receive unlimited government subsidies</li><li>D. They prefer to live in informal settlements</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "Lower-income households, who typically spend a much larger share of their earnings on rent, are the first to be pushed to the margins."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 4, the word <b class="k">"these"</b> (in "None of these measures") refers to:</div>
+    <ul><li>A. sociologists' descriptions of housing insecurity</li><li>B. rent controls, inclusionary zoning, and public transit investment</li><li>C. informal settlements</li><li>D. wealthier districts</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước liệt kê "rent controls and inclusionary zoning to large-scale investment in public transit" → "these measures" thay cho các biện pháp đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that a person's neighbourhood:</div>
+    <ul><li>A. has no effect on their access to good schools or transport</li><li>B. can significantly influence their life opportunities</li><li>C. is chosen entirely at random by the government</li><li>D. guarantees equal access to public services regardless of wealth</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a person's postcode becomes almost as influential in shaping their life chances as their level of education" → nơi ở ảnh hưởng lớn đến cơ hội sống.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"entrench"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. to weaken or remove gradually</li><li>B. to make something firmly fixed and hard to change</li><li>C. to temporarily suspend</li><li>D. to publicly celebrate</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "entrench a kind of geographic segregation" = làm cho sự phân tách khu vực trở nên cố định, ăn sâu, khó thay đổi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"rent controls"</b> as an example in paragraph 4?</div>
+    <ul><li>A. To prove that market forces always solve inequality</li><li>B. To illustrate that even proposed remedies come with trade-offs</li><li>C. To recommend banning all new housing construction</li><li>D. To criticise tenants for not paying enough rent</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 nói "each carries trade-offs: rent controls, for instance, may discourage the construction of new housing" — dùng làm ví dụ minh họa cho việc mỗi biện pháp đều có mặt trái.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as remedies proposed by policymakers EXCEPT:</div>
+    <ul><li>A. rent controls</li><li>B. inclusionary zoning</li><li>C. investment in public transit</li><li>D. abolishing all forms of taxation</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 4 chỉ nhắc rent controls, inclusionary zoning, và đầu tư giao thông công cộng → loại A, B, C. "Abolishing all taxation" không hề được nhắc tới.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward leaving housing entirely to market forces is best described as:</div>
+    <ul><li>A. strongly supportive</li><li>B. skeptical, favouring coordinated intervention instead</li><li>C. completely neutral and indifferent</li><li>D. enthusiastic and optimistic</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 kết luận: "leaving housing entirely to market forces tends to widen rather than narrow the gap... making deliberate, coordinated intervention essential" → tác giả nghiêng về can thiệp có phối hợp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"silver bullet"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. one of the proposed solutions is perfect and solves everything</li><li>B. no single solution can perfectly and completely solve the problem</li><li>C. the government has already solved the housing crisis</li><li>D. silver is a valuable building material</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "None of these measures is a silver bullet" — thành ngữ "silver bullet" nghĩa là giải pháp hoàn hảo, tức thì; phủ định nó nghĩa là không có giải pháp nào giải quyết trọn vẹn vấn đề.</p></details>
+  </div>
+
+  <h3>Từ vựng Bài #1</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>prosperity</td><td>(n)</td><td>sự thịnh vượng</td></tr>
+    <tr><td>priced out</td><td>(phr)</td><td>không còn đủ khả năng chi trả để ở/mua</td></tr>
+    <tr><td>overcrowded</td><td>(adj)</td><td>quá đông đúc, chật chội</td></tr>
+    <tr><td>housing insecurity <span class="c1tag">C1</span></td><td>(n)</td><td>tình trạng bấp bênh về chỗ ở</td></tr>
+    <tr><td>subsidised</td><td>(adj)</td><td>được trợ cấp/hỗ trợ chi phí</td></tr>
+    <tr><td>entrench <span class="c1tag">C1</span></td><td>(v)</td><td>làm cố định, ăn sâu (khó thay đổi)</td></tr>
+    <tr><td>segregation <span class="c1tag">C1</span></td><td>(n)</td><td>sự phân tách, cách ly</td></tr>
+    <tr><td>inclusionary zoning</td><td>(n)</td><td>quy hoạch bắt buộc dành quỹ nhà ở giá rẻ</td></tr>
+    <tr><td>trade-off</td><td>(n)</td><td>sự đánh đổi</td></tr>
+    <tr><td>silver bullet <span class="c1tag">C1</span></td><td>(idiom)</td><td>giải pháp hoàn hảo, tức thì</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài #2 <span class="lvl">Mental Health · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Sleep, Stress, and the Quiet Crisis of Mental Health</h3>
+    <p><span class="pn">[1]</span> For much of human history, mental health received far less public attention than physical ailments, often dismissed as a private matter or, worse, a sign of personal weakness. That perception has shifted considerably in recent decades, as research increasingly demonstrates that conditions such as anxiety and depression are neither rare nor shameful, but rather common responses to a combination of biological, environmental, and social pressures. Surveys conducted across dozens of countries now suggest that a substantial proportion of adults will experience a diagnosable mental health condition at some point in their lives.</p>
+    <p class="vi-para">[1] Trong phần lớn lịch sử loài người, sức khỏe tinh thần nhận được sự quan tâm của công chúng ít hơn nhiều so với bệnh tật về thể chất, thường bị coi nhẹ như một chuyện riêng tư hoặc, tệ hơn, một dấu hiệu của sự yếu đuối cá nhân. Nhận thức đó đã thay đổi đáng kể trong những thập kỷ gần đây, khi các nghiên cứu ngày càng cho thấy những tình trạng như lo âu và trầm cảm không hề hiếm gặp hay đáng xấu hổ, mà là những phản ứng phổ biến trước sự kết hợp của các áp lực sinh học, môi trường và xã hội. Các khảo sát được thực hiện ở hàng chục quốc gia hiện cho thấy một tỷ lệ đáng kể người trưởng thành sẽ trải qua một tình trạng sức khỏe tinh thần có thể chẩn đoán được vào một thời điểm nào đó trong đời.</p>
+    <p><span class="pn">[2]</span> Sleep has emerged as one of the most underappreciated factors in this picture. Chronic sleep deprivation does more than leave a person tired; it disrupts the brain's ability to regulate emotion, impairs memory consolidation, and weakens the immune system's response to illness. Adolescents and shift workers appear particularly vulnerable, since their natural sleep patterns are frequently at odds with school timetables or irregular working hours. Alarmingly, many people who struggle with insomnia never seek treatment, mistakenly assuming that poor sleep is simply an unavoidable consequence of a busy lifestyle.</p>
+    <p class="vi-para">[2] Giấc ngủ đã nổi lên như một trong những yếu tố ít được coi trọng nhất trong bức tranh này. Tình trạng thiếu ngủ kéo dài không chỉ khiến người ta mệt mỏi; nó còn làm rối loạn khả năng điều tiết cảm xúc của não bộ, làm suy giảm quá trình củng cố trí nhớ, và làm yếu đi phản ứng của hệ miễn dịch trước bệnh tật. Thanh thiếu niên và người làm ca dường như đặc biệt dễ bị tổn thương, vì nhịp sinh học ngủ tự nhiên của họ thường xung khắc với lịch học ở trường hoặc giờ làm việc bất thường. Đáng lo ngại, nhiều người gặp chứng mất ngủ không bao giờ tìm cách điều trị, nhầm tưởng rằng ngủ kém chỉ đơn giản là hệ quả không thể tránh khỏi của một lối sống bận rộn.</p>
+    <p><span class="pn">[3]</span> Chronic stress compounds these difficulties. In modest doses, stress can sharpen focus and motivate performance; sustained over long periods, however, it floods the body with hormones that, over time, contribute to cardiovascular disease, weakened immunity, and heightened susceptibility to depression. Workplace pressures, financial insecurity, and the constant connectivity fostered by smartphones are frequently cited as chief culprits, blurring the boundary between work and rest in ways earlier generations rarely experienced.</p>
+    <p class="vi-para">[3] Stress kéo dài càng làm trầm trọng thêm những khó khăn này. Ở liều lượng vừa phải, stress có thể giúp tăng khả năng tập trung và thúc đẩy hiệu suất; tuy nhiên, khi kéo dài liên tục, nó sẽ khiến cơ thể tràn ngập các hormone mà theo thời gian góp phần gây ra bệnh tim mạch, suy giảm miễn dịch và tăng nguy cơ mắc trầm cảm. Áp lực công việc, bất ổn tài chính, và tình trạng kết nối liên tục do điện thoại thông minh thúc đẩy thường được xem là những thủ phạm chính, làm mờ đi ranh giới giữa công việc và nghỉ ngơi theo cách mà các thế hệ trước hiếm khi trải qua.</p>
+    <p><span class="pn">[4]</span> Encouragingly, awareness of these issues has translated into concrete action in some quarters. Employers increasingly offer counselling services and flexible schedules; schools have begun incorporating mindfulness exercises into the curriculum; and public health campaigns urge people to treat sleep with the same seriousness as diet and exercise. Critics caution, however, that such initiatives risk becoming superficial gestures unless accompanied by structural changes — reduced working hours, affordable therapy, and a genuine cultural shift away from glorifying constant busyness as a badge of honour.</p>
+    <p class="vi-para">[4] Đáng mừng là, nhận thức về những vấn đề này đã chuyển thành hành động cụ thể ở một số nơi. Người sử dụng lao động ngày càng cung cấp dịch vụ tư vấn tâm lý và lịch làm việc linh hoạt; các trường học đã bắt đầu đưa các bài tập chánh niệm vào chương trình học; và các chiến dịch y tế công cộng kêu gọi mọi người coi trọng giấc ngủ ngang với chế độ ăn uống và tập luyện. Tuy nhiên, những người phản biện cảnh báo rằng các sáng kiến như vậy có nguy cơ chỉ mang tính hình thức nếu không đi kèm với những thay đổi mang tính cấu trúc — giảm giờ làm việc, liệu pháp tâm lý với chi phí phải chăng, và một sự thay đổi văn hóa thực sự để không còn tôn vinh sự bận rộn liên tục như một niềm tự hào.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the invention of modern sleep-tracking devices</li><li>B. how sleep and stress affect mental health, and society's response</li><li>C. why physical illness is more serious than mental illness</li><li>D. a history of workplace regulations</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài bàn về nhận thức đổi khác về sức khỏe tinh thần (đoạn 1), vai trò của giấc ngủ (đoạn 2), stress mạn tính (đoạn 3), và phản ứng của xã hội (đoạn 4). A/C/D chỉ là chi tiết nhỏ hoặc không đúng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"dismissed"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. carefully studied</li><li>B. treated as unimportant</li><li>C. financially rewarded</li><li>D. legally required</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "often dismissed as a private matter" = thường bị coi nhẹ/gạt bỏ như chuyện riêng tư → không được coi trọng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, who is described as particularly vulnerable to sleep deprivation?</div>
+    <ul><li>A. Retired people and young children</li><li>B. Adolescents and shift workers</li><li>C. Only professional athletes</li><li>D. People who never use smartphones</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "Adolescents and shift workers appear particularly vulnerable, since their natural sleep patterns are frequently at odds with school timetables or irregular working hours."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"these difficulties"</b> refers to:</div>
+    <ul><li>A. the benefits of exercise</li><li>B. the problems associated with sleep deprivation described in paragraph 2</li><li>C. workplace counselling services</li><li>D. mindfulness exercises in schools</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu mở đầu đoạn 3 "Chronic stress compounds these difficulties" nối tiếp trực tiếp các vấn đề về thiếu ngủ vừa nêu ở đoạn 2.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that a moderate amount of stress:</div>
+    <ul><li>A. is always harmful to health</li><li>B. can actually be beneficial in small doses</li><li>C. has no effect on the human body</li><li>D. only affects shift workers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "In modest doses, stress can sharpen focus and motivate performance" — stress vừa phải có thể có lợi, chỉ khi kéo dài mới gây hại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"culprits"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. solutions to a problem</li><li>B. factors responsible for causing a problem</li><li>C. medical treatments</li><li>D. government agencies</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "frequently cited as chief culprits" = được xem là những "thủ phạm" chính gây ra stress → yếu tố gây ra vấn đề.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"mindfulness exercises"</b> in paragraph 4?</div>
+    <ul><li>A. To criticise schools for wasting time</li><li>B. To give an example of concrete action taken in response to mental health awareness</li><li>C. To argue that schools should be abolished</li><li>D. To describe a medical treatment for insomnia</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 liệt kê các hành động cụ thể (tư vấn tâm lý, lịch làm việc linh hoạt, mindfulness ở trường) như ví dụ cho việc nhận thức đã chuyển thành hành động.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as effects of chronic sleep deprivation EXCEPT:</div>
+    <ul><li>A. disrupted emotional regulation</li><li>B. impaired memory consolidation</li><li>C. weakened immune response</li><li>D. improved long-term financial planning</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 2 nêu rõ ba hệ quả: cảm xúc, trí nhớ, hệ miễn dịch (loại A, B, C). "Improved financial planning" hoàn toàn không được nhắc tới.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward current workplace and school initiatives is best described as:</div>
+    <ul><li>A. entirely dismissive and negative</li><li>B. cautiously encouraging, but warning they may be insufficient without structural change</li><li>C. completely uncritical and enthusiastic</li><li>D. indifferent to the topic</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Encouragingly, awareness... has translated into concrete action" nhưng "Critics caution... such initiatives risk becoming superficial gestures unless accompanied by structural changes" → vừa ghi nhận vừa cảnh báo.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"glorifying constant busyness as a badge of honour"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. society often mistakenly treats being extremely busy as something admirable</li><li>B. badges and awards are given to the busiest workers</li><li>C. busyness always leads to better mental health</li><li>D. employers no longer value hard work</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "glorifying constant busyness as a badge of honour" = tôn vinh sự bận rộn liên tục như một điều đáng tự hào — tác giả cho rằng cần thay đổi văn hóa này vì nó góp phần gây stress.</p></details>
+  </div>
+
+  <h3>Từ vựng Bài #2</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>ailment</td><td>(n)</td><td>bệnh tật, ốm đau</td></tr>
+    <tr><td>dismiss</td><td>(v)</td><td>coi nhẹ, gạt bỏ</td></tr>
+    <tr><td>sleep deprivation <span class="c1tag">C1</span></td><td>(n)</td><td>tình trạng thiếu ngủ</td></tr>
+    <tr><td>consolidation</td><td>(n)</td><td>sự củng cố (ở đây: củng cố trí nhớ)</td></tr>
+    <tr><td>at odds with <span class="c1tag">C1</span></td><td>(phr)</td><td>mâu thuẫn/xung khắc với</td></tr>
+    <tr><td>insomnia</td><td>(n)</td><td>chứng mất ngủ</td></tr>
+    <tr><td>compound</td><td>(v)</td><td>làm trầm trọng thêm</td></tr>
+    <tr><td>susceptibility <span class="c1tag">C1</span></td><td>(n)</td><td>tính dễ mắc phải, dễ bị ảnh hưởng</td></tr>
+    <tr><td>culprit <span class="c1tag">C1</span></td><td>(n)</td><td>thủ phạm, nguyên nhân gây ra vấn đề</td></tr>
+    <tr><td>badge of honour</td><td>(idiom)</td><td>điều được xem là niềm tự hào/vinh dự</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh — Bài #1 (Society &amp; Social Issues):</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-A · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <b>Bảng đáp án nhanh — Bài #2 (Mental Health):</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-A</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · bài __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu (ở cả 2 bài cộng lại) → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá (mỗi bài):</b> đúng 8–10 → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài + học kỹ từ vựng trước khi qua Ngày 7.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Tuần 4 · Ngày 6?</b> Quay lại lộ trình tick đủ ô của ngày hôm nay. <b>Ngày 7</b> sẽ là bài <b>trộn tổng hợp cả tuần</b> (ôn lại toàn bộ chủ đề đã học trong Tuần 4) — đừng bỏ qua, đây là bước quan trọng để kiểm tra mức độ giữ bài trước khi sang tuần mới.
+  </div>
+
+</div>
+
+<footer>🧭 Tuần 4 · Ngày 6 · VSTEP Reading — Society &amp; Social Issues + Mental Health · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

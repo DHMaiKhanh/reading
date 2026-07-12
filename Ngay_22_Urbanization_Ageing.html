@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 22 — Urbanization &amp; Ageing · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏙️ Tuần 4 · Ngày 5 — Urbanization &amp; City Life + Ageing &amp; Population</h1>
+  <p>2 bài đọc độc lập, mỗi bài canh khoảng 18 phút → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~36 phút (2 × 18 phút)</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · 18 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, canh giờ ~18 phút/bài.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi từ mới của cả 2 bài + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/9</b> mỗi bài.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài #1 <span class="lvl">Urbanization &amp; City Life · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Rise of the Megacity</h3>
+    <p><span class="pn">[1]</span> For most of human history, the vast majority of people lived in rural areas, scattered across farmland and small villages. That balance has shifted dramatically. More than half of the world's population now resides in cities, and demographers project that by mid-century the figure could climb well past two-thirds. This mass movement toward urban centres, driven largely by the search for employment and better services, has given rise to sprawling megacities that did not exist a century ago.</p>
+    <p class="vi-para">[1] Trong phần lớn lịch sử loài người, đại đa số con người sống ở nông thôn, rải rác trên các cánh đồng và làng mạc nhỏ. Sự cân bằng đó đã thay đổi mạnh mẽ. Hơn một nửa dân số thế giới hiện đang sinh sống tại các thành phố, và các nhà nhân khẩu học dự báo rằng đến giữa thế kỷ, con số này có thể vượt xa mốc hai phần ba. Làn sóng di chuyển ồ ạt về các trung tâm đô thị, chủ yếu do nhu cầu tìm việc làm và dịch vụ tốt hơn, đã tạo ra những siêu đô thị rộng lớn mà một thế kỷ trước chưa hề tồn tại.</p>
+
+    <p><span class="pn">[2]</span> The pull of the city is easy to understand. Urban areas typically offer higher wages, greater access to healthcare and education, and a wider range of cultural opportunities than rural districts can provide. Yet this rapid influx of newcomers places enormous strain on infrastructure. Housing in particular has become a source of acute anxiety in many metropolises, where soaring property prices have pushed even middle-income workers toward the margins of the city, if not into informal settlements altogether.</p>
+    <p class="vi-para">[2] Sức hút của thành phố rất dễ hiểu. Khu vực đô thị thường mang lại mức lương cao hơn, khả năng tiếp cận y tế và giáo dục tốt hơn, cùng phạm vi cơ hội văn hóa phong phú hơn so với các vùng nông thôn. Tuy nhiên, dòng người mới đổ về nhanh chóng này gây áp lực rất lớn lên cơ sở hạ tầng. Đặc biệt, nhà ở đã trở thành nguồn lo lắng gay gắt ở nhiều đô thị lớn, nơi giá bất động sản tăng vọt đã đẩy ngay cả người lao động thu nhập trung bình ra vùng ven thành phố, thậm chí vào các khu định cư tự phát.</p>
+
+    <p><span class="pn">[3]</span> Transport is another perennial headache. Commuters in congested cities can spend hours each day trapped in traffic, a phenomenon that erodes productivity and, according to some studies, contributes to chronic stress. In response, several municipal governments have invested heavily in public transit, building extensive metro networks and dedicating lanes exclusively to buses. Some cities have gone further, imposing congestion charges on drivers who enter the centre during peak hours, a policy that has proved controversial but, where implemented consistently, has measurably reduced gridlock.</p>
+    <p class="vi-para">[3] Giao thông là một nỗi đau đầu dai dẳng khác. Người đi làm ở các thành phố tắc nghẽn có thể mất hàng giờ mỗi ngày kẹt trong dòng xe cộ, hiện tượng này làm suy giảm năng suất và, theo một số nghiên cứu, góp phần gây căng thẳng mãn tính. Để đối phó, nhiều chính quyền thành phố đã đầu tư mạnh vào giao thông công cộng, xây dựng mạng lưới tàu điện ngầm rộng khắp và dành riêng làn đường cho xe buýt. Một số thành phố còn đi xa hơn, áp dụng phí ùn tắc đối với các tài xế đi vào trung tâm giờ cao điểm, một chính sách gây tranh cãi nhưng khi được thực thi nhất quán, đã giảm đáng kể tình trạng tắc nghẽn.</p>
+
+    <p><span class="pn">[4]</span> Urban planners increasingly argue that the solution lies not merely in building more roads or towers but in rethinking the city altogether. Concepts such as the "15-minute city," in which residents can reach work, shops, and green space within a short walk or cycle ride, have gained traction among policymakers seeking to make urban life more liveable. Whether such visions can be reconciled with the relentless pace of urban growth remains an open question, but few dispute that the way cities are designed will shape the wellbeing of a majority of humanity for generations to come.</p>
+    <p class="vi-para">[4] Các nhà quy hoạch đô thị ngày càng cho rằng giải pháp không đơn thuần nằm ở việc xây thêm đường sá hay các tòa nhà cao tầng, mà ở việc tái tư duy toàn bộ cách thiết kế thành phố. Những khái niệm như "thành phố 15 phút," trong đó cư dân có thể đến nơi làm việc, cửa hàng và không gian xanh chỉ bằng một quãng đi bộ hoặc đạp xe ngắn, đang ngày càng được các nhà hoạch định chính sách ủng hộ nhằm làm cho cuộc sống đô thị đáng sống hơn. Liệu những tầm nhìn như vậy có thể dung hòa được với tốc độ tăng trưởng đô thị không ngừng nghỉ hay không vẫn còn là câu hỏi bỏ ngỏ, nhưng ít ai phủ nhận rằng cách các thành phố được thiết kế sẽ định hình phúc lợi của phần lớn nhân loại trong nhiều thế hệ tới.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of farming villages</li><li>B. the growth of cities and the challenges this creates</li><li>C. why rural life is better than urban life</li><li>D. how public transit tickets are priced</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày xu hướng đô thị hóa (đoạn 1), lý do hút dân (đoạn 2), vấn đề nhà ở/giao thông (đoạn 2–3) và giải pháp quy hoạch (đoạn 4) → ý bao trùm là sự phát triển đô thị và thách thức đi kèm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Detail</span> According to paragraph 1, what does the passage predict about urbanization by mid-century?</div>
+    <ul><li>A. Cities will disappear</li><li>B. Rural population will increase sharply</li><li>C. Well over two-thirds of people may live in cities</li><li>D. Farming will become the main occupation again</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "the figure could climb well past two-thirds" bởi giữa thế kỷ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Vocabulary</span> The word <b class="k">"influx"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. a sudden departure</li><li>B. an arrival of large numbers</li><li>C. a shortage</li><li>D. a decline in quality</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "this rapid influx of newcomers" = dòng người mới đổ vào đông đảo, nhanh chóng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"where"</b> (in "where soaring property prices...") refers to:</div>
+    <ul><li>A. rural districts</li><li>B. many metropolises</li><li>C. cultural opportunities</li><li>D. informal settlements</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước nói "acute anxiety in many metropolises" → "where" chỉ những thành phố lớn đó, nơi giá nhà tăng vọt.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that congestion charges:</div>
+    <ul><li>A. are universally welcomed by drivers</li><li>B. have had no effect on traffic anywhere</li><li>C. can reduce traffic but are also controversial</li><li>D. are only used in rural areas</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "a policy that has proved controversial but... has measurably reduced gridlock" → vừa gây tranh cãi vừa hiệu quả.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"perennial"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. occurring only once</li><li>B. constantly recurring, persistent</li><li>C. easily solved</li><li>D. related to flowers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Transport is another perennial headache" — vấn đề dai dẳng, lặp đi lặp lại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the <b class="k">"15-minute city"</b> in paragraph 4?</div>
+    <ul><li>A. To criticize public transit</li><li>B. To give an example of a new planning approach to improve city life</li><li>C. To argue that cities should be abandoned</li><li>D. To describe ancient city design</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 bàn về việc quy hoạch lại đô thị; "15-minute city" là ví dụ cụ thể cho ý tưởng đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as attractions of city life EXCEPT:</div>
+    <ul><li>A. higher wages</li><li>B. better healthcare access</li><li>C. more cultural opportunities</li><li>D. lower cost of housing</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 2 nêu wages, healthcare, education, cultural opportunities là sức hút; nhưng nhà ở lại được mô tả là đắt đỏ, gây lo lắng → D không đúng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span><span class="c1tag">C1</span> The author's overall attitude toward the future of cities can best be described as:</div>
+    <ul><li>A. entirely pessimistic</li><li>B. dismissive of any solutions</li><li>C. cautiously hopeful that planning can improve urban life</li><li>D. certain that megacities will vanish</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Bài nêu vấn đề thực tế nhưng kết ở hướng tích cực có điều kiện: "the way cities are designed will shape the wellbeing... " gợi ý lạc quan thận trọng nếu quy hoạch tốt.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 1 ============ -->
+  <h2>Từ vựng chủ đề Urbanization &amp; City Life</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>demographer</td><td>(n)</td><td>nhà nhân khẩu học</td></tr>
+    <tr><td>megacity</td><td>(n)</td><td>siêu đô thị</td></tr>
+    <tr><td>influx <span class="c1tag">C1</span></td><td>(n)</td><td>dòng người/vật đổ vào ồ ạt</td></tr>
+    <tr><td>infrastructure</td><td>(n)</td><td>cơ sở hạ tầng</td></tr>
+    <tr><td>informal settlement</td><td>(n)</td><td>khu ổ chuột, khu định cư tự phát</td></tr>
+    <tr><td>perennial <span class="c1tag">C1</span></td><td>(adj)</td><td>dai dẳng, lặp đi lặp lại</td></tr>
+    <tr><td>erode</td><td>(v)</td><td>bào mòn, làm suy giảm dần</td></tr>
+    <tr><td>congestion charge</td><td>(n)</td><td>phí ùn tắc giao thông</td></tr>
+    <tr><td>gridlock <span class="c1tag">C1</span></td><td>(n)</td><td>tắc nghẽn giao thông hoàn toàn</td></tr>
+    <tr><td>liveable</td><td>(adj)</td><td>đáng sống, phù hợp để sinh sống</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài #2 <span class="lvl">Ageing &amp; Population · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>A Greying World</h3>
+    <p><span class="pn">[1]</span> Across much of the industrialised world, populations are ageing at an unprecedented rate. Advances in medicine and public health have allowed people to live substantially longer than their grandparents did, while birth rates in many countries have fallen well below the level needed to replace the existing population. The combined effect is a demographic shift often described as "greying," in which the proportion of elderly citizens relative to younger workers steadily rises.</p>
+    <p class="vi-para">[1] Ở phần lớn thế giới công nghiệp hóa, dân số đang già đi với tốc độ chưa từng có. Những tiến bộ trong y học và y tế công cộng đã giúp con người sống lâu hơn đáng kể so với ông bà của họ, trong khi tỷ lệ sinh ở nhiều quốc gia đã giảm xuống thấp hơn nhiều so với mức cần thiết để thay thế dân số hiện tại. Hệ quả tổng hợp là một sự dịch chuyển nhân khẩu học thường được gọi là "già hóa," trong đó tỷ lệ người cao tuổi so với lực lượng lao động trẻ ngày càng tăng.</p>
+
+    <p><span class="pn">[2]</span> This trend carries profound economic implications. Pension systems in many nations were designed decades ago, when a large working-age population supported a comparatively small number of retirees. As that ratio narrows, governments face mounting pressure to raise the retirement age, increase contributions, or trim benefits — each option politically fraught, since older voters tend to turn out in large numbers and fiercely defend the entitlements they were promised.</p>
+    <p class="vi-para">[2] Xu hướng này kéo theo những hệ lụy kinh tế sâu sắc. Hệ thống lương hưu ở nhiều quốc gia được thiết kế từ nhiều thập kỷ trước, khi một lực lượng lao động đông đảo nuôi một số lượng người nghỉ hưu tương đối nhỏ. Khi tỷ lệ đó thu hẹp lại, các chính phủ chịu áp lực ngày càng lớn phải nâng tuổi nghỉ hưu, tăng mức đóng góp, hoặc cắt giảm phúc lợi — mỗi lựa chọn đều đầy khó khăn về mặt chính trị, bởi cử tri lớn tuổi thường đi bầu đông đảo và kiên quyết bảo vệ những quyền lợi họ đã được hứa hẹn.</p>
+
+    <p><span class="pn">[3]</span> Healthcare systems, too, must adapt. Elderly patients typically require more frequent medical attention and long-term care than younger populations, placing additional strain on hospitals and caregivers alike. Some countries have responded by expanding home-care services, allowing older citizens to remain independent for longer, while others have turned to technology, deploying sensors and wearable devices that alert family members or medical staff to potential emergencies.</p>
+    <p class="vi-para">[3] Hệ thống y tế cũng phải thích nghi. Bệnh nhân cao tuổi thường cần được chăm sóc y tế thường xuyên hơn và chăm sóc dài hạn hơn so với dân số trẻ, gây thêm áp lực cho cả bệnh viện lẫn người chăm sóc. Một số quốc gia đã ứng phó bằng cách mở rộng dịch vụ chăm sóc tại nhà, giúp người cao tuổi duy trì cuộc sống độc lập lâu hơn, trong khi những nước khác chuyển sang ứng dụng công nghệ, triển khai các cảm biến và thiết bị đeo để cảnh báo người thân hoặc nhân viên y tế khi có tình huống khẩn cấp.</p>
+
+    <p><span class="pn">[4]</span> Not everyone views the greying of society solely as a burden, however. Many economists point out that older populations, freed from the demands of raising children, can contribute valuable skills through part-time work, mentoring, or volunteering. Some governments have begun actively encouraging labour-force participation among older citizens, offering tax incentives to employers who retain experienced workers past traditional retirement age. Whether such measures can fully offset the economic pressures of an ageing population remains uncertain, but they suggest that demographic change need not be viewed purely through a lens of decline.</p>
+    <p class="vi-para">[4] Tuy nhiên, không phải ai cũng xem việc xã hội già hóa hoàn toàn là một gánh nặng. Nhiều nhà kinh tế học chỉ ra rằng người cao tuổi, khi không còn phải lo nuôi dạy con cái, có thể đóng góp những kỹ năng quý giá qua công việc bán thời gian, cố vấn, hoặc hoạt động tình nguyện. Một số chính phủ đã bắt đầu chủ động khuyến khích người cao tuổi tham gia lực lượng lao động, đưa ra ưu đãi thuế cho các doanh nghiệp giữ lại nhân viên giàu kinh nghiệm sau tuổi nghỉ hưu truyền thống. Liệu những biện pháp này có thể bù đắp hoàn toàn áp lực kinh tế của một dân số già hay không vẫn còn chưa chắc chắn, nhưng chúng cho thấy sự thay đổi nhân khẩu học không nhất thiết phải được nhìn nhận thuần túy qua lăng kính suy giảm.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. the causes and consequences of an ageing population</li><li>B. how to raise children in modern society</li><li>C. the history of medicine</li><li>D. why birth rates were higher in the past</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Bài nêu nguyên nhân (tuổi thọ tăng, sinh suất giảm), rồi hệ quả về lương hưu, y tế, và cả góc nhìn tích cực → chủ đề bao trùm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Detail</span> According to paragraph 1, what two factors together cause population ageing?</div>
+    <ul><li>A. Longer life expectancy and falling birth rates</li><li>B. Higher birth rates and shorter lifespans</li><li>C. More immigration and less emigration</li><li>D. Lower medical costs and more hospitals</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "people... live substantially longer... while birth rates... have fallen well below the level needed to replace the existing population."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Vocabulary</span> The word <b class="k">"fraught"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. simple and easy</li><li>B. full of difficulty or tension</li><li>C. financially profitable</li><li>D. widely popular</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "each option politically fraught" = mỗi lựa chọn đều đầy khó khăn/căng thẳng về chính trị.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"they"</b> (in "the entitlements they were promised") refers to:</div>
+    <ul><li>A. governments</li><li>B. pension systems</li><li>C. older voters</li><li>D. working-age populations</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu nói về "older voters" bảo vệ quyền lợi họ được hứa → "they" = older voters.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that technology such as wearable devices is used mainly to:</div>
+    <ul><li>A. replace all human caregivers</li><li>B. help detect emergencies among elderly people</li><li>C. reduce the need for home-care services entirely</li><li>D. increase birth rates</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "sensors and wearable devices that alert family members or medical staff to potential emergencies."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The phrase <b class="k">"offset"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. to worsen a problem</li><li>B. to balance out or counteract</li><li>C. to ignore completely</li><li>D. to postpone indefinitely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "offset the economic pressures" = bù đắp/cân bằng lại áp lực kinh tế.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">tax incentives for employers</b> in paragraph 4?</div>
+    <ul><li>A. To criticize government spending</li><li>B. To give an example of a policy encouraging older people to keep working</li><li>C. To explain how pensions are calculated</li><li>D. To describe a historical event</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 nói về việc khuyến khích người cao tuổi tiếp tục tham gia lao động; tax incentives là ví dụ cụ thể của chính sách đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as government responses to ageing populations EXCEPT:</div>
+    <ul><li>A. raising the retirement age</li><li>B. expanding home-care services</li><li>C. offering tax incentives to employers</li><li>D. banning older citizens from working</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 2), B (đoạn 3), C (đoạn 4) đều được nhắc. "Banning older citizens from working" hoàn toàn trái với nội dung khuyến khích họ làm việc → không được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span><span class="c1tag">C1</span> The author's attitude toward the ageing population trend is best described as:</div>
+    <ul><li>A. entirely alarmist</li><li>B. dismissive of any challenges</li><li>C. balanced, acknowledging challenges but also potential benefits</li><li>D. indifferent to economic consequences</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Bài nêu thách thức về lương hưu, y tế (đoạn 2–3) nhưng cũng nhấn mạnh đóng góp tích cực của người cao tuổi (đoạn 4) → thái độ cân bằng.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 2 ============ -->
+  <h2>Từ vựng chủ đề Ageing &amp; Population</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>unprecedented</td><td>(adj)</td><td>chưa từng có tiền lệ</td></tr>
+    <tr><td>demographic shift</td><td>(n)</td><td>sự dịch chuyển nhân khẩu học</td></tr>
+    <tr><td>retirement age</td><td>(n)</td><td>tuổi nghỉ hưu</td></tr>
+    <tr><td>fraught <span class="c1tag">C1</span></td><td>(adj)</td><td>đầy khó khăn, căng thẳng</td></tr>
+    <tr><td>entitlement</td><td>(n)</td><td>quyền lợi được hưởng</td></tr>
+    <tr><td>long-term care</td><td>(n)</td><td>chăm sóc dài hạn</td></tr>
+    <tr><td>wearable device</td><td>(n)</td><td>thiết bị đeo được (theo dõi sức khỏe)</td></tr>
+    <tr><td>mentoring</td><td>(n)</td><td>cố vấn, hướng dẫn (kinh nghiệm)</td></tr>
+    <tr><td>labour-force participation</td><td>(n)</td><td>tỷ lệ tham gia lực lượng lao động</td></tr>
+    <tr><td>offset <span class="c1tag">C1</span></td><td>(v)</td><td>bù đắp, cân bằng lại</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1 (Urbanization)</th><td>1-B · 2-C · 3-B · 4-B · 5-C · 6-B · 7-B · 8-D · 9-C</td></tr>
+      <tr><th>Bài #2 (Ageing)</th><td>1-A · 2-A · 3-B · 4-C · 5-B · 6-B · 7-B · 8-D · 9-C</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Bài __ · Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu (ở cả 2 bài) → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 7–9/bài → nền rất tốt · 5–6 → ổn, đúng hướng · ≤4 → đọc lại bài + học kỹ từ vựng trước khi qua ngày tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Tuần 4 · Ngày 5?</b> Quay lại lộ trình tick đủ ô. Ghi nhớ: khi gặp câu hỏi Tone/Attitude, luôn tìm câu chốt ở đoạn cuối — tác giả thường thể hiện thái độ rõ nhất ở đó, kết hợp với cách cân bằng ưu/nhược điểm xuyên suốt bài.
+  </div>
+
+</div>
+
+<footer>🏙️ Tuần 4 · Ngày 5 · VSTEP Reading — Urbanization &amp; Ageing · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

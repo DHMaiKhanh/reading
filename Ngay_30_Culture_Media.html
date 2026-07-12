@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 30 — Tuần 5 · Ngày 6: Culture &amp; Traditions + Media &amp; Fake News · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎎 Tuần 5 · Ngày 6 — Culture &amp; Traditions + Media &amp; Fake News</h1>
+  <p>2 bài đọc kết hợp chuẩn B2 + C1 → mỗi bài canh ~15 phút</p>
+  <div class="meta">
+    <span class="badge">🕐 ~30 phút tổng</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · ~18 câu · đủ 8 dạng</span>
+    <span class="badge">🏁 Tuần 5 · Ngày 6/7</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết cả 2 bài, KHÔNG tra cứu, canh mỗi bài ~15 phút.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi từ mới của cả 2 bài + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7/9</b> mỗi bài.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài #1 <span class="lvl">Culture &amp; Traditions · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Preserving Traditions in a Globalised World</h3>
+    <p><span class="pn">[1]</span> Every society carries with it a rich collection of customs, rituals, and beliefs passed down from one generation to the next. These traditions — whether a harvest festival, a wedding ceremony, or a simple daily greeting — serve as more than mere habits; they act as threads that bind a community together, offering people a sense of belonging and continuity with their ancestors. Anthropologists have long argued that culture is not static but constantly evolves, absorbing new influences while retaining a recognisable core.</p>
+    <p class="vi-para">[1] Mỗi xã hội đều mang trong mình một kho tàng phong phú các phong tục, nghi lễ và niềm tin được truyền từ thế hệ này sang thế hệ khác. Những truyền thống này — dù là lễ hội mùa gặt, một đám cưới, hay đơn giản chỉ là một lời chào hàng ngày — không chỉ là những thói quen đơn thuần; chúng đóng vai trò như những sợi dây gắn kết cộng đồng, mang lại cho con người cảm giác thuộc về và sự tiếp nối với tổ tiên. Các nhà nhân học từ lâu đã lập luận rằng văn hóa không tĩnh tại mà luôn không ngừng biến đổi, tiếp thu những ảnh hưởng mới trong khi vẫn giữ được cốt lõi dễ nhận ra.</p>
+
+    <p><span class="pn">[2]</span> In recent decades, however, globalisation has accelerated this evolution at an unprecedented pace. International travel, migration, and above all the internet have exposed people to an extraordinary variety of customs beyond their own. Younger generations in many countries now celebrate foreign holidays, wear clothing styles imported from abroad, and consume entertainment produced thousands of miles away. Some observers celebrate this exchange as a broadening of horizons, while others lament what they perceive as a homogenisation of culture, in which distinctive local practices are gradually supplanted by a handful of dominant, globally marketed ones.</p>
+    <p class="vi-para">[2] Tuy nhiên, trong những thập kỷ gần đây, toàn cầu hóa đã đẩy nhanh quá trình biến đổi này với tốc độ chưa từng thấy. Việc đi lại quốc tế, di cư, và trên hết là internet đã cho con người tiếp xúc với vô số phong tục khác ngoài phong tục của chính họ. Thế hệ trẻ ở nhiều quốc gia giờ đây đón các ngày lễ nước ngoài, mặc trang phục nhập khẩu từ xa, và tiêu thụ các sản phẩm giải trí được sản xuất cách hàng nghìn cây số. Một số người xem sự giao thoa này là cách mở rộng tầm nhìn, trong khi những người khác lại tiếc nuối cho điều họ coi là sự đồng nhất hóa văn hóa, trong đó các thực hành địa phương đặc trưng dần bị thay thế bởi một số ít nền văn hóa thống trị được tiếp thị toàn cầu.</p>
+
+    <p><span class="pn">[3]</span> Communities worried about losing their heritage have responded in various ways. Governments in several countries have designated certain customs, crafts, and even culinary techniques as protected cultural heritage, offering funding to artisans who might otherwise abandon dying trades. Local festivals have been revived and, in some cases, deliberately reinvented to appeal to younger audiences without abandoning their symbolic core. Museums and cultural centres increasingly rely on interactive exhibits and digital archives to make traditional practices accessible to a generation more accustomed to screens than to oral storytelling.</p>
+    <p class="vi-para">[3] Các cộng đồng lo ngại về việc đánh mất di sản đã phản ứng theo nhiều cách khác nhau. Chính phủ ở một số quốc gia đã công nhận một số phong tục, nghề thủ công, thậm chí cả kỹ thuật ẩm thực là di sản văn hóa được bảo hộ, cấp kinh phí cho các nghệ nhân vốn có thể sẽ từ bỏ những nghề đang mai một. Các lễ hội địa phương đã được khôi phục và, trong một số trường hợp, được chủ động cải biên để thu hút giới trẻ mà vẫn không đánh mất ý nghĩa biểu tượng cốt lõi. Các bảo tàng và trung tâm văn hóa ngày càng dựa vào các trưng bày tương tác và kho lưu trữ số để đưa các thực hành truyền thống đến gần hơn với một thế hệ quen với màn hình hơn là kể chuyện truyền miệng.</p>
+
+    <p><span class="pn">[4]</span> Ultimately, the relationship between tradition and modernity need not be adversarial. Many scholars contend that cultures have always borrowed and adapted from one another, and that this fluidity, rather than threatening authenticity, has historically been a source of resilience. What matters most, they suggest, is not resisting change altogether but ensuring that communities retain agency over how their traditions transform — choosing what to preserve, what to adapt, and what, if anything, to let go.</p>
+    <p class="vi-para">[4] Xét cho cùng, mối quan hệ giữa truyền thống và hiện đại không nhất thiết phải là đối kháng. Nhiều học giả cho rằng các nền văn hóa vốn luôn vay mượn và điều chỉnh lẫn nhau, và tính linh hoạt này, thay vì đe dọa tính chân thực, trong lịch sử lại chính là nguồn tạo nên sức bền. Điều quan trọng nhất, theo họ, không phải là chống lại sự thay đổi hoàn toàn mà là đảm bảo các cộng đồng giữ được quyền tự quyết đối với cách truyền thống của mình biến đổi — lựa chọn điều gì cần giữ gìn, điều gì cần điều chỉnh, và nếu có, điều gì cần buông bỏ.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of harvest festivals around the world</li><li>B. how globalisation affects traditional culture and how communities respond</li><li>C. why museums are becoming obsolete</li><li>D. the economic benefits of tourism</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài nói về tác động của toàn cầu hóa lên văn hóa truyền thống (đoạn 2) và các phản ứng của cộng đồng (đoạn 3), kết luận ở đoạn 4 — đây là ý bao trùm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"static"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. unchanging</li><li>B. extremely popular</li><li>C. financially valuable</li><li>D. difficult to understand</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "culture is not static but constantly evolves" — đối lập với "evolves" (thay đổi) nên static = không thay đổi, tĩnh.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what has accelerated cultural change in recent decades?</div>
+    <ul><li>A. Stricter government regulations</li><li>B. International travel, migration, and the internet</li><li>C. A decline in tourism</li><li>D. The closure of museums</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "International travel, migration, and above all the internet have exposed people to an extraordinary variety of customs."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"homogenisation"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. the process of becoming more diverse</li><li>B. the process of becoming increasingly similar or uniform</li><li>C. a sudden economic collapse</li><li>D. a legal dispute over land</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "homogenisation of culture, in which distinctive local practices are gradually supplanted by a handful of dominant... ones" — mọi nơi trở nên giống nhau, đồng nhất hóa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Reference</span> In paragraph 3, the word <b class="k">"otherwise"</b> (in "artisans who might otherwise abandon dying trades") implies that:</div>
+    <ul><li>A. artisans always abandon their trades regardless of funding</li><li>B. without funding, artisans might give up these traditional trades</li><li>C. museums do not support artisans</li><li>D. dying trades cannot be revived</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "otherwise" = nếu không có sự hỗ trợ (funding) thì artisans sẽ bỏ nghề → funding giúp họ không phải từ bỏ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Inference</span> It can be inferred from paragraph 3 that some local festivals:</div>
+    <ul><li>A. have completely disappeared with no chance of revival</li><li>B. have been modified to attract younger people while keeping their meaning</li><li>C. are now banned by governments</li><li>D. are identical to how they were centuries ago</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "deliberately reinvented to appeal to younger audiences without abandoning their symbolic core" — thay đổi hình thức nhưng giữ ý nghĩa gốc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention that "cultures have always borrowed and adapted from one another" (paragraph 4)?</div>
+    <ul><li>A. To argue that cultural mixing is a new, dangerous phenomenon</li><li>B. To support the idea that cultural fluidity is normal and can strengthen resilience</li><li>C. To criticise globalisation entirely</li><li>D. To suggest that museums should be closed</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này dùng để hỗ trợ luận điểm rằng sự pha trộn văn hóa không mới và không đe dọa mà còn là nguồn sức bền ("a source of resilience").</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as responses to protect cultural heritage EXCEPT:</div>
+    <ul><li>A. government funding for artisans</li><li>B. reinventing local festivals</li><li>C. digital archives in museums</li><li>D. banning foreign entertainment</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Funding (đoạn 3), reinvented festivals (đoạn 3), digital archives (đoạn 3) đều được nhắc; "banning foreign entertainment" KHÔNG được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span><span class="c1tag">C1</span> The author's overall attitude toward cultural change can best be described as:</div>
+    <ul><li>A. strongly against any change</li><li>B. nuanced, viewing adaptation as manageable rather than a threat</li><li>C. completely uninterested</li><li>D. certain that traditions will disappear entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 kết luận rằng "the relationship between tradition and modernity need not be adversarial" — thái độ cân bằng, không cực đoan.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 1 ============ -->
+  <h2>Từ vựng chủ đề Culture &amp; Traditions</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>custom</td><td>(n)</td><td>phong tục, tập quán</td></tr>
+    <tr><td>ritual</td><td>(n)</td><td>nghi lễ, nghi thức</td></tr>
+    <tr><td>heritage</td><td>(n)</td><td>di sản văn hóa</td></tr>
+    <tr><td>static <span class="c1tag">C1</span></td><td>(adj)</td><td>tĩnh, không thay đổi</td></tr>
+    <tr><td>globalisation</td><td>(n)</td><td>toàn cầu hóa</td></tr>
+    <tr><td>homogenisation <span class="c1tag">C1</span></td><td>(n)</td><td>sự đồng nhất hóa</td></tr>
+    <tr><td>supplant <span class="c1tag">C1</span></td><td>(v)</td><td>thay thế, chiếm chỗ</td></tr>
+    <tr><td>artisan</td><td>(n)</td><td>nghệ nhân, thợ thủ công</td></tr>
+    <tr><td>revive</td><td>(v)</td><td>khôi phục, hồi sinh</td></tr>
+    <tr><td>adversarial <span class="c1tag">C1</span></td><td>(adj)</td><td>đối kháng, xung đột</td></tr>
+    <tr><td>fluidity <span class="c1tag">C1</span></td><td>(n)</td><td>tính linh hoạt, dễ biến đổi</td></tr>
+    <tr><td>resilience</td><td>(n)</td><td>khả năng phục hồi, sức bền</td></tr>
+    <tr><td>agency</td><td>(n)</td><td>quyền tự quyết, năng lực hành động</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài #2 <span class="lvl">Media &amp; Fake News · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Living Inside the Filter Bubble</h3>
+    <p><span class="pn">[1]</span> Long before social media existed, people already tended to seek out news sources that confirmed what they already believed. Today, however, this natural tendency is amplified by algorithms specifically designed to keep users engaged for as long as possible. Recommendation systems on social platforms quietly learn a person's preferences and then serve up a steady stream of content likely to please them, gradually narrowing the range of viewpoints that reach their screen. This phenomenon, often called the "filter bubble," means that two people searching the exact same topic may be shown drastically different results.</p>
+    <p class="vi-para">[1] Từ rất lâu trước khi mạng xã hội ra đời, con người vốn đã có xu hướng tìm đến những nguồn tin xác nhận cho những gì họ đã tin sẵn. Tuy nhiên, ngày nay xu hướng tự nhiên này bị khuếch đại bởi các thuật toán được thiết kế riêng để giữ chân người dùng càng lâu càng tốt. Các hệ thống đề xuất trên nền tảng mạng xã hội âm thầm học sở thích của mỗi người rồi liên tục đưa ra nội dung có khả năng làm họ hài lòng, dần dần thu hẹp phạm vi quan điểm xuất hiện trên màn hình của họ. Hiện tượng này, thường được gọi là "bong bóng lọc thông tin," có nghĩa là hai người tìm kiếm cùng một chủ đề có thể nhận được kết quả hoàn toàn khác nhau.</p>
+
+    <p><span class="pn">[2]</span> The consequences of this personalised information ecosystem are far from trivial. When individuals are rarely confronted with opinions that contradict their own, they may come to regard their perspective as the only reasonable one, making constructive dialogue with those who disagree increasingly difficult. Some researchers contend that filter bubbles have contributed to growing political polarisation, as communities retreat into ideologically homogeneous online spaces where dissenting voices are scarce and misinformation, once introduced, faces little resistance.</p>
+    <p class="vi-para">[2] Hậu quả của hệ sinh thái thông tin cá nhân hóa này không hề nhỏ. Khi con người hiếm khi phải đối diện với những quan điểm trái ngược với mình, họ có thể dần coi quan điểm của mình là điều duy nhất hợp lý, khiến việc đối thoại mang tính xây dựng với những người bất đồng ngày càng khó khăn. Một số nhà nghiên cứu cho rằng bong bóng lọc thông tin đã góp phần làm gia tăng sự phân cực chính trị, khi các cộng đồng rút vào những không gian trực tuyến đồng nhất về mặt tư tưởng, nơi tiếng nói trái chiều hiếm hoi và thông tin sai lệch, một khi đã xuất hiện, gần như không gặp phải sự phản bác nào.</p>
+
+    <p><span class="pn">[3]</span> Compounding the problem is the sheer difficulty of distinguishing credible journalism from content engineered purely to attract clicks. Sensational headlines, deliberately misleading images, and fabricated quotations circulate widely because outrage and novelty generate far more engagement than nuanced, careful reporting. A single misleading post can reach millions before any fact-checking organisation has the opportunity to intervene, and even when a correction is eventually published, it rarely travels as far as the original falsehood.</p>
+    <p class="vi-para">[3] Vấn đề càng thêm phức tạp bởi việc phân biệt báo chí đáng tin cậy với nội dung được dàn dựng chỉ nhằm câu lượt nhấp là vô cùng khó khăn. Các tiêu đề giật gân, hình ảnh cố tình gây hiểu lầm, và những trích dẫn bịa đặt lan truyền rộng rãi vì sự phẫn nộ và tính mới lạ tạo ra mức độ tương tác cao hơn nhiều so với những bài báo cẩn trọng, có chiều sâu. Một bài đăng sai lệch có thể tiếp cận hàng triệu người trước khi bất kỳ tổ chức kiểm chứng thông tin nào kịp can thiệp, và ngay cả khi bản cải chính cuối cùng được đăng tải, nó hiếm khi lan truyền xa bằng tin sai lệch ban đầu.</p>
+
+    <p><span class="pn">[4]</span> Combating this problem requires action on several fronts simultaneously. Technology companies have experimented with algorithmic adjustments intended to surface a wider diversity of sources, though critics note that such measures can conflict with platforms' financial incentive to maximise engagement. Educators, meanwhile, increasingly emphasise media literacy, teaching students to question a source's motives, verify claims independently, and recognise the emotional triggers that manipulative content is designed to exploit. Ultimately, no algorithm alone can substitute for a discerning, critically minded reader.</p>
+    <p class="vi-para">[4] Chống lại vấn đề này đòi hỏi hành động trên nhiều mặt trận cùng lúc. Các công ty công nghệ đã thử nghiệm điều chỉnh thuật toán nhằm hiển thị nguồn tin đa dạng hơn, dù những người phê bình chỉ ra rằng các biện pháp này có thể xung đột với động cơ tài chính của nền tảng là tối đa hóa mức độ tương tác. Trong khi đó, các nhà giáo dục ngày càng chú trọng năng lực hiểu biết truyền thông, dạy học sinh biết đặt nghi vấn về động cơ của nguồn tin, tự kiểm chứng độc lập, và nhận ra những yếu tố kích động cảm xúc mà nội dung thao túng được thiết kế để khai thác. Xét cho cùng, không thuật toán nào có thể thay thế được một người đọc tinh tường, biết tư duy phản biện.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. how filter bubbles form and why they make misinformation harder to counter</li><li>B. the history of newspaper journalism</li><li>C. how to design a social media platform</li><li>D. why people prefer video over text</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Bài giải thích cơ chế filter bubble (đoạn 1), hậu quả (đoạn 2-3) và giải pháp (đoạn 4) — đây là ý chính bao trùm toàn bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"amplified"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. reduced</li><li>B. made stronger or greater</li><li>C. ignored</li><li>D. hidden</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "this natural tendency is amplified by algorithms" — algorithms khuếch đại/làm mạnh thêm xu hướng vốn có.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, what is a "filter bubble"?</div>
+    <ul><li>A. A type of protective software against viruses</li><li>B. A situation where people see mostly content that matches their existing views</li><li>C. A government policy on internet regulation</li><li>D. A method for fact-checking news</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 1 định nghĩa: recommendation systems "gradually narrowing the range of viewpoints" → filter bubble = bong bóng thông tin chỉ thấy quan điểm giống mình.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"polarisation"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. division into strongly opposing groups</li><li>B. a state of complete agreement</li><li>C. a decline in internet usage</li><li>D. an increase in advertising revenue</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "political polarisation, as communities retreat into ideologically homogeneous online spaces" — sự phân cực, chia thành các phe đối lập gay gắt.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Reference</span> In paragraph 2, the word <b class="k">"their"</b> (in "reach their screen") refers to:</div>
+    <ul><li>A. algorithms</li><li>B. researchers</li><li>C. individuals/users</li><li>D. journalists</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu nói về "the range of viewpoints" mà người dùng (individuals) được tiếp cận → "their screen" = màn hình của người dùng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Inference</span> It can be inferred from paragraph 3 that corrections to misleading posts:</div>
+    <ul><li>A. always reach as many people as the original false story</li><li>B. typically reach fewer people than the original misinformation</li><li>C. are published before the false story spreads</li><li>D. are unnecessary because misinformation rarely spreads</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "even when a correction is eventually published, it rarely travels as far as the original falsehood" → cải chính lan ít hơn tin giả.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention platforms' "financial incentive to maximise engagement" (paragraph 4)?</div>
+    <ul><li>A. To praise technology companies for solving misinformation</li><li>B. To explain a possible obstacle to fixing the filter bubble problem</li><li>C. To describe how much money social media companies earn</li><li>D. To argue that engagement is unrelated to content diversity</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này nêu lý do các biện pháp thuật toán "can conflict with" mục tiêu lợi nhuận → đây là trở ngại cho việc khắc phục vấn đề.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as factors that help misleading content spread EXCEPT:</div>
+    <ul><li>A. sensational headlines</li><li>B. fabricated quotations</li><li>C. slow internet connections</li><li>D. content that triggers outrage</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Sensational headlines, fabricated quotations, and outrage-triggering content đều được nhắc trong đoạn 3; "slow internet connections" không được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span><span class="c1tag">C1</span> The author's attitude toward technological solutions alone (paragraph 4) is best described as:</div>
+    <ul><li>A. fully confident they will solve the problem</li><li>B. skeptical, believing critical readers are also essential</li><li>C. completely dismissive of any technological effort</li><li>D. indifferent to the issue</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "no algorithm alone can substitute for a discerning, critically minded reader" — tác giả cho rằng công nghệ không đủ, cần cả người đọc biết phản biện.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 2 ============ -->
+  <h2>Từ vựng chủ đề Media &amp; Fake News</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>amplify</td><td>(v)</td><td>khuếch đại, làm mạnh thêm</td></tr>
+    <tr><td>engage</td><td>(v)</td><td>thu hút sự chú ý, gắn kết</td></tr>
+    <tr><td>filter bubble</td><td>(n phr)</td><td>bong bóng lọc thông tin</td></tr>
+    <tr><td>ecosystem</td><td>(n)</td><td>hệ sinh thái (nghĩa bóng: hệ thống)</td></tr>
+    <tr><td>polarisation <span class="c1tag">C1</span></td><td>(n)</td><td>sự phân cực</td></tr>
+    <tr><td>dissenting <span class="c1tag">C1</span></td><td>(adj)</td><td>bất đồng, phản đối</td></tr>
+    <tr><td>compound</td><td>(v)</td><td>làm phức tạp/trầm trọng thêm</td></tr>
+    <tr><td>fabricated</td><td>(adj)</td><td>bịa đặt, ngụy tạo</td></tr>
+    <tr><td>engagement</td><td>(n)</td><td>mức độ tương tác</td></tr>
+    <tr><td>media literacy</td><td>(n phr)</td><td>năng lực hiểu biết truyền thông</td></tr>
+    <tr><td>discerning <span class="c1tag">C1</span></td><td>(adj)</td><td>tinh tường, biết phân biệt</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1 (Culture)</th><td>1-B · 2-A · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B</td></tr>
+      <tr><th>Bài #2 (Media)</th><td>1-A · 2-B · 3-B · 4-A · 5-C · 6-B · 7-B · 8-C · 9-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · bài __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu (ở cả 2 bài cộng lại) → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng ≥14/18 → nền rất tốt · 11–13 → ổn, đúng hướng · ≤10 → đọc lại cả 2 bài + học kỹ từ vựng trước khi qua Ngày 7.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Tuần 5 · Ngày 6?</b> Quay lại lộ trình tick đủ 4 bước. <b>Ngày 7</b> sẽ là bài trộn tổng hợp toàn bộ chủ đề của tuần 5 — mục tiêu đạt <b>~70%</b> số câu đúng để chắc chắn sẵn sàng bước sang tuần tiếp theo.
+  </div>
+
+</div>
+
+<footer>🎎 Tuần 5 · Ngày 6 · VSTEP Reading — Culture &amp; Traditions + Media &amp; Fake News · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

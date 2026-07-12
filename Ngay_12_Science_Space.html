@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 12 — Luyện đề Science &amp; Space · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚀 Tuần 3 · Ngày 2 — Science &amp; Technology + Space &amp; Astronomy</h1>
+  <p>2 bài đọc độc lập, mỗi bài ~18 phút → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~36–40 phút</span>
+    <span class="badge">🟠 2 bài · chuẩn B2 + C1</span>
+    <span class="badge">📝 2 bài · 20 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước, áp dụng cho từng bài):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, ~18 phút/bài.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi từ mới của cả 2 bài + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~14–16/20</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài #1 — Science &amp; Technology <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>Robots That Learn From Their Mistakes</h3>
+    <p><span class="pn">[1]</span> For decades, industrial robots were praised for precision but mocked for rigidity: they could weld a car door a thousand times identically, yet they would grind to a halt if a single bolt were out of place. That picture is changing rapidly. A new generation of machines, powered by a branch of artificial intelligence called reinforcement learning, is being trained not through rigid programming but through trial and error, much as a child learns to walk by falling down repeatedly.</p>
+    <p class="vi-para">[1] Trong nhiều thập kỷ, robot công nghiệp được ca ngợi vì độ chính xác nhưng bị chê cười vì sự cứng nhắc: chúng có thể hàn một cánh cửa xe hàng nghìn lần giống hệt nhau, nhưng lại dừng hẳn nếu chỉ một con bu-lông bị lệch chỗ. Bức tranh đó đang thay đổi nhanh chóng. Một thế hệ máy móc mới, được vận hành bởi một nhánh của trí tuệ nhân tạo gọi là học tăng cường, đang được huấn luyện không phải qua lập trình cứng nhắc mà qua thử và sai, giống như cách một đứa trẻ học đi bằng cách ngã đi ngã lại nhiều lần.</p>
+    <p><span class="pn">[2]</span> In warehouses, robotic arms now practise grasping oddly shaped objects thousands of times in simulation before ever touching a real box. Each attempt is scored, and the software gradually refines its strategy, discarding motions that fail and reinforcing those that succeed. Engineers describe this process as remarkably similar to how humans acquire manual dexterity, except that a robot can rehearse an action millions of times in the space of a single day, a feat no human could replicate.</p>
+    <p class="vi-para">[2] Trong các kho hàng, cánh tay robot hiện nay luyện tập việc cầm nắm những vật có hình dạng kỳ lạ hàng nghìn lần trong môi trường mô phỏng trước khi chạm vào một thùng hàng thật. Mỗi lần thử đều được chấm điểm, và phần mềm dần dần cải thiện chiến lược của nó, loại bỏ những động tác thất bại và củng cố những động tác thành công. Các kỹ sư mô tả quá trình này giống một cách đáng kinh ngạc với cách con người có được sự khéo léo của đôi tay, chỉ khác là một robot có thể luyện tập một động tác hàng triệu lần trong vòng một ngày, điều mà không con người nào có thể sánh được.</p>
+    <p><span class="pn">[3]</span> This adaptability has opened doors previously closed to automation. Robots once confined to predictable factory floors are now venturing into hospitals, disaster zones, and even private homes, where the environment is inherently unpredictable. Surgical robots, for instance, can adjust to the slight, involuntary movements of a patient's body, while search-and-rescue robots can improvise a path through rubble that no engineer anticipated in advance.</p>
+    <p class="vi-para">[3] Khả năng thích nghi này đã mở ra những cánh cửa trước đây đóng kín với tự động hóa. Những robot từng chỉ bó hẹp trong các nhà máy có môi trường dễ đoán nay đang tiến vào bệnh viện, vùng thiên tai, và thậm chí cả nhà riêng, nơi môi trường vốn dĩ khó lường. Chẳng hạn, robot phẫu thuật có thể điều chỉnh theo những chuyển động nhỏ, không tự chủ của cơ thể bệnh nhân, trong khi robot tìm kiếm-cứu hộ có thể ứng biến một lối đi xuyên qua đống đổ nát mà không kỹ sư nào lường trước được.</p>
+    <p><span class="pn">[4]</span> Still, sceptics caution against unchecked enthusiasm. Robots trained through trial and error can develop strategies that appear clever in simulation but behave erratically once deployed in the real world, where variables are far messier than any digital model. Moreover, the immense computing power required to train such systems raises questions about energy consumption and cost, meaning that for now, at least, only well-funded laboratories can push the technology forward. Even so, most experts agree that adaptive robotics marks a genuine turning point, one that will gradually blur the boundary between rigid machines and creatures capable of something resembling learning.</p>
+    <p class="vi-para">[4] Tuy nhiên, những người hoài nghi cảnh báo không nên quá lạc quan mà thiếu kiểm soát. Robot được huấn luyện qua thử và sai có thể phát triển những chiến lược trông có vẻ thông minh trong mô phỏng nhưng lại hoạt động thất thường khi được triển khai trong thế giới thực, nơi các biến số phức tạp hơn nhiều so với bất kỳ mô hình số nào. Hơn nữa, năng lượng tính toán khổng lồ cần thiết để huấn luyện các hệ thống này đặt ra câu hỏi về mức tiêu thụ năng lượng và chi phí, có nghĩa là ít nhất vào lúc này, chỉ những phòng thí nghiệm có nguồn vốn dồi dào mới có thể đẩy công nghệ này tiến xa hơn. Dù vậy, hầu hết chuyên gia đều đồng ý rằng robot có khả năng thích nghi đánh dấu một bước ngoặt thực sự, một bước ngoặt sẽ dần làm mờ ranh giới giữa những cỗ máy cứng nhắc và những thực thể có khả năng làm điều gì đó giống như học hỏi.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. the history of car manufacturing</li><li>B. how robots are learning to adapt through trial and error</li><li>C. why factory robots are cheaper than humans</li><li>D. the dangers of robots in hospitals</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài xoay quanh reinforcement learning giúp robot thích nghi, từ nhà kho đến bệnh viện. A/C/D chỉ là chi tiết phụ hoặc không đúng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Detail</span> According to paragraph 1, what was a key weakness of traditional industrial robots?</div>
+    <ul><li>A. They were too expensive to build</li><li>B. They could not weld car doors at all</li><li>C. They stopped working if something was slightly out of place</li><li>D. They required constant human supervision</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "they would grind to a halt if a single bolt were out of place."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Vocabulary</span> The word <b class="k">"rigidity"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. flexibility</li><li>B. inability to adapt or change</li><li>C. high speed</li><li>D. low cost</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "praised for precision but mocked for rigidity" — đối lập với precision → rigidity nghĩa là sự cứng nhắc, thiếu linh hoạt.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"it"</b> (in "the software gradually refines its strategy") refers to:</div>
+    <ul><li>A. the warehouse</li><li>B. the software</li><li>C. the box</li><li>D. the human</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "its" thuộc về "the software" ngay trước đó, chỉ chiến lược của chính phần mềm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 2 that robots learning through simulation:</div>
+    <ul><li>A. learn more slowly than humans in every way</li><li>B. can practise far more times than a human ever could</li><li>C. never make any mistakes</li><li>D. are no longer used in warehouses</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a robot can rehearse an action millions of times in the space of a single day, a feat no human could replicate."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"dexterity"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. laziness</li><li>B. skill in using the hands</li><li>C. fear of failure</li><li>D. financial cost</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "manual dexterity" = sự khéo léo tay chân, kỹ năng thao tác bằng tay.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Detail</span> According to paragraph 3, why are surgical robots useful?</div>
+    <ul><li>A. They never require any adjustment</li><li>B. They can adjust to a patient's slight, involuntary movements</li><li>C. They replace surgeons completely</li><li>D. They only work in disaster zones</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Surgical robots...can adjust to the slight, involuntary movements of a patient's body."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · Purpose</span><span class="c1tag">C1</span> Why does the author mention "energy consumption and cost" in paragraph 4?</div>
+    <ul><li>A. To argue that robots should be banned</li><li>B. To highlight a limitation of training adaptive robots</li><li>C. To praise well-funded laboratories</li><li>D. To describe how electricity is generated</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này nêu một hạn chế thực tế: chi phí và năng lượng khiến chỉ phòng lab giàu vốn mới theo kịp công nghệ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · NOT / EXCEPT</span> All of the following are mentioned as places adaptive robots now operate EXCEPT:</div>
+    <ul><li>A. hospitals</li><li>B. disaster zones</li><li>C. private homes</li><li>D. outer space stations</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 3 nêu hospitals, disaster zones, private homes; "outer space stations" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Tone / Attitude</span> The author's overall attitude toward adaptive robotics is best described as:</div>
+    <ul><li>A. completely dismissive</li><li>B. cautiously optimistic, acknowledging both promise and limitations</li><li>C. entirely uncritical and enthusiastic</li><li>D. indifferent</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài nêu tiến bộ (đoạn 2-3) nhưng cũng cảnh báo giới hạn (đoạn 4), kết luận "genuine turning point" nhưng có dè dặt.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Science &amp; Technology</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>rigidity</td><td>(n)</td><td>sự cứng nhắc, thiếu linh hoạt</td></tr>
+    <tr><td>grind to a halt</td><td>(phr)</td><td>dừng lại hoàn toàn, ngừng hoạt động</td></tr>
+    <tr><td>reinforcement learning <span class="c1tag">C1</span></td><td>(n)</td><td>học tăng cường (một nhánh AI)</td></tr>
+    <tr><td>trial and error</td><td>(phr)</td><td>thử và sai</td></tr>
+    <tr><td>dexterity <span class="c1tag">C1</span></td><td>(n)</td><td>sự khéo léo</td></tr>
+    <tr><td>replicate</td><td>(v)</td><td>lặp lại, nhân bản</td></tr>
+    <tr><td>adaptability</td><td>(n)</td><td>khả năng thích nghi</td></tr>
+    <tr><td>involuntary</td><td>(adj)</td><td>không tự chủ, ngoài ý muốn</td></tr>
+    <tr><td>improvise</td><td>(v)</td><td>ứng biến, làm tùy cơ ứng biến</td></tr>
+    <tr><td>erratically <span class="c1tag">C1</span></td><td>(adv)</td><td>một cách thất thường, khó lường</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài #2 — Space &amp; Astronomy <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>The New Race to Explore Distant Worlds</h3>
+    <p><span class="pn">[1]</span> Half a century after humans first walked on the Moon, a fresh wave of ambition is propelling space exploration into uncharted territory. Government agencies once dominated the field, but today private companies are launching reusable rockets, deploying constellations of satellites, and even planning crewed missions to Mars. This shift has dramatically lowered the cost of reaching orbit, transforming space from an arena reserved for a handful of nations into one increasingly open to commercial ambition.</p>
+    <p class="vi-para">[1] Nửa thế kỷ sau khi con người lần đầu đặt chân lên Mặt Trăng, một làn sóng tham vọng mới đang đẩy công cuộc khám phá vũ trụ tiến vào những vùng đất chưa từng được khai phá. Các cơ quan chính phủ từng thống trị lĩnh vực này, nhưng ngày nay các công ty tư nhân đang phóng tên lửa tái sử dụng, triển khai các chùm vệ tinh, và thậm chí lên kế hoạch cho những sứ mệnh có phi hành đoàn tới Sao Hỏa. Sự chuyển dịch này đã làm giảm đáng kể chi phí để đưa thứ gì đó lên quỹ đạo, biến không gian từ một sân chơi chỉ dành riêng cho một số ít quốc gia thành một lĩnh vực ngày càng mở ra cho tham vọng thương mại.</p>
+    <p><span class="pn">[2]</span> Much of the current excitement centres on Mars, long regarded as the most plausible candidate for future human habitation. Robotic rovers have already trundled across its rusty surface, drilling into rock and testing the soil for signs that microbial life may once have existed. Scientists remain divided on how conclusive the evidence is, but few dispute that Mars holds clues about whether life can emerge on a planet quite different from our own.</p>
+    <p class="vi-para">[2] Phần lớn sự hào hứng hiện tại tập trung vào Sao Hỏa, từ lâu được xem là ứng viên hợp lý nhất cho nơi cư trú của con người trong tương lai. Các robot tự hành đã lăn bánh qua bề mặt gỉ sắt màu đỏ của hành tinh này, khoan vào đá và kiểm tra đất để tìm dấu hiệu cho thấy có thể từng tồn tại sự sống vi sinh vật. Các nhà khoa học vẫn còn bất đồng về mức độ thuyết phục của bằng chứng, nhưng ít ai phủ nhận rằng Sao Hỏa nắm giữ những manh mối về việc liệu sự sống có thể xuất hiện trên một hành tinh khá khác biệt so với hành tinh của chúng ta hay không.</p>
+    <p><span class="pn">[3]</span> Beyond our solar system, astronomers are also detecting an ever-growing catalogue of exoplanets, some orbiting stars hundreds of light-years away. Sophisticated telescopes can now analyse the faint light passing through a distant planet's atmosphere, searching for chemical signatures such as oxygen or methane that might hint at biological activity. Although no unambiguous sign of extraterrestrial life has yet been found, each new discovery narrows the odds that Earth is entirely alone in harbouring living organisms.</p>
+    <p class="vi-para">[3] Bên ngoài hệ Mặt Trời của chúng ta, các nhà thiên văn học cũng đang phát hiện một danh mục ngày càng dài các hành tinh ngoài hệ Mặt Trời, một số hành tinh quay quanh những ngôi sao cách xa hàng trăm năm ánh sáng. Các kính viễn vọng tinh vi giờ đây có thể phân tích luồng ánh sáng yếu ớt xuyên qua khí quyển của một hành tinh xa xôi, tìm kiếm các dấu hiệu hóa học như oxy hay methane có thể gợi ý về hoạt động sinh học. Mặc dù chưa tìm thấy dấu hiệu rõ ràng nào của sự sống ngoài Trái Đất, mỗi phát hiện mới lại thu hẹp khả năng rằng Trái Đất là nơi duy nhất chứa đựng các sinh vật sống.</p>
+    <p><span class="pn">[4]</span> Nevertheless, the renewed enthusiasm for space is tempered by sobering challenges. Prolonged exposure to cosmic radiation and weightlessness poses serious risks to astronauts' health, while the enormous expense of interplanetary travel invites criticism that resources might be better spent addressing problems here on Earth. Advocates respond that the pursuit of space exploration has historically yielded technologies with far broader benefits, from satellite communication to medical imaging, and that curiosity about our place in the universe is, in itself, a worthwhile investment.</p>
+    <p class="vi-para">[4] Tuy nhiên, sự hào hứng trở lại đối với không gian vẫn bị kiềm chế bởi những thách thức đáng phải suy nghĩ. Việc phơi nhiễm kéo dài với bức xạ vũ trụ và tình trạng không trọng lượng gây ra những rủi ro nghiêm trọng cho sức khỏe phi hành gia, trong khi chi phí khổng lồ của việc du hành liên hành tinh khiến nhiều người chỉ trích rằng nguồn lực có thể được dùng tốt hơn để giải quyết các vấn đề ngay trên Trái Đất. Những người ủng hộ đáp lại rằng việc theo đuổi khám phá không gian trong lịch sử đã tạo ra những công nghệ có lợi ích rộng hơn nhiều, từ truyền thông vệ tinh đến chẩn đoán hình ảnh y khoa, và rằng sự tò mò về vị trí của chúng ta trong vũ trụ, tự bản thân nó, đã là một khoản đầu tư xứng đáng.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of the first Moon landing</li><li>B. the renewed drive to explore Mars and beyond, along with its challenges</li><li>C. why private companies should be banned from space travel</li><li>D. how satellites are manufactured</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày làn sóng khám phá không gian mới (Mars, exoplanets) và những thách thức đi kèm. A/C/D chỉ là chi tiết hoặc sai.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Detail</span> According to paragraph 1, what has changed in space exploration recently?</div>
+    <ul><li>A. Only government agencies are allowed to launch rockets</li><li>B. Private companies are now heavily involved, lowering the cost of reaching orbit</li><li>C. Space travel has become more expensive than ever</li><li>D. Crewed missions to Mars have already succeeded</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "private companies are launching reusable rockets...This shift has dramatically lowered the cost of reaching orbit."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Vocabulary</span> The word <b class="k">"plausible"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. impossible</li><li>B. reasonable or believable</li><li>C. expensive</li><li>D. distant</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the most plausible candidate for future human habitation" = ứng viên hợp lý/đáng tin nhất.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"its"</b> (in "trundled across its rusty surface") refers to:</div>
+    <ul><li>A. Earth</li><li>B. the rover</li><li>C. Mars</li><li>D. the Moon</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu trước nói về Mars; "its rusty surface" = bề mặt gỉ sắt màu đỏ của Sao Hỏa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Detail</span> According to paragraph 3, how do astronomers search for signs of life on exoplanets?</div>
+    <ul><li>A. By sending astronauts to land on them</li><li>B. By analysing light passing through a planet's atmosphere for chemical signatures</li><li>C. By drilling into their rocky surfaces</li><li>D. By measuring their distance from Earth only</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "telescopes can now analyse the faint light passing through a distant planet's atmosphere, searching for chemical signatures."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Inference</span> It can be inferred from paragraph 3 that, so far, scientists have:</div>
+    <ul><li>A. found definite proof of alien life</li><li>B. found no unambiguous evidence of extraterrestrial life, but discoveries keep narrowing the possibilities</li><li>C. stopped searching for exoplanets entirely</li><li>D. proven Earth is the only place life can exist</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "no unambiguous sign of extraterrestrial life has yet been found, each new discovery narrows the odds that Earth is entirely alone."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"tempered"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. increased without limit</li><li>B. moderated or balanced by something else</li><li>C. completely destroyed</li><li>D. ignored</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the renewed enthusiasm...is tempered by sobering challenges" = sự hào hứng bị điều tiết/làm dịu bớt bởi các thách thức.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · Purpose</span> Why does the author mention "satellite communication to medical imaging" in paragraph 4?</div>
+    <ul><li>A. To list the dangers of space travel</li><li>B. To give examples of benefits that resulted from space exploration</li><li>C. To describe how astronauts train</li><li>D. To criticise government spending</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu đó là dẫn chứng của "advocates" cho thấy khám phá không gian tạo ra công nghệ có lợi ích rộng hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · NOT / EXCEPT</span> All of the following are mentioned as risks or criticisms of space exploration EXCEPT:</div>
+    <ul><li>A. health risks from cosmic radiation and weightlessness</li><li>B. the high expense of interplanetary travel</li><li>C. the argument that money could be spent on Earth's problems</li><li>D. the risk of collision with other planets</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 4 nêu radiation/weightlessness, expense, và "resources might be better spent...on Earth"; "collision with other planets" không được nhắc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Tone / Attitude</span><span class="c1tag">C1</span> The author's attitude toward the future of space exploration is best described as:</div>
+    <ul><li>A. entirely negative and discouraging</li><li>B. balanced, acknowledging risks while ultimately viewing the pursuit as worthwhile</li><li>C. purely factual with no opinion at all</li><li>D. mocking and sarcastic</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả rủi ro (đoạn 4) lẫn lập luận ủng hộ ("curiosity...is, in itself, a worthwhile investment") → thái độ cân bằng, nghiêng về tích cực.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Space &amp; Astronomy</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>uncharted territory</td><td>(phr)</td><td>vùng đất/lĩnh vực chưa được khám phá</td></tr>
+    <tr><td>reusable rocket</td><td>(n)</td><td>tên lửa tái sử dụng</td></tr>
+    <tr><td>crewed mission</td><td>(n)</td><td>sứ mệnh có phi hành đoàn</td></tr>
+    <tr><td>plausible</td><td>(adj)</td><td>hợp lý, đáng tin</td></tr>
+    <tr><td>habitation</td><td>(n)</td><td>sự cư trú, nơi ở</td></tr>
+    <tr><td>microbial</td><td>(adj)</td><td>thuộc về vi sinh vật</td></tr>
+    <tr><td>exoplanet <span class="c1tag">C1</span></td><td>(n)</td><td>hành tinh ngoài hệ Mặt Trời</td></tr>
+    <tr><td>unambiguous <span class="c1tag">C1</span></td><td>(adj)</td><td>rõ ràng, không mơ hồ</td></tr>
+    <tr><td>tempered <span class="c1tag">C1</span></td><td>(adj/v)</td><td>được điều tiết, làm dịu bớt</td></tr>
+    <tr><td>weightlessness</td><td>(n)</td><td>tình trạng không trọng lượng</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề (cả 2 bài)</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1 — Science &amp; Technology</th><td>1-B · 2-C · 3-B · 4-B · 5-B · 6-B · 7-B · 8-B · 9-D · 10-B</td></tr>
+      <tr><th>Bài #2 — Space &amp; Astronomy</th><td>1-B · 2-B · 3-B · 4-C · 5-B · 6-B · 7-B · 8-B · 9-D · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Bài __ · Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu ở cả 2 bài → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá (tổng 20 câu):</b> đúng 17–20 → nền rất tốt · 13–16 → ổn, đúng hướng · ≤12 → đọc lại cả 2 bài + học kỹ từ vựng trước khi qua ngày tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 12?</b> Hai chủ đề Science &amp; Technology và Space &amp; Astronomy hay xuất hiện chung trong đề VSTEP thật vì đều thuộc nhóm "Innovation & Discovery". Khi ôn từ vựng, hãy nhóm các từ chỉ "tiến bộ/thách thức" (adaptability, breakthrough, plausible, tempered...) lại với nhau để dễ nhớ và tái sử dụng khi viết Part 2/3.
+  </div>
+
+</div>
+
+<footer>🚀 Tuần 3 · Ngày 2 · VSTEP Reading — Science &amp; Technology + Space &amp; Astronomy · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

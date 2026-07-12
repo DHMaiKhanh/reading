@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 33 — ĐỀ FULL #2 · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧪 Tuần 6 · Ngày 3 — ĐỀ FULL #2: Health · Business · History · Technology</h1>
+  <p>4 bài đọc độc lập · 40 câu · bấm giờ nghiêm túc như thi thật</p>
+  <div class="meta">
+    <span class="badge">🕐 Bấm giờ NGHIÊM 60 phút</span>
+    <span class="badge">📝 4 bài · 40 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Nguyên tắc làm ĐỀ FULL (bắt buộc tuân thủ):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Đặt đồng hồ đếm ngược <b>60 phút</b> — làm hết 4 bài trong một lượt, KHÔNG dừng giữa chừng.</li>
+      <li>KHÔNG tra từ điển, KHÔNG mở đáp án cho tới khi nộp bài xong toàn bộ 40 câu.</li>
+      <li>Phân bổ thời gian gợi ý: ~14–15 phút/bài (đọc + trả lời 10 câu).</li>
+      <li>Sau khi hết giờ: chấm điểm bằng bảng đáp án ở cuối trang, rồi mới mở từng <code>&lt;details&gt;</code> để đọc giải thích.</li>
+      <li>Ghi lại số câu đúng theo từng bài để biết mình yếu chủ đề nào nhất.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đây là bài kiểm tra năng lực thật, không phải bài học — hãy coi như đang thi VSTEP chính thức.</p>
+  </div>
+
+  <!-- ============ BÀI 1: HEALTH & MEDICINE ============ -->
+  <h2>Bài đọc 1 — Health &amp; Medicine <span class="lvl">B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Rise of Personalised Medicine</h3>
+    <p><span class="pn">[1]</span> For most of the twentieth century, medicine operated on a one-size-fits-all model: patients with the same diagnosis typically received the same treatment, regardless of their individual biology. Today, however, a new approach known as personalised medicine is gradually replacing this uniform strategy. By analysing a patient's genetic makeup, doctors can now predict how that person is likely to respond to a particular drug, allowing treatment to be tailored to the individual rather than to the average patient.</p>
+    <p class="vi-para">[1] Trong phần lớn thế kỷ 20, y học vận hành theo mô hình "một công thức cho tất cả": bệnh nhân có cùng chẩn đoán thường nhận cùng một phác đồ điều trị, bất kể sự khác biệt sinh học của từng người. Tuy nhiên ngày nay, một phương pháp mới gọi là y học cá nhân hóa đang dần thay thế chiến lược đồng nhất này. Bằng cách phân tích cấu trúc di truyền của bệnh nhân, bác sĩ giờ đây có thể dự đoán người đó sẽ phản ứng thế nào với một loại thuốc cụ thể, cho phép điều trị được thiết kế riêng cho từng cá nhân thay vì cho bệnh nhân trung bình.</p>
+    <p><span class="pn">[2]</span> Cancer treatment has been at the forefront of this shift. Oncologists increasingly use genetic testing to identify the specific mutations driving a tumour's growth, then prescribe targeted therapies designed to attack those mutations directly. This precision reduces the likelihood of prescribing a drug that will prove ineffective, sparing patients from unnecessary side effects and wasted time during a period when speed is often critical.</p>
+    <p class="vi-para">[2] Điều trị ung thư luôn đi đầu trong sự chuyển dịch này. Các bác sĩ ung bướu ngày càng sử dụng xét nghiệm gene để xác định những đột biến cụ thể thúc đẩy khối u phát triển, sau đó kê đơn các liệu pháp nhắm trúng đích được thiết kế để tấn công trực tiếp những đột biến đó. Sự chính xác này làm giảm khả năng kê phải loại thuốc không hiệu quả, giúp bệnh nhân tránh được các tác dụng phụ không cần thiết và lãng phí thời gian trong giai đoạn mà tốc độ thường mang tính sống còn.</p>
+    <p><span class="pn">[3]</span> Nevertheless, the widespread adoption of personalised medicine faces considerable obstacles. Genetic testing remains expensive, and many healthcare systems, particularly in low-income countries, lack the infrastructure to process and interpret genomic data on a large scale. Furthermore, critics point out those insurers may be reluctant to cover costly, individualised treatments unless there is robust evidence that they outperform conventional alternatives, a standard that newer therapies have not always had time to meet.</p>
+    <p class="vi-para">[3] Tuy nhiên, việc áp dụng rộng rãi y học cá nhân hóa vẫn gặp nhiều trở ngại đáng kể. Xét nghiệm gene vẫn còn đắt đỏ, và nhiều hệ thống y tế, đặc biệt ở các nước thu nhập thấp, thiếu cơ sở hạ tầng để xử lý và diễn giải dữ liệu bộ gene ở quy mô lớn. Hơn nữa, những người phản đối chỉ ra rằng các công ty bảo hiểm có thể ngần ngại chi trả cho các phương pháp điều trị cá nhân hóa tốn kém trừ khi có bằng chứng vững chắc rằng chúng vượt trội hơn các phương pháp thông thường — một tiêu chuẩn mà các liệu pháp mới chưa hẳn đã có đủ thời gian để đáp ứng.</p>
+    <p><span class="pn">[4]</span> Despite these hurdles, most experts remain confident that personalised medicine will become mainstream within a generation. As sequencing costs continue to fall and computational tools become more sophisticated, the dream of treatment tailored to each patient's unique genetic profile is steadily edging closer to routine clinical reality, promising not merely incremental gains but a fundamental reimagining of how disease is diagnosed and treated.</p>
+    <p class="vi-para">[4] Bất chấp những rào cản này, phần lớn chuyên gia vẫn tin tưởng rằng y học cá nhân hóa sẽ trở thành xu hướng chủ đạo trong vòng một thế hệ. Khi chi phí giải trình tự gene tiếp tục giảm và các công cụ tính toán ngày càng tinh vi hơn, giấc mơ về một phác đồ điều trị phù hợp với hồ sơ di truyền riêng biệt của từng bệnh nhân đang dần tiến gần đến thực tế lâm sàng thường nhật, hứa hẹn không chỉ những cải thiện nhỏ lẻ mà là một sự tái định hình căn bản trong cách chẩn đoán và điều trị bệnh.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the passage mainly about?</div>
+    <ul><li>A. The history of cancer diagnosis</li><li>B. The shift from uniform treatment to genetics-based, individualised medicine</li><li>C. Why insurers refuse to pay for any treatment</li><li>D. The invention of genetic testing machines</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài xoay quanh sự chuyển dịch từ mô hình điều trị đồng loạt sang y học cá nhân hóa dựa trên gene.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The phrase <b class="k">"tailored to"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. cut away from</li><li>B. customised for</li><li>C. hidden from</li><li>D. tested against</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "tailored to the individual" = được thiết kế riêng, phù hợp với từng cá nhân ≈ customised for.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why is targeted cancer therapy beneficial?</div>
+    <ul><li>A. It is always cheaper than other drugs</li><li>B. It reduces the chance of prescribing an ineffective drug</li><li>C. It eliminates the need for any genetic testing</li><li>D. It works for every type of disease</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "This precision reduces the likelihood of prescribing a drug that will prove ineffective..."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"they"</b> (in "they outperform conventional alternatives") refers to:</div>
+    <ul><li>A. insurers</li><li>B. healthcare systems</li><li>C. individualised treatments</li><li>D. low-income countries</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu nói insurers cần bằng chứng rằng "individualised treatments" vượt trội hơn phương pháp thông thường.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that low-income countries:</div>
+    <ul><li>A. have completely rejected personalised medicine</li><li>B. may struggle to adopt personalised medicine due to limited infrastructure</li><li>C. have the best genomic technology in the world</li><li>D. no longer need genetic testing</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "many healthcare systems, particularly in low-income countries, lack the infrastructure to process and interpret genomic data."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"sophisticated"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. simple and cheap</li><li>B. advanced and complex</li><li>C. outdated</li><li>D. inaccurate</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "computational tools become more sophisticated" = công cụ tính toán trở nên tinh vi/hiện đại hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention insurers in paragraph 3?</div>
+    <ul><li>A. To praise the insurance industry</li><li>B. To illustrate one obstacle to the wider adoption of personalised medicine</li><li>C. To explain how genetic testing works</li><li>D. To criticise cancer patients</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3 liệt kê các rào cản; insurers là một ví dụ cụ thể về rào cản tài chính/thể chế.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as obstacles to personalised medicine EXCEPT:</div>
+    <ul><li>A. high cost of genetic testing</li><li>B. lack of infrastructure in some countries</li><li>C. reluctance of insurers to cover new treatments</li><li>D. a shortage of doctors willing to practise medicine</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều được nêu trong đoạn 3; "thiếu bác sĩ" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall attitude toward the future of personalised medicine is:</div>
+    <ul><li>A. dismissive and pessimistic</li><li>B. cautiously optimistic</li><li>C. completely neutral</li><li>D. openly hostile</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 thừa nhận khó khăn nhưng khẳng định "most experts remain confident... will become mainstream."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Sentence insertion</span><span class="c1tag">C1</span> Which sentence best follows this one: <i>"A major pharmaceutical company recently reported that nearly a third of its new cancer drugs failed in late-stage trials."</i> Where does it fit best?</div>
+    <ul><li>A. At the start of paragraph 1</li><li>B. At the end of paragraph 2, as an added contrast to targeted therapy's precision</li><li>C. In the middle of paragraph 4</li><li>D. It does not fit anywhere in the passage</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này bổ sung tương phản hợp lý cho ý "giảm khả năng kê thuốc không hiệu quả" ở cuối đoạn 2 — nhấn mạnh vấn đề thất bại của thuốc đại trà so với liệu pháp nhắm trúng đích.</p></details>
+  </div>
+
+  <h3>Từ vựng — Health &amp; Medicine</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>genetic makeup</td><td>(n)</td><td>cấu trúc di truyền</td></tr>
+    <tr><td>tailor (v)</td><td>(v)</td><td>thiết kế riêng, tùy chỉnh</td></tr>
+    <tr><td>at the forefront of</td><td>(phr)</td><td>đi đầu trong</td></tr>
+    <tr><td>mutation</td><td>(n)</td><td>đột biến gene</td></tr>
+    <tr><td>targeted therapy</td><td>(n)</td><td>liệu pháp nhắm trúng đích</td></tr>
+    <tr><td>side effect</td><td>(n)</td><td>tác dụng phụ</td></tr>
+    <tr><td>infrastructure</td><td>(n)</td><td>cơ sở hạ tầng</td></tr>
+    <tr><td>robust evidence <span class="c1tag">C1</span></td><td>(n phr)</td><td>bằng chứng vững chắc, thuyết phục</td></tr>
+    <tr><td>sequencing <span class="c1tag">C1</span></td><td>(n)</td><td>giải trình tự (gene)</td></tr>
+    <tr><td>reimagine <span class="c1tag">C1</span></td><td>(v)</td><td>hình dung/tái định hình lại</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2: BUSINESS & ECONOMY ============ -->
+  <h2>Bài đọc 2 — Business &amp; Economy <span class="lvl">B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Gig Economy and the Future of Work</h3>
+    <p><span class="pn">[1]</span> Over the past decade, digital platforms connecting freelance workers with short-term jobs have transformed the way millions of people earn a living. This so-called gig economy encompasses everything from ride-hailing drivers and food-delivery couriers to freelance graphic designers and remote software developers. Proponents argue that such arrangements offer unprecedented flexibility, allowing workers to choose their own hours and take on multiple income streams simultaneously.</p>
+    <p class="vi-para">[1] Trong thập kỷ qua, các nền tảng số kết nối lao động tự do với những công việc ngắn hạn đã thay đổi cách hàng triệu người kiếm sống. Cái gọi là nền kinh tế "gig" này bao gồm mọi thứ từ tài xế công nghệ, người giao đồ ăn cho đến nhà thiết kế đồ họa tự do và lập trình viên làm việc từ xa. Người ủng hộ cho rằng những hình thức này mang lại sự linh hoạt chưa từng có, cho phép người lao động tự chọn giờ làm việc và đảm nhận nhiều nguồn thu nhập cùng lúc.</p>
+    <p><span class="pn">[2]</span> Critics, however, contend that this flexibility often comes at a steep price. Because gig workers are typically classified as independent contractors rather than employees, they are frequently excluded from benefits such as health insurance, paid leave, and retirement contributions that traditional employment provides. Moreover, earnings can fluctuate unpredictably depending on demand, leaving many workers financially vulnerable, particularly during economic downturns.</p>
+    <p class="vi-para">[2] Tuy nhiên, những người phản đối cho rằng sự linh hoạt này thường phải trả giá đắt. Vì lao động "gig" thường được phân loại là người lao động tự do (nhà thầu độc lập) chứ không phải nhân viên, họ thường bị loại khỏi các phúc lợi như bảo hiểm y tế, nghỉ phép có lương và đóng góp hưu trí mà việc làm truyền thống mang lại. Hơn nữa, thu nhập có thể biến động khó lường tùy theo nhu cầu thị trường, khiến nhiều người lao động rơi vào tình trạng bấp bênh về tài chính, đặc biệt trong các giai đoạn suy thoái kinh tế.</p>
+    <p><span class="pn">[3]</span> In response, several governments have begun reconsidering the legal status of gig workers. Some jurisdictions have introduced legislation requiring platforms to classify certain workers as employees, thereby entitling them to minimum wage protections and other benefits. Predictably, platform companies have resisted such measures, warning that reclassification could dramatically raise operating costs and, in turn, force them to reduce the number of workers they engage or raise prices for consumers.</p>
+    <p class="vi-para">[3] Trước tình hình đó, một số chính phủ đã bắt đầu xem xét lại địa vị pháp lý của lao động "gig". Một số khu vực pháp lý đã ban hành luật yêu cầu các nền tảng phải phân loại một số lao động nhất định là nhân viên chính thức, từ đó giúp họ được hưởng bảo vệ về lương tối thiểu và các phúc lợi khác. Như dự đoán, các công ty nền tảng đã phản đối những biện pháp này, cảnh báo rằng việc phân loại lại có thể làm tăng đáng kể chi phí vận hành, từ đó buộc họ phải giảm số lượng lao động thuê hoặc tăng giá dịch vụ cho người tiêu dùng.</p>
+    <p><span class="pn">[4]</span> The debate ultimately hinges on a difficult trade-off between flexibility and security. While few dispute that gig work suits certain people, such as students or those seeking supplementary income, an increasing number of economists caution against romanticising a model that, for many, has become the primary — and precarious — source of livelihood. Finding a regulatory framework that preserves flexibility while extending meaningful protections remains one of the thorniest challenges facing modern labour markets.</p>
+    <p class="vi-para">[4] Cuộc tranh luận cuối cùng xoay quanh sự đánh đổi khó khăn giữa tính linh hoạt và sự an toàn. Trong khi ít ai phủ nhận rằng công việc "gig" phù hợp với một số đối tượng nhất định, như sinh viên hay những người tìm kiếm thu nhập phụ, ngày càng nhiều nhà kinh tế học cảnh báo không nên lãng mạn hóa một mô hình mà đối với nhiều người đã trở thành nguồn sinh kế chính — nhưng đầy bấp bênh. Việc tìm ra một khung pháp lý vừa duy trì sự linh hoạt vừa mở rộng những bảo vệ thực chất vẫn là một trong những thách thức hóc búa nhất đối với thị trường lao động hiện đại.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage primarily discusses:</div>
+    <ul><li>A. how to become a ride-hailing driver</li><li>B. the benefits and drawbacks of the gig economy and efforts to regulate it</li><li>C. the history of minimum wage laws</li><li>D. why students should avoid part-time jobs</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả lợi ích (linh hoạt) và bất lợi (thiếu phúc lợi) của gig economy, cùng phản ứng của chính phủ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"encompasses"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. excludes</li><li>B. includes</li><li>C. destroys</li><li>D. postpones</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "encompasses everything from... to..." = bao gồm tất cả các loại công việc kể ra.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why are gig workers often excluded from benefits?</div>
+    <ul><li>A. They refuse to accept benefits</li><li>B. They are classified as independent contractors, not employees</li><li>C. They earn too much money</li><li>D. Governments have banned all benefits</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Because gig workers are typically classified as independent contractors rather than employees, they are frequently excluded from benefits..."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"them"</b> (in "entitling them to minimum wage protections") refers to:</div>
+    <ul><li>A. jurisdictions</li><li>B. platform companies</li><li>C. certain workers</li><li>D. consumers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Luật yêu cầu phân loại "certain workers" thành nhân viên, từ đó giúp họ ("them" = những công nhân đó) được hưởng bảo vệ lương tối thiểu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that platform companies:</div>
+    <ul><li>A. fully support reclassification laws</li><li>B. are concerned that reclassification will increase their costs</li><li>C. have no opinion on labour laws</li><li>D. want to pay workers more voluntarily</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "platform companies have resisted such measures, warning that reclassification could dramatically raise operating costs."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"precarious"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. stable and secure</li><li>B. uncertain and risky</li><li>C. extremely profitable</li><li>D. legally required</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the primary — and precarious — source of livelihood" = nguồn sinh kế chính nhưng bấp bênh, không ổn định.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "students or those seeking supplementary income" in paragraph 4?</div>
+    <ul><li>A. To argue that only students should work in the gig economy</li><li>B. To acknowledge a group for whom gig work is well suited, before contrasting them with full-time gig workers</li><li>C. To criticise students for working too much</li><li>D. To explain why minimum wage laws were created</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu văn thừa nhận nhóm này phù hợp với gig work, rồi tương phản với người coi đây là nguồn sống chính.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as drawbacks of gig work EXCEPT:</div>
+    <ul><li>A. lack of health insurance</li><li>B. unpredictable earnings</li><li>C. no paid leave</li><li>D. mandatory long-term contracts</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều nêu trong đoạn 2; "hợp đồng dài hạn bắt buộc" không được nhắc — thực tế gig work còn thiếu hợp đồng ổn định.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's tone throughout the passage can best be described as:</div>
+    <ul><li>A. one-sidedly promotional</li><li>B. analytical, weighing both advantages and disadvantages</li><li>C. purely humorous</li><li>D. angrily condemning</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cân bằng cả hai phía và kết luận đây là "trade-off", "one of the thorniest challenges" — giọng phân tích, không thiên lệch.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> What does the final sentence of the passage suggest about solving the gig-economy debate?</div>
+    <ul><li>A. It has already been solved by most governments</li><li>B. It is a straightforward issue with an obvious solution</li><li>C. Balancing flexibility and worker protection is difficult and unresolved</li><li>D. Gig work should be banned entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "remains one of the thorniest challenges facing modern labour markets" → vấn đề vẫn chưa có lời giải rõ ràng, rất khó cân bằng.</p></details>
+  </div>
+
+  <h3>Từ vựng — Business &amp; Economy</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>freelance</td><td>(adj)</td><td>tự do, không cố định</td></tr>
+    <tr><td>encompass <span class="c1tag">C1</span></td><td>(v)</td><td>bao gồm, bao hàm</td></tr>
+    <tr><td>unprecedented</td><td>(adj)</td><td>chưa từng có</td></tr>
+    <tr><td>independent contractor</td><td>(n)</td><td>người lao động tự do (không phải nhân viên)</td></tr>
+    <tr><td>fluctuate</td><td>(v)</td><td>biến động, dao động</td></tr>
+    <tr><td>jurisdiction <span class="c1tag">C1</span></td><td>(n)</td><td>khu vực pháp lý, thẩm quyền</td></tr>
+    <tr><td>reclassification</td><td>(n)</td><td>sự phân loại lại</td></tr>
+    <tr><td>trade-off</td><td>(n)</td><td>sự đánh đổi</td></tr>
+    <tr><td>romanticise <span class="c1tag">C1</span></td><td>(v)</td><td>lãng mạn hóa, tô hồng</td></tr>
+    <tr><td>thorny</td><td>(adj)</td><td>hóc búa, gai góc</td></tr>
+  </table>
+
+  <!-- ============ BÀI 3: HISTORY & CIVILIZATION ============ -->
+  <h2>Bài đọc 3 — History &amp; Civilization <span class="lvl">B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Silk Road: Ancient Networks of Exchange</h3>
+    <p><span class="pn">[1]</span> Long before globalisation became a modern buzzword, an intricate web of trade routes known collectively as the Silk Road linked East Asia with the Mediterranean world. Stretching roughly four thousand miles across deserts, mountains, and steppes, these routes carried not only silk, spices, and precious metals but also ideas, religions, and technologies that would profoundly shape the civilizations they touched.</p>
+    <p class="vi-para">[1] Từ rất lâu trước khi toàn cầu hóa trở thành một từ khóa thời thượng, một mạng lưới phức tạp gồm các tuyến đường thương mại được gọi chung là Con đường tơ lụa đã kết nối Đông Á với thế giới Địa Trung Hải. Trải dài khoảng bốn nghìn dặm qua sa mạc, núi non và thảo nguyên, những tuyến đường này không chỉ vận chuyển tơ lụa, gia vị và kim loại quý mà còn cả tư tưởng, tôn giáo và công nghệ, những thứ đã định hình sâu sắc các nền văn minh mà chúng tiếp xúc.</p>
+    <p><span class="pn">[2]</span> Merchants rarely travelled the entire length of the route themselves; instead, goods typically passed through a chain of intermediaries, with each trader covering only a portion of the journey before handing off merchandise at bustling trading posts. Cities such as Samarkand and Dunhuang flourished as cosmopolitan hubs where merchants of diverse origins mingled, exchanging not merely commodities but also languages, artistic styles, and culinary traditions.</p>
+    <p class="vi-para">[2] Hiếm khi một thương nhân tự mình đi hết toàn bộ chặng đường; thay vào đó, hàng hóa thường được chuyển qua một chuỗi trung gian, mỗi thương nhân chỉ đảm nhận một phần hành trình trước khi giao hàng tại các trạm buôn bán tấp nập. Những thành phố như Samarkand và Đôn Hoàng phát triển thịnh vượng như những trung tâm đa văn hóa, nơi thương nhân từ nhiều nguồn gốc khác nhau hòa trộn, trao đổi không chỉ hàng hóa mà còn cả ngôn ngữ, phong cách nghệ thuật và truyền thống ẩm thực.</p>
+    <p><span class="pn">[3]</span> Perhaps the Silk Road's most consequential legacy, however, was its role in disseminating knowledge. Papermaking techniques travelled westward from China, eventually revolutionising record-keeping and scholarship throughout the Islamic world and Europe. Buddhism spread from India into Central Asia and China largely along these same routes, while astronomical knowledge, medical practices, and mathematical concepts likewise traversed vast distances, enriching societies far removed from their point of origin.</p>
+    <p class="vi-para">[3] Tuy nhiên, có lẽ di sản có ảnh hưởng lớn nhất của Con đường tơ lụa là vai trò của nó trong việc truyền bá tri thức. Kỹ thuật làm giấy đã đi về phía tây từ Trung Quốc, cuối cùng làm thay đổi hoàn toàn việc ghi chép và học thuật khắp thế giới Hồi giáo và châu Âu. Phật giáo lan truyền từ Ấn Độ vào Trung Á và Trung Quốc phần lớn theo chính những tuyến đường này, trong khi kiến thức thiên văn, y học và các khái niệm toán học cũng vượt qua những khoảng cách rộng lớn, làm phong phú thêm các xã hội cách xa nơi khởi nguồn của chúng.</p>
+    <p><span class="pn">[4]</span> The Silk Road was not without its darker consequences: it also facilitated the spread of diseases, most infamously contributing to the transmission of the bubonic plague that devastated fourteenth-century Europe. Nonetheless, historians broadly agree that the network's net effect was to knit together disparate civilizations into an interconnected world centuries before the age of European maritime exploration, offering an early testament to humanity's enduring impulse to trade, travel, and exchange ideas across borders.</p>
+    <p class="vi-para">[4] Con đường tơ lụa cũng không thiếu những hệ quả tối tăm: nó cũng tạo điều kiện cho dịch bệnh lây lan, mà tai tiếng nhất là góp phần truyền bá bệnh dịch hạch đã tàn phá châu Âu thế kỷ 14. Dù vậy, các sử gia nhìn chung đồng ý rằng tác động ròng của mạng lưới này là kết nối các nền văn minh khác biệt thành một thế giới liên kết với nhau, từ nhiều thế kỷ trước thời đại thám hiểm hàng hải của châu Âu, là minh chứng sớm cho khao khát bền bỉ của con người trong việc giao thương, du hành và trao đổi tư tưởng vượt biên giới.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the geography of deserts in Central Asia</li><li>B. the role of the Silk Road in connecting civilizations through trade and the exchange of ideas</li><li>C. the invention of silk in ancient China</li><li>D. why Samarkand is a modern tourist destination</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài tập trung vào vai trò của Con đường tơ lụa trong việc kết nối các nền văn minh qua thương mại và trao đổi tri thức.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"intricate"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. simple and short</li><li>B. complex and detailed</li><li>C. dangerous</li><li>D. recently built</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "an intricate web of trade routes" = một mạng lưới phức tạp, đan xen.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, how did most goods travel along the Silk Road?</div>
+    <ul><li>A. A single merchant carried goods the entire distance</li><li>B. Goods passed through a chain of intermediaries at trading posts</li><li>C. Goods were transported only by sea</li><li>D. Goods never left their city of origin</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "goods typically passed through a chain of intermediaries, with each trader covering only a portion of the journey."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"their"</b> (in "far removed from their point of origin") refers to:</div>
+    <ul><li>A. societies</li><li>B. astronomical knowledge, medical practices, and mathematical concepts</li><li>C. papermaking techniques only</li><li>D. Buddhism</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu nói các loại tri thức (thiên văn, y học, toán học) đi xa khỏi nơi khởi nguồn của chính chúng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 4 that the Silk Road's overall impact on world history was:</div>
+    <ul><li>A. entirely negative</li><li>B. entirely positive with no drawbacks</li><li>C. mixed, but historians generally view its unifying effect as significant</li><li>D. negligible and largely forgotten</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 4 thừa nhận mặt tối (bệnh dịch) nhưng kết luận "historians broadly agree that the network's net effect was to knit together disparate civilizations."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"disseminating"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. hiding</li><li>B. spreading widely</li><li>C. destroying</li><li>D. taxing</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "its role in disseminating knowledge" = phổ biến, truyền bá tri thức rộng rãi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the bubonic plague in paragraph 4?</div>
+    <ul><li>A. To argue that the Silk Road should never have existed</li><li>B. To acknowledge a negative consequence before presenting the overall historical assessment</li><li>C. To describe the geography of Europe</li><li>D. To prove that trade routes are always dangerous</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu về bệnh dịch được nêu như một mặt tối, nhưng sau đó tác giả vẫn khẳng định tác động ròng là tích cực ("Nonetheless...").</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as things exchanged along the Silk Road EXCEPT:</div>
+    <ul><li>A. papermaking techniques</li><li>B. religious beliefs such as Buddhism</li><li>C. modern industrial machinery</li><li>D. artistic styles and culinary traditions</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> A, B, D đều được nêu; "máy móc công nghiệp hiện đại" không thuộc thời kỳ Con đường tơ lụa cổ đại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the historical significance of the Silk Road is:</div>
+    <ul><li>A. dismissive</li><li>B. appreciative and admiring, while acknowledging complexity</li><li>C. deeply critical</li><li>D. indifferent</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả gọi đây là "an early testament to humanity's enduring impulse to trade, travel, and exchange ideas" — giọng trân trọng, dù vẫn nêu mặt trái.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"centuries before the age of European maritime exploration"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. Europeans were the first to connect distant civilizations</li><li>B. global interconnection through trade existed well before European sea voyages</li><li>C. maritime exploration made the Silk Road unnecessary</li><li>D. the Silk Road began after Columbus's voyages</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này nhấn mạnh Con đường tơ lụa đã kết nối thế giới từ rất lâu trước khi người châu Âu bắt đầu thám hiểm hàng hải.</p></details>
+  </div>
+
+  <h3>Từ vựng — History &amp; Civilization</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>intricate <span class="c1tag">C1</span></td><td>(adj)</td><td>phức tạp, tinh vi</td></tr>
+    <tr><td>steppe</td><td>(n)</td><td>thảo nguyên</td></tr>
+    <tr><td>intermediary</td><td>(n)</td><td>người trung gian</td></tr>
+    <tr><td>cosmopolitan</td><td>(adj)</td><td>đa văn hóa, quốc tế</td></tr>
+    <tr><td>disseminate <span class="c1tag">C1</span></td><td>(v)</td><td>phổ biến, truyền bá</td></tr>
+    <tr><td>traverse <span class="c1tag">C1</span></td><td>(v)</td><td>đi ngang qua, vượt qua</td></tr>
+    <tr><td>facilitate</td><td>(v)</td><td>tạo điều kiện thuận lợi cho</td></tr>
+    <tr><td>disparate <span class="c1tag">C1</span></td><td>(adj)</td><td>khác biệt, không đồng nhất</td></tr>
+    <tr><td>maritime</td><td>(adj)</td><td>thuộc về hàng hải</td></tr>
+    <tr><td>testament</td><td>(n)</td><td>minh chứng, bằng chứng</td></tr>
+  </table>
+
+  <!-- ============ BÀI 4: TECHNOLOGY & SOCIETY ============ -->
+  <h2>Bài đọc 4 — Technology &amp; Society <span class="lvl">B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Social Media and the Erosion of Attention</h3>
+    <p><span class="pn">[1]</span> Social media platforms were originally designed to help people stay connected, yet a growing body of research suggests that their design has increasingly prioritised engagement over well-being. Features such as infinite scrolling, autoplay videos, and algorithmically curated feeds are engineered to keep users glued to their screens for as long as possible, often at the expense of their capacity for sustained concentration.</p>
+    <p class="vi-para">[1] Các nền tảng mạng xã hội ban đầu được thiết kế để giúp con người duy trì kết nối, nhưng ngày càng nhiều nghiên cứu cho thấy thiết kế của chúng đã ưu tiên mức độ tương tác hơn là sức khỏe tinh thần của người dùng. Các tính năng như cuộn vô hạn, video tự động phát và nguồn tin được thuật toán sắp xếp được thiết kế có chủ đích để giữ người dùng dán mắt vào màn hình càng lâu càng tốt, thường phải trả giá bằng khả năng tập trung bền vững của họ.</p>
+    <p><span class="pn">[2]</span> Psychologists have observed that heavy social media use correlates with shorter attention spans, increased anxiety, and disrupted sleep patterns, particularly among adolescents. Some researchers caution against drawing overly simplistic conclusions, however, noting that correlation does not necessarily imply causation; other factors, such as academic pressure or family circumstances, may also contribute to these outcomes.</p>
+    <p class="vi-para">[2] Các nhà tâm lý học nhận thấy rằng việc sử dụng mạng xã hội nhiều có tương quan với khả năng tập trung ngắn hơn, lo âu gia tăng và giấc ngủ bị rối loạn, đặc biệt ở thanh thiếu niên. Tuy nhiên, một số nhà nghiên cứu cảnh báo không nên đưa ra kết luận quá đơn giản, vì tương quan không nhất thiết đồng nghĩa với quan hệ nhân quả; các yếu tố khác như áp lực học tập hay hoàn cảnh gia đình cũng có thể góp phần gây ra những hệ quả này.</p>
+    <p><span class="pn">[3]</span> In response to mounting public concern, several technology companies have introduced features intended to promote healthier usage, including screen-time trackers and reminders to take breaks. Critics, though, remain sceptical, arguing that such measures amount to little more than a superficial gesture, since the underlying business model — one that depends on maximising the amount of time users spend on a platform — remains fundamentally unchanged.</p>
+    <p class="vi-para">[3] Trước mối lo ngại ngày càng tăng của công chúng, một số công ty công nghệ đã giới thiệu các tính năng nhằm thúc đẩy việc sử dụng lành mạnh hơn, bao gồm công cụ theo dõi thời gian sử dụng màn hình và lời nhắc nghỉ ngơi. Tuy nhiên, những người phản đối vẫn hoài nghi, cho rằng các biện pháp này chẳng qua chỉ là một cử chỉ mang tính hình thức, bởi vì mô hình kinh doanh cốt lõi — vốn phụ thuộc vào việc tối đa hóa thời gian người dùng dành cho nền tảng — vẫn không hề thay đổi về bản chất.</p>
+    <p><span class="pn">[4]</span> Genuine reform, many experts argue, would require a more fundamental rethinking of how these platforms generate revenue, shifting away from attention-based advertising models toward alternatives that do not inherently reward compulsive use. Until such structural changes occur, individual strategies — deliberately limiting notifications, scheduling screen-free periods, and cultivating awareness of one's own usage patterns — remain the most practical, if imperfect, defence against the attention economy's relentless pull.</p>
+    <p class="vi-para">[4] Nhiều chuyên gia cho rằng cải cách thực sự đòi hỏi phải suy nghĩ lại một cách căn bản về cách các nền tảng này tạo ra doanh thu, chuyển từ mô hình quảng cáo dựa trên sự chú ý sang các phương án khác không mặc nhiên khuyến khích việc sử dụng mang tính cưỡng bức. Cho đến khi những thay đổi mang tính cấu trúc đó xảy ra, các chiến lược cá nhân — chủ động giới hạn thông báo, sắp xếp những khoảng thời gian không dùng màn hình, và rèn luyện nhận thức về thói quen sử dụng của chính mình — vẫn là biện pháp phòng vệ thực tế nhất, dù chưa hoàn hảo, trước sức hút không ngừng nghỉ của nền kinh tế chú ý.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. how to design a social media platform</li><li>B. the ways social media design affects attention and well-being, and possible responses</li><li>C. the history of the internet</li><li>D. why adolescents should never use phones</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài bàn về cách thiết kế mạng xã hội ảnh hưởng đến sự tập trung/sức khỏe tâm lý và các phản ứng có thể có.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"engineered"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. accidentally created</li><li>B. deliberately designed</li><li>C. banned</li><li>D. discovered by chance</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "are engineered to keep users glued to their screens" = được thiết kế có chủ đích.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what caution do some researchers raise?</div>
+    <ul><li>A. Social media has no effect on anyone</li><li>B. Correlation between heavy use and negative outcomes does not prove causation</li><li>C. Only adolescents use social media</li><li>D. Academic pressure is caused by social media</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "noting that correlation does not necessarily imply causation; other factors... may also contribute."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"such measures"</b> refers to:</div>
+    <ul><li>A. academic pressure and family circumstances</li><li>B. screen-time trackers and reminders to take breaks</li><li>C. infinite scrolling and autoplay videos</li><li>D. attention-based advertising models</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó liệt kê "screen-time trackers and reminders to take breaks" — đây chính là "such measures" mà critics hoài nghi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that critics believe technology companies' healthy-usage features:</div>
+    <ul><li>A. have completely solved the problem</li><li>B. are a superficial response that does not address the core business model</li><li>C. should be removed immediately</li><li>D. are more effective than government regulation</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "such measures amount to little more than a superficial gesture, since the underlying business model... remains fundamentally unchanged."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"compulsive"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. occasional and relaxed</li><li>B. driven by an uncontrollable urge</li><li>C. legally required</li><li>D. financially rewarding</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "compulsive use" = việc sử dụng mang tính cưỡng bức, khó cưỡng lại, không kiểm soát được.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "attention-based advertising models" in paragraph 4?</div>
+    <ul><li>A. To recommend that users watch more advertisements</li><li>B. To identify the underlying structural cause that genuine reform would need to address</li><li>C. To praise current advertising strategies</li><li>D. To explain how the internet was invented</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 lập luận rằng cải cách thực sự cần thay đổi mô hình quảng cáo dựa trên sự chú ý — đây chính là gốc rễ vấn đề.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as individual strategies to reduce social media's pull EXCEPT:</div>
+    <ul><li>A. limiting notifications</li><li>B. scheduling screen-free periods</li><li>C. cultivating awareness of usage patterns</li><li>D. permanently deleting all social media accounts</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều nêu ở đoạn 4; "xóa vĩnh viễn tài khoản" không được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward companies' current "healthy usage" features is best described as:</div>
+    <ul><li>A. fully convinced they solve the problem</li><li>B. sceptical, viewing them as insufficient without deeper structural change</li><li>C. completely unaware of their existence</li><li>D. enthusiastically supportive with no reservations</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3–4 nhấn mạnh các biện pháp hiện tại chỉ mang tính hình thức, cần thay đổi cấu trúc sâu hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"the attention economy's relentless pull"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. the pressure to keep users engaged is persistent and difficult to resist</li><li>B. attention economies no longer exist</li><li>C. users have complete control over platform design</li><li>D. advertising has become less important to platforms</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "relentless pull" = lực kéo không ngừng nghỉ, khó cưỡng lại — nhấn mạnh áp lực dai dẳng của nền kinh tế chú ý.</p></details>
+  </div>
+
+  <h3>Từ vựng — Technology &amp; Society</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>engagement</td><td>(n)</td><td>mức độ tương tác/gắn kết</td></tr>
+    <tr><td>curated</td><td>(adj)</td><td>được chọn lọc, sắp xếp</td></tr>
+    <tr><td>attention span</td><td>(n)</td><td>khoảng thời gian tập trung</td></tr>
+    <tr><td>correlation vs causation <span class="c1tag">C1</span></td><td>(n phr)</td><td>tương quan vs. quan hệ nhân quả</td></tr>
+    <tr><td>superficial</td><td>(adj)</td><td>hời hợt, bề ngoài</td></tr>
+    <tr><td>revenue</td><td>(n)</td><td>doanh thu</td></tr>
+    <tr><td>compulsive <span class="c1tag">C1</span></td><td>(adj)</td><td>mang tính cưỡng bức, khó cưỡng</td></tr>
+    <tr><td>notification</td><td>(n)</td><td>thông báo</td></tr>
+    <tr><td>cultivate</td><td>(v)</td><td>trau dồi, nuôi dưỡng (thói quen)</td></tr>
+    <tr><td>relentless <span class="c1tag">C1</span></td><td>(adj)</td><td>không ngừng nghỉ, dai dẳng</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM TOÀN ĐỀ ============ -->
+  <h2>Chấm điểm toàn đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh — 40 câu:</b>
+    <table>
+      <tr><th>Bài 1 — Health &amp; Medicine</th><td>1-B · 2-B · 3-B · 4-C · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 2 — Business &amp; Economy</th><td>1-B · 2-B · 3-B · 4-C · 5-B · 6-B · 7-B · 8-D · 9-B · 10-C</td></tr>
+      <tr><th>Bài 3 — History &amp; Civilization</th><td>1-B · 2-B · 3-B · 4-B · 5-C · 6-B · 7-B · 8-C · 9-B · 10-B</td></tr>
+      <tr><th>Bài 4 — Technology &amp; Society</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-A</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> ghi số câu đúng của từng bài riêng biệt (___/10) để biết chủ đề nào yếu nhất. Với mỗi câu sai, quay lại đoạn văn tương ứng và đọc kỹ phần giải thích trong <code>&lt;details&gt;</code>.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Mốc tự đánh giá (tổng /40):</b> 32–40 → trình độ rất tốt, sẵn sàng cho đề thi thật · 24–31 → ổn, cần củng cố 1–2 dạng câu hay sai · dưới 24 → nên quay lại ôn từ vựng &amp; luyện thêm các bài lẻ trước khi làm đề full tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Đề full #2?</b> Ngày 4 sẽ là <b>Giải đề #2</b> — phân tích sâu từng câu sai, tổng hợp lỗi sai theo dạng câu và bổ sung từ vựng còn thiếu.
+  </div>
+
+</div>
+
+<footer>🧪 Tuần 6 · Ngày 3 · VSTEP Reading — ĐỀ FULL #2 · Làm nghiêm túc hôm nay, vững vàng hơn ngày thi thật.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

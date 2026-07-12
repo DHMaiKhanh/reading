@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 8 · Ngày 5 — ĐỀ FULL CUỐI CÙNG · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏁 Tuần 8 · Ngày 5 — ĐỀ FULL CUỐI CÙNG</h1>
+  <p>4 bài đọc độc lập — chủ đề trộn: Environment, Society, Technology, Travel</p>
+  <div class="meta">
+    <span class="badge">🕐 Bấm giờ 60 phút</span>
+    <span class="badge">📝 4 bài · 40 câu · giữ tâm lý thoải mái</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>🌿 Trước khi bắt đầu:</b>
+    <p style="margin-top:6px;">Đây là bài tổng kết cả lộ trình 8 tuần — không cần hoàn hảo, chỉ cần làm hết sức bình tĩnh như một bài thi thật. Đọc lướt lấy ý chính trước, sau đó quay lại từng câu. Nếu phân vân, chọn đáp án hợp lý nhất rồi đi tiếp — đừng để một câu khó kéo chậm cả bài.</p>
+    <p style="margin-top:6px; color:var(--muted)">👉 Làm xong cả 4 bài (40 câu) mới mở đáp án. Sau đó dùng bảng "Chấm điểm toàn đề" ở cuối trang để tự đánh giá theo mốc /40.</p>
+  </div>
+
+  <!-- ================= BÀI 1 — ENVIRONMENT ================= -->
+  <h2>Bài 1 <span class="lvl">Environment</span></h2>
+
+  <div class="passage">
+    <h3>Urban Green Spaces and Climate Resilience</h3>
+    <p><span class="pn">[1]</span> As cities continue to expand, urban planners are increasingly turning to green spaces — parks, rooftop gardens, and tree-lined streets — as a practical response to the mounting pressures of climate change. Concrete and asphalt absorb and radiate heat, turning many cities into "heat islands" where temperatures can be several degrees higher than in surrounding rural areas. Vegetation, by contrast, provides shade and releases moisture into the air, cooling the immediate environment naturally.</p>
+    <p class="vi-para">[1] Khi các thành phố tiếp tục mở rộng, các nhà quy hoạch đô thị ngày càng hướng đến mảng xanh — công viên, vườn trên mái nhà và những con phố rợp bóng cây — như một giải pháp thực tế trước áp lực ngày càng lớn của biến đổi khí hậu. Bê tông và nhựa đường hấp thụ và tỏa nhiệt, biến nhiều thành phố thành những "đảo nhiệt" nơi nhiệt độ có thể cao hơn vài độ so với các vùng nông thôn xung quanh. Ngược lại, cây cối tạo bóng mát và giải phóng hơi ẩm vào không khí, làm mát môi trường xung quanh một cách tự nhiên.</p>
+    <p><span class="pn">[2]</span> Beyond temperature regulation, green infrastructure plays a crucial role in managing stormwater. Traditional drainage systems often struggle to cope with the intense downpours that climate change has made more frequent, leading to flooding in low-lying neighbourhoods. Permeable surfaces and strategically placed vegetation can absorb excess rainwater, easing the burden on ageing pipes and reducing the risk of urban flooding.</p>
+    <p class="vi-para">[2] Ngoài việc điều hòa nhiệt độ, hạ tầng xanh còn đóng vai trò quan trọng trong việc quản lý nước mưa. Các hệ thống thoát nước truyền thống thường chật vật ứng phó với những trận mưa lớn mà biến đổi khí hậu đã khiến chúng xảy ra thường xuyên hơn, dẫn đến ngập lụt ở những khu vực trũng thấp. Các bề mặt thấm nước và cây xanh được bố trí hợp lý có thể hấp thụ lượng nước mưa dư thừa, giảm bớt gánh nặng cho hệ thống ống cống cũ kỹ và giảm nguy cơ ngập úng đô thị.</p>
+    <p><span class="pn">[3]</span> Critics, however, point out that green initiatives are not distributed equally. Wealthier districts frequently boast lush parks and tree canopies, while poorer neighbourhoods, often located near industrial zones, remain conspicuously barren. This disparity has given rise to the concept of "green gentrification," whereby the introduction of parks and greenery raises property values, inadvertently pricing out the very residents such projects were meant to benefit.</p>
+    <p class="vi-para">[3] Tuy nhiên, những người phản biện chỉ ra rằng các sáng kiến xanh không được phân bổ đồng đều. Những khu vực giàu có thường sở hữu công viên xanh tươi và tán cây rợp bóng, trong khi các khu dân cư nghèo hơn, thường nằm gần khu công nghiệp, vẫn trơ trụi một cách rõ rệt. Sự chênh lệch này đã làm nảy sinh khái niệm "trung lưu hóa nhờ mảng xanh," theo đó việc đưa công viên và cây xanh vào khiến giá bất động sản tăng lên, vô tình đẩy chính những cư dân mà các dự án này nhắm đến hỗ trợ ra khỏi khu vực.</p>
+    <p><span class="pn">[4]</span> Despite these complications, most urban planners agree that abandoning green infrastructure altogether would be short-sighted. Instead, they advocate a more equitable approach: prioritising green investment in historically neglected areas and involving local communities in the design process from the outset. If implemented thoughtfully, urban greening could simultaneously combat climate change and correct long-standing social imbalances, rather than exacerbate them.</p>
+    <p class="vi-para">[4] Dù có những phức tạp này, hầu hết các nhà quy hoạch đô thị đều đồng ý rằng việc từ bỏ hoàn toàn hạ tầng xanh sẽ là một quyết định thiển cận. Thay vào đó, họ ủng hộ một cách tiếp cận công bằng hơn: ưu tiên đầu tư mảng xanh cho những khu vực từ trước đến nay bị lãng quên và để cộng đồng địa phương tham gia vào quá trình thiết kế ngay từ đầu. Nếu được thực hiện một cách chu đáo, việc phủ xanh đô thị có thể vừa chống lại biến đổi khí hậu vừa khắc phục những bất bình đẳng xã hội kéo dài, thay vì làm chúng trầm trọng thêm.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of city planning in the twentieth century</li><li>B. how urban green spaces help cities cope with climate change while raising questions of equity</li><li>C. why plants need more water than concrete</li><li>D. the high cost of building rooftop gardens</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi từ lợi ích khí hậu (đoạn 1–2) đến vấn đề công bằng (đoạn 3–4) → ý bao trùm là B.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"mounting"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. decreasing gradually</li><li>B. increasing steadily</li><li>C. remaining unchanged</li><li>D. disappearing completely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "mounting pressures of climate change" = áp lực ngày càng tăng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why do traditional drainage systems often fail during storms?</div>
+    <ul><li>A. They were never installed in cities</li><li>B. Climate change has made intense downpours more frequent</li><li>C. Vegetation blocks the pipes</li><li>D. Cities have stopped maintaining them</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Traditional drainage systems often struggle to cope with the intense downpours that climate change has made more frequent."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the phrase <b class="k">"such projects"</b> refers to:</div>
+    <ul><li>A. drainage systems</li><li>B. green initiatives such as parks and tree canopies</li><li>C. industrial zones</li><li>D. property valuations</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả câu nói về "parks and greenery" → "such projects" = các dự án xanh này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that:</div>
+    <ul><li>A. all neighbourhoods currently receive equal green investment</li><li>B. green spaces have no effect on property values</li><li>C. green investment can unintentionally disadvantage the residents it was meant to help</li><li>D. poorer neighbourhoods prefer industrial zones to parks</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "green gentrification... inadvertently pricing out the very residents such projects were meant to benefit."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"conspicuously"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. secretly</li><li>B. noticeably</li><li>C. rarely</li><li>D. affordably</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "remain conspicuously barren" = rõ ràng/dễ nhận thấy là trơ trụi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"green gentrification"</b> in paragraph 3?</div>
+    <ul><li>A. To argue that green spaces should be removed</li><li>B. To illustrate an unintended negative consequence of green investment</li><li>C. To praise wealthy neighbourhoods</li><li>D. To explain how drainage systems work</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đây là ví dụ minh họa cho hệ quả không mong muốn của việc đầu tư mảng xanh.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned in the passage EXCEPT:</div>
+    <ul><li>A. urban heat islands</li><li>B. flooding caused by heavy rain</li><li>C. green gentrification</li><li>D. rising sea levels</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Heat islands (đoạn 1), flooding (đoạn 2), gentrification (đoạn 3) đều có. "Rising sea levels" không được nhắc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall attitude toward urban green spaces is:</div>
+    <ul><li>A. dismissive and pessimistic</li><li>B. supportive but mindful of the need for fairness</li><li>C. entirely uncritical</li><li>D. hostile toward urban planners</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả ủng hộ mảng xanh (đoạn 1–2, 4) nhưng nhấn mạnh cần công bằng (đoạn 3–4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"rather than exacerbate them"</b> (paragraph 4) implies that if implemented poorly, green initiatives could:</div>
+    <ul><li>A. solve social imbalances automatically</li><li>B. worsen existing social inequalities</li><li>C. have no effect on society at all</li><li>D. only affect rural areas</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "exacerbate" = làm trầm trọng thêm → nếu làm sai cách, bất bình đẳng xã hội có thể tệ hơn.</p></details>
+  </div>
+
+  <h3>Từ vựng — Bài 1</h3>
+  <table>
+    <tr><th width="26%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>heat island</td><td>(n)</td><td>đảo nhiệt đô thị</td></tr>
+    <tr><td>permeable</td><td>(adj)</td><td>thấm nước được</td></tr>
+    <tr><td>drainage</td><td>(n)</td><td>hệ thống thoát nước</td></tr>
+    <tr><td>stormwater</td><td>(n)</td><td>nước mưa (chảy tràn)</td></tr>
+    <tr><td>disparity <span class="c1tag">C1</span></td><td>(n)</td><td>sự chênh lệch, bất bình đẳng</td></tr>
+    <tr><td>gentrification <span class="c1tag">C1</span></td><td>(n)</td><td>quá trình "trung lưu hóa" khiến dân nghèo bị đẩy đi</td></tr>
+    <tr><td>equitable</td><td>(adj)</td><td>công bằng</td></tr>
+    <tr><td>exacerbate <span class="c1tag">C1</span></td><td>(v)</td><td>làm trầm trọng thêm</td></tr>
+  </table>
+
+  <!-- ================= BÀI 2 — SOCIETY ================= -->
+  <h2>Bài 2 <span class="lvl">Society</span></h2>
+
+  <div class="passage">
+    <h3>The Changing Face of the Family</h3>
+    <p><span class="pn">[1]</span> The traditional image of a family — two parents and their biological children living under one roof — no longer reflects the reality for a growing proportion of the population. Single-parent households, blended families, and multigenerational homes have all become increasingly common, driven by factors ranging from rising divorce rates to economic necessity. Sociologists argue that these shifts reflect broader changes in gender roles, financial pressures, and cultural attitudes toward marriage.</p>
+    <p class="vi-para">[1] Hình ảnh truyền thống về một gia đình — hai cha mẹ cùng con ruột sống chung dưới một mái nhà — không còn phản ánh đúng thực tế đối với một bộ phận ngày càng lớn dân số. Hộ gia đình đơn thân, gia đình hỗn hợp và gia đình đa thế hệ đều đã trở nên phổ biến hơn, do nhiều yếu tố từ tỷ lệ ly hôn tăng cao đến nhu cầu kinh tế. Các nhà xã hội học cho rằng những thay đổi này phản ánh những biến chuyển sâu rộng hơn về vai trò giới, áp lực tài chính và quan niệm văn hóa về hôn nhân.</p>
+    <p><span class="pn">[2]</span> One particularly notable trend is the resurgence of multigenerational living, in which grandparents, parents, and children share a single household. While this arrangement was once associated primarily with lower-income families or specific cultural traditions, soaring housing costs have pushed even middle-class families toward pooling resources. Proponents note that such arrangements offer built-in childcare and companionship for older relatives, though tension over privacy and differing routines can inevitably arise.</p>
+    <p class="vi-para">[2] Một xu hướng đáng chú ý là sự trỗi dậy trở lại của lối sống đa thế hệ, trong đó ông bà, cha mẹ và con cái cùng chung sống trong một hộ gia đình. Trong khi hình thức này trước đây thường gắn liền với các gia đình thu nhập thấp hoặc những truyền thống văn hóa riêng biệt, thì chi phí nhà ở tăng vọt đã đẩy ngay cả các gia đình trung lưu phải gộp chung nguồn lực. Những người ủng hộ cho rằng cách sắp xếp này mang lại sẵn sự hỗ trợ chăm sóc trẻ em và bầu bạn cho người lớn tuổi, dù căng thẳng về sự riêng tư và thói quen khác biệt là điều khó tránh khỏi.</p>
+    <p><span class="pn">[3]</span> Meanwhile, the proportion of children raised in single-parent households continues to climb in many industrialised nations. Critics have long expressed concern that children in these households face greater economic hardship and, in some cases, poorer educational outcomes. Yet more recent research suggests that the quality of parenting and the stability of the household matter far more than its particular structure; a loving, well-resourced single-parent home can outperform a strained two-parent one.</p>
+    <p class="vi-para">[3] Trong khi đó, tỷ lệ trẻ em được nuôi dưỡng trong các hộ gia đình đơn thân tiếp tục tăng ở nhiều quốc gia công nghiệp hóa. Những người chỉ trích từ lâu đã bày tỏ lo ngại rằng trẻ em trong các gia đình này phải đối mặt với khó khăn kinh tế lớn hơn và, trong một số trường hợp, kết quả học tập kém hơn. Tuy nhiên, các nghiên cứu gần đây hơn cho thấy chất lượng nuôi dạy con và sự ổn định của gia đình quan trọng hơn nhiều so với cơ cấu cụ thể của nó; một gia đình đơn thân đầy yêu thương và đủ nguồn lực có thể tốt hơn một gia đình hai cha mẹ nhưng căng thẳng.</p>
+    <p><span class="pn">[4]</span> Ultimately, most family sociologists caution against nostalgia for an idealised past that, in truth, was never as universal as popular imagination suggests. Rather than clinging to a single definition of family, they contend that policy and social support should adapt to the diversity of arrangements that already exist, ensuring that resources reach children and caregivers regardless of household composition.</p>
+    <p class="vi-para">[4] Cuối cùng, hầu hết các nhà xã hội học về gia đình cảnh báo không nên hoài niệm về một quá khứ được lý tưởng hóa mà thực ra chưa bao giờ phổ biến như trí tưởng tượng của số đông vẫn nghĩ. Thay vì bám víu vào một định nghĩa duy nhất về gia đình, họ cho rằng chính sách và hỗ trợ xã hội nên thích ứng với sự đa dạng của các hình thức gia đình đã tồn tại, đảm bảo nguồn lực đến được với trẻ em và người chăm sóc bất kể cơ cấu hộ gia đình như thế nào.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the decline of marriage as an institution</li><li>B. how family structures are diversifying and what this means for policy</li><li>C. the cost of housing in industrialised nations</li><li>D. the history of grandparents living alone</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày nhiều dạng gia đình mới và kết luận về hướng chính sách phù hợp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"resurgence"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. a sudden decline</li><li>B. a renewed rise in popularity</li><li>C. a permanent ban</li><li>D. an unexpected invention</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "resurgence of multigenerational living" = sự trỗi dậy/tái phổ biến trở lại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what has pushed middle-class families toward multigenerational living?</div>
+    <ul><li>A. cultural tradition alone</li><li>B. soaring housing costs</li><li>C. government mandates</li><li>D. a shortage of childcare workers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "soaring housing costs have pushed even middle-class families toward pooling resources."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, <b class="k">"these households"</b> refers to:</div>
+    <ul><li>A. multigenerational households</li><li>B. single-parent households</li><li>C. wealthy households</li><li>D. households with no children</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước nói về "children raised in single-parent households".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that:</div>
+    <ul><li>A. household structure matters more than parenting quality</li><li>B. children in single-parent homes always underperform</li><li>C. stability and quality of parenting can matter more than family structure</li><li>D. two-parent households are always superior</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "the quality of parenting and the stability of the household matter far more than its particular structure."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"nostalgia"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. a fear of the future</li><li>B. a sentimental longing for the past</li><li>C. a scientific method</li><li>D. an economic policy</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "nostalgia for an idealised past" = nỗi hoài niệm về quá khứ được lý tưởng hóa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention that the "idealised past... was never as universal as popular imagination suggests" (paragraph 4)?</div>
+    <ul><li>A. To criticise modern families</li><li>B. To challenge the assumption that the traditional family was ever the only norm</li><li>C. To argue that history should be forgotten</li><li>D. To promote a specific religion</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này phản bác giả định rằng mô hình gia đình truyền thống từng là chuẩn mực duy nhất.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following family arrangements are mentioned EXCEPT:</div>
+    <ul><li>A. single-parent households</li><li>B. blended families</li><li>C. multigenerational households</li><li>D. childless couples living abroad</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều được nêu ở đoạn 1–2; D không xuất hiện trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's tone toward the diversification of family structures is:</div>
+    <ul><li>A. alarmed and disapproving</li><li>B. accepting and pragmatic</li><li>C. mocking</li><li>D. entirely neutral with no viewpoint</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả không lo sợ mà cho rằng chính sách nên thích nghi (đoạn 4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final paragraph implies that policymakers should:</div>
+    <ul><li>A. try to restore a single traditional family model</li><li>B. adapt support systems to fit diverse family arrangements</li><li>C. ignore family structure entirely</li><li>D. reduce funding for all families</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "policy and social support should adapt to the diversity of arrangements that already exist."</p></details>
+  </div>
+
+  <h3>Từ vựng — Bài 2</h3>
+  <table>
+    <tr><th width="26%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>blended family</td><td>(n)</td><td>gia đình hỗn hợp (con riêng, tái hôn)</td></tr>
+    <tr><td>multigenerational</td><td>(adj)</td><td>đa thế hệ (sống chung)</td></tr>
+    <tr><td>resurgence <span class="c1tag">C1</span></td><td>(n)</td><td>sự trỗi dậy/phổ biến trở lại</td></tr>
+    <tr><td>pool resources</td><td>(phr)</td><td>gộp/chia sẻ nguồn lực</td></tr>
+    <tr><td>proponents</td><td>(n)</td><td>người ủng hộ</td></tr>
+    <tr><td>hardship</td><td>(n)</td><td>khó khăn, gian khổ</td></tr>
+    <tr><td>nostalgia <span class="c1tag">C1</span></td><td>(n)</td><td>hoài niệm</td></tr>
+    <tr><td>composition</td><td>(n)</td><td>cơ cấu, thành phần</td></tr>
+  </table>
+
+  <!-- ================= BÀI 3 — TECHNOLOGY ================= -->
+  <h2>Bài 3 <span class="lvl">Technology</span></h2>
+
+  <div class="passage">
+    <h3>Cybersecurity in the Age of Remote Work</h3>
+    <p><span class="pn">[1]</span> The rapid shift toward remote work has transformed not only how people collaborate but also how organisations must defend themselves against digital threats. When employees worked exclusively from monitored office networks, companies could concentrate their security resources on a handful of well-guarded entry points. Today, with staff logging in from home routers, coffee shops, and personal devices, that perimeter has effectively dissolved.</p>
+    <p class="vi-para">[1] Sự chuyển dịch nhanh chóng sang làm việc từ xa không chỉ thay đổi cách con người hợp tác mà còn thay đổi cách các tổ chức phải tự bảo vệ mình trước các mối đe dọa kỹ thuật số. Khi nhân viên chỉ làm việc từ các mạng văn phòng được giám sát, các công ty có thể tập trung nguồn lực bảo mật vào một số ít điểm ra vào được canh gác chặt chẽ. Ngày nay, khi nhân viên đăng nhập từ router gia đình, quán cà phê và thiết bị cá nhân, ranh giới bảo mật đó gần như đã tan biến.</p>
+    <p><span class="pn">[2]</span> Cybercriminals have been quick to exploit this fragmentation. Phishing emails, once relatively crude, have grown increasingly sophisticated, often impersonating colleagues or trusted software providers to trick employees into revealing passwords. Ransomware attacks, in which hackers encrypt a company's data and demand payment for its release, have likewise surged, costing businesses billions of dollars annually in lost productivity and recovery expenses.</p>
+    <p class="vi-para">[2] Tội phạm mạng đã nhanh chóng lợi dụng sự phân mảnh này. Các email lừa đảo, vốn từng khá thô sơ, giờ đây ngày càng tinh vi, thường giả danh đồng nghiệp hoặc nhà cung cấp phần mềm đáng tin cậy để lừa nhân viên tiết lộ mật khẩu. Các cuộc tấn công mã độc tống tiền, trong đó tin tặc mã hóa dữ liệu của công ty và đòi tiền chuộc để giải mã, cũng gia tăng mạnh, khiến doanh nghiệp thiệt hại hàng tỷ đô la mỗi năm do giảm năng suất và chi phí khắc phục.</p>
+    <p><span class="pn">[3]</span> In response, many organisations have adopted a "zero trust" model, which assumes that no device or user should be automatically trusted, even if it appears to be inside the network. Every request for access must be continuously verified, regardless of its origin. While this approach undeniably strengthens defences, it also demands substantial investment in training and infrastructure, a cost that smaller firms with limited budgets often struggle to absorb.</p>
+    <p class="vi-para">[3] Để ứng phó, nhiều tổ chức đã áp dụng mô hình "không tin tưởng mặc định," giả định rằng không thiết bị hay người dùng nào nên tự động được tin tưởng, kể cả khi có vẻ như đang ở trong mạng nội bộ. Mọi yêu cầu truy cập đều phải được xác minh liên tục, bất kể nguồn gốc. Dù cách tiếp cận này chắc chắn tăng cường khả năng phòng thủ, nó cũng đòi hỏi đầu tư đáng kể vào đào tạo và hạ tầng — một chi phí mà các doanh nghiệp nhỏ với ngân sách hạn hẹp thường khó kham nổi.</p>
+    <p><span class="pn">[4]</span> Some experts warn that an overreliance on technical safeguards can breed a false sense of security if employee behaviour is neglected. Since human error — clicking a malicious link, reusing a weak password — remains the single most common cause of breaches, sustained awareness training is arguably as vital as any firewall. Cybersecurity, in other words, is as much a matter of culture as it is of code.</p>
+    <p class="vi-para">[4] Một số chuyên gia cảnh báo rằng việc phụ thuộc quá mức vào các biện pháp bảo vệ kỹ thuật có thể tạo ra cảm giác an toàn giả tạo nếu bỏ qua yếu tố hành vi con người. Vì lỗi con người — bấm vào liên kết độc hại, dùng lại mật khẩu yếu — vẫn là nguyên nhân phổ biến nhất gây ra rò rỉ bảo mật, việc đào tạo nâng cao nhận thức liên tục có thể quan trọng không kém bất kỳ tường lửa nào. Nói cách khác, an ninh mạng là vấn đề của văn hóa cũng nhiều như là vấn đề của công nghệ.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. why remote work is more productive than office work</li><li>B. how remote work has changed cybersecurity challenges and responses</li><li>C. the history of computer viruses</li><li>D. why companies should ban home routers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài nói về thách thức an ninh mạng do remote work và cách ứng phó (zero trust, đào tạo con người).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"dissolved"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. strengthened</li><li>B. disappeared / broken down</li><li>C. multiplied</li><li>D. relocated</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "that perimeter has effectively dissolved" = ranh giới bảo mật đã tan biến/không còn rõ ràng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, how do modern phishing emails often trick employees?</div>
+    <ul><li>A. by offering free software</li><li>B. by impersonating colleagues or trusted providers</li><li>C. by demanding ransom in cryptocurrency</li><li>D. by shutting down company networks</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "often impersonating colleagues or trusted software providers to trick employees into revealing passwords."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, <b class="k">"this approach"</b> refers to:</div>
+    <ul><li>A. phishing attacks</li><li>B. the zero trust model</li><li>C. ransomware</li><li>D. remote work in general</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước giới thiệu "zero trust model" → "this approach" nhắc lại nó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that the zero trust model:</div>
+    <ul><li>A. is free and easy for all companies to adopt</li><li>B. may be difficult for smaller firms to afford</li><li>C. eliminates all cyberattacks completely</li><li>D. is only used by large corporations by law</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a cost that smaller firms with limited budgets often struggle to absorb."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"overreliance"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. insufficient use</li><li>B. excessive dependence</li><li>C. complete rejection</li><li>D. moderate trust</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "overreliance on technical safeguards" = phụ thuộc quá mức vào các biện pháp kỹ thuật.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"clicking a malicious link, reusing a weak password"</b> in paragraph 4?</div>
+    <ul><li>A. To give examples of common human errors that cause breaches</li><li>B. To recommend specific antivirus software</li><li>C. To criticise the zero trust model</li><li>D. To describe a ransomware attack in detail</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Đây là các ví dụ minh họa cho "human error" gây ra rò rỉ bảo mật.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as cybersecurity issues EXCEPT:</div>
+    <ul><li>A. phishing</li><li>B. ransomware</li><li>C. weak passwords</li><li>D. hardware manufacturing defects</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều xuất hiện (đoạn 2, 4). "Hardware manufacturing defects" không được nhắc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward relying solely on technical safeguards is:</div>
+    <ul><li>A. fully supportive with no reservations</li><li>B. cautionary, stressing the importance of human behaviour too</li><li>C. dismissive of all technology</li><li>D. indifferent</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 cảnh báo "overreliance... can breed a false sense of security".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The closing statement <b class="k">"as much a matter of culture as it is of code"</b> implies that effective cybersecurity requires:</div>
+    <ul><li>A. only better software</li><li>B. both technical tools and human awareness/behaviour</li><li>C. banning remote work entirely</li><li>D. hiring more programmers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "culture" ám chỉ hành vi/con người, "code" ám chỉ công nghệ → cần cả hai.</p></details>
+  </div>
+
+  <h3>Từ vựng — Bài 3</h3>
+  <table>
+    <tr><th width="26%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>perimeter</td><td>(n)</td><td>ranh giới, vành đai (bảo mật)</td></tr>
+    <tr><td>fragmentation <span class="c1tag">C1</span></td><td>(n)</td><td>sự phân mảnh</td></tr>
+    <tr><td>phishing</td><td>(n)</td><td>tấn công lừa đảo qua mạng</td></tr>
+    <tr><td>ransomware</td><td>(n)</td><td>mã độc tống tiền</td></tr>
+    <tr><td>encrypt</td><td>(v)</td><td>mã hóa</td></tr>
+    <tr><td>zero trust</td><td>(n)</td><td>mô hình "không tin tưởng mặc định"</td></tr>
+    <tr><td>overreliance <span class="c1tag">C1</span></td><td>(n)</td><td>sự phụ thuộc quá mức</td></tr>
+    <tr><td>breach</td><td>(n)</td><td>sự vi phạm/rò rỉ bảo mật</td></tr>
+  </table>
+
+  <!-- ================= BÀI 4 — TRAVEL ================= -->
+  <h2>Bài 4 <span class="lvl">Travel</span></h2>
+
+  <div class="passage">
+    <h3>The Rise of Slow Travel</h3>
+    <p><span class="pn">[1]</span> For decades, the dominant model of tourism prized efficiency: cramming as many landmarks as possible into a limited holiday, often measured by the number of countries or cities visited rather than the depth of experience gained. In recent years, however, a countervailing philosophy known as "slow travel" has gained considerable traction among travellers weary of exhausting, checklist-style itineraries.</p>
+    <p class="vi-para">[1] Trong nhiều thập kỷ, mô hình du lịch chủ đạo đề cao hiệu suất: nhồi nhét càng nhiều địa danh càng tốt vào một kỳ nghỉ có hạn, thường được đo bằng số quốc gia hay thành phố đã ghé qua hơn là chiều sâu trải nghiệm thu được. Tuy nhiên, trong những năm gần đây, một triết lý đối lập được gọi là "du lịch chậm" đã ngày càng được ưa chuộng trong giới du khách đã mệt mỏi với những lịch trình dày đặc kiểu "cho đủ danh sách".</p>
+    <p><span class="pn">[2]</span> Slow travel encourages visitors to linger in a single location, immersing themselves in local customs, cuisine, and daily rhythms rather than rushing between photo opportunities. Proponents argue that this approach fosters a more authentic connection with a destination and its people, while also reducing the carbon footprint associated with frequent flights and constant relocation. Staying longer in fewer places, they contend, benefits both the traveller and the host community.</p>
+    <p class="vi-para">[2] Du lịch chậm khuyến khích du khách ở lại lâu hơn tại một địa điểm duy nhất, hòa mình vào phong tục, ẩm thực và nhịp sống hằng ngày của địa phương thay vì vội vã chạy từ điểm chụp ảnh này sang điểm khác. Những người ủng hộ cho rằng cách tiếp cận này tạo ra sự kết nối chân thực hơn với điểm đến và con người nơi đó, đồng thời giảm lượng khí thải carbon liên quan đến việc bay thường xuyên và di chuyển liên tục. Họ cho rằng ở lại lâu hơn tại ít nơi hơn sẽ mang lại lợi ích cho cả du khách lẫn cộng đồng sở tại.</p>
+    <p><span class="pn">[3]</span> The pandemic-era shift toward remote work inadvertently accelerated this trend, as many professionals discovered they could relocate temporarily to a foreign city while continuing to work online. So-called "digital nomads" now spend weeks or months in a single location, blurring the boundary between tourism and everyday life. Some destinations have responded by introducing special visas designed to attract these long-staying visitors and their disposable income.</p>
+    <p class="vi-para">[3] Sự chuyển dịch sang làm việc từ xa trong thời kỳ đại dịch đã vô tình đẩy nhanh xu hướng này, khi nhiều người làm việc chuyên môn nhận ra họ có thể tạm thời chuyển đến một thành phố nước ngoài trong khi vẫn tiếp tục làm việc trực tuyến. Những "người du mục kỹ thuật số" giờ đây ở lại một địa điểm trong nhiều tuần hoặc nhiều tháng, làm mờ đi ranh giới giữa du lịch và cuộc sống thường nhật. Một số điểm đến đã phản ứng bằng cách giới thiệu các loại thị thực đặc biệt nhằm thu hút những vị khách lưu trú dài hạn này cùng khoản thu nhập khả dụng của họ.</p>
+    <p><span class="pn">[4]</span> Not everyone views the trend favourably. Local residents in popular nomad hubs have complained that an influx of relatively affluent foreigners drives up rents and living costs, squeezing out longtime inhabitants. Balancing the economic benefits of extended-stay tourism against its potential to displace local communities remains an unresolved challenge for many city governments, one that will likely intensify as slow travel continues to grow.</p>
+    <p class="vi-para">[4] Không phải ai cũng nhìn nhận xu hướng này một cách tích cực. Cư dân địa phương tại các trung tâm thu hút dân du mục nổi tiếng đã phàn nàn rằng làn sóng người nước ngoài tương đối khá giả đổ vào đã đẩy giá thuê nhà và chi phí sinh hoạt lên cao, khiến những cư dân lâu năm bị đẩy ra khỏi khu vực. Việc cân bằng giữa lợi ích kinh tế của du lịch lưu trú dài hạn với nguy cơ đẩy cộng đồng địa phương ra khỏi nơi ở của họ vẫn là một thách thức chưa có lời giải đối với nhiều chính quyền thành phố, và thách thức này nhiều khả năng sẽ càng gay gắt hơn khi du lịch chậm tiếp tục phát triển.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. why checklist-style tourism is the best way to travel</li><li>B. the rise of slow travel and its benefits and drawbacks</li><li>C. how to apply for a digital nomad visa</li><li>D. the history of commercial aviation</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài giới thiệu xu hướng slow travel, lợi ích (đoạn 2–3) và tranh cãi (đoạn 4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"linger"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. to leave quickly</li><li>B. to stay somewhere for a longer time</li><li>C. to complain repeatedly</li><li>D. to travel by plane</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "encourages visitors to linger in a single location" = ở lại lâu hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 3, how did the pandemic-era shift to remote work affect travel trends?</div>
+    <ul><li>A. It ended international tourism completely</li><li>B. It accelerated the trend of long-term stays by digital nomads</li><li>C. It made all travel more expensive</li><li>D. It reduced the popularity of slow travel</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "The pandemic-era shift toward remote work inadvertently accelerated this trend."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 4, <b class="k">"this trend"</b> refers to:</div>
+    <ul><li>A. checklist-style tourism</li><li>B. slow travel / long-stay tourism by digital nomads</li><li>C. rising airfares</li><li>D. traditional two-week holidays</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả đoạn 4 bàn về hệ quả của xu hướng slow travel/digital nomad đã nêu ở đoạn 2–3.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 4 that:</div>
+    <ul><li>A. all local residents welcome digital nomads</li><li>B. slow travel has no economic impact on host communities</li><li>C. long-stay tourism can create both benefits and tensions for local communities</li><li>D. digital nomads never affect the cost of living</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 4 nêu cả lợi ích kinh tế lẫn nguy cơ đẩy giá thuê nhà, gây căng thẳng với cư dân.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"countervailing"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. supportive and reinforcing</li><li>B. opposing or working against a trend</li><li>C. identical to</li><li>D. financially costly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a countervailing philosophy known as slow travel" = một triết lý đối lập với xu hướng cũ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention that some destinations have introduced special visas for long-staying visitors?</div>
+    <ul><li>A. To show how governments are responding to the rise of digital nomadism</li><li>B. To criticise all forms of tourism</li><li>C. To explain airport security procedures</li><li>D. To argue that visas should be abolished</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Đây là ví dụ cho thấy chính phủ điều chỉnh chính sách để đón đầu xu hướng digital nomad.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as effects of slow travel/digital nomadism EXCEPT:</div>
+    <ul><li>A. a reduced carbon footprint from fewer flights</li><li>B. rising rents in popular destinations</li><li>C. new visa categories for long-stay visitors</li><li>D. a global ban on tourism</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 2), B và C (đoạn 3–4) đều có; "global ban" không được nhắc tới.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward slow travel is:</div>
+    <ul><li>A. entirely negative</li><li>B. balanced, acknowledging both benefits and concerns</li><li>C. completely uncritical enthusiasm</li><li>D. indifferent and uninformed</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả nêu lợi ích (đoạn 2–3) và cả vấn đề xã hội (đoạn 4) một cách cân bằng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final sentence implies that the tension between economic benefits and displacement of local communities:</div>
+    <ul><li>A. has already been fully resolved</li><li>B. is likely to become a growing challenge for city governments</li><li>C. only affects rural areas</li><li>D. has no relevance to slow travel</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "remains an unresolved challenge... one that will likely intensify as slow travel continues to grow."</p></details>
+  </div>
+
+  <h3>Từ vựng — Bài 4</h3>
+  <table>
+    <tr><th width="26%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>countervailing <span class="c1tag">C1</span></td><td>(adj)</td><td>đối lập, chống lại (một xu hướng)</td></tr>
+    <tr><td>itinerary</td><td>(n)</td><td>lịch trình du lịch</td></tr>
+    <tr><td>carbon footprint</td><td>(n)</td><td>dấu chân carbon (phát thải)</td></tr>
+    <tr><td>digital nomad</td><td>(n)</td><td>người du mục kỹ thuật số (làm việc từ xa, di chuyển liên tục)</td></tr>
+    <tr><td>disposable income</td><td>(n)</td><td>thu nhập khả dụng</td></tr>
+    <tr><td>influx</td><td>(n)</td><td>dòng người/vật đổ vào</td></tr>
+    <tr><td>affluent</td><td>(adj)</td><td>giàu có</td></tr>
+    <tr><td>displace <span class="c1tag">C1</span></td><td>(v)</td><td>đẩy đi/thay thế (chỗ ở, vị trí)</td></tr>
+  </table>
+
+  <!-- ================= CHẤM ĐIỂM TOÀN ĐỀ ================= -->
+  <h2>Chấm điểm toàn đề</h2>
+
+  <div class="card">
+    <b>Bảng đáp án nhanh — 40 câu:</b>
+    <table>
+      <tr><th width="18%">Bài</th><th>Đáp án (câu 1→10)</th></tr>
+      <tr><td>Bài 1 · Environment</td><td>1-B · 2-B · 3-B · 4-B · 5-C · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><td>Bài 2 · Society</td><td>1-B · 2-B · 3-B · 4-B · 5-C · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><td>Bài 3 · Technology</td><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-A · 8-D · 9-B · 10-B</td></tr>
+      <tr><td>Bài 4 · Travel</td><td>1-B · 2-B · 3-B · 4-B · 5-C · 6-B · 7-A · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Cách chấm:</b> Cộng tổng số câu đúng trên 40 câu. Với mỗi câu sai, ghi vào "sổ lỗi": <i>"Câu __ · Bài __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Nếu một dạng câu hỏi (VD: Inference, NOT/EXCEPT) sai lặp lại ở nhiều bài → đây chính là điểm yếu cần luyện thêm sau kỳ thi.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Mốc tự đánh giá /40:</b></p>
+    <table>
+      <tr><th width="20%">Điểm</th><th>Đánh giá</th></tr>
+      <tr><td>34–40</td><td>Xuất sắc — nền tảng đọc hiểu B2/C1 rất vững, tự tin bước vào phòng thi.</td></tr>
+      <tr><td>27–33</td><td>Tốt — đạt yêu cầu B2, chỉ cần rà lại vài dạng câu hay sai.</td></tr>
+      <tr><td>20–26</td><td>Ổn định ở mức trung bình khá — nên ôn thêm 2–3 ngày các dạng Inference/Vocabulary C1.</td></tr>
+      <tr><td>&lt; 20</td><td>Cần thêm thời gian — quay lại đọc kỹ các bài Tuần 1–4, tập trung từ vựng nền trước khi thi.</td></tr>
+    </table>
+  </div>
+
+  <!-- ================= ÔN NHẸ TỪ VỰNG ================= -->
+  <h2>Ôn nhẹ từ vựng hay gặp</h2>
+  <div class="card">
+    <p>Đây là 12 từ/cụm xuất hiện lặp lại nhiều lần xuyên suốt cả lộ trình 8 tuần — nắm chắc nhóm này gần như bao phủ được phần lớn câu hỏi Vocabulary trong đề thi thật:</p>
+    <ul style="margin:10px 0 0 20px; list-style: disc;">
+      <li><b>embedded</b> — được gắn/nhúng vào (công nghệ, ý tưởng)</li>
+      <li><b>proliferation</b> <span class="c1tag">C1</span> — sự gia tăng/lan rộng nhanh chóng</li>
+      <li><b>perpetuate</b> <span class="c1tag">C1</span> — duy trì, kéo dài (điều tiêu cực)</li>
+      <li><b>render ... obsolete</b> <span class="c1tag">C1</span> — khiến trở nên lỗi thời</li>
+      <li><b>accountable</b> <span class="c1tag">C1</span> — có trách nhiệm giải trình</li>
+      <li><b>disparity</b> <span class="c1tag">C1</span> — sự chênh lệch, bất bình đẳng</li>
+      <li><b>exacerbate</b> <span class="c1tag">C1</span> — làm trầm trọng thêm</li>
+      <li><b>resurgence</b> <span class="c1tag">C1</span> — sự trỗi dậy/phổ biến trở lại</li>
+      <li><b>overreliance</b> <span class="c1tag">C1</span> — sự phụ thuộc quá mức</li>
+      <li><b>countervailing</b> <span class="c1tag">C1</span> — đối lập, chống lại một xu hướng</li>
+      <li><b>displace</b> <span class="c1tag">C1</span> — đẩy đi/thay thế vị trí, chỗ ở</li>
+      <li><b>in the driver's seat</b> <span class="c1tag">C1</span> — nắm quyền kiểm soát (idiom hay gặp trong bài luận)</li>
+    </ul>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    🎉 <b>Ngày 6–7: Nghỉ ngơi — chúc bạn thi tốt!</b> Bạn đã hoàn thành trọn vẹn 8 tuần luyện đọc VSTEP B2. Hai ngày cuối này không cần học thêm gì mới — chỉ cần ngủ đủ giấc, đọc lại nhẹ nhàng "sổ lỗi" nếu muốn, và giữ tinh thần thoải mái trước ngày thi. Bạn đã chuẩn bị rất tốt rồi!
+  </div>
+
+</div>
+
+<footer>🏁 Tuần 8 · Ngày 5 — Đề Full Cuối Cùng · VSTEP Reading · Chúc bạn đạt kết quả xứng đáng với công sức đã bỏ ra!</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

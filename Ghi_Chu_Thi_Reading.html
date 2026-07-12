@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lưu Ý Khi Thi Reading · VSTEP</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --red: #ff6b6b;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+  .danger { border-left: 4px solid var(--red); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  ul, ol { margin: 8px 0 8px 20px; }
+  li { margin: 4px 0; }
+  b.k { color: var(--accent); }
+  .big-num { font-size: 1.6rem; font-weight: 800; color: var(--accent); }
+
+  .timeline { display: flex; flex-direction: column; gap: 10px; margin: 14px 0; }
+  .tl-item { display: flex; align-items: center; gap: 14px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; }
+  .tl-time { min-width: 90px; font-weight: 700; color: var(--primary); }
+  .tl-bar { flex: 1; height: 10px; border-radius: 6px; background: var(--primary); opacity: 0.8; }
+  .tl-label { min-width: 130px; font-size: 0.92rem; }
+
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>📝 Lưu Ý Khi Thi Reading — VSTEP</h1>
+  <p>Phân bổ thời gian &amp; checklist trước/trong phòng thi</p>
+  <div class="meta">
+    <span class="badge">⏱ 60 phút</span>
+    <span class="badge">📄 4 bài đọc</span>
+    <span class="badge">❓ 40 câu hỏi</span>
+  </div>
+</header>
+
+<h2>⏱ 1. Tổng thời gian &amp; cấu trúc bài thi</h2>
+<div class="card">
+  <p>Phần thi Reading VSTEP gồm <b class="k">4 bài đọc (passage)</b>, tổng cộng <b class="k">40 câu hỏi</b>, làm trong <b class="k">60 phút</b>, không có thời gian nghỉ giữa các bài — thí sinh tự phân bổ thời gian.</p>
+  <table>
+    <tr><th>Passage</th><th>Độ khó</th><th>Số câu</th><th>Chủ đề thường gặp</th></tr>
+    <tr><td>Passage 1</td><td>Dễ</td><td>10 câu</td><td>Đời sống, xã hội, giáo dục cơ bản</td></tr>
+    <tr><td>Passage 2</td><td>Trung bình</td><td>10 câu</td><td>Khoa học, môi trường, sức khỏe</td></tr>
+    <tr><td>Passage 3</td><td>Trung bình - Khó</td><td>10 câu</td><td>Kinh tế, công nghệ, xã hội học</td></tr>
+    <tr><td>Passage 4</td><td>Khó nhất</td><td>10 câu</td><td>Học thuật, trừu tượng, nhiều thuật ngữ</td></tr>
+  </table>
+</div>
+
+<h2>📊 2. Phân bổ thời gian hợp lý (gợi ý)</h2>
+<div class="card tip">
+  <p>Nguyên tắc: <b class="k">bài dễ làm nhanh — dành thời gian dư cho bài khó</b>, luôn chừa 3-5 phút cuối để tô đáp án/kiểm tra.</p>
+  <div class="timeline">
+    <div class="tl-item"><span class="tl-time">0–12'</span><div class="tl-bar" style="max-width:20%"></div><span class="tl-label">Passage 1 (dễ)</span></div>
+    <div class="tl-item"><span class="tl-time">12–27'</span><div class="tl-bar" style="max-width:25%"></div><span class="tl-label">Passage 2</span></div>
+    <div class="tl-item"><span class="tl-time">27–42'</span><div class="tl-bar" style="max-width:25%"></div><span class="tl-label">Passage 3</span></div>
+    <div class="tl-item"><span class="tl-time">42–56'</span><div class="tl-bar" style="max-width:23%"></div><span class="tl-label">Passage 4 (khó)</span></div>
+    <div class="tl-item"><span class="tl-time">56–60'</span><div class="tl-bar" style="max-width:7%; background:var(--accent)"></div><span class="tl-label">Rà soát &amp; tô đáp án</span></div>
+  </div>
+  <table>
+    <tr><th>Passage</th><th>Thời gian khuyến nghị</th><th>Ghi chú</th></tr>
+    <tr><td>Passage 1</td><td><span class="big-num">12</span> phút</td><td>Không sa đà, đọc lướt vẫn đủ trả lời</td></tr>
+    <tr><td>Passage 2</td><td><span class="big-num">15</span> phút</td><td>Đọc kỹ hơn các đoạn có số liệu/định nghĩa</td></tr>
+    <tr><td>Passage 3</td><td><span class="big-num">15</span> phút</td><td>Chú ý câu hỏi suy luận (inference)</td></tr>
+    <tr><td>Passage 4</td><td><span class="big-num">14</span> phút</td><td>Câu nào khó quá thì đánh dấu, bỏ qua trước</td></tr>
+    <tr><td>Dự phòng</td><td><span class="big-num">4</span> phút</td><td>Tô lại toàn bộ đáp án, không để trống câu nào</td></tr>
+  </table>
+</div>
+
+<div class="card warn">
+  <p><b class="k">⚠ Nguyên tắc "cắt lỗ":</b> Nếu một câu mất quá <b>90 giây</b> mà vẫn chưa ra đáp án → khoanh tạm 1 đáp án, đánh dấu lại, chuyển câu tiếp theo. Quay lại nếu còn thời gian ở cuối giờ.</p>
+</div>
+
+<h2>🎯 3. Chiến thuật làm bài theo từng bài đọc</h2>
+<div class="card">
+  <ul>
+    <li><b class="k">Không đọc toàn bộ bài trước</b> — đọc lướt (skim) tiêu đề, câu đầu mỗi đoạn để nắm ý chính (30-45 giây/bài).</li>
+    <li>Đọc câu hỏi trước, gạch chân từ khóa (keyword) rồi mới quay lại tìm trong bài (scan).</li>
+    <li>Với câu hỏi <b>True/False/Not Given</b>: chỉ dựa vào thông tin có trong bài, không suy diễn theo kiến thức ngoài.</li>
+    <li>Với câu <b>Vocabulary/Reference</b> (từ đồng nghĩa, từ thay thế "it/this/they"): đọc kỹ câu trước và sau để xác định.</li>
+    <li>Với câu <b>Main idea/Title</b>: thường nằm ở câu đầu/cuối đoạn hoặc đoạn kết bài.</li>
+    <li>Làm bài dễ trước — nếu 1 bài có 10 câu mà 3 câu đầu dễ, 2 câu cuối khó, nên làm 3 câu dễ ngay, đánh dấu 2 câu khó.</li>
+  </ul>
+</div>
+
+<h2>🎒 4. Lưu ý khi vào phòng thi</h2>
+<div class="card">
+  <h3>Trước khi thi</h3>
+  <ul>
+    <li>Mang CMND/CCCD hoặc giấy tờ tùy thân hợp lệ theo quy định hội đồng thi.</li>
+    <li>Có mặt tại phòng thi <b>trước giờ quy định 15-30 phút</b> để ổn định chỗ ngồi, tránh tâm lý gấp gáp.</li>
+    <li>Kiểm tra bút chì (2B), tẩy, bút bi nếu thi trên giấy; kiểm tra tai nghe/máy tính nếu thi trên máy.</li>
+  </ul>
+  <h3>Trong khi thi</h3>
+  <ul>
+    <li>Đọc kỹ hướng dẫn tô đáp án (test trên giấy: tô kín, không tô 2 đáp án cho 1 câu).</li>
+    <li>Ghi số báo danh, mã đề đầy đủ ngay khi nhận đề/phiếu trả lời.</li>
+    <li>Không để trống câu nào — VSTEP không trừ điểm câu sai, nên đoán cũng còn hơn bỏ trống.</li>
+    <li>Theo dõi đồng hồ/giờ thi hiển thị (nếu thi trên máy) để tự canh tiến độ theo bảng thời gian ở trên.</li>
+    <li>Giữ tâm lý bình tĩnh — nếu gặp bài quá khó (thường là Passage 4), không hoảng, cứ làm đến đâu chắc đến đó rồi khoanh đại các câu còn lại.</li>
+  </ul>
+  <h3>Cuối giờ</h3>
+  <ul>
+    <li>Dành 3-5 phút cuối kiểm tra: không câu nào bị bỏ trống, không tô nhầm số thứ tự câu.</li>
+    <li>Với câu chưa chắc, ưu tiên đáp án loại trừ được nhiều phương án sai nhất.</li>
+  </ul>
+</div>
+
+<h2>🚫 5. Những lỗi thường gặp cần tránh</h2>
+<div class="card danger">
+  <ul>
+    <li>Đọc dịch từng câu trong bài — mất quá nhiều thời gian, không đủ làm hết 4 bài.</li>
+    <li>Dành quá nhiều thời gian cho 1 câu khó ở bài đầu, dẫn đến thiếu thời gian cho các bài sau.</li>
+    <li>Không đọc kỹ câu hỏi (nhầm "not true" thành "true", bỏ sót từ "EXCEPT", "NOT").</li>
+    <li>Suy diễn theo kiến thức ngoài bài đọc đối với câu True/False/Not Given.</li>
+    <li>Quên tô đáp án/ghi thông tin cá nhân trên phiếu trả lời.</li>
+  </ul>
+</div>
+
+<footer>Chúc bạn ôn tập hiệu quả và tự tin bước vào phòng thi 💪</footer>
+
+</div>
+</body>
+</html>

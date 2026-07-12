@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 16 — Technology &amp; Society + Ôn tập · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🔁 Ngày 16 — Technology &amp; Society + Ôn tập chủ đề yếu</h1>
+  <p>Tuần 3 · Ngày 6 — 2 bài đọc: chủ đề mới + 1 bài ôn lại chủ đề yếu</p>
+  <div class="meta">
+    <span class="badge">🕐 ~70 phút</span>
+    <span class="badge">🟠 B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · 18-20 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Ghi chú đầu bài:</b>
+    <p style="margin-top:6px;">Đây là ngày ôn — hãy chọn <b>1 chủ đề bạn thấy yếu nhất</b> tuần này để tự luyện thêm. Gợi ý dưới đây dùng chủ đề <b>Education</b>, nhưng nếu chủ đề yếu của bạn là chủ đề khác (Environment, Health, Culture...), hãy tự tìm 1 bài đọc B2+C1 cùng độ dài về chủ đề đó để thay thế Bài #2.</p>
+    <p style="margin-top:8px;">Quy trình mỗi bài: <b>Làm đề → Chấm điểm → Giải đề (quan trọng nhất) → Rút từ vựng (song ngữ)</b>. Mục tiêu mỗi bài: đúng <b>~7-8/10</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài #1 <span class="lvl">Technology &amp; Society · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>How Technology Is Reshaping Society</h3>
+    <p><span class="pn">[1]</span> Few forces have transformed everyday life as profoundly as digital technology. Social media platforms, once dismissed as a passing fad for teenagers, have become the primary channel through which billions of people communicate, form opinions, and even organise political movements. A message that once took days to reach a distant relative now arrives instantly, and a photograph shared from a remote village can circulate the globe within minutes. This unprecedented connectivity has undeniably brought people closer together, yet it has also blurred the boundary between public and private life in ways earlier generations never had to consider.</p>
+    <p class="vi-para">[1] Ít có lực lượng nào làm thay đổi đời sống thường nhật sâu sắc như công nghệ số. Các nền tảng mạng xã hội, từng bị xem là trào lưu nhất thời của tuổi teen, nay đã trở thành kênh chính để hàng tỷ người giao tiếp, hình thành quan điểm, và thậm chí tổ chức các phong trào chính trị. Một tin nhắn từng mất nhiều ngày để đến tay người thân ở xa nay đến ngay lập tức, và một bức ảnh chia sẻ từ một ngôi làng hẻo lánh có thể lan truyền khắp thế giới chỉ trong vài phút. Khả năng kết nối chưa từng có này chắc chắn đã kéo con người xích lại gần nhau hơn, nhưng đồng thời cũng làm mờ đi ranh giới giữa đời sống công khai và riêng tư theo những cách mà các thế hệ trước chưa từng phải nghĩ tới.</p>
+    <p><span class="pn">[2]</span> Communication itself has changed in subtler ways too. Face-to-face conversation is increasingly supplemented, and sometimes replaced, by text messages, emojis, and video calls. Proponents argue that these tools allow relationships to be maintained across vast distances that would once have led to a gradual loss of contact. Critics, however, contend that constant digital interaction can foster a superficial kind of intimacy, one that substitutes the quantity of exchanges for genuine depth of connection.</p>
+    <p class="vi-para">[2] Bản thân việc giao tiếp cũng thay đổi theo những cách tinh tế hơn. Trò chuyện trực tiếp ngày càng được bổ sung, và đôi khi bị thay thế, bởi tin nhắn văn bản, biểu tượng cảm xúc và cuộc gọi video. Người ủng hộ cho rằng những công cụ này giúp duy trì các mối quan hệ qua những khoảng cách lớn mà trước đây vốn sẽ dần dần mất liên lạc. Tuy nhiên, người phản đối lại cho rằng việc tương tác số liên tục có thể nuôi dưỡng một kiểu thân mật hời hợt, một kiểu thân mật đánh đổi số lượng trao đổi lấy chiều sâu kết nối thực sự.</p>
+    <p><span class="pn">[3]</span> Meanwhile, automation is reshaping the world of work at a pace few economists anticipated. Machines and algorithms now perform tasks ranging from assembling cars to processing insurance claims, often with greater speed and consistency than human workers. While this efficiency has lowered costs and improved productivity, it has simultaneously displaced workers in sectors reliant on repetitive labour, forcing many to retrain for occupations that scarcely existed a decade ago. Economists remain divided over whether such disruption will ultimately be offset by the emergence of new industries.</p>
+    <p class="vi-para">[3] Trong khi đó, tự động hóa đang định hình lại thế giới việc làm với tốc độ mà ít nhà kinh tế học nào lường trước được. Máy móc và thuật toán nay đảm nhiệm các công việc từ lắp ráp ô tô đến xử lý hồ sơ bảo hiểm, thường với tốc độ và độ ổn định cao hơn con người. Dù hiệu quả này đã giảm chi phí và nâng cao năng suất, nó đồng thời khiến người lao động trong các ngành phụ thuộc vào lao động lặp đi lặp lại mất việc, buộc nhiều người phải đào tạo lại để làm những công việc gần như chưa từng tồn tại một thập kỷ trước. Các nhà kinh tế học vẫn còn bất đồng về việc liệu sự xáo trộn này rốt cuộc có được bù đắp bởi sự xuất hiện của các ngành công nghiệp mới hay không.</p>
+    <p><span class="pn">[4]</span> Confronted with these sweeping changes, societies face a delicate balancing act. Embracing innovation is essential for remaining competitive in a globalised economy, yet unchecked technological expansion risks widening inequality between those equipped to adapt and those left behind. Policymakers, educators, and ordinary citizens alike must therefore grapple with a fundamental question: how can the undeniable benefits of technology be harnessed without eroding the social fabric that binds communities together?</p>
+    <p class="vi-para">[4] Đối mặt với những thay đổi sâu rộng này, các xã hội phải đối diện với một bài toán cân bằng đầy tế nhị. Đón nhận đổi mới là điều thiết yếu để duy trì tính cạnh tranh trong một nền kinh tế toàn cầu hóa, nhưng sự mở rộng công nghệ không được kiểm soát lại có nguy cơ nới rộng bất bình đẳng giữa những người có khả năng thích ứng và những người bị bỏ lại phía sau. Do đó, các nhà hoạch định chính sách, nhà giáo dục và người dân bình thường đều phải cùng nhau giải quyết một câu hỏi cốt lõi: làm thế nào để khai thác những lợi ích không thể phủ nhận của công nghệ mà không làm xói mòn mạng lưới xã hội gắn kết các cộng đồng lại với nhau?</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage as a whole mainly discusses:</div>
+    <ul><li>A. the history of social media platforms</li><li>B. how technology affects communication, work, and society</li><li>C. why teenagers prefer digital devices</li><li>D. the invention of the first computer</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài lần lượt bàn về kết nối xã hội, giao tiếp, việc làm/tự động hóa, và cân bằng xã hội → chủ đề bao trùm là tác động của công nghệ lên xã hội.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"unprecedented"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. ordinary and common</li><li>B. never seen or done before</li><li>C. expensive to maintain</li><li>D. slowly declining</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "unprecedented connectivity" = mức độ kết nối chưa từng có trước đây.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, what has social media done to the line between public and private life?</div>
+    <ul><li>A. It has made the line clearer</li><li>B. It has blurred that boundary</li><li>C. It has removed private life entirely</li><li>D. It has strengthened privacy laws</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "it has also blurred the boundary between public and private life".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"one"</b> (in "one that substitutes the quantity...") refers to:</div>
+    <ul><li>A. face-to-face conversation</li><li>B. a kind of intimacy</li><li>C. video calls</li><li>D. a distant relative</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a superficial kind of intimacy, one that substitutes..." — "one" thay thế cho "a kind of intimacy".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that automation:</div>
+    <ul><li>A. has only positive effects with no downside</li><li>B. brings both efficiency gains and job losses</li><li>C. is banned in most industries</li><li>D. has stopped economic growth completely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn nêu cả lợi ích (efficiency, lower costs) lẫn hệ quả (displaced workers) → cả hai mặt.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"displaced"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. promoted</li><li>B. trained</li><li>C. pushed out of a job/position</li><li>D. paid more</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "it has simultaneously displaced workers" = khiến người lao động mất việc/bị thay thế.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "policymakers, educators, and ordinary citizens" in paragraph 4?</div>
+    <ul><li>A. To list groups who benefit financially from technology</li><li>B. To show that addressing technology's impact requires effort from many groups in society</li><li>C. To criticise the government for banning technology</li><li>D. To describe different jobs replaced by automation</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này nhấn mạnh trách nhiệm giải quyết vấn đề thuộc về nhiều thành phần xã hội, không riêng ai.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as effects of technology EXCEPT:</div>
+    <ul><li>A. instant global communication</li><li>B. changes in the nature of work</li><li>C. widening inequality between groups</li><li>D. a sharp decline in global population</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 1), B (đoạn 3), C (đoạn 4) đều có trong bài; "population decline" không được nhắc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall attitude toward technology's impact on society is best described as:</div>
+    <ul><li>A. entirely negative and pessimistic</li><li>B. balanced, acknowledging both benefits and risks</li><li>C. completely uncritical and celebratory</li><li>D. indifferent and uninterested</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Mỗi đoạn đều cân bằng lợi ích và rủi ro, kết bài đặt câu hỏi mở về cách cân bằng — thái độ trung lập, cân nhắc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"the social fabric that binds communities together"</b> (paragraph 4) most likely refers to:</div>
+    <ul><li>A. clothing made in factories</li><li>B. the shared bonds and relationships that hold a community together</li><li>C. internet cables connecting cities</li><li>D. laws passed by the government</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "social fabric" là ẩn dụ chỉ các mối liên kết, giá trị chung gắn kết cộng đồng, không phải nghĩa đen "vải".</p></details>
+  </div>
+
+  <h3>Từ vựng — Technology &amp; Society</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>fad</td><td>(n)</td><td>trào lưu nhất thời</td></tr>
+    <tr><td>connectivity</td><td>(n)</td><td>khả năng kết nối</td></tr>
+    <tr><td>blur</td><td>(v)</td><td>làm mờ, làm không rõ ràng</td></tr>
+    <tr><td>supplement</td><td>(v)</td><td>bổ sung thêm</td></tr>
+    <tr><td>foster</td><td>(v)</td><td>nuôi dưỡng, thúc đẩy (tính chất nào đó)</td></tr>
+    <tr><td>superficial <span class="c1tag">C1</span></td><td>(adj)</td><td>hời hợt, bề ngoài</td></tr>
+    <tr><td>displace <span class="c1tag">C1</span></td><td>(v)</td><td>thay thế, khiến mất việc/vị trí</td></tr>
+    <tr><td>retrain</td><td>(v)</td><td>đào tạo lại</td></tr>
+    <tr><td>unchecked <span class="c1tag">C1</span></td><td>(adj)</td><td>không được kiểm soát</td></tr>
+    <tr><td>harness</td><td>(v)</td><td>khai thác, tận dụng (sức mạnh của gì đó)</td></tr>
+  </table>
+
+  <div class="card">
+    <b>Đáp án Bài #1:</b>
+    <table><tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-C · 7-B · 8-D · 9-B · 10-B</td></tr></table>
+  </div>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài #2 <span class="lvl">Education · Ôn tập chủ đề yếu · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Rethinking How Students Learn</h3>
+    <p><span class="pn">[1]</span> For much of the twentieth century, education was largely synonymous with the traditional classroom: rows of desks, a single teacher at the front, and a curriculum delivered at a uniform pace to every student regardless of individual needs. This model, while efficient for managing large numbers of learners, has increasingly come under scrutiny for its failure to accommodate the diverse ways in which children actually absorb information.</p>
+    <p class="vi-para">[1] Trong phần lớn thế kỷ 20, giáo dục gần như đồng nghĩa với lớp học truyền thống: những dãy bàn ghế, một giáo viên đứng lớp, và một chương trình học được truyền đạt theo cùng một tốc độ cho mọi học sinh bất kể nhu cầu riêng của từng em. Mô hình này, tuy hiệu quả trong việc quản lý số lượng lớn người học, ngày càng bị soi xét kỹ vì không đáp ứng được sự đa dạng trong cách trẻ em thực sự tiếp thu thông tin.</p>
+    <p><span class="pn">[2]</span> In response, many schools have begun experimenting with personalised learning, an approach that tailors instruction to each student's pace, interests, and strengths. Adaptive software, for example, can identify when a student is struggling with a particular concept and automatically provide additional practice before moving on. Advocates claim that this individualised attention prevents students from falling behind, a common pitfall of the traditional lockstep curriculum.</p>
+    <p class="vi-para">[2] Để đáp lại, nhiều trường học đã bắt đầu thử nghiệm học tập cá nhân hóa, một phương pháp điều chỉnh việc giảng dạy theo tốc độ, sở thích và điểm mạnh của từng học sinh. Chẳng hạn, phần mềm thích ứng có thể nhận biết khi một học sinh đang gặp khó khăn với một khái niệm cụ thể và tự động cung cấp thêm bài luyện tập trước khi chuyển sang phần tiếp theo. Người ủng hộ cho rằng sự quan tâm cá nhân hóa này giúp học sinh không bị tụt lại phía sau, một cái bẫy thường gặp của chương trình học rập khuôn truyền thống.</p>
+    <p><span class="pn">[3]</span> Critics, however, caution that an overreliance on technology in the classroom may undermine essential social skills that develop through group work and face-to-face discussion. They also point out that personalised learning platforms require substantial investment, meaning that under-resourced schools risk falling further behind wealthier institutions, thereby exacerbating existing educational inequality rather than resolving it.</p>
+    <p class="vi-para">[3] Tuy nhiên, những người phản đối cảnh báo rằng việc quá lệ thuộc vào công nghệ trong lớp học có thể làm suy yếu các kỹ năng xã hội thiết yếu vốn hình thành qua làm việc nhóm và thảo luận trực tiếp. Họ cũng chỉ ra rằng các nền tảng học tập cá nhân hóa đòi hỏi khoản đầu tư đáng kể, nghĩa là các trường thiếu nguồn lực có nguy cơ bị tụt lại xa hơn so với các trường giàu có, từ đó làm trầm trọng thêm sự bất bình đẳng giáo dục vốn có thay vì giải quyết nó.</p>
+    <p><span class="pn">[4]</span> A middle ground favoured by many education experts combines the strengths of both approaches: technology handles repetitive drills and tracks individual progress, while teachers focus their limited time on facilitating discussion, mentoring, and nurturing the collaborative skills that no algorithm can replicate. Whether this hybrid model can be implemented equitably across different economic contexts remains one of the most pressing questions facing education policy today.</p>
+    <p class="vi-para">[4] Một hướng đi trung dung được nhiều chuyên gia giáo dục ưa chuộng là kết hợp điểm mạnh của cả hai phương pháp: công nghệ đảm nhận các bài luyện tập lặp đi lặp lại và theo dõi tiến độ từng cá nhân, trong khi giáo viên dành thời gian hạn hẹp của mình để hỗ trợ thảo luận, cố vấn, và nuôi dưỡng các kỹ năng hợp tác mà không thuật toán nào có thể sao chép được. Việc liệu mô hình kết hợp này có thể được triển khai một cách công bằng ở các bối cảnh kinh tế khác nhau hay không vẫn là một trong những câu hỏi cấp bách nhất đối với chính sách giáo dục ngày nay.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. the history of desks used in classrooms</li><li>B. the debate over personalised learning versus traditional teaching</li><li>C. why teachers are paid too little</li><li>D. the invention of adaptive software companies</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài xoay quanh việc so sánh mô hình lớp học truyền thống với học tập cá nhân hóa và tìm hướng kết hợp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"scrutiny"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. praise and admiration</li><li>B. careful examination and criticism</li><li>C. complete ignorance</li><li>D. financial support</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "come under scrutiny" = bị xem xét/soi xét kỹ lưỡng, thường kèm phê phán.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what can adaptive software do?</div>
+    <ul><li>A. Replace teachers completely</li><li>B. Identify struggling students and provide extra practice</li><li>C. Teach social skills</li><li>D. Reduce school fees</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "can identify when a student is struggling... and automatically provide additional practice".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"they"</b> (in "They also point out") refers to:</div>
+    <ul><li>A. advocates of personalised learning</li><li>B. critics of technology in the classroom</li><li>C. adaptive software programs</li><li>D. wealthy institutions</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước là "Critics, however, caution..." → "They" tiếp tục chỉ nhóm critics đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that personalised learning technology:</div>
+    <ul><li>A. is equally affordable for all schools</li><li>B. may widen the gap between rich and poor schools</li><li>C. has no critics at all</li><li>D. eliminates the need for teachers entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "under-resourced schools risk falling further behind... exacerbating existing educational inequality".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"exacerbating"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. solving</li><li>B. making worse</li><li>C. ignoring</li><li>D. measuring</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "exacerbating existing educational inequality" = làm trầm trọng thêm sự bất bình đẳng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author describe the "hybrid model" in paragraph 4?</div>
+    <ul><li>A. To argue that technology should be banned in schools</li><li>B. To propose a solution combining strengths of both approaches</li><li>C. To criticise adaptive software companies</li><li>D. To explain the history of classroom desks</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 trình bày mô hình kết hợp như một giải pháp trung dung được nhiều chuyên gia ủng hộ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as concerns about personalised learning EXCEPT:</div>
+    <ul><li>A. weakened social skills</li><li>B. high cost of technology</li><li>C. widening inequality between schools</li><li>D. increased dropout rates among teachers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều xuất hiện ở đoạn 3; "teacher dropout rates" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward personalised learning technology is best described as:</div>
+    <ul><li>A. entirely dismissive</li><li>B. balanced, weighing both benefits and risks</li><li>C. blindly enthusiastic</li><li>D. hostile toward all technology</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày cả ưu điểm (đoạn 2) và nhược điểm (đoạn 3), rồi đề xuất giải pháp cân bằng (đoạn 4).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"that no algorithm can replicate"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. algorithms are better than teachers at everything</li><li>B. certain human skills, like mentoring, cannot be reproduced by software</li><li>C. schools should stop using computers</li><li>D. algorithms will soon replace all teachers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này nhấn mạnh rằng kỹ năng cố vấn/hợp tác của con người là điều máy móc không thể thay thế được.</p></details>
+  </div>
+
+  <h3>Từ vựng — Education</h3>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>synonymous with</td><td>(phr)</td><td>đồng nghĩa với, gắn liền với</td></tr>
+    <tr><td>uniform pace</td><td>(phr)</td><td>tốc độ đồng đều, như nhau</td></tr>
+    <tr><td>come under scrutiny <span class="c1tag">C1</span></td><td>(phr)</td><td>bị xem xét/soi xét kỹ</td></tr>
+    <tr><td>tailor</td><td>(v)</td><td>điều chỉnh cho phù hợp (đối tượng)</td></tr>
+    <tr><td>adaptive</td><td>(adj)</td><td>có khả năng thích ứng</td></tr>
+    <tr><td>lockstep</td><td>(adj)</td><td>rập khuôn, đồng bộ cứng nhắc</td></tr>
+    <tr><td>overreliance</td><td>(n)</td><td>sự lệ thuộc quá mức</td></tr>
+    <tr><td>exacerbate <span class="c1tag">C1</span></td><td>(v)</td><td>làm trầm trọng thêm</td></tr>
+    <tr><td>facilitate</td><td>(v)</td><td>tạo điều kiện, hỗ trợ diễn ra</td></tr>
+    <tr><td>equitably <span class="c1tag">C1</span></td><td>(adv)</td><td>một cách công bằng</td></tr>
+  </table>
+
+  <div class="card">
+    <b>Đáp án Bài #2:</b>
+    <table><tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr></table>
+  </div>
+
+  <!-- ============ CHẤM ĐIỂM CHUNG ============ -->
+  <h2>Chấm điểm chung &amp; giải đề</h2>
+  <div class="card">
+    <p><b>Sau khi làm cả 2 bài:</b> cộng tổng số câu đúng trên 20 câu, đồng thời ghi riêng điểm từng bài để so sánh mức tiến bộ giữa chủ đề mới (Technology &amp; Society) và chủ đề ôn (Education / chủ đề bạn tự chọn).</p>
+    <p style="margin-top:8px;">Với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Bài __ · Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Nếu bài ôn (Bài #2) vẫn sai nhiều ở cùng 1 dạng như các lần trước → đây chính là dấu hiệu bạn cần luyện thêm dạng đó, không chỉ chủ đề đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 16-20/20 → nền rất tốt, sẵn sàng bài tổng hợp · 11-15 → ổn, cần rà lại 1-2 dạng câu hay sai · ≤10 → nên đọc lại kỹ cả 2 bài + học lại từ vựng trước khi qua Ngày tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 16?</b> Đây là Ngày 6 của Tuần 3 — <b>Ngày 7 (Ngày 17) sẽ là bài trộn tổng hợp của cả tuần</b>, kết hợp tất cả các chủ đề và dạng câu đã học để kiểm tra tổng thể trước khi bước sang tuần mới.
+  </div>
+
+</div>
+
+<footer>🔁 Ngày 16 · Tuần 3 · VSTEP Reading — Technology &amp; Society + Ôn tập · Ôn đúng chủ đề yếu mới lên trình nhanh.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

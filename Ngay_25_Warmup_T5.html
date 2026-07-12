@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 25 — Tuần 5 · Ngày 1 — Khởi động cụm chủ đề · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏛️ Tuần 5 · Ngày 1 — Khởi động cụm: History · Archaeology · Arts · Architecture · Business</h1>
+  <p>Làm quen từ vựng 5 chủ đề mới + 1 bài đọc nhẹ nhàng mở đầu tuần</p>
+  <div class="meta">
+    <span class="badge">🕐 ~25 phút</span>
+    <span class="badge">🟢 Khởi động · chưa cần bấm giờ</span>
+    <span class="badge">📝 1 bài · 6 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Vì sao hôm nay khác mọi ngày?</b>
+    <p style="margin-top:6px;">Tuần 5 chuyển sang cụm 5 chủ đề mới hoàn toàn: <b>History (Lịch sử)</b>, <b>Archaeology (Khảo cổ học)</b>, <b>Arts (Nghệ thuật)</b>, <b>Architecture (Kiến trúc)</b>, <b>Business (Kinh doanh)</b>. Ngày 1 chỉ khởi động nhẹ: học trước từ vựng nền + đọc 1 bài ngắn để làm quen giọng văn, chưa cần luyện đủ 8 dạng câu hỏi hay canh giờ.</p>
+  </div>
+
+  <!-- ============ TỪ VỰNG CỤM ============ -->
+  <h2>1. Học từ vựng cụm 5 chủ đề</h2>
+  <table>
+    <tr><th width="16%">Chủ đề</th><th width="24%">Từ / cụm</th><th width="12%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>History</td><td>civilization</td><td>(n)</td><td>nền văn minh</td></tr>
+    <tr><td>History</td><td>empire</td><td>(n)</td><td>đế chế, đế quốc</td></tr>
+    <tr><td>History</td><td>ancient</td><td>(adj)</td><td>cổ đại</td></tr>
+    <tr><td>History</td><td>conquest</td><td>(n)</td><td>cuộc chinh phục</td></tr>
+    <tr><td>History</td><td>legacy</td><td>(n)</td><td>di sản để lại</td></tr>
+    <tr><td>Archaeology</td><td>excavation</td><td>(n)</td><td>cuộc khai quật</td></tr>
+    <tr><td>Archaeology</td><td>artifact</td><td>(n)</td><td>hiện vật, cổ vật</td></tr>
+    <tr><td>Archaeology</td><td>unearth</td><td>(v)</td><td>khai quật, phát hiện (dưới đất)</td></tr>
+    <tr><td>Archaeology</td><td>ruins</td><td>(n)</td><td>tàn tích, phế tích</td></tr>
+    <tr><td>Archaeology</td><td>preserve <span class="c1tag">C1</span></td><td>(v)</td><td>bảo tồn, gìn giữ</td></tr>
+    <tr><td>Arts</td><td>masterpiece</td><td>(n)</td><td>kiệt tác</td></tr>
+    <tr><td>Arts</td><td>exhibit / exhibition</td><td>(v)/(n)</td><td>trưng bày / triển lãm</td></tr>
+    <tr><td>Arts</td><td>aesthetic <span class="c1tag">C1</span></td><td>(adj)</td><td>thuộc về thẩm mỹ</td></tr>
+    <tr><td>Arts</td><td>craftsmanship</td><td>(n)</td><td>tay nghề thủ công</td></tr>
+    <tr><td>Arts</td><td>portray</td><td>(v)</td><td>khắc họa, miêu tả</td></tr>
+    <tr><td>Architecture</td><td>structure</td><td>(n)</td><td>công trình, kết cấu</td></tr>
+    <tr><td>Architecture</td><td>monument</td><td>(n)</td><td>công trình tưởng niệm, di tích</td></tr>
+    <tr><td>Architecture</td><td>façade <span class="c1tag">C1</span></td><td>(n)</td><td>mặt tiền công trình</td></tr>
+    <tr><td>Architecture</td><td>durable</td><td>(adj)</td><td>bền vững, lâu bền</td></tr>
+    <tr><td>Architecture</td><td>renovate</td><td>(v)</td><td>tu sửa, cải tạo</td></tr>
+    <tr><td>Business</td><td>enterprise</td><td>(n)</td><td>doanh nghiệp</td></tr>
+    <tr><td>Business</td><td>revenue</td><td>(n)</td><td>doanh thu</td></tr>
+    <tr><td>Business</td><td>investment</td><td>(n)</td><td>khoản đầu tư</td></tr>
+    <tr><td>Business</td><td>merger</td><td>(n)</td><td>vụ sáp nhập</td></tr>
+    <tr><td>Business</td><td>entrepreneur <span class="c1tag">C1</span></td><td>(n)</td><td>doanh nhân khởi nghiệp</td></tr>
+  </table>
+
+  <!-- ============ BÀI ĐỌC ============ -->
+  <h2>2. Bài đọc làm quen <span class="lvl">History · B2</span></h2>
+
+  <div class="passage">
+    <h3>The Rise and Fall of Ancient Civilizations</h3>
+    <p><span class="pn">[1]</span> Thousands of years ago, long before modern nations existed, groups of people along fertile river valleys began to form the world's first great civilizations. Along the Nile, the Tigris-Euphrates, the Indus, and the Yellow River, communities learned to farm reliably, store surplus grain, and build permanent settlements. This stability allowed populations to grow rapidly, and with growth came the need for organization: leaders, laws, and shared systems of writing to keep records.</p>
+    <p class="vi-para">[1] Hàng ngàn năm trước, rất lâu trước khi các quốc gia hiện đại ra đời, những nhóm người sống dọc các thung lũng sông màu mỡ đã bắt đầu hình thành nên các nền văn minh vĩ đại đầu tiên của nhân loại. Dọc theo sông Nile, Tigris-Euphrates, Indus và Hoàng Hà, các cộng đồng học được cách canh tác ổn định, tích trữ lương thực dư thừa và xây dựng những khu định cư lâu dài. Sự ổn định này giúp dân số tăng nhanh, và cùng với sự phát triển đó là nhu cầu tổ chức xã hội: có người lãnh đạo, luật lệ, và hệ thống chữ viết chung để lưu giữ ghi chép.</p>
+    <p><span class="pn">[2]</span> As these societies expanded, some evolved into powerful empires that controlled vast territories through conquest and trade. Ancient Egypt, for example, endured for roughly three thousand years, leaving behind an extraordinary legacy of monuments, from towering pyramids to intricate temples carved with hieroglyphics. Such achievements were not accidental; they required advanced engineering knowledge, a skilled workforce, and a centralized authority capable of coordinating enormous projects.</p>
+    <p class="vi-para">[2] Khi các xã hội này mở rộng, một số đã phát triển thành những đế chế hùng mạnh kiểm soát vùng lãnh thổ rộng lớn nhờ chinh phục và giao thương. Chẳng hạn, Ai Cập cổ đại đã tồn tại suốt khoảng ba ngàn năm, để lại một di sản công trình phi thường, từ các kim tự tháp sừng sững đến những ngôi đền được chạm khắc chữ tượng hình tinh xảo. Những thành tựu như vậy không phải ngẫu nhiên mà có; chúng đòi hỏi kiến thức kỹ thuật tiên tiến, lực lượng lao động lành nghề, và một chính quyền tập trung đủ khả năng điều phối những dự án đồ sộ.</p>
+    <p><span class="pn">[3]</span> Yet no civilization, however mighty, proved permanent. Historians point to a combination of factors that typically preceded collapse: prolonged drought, exhausted farmland, costly wars, and internal political instability. When several of these pressures struck at once, even long-established empires could unravel within a generation or two. The fall of the Western Roman Empire in the fifth century is often cited as a classic case, though scholars still debate exactly which cause mattered most.</p>
+    <p class="vi-para">[3] Thế nhưng, dù hùng mạnh đến đâu, không nền văn minh nào tồn tại mãi mãi. Các sử gia chỉ ra một tổ hợp nhiều yếu tố thường xuất hiện trước khi một nền văn minh sụp đổ: hạn hán kéo dài, đất đai bạc màu, chiến tranh tốn kém, và bất ổn chính trị nội bộ. Khi nhiều áp lực này ập đến cùng lúc, ngay cả những đế chế lâu đời cũng có thể tan rã chỉ trong một hoặc hai thế hệ. Sự sụp đổ của Đế chế Tây La Mã vào thế kỷ thứ năm thường được nhắc đến như một ví dụ điển hình, dù các học giả vẫn còn tranh luận về nguyên nhân nào là quan trọng nhất.</p>
+    <p><span class="pn">[4]</span> What makes the study of these ancient societies so compelling is not merely their grandeur but the lessons they offer. Many of the challenges that undermined ancient civilizations — resource scarcity, inequality, and overreliance on a single source of wealth — remain strikingly relevant today. In this sense, history is less a record of the distant past than a mirror in which modern societies can examine their own vulnerabilities.</p>
+    <p class="vi-para">[4] Điều khiến việc nghiên cứu các xã hội cổ đại này trở nên hấp dẫn không chỉ nằm ở sự huy hoàng của chúng, mà còn ở những bài học chúng để lại. Nhiều thách thức từng làm suy yếu các nền văn minh cổ đại — sự khan hiếm tài nguyên, bất bình đẳng, và việc phụ thuộc quá mức vào một nguồn của cải duy nhất — vẫn còn liên quan một cách rõ rệt đến ngày nay. Theo nghĩa đó, lịch sử không đơn thuần là ghi chép về quá khứ xa xôi, mà giống như một tấm gương để các xã hội hiện đại soi lại những điểm yếu của chính mình.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. how to build pyramids in ancient Egypt</li><li>B. the rise, achievements, and eventual decline of early civilizations</li><li>C. modern methods of farming</li><li>D. why the Roman army was strong</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi từ sự hình thành (đoạn 1), thành tựu (đoạn 2), đến sự sụp đổ (đoạn 3) và bài học (đoạn 4) của các nền văn minh cổ đại → ý bao trùm là B.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"legacy"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. something inherited or left behind</li><li>B. a type of tax</li><li>C. a military weapon</li><li>D. a river valley</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "legacy of monuments" = di sản để lại (các công trình) → nghĩa gần nhất là "something left behind".</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, why were people able to build permanent settlements?</div>
+    <ul><li>A. Because they discovered writing first</li><li>B. Because they could farm reliably and store surplus grain</li><li>C. Because they conquered other empires</li><li>D. Because rivers dried up</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 1: "communities learned to farm reliably, store surplus grain, and build permanent settlements."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"these pressures"</b> refers to:</div>
+    <ul><li>A. towering pyramids and temples</li><li>B. drought, exhausted farmland, wars, and political instability</li><li>C. river valleys such as the Nile</li><li>D. systems of writing</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước liệt kê chính xác 4 yếu tố này, "these pressures" nhắc lại chúng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 4 that the author believes:</div>
+    <ul><li>A. ancient history has no relevance to today</li><li>B. modern societies can still learn from the mistakes of ancient civilizations</li><li>C. resource scarcity no longer exists</li><li>D. only Egypt's history is worth studying</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the challenges... remain strikingly relevant today" và "a mirror in which modern societies can examine their own vulnerabilities" → lịch sử vẫn có bài học cho hiện tại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"unravel"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. to strengthen gradually</li><li>B. to expand territory</li><li>C. to fall apart or collapse</li><li>D. to celebrate a victory</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "even long-established empires could unravel within a generation" — trong ngữ cảnh nói về sự sụp đổ (collapse) → unravel = tan rã, sụp đổ.</p></details>
+  </div>
+
+  <!-- ============ ĐÁP ÁN NHANH ============ -->
+  <h2>Chấm nhanh</h2>
+  <div class="card">
+    <b>Bảng đáp án:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-A · 3-B · 4-B · 5-B · 6-C</td></tr>
+    </table>
+    <p style="margin-top:8px; color:var(--muted)">📊 Hôm nay chỉ là khởi động, chưa cần đủ 8 dạng câu hỏi — quan trọng là quen mặt từ vựng 5 chủ đề mới và cảm nhận giọng văn History.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 1 Tuần 5?</b> Từ Ngày 2 mỗi ngày luyện 2 bài, canh ~15 phút/bài, mục tiêu ~70% đúng.
+  </div>
+
+</div>
+
+<footer>🏛️ Tuần 5 · Ngày 1 · VSTEP Reading — Khởi động cụm History · Archaeology · Arts · Architecture · Business.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

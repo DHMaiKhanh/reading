@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 10 — Luyện đề Media &amp; Communication · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📰 Ngày 10 — Luyện đề: Media &amp; Communication</h1>
+  <p>1 đề kết hợp chuẩn B2 + C1 → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~45 phút</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 1 bài · 10 câu · đủ 8 dạng</span>
+    <span class="badge">🏁 Tuần 2 · Ngày 5/5</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b>.</p>
+  </div>
+
+  <!-- ============ ĐỀ ============ -->
+  <h2>Đề luyện <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>The Age of Fake News</h3>
+    <p><span class="pn">[1]</span> Never before has information travelled so quickly, nor has it been so difficult to tell what is genuine. Social media platforms allow anyone with a smartphone to publish a story within seconds, bypassing the editorial checks that traditional newspapers once relied upon. While this democratisation of publishing has given a voice to ordinary citizens, it has also opened the floodgates to misinformation, deliberately fabricated stories, and content designed purely to provoke outrage.</p>
+    <p class="vi-para">[1] Chưa bao giờ thông tin lan truyền nhanh đến vậy, và cũng chưa bao giờ việc phân biệt đâu là thật lại khó khăn đến thế. Các nền tảng mạng xã hội cho phép bất kỳ ai có điện thoại thông minh đăng tải một câu chuyện chỉ trong vài giây, bỏ qua các bước kiểm duyệt biên tập mà báo chí truyền thống từng dựa vào. Trong khi việc "dân chủ hóa" hoạt động xuất bản này đã trao cho người dân bình thường một tiếng nói, nó cũng mở toang cánh cửa cho thông tin sai lệch, những câu chuyện bịa đặt có chủ đích, và nội dung được tạo ra chỉ nhằm khơi gợi sự phẫn nộ.</p>
+
+    <p><span class="pn">[2]</span> Fake news is not entirely new; propaganda and hoaxes have existed for centuries. What has changed is the speed and scale at which false stories can spread. A sensational headline can be shared millions of times before fact-checkers even begin to investigate it, and by the time a correction is issued, the damage to public perception has often already been done. Researchers have found that false stories tend to spread faster than true ones, partly because they are engineered to trigger strong emotional reactions such as anger or fear.</p>
+    <p class="vi-para">[2] Tin giả không hoàn toàn là điều mới mẻ; tuyên truyền và tin bịa đã tồn tại từ hàng thế kỷ nay. Điều đã thay đổi là tốc độ và quy mô mà các câu chuyện sai sự thật có thể lan truyền. Một tiêu đề giật gân có thể được chia sẻ hàng triệu lần trước khi những người kiểm chứng thông tin kịp bắt đầu xác minh nó, và đến khi một bản đính chính được đưa ra, thiệt hại đối với nhận thức của công chúng thường đã xảy ra rồi. Các nhà nghiên cứu phát hiện ra rằng những câu chuyện sai sự thật thường lan truyền nhanh hơn những câu chuyện đúng sự thật, một phần vì chúng được thiết kế để kích hoạt những phản ứng cảm xúc mạnh mẽ như giận dữ hay sợ hãi.</p>
+
+    <p><span class="pn">[3]</span> The consequences extend well beyond individual embarrassment. Misinformation has been blamed for swaying elections, undermining public health campaigns, and eroding trust in legitimate journalism. When citizens can no longer agree on basic facts, meaningful public debate becomes almost impossible, since every side simply dismisses inconvenient evidence as "fake." This erosion of a shared factual foundation poses a genuine threat to democratic societies, which depend on an informed electorate.</p>
+    <p class="vi-para">[3] Hậu quả của điều này vượt xa sự bối rối của từng cá nhân. Thông tin sai lệch đã bị quy trách nhiệm cho việc tác động đến kết quả bầu cử, làm suy yếu các chiến dịch y tế công cộng, và xói mòn niềm tin vào báo chí chính thống. Khi người dân không còn thống nhất được về những sự thật cơ bản, các cuộc tranh luận công khai có ý nghĩa gần như trở nên bất khả thi, vì mỗi bên đơn giản gạt bỏ bằng chứng bất lợi coi đó là "tin giả". Sự xói mòn nền tảng sự thật chung này đặt ra một mối đe dọa thực sự đối với các xã hội dân chủ, vốn phụ thuộc vào một cử tri được thông tin đầy đủ.</p>
+
+    <p><span class="pn">[4]</span> Various solutions have been proposed to curb the problem. Technology companies have introduced fact-checking labels and algorithms designed to demote dubious content, though critics argue these measures are inconsistent and sometimes arrive too late. Media literacy education, which teaches people to scrutinise sources before sharing them, is widely regarded as a more sustainable long-term remedy. Governments, meanwhile, face a delicate balancing act: regulating harmful content without infringing on freedom of expression.</p>
+    <p class="vi-para">[4] Nhiều giải pháp đã được đề xuất để kiềm chế vấn đề này. Các công ty công nghệ đã đưa ra nhãn kiểm chứng thông tin và các thuật toán được thiết kế để hạ thứ hạng nội dung đáng ngờ, dù những người phản đối cho rằng các biện pháp này thiếu nhất quán và đôi khi đến quá muộn. Giáo dục về khả năng đọc hiểu truyền thông, vốn dạy mọi người xem xét kỹ nguồn tin trước khi chia sẻ, được xem rộng rãi là một giải pháp bền vững hơn về lâu dài. Trong khi đó, các chính phủ phải đối mặt với một bài toán cân bằng tinh tế: kiểm soát nội dung độc hại mà không xâm phạm quyền tự do ngôn luận.</p>
+
+    <p><span class="pn">[5]</span> Ultimately, combating fake news requires effort from multiple directions at once — platforms enforcing stricter standards, journalists upholding rigorous verification practices, and ordinary readers cultivating a healthy scepticism. No single measure will eliminate misinformation entirely, but a well-informed public, equipped to question what it reads, remains the most resilient defence against being misled.</p>
+    <p class="vi-para">[5] Cuối cùng, việc chống lại tin giả đòi hỏi nỗ lực từ nhiều hướng cùng lúc — các nền tảng thực thi tiêu chuẩn nghiêm ngặt hơn, các nhà báo duy trì quy trình kiểm chứng chặt chẽ, và độc giả bình thường rèn luyện thái độ hoài nghi lành mạnh. Không có biện pháp đơn lẻ nào có thể xóa bỏ hoàn toàn thông tin sai lệch, nhưng một công chúng được thông tin đầy đủ, biết đặt câu hỏi về những gì mình đọc, vẫn là hàng phòng thủ kiên cường nhất trước nguy cơ bị dẫn dắt sai lệch.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of newspaper printing</li><li>B. the causes, effects, and possible solutions to fake news</li><li>C. how to become a professional journalist</li><li>D. why smartphones are becoming cheaper</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài trình bày nguyên nhân (đoạn 1-2), hậu quả (đoạn 3), và giải pháp (đoạn 4-5) của tin giả — bao trùm toàn bài. A/C/D chỉ là chi tiết phụ hoặc không xuất hiện.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"bypassing"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. strengthening</li><li>B. going around, avoiding</li><li>C. carefully following</li><li>D. paying for</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "bypassing the editorial checks" = bỏ qua/tránh né các bước kiểm duyệt biên tập ≈ going around.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why do false stories often spread faster than true ones?</div>
+    <ul><li>A. They are shorter than true stories</li><li>B. They are usually written by professional journalists</li><li>C. They are engineered to trigger strong emotional reactions</li><li>D. They are always published first</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 2: "partly because they are engineered to trigger strong emotional reactions such as anger or fear."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"this"</b> (in "This erosion of a shared factual foundation") refers to:</div>
+    <ul><li>A. citizens voting in elections</li><li>B. people no longer agreeing on basic facts</li><li>C. journalists writing legitimate news</li><li>D. technology companies making profits</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước nói "citizens can no longer agree on basic facts" → "this erosion" chỉ chính hiện tượng đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that fake news is dangerous mainly because:</div>
+    <ul><li>A. it makes newspapers more expensive</li><li>B. it undermines the shared factual basis needed for democracy to function</li><li>C. it only affects people who use social media</li><li>D. it has no real effect on society</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "poses a genuine threat to democratic societies, which depend on an informed electorate" → nguy hiểm vì phá vỡ nền tảng sự thật chung cần cho dân chủ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"demote"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. to promote and highlight</li><li>B. to lower the visibility or ranking of</li><li>C. to delete permanently</li><li>D. to translate into another language</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "algorithms designed to demote dubious content" = hạ thứ hạng/giảm mức độ hiển thị của nội dung đáng ngờ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"media literacy education"</b> in paragraph 4?</div>
+    <ul><li>A. To criticise governments for regulating the internet</li><li>B. To present it as a more sustainable long-term solution to misinformation</li><li>C. To argue that schools should be closed</li><li>D. To explain the history of journalism</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4: "is widely regarded as a more sustainable long-term remedy" — được nêu như một giải pháp bền vững hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as consequences of misinformation EXCEPT:</div>
+    <ul><li>A. swaying elections</li><li>B. undermining public health campaigns</li><li>C. eroding trust in journalism</li><li>D. increasing the cost of internet access</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều được nêu ở đoạn 3. "Increasing the cost of internet access" KHÔNG được nhắc đến → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span><span class="c1tag">C1</span> The author's attitude toward solving the fake news problem is best described as:</div>
+    <ul><li>A. hopeless and resigned</li><li>B. cautiously optimistic, emphasising shared responsibility</li><li>C. dismissive of any solution</li><li>D. entirely certain that technology alone will fix it</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 5 nhấn mạnh "requires effort from multiple directions" và "most resilient defence" — không bi quan tuyệt đối nhưng cũng không cho rằng có giải pháp đơn giản, tuyệt đối.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"a delicate balancing act"</b> (paragraph 4) implies that governments must:</div>
+    <ul><li>A. ignore harmful content completely</li><li>B. carefully weigh regulating misinformation against protecting freedom of expression</li><li>C. ban social media entirely</li><li>D. let technology companies decide everything</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "regulating harmful content without infringing on freedom of expression" — phải cân bằng cẩn thận giữa hai mục tiêu đối lập, đúng nghĩa "delicate balancing act".</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG ============ -->
+  <h2>Từ vựng chủ đề Media &amp; Communication</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>editorial check</td><td>(n phr)</td><td>kiểm duyệt biên tập</td></tr>
+    <tr><td>democratisation <span class="c1tag">C1</span></td><td>(n)</td><td>sự dân chủ hóa (ở đây: ai cũng có thể xuất bản)</td></tr>
+    <tr><td>fabricated</td><td>(adj)</td><td>bịa đặt, ngụy tạo</td></tr>
+    <tr><td>outrage</td><td>(n)</td><td>sự phẫn nộ</td></tr>
+    <tr><td>hoax</td><td>(n)</td><td>trò lừa bịp, tin bịa</td></tr>
+    <tr><td>fact-checker</td><td>(n)</td><td>người kiểm chứng thông tin</td></tr>
+    <tr><td>sway</td><td>(v)</td><td>tác động, làm thay đổi (ý kiến/kết quả)</td></tr>
+    <tr><td>erode</td><td>(v)</td><td>xói mòn, làm suy giảm dần</td></tr>
+    <tr><td>electorate <span class="c1tag">C1</span></td><td>(n)</td><td>cử tri (nói chung)</td></tr>
+    <tr><td>curb</td><td>(v)</td><td>kiềm chế, hạn chế</td></tr>
+    <tr><td>demote <span class="c1tag">C1</span></td><td>(v)</td><td>hạ thứ hạng/mức độ hiển thị</td></tr>
+    <tr><td>media literacy</td><td>(n phr)</td><td>khả năng đọc hiểu &amp; đánh giá truyền thông</td></tr>
+    <tr><td>infringe on <span class="c1tag">C1</span></td><td>(v phr)</td><td>xâm phạm (quyền, tự do)</td></tr>
+    <tr><td>scepticism</td><td>(n)</td><td>thái độ hoài nghi, thận trọng</td></tr>
+    <tr><td>resilient <span class="c1tag">C1</span></td><td>(adj)</td><td>kiên cường, có sức chống chịu</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-C · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → ôn kỹ dạng đó trước khi vào Tuần 3.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10 → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài + học kỹ từ vựng trước khi tổng ôn.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 10?</b> Tuần 2 đã hoàn thành 5 đề luyện! Ngày 6-7 nghỉ ôn sổ lỗi trước khi bước vào Giai đoạn 2 (Tuần 3).
+  </div>
+
+</div>
+
+<footer>📰 Ngày 10 · VSTEP Reading — Media &amp; Communication · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

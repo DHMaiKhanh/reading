@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 21 — Luyện đề Health &amp; Medicine + Food &amp; Nutrition · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🩺🥗 Tuần 4 · Ngày 4 — Health &amp; Medicine + Food &amp; Nutrition</h1>
+  <p>2 bài đọc kết hợp chuẩn B2 + C1 → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~36 phút (2 bài × 18 phút)</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · 18 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, canh ~18 phút mỗi bài.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~14–16/18</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài đọc #1 <span class="lvl">Health &amp; Medicine · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Modern Medicine and the Rise of Chronic Disease Management</h3>
+    <p><span class="pn">[1]</span> A century ago, the greatest threats to human survival were acute infections that killed within days or weeks. Today, in most developed nations, the leading causes of death are chronic conditions such as heart disease, diabetes, and cancer — illnesses that develop slowly, often over decades, and can rarely be cured outright. This shift, sometimes called the "epidemiological transition," reflects both the triumph of modern medicine over infectious disease and the emergence of a new set of challenges tied to longevity and lifestyle.</p>
+    <p class="vi-para">[1] Một thế kỷ trước, mối đe dọa lớn nhất đối với sự sống còn của con người là các bệnh nhiễm trùng cấp tính có thể cướp đi mạng sống chỉ trong vài ngày hoặc vài tuần. Ngày nay, ở hầu hết các nước phát triển, nguyên nhân gây tử vong hàng đầu là các bệnh mạn tính như bệnh tim, tiểu đường và ung thư — những căn bệnh phát triển chậm, thường kéo dài hàng thập kỷ, và hiếm khi được chữa khỏi hoàn toàn. Sự thay đổi này, đôi khi được gọi là "chuyển đổi dịch tễ học," phản ánh cả chiến thắng của y học hiện đại trước bệnh truyền nhiễm lẫn sự xuất hiện của một loạt thách thức mới gắn liền với tuổi thọ và lối sống.</p>
+
+    <p><span class="pn">[2]</span> Managing chronic illness demands a fundamentally different approach from treating an acute infection. Rather than administering a single course of antibiotics and expecting full recovery, physicians must help patients navigate lifelong regimens of medication, monitoring, and behavioural adjustment. A diabetic patient, for instance, may need to check blood sugar levels daily, adjust insulin doses, and modify diet indefinitely. This ongoing burden places considerable strain not only on patients but also on healthcare systems, which were largely designed around the model of treating discrete episodes of illness rather than sustaining decades-long care.</p>
+    <p class="vi-para">[2] Quản lý bệnh mạn tính đòi hỏi một cách tiếp cận khác về căn bản so với điều trị nhiễm trùng cấp tính. Thay vì chỉ định một đợt kháng sinh duy nhất và mong đợi hồi phục hoàn toàn, các bác sĩ phải giúp bệnh nhân theo đuổi những phác đồ dùng thuốc, theo dõi và điều chỉnh hành vi kéo dài suốt đời. Ví dụ, một bệnh nhân tiểu đường có thể cần kiểm tra đường huyết hàng ngày, điều chỉnh liều insulin và thay đổi chế độ ăn vô thời hạn. Gánh nặng liên tục này gây áp lực đáng kể không chỉ lên bệnh nhân mà còn lên hệ thống y tế, vốn phần lớn được thiết kế theo mô hình điều trị từng đợt bệnh riêng lẻ chứ không phải để duy trì chăm sóc kéo dài hàng thập kỷ.</p>
+
+    <p><span class="pn">[3]</span> Advances in diagnostic technology have nonetheless transformed outcomes for many chronic conditions. Genetic screening can now identify individuals predisposed to certain cancers well before symptoms appear, allowing for earlier intervention or preventive surgery. Wearable devices continuously track heart rhythms and alert users to irregularities that might otherwise go unnoticed until a crisis occurs. Such innovations exemplify a broader trend in medicine: a shift from reactive treatment toward proactive, personalised prevention.</p>
+    <p class="vi-para">[3] Tuy nhiên, những tiến bộ trong công nghệ chẩn đoán đã thay đổi hoàn toàn kết quả điều trị của nhiều bệnh mạn tính. Sàng lọc di truyền giờ đây có thể xác định những người có nguy cơ mắc một số loại ung thư từ rất lâu trước khi triệu chứng xuất hiện, cho phép can thiệp sớm hơn hoặc phẫu thuật phòng ngừa. Các thiết bị đeo liên tục theo dõi nhịp tim và cảnh báo người dùng về những bất thường mà nếu không có thiết bị này có thể không được phát hiện cho đến khi xảy ra khủng hoảng. Những đổi mới như vậy minh họa cho một xu hướng rộng lớn hơn trong y học: sự chuyển dịch từ điều trị phản ứng sang phòng ngừa chủ động, mang tính cá nhân hóa.</p>
+
+    <p><span class="pn">[4]</span> Yet these advances come with caveats. Critics point out that widespread screening can lead to overdiagnosis, whereby harmless abnormalities are detected and treated unnecessarily, subjecting patients to anxiety and invasive procedures with little real benefit. Others warn that an overreliance on technology risks eroding the traditional doctor-patient relationship, reducing consultations to data interpretation rather than holistic care. Public health experts increasingly argue that addressing chronic disease requires not merely better diagnostics but also broader societal change — improved diets, increased physical activity, and reduced exposure to environmental toxins — since medicine alone cannot fully compensate for the conditions that give rise to these illnesses in the first place.</p>
+    <p class="vi-para">[4] Thế nhưng những tiến bộ này cũng đi kèm những lưu ý. Những người phản biện chỉ ra rằng việc sàng lọc rộng rãi có thể dẫn đến chẩn đoán quá mức, trong đó những bất thường vô hại bị phát hiện và điều trị một cách không cần thiết, khiến bệnh nhân phải chịu lo âu và các thủ thuật xâm lấn mà lợi ích thực sự lại rất ít. Những người khác cảnh báo rằng việc quá phụ thuộc vào công nghệ có nguy cơ làm xói mòn mối quan hệ bác sĩ-bệnh nhân truyền thống, biến các buổi khám thành việc diễn giải dữ liệu thay vì chăm sóc toàn diện. Các chuyên gia y tế công cộng ngày càng cho rằng việc giải quyết bệnh mạn tính không chỉ cần chẩn đoán tốt hơn mà còn cần thay đổi xã hội rộng lớn hơn — cải thiện chế độ ăn, tăng cường vận động thể chất, và giảm tiếp xúc với các độc tố môi trường — vì bản thân y học không thể bù đắp hoàn toàn cho những điều kiện đã tạo ra những căn bệnh này ngay từ đầu.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the discovery of antibiotics</li><li>B. the shift from acute to chronic disease and how medicine is adapting to it</li><li>C. why wearable devices are unreliable</li><li>D. the history of genetic screening technology</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài mở đầu bằng "epidemiological transition" từ bệnh cấp tính sang mạn tính, rồi bàn về cách y học thích ứng (chẩn đoán, phòng ngừa, hạn chế) → ý bao trùm là B.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"outright"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. slowly and partially</li><li>B. completely and immediately</li><li>C. secretly</li><li>D. expensively</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "can rarely be cured outright" — hiếm khi được chữa khỏi hoàn toàn, dứt điểm ≈ completely and immediately.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why does chronic illness strain healthcare systems?</div>
+    <ul><li>A. Because hospitals lack antibiotics</li><li>B. Because systems were designed for treating discrete episodes, not decades-long care</li><li>C. Because patients refuse to take medication</li><li>D. Because chronic diseases are contagious</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "healthcare systems, which were largely designed around the model of treating discrete episodes of illness rather than sustaining decades-long care."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"such innovations"</b> refers to:</div>
+    <ul><li>A. antibiotics and vaccines</li><li>B. genetic screening and wearable devices</li><li>C. healthcare system budgets</li><li>D. acute infectious diseases</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước liệt kê genetic screening và wearable devices → "such innovations" chỉ hai công nghệ này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that modern diagnostic technology aims to:</div>
+    <ul><li>A. replace doctors entirely</li><li>B. detect and address health issues before they become emergencies</li><li>C. eliminate the need for surgery</li><li>D. cure all chronic diseases instantly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a shift from reactive treatment toward proactive, personalised prevention" → mục tiêu là phát hiện sớm, hành động trước khi khủng hoảng xảy ra.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"overdiagnosis"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. failing to detect a disease at all</li><li>B. detecting and treating harmless conditions unnecessarily</li><li>C. diagnosing a disease too late</li><li>D. refusing to perform any medical tests</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "harmless abnormalities are detected and treated unnecessarily" chính là định nghĩa của overdiagnosis trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the diabetic patient example in paragraph 2?</div>
+    <ul><li>A. To prove diabetes is incurable</li><li>B. To illustrate the ongoing, lifelong nature of chronic disease management</li><li>C. To criticise insulin manufacturers</li><li>D. To compare diabetes with infectious disease symptoms</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Ví dụ bệnh nhân tiểu đường minh họa cho việc quản lý bệnh mạn tính đòi hỏi theo dõi và điều chỉnh suốt đời.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as concerns about medical technology EXCEPT:</div>
+    <ul><li>A. overdiagnosis and unnecessary procedures</li><li>B. erosion of the doctor-patient relationship</li><li>C. inability to fully compensate for lifestyle factors</li><li>D. increased risk of infectious pandemics</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Overdiagnosis, xói mòn quan hệ bác sĩ-bệnh nhân, và giới hạn của y học trước yếu tố lối sống đều được nêu ở đoạn 4 → loại A, B, C. "Increased risk of pandemics" KHÔNG được nhắc → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward medical advances in chronic disease is best described as:</div>
+    <ul><li>A. uncritically enthusiastic</li><li>B. appreciative of progress but mindful of its limitations</li><li>C. entirely dismissive of technology</li><li>D. indifferent to healthcare outcomes</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả ghi nhận tiến bộ (đoạn 3) nhưng cũng nêu rõ những hạn chế và cảnh báo (đoạn 4) → thái độ cân bằng, thận trọng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"medicine alone cannot fully compensate"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. medicine is completely useless against chronic disease</li><li>B. broader lifestyle and societal changes are also necessary to address chronic disease</li><li>C. doctors should stop prescribing medication</li><li>D. only genetic screening can solve chronic illness</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu tiếp theo liệt kê "improved diets, increased physical activity, and reduced exposure to environmental toxins" như những yếu tố cần thiết bên cạnh y học.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 1 ============ -->
+  <h2>Từ vựng Bài #1 — Health &amp; Medicine</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>acute</td><td>(adj)</td><td>cấp tính</td></tr>
+    <tr><td>chronic condition</td><td>(n)</td><td>bệnh mạn tính</td></tr>
+    <tr><td>epidemiological transition <span class="c1tag">C1</span></td><td>(n)</td><td>chuyển đổi dịch tễ học</td></tr>
+    <tr><td>longevity</td><td>(n)</td><td>tuổi thọ, sự trường thọ</td></tr>
+    <tr><td>regimen <span class="c1tag">C1</span></td><td>(n)</td><td>phác đồ, chế độ điều trị</td></tr>
+    <tr><td>predisposed <span class="c1tag">C1</span></td><td>(adj)</td><td>có khuynh hướng/dễ mắc</td></tr>
+    <tr><td>preventive</td><td>(adj)</td><td>mang tính phòng ngừa</td></tr>
+    <tr><td>overdiagnosis</td><td>(n)</td><td>chẩn đoán quá mức</td></tr>
+    <tr><td>invasive procedure</td><td>(n)</td><td>thủ thuật xâm lấn</td></tr>
+    <tr><td>holistic care <span class="c1tag">C1</span></td><td>(n)</td><td>chăm sóc toàn diện</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài đọc #2 <span class="lvl">Food &amp; Nutrition · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Rethinking the Modern Diet</h3>
+    <p><span class="pn">[1]</span> Obesity rates have climbed steadily across much of the world over the past half-century, transforming what was once considered a problem confined to wealthy nations into a truly global concern. Public health researchers largely attribute this trend to the widespread availability of cheap, calorie-dense, ultra-processed foods, combined with increasingly sedentary lifestyles. Unlike traditional diets built around whole grains, vegetables, and modest portions, contemporary eating patterns in many countries now favour convenience over nutritional value.</p>
+    <p class="vi-para">[1] Tỷ lệ béo phì đã tăng đều đặn ở phần lớn thế giới trong nửa thế kỷ qua, biến thứ từng được xem là vấn đề chỉ giới hạn ở các nước giàu thành một mối lo ngại thực sự mang tính toàn cầu. Các nhà nghiên cứu y tế công cộng phần lớn quy trách nhiệm cho xu hướng này là do sự sẵn có tràn lan của thực phẩm siêu chế biến rẻ tiền, nhiều calo, kết hợp với lối sống ngày càng ít vận động. Khác với chế độ ăn truyền thống xây dựng quanh ngũ cốc nguyên hạt, rau củ và khẩu phần vừa phải, thói quen ăn uống hiện đại ở nhiều quốc gia giờ đây ưu tiên sự tiện lợi hơn giá trị dinh dưỡng.</p>
+
+    <p><span class="pn">[2]</span> Ultra-processed foods — items manufactured with industrial ingredients such as emulsifiers, artificial flavourings, and refined sugars — have come under particular scrutiny. Studies suggest that these products are engineered to be highly palatable, sometimes described as "hyper-palatable," triggering the brain's reward systems in ways that encourage overconsumption. Critics argue that food manufacturers have prioritised shelf life and profit margins over public health, packaging sugar, salt, and fat in combinations that few consumers can resist.</p>
+    <p class="vi-para">[2] Thực phẩm siêu chế biến — những sản phẩm được sản xuất bằng các thành phần công nghiệp như chất nhũ hóa, hương liệu nhân tạo và đường tinh luyện — đã trở thành đối tượng bị giám sát đặc biệt. Các nghiên cứu cho thấy những sản phẩm này được thiết kế để có độ hấp dẫn vị giác cao, đôi khi được mô tả là "cực kỳ hấp dẫn vị giác," kích hoạt hệ thống khen thưởng của não theo cách khuyến khích tiêu thụ quá mức. Những người phản biện cho rằng các nhà sản xuất thực phẩm đã ưu tiên thời hạn sử dụng và lợi nhuận hơn sức khỏe cộng đồng, kết hợp đường, muối và chất béo theo những công thức mà ít người tiêu dùng nào có thể cưỡng lại.</p>
+
+    <p><span class="pn">[3]</span> Beyond obesity, food safety presents its own set of challenges. Contamination by bacteria such as salmonella or E. coli can occur at any stage of the supply chain, from the farm to the processing plant to the consumer's kitchen. Global trade has further complicated matters: a single batch of contaminated produce grown in one country can trigger outbreaks of illness thousands of miles away before the source is even identified. Regulatory agencies have consequently invested heavily in traceability systems that allow contaminated products to be recalled swiftly.</p>
+    <p class="vi-para">[3] Ngoài vấn đề béo phì, an toàn thực phẩm cũng đặt ra những thách thức riêng. Sự nhiễm khuẩn như salmonella hay E. coli có thể xảy ra ở bất kỳ giai đoạn nào của chuỗi cung ứng, từ trang trại đến nhà máy chế biến rồi đến căn bếp của người tiêu dùng. Thương mại toàn cầu càng khiến vấn đề phức tạp hơn: chỉ một lô nông sản nhiễm khuẩn được trồng ở một quốc gia có thể gây ra các đợt bùng phát bệnh cách xa hàng nghìn dặm trước khi nguồn gốc được xác định. Do đó, các cơ quan quản lý đã đầu tư mạnh vào các hệ thống truy xuất nguồn gốc cho phép thu hồi nhanh chóng các sản phẩm bị nhiễm khuẩn.</p>
+
+    <p><span class="pn">[4]</span> Nutritionists increasingly emphasise that solving these problems requires more than individual willpower; it demands structural change. Some governments have introduced taxes on sugary beverages, restricted the advertising of junk food to children, or mandated clearer nutritional labelling, with mixed but generally encouraging results. Meanwhile, a growing movement advocates for reforming agricultural subsidies, which in many countries still favour the mass production of corn and soy — ingredients disproportionately used in processed foods — rather than fresh fruits and vegetables. Proponents contend that until such systemic incentives are realigned, individual efforts to eat healthily will continue to swim against a powerful economic current.</p>
+    <p class="vi-para">[4] Các chuyên gia dinh dưỡng ngày càng nhấn mạnh rằng giải quyết những vấn đề này cần nhiều hơn ý chí cá nhân; nó đòi hỏi thay đổi mang tính hệ thống. Một số chính phủ đã áp thuế đối với đồ uống có đường, hạn chế quảng cáo đồ ăn vặt nhắm đến trẻ em, hoặc bắt buộc ghi nhãn dinh dưỡng rõ ràng hơn, với kết quả trái chiều nhưng nhìn chung khả quan. Trong khi đó, một phong trào đang lớn mạnh kêu gọi cải cách các khoản trợ cấp nông nghiệp, vốn ở nhiều quốc gia vẫn ưu tiên sản xuất hàng loạt ngô và đậu nành — những nguyên liệu được sử dụng với tỷ lệ không cân xứng trong thực phẩm chế biến — thay vì trái cây và rau củ tươi. Những người ủng hộ cho rằng cho đến khi các động lực mang tính hệ thống này được điều chỉnh lại, nỗ lực ăn uống lành mạnh của mỗi cá nhân sẽ vẫn tiếp tục phải bơi ngược dòng chảy kinh tế mạnh mẽ.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of agricultural subsidies</li><li>B. how ultra-processed foods, food safety, and policy shape modern nutrition problems</li><li>C. why salmonella outbreaks are rare</li><li>D. the biography of a nutritionist</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài bàn về nguyên nhân béo phì (thực phẩm chế biến sẵn), an toàn thực phẩm, và giải pháp chính sách → ý bao trùm là B.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"sedentary"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. physically active</li><li>B. involving little physical movement</li><li>C. financially costly</li><li>D. nutritionally balanced</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "sedentary lifestyles" — lối sống ít vận động.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why are ultra-processed foods hard to resist?</div>
+    <ul><li>A. Because they are always more expensive than fresh food</li><li>B. Because they are engineered to be hyper-palatable and trigger reward systems in the brain</li><li>C. Because they contain no sugar or salt</li><li>D. Because governments require people to buy them</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "engineered to be highly palatable... triggering the brain's reward systems in ways that encourage overconsumption."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 4, the word <b class="k">"such systemic incentives"</b> refers to:</div>
+    <ul><li>A. individual willpower and personal diet choices</li><li>B. agricultural subsidies favouring corn and soy over fruits and vegetables</li><li>C. sugary beverage taxes</li><li>D. nutritional labelling requirements</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước nói về agricultural subsidies favouring corn/soy → "such systemic incentives" chỉ chính các khoản trợ cấp này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that global trade in food:</div>
+    <ul><li>A. has made contamination outbreaks easier to contain</li><li>B. can make it harder to trace and contain contamination outbreaks quickly</li><li>C. has eliminated the risk of bacterial contamination</li><li>D. is unrelated to food safety</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a single batch... can trigger outbreaks... thousands of miles away before the source is even identified" → thương mại toàn cầu khiến việc truy vết khó khăn hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"disproportionately"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. equally and fairly</li><li>B. in an amount that is unusually large relative to something else</li><li>C. rarely and occasionally</li><li>D. cheaply and efficiently</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "ingredients disproportionately used in processed foods" — được sử dụng với tỷ lệ không cân xứng, quá nhiều so với mức hợp lý.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention sugary-drink taxes and advertising restrictions in paragraph 4?</div>
+    <ul><li>A. To criticise governments for interfering in the free market</li><li>B. To give examples of structural policy responses to nutrition problems</li><li>C. To argue that children should not drink any beverages</li><li>D. To describe how soft drinks are manufactured</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Các ví dụ này minh họa cho luận điểm "it demands structural change" ở đầu đoạn 4.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as policy or structural responses EXCEPT:</div>
+    <ul><li>A. taxes on sugary beverages</li><li>B. clearer nutritional labelling</li><li>C. reforming agricultural subsidies</li><li>D. banning all imported produce</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Thuế đồ uống có đường, ghi nhãn dinh dưỡng rõ ràng, và cải cách trợ cấp nông nghiệp đều được nhắc ở đoạn 4 → loại A, B, C. "Cấm nhập khẩu nông sản" KHÔNG xuất hiện trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward solving modern nutrition problems is best described as:</div>
+    <ul><li>A. convinced that individual willpower alone is sufficient</li><li>B. supportive of the view that systemic, structural change is needed alongside personal effort</li><li>C. dismissive of any government intervention</li><li>D. indifferent to obesity and food safety issues</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 nhấn mạnh "requires more than individual willpower; it demands structural change" và kết luận về việc cần điều chỉnh động lực hệ thống.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"swim against a powerful economic current"</b> (paragraph 4) implies that:</div>
+    <ul><li>A. individuals trying to eat healthily face strong structural obstacles created by economic incentives</li><li>B. swimming is a good form of exercise for weight loss</li><li>C. economic growth automatically improves diets</li><li>D. healthy eating requires no effort at all</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Hình ảnh "bơi ngược dòng chảy kinh tế mạnh mẽ" ẩn dụ cho việc cá nhân nỗ lực ăn uống lành mạnh nhưng phải chống lại các động lực kinh tế/hệ thống bất lợi (trợ cấp, quảng cáo, giá cả).</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 2 ============ -->
+  <h2>Từ vựng Bài #2 — Food &amp; Nutrition</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>obesity</td><td>(n)</td><td>bệnh béo phì</td></tr>
+    <tr><td>calorie-dense</td><td>(adj)</td><td>nhiều calo, đậm năng lượng</td></tr>
+    <tr><td>ultra-processed food</td><td>(n)</td><td>thực phẩm siêu chế biến</td></tr>
+    <tr><td>hyper-palatable <span class="c1tag">C1</span></td><td>(adj)</td><td>cực kỳ hấp dẫn vị giác</td></tr>
+    <tr><td>overconsumption</td><td>(n)</td><td>tiêu thụ quá mức</td></tr>
+    <tr><td>contamination</td><td>(n)</td><td>sự nhiễm khuẩn/ô nhiễm</td></tr>
+    <tr><td>traceability <span class="c1tag">C1</span></td><td>(n)</td><td>khả năng truy xuất nguồn gốc</td></tr>
+    <tr><td>recall (food)</td><td>(v)</td><td>thu hồi (sản phẩm)</td></tr>
+    <tr><td>subsidy</td><td>(n)</td><td>trợ cấp</td></tr>
+    <tr><td>disproportionately <span class="c1tag">C1</span></td><td>(adv)</td><td>một cách không cân xứng, quá mức</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh — Bài #1 (Health &amp; Medicine):</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <b>Bảng đáp án nhanh — Bài #2 (Food &amp; Nutrition):</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-A</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · bài __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → hôm sau để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 16–20 → nền rất tốt · 12–15 → ổn, đúng hướng · ≤11 → đọc lại 2 bài + học kỹ từ vựng trước khi qua ngày tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Tuần 4 · Ngày 4?</b> Quay lại lộ trình tick 4 ô của ngày này. Đây là buổi luyện kép 2 bài — hãy nghỉ ngắn giữa hai bài để giữ tập trung khi bấm giờ ~18 phút mỗi bài.
+  </div>
+
+</div>
+
+<footer>🩺🥗 Tuần 4 · Ngày 4 · VSTEP Reading — Health &amp; Medicine + Food &amp; Nutrition · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 9 — Luyện đề Travel &amp; Tourism · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>✈️ Ngày 9 — Luyện đề: Travel &amp; Tourism</h1>
+  <p>1 đề kết hợp chuẩn B2 + C1 → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~40 phút (tự bấm giờ ~15 phút làm bài)</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 1 bài · 10 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự bấm giờ ~15 phút, làm hết, KHÔNG tra cứu.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b>.</p>
+  </div>
+
+  <!-- ============ ĐỀ ============ -->
+  <h2>Đề luyện <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>Sustainable Tourism and the Search for Balance</h3>
+    <p><span class="pn">[1]</span> Tourism has long been celebrated as an engine of economic growth, generating income and jobs for communities that might otherwise struggle to compete in the global marketplace. Yet the very popularity that fuels this growth can also become its undoing. Destinations once prized for their pristine beaches, ancient temples, or untouched forests are increasingly overwhelmed by the sheer volume of visitors they attract, a phenomenon now widely known as overtourism.</p>
+    <p class="vi-para">[1] Du lịch từ lâu đã được ca ngợi như một động lực tăng trưởng kinh tế, tạo ra thu nhập và việc làm cho những cộng đồng vốn khó lòng cạnh tranh trên thị trường toàn cầu. Thế nhưng chính sự nổi tiếng thúc đẩy tăng trưởng đó cũng có thể trở thành nguyên nhân tự hủy hoại. Những điểm đến từng được ca tụng vì bãi biển nguyên sơ, ngôi đền cổ kính hay khu rừng chưa bị tác động ngày càng bị quá tải bởi lượng khách khổng lồ đổ về, một hiện tượng nay được gọi rộng rãi là "quá tải du lịch" (overtourism).</p>
+    <p><span class="pn">[2]</span> In response, a growing number of destinations have begun to embrace sustainable tourism, an approach that seeks to balance the needs of travellers, host communities, and the environment. Some cities have imposed daily caps on the number of tourists permitted to enter historic centres, while others levy an entry fee intended to fund conservation projects. Such measures are rarely popular with the travel industry, which depends on ever-increasing visitor numbers for its revenue, but proponents argue that without intervention, the attractions themselves risk being degraded beyond recovery.</p>
+    <p class="vi-para">[2] Để đối phó, ngày càng nhiều điểm đến bắt đầu áp dụng du lịch bền vững, một hướng tiếp cận nhằm cân bằng nhu cầu của du khách, cộng đồng sở tại và môi trường. Một số thành phố đã áp đặt hạn mức khách mỗi ngày được phép vào khu phố cổ, trong khi nơi khác thu phí vào cửa để gây quỹ cho các dự án bảo tồn. Những biện pháp như vậy hiếm khi được ngành du lịch ủng hộ, bởi ngành này phụ thuộc vào lượng khách ngày càng tăng để có doanh thu, nhưng những người ủng hộ cho rằng nếu không can thiệp, chính các điểm tham quan sẽ có nguy cơ xuống cấp không thể phục hồi.</p>
+    <p><span class="pn">[3]</span> Ecotourism, a subset of sustainable tourism, places particular emphasis on minimising environmental impact while fostering appreciation for natural habitats. Well-designed ecotourism ventures can provide local residents with a powerful economic incentive to protect rainforests, coral reefs, and wildlife rather than exploit them for short-term gain. However, critics caution that the label "eco" is sometimes applied loosely, a practice known as greenwashing, to lodges and tours that do little to reduce their actual footprint.</p>
+    <p class="vi-para">[3] Du lịch sinh thái, một nhánh của du lịch bền vững, đặc biệt chú trọng việc giảm thiểu tác động đến môi trường trong khi vun đắp sự trân trọng đối với môi trường sống tự nhiên. Những mô hình du lịch sinh thái được thiết kế tốt có thể mang lại cho cư dân địa phương động lực kinh tế mạnh mẽ để bảo vệ rừng nhiệt đới, rạn san hô và động vật hoang dã thay vì khai thác chúng vì lợi ích ngắn hạn. Tuy nhiên, những người phê phán cảnh báo rằng nhãn "eco" đôi khi bị gắn một cách tùy tiện, một hiện tượng được gọi là "tẩy xanh" (greenwashing), cho các khu nghỉ dưỡng và tour du lịch hầu như không giảm được tác động thực sự của mình.</p>
+    <p><span class="pn">[4]</span> Beyond environmental concerns, tourism also raises delicate questions about cultural authenticity. When indigenous ceremonies or traditional crafts are packaged primarily for visitor consumption, communities may find themselves caught between preserving genuine heritage and satisfying commercial expectations. Anthropologists have long debated whether such commodification inevitably dilutes cultural meaning or whether it can, under the right conditions, provide communities with the resources needed to sustain traditions that might otherwise fade.</p>
+    <p class="vi-para">[4] Ngoài những lo ngại về môi trường, du lịch còn đặt ra những câu hỏi tế nhị về tính chân thực của văn hóa. Khi các nghi lễ bản địa hay nghề thủ công truyền thống được đóng gói chủ yếu để phục vụ du khách, cộng đồng có thể thấy mình bị kẹt giữa việc gìn giữ di sản nguyên bản và đáp ứng kỳ vọng thương mại. Các nhà nhân học từ lâu đã tranh luận liệu việc biến văn hóa thành hàng hóa như vậy có tất yếu làm suy yếu ý nghĩa văn hóa hay không, hay liệu trong những điều kiện phù hợp, nó có thể cung cấp cho cộng đồng nguồn lực cần thiết để duy trì những truyền thống vốn có nguy cơ mai một.</p>
+    <p><span class="pn">[5]</span> What emerges from these debates is a recognition that tourism is neither inherently harmful nor automatically beneficial; its consequences depend largely on how it is managed. Governments, travel companies, and tourists themselves each bear some responsibility for ensuring that the pursuit of unforgettable experiences does not come at the expense of the places and people that make travel worthwhile in the first place.</p>
+    <p class="vi-para">[5] Điều rút ra từ những tranh luận này là nhận thức rằng du lịch không vốn dĩ có hại cũng không tự động mang lại lợi ích; hậu quả của nó phụ thuộc phần lớn vào cách nó được quản lý. Chính phủ, các công ty du lịch và bản thân du khách đều phải gánh một phần trách nhiệm để đảm bảo rằng việc theo đuổi những trải nghiệm khó quên không đánh đổi bằng những nơi chốn và con người vốn làm cho việc du lịch trở nên đáng giá ngay từ đầu.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the economic benefits of building new airports</li><li>B. the tension between tourism growth and the need to manage it sustainably</li><li>C. a list of the world's most beautiful beaches</li><li>D. why tourists should avoid travelling abroad</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài xoay quanh việc du lịch mang lại lợi ích nhưng cần được quản lý bền vững (overtourism, ecotourism, văn hóa bản địa). A/C/D chỉ là chi tiết hoặc không được đề cập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"pristine"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. crowded and noisy</li><li>B. unspoiled and clean</li><li>C. expensive to visit</li><li>D. difficult to reach</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "pristine beaches" = những bãi biển nguyên sơ, chưa bị tác động ≈ unspoiled and clean.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why do some cities impose an entry fee on tourists?</div>
+    <ul><li>A. To discourage all foreign visitors</li><li>B. To fund conservation projects</li><li>C. To increase airline profits</li><li>D. To replace local taxes</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "others levy an entry fee intended to fund conservation projects."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"which"</b> (in "the travel industry, which depends on...") refers to:</div>
+    <ul><li>A. daily caps</li><li>B. historic centres</li><li>C. the travel industry</li><li>D. conservation projects</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Mệnh đề quan hệ "which depends on ever-increasing visitor numbers" bổ nghĩa trực tiếp cho "the travel industry" đứng ngay trước nó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that well-managed ecotourism:</div>
+    <ul><li>A. always harms local wildlife</li><li>B. can give local people a reason to protect nature</li><li>C. is identical to greenwashing</li><li>D. is banned in most countries</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "provide local residents with a powerful economic incentive to protect rainforests, coral reefs, and wildlife" → ecotourism tốt tạo động lực bảo vệ thiên nhiên.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"commodification"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. the process of turning something into a product to be sold</li><li>B. the act of destroying ancient buildings</li><li>C. the process of learning a new language</li><li>D. the removal of taxes on goods</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Bối cảnh: nghi lễ/thủ công truyền thống "packaged primarily for visitor consumption" → commodification = việc biến (văn hóa) thành hàng hóa để bán.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"greenwashing"</b> in paragraph 3?</div>
+    <ul><li>A. To praise all ecotourism ventures equally</li><li>B. To warn that some businesses falsely claim to be eco-friendly</li><li>C. To explain how airlines set ticket prices</li><li>D. To describe a type of rainforest animal</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu chứa "greenwashing" nói về việc nhãn "eco" bị lạm dụng cho những nơi không thực sự giảm tác động môi trường → cảnh báo sự giả danh.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as tourism management measures EXCEPT:</div>
+    <ul><li>A. daily visitor caps in historic centres</li><li>B. entry fees to fund conservation</li><li>C. banning tourists from entering any country</li><li>D. ecotourism ventures that involve local communities</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Daily caps, entry fees (đoạn 2), ecotourism (đoạn 3) đều được nhắc → loại A, B, D. "Banning tourists from entering any country" KHÔNG được đề cập → đáp án C.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward tourism, as expressed in the final paragraph, is best described as:</div>
+    <ul><li>A. entirely negative and pessimistic</li><li>B. balanced, emphasising shared responsibility</li><li>C. indifferent to environmental issues</li><li>D. purely celebratory with no reservations</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 5: "neither inherently harmful nor automatically beneficial" và "each bear some responsibility" → thái độ cân bằng, nhấn mạnh trách nhiệm chung.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> In paragraph 4, the debate among anthropologists implies that the commercialisation of cultural traditions:</div>
+    <ul><li>A. has a clearly agreed, single outcome</li><li>B. may either weaken cultural meaning or help preserve it, depending on context</li><li>C. is always beneficial to indigenous communities</li><li>D. has no connection to tourism at all</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "whether such commodification inevitably dilutes cultural meaning or whether it can... provide communities with the resources needed to sustain traditions" → hai khả năng trái ngược, không có kết luận tuyệt đối → phụ thuộc bối cảnh.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG ============ -->
+  <h2>Từ vựng chủ đề Travel &amp; Tourism</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>overtourism</td><td>(n)</td><td>tình trạng quá tải du lịch</td></tr>
+    <tr><td>pristine</td><td>(adj)</td><td>nguyên sơ, chưa bị tác động</td></tr>
+    <tr><td>sustainable tourism</td><td>(n phr)</td><td>du lịch bền vững</td></tr>
+    <tr><td>impose a cap</td><td>(phr)</td><td>áp đặt giới hạn/hạn mức</td></tr>
+    <tr><td>levy (a fee) <span class="c1tag">C1</span></td><td>(v)</td><td>thu, đánh (phí/thuế)</td></tr>
+    <tr><td>conservation</td><td>(n)</td><td>công tác bảo tồn</td></tr>
+    <tr><td>degrade</td><td>(v)</td><td>làm suy thoái, xuống cấp</td></tr>
+    <tr><td>ecotourism</td><td>(n)</td><td>du lịch sinh thái</td></tr>
+    <tr><td>incentive</td><td>(n)</td><td>động lực, khích lệ</td></tr>
+    <tr><td>greenwashing <span class="c1tag">C1</span></td><td>(n)</td><td>hành vi "tẩy xanh" (giả danh thân thiện môi trường)</td></tr>
+    <tr><td>footprint</td><td>(n)</td><td>dấu chân (tác động môi trường)</td></tr>
+    <tr><td>authenticity</td><td>(n)</td><td>tính chân thực, tính nguyên bản</td></tr>
+    <tr><td>commodification <span class="c1tag">C1</span></td><td>(n)</td><td>quá trình biến thành hàng hóa để bán</td></tr>
+    <tr><td>dilute <span class="c1tag">C1</span></td><td>(v)</td><td>làm loãng, làm suy yếu (ý nghĩa)</td></tr>
+    <tr><td>inherently <span class="c1tag">C1</span></td><td>(adv)</td><td>vốn dĩ, tự bản chất</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-C · 5-B · 6-A · 7-B · 8-C · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → buổi sau để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10 → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài + học kỹ từ vựng trước khi qua Ngày 10.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 9?</b> Quay lại lộ trình tick 4 ô của Ngày 9. Ngày 10 sẽ là đề chủ đề <b>Media &amp; Communication</b> theo đúng format này (1 đề kết hợp B2 + C1).
+  </div>
+
+</div>
+
+<footer>✈️ Ngày 9 · VSTEP Reading — Travel &amp; Tourism · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

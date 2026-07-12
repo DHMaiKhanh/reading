@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 8 — Luyện đề Business &amp; Economy · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>💼 Ngày 8 — Luyện đề: Business &amp; Economy</h1>
+  <p>1 đề kết hợp chuẩn B2 + C1 → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~45 phút</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 1 bài · 10 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b>. Bản dịch tiếng Việt bên dưới mỗi đoạn chỉ để đối chiếu — hãy cố đọc và hiểu tiếng Anh trước.</p>
+  </div>
+
+  <!-- ============ ĐỀ ============ -->
+  <h2>Đề luyện <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>The Rise of the Small Online Seller</h3>
+    <p><span class="pn">[1]</span> A decade ago, launching a retail business typically required a shop front, a bank loan, and considerable savings set aside to cover the lean early months. Today, a single laptop and a modest amount of stock are often enough to start selling to customers on the other side of the world. E-commerce platforms have dismantled many of the traditional barriers to entry, allowing individuals with little capital to test a product idea almost overnight. This democratisation of trade has fuelled a wave of micro-entrepreneurship, particularly among younger generations drawn to the flexibility of running a business from home.</p>
+    <p class="vi-para">[1] Một thập kỷ trước, để khởi nghiệp kinh doanh bán lẻ thường cần có mặt bằng cửa hàng, một khoản vay ngân hàng, và một số tiền tiết kiệm đáng kể để trang trải những tháng đầu ít lợi nhuận. Ngày nay, chỉ cần một chiếc laptop và một lượng hàng khiêm tốn cũng thường đủ để bắt đầu bán hàng cho khách ở nửa kia thế giới. Các nền tảng thương mại điện tử đã phá bỏ nhiều rào cản gia nhập thị trường truyền thống, cho phép những người ít vốn thử nghiệm ý tưởng sản phẩm gần như chỉ sau một đêm. Sự đại chúng hóa hoạt động thương mại này đã thúc đẩy một làn sóng khởi nghiệp siêu nhỏ, đặc biệt ở thế hệ trẻ bị thu hút bởi sự linh hoạt của việc kinh doanh tại nhà.</p>
+
+    <p><span class="pn">[2]</span> Central to this shift is the way digital advertising has evolved. Rather than paying a flat fee for a billboard or a newspaper column, sellers can now target adverts precisely at the shoppers most likely to buy, based on their browsing habits and past purchases. This precision has made marketing dramatically more cost-effective for small operators, who once could never have competed with the advertising budgets of large corporations. However, it has also created new dependencies: a business's fortunes can rise or fall according to changes an advertising platform makes to its algorithm, over which the seller has no control whatsoever.</p>
+    <p class="vi-para">[2] Cốt lõi của sự thay đổi này là cách quảng cáo kỹ thuật số đã phát triển. Thay vì trả một khoản phí cố định cho biển quảng cáo hay một mục trên báo, người bán giờ đây có thể nhắm quảng cáo chính xác đến những khách hàng có khả năng mua cao nhất, dựa trên thói quen duyệt web và lịch sử mua hàng của họ. Sự chính xác này đã khiến việc tiếp thị trở nên hiệu quả về chi phí hơn hẳn đối với các nhà bán hàng nhỏ, những người trước đây không bao giờ có thể cạnh tranh nổi với ngân sách quảng cáo của các tập đoàn lớn. Tuy nhiên, điều này cũng tạo ra những sự phụ thuộc mới: vận mệnh của một doanh nghiệp có thể lên hoặc xuống tùy theo những thay đổi mà nền tảng quảng cáo thực hiện đối với thuật toán của nó, điều mà người bán hoàn toàn không có quyền kiểm soát.</p>
+
+    <p><span class="pn">[3]</span> The convenience of online selling should not obscure the genuine risks involved. Many new sellers underestimate the logistical complexity of fulfilling orders, managing returns, and maintaining customer trust without the face-to-face reassurance of a physical shop. A single batch of poor reviews, whether fair or not, can inflict lasting damage on a fledgling brand's reputation, since prospective customers routinely consult ratings before parting with their money. Consequently, seasoned sellers advise newcomers to treat customer service as seriously as the product itself.</p>
+    <p class="vi-para">[3] Sự tiện lợi của việc bán hàng trực tuyến không nên che khuất những rủi ro thực sự đi kèm. Nhiều người bán mới đánh giá thấp mức độ phức tạp của việc xử lý đơn hàng, quản lý trả hàng, và duy trì niềm tin của khách hàng mà không có sự trấn an trực tiếp của một cửa hàng vật lý. Chỉ một loạt đánh giá tiêu cực, dù công bằng hay không, cũng có thể gây tổn hại lâu dài đến uy tín của một thương hiệu non trẻ, vì khách hàng tiềm năng thường xuyên xem đánh giá trước khi bỏ tiền ra mua. Vì vậy, những người bán hàng dày dạn kinh nghiệm khuyên người mới nên coi trọng dịch vụ khách hàng ngang với chính sản phẩm.</p>
+
+    <p><span class="pn">[4]</span> Economists remain divided over the broader consequences of this trend. Optimists argue that lowering the barriers to starting a business spreads economic opportunity more widely and injects fresh competition into markets long dominated by a handful of established players. Sceptics counter that the flood of small sellers has driven prices so low that many struggle to earn a sustainable income, and that the platforms hosting these businesses ultimately extract a disproportionate share of the profits through fees and commissions. Both camps agree, at least, that the phenomenon shows no sign of slowing.</p>
+    <p class="vi-para">[4] Các nhà kinh tế học vẫn còn bất đồng về hệ quả rộng lớn hơn của xu hướng này. Những người lạc quan cho rằng việc hạ thấp rào cản khởi nghiệp giúp phân bổ cơ hội kinh tế rộng rãi hơn và tạo thêm sự cạnh tranh mới vào các thị trường vốn từ lâu do một số ít doanh nghiệp lớn thống trị. Những người hoài nghi phản bác rằng làn sóng người bán nhỏ lẻ đã đẩy giá xuống thấp đến mức nhiều người vật lộn để kiếm được thu nhập bền vững, và các nền tảng lưu trữ những doanh nghiệp này cuối cùng lại trích một phần lợi nhuận không tương xứng thông qua phí và hoa hồng. Ít nhất, cả hai phe đều đồng ý rằng hiện tượng này không có dấu hiệu chậm lại.</p>
+
+    <p><span class="pn">[5]</span> Whatever verdict history eventually delivers, one thing is already clear: the line between hobbyist and entrepreneur has blurred considerably. A person selling handmade candles from a spare bedroom may, within a few years, be running an operation that rivals a small high-street chain. Whether this represents the democratisation of commerce or merely a more precarious form of employment probably depends on where, on this new economic ladder, one happens to be standing.</p>
+    <p class="vi-para">[5] Dù lịch sử cuối cùng đưa ra phán quyết gì, có một điều đã rõ ràng: ranh giới giữa người kinh doanh nghiệp dư và doanh nhân thực thụ đã trở nên mờ nhạt đáng kể. Một người bán nến thủ công từ một phòng ngủ trống có thể, chỉ trong vài năm, điều hành một cơ sở kinh doanh sánh ngang với một chuỗi cửa hàng nhỏ trên phố. Việc điều này thể hiện sự đại chúng hóa hoạt động thương mại hay chỉ đơn thuần là một hình thức việc làm bấp bênh hơn có lẽ tùy thuộc vào việc mỗi người đang đứng ở đâu trên chiếc thang kinh tế mới này.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of newspaper advertising</li><li>B. how e-commerce has enabled small-scale entrepreneurship and its mixed consequences</li><li>C. why bank loans are difficult to obtain</li><li>D. the process of manufacturing handmade candles</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Toàn bài xoay quanh việc bán hàng online giúp người ít vốn khởi nghiệp dễ dàng hơn, cùng với rủi ro và tranh cãi kinh tế đi kèm. A, C, D chỉ là chi tiết nhỏ, không phải ý chính.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"dismantled"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. rebuilt</li><li>B. removed or taken apart</li><li>C. financed</li><li>D. advertised</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "E-commerce platforms have dismantled many of the traditional barriers to entry" — dismantled = gỡ bỏ/phá bỏ (rào cản) ≈ removed or taken apart.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why has digital advertising become more cost-effective for small sellers?</div>
+    <ul><li>A. Because platforms give free advertising to new businesses</li><li>B. Because adverts can be targeted precisely at likely buyers based on browsing habits</li><li>C. Because newspapers have lowered their prices</li><li>D. Because large corporations no longer advertise</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "sellers can now target adverts precisely at the shoppers most likely to buy, based on their browsing habits and past purchases."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"which"</b> (in "over which the seller has no control") refers to:</div>
+    <ul><li>A. advertising budgets</li><li>B. changes an advertising platform makes to its algorithm</li><li>C. large corporations</li><li>D. browsing habits</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu gốc: "...according to changes an advertising platform makes to its algorithm, over which the seller has no control" → "which" thay cho "changes...to its algorithm" mà người bán không kiểm soát được.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that new online sellers often fail because:</div>
+    <ul><li>A. they charge prices that are too high</li><li>B. they underestimate operational challenges and the importance of reputation</li><li>C. they refuse to sell internationally</li><li>D. they spend too much money on advertising</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3: "Many new sellers underestimate the logistical complexity...without the face-to-face reassurance...poor reviews...can inflict lasting damage" → họ đánh giá thấp khó khăn vận hành và uy tín/đánh giá khách hàng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"fledgling"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. well-established and famous</li><li>B. newly formed and inexperienced</li><li>C. bankrupt and closing down</li><li>D. extremely profitable</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a fledgling brand's reputation" — fledgling = non trẻ, mới hình thành, còn thiếu kinh nghiệm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"a person selling handmade candles from a spare bedroom"</b> in paragraph 5?</div>
+    <ul><li>A. To criticise people who sell candles</li><li>B. To illustrate how quickly a small hobby seller can grow into a serious business</li><li>C. To explain how candles are manufactured</li><li>D. To argue that physical shops are better than online stores</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Ví dụ này minh họa cho ý "the line between hobbyist and entrepreneur has blurred considerably" — người bán nhỏ lẻ có thể lớn mạnh nhanh chóng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span><span class="c1tag">C1</span> All of the following are mentioned as risks or downsides of online selling EXCEPT:</div>
+    <ul><li>A. dependency on advertising platform algorithms</li><li>B. difficulty managing logistics and returns</li><li>C. platforms taking a large share of profits through fees</li><li>D. a legal requirement to register as a limited company</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 2), B (đoạn 3), C (đoạn 4: "platforms...extract a disproportionate share of the profits through fees and commissions") đều được nhắc đến. "Legal requirement to register as a limited company" không xuất hiện trong bài → D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the growth of small online sellers is best described as:</div>
+    <ul><li>A. entirely dismissive and negative</li><li>B. balanced, acknowledging both benefits and risks</li><li>C. uncritically enthusiastic</li><li>D. indifferent and uninterested</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày cả lợi ích (đoạn 1-2, quan điểm "optimists" ở đoạn 4) lẫn rủi ro (đoạn 3, quan điểm "sceptics" ở đoạn 4), kết luận trung lập ở đoạn 5.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The final sentence of the passage ("...probably depends on where...one happens to be standing") implies that:</div>
+    <ul><li>A. everyone benefits equally from e-commerce</li><li>B. whether this trend is positive or negative depends on a person's individual circumstances and success</li><li>C. only wealthy people can succeed in online selling</li><li>D. the author has no opinion on the matter at all</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu này ngụ ý rằng đánh giá "democratisation" hay "precarious employment" tùy thuộc vào vị trí/hoàn cảnh của từng người trên "chiếc thang kinh tế" — tức là kết quả không đồng đều cho tất cả mọi người.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG ============ -->
+  <h2>Từ vựng chủ đề Business &amp; Economy</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>barrier to entry</td><td>(n phr)</td><td>rào cản gia nhập (thị trường)</td></tr>
+    <tr><td>dismantle</td><td>(v)</td><td>gỡ bỏ, phá bỏ</td></tr>
+    <tr><td>democratisation <span class="c1tag">C1</span></td><td>(n)</td><td>sự đại chúng hóa, phổ cập hóa</td></tr>
+    <tr><td>micro-entrepreneurship</td><td>(n)</td><td>hoạt động khởi nghiệp quy mô siêu nhỏ</td></tr>
+    <tr><td>cost-effective</td><td>(adj)</td><td>hiệu quả về chi phí</td></tr>
+    <tr><td>dependency</td><td>(n)</td><td>sự phụ thuộc</td></tr>
+    <tr><td>fulfil an order</td><td>(phr)</td><td>hoàn tất/giao đơn hàng</td></tr>
+    <tr><td>fledgling <span class="c1tag">C1</span></td><td>(adj)</td><td>mới thành lập, non trẻ</td></tr>
+    <tr><td>inflict damage</td><td>(phr)</td><td>gây tổn hại</td></tr>
+    <tr><td>sustainable income</td><td>(n phr)</td><td>thu nhập bền vững</td></tr>
+    <tr><td>disproportionate <span class="c1tag">C1</span></td><td>(adj)</td><td>không tương xứng, quá mức</td></tr>
+    <tr><td>commission</td><td>(n)</td><td>hoa hồng, phí trích lại</td></tr>
+    <tr><td>precarious <span class="c1tag">C1</span></td><td>(adj)</td><td>bấp bênh, thiếu ổn định</td></tr>
+    <tr><td>rival (v)</td><td>(v)</td><td>sánh ngang, cạnh tranh ngang hàng</td></tr>
+    <tr><td>seasoned seller</td><td>(n phr)</td><td>người bán hàng dày dạn kinh nghiệm</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10 → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài + học kỹ từ vựng trước khi qua Ngày 9.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 8?</b> Quay lại lộ trình tick 4 ô của Ngày 8. Ngày 9 sẽ là đề chủ đề <b>Travel &amp; Tourism</b> theo đúng format này (1 đề kết hợp B2 + C1).
+  </div>
+
+</div>
+
+<footer>💼 Ngày 8 · VSTEP Reading — Business &amp; Economy · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

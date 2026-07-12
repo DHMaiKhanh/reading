@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 41 — Chiến thuật phòng thi · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎯 Tuần 8 · Ngày 4 — Chiến thuật phòng thi VSTEP Reading</h1>
+  <p>Không học từ mới hôm nay — tập trung kỹ thuật làm bài để tối ưu điểm số trong phòng thi thật</p>
+  <div class="meta">
+    <span class="badge">🕐 ~30 phút</span>
+    <span class="badge">🟢 Tips &amp; chiến thuật</span>
+    <span class="badge">📝 4 mục lý thuyết + 1 bài áp dụng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Vì sao cần buổi này?</b> Rất nhiều thí sinh mất điểm không phải vì không hiểu bài, mà vì <b>quản lý thời gian kém</b> hoặc <b>bỏ trống câu hỏi</b> khi hết giờ. Hôm nay không có từ vựng mới — chỉ có 4 chiến thuật giúp bạn "vắt" điểm tối đa từ những gì đã học trong 7 tuần rưỡi qua.
+  </div>
+
+  <!-- ============ MỤC 1 ============ -->
+  <h2>1. Thứ tự làm bài — đừng làm theo thứ tự đề in sẵn</h2>
+  <div class="card">
+    <p>Đề thi in câu hỏi theo thứ tự cố định, nhưng bạn <b>không bắt buộc</b> phải làm từ câu 1 đến câu cuối. Nguyên tắc vàng: <b>làm câu dễ / chủ đề quen trước, câu khó / cần đọc toàn bài để cuối cùng</b>.</p>
+    <h3>Gợi ý thứ tự làm trong mỗi bài đọc:</h3>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm trước (nhanh, có "từ khóa" rõ ràng để scan):</b> Vocabulary (từ đồng nghĩa), Reference (từ "it/this/they" quy chiếu về đâu), Detail (thông tin cụ thể có trong 1 câu/đoạn), NOT/EXCEPT (loại trừ theo từng đoạn).</li>
+      <li><b>Làm sau (cần hiểu tổng thể, tốn thời gian hơn):</b> Inference (suy luận), Purpose (mục đích tác giả), Tone/Attitude (thái độ).</li>
+      <li><b>Làm cuối cùng — luôn luôn:</b> <b>Main idea</b> (ý chính của cả bài). Lý do: câu này cần bạn đã đọc và hiểu toàn bộ đoạn văn, nên nếu làm đầu tiên khi chưa đọc kỹ, bạn dễ chọn nhầm chi tiết nhỏ thay vì ý bao trùm. Sau khi làm xong các câu Detail/Vocabulary, bạn đã "vô tình" đọc gần hết bài — lúc đó chọn Main idea sẽ chính xác hơn nhiều.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Mẹo nhỏ: khi vào bài, liếc nhanh qua toàn bộ câu hỏi (không đọc đáp án chi tiết) để biết dạng nào xuất hiện, từ đó quyết định thứ tự làm ngay từ đầu.</p>
+  </div>
+
+  <!-- ============ MỤC 2 ============ -->
+  <h2>2. Đoán thông minh khi bí — không bao giờ để trống</h2>
+  <div class="card">
+    <p><b>Nguyên tắc quan trọng nhất:</b> VSTEP Reading là thi trắc nghiệm và <b>KHÔNG trừ điểm</b> cho câu trả lời sai. Điều đó có nghĩa là để trống một câu = chắc chắn mất điểm, còn đoán bừa vẫn có ~25% cơ hội đúng. → <b>Tuyệt đối không bao giờ để trống bất kỳ câu nào</b>, kể cả khi hết giờ.</p>
+    <h3>Mẹo loại trừ đáp án khi không chắc:</h3>
+    <ul style="margin:6px 0 0 18px; list-style:disc;">
+      <li><b>Loại đáp án quá tuyệt đối:</b> các phương án chứa từ như <i>always, never, only, all, completely, must</i> thường sai vì bài đọc học thuật hiếm khi khẳng định tuyệt đối 100%. Đáp án đúng thường có sắc thái vừa phải hơn (<i>often, may, tends to, generally</i>).</li>
+      <li><b>Loại đáp án không liên quan chủ đề đoạn:</b> nếu câu hỏi hỏi về đoạn 3 nhưng đáp án nhắc đến nội dung chỉ xuất hiện ở đoạn 1 hoặc không có trong bài → gần như chắc chắn sai (đây là "bẫy đánh lạc hướng" — distractor).</li>
+      <li><b>Loại đáp án "đúng nhưng lạc đề":</b> đáp án có thể đúng về mặt kiến thức chung nhưng KHÔNG được nói đến trong bài → vẫn là sai, vì VSTEP kiểm tra "bài nói gì" chứ không kiểm tra kiến thức nền của bạn.</li>
+      <li><b>Ưu tiên đáp án diễn giải lại (paraphrase)</b> gần nghĩa với câu gốc trong bài hơn là đáp án lặp y nguyên từ ngữ trong bài (đôi khi là bẫy "giống từ nhưng sai ý").</li>
+    </ul>
+  </div>
+
+  <!-- ============ MỤC 3 ============ -->
+  <h2>3. Quy trình mỗi bài — canh giờ chặt chẽ</h2>
+  <div class="card">
+    <p>VSTEP Reading thường có <b>4 bài đọc trong 60 phút</b> → trung bình <b>15 phút/bài</b>. Nếu không chia thời gian rõ ràng, bạn dễ bị "cháy giờ" ở bài đầu và không kịp làm bài cuối (dù bài cuối có thể dễ hơn).</p>
+    <table>
+      <tr><th width="22%">Bước</th><th width="15%">Thời gian</th><th>Việc cần làm</th></tr>
+      <tr><td>1. Skim</td><td>~2 phút</td><td>Đọc lướt toàn bài 1 lượt để nắm chủ đề chung, cấu trúc đoạn (mỗi đoạn nói về gì), KHÔNG dịch từng từ.</td></tr>
+      <tr><td>2. Đọc câu hỏi</td><td>~1 phút</td><td>Đọc nhanh toàn bộ câu hỏi (chưa đọc đáp án kỹ) để xác định dạng câu và quyết định thứ tự làm (theo Mục 1).</td></tr>
+      <tr><td>3. Scan &amp; trả lời</td><td>~10 phút</td><td>Quay lại bài, scan từng câu theo thứ tự đã chọn: tìm từ khóa, đối chiếu đoạn liên quan, chọn đáp án. Main idea làm cuối.</td></tr>
+      <tr><td>4. Soát lại</td><td>~2 phút</td><td>Kiểm tra đã tô đủ đáp án cho tất cả các câu chưa (không bỏ sót), xem lại câu còn phân vân.</td></tr>
+      <tr><td><b>Tổng / bài</b></td><td><b>~15 phút</b></td><td><b>× 4 bài = 60 phút</b> — vừa khít thời gian thi thật.</td></tr>
+    </table>
+    <p style="margin-top:8px; color:var(--muted)">👉 Mang đồng hồ hoặc canh giờ thi ngầm: nếu quá 15 phút cho 1 bài mà vẫn còn 2-3 câu khó, hãy đoán nhanh theo Mục 2 và chuyển sang bài tiếp theo — đừng để mất cả bài sau chỉ vì cố "ăn thua" 1 câu khó.</p>
+  </div>
+
+  <!-- ============ MỤC 4 ============ -->
+  <h2>4. Tâm lý phòng thi</h2>
+  <div class="card tip">
+    <ul style="margin:6px 0 0 18px; list-style:disc;">
+      <li><b>Ăn sáng đủ no</b> (nhưng không quá no) trước giờ thi — não cần năng lượng để tập trung 60+ phút liên tục.</li>
+      <li><b>Đến sớm 20-30 phút</b> để ổn định chỗ ngồi, tránh vội vàng, hồi hộp làm giảm khả năng đọc hiểu.</li>
+      <li><b>Không hoảng khi gặp bài khó</b> — VSTEP luôn có bài dễ và bài khó xen kẽ; gặp 1 đoạn khó không có nghĩa cả đề khó. Cứ áp dụng đúng quy trình, đoán thông minh câu quá khó, rồi đi tiếp.</li>
+      <li><b>Thở đều, chậm lại vài giây</b> nếu thấy tim đập nhanh hoặc đầu óc "trắng xóa" — vài nhịp thở sâu giúp lấy lại bình tĩnh nhanh hơn là cố đọc tiếp trong trạng thái hoảng loạn.</li>
+      <li><b>Tin vào quá trình đã luyện tập</b> — 7 tuần rưỡi ôn luyện đã xây nền tảng từ vựng và kỹ năng vững; hôm nay chỉ là công cụ để bạn dùng nó hiệu quả nhất trong phòng thi.</li>
+    </ul>
+  </div>
+
+  <!-- ============ BÀI ÁP DỤNG ============ -->
+  <h2>Bài đọc áp dụng thử <span class="lvl">Exam Skills</span></h2>
+
+  <div class="passage">
+    <h3>Making the Most of Exam Time</h3>
+    <p><span class="pn">[1]</span> Success in a timed reading test depends on more than simply understanding English. Even highly proficient readers can lose marks if they misjudge how to allocate their time. Examiners often note that many candidates spend far too long on the first passage, leaving insufficient time to attempt the final ones, which may in fact be easier.</p>
+    <p class="vi-para">[1] Thành công trong một bài thi đọc có giới hạn thời gian phụ thuộc vào nhiều thứ hơn là chỉ hiểu tiếng Anh. Ngay cả những người đọc rất giỏi cũng có thể mất điểm nếu phân bổ thời gian không hợp lý. Giám khảo thường nhận thấy nhiều thí sinh dành quá nhiều thời gian cho bài đọc đầu tiên, khiến không còn đủ thời gian làm các bài cuối — trong khi những bài đó đôi khi lại dễ hơn.</p>
+    <p><span class="pn">[2]</span> A useful strategy is to skim each passage briefly before reading the questions. Skimming means reading quickly to grasp the general topic and the function of each paragraph, rather than translating every word. This overview makes it much easier to locate specific information later, since the reader already has a rough map of where key ideas are located.</p>
+    <p class="vi-para">[2] Một chiến thuật hữu ích là đọc lướt nhanh qua mỗi bài trước khi đọc câu hỏi. Đọc lướt nghĩa là đọc nhanh để nắm được chủ đề chung và vai trò của từng đoạn văn, chứ không phải dịch từng từ một. Cách làm này giúp việc tìm thông tin cụ thể về sau dễ dàng hơn nhiều, vì người đọc đã có sẵn một "bản đồ" sơ lược về vị trí các ý chính.</p>
+    <p><span class="pn">[3]</span> Another common pitfall is leaving answers blank. Since most standardized reading tests do not penalize incorrect guesses, an unanswered question is a guaranteed zero, whereas an educated guess always carries some chance of being correct. Experienced test-takers therefore fill in every answer, regardless of how confident they feel, before time runs out.</p>
+    <p class="vi-para">[3] Một cạm bẫy phổ biến khác là để trống câu trả lời. Vì hầu hết các bài thi đọc chuẩn hóa không trừ điểm khi trả lời sai, một câu bỏ trống chắc chắn nhận 0 điểm, trong khi một câu đoán có căn cứ luôn có cơ hội đúng nào đó. Vì vậy, những thí sinh có kinh nghiệm luôn tô đáp án cho mọi câu hỏi, dù có tự tin hay không, trước khi hết giờ.</p>
+    <p><span class="pn">[4]</span> Finally, remaining calm matters as much as any technique. Anxiety narrows attention and makes it harder to process complex sentences. Candidates who pause briefly to breathe when they feel overwhelmed tend to perform better than those who rush forward in a state of panic.</p>
+    <p class="vi-para">[4] Cuối cùng, giữ được bình tĩnh cũng quan trọng không kém bất kỳ kỹ thuật nào. Sự lo lắng làm thu hẹp khả năng tập trung và khiến việc xử lý các câu văn phức tạp trở nên khó khăn hơn. Những thí sinh biết dừng lại thở vài nhịp khi cảm thấy quá tải thường làm bài tốt hơn so với những người cứ lao đầu đọc tiếp trong trạng thái hoảng loạn.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. why English proficiency alone guarantees success</li><li>B. practical strategies for managing a timed reading test</li><li>C. how examiners design test questions</li><li>D. the history of standardized testing</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả 4 đoạn đều xoay quanh các chiến thuật cụ thể (thời gian, skim, không bỏ trống, tâm lý) để làm tốt bài thi có giới hạn thời gian.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Detail</span> According to paragraph 1, what mistake do many candidates make?</div>
+    <ul><li>A. They skip the first passage entirely</li><li>B. They spend too much time on the first passage</li><li>C. They only read the questions, not the passage</li><li>D. They finish too quickly and leave early</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 1: "many candidates spend far too long on the first passage, leaving insufficient time..."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Vocabulary</span> The word <b class="k">"skimming"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. translating word by word</li><li>B. reading quickly for a general idea</li><li>C. memorizing every detail</li><li>D. writing a summary</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2 định nghĩa trực tiếp: "reading quickly to grasp the general topic... rather than translating every word."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Inference</span> It can be inferred from paragraph 3 that leaving a question blank:</div>
+    <ul><li>A. is always safer than guessing</li><li>B. results in the same outcome as an incorrect guess in terms of scoring benefit, but with zero chance of credit</li><li>C. is required by most exam rules</li><li>D. only applies to the last passage</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3: không trả lời = chắc chắn 0 điểm, còn đoán vẫn có cơ hội đúng → để trống không hề an toàn hơn, ngược lại còn kém lợi hơn đoán bừa. A quá tuyệt đối → loại theo mẹo Mục 2.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · NOT / EXCEPT</span> All of the following are mentioned as helpful strategies EXCEPT:</div>
+    <ul><li>A. skimming before reading questions</li><li>B. answering every question, even by guessing</li><li>C. pausing to breathe when feeling overwhelmed</li><li>D. re-reading the passage word by word multiple times</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Skimming (đoạn 2), luôn trả lời (đoạn 3), thở khi hoảng (đoạn 4) đều được nhắc. "Đọc lại từng từ nhiều lần" không được đề cập — thậm chí đoạn 2 còn khuyên KHÔNG dịch từng từ.</p></details>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Ghi nhớ 4 chiến thuật hôm nay:</b> (1) làm câu dễ trước, Main idea để cuối; (2) không bao giờ để trống, biết loại trừ đáp án tuyệt đối/lạc đề; (3) canh giờ chặt — 15 phút/bài theo 4 bước skim → đọc câu hỏi → scan &amp; trả lời → soát lại; (4) giữ tâm lý bình tĩnh, thở đều khi gặp khó. Đây là buổi tổng kết chiến thuật — hãy áp dụng ngay từ đề luyện tiếp theo để quen tay trước ngày thi thật.
+  </div>
+
+</div>
+
+<footer>🎯 Tuần 8 · Ngày 4 · VSTEP Reading — Chiến thuật phòng thi: kỹ năng ngang tầm với từ vựng và ngữ pháp.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

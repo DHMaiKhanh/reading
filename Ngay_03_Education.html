@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 3 — Luyện đề Education &amp; Learning · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎓 Ngày 3 — Luyện đề: Education &amp; Learning</h1>
+  <p>1 đề kết hợp chuẩn B2 + C1 → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~45 phút</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 1 bài · 10 câu · đủ 8 dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước):</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/10</b>. Bản dịch tiếng Việt bên dưới mỗi đoạn chỉ để đối chiếu — hãy cố đọc và hiểu tiếng Anh trước.</p>
+  </div>
+
+  <!-- ============ ĐỀ ============ -->
+  <h2>Đề luyện <span class="lvl">B2 + C1 · chuẩn VSTEP</span></h2>
+
+  <div class="passage">
+    <h3>Rethinking How We Learn</h3>
+    <p><span class="pn">[1]</span> Education has undergone a remarkable transformation over the past two decades. Where classrooms once relied almost entirely on textbooks and face-to-face lectures, many students now complete entire courses without ever setting foot on a campus. Online platforms allow learners to <b class="k">enrol</b> in programmes offered by universities on the other side of the world, pausing and replaying lessons at their own pace. Advocates argue that this flexibility has made education more accessible than ever, particularly for those who must balance study with work or family responsibilities.</p>
+    <p class="vi-para">[1] Giáo dục đã trải qua một sự chuyển đổi đáng kể trong hai thập kỷ qua. Nếu như trước đây lớp học gần như chỉ dựa vào sách giáo khoa và bài giảng trực tiếp, thì nay nhiều sinh viên hoàn thành toàn bộ khóa học mà không cần đặt chân đến trường. Các nền tảng học trực tuyến cho phép người học đăng ký vào các chương trình do những trường đại học ở nửa kia thế giới cung cấp, được tạm dừng và xem lại bài giảng theo tốc độ riêng của mình. Người ủng hộ cho rằng sự linh hoạt này đã khiến giáo dục trở nên dễ tiếp cận hơn bao giờ hết, đặc biệt đối với những ai phải cân bằng việc học với công việc hoặc trách nhiệm gia đình.</p>
+
+    <p><span class="pn">[2]</span> Studying abroad has likewise become far more common, as families increasingly view an international degree as a gateway to better career prospects. Universities actively <b class="k">recruit</b> foreign students, drawn by the tuition fees they bring as well as the cultural diversity they add to campus life. Yet the experience is not without its difficulties: students moving to an unfamiliar country must adapt to a new language, a different academic culture, and often a considerable degree of homesickness before they begin to thrive.</p>
+    <p class="vi-para">[2] Việc du học cũng trở nên phổ biến hơn nhiều, khi các gia đình ngày càng xem tấm bằng quốc tế như một cánh cửa dẫn đến triển vọng nghề nghiệp tốt hơn. Các trường đại học chủ động tuyển sinh viên nước ngoài, bị thu hút bởi học phí mà họ mang lại cũng như sự đa dạng văn hóa mà họ bổ sung cho đời sống học đường. Tuy nhiên, trải nghiệm này không phải không có khó khăn: sinh viên chuyển đến một đất nước xa lạ phải thích nghi với ngôn ngữ mới, nền văn hóa học thuật khác biệt, và thường là một nỗi nhớ nhà đáng kể trước khi họ có thể phát triển tốt.</p>
+
+    <p><span class="pn">[3]</span> Meanwhile, teaching methods inside the classroom have shifted as well. Rather than simply delivering lectures, many educators now favour <b class="k">interactive</b> approaches such as group projects, debates, and hands-on experiments. This shift reflects growing evidence that students retain information more effectively when they actively participate rather than passively listen. Some institutions have gone further still, adopting a "flipped classroom" model in which students watch recorded lectures at home and use class time exclusively for discussion and problem-solving.</p>
+    <p class="vi-para">[3] Trong khi đó, phương pháp giảng dạy trong lớp học cũng đã thay đổi. Thay vì chỉ đơn thuần giảng bài, nhiều giáo viên hiện nay ưa chuộng các phương pháp mang tính tương tác như dự án nhóm, tranh luận và thí nghiệm thực hành. Sự thay đổi này phản ánh bằng chứng ngày càng nhiều cho thấy học sinh ghi nhớ thông tin hiệu quả hơn khi họ chủ động tham gia thay vì thụ động nghe giảng. Một số cơ sở giáo dục còn đi xa hơn, áp dụng mô hình "lớp học đảo ngược", trong đó học sinh xem bài giảng đã ghi hình tại nhà và dành toàn bộ thời gian trên lớp cho thảo luận và giải quyết vấn đề.</p>
+
+    <p><span class="pn">[4]</span> Critics, however, caution that the rush toward online and technology-driven learning carries hidden costs. They point out that not every student has reliable internet access or a quiet space to study, which can <b class="k">exacerbate</b> existing inequalities rather than narrow them. Others worry that screens cannot fully replace the mentorship, spontaneous discussion, and sense of community that a physical classroom provides. Supporters respond that these problems are not inherent to technology itself but rather stem from uneven implementation, and that with proper investment, digital tools can be made available to all.</p>
+    <p class="vi-para">[4] Tuy nhiên, những người phản đối cảnh báo rằng việc vội vã chuyển sang học trực tuyến và dựa vào công nghệ tiềm ẩn những cái giá không dễ thấy. Họ chỉ ra rằng không phải học sinh nào cũng có kết nối internet ổn định hoặc một không gian yên tĩnh để học, điều này có thể làm trầm trọng thêm sự bất bình đẳng vốn có thay vì thu hẹp nó. Những người khác lo ngại rằng màn hình không thể thay thế hoàn toàn vai trò cố vấn, các cuộc thảo luận tự phát và cảm giác cộng đồng mà một lớp học thực tế mang lại. Người ủng hộ đáp lại rằng những vấn đề này không phải là bản chất của công nghệ mà bắt nguồn từ việc triển khai không đồng đều, và với đầu tư hợp lý, công cụ số có thể được phổ cập cho tất cả mọi người.</p>
+
+    <p><span class="pn">[5]</span> Ultimately, most experts agree that no single method holds all the answers. The most promising path forward appears to combine the best of both worlds: the accessibility and flexibility of digital tools alongside the human connection and accountability that traditional classrooms foster. As one education researcher observed, the goal is not to choose between the old and the new, but to design a system flexible enough to serve every learner, wherever and however they choose to study.</p>
+    <p class="vi-para">[5] Cuối cùng, hầu hết các chuyên gia đều đồng ý rằng không có phương pháp đơn lẻ nào nắm giữ mọi câu trả lời. Con đường hứa hẹn nhất phía trước dường như là kết hợp những điều tốt nhất của cả hai thế giới: tính dễ tiếp cận và linh hoạt của công cụ số cùng với sự kết nối con người và trách nhiệm mà lớp học truyền thống nuôi dưỡng. Như một nhà nghiên cứu giáo dục đã nhận xét, mục tiêu không phải là chọn giữa cái cũ và cái mới, mà là thiết kế một hệ thống đủ linh hoạt để phục vụ mọi người học, dù họ chọn học ở đâu và bằng cách nào.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. why textbooks are becoming useless</li><li>B. the changing landscape of education and how it should evolve</li><li>C. the history of universities around the world</li><li>D. how to apply for a study-abroad scholarship</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đi qua nhiều khía cạnh thay đổi của giáo dục (học trực tuyến, du học, phương pháp giảng dạy, tranh cãi) và kết luận về hướng đi kết hợp → ý bao trùm là sự thay đổi của giáo dục và cách nó nên phát triển.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"enrol"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. graduate from</li><li>B. register for</li><li>C. teach</li><li>D. cancel</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "learners to enrol in programmes offered by universities" = đăng ký tham gia chương trình ≈ register for.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what draws universities to recruit foreign students?</div>
+    <ul><li>A. Government pressure only</li><li>B. Tuition fees and the cultural diversity they add</li><li>C. A lack of local students</li><li>D. New teaching technology</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2: "drawn by the tuition fees they bring as well as the cultural diversity they add to campus life."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 4, the word <b class="k">"these problems"</b> refers to:</div>
+    <ul><li>A. unreliable internet access and the loss of mentorship/community from screens</li><li>B. tuition fees and cultural diversity</li><li>C. the flipped classroom model</li><li>D. homesickness among foreign students</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Câu trước đó nói về việc không phải ai cũng có internet/không gian yên tĩnh, và màn hình không thể thay thế mentorship/cộng đồng — "these problems" trỏ về đúng những vấn đề vừa nêu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that the "flipped classroom" model:</div>
+    <ul><li>A. eliminates the need for teachers entirely</li><li>B. uses class time mainly for passive listening</li><li>C. moves lecture-watching outside class so that class time can be used for discussion</li><li>D. is only used in online-only programmes</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "students watch recorded lectures at home and use class time exclusively for discussion and problem-solving" → đúng như C. A/B/D không được nói tới hoặc trái ngược.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"exacerbate"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. make worse</li><li>B. reduce</li><li>C. explain</li><li>D. celebrate</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "can exacerbate existing inequalities rather than narrow them" — đối lập với "narrow" (thu hẹp) nên exacerbate = làm trầm trọng thêm/tệ hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention the "flipped classroom" model in paragraph 3?</div>
+    <ul><li>A. To criticise traditional universities</li><li>B. To give an example of how teaching methods have shifted toward active participation</li><li>C. To argue that online learning should be banned</li><li>D. To describe a type of scholarship</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 3 nói chung về việc giáo dục chuyển hướng sang phương pháp tương tác/chủ động; flipped classroom được nêu như một ví dụ cụ thể ("Some institutions have gone further still...").</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as concerns about online/technology-driven learning EXCEPT:</div>
+    <ul><li>A. unequal access to reliable internet</li><li>B. loss of mentorship and classroom community</li><li>C. the high cost of textbooks</li><li>D. worsening existing inequalities</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Đoạn 4 nêu internet access (A), mentorship/community (B), inequalities (D) — nhưng "high cost of textbooks" KHÔNG được nhắc đến ở đâu trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the future of education is best described as:</div>
+    <ul><li>A. strongly against all new technology</li><li>B. balanced, favouring a combination of traditional and digital approaches</li><li>C. completely indifferent</li><li>D. certain that classrooms will disappear entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn cuối: "combine the best of both worlds... design a system flexible enough to serve every learner" → thái độ cân bằng, không nghiêng hẳn về bên nào.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"not to choose between the old and the new"</b> (paragraph 5) implies that:</div>
+    <ul><li>A. traditional classrooms should be abolished</li><li>B. online learning is inferior and should be phased out</li><li>C. education should integrate both traditional and digital methods rather than pick one</li><li>D. only new technology can improve learning outcomes</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu tiếp theo làm rõ: "design a system flexible enough to serve every learner" — tức không chọn phe mà kết hợp cả hai, đúng với ý C.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG ============ -->
+  <h2>Từ vựng chủ đề Education &amp; Learning</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>enrol</td><td>(v)</td><td>đăng ký, ghi danh (khóa học)</td></tr>
+    <tr><td>accessible</td><td>(adj)</td><td>dễ tiếp cận</td></tr>
+    <tr><td>recruit</td><td>(v)</td><td>tuyển dụng, tuyển sinh</td></tr>
+    <tr><td>tuition fees</td><td>(n)</td><td>học phí</td></tr>
+    <tr><td>homesickness</td><td>(n)</td><td>nỗi nhớ nhà</td></tr>
+    <tr><td>interactive</td><td>(adj)</td><td>mang tính tương tác</td></tr>
+    <tr><td>retain (information)</td><td>(v)</td><td>ghi nhớ, lưu giữ (thông tin)</td></tr>
+    <tr><td>flipped classroom</td><td>(n phr)</td><td>lớp học đảo ngược (xem bài ở nhà, thảo luận trên lớp)</td></tr>
+    <tr><td>exacerbate <span class="c1tag">C1</span></td><td>(v)</td><td>làm trầm trọng thêm</td></tr>
+    <tr><td>inequality</td><td>(n)</td><td>sự bất bình đẳng</td></tr>
+    <tr><td>mentorship <span class="c1tag">C1</span></td><td>(n)</td><td>vai trò cố vấn, hướng dẫn</td></tr>
+    <tr><td>inherent <span class="c1tag">C1</span></td><td>(adj)</td><td>vốn có, cố hữu</td></tr>
+    <tr><td>implementation</td><td>(n)</td><td>sự triển khai, thực hiện</td></tr>
+    <tr><td>accountability <span class="c1tag">C1</span></td><td>(n)</td><td>trách nhiệm giải trình</td></tr>
+    <tr><td>foster</td><td>(v)</td><td>nuôi dưỡng, thúc đẩy</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Đáp án</th><td>1-B · 2-B · 3-B · 4-A · 5-C · 6-A · 7-B · 8-C · 9-B · 10-C</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → ngày mai để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 8–10 → nền rất tốt · 6–7 → ổn, đúng hướng · ≤5 → đọc lại bài (kèm bản dịch song ngữ) + học kỹ từ vựng trước khi qua Ngày 4.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 3?</b> Quay lại lộ trình tick 4 ô của Ngày 3. Ngày 4 sẽ là đề chủ đề <b>Environment &amp; Climate</b> theo đúng format này (1 đề kết hợp B2 + C1).
+  </div>
+
+</div>
+
+<footer>🎓 Ngày 3 · VSTEP Reading — Education &amp; Learning · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 13 — Luyện đề Internet &amp; Social Media + Language &amp; Linguistics · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🌐 Ngày 13 — Tuần 3 · Ngày 3: Internet &amp; Social Media + Language &amp; Linguistics</h1>
+  <p>2 bài đọc độc lập, mỗi bài ~18 phút → làm đề → giải đề → rút từ vựng (song ngữ)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~36–40 phút</span>
+    <span class="badge">🟠 Đề B2 + C1 kết hợp</span>
+    <span class="badge">📝 2 bài · 18 câu · đủ dạng</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy trình hôm nay (4 bước) — áp dụng cho từng bài:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Làm đề</b> — tự làm hết, KHÔNG tra cứu, chưa cần bấm giờ.</li>
+      <li><b>Chấm điểm</b> — đối chiếu đáp án, đếm số câu đúng theo từng dạng.</li>
+      <li><b>Giải đề</b> (quan trọng nhất) — mỗi câu sai: tìm lại đoạn chứa đáp án, hiểu vì sao sai &amp; vì sao đáp án đúng.</li>
+      <li><b>Rút từ vựng</b> — ghi 10–15 từ mới + cập nhật "sổ lỗi".</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Đề nền là <b>B2</b>; các câu/từ gắn nhãn <span class="c1tag">C1</span> là phần khó hơn để kéo trần. Mục tiêu: đúng <b>~7–8/9</b> mỗi bài.</p>
+  </div>
+
+  <!-- ============ BÀI 1 ============ -->
+  <h2>Bài #1 <span class="lvl">Internet &amp; Social Media · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Staying Safe in a Connected World</h3>
+    <p><span class="pn">[1]</span> Barely two decades ago, the internet was a novelty reserved for a few enthusiasts; today it is woven so tightly into everyday life that most people would struggle to function without it. Banking, shopping, socialising, and even dating now largely take place online. This convenience, however, comes at a price: the more of our lives we transfer to the digital realm, the more exposed we become to cybercrime, a threat that has grown in both scale and sophistication.</p>
+    <p class="vi-para">[1] Chỉ mới cách đây khoảng hai thập kỷ, internet còn là một điều mới lạ dành riêng cho một số ít người đam mê; ngày nay nó đã hòa quyện chặt chẽ vào đời sống hàng ngày đến mức hầu hết mọi người sẽ khó lòng xoay sở nếu thiếu nó. Việc ngân hàng, mua sắm, giao lưu xã hội và cả hẹn hò giờ đây phần lớn diễn ra trực tuyến. Tuy nhiên, sự tiện lợi này phải trả giá: càng chuyển nhiều phần đời sống của mình sang thế giới số, chúng ta càng dễ bị tổn thương trước tội phạm mạng — một mối đe dọa đã gia tăng cả về quy mô lẫn mức độ tinh vi.</p>
+    <p><span class="pn">[2]</span> Phishing scams, in which fraudsters impersonate trustworthy organisations to trick victims into revealing passwords or financial details, remain one of the most common forms of attack. What makes phishing especially insidious is that it exploits human psychology rather than technical weaknesses; a cleverly worded email urging "immediate action" can override even a cautious user's better judgement. Cybersecurity experts therefore stress that no amount of software can fully compensate for a lapse in user vigilance.</p>
+    <p class="vi-para">[2] Lừa đảo giả mạo (phishing), trong đó kẻ gian mạo danh các tổ chức đáng tin cậy để lừa nạn nhân tiết lộ mật khẩu hoặc thông tin tài chính, vẫn là một trong những hình thức tấn công phổ biến nhất. Điều khiến phishing đặc biệt nguy hiểm âm thầm là nó khai thác tâm lý con người chứ không phải điểm yếu kỹ thuật; một email được soạn khéo léo thúc giục "hành động ngay lập tức" có thể lấn át cả sự phán đoán tỉnh táo của một người dùng cẩn trọng. Do đó các chuyên gia an ninh mạng nhấn mạnh rằng không phần mềm nào có thể bù đắp hoàn toàn cho sự lơ là cảnh giác của người dùng.</p>
+    <p><span class="pn">[3]</span> Social media platforms present a related but distinct set of concerns. Beyond the risk of data breaches, users increasingly grapple with the psychological toll of constant connectivity. Studies have linked heavy social media use to anxiety, disrupted sleep, and a persistent sense of inadequacy fostered by comparison with the curated, often unrealistic lives of others online. Some platforms have responded by introducing features that display usage time or discourage late-night scrolling, though critics argue such measures barely scratch the surface of a much deeper design problem rooted in algorithms built to maximise engagement at any cost.</p>
+    <p class="vi-para">[3] Các nền tảng mạng xã hội đặt ra một nhóm mối lo liên quan nhưng khác biệt. Bên cạnh nguy cơ rò rỉ dữ liệu, người dùng ngày càng phải đối mặt với cái giá tâm lý của việc kết nối liên tục. Các nghiên cứu đã liên hệ việc sử dụng mạng xã hội quá mức với chứng lo âu, giấc ngủ bị xáo trộn, và cảm giác tự ti dai dẳng nảy sinh từ việc so sánh với cuộc sống được chọn lọc, thường thiếu thực tế của người khác trên mạng. Một số nền tảng đã phản ứng bằng cách bổ sung tính năng hiển thị thời gian sử dụng hoặc hạn chế việc lướt mạng khuya, dù người phê bình cho rằng các biện pháp đó chỉ chạm bề mặt của một vấn đề thiết kế sâu xa hơn nhiều, bắt nguồn từ những thuật toán được xây dựng để tối đa hóa mức độ tương tác bằng mọi giá.</p>
+    <p><span class="pn">[4]</span> Governments and technology companies alike are under mounting pressure to strike a balance between innovation and protection. Proposed solutions range from stricter data-privacy regulations to mandatory digital literacy education in schools, equipping the next generation with the critical thinking skills needed to navigate an increasingly treacherous online landscape. Ultimately, most experts agree that no single measure will suffice; genuine online safety demands a combination of smarter technology, sound public policy, and, crucially, an informed and cautious public.</p>
+    <p class="vi-para">[4] Cả chính phủ lẫn các công ty công nghệ đều đang chịu áp lực ngày càng lớn phải tìm ra sự cân bằng giữa đổi mới và bảo vệ người dùng. Các giải pháp được đề xuất trải dài từ quy định bảo mật dữ liệu chặt chẽ hơn đến việc bắt buộc giáo dục kỹ năng số trong trường học, trang bị cho thế hệ tiếp theo tư duy phản biện cần thiết để vượt qua một môi trường mạng ngày càng nguy hiểm. Cuối cùng, hầu hết các chuyên gia đều đồng ý rằng không một biện pháp đơn lẻ nào là đủ; sự an toàn trực tuyến thực sự đòi hỏi sự kết hợp giữa công nghệ thông minh hơn, chính sách công hợp lý, và quan trọng nhất, một công chúng hiểu biết và cẩn trọng.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly about:</div>
+    <ul><li>A. the history of internet enthusiasts</li><li>B. the risks of digital life and how to address them</li><li>C. why online dating has become popular</li><li>D. the design of social media apps</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài đề cập cybercrime, phishing, tác động tâm lý mạng xã hội, và giải pháp → ý bao trùm là rủi ro của đời sống số và cách ứng phó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"insidious"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. harmless and obvious</li><li>B. gradually harmful in a deceptive way</li><li>C. extremely expensive</li><li>D. easy to detect</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "insidious" = âm thầm nguy hiểm, khó nhận ra vì đánh vào tâm lý con người chứ không phải kỹ thuật.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why is phishing so effective?</div>
+    <ul><li>A. It targets weaknesses in software code</li><li>B. It exploits human psychology rather than technical flaws</li><li>C. It only affects large organisations</li><li>D. It requires advanced hacking skills</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "it exploits human psychology rather than technical weaknesses."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"such measures"</b> refers to:</div>
+    <ul><li>A. data breaches</li><li>B. features like usage-time displays or scrolling discouragement</li><li>C. anxiety and disrupted sleep</li><li>D. government regulations</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước nói về việc các nền tảng "introducing features that display usage time or discourage late-night scrolling" → "such measures" chỉ các tính năng đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that critics believe:</div>
+    <ul><li>A. usage-time features fully solve the problem</li><li>B. the core issue lies in engagement-driven algorithm design</li><li>C. social media has no negative psychological effects</li><li>D. users should stop using the internet entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "a much deeper design problem rooted in algorithms built to maximise engagement" → vấn đề gốc rễ nằm ở thuật toán.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"treacherous"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. safe and predictable</li><li>B. dangerous and unreliable</li><li>C. slow and boring</li><li>D. cheap and accessible</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "an increasingly treacherous online landscape" = môi trường mạng ngày càng nguy hiểm, khó lường.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention <b class="k">"digital literacy education in schools"</b> in paragraph 4?</div>
+    <ul><li>A. To criticise the education system</li><li>B. To give an example of a proposed long-term solution</li><li>C. To argue schools should ban the internet</li><li>D. To describe how phishing works</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 liệt kê các giải pháp; giáo dục kỹ năng số là một ví dụ minh họa cho giải pháp dài hạn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as risks or effects EXCEPT:</div>
+    <ul><li>A. anxiety from social comparison</li><li>B. financial loss from phishing</li><li>C. disrupted sleep</li><li>D. increased physical exercise</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Anxiety, phishing (mất tiền), disrupted sleep đều được nhắc → loại A, B, C. "Increased physical exercise" không hề xuất hiện.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's overall attitude toward internet safety is best described as:</div>
+    <ul><li>A. dismissive of any danger</li><li>B. balanced, acknowledging risks and proposing solutions</li><li>C. panicked and alarmist</li><li>D. completely optimistic with no concerns</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả nêu rõ rủi ro (đoạn 1–3) nhưng kết bài đưa ra giải pháp cân bằng, không cực đoan.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 1 ============ -->
+  <h2>Từ vựng chủ đề Internet &amp; Social Media</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>cybercrime</td><td>(n)</td><td>tội phạm mạng</td></tr>
+    <tr><td>phishing scam</td><td>(n)</td><td>lừa đảo giả mạo qua mạng</td></tr>
+    <tr><td>impersonate</td><td>(v)</td><td>mạo danh, giả danh</td></tr>
+    <tr><td>insidious <span class="c1tag">C1</span></td><td>(adj)</td><td>âm thầm nguy hiểm, khó nhận ra</td></tr>
+    <tr><td>vigilance</td><td>(n)</td><td>sự cảnh giác</td></tr>
+    <tr><td>data breach</td><td>(n)</td><td>vụ rò rỉ/xâm phạm dữ liệu</td></tr>
+    <tr><td>inadequacy <span class="c1tag">C1</span></td><td>(n)</td><td>cảm giác không đủ tốt, tự ti</td></tr>
+    <tr><td>curated</td><td>(adj)</td><td>được chọn lọc, dàn dựng</td></tr>
+    <tr><td>engagement</td><td>(n)</td><td>mức độ tương tác (trên nền tảng số)</td></tr>
+    <tr><td>treacherous <span class="c1tag">C1</span></td><td>(adj)</td><td>nguy hiểm, khó lường</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2 ============ -->
+  <h2>Bài #2 <span class="lvl">Language &amp; Linguistics · B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Fragile Diversity of Human Language</h3>
+    <p><span class="pn">[1]</span> Of the roughly seven thousand languages spoken across the globe today, linguists estimate that nearly half will vanish by the end of this century. A language dies not through some dramatic event but through a quiet, generational drift: children of a minority-language community grow up speaking the dominant tongue of school, media, and commerce, while their grandparents' language is gradually confined to the home, then to memory, and finally to silence. Once the last fluent speaker passes away, an entire way of encoding the world disappears with them.</p>
+    <p class="vi-para">[1] Trong số khoảng bảy nghìn ngôn ngữ đang được nói trên toàn cầu ngày nay, các nhà ngôn ngữ học ước tính gần một nửa sẽ biến mất vào cuối thế kỷ này. Một ngôn ngữ không chết đi qua một sự kiện kịch tính nào, mà qua một sự dịch chuyển âm thầm theo từng thế hệ: trẻ em trong cộng đồng ngôn ngữ thiểu số lớn lên nói ngôn ngữ chủ đạo của trường học, truyền thông và thương mại, trong khi ngôn ngữ của ông bà chúng dần bị thu hẹp về trong gia đình, rồi vào ký ức, và cuối cùng là sự im lặng. Một khi người nói thông thạo cuối cùng qua đời, cả một cách mã hóa thế giới biến mất theo họ.</p>
+    <p><span class="pn">[2]</span> This loss is not merely sentimental. Each language embodies a distinct way of categorising experience — some languages, for instance, have intricate systems for describing kinship or spatial orientation that have no direct equivalent in English. Linguists argue that such diversity offers an invaluable window into the range of ways the human mind can organise thought, and that its disappearance impoverishes not just the affected community but human knowledge as a whole.</p>
+    <p class="vi-para">[2] Sự mất mát này không chỉ đơn thuần mang tính cảm xúc. Mỗi ngôn ngữ thể hiện một cách riêng biệt để phân loại trải nghiệm — chẳng hạn, một số ngôn ngữ có hệ thống phức tạp để mô tả quan hệ họ hàng hoặc định hướng không gian mà không có từ tương đương trực tiếp trong tiếng Anh. Các nhà ngôn ngữ học lập luận rằng sự đa dạng như vậy mang lại một cửa sổ vô giá để nhìn vào phạm vi các cách mà trí óc con người có thể tổ chức tư duy, và sự biến mất của nó làm nghèo nàn đi không chỉ cộng đồng bị ảnh hưởng mà cả tri thức nhân loại nói chung.</p>
+    <p><span class="pn">[3]</span> Paradoxically, the very forces of globalisation that threaten small languages have also made learning additional languages more accessible than ever. Mobile applications, immersive online courses, and video-calling platforms allow a learner in one corner of the world to converse with a native speaker in another almost instantly. Yet acquiring genuine fluency remains a demanding, often years-long endeavour, requiring not merely memorising vocabulary but internalising cultural nuance — the unspoken assumptions embedded in idioms, humour, and politeness conventions.</p>
+    <p class="vi-para">[3] Nghịch lý thay, chính những lực toàn cầu hóa đang đe dọa các ngôn ngữ nhỏ cũng đã khiến việc học thêm ngôn ngữ trở nên dễ tiếp cận hơn bao giờ hết. Các ứng dụng di động, khóa học trực tuyến mô phỏng thực tế, và các nền tảng gọi video cho phép một người học ở một góc của thế giới trò chuyện gần như tức thì với người bản xứ ở góc khác. Tuy nhiên, đạt được sự thông thạo thực sự vẫn là một hành trình đòi hỏi nhiều công sức, thường kéo dài nhiều năm, không chỉ cần ghi nhớ từ vựng mà còn phải thấm nhuần sắc thái văn hóa — những giả định ngầm ẩn trong thành ngữ, sự hài hước và quy tắc lịch sự.</p>
+    <p><span class="pn">[4]</span> Translation, too, sits at this intersection of connection and loss. A skilled translator does far more than substitute words; she must convey tone, rhythm, and cultural resonance, often making difficult trade-offs when a perfect equivalent simply does not exist. Machine translation has advanced remarkably, yet it still stumbles over idiomatic expressions and ambiguity that a human translator navigates through lived experience. As one linguist wryly observed, translation is "the art of failing successfully" — a reminder that something is always lost, even as something new is gained.</p>
+    <p class="vi-para">[4] Việc dịch thuật cũng nằm ở giao điểm giữa sự kết nối và sự mất mát này. Một dịch giả giỏi làm nhiều hơn là chỉ thay thế từ ngữ; họ phải truyền tải giọng điệu, nhịp điệu và sức gợi văn hóa, thường phải đưa ra những lựa chọn đánh đổi khó khăn khi không có sự tương đương hoàn hảo. Dịch máy đã tiến bộ đáng kể, nhưng vẫn vấp phải các cách diễn đạt thành ngữ và sự mơ hồ mà một dịch giả con người vượt qua nhờ trải nghiệm sống. Như một nhà ngôn ngữ học đã dí dỏm nhận xét, dịch thuật là "nghệ thuật của sự thất bại thành công" — một lời nhắc rằng luôn có điều gì đó bị mất đi, ngay cả khi có điều gì đó mới được thu về.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage is mainly concerned with:</div>
+    <ul><li>A. the decline of language diversity and the challenges of language learning and translation</li><li>B. a history of mobile language-learning apps</li><li>C. why English became a global language</li><li>D. grammar rules shared by all languages</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Bài đi từ ngôn ngữ biến mất (đoạn 1–2), đến học ngoại ngữ (đoạn 3), đến dịch thuật (đoạn 4) — chủ đề bao trùm là sự đa dạng ngôn ngữ và những thách thức liên quan.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"impoverishes"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. enriches greatly</li><li>B. makes poorer or less rich</li><li>C. has no effect on</li><li>D. speeds up</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "impoverishes not just the affected community but human knowledge as a whole" = làm nghèo nàn đi, giảm giá trị.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, how does a language typically die?</div>
+    <ul><li>A. Through a sudden, dramatic event</li><li>B. Through a gradual generational shift toward the dominant language</li><li>C. Through government bans</li><li>D. Through natural disasters</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "A language dies not through some dramatic event but through a quiet, generational drift."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"its"</b> (in "its disappearance") refers to:</div>
+    <ul><li>A. the human mind</li><li>B. English</li><li>C. a language's diversity/existence</li><li>D. human knowledge</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu nói về "such diversity" (sự đa dạng ngôn ngữ) → "its disappearance" là sự biến mất của chính sự đa dạng/ngôn ngữ đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that true fluency in a language:</div>
+    <ul><li>A. can be achieved instantly through apps</li><li>B. requires only memorising vocabulary lists</li><li>C. demands understanding cultural nuance, not just words</li><li>D. is impossible without living abroad</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "requiring not merely memorising vocabulary but internalising cultural nuance." A và B bị bác bỏ trực tiếp; D quá tuyệt đối, không được nói.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"resonance"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. a literal, word-for-word meaning</li><li>B. an emotional or evocative significance</li><li>C. a grammatical error</li><li>D. a type of software</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "convey tone, rhythm, and cultural resonance" = sức gợi/cộng hưởng về mặt cảm xúc và văn hóa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author quote the linguist's phrase <b class="k">"the art of failing successfully"</b> in paragraph 4?</div>
+    <ul><li>A. To prove machine translation is perfect</li><li>B. To highlight that translation always involves some inevitable loss</li><li>C. To criticise human translators</li><li>D. To explain how apps are built</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Trích dẫn này nhấn mạnh ý "something is always lost, even as something new is gained" — dịch thuật luôn có mất mát không tránh khỏi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as tools/factors aiding language learning EXCEPT:</div>
+    <ul><li>A. mobile applications</li><li>B. video-calling platforms</li><li>C. immersive online courses</li><li>D. government-mandated textbooks</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> Đoạn 3 nhắc mobile apps, video-calling, immersive courses → loại A, B, C. "Government-mandated textbooks" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's tone toward the loss of minority languages can best be described as:</div>
+    <ul><li>A. indifferent</li><li>B. concerned and reflective</li><li>C. mocking</li><li>D. purely celebratory</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả bày tỏ sự tiếc nuối trước sự biến mất của ngôn ngữ ("impoverishes... human knowledge") nhưng vẫn phân tích khách quan, sâu sắc.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> The phrase <b class="k">"Paradoxically"</b> at the start of paragraph 3 signals that:</div>
+    <ul><li>A. globalisation only harms languages, with no benefits</li><li>B. the same force (globalisation) both endangers and helps languages</li><li>C. language learning has become impossible</li><li>D. translation software has replaced human translators</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "the very forces of globalisation that threaten small languages have also made learning additional languages more accessible" → nghịch lý: cùng một lực vừa gây hại vừa mang lại lợi ích.</p></details>
+  </div>
+
+  <!-- ============ TỪ VỰNG BÀI 2 ============ -->
+  <h2>Từ vựng chủ đề Language &amp; Linguistics</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>linguist</td><td>(n)</td><td>nhà ngôn ngữ học</td></tr>
+    <tr><td>generational drift</td><td>(n phr)</td><td>sự dịch chuyển dần qua các thế hệ</td></tr>
+    <tr><td>fluent speaker</td><td>(n phr)</td><td>người nói thông thạo</td></tr>
+    <tr><td>kinship</td><td>(n)</td><td>quan hệ họ hàng, huyết thống</td></tr>
+    <tr><td>impoverish <span class="c1tag">C1</span></td><td>(v)</td><td>làm nghèo nàn, giảm giá trị</td></tr>
+    <tr><td>immersive</td><td>(adj)</td><td>đắm chìm, mô phỏng thực tế (học tập)</td></tr>
+    <tr><td>internalise <span class="c1tag">C1</span></td><td>(v)</td><td>tiếp thu, thấm nhuần</td></tr>
+    <tr><td>nuance <span class="c1tag">C1</span></td><td>(n)</td><td>sắc thái tinh tế</td></tr>
+    <tr><td>ambiguity</td><td>(n)</td><td>sự mơ hồ, đa nghĩa</td></tr>
+    <tr><td>resonance <span class="c1tag">C1</span></td><td>(n)</td><td>sức gợi/cộng hưởng cảm xúc</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM ============ -->
+  <h2>Chấm điểm &amp; giải đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh:</b>
+    <table>
+      <tr><th>Bài #1 (Internet)</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B</td></tr>
+      <tr><th>Bài #2 (Language)</th><td>1-A · 2-B · 3-B · 4-C · 5-C · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> với mỗi câu sai → ghi vào "sổ lỗi" theo mẫu: <i>"Câu __ · bài __ · dạng __ · sai vì __ (thiếu từ / đọc sót / sập bẫy)"</i>. Dạng nào sai ≥2 câu → buổi sau để ý kỹ dạng đó.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá:</b> đúng 15–19/19 → nền rất tốt · 11–14 → ổn, đúng hướng · ≤10 → đọc lại bài + học kỹ từ vựng trước khi qua ngày tiếp theo.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 13?</b> Quay lại lộ trình tick 4 ô cho từng bài. Mẹo: khi gặp câu <b>Vocabulary</b>, luôn thử thay từ được hỏi bằng đáp án nghi ngờ vào đúng vị trí trong câu gốc rồi đọc lại xem có "xuôi nghĩa" không — cách này giúp loại nhanh 2 phương án sai.
+  </div>
+
+</div>
+
+<footer>🌐 Ngày 13 · VSTEP Reading — Internet &amp; Social Media + Language &amp; Linguistics · Làm sai mà hiểu rõ vì sao mới lên trình.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

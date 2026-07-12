@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuần 6 · Ngày 5 — Đề Full #3 · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🗂️ Tuần 6 · Ngày 5 — ĐỀ FULL #3: Travel · Media · Psychology · Arts</h1>
+  <p>4 bài đọc độc lập, bấm giờ nghiêm túc như thi thật</p>
+  <div class="meta">
+    <span class="badge">🕐 Bấm giờ NGHIÊM 60 phút</span>
+    <span class="badge">📝 4 bài · 40 câu</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Quy tắc làm đề nghiêm túc:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Bấm giờ 60 phút</b> cho cả 4 bài, không dừng giữa chừng, không tra từ điển.</li>
+      <li>Phân bổ ~15 phút/bài — nếu bí câu nào, khoanh tạm và làm tiếp, quay lại sau nếu còn thời gian.</li>
+      <li>Làm xong hết mới mở đáp án — chấm điểm toàn đề bằng bảng đáp án nhanh ở cuối trang.</li>
+      <li>Với mỗi câu sai: quay lại đoạn văn, tìm bằng chứng, hiểu vì sao mình chọn sai.</li>
+      <li>Ghi từ vựng mới + cập nhật "sổ lỗi" trước khi nghỉ.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Nền B2, xen một số câu/từ <span class="c1tag">C1</span> để kéo trần. Mục tiêu: đúng <b>~28–32/40</b>.</p>
+  </div>
+
+  <!-- ============ BÀI 1: TRAVEL & TOURISM ============ -->
+  <h2>Bài 1 · Travel &amp; Tourism <span class="lvl">B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Rise and Risks of Overtourism</h3>
+    <p><span class="pn">[1]</span> For decades, tourism was promoted almost unconditionally as a source of income, jobs, and cultural exchange. Coastal towns, historic cities, and remote villages alike welcomed visitors with open arms, often investing heavily in airports, hotels, and roads to accommodate them. Yet in recent years, a growing number of destinations have begun to reconsider this enthusiasm, as the sheer volume of tourists threatens to undermine the very qualities that attracted them in the first place.</p>
+    <p class="vi-para">[1] Trong nhiều thập kỷ, du lịch gần như luôn được cổ vũ vô điều kiện như một nguồn thu nhập, việc làm và giao lưu văn hóa. Các thị trấn ven biển, thành phố cổ kính và cả những ngôi làng xa xôi đều chào đón du khách với vòng tay rộng mở, thường đầu tư mạnh vào sân bay, khách sạn và đường sá để phục vụ họ. Thế nhưng trong những năm gần đây, ngày càng nhiều điểm đến bắt đầu nhìn lại sự hào hứng này, khi lượng du khách quá lớn đe dọa làm mất đi chính những đặc điểm đã thu hút họ đến ban đầu.</p>
+    <p><span class="pn">[2]</span> This phenomenon, commonly labelled "overtourism", manifests itself in overcrowded streets, rubbish-strewn beaches, and residents who can no longer afford to live in their own neighbourhoods because property has been converted into short-term rentals. Venice, for example, receives millions of day-trippers each year, many of whom spend little money locally yet place enormous strain on the city's fragile infrastructure. Local authorities have responded by introducing entry fees and restricting cruise ships from docking in the historic centre.</p>
+    <p class="vi-para">[2] Hiện tượng này, thường được gọi là "quá tải du lịch", thể hiện qua đường phố đông nghẹt, bãi biển ngập rác, và cư dân không còn đủ khả năng sống trong chính khu phố của mình vì nhà cửa đã bị chuyển thành nơi cho thuê ngắn hạn. Venice, chẳng hạn, mỗi năm đón hàng triệu lượt khách đi trong ngày, nhiều người trong số đó chi tiêu rất ít tại chỗ nhưng lại gây áp lực khổng lồ lên hạ tầng vốn đã mong manh của thành phố. Chính quyền địa phương đã phản ứng bằng cách áp phí vào cửa và hạn chế tàu du lịch cập bến khu trung tâm cổ.</p>
+    <p><span class="pn">[3]</span> Some destinations have gone further, deliberately capping the number of visitors permitted each day. Such measures are not without controversy: business owners who depend on tourist spending often object, arguing that limits will drive away much-needed revenue. Conversely, environmentalists and residents contend that unchecked growth is unsustainable in the long run, pointing to eroded hiking trails, depleted water supplies, and wildlife driven from its natural habitat by constant human presence.</p>
+    <p class="vi-para">[3] Một số điểm đến còn đi xa hơn, chủ động giới hạn số lượng khách được phép vào mỗi ngày. Những biện pháp này không tránh khỏi tranh cãi: các chủ doanh nghiệp sống nhờ chi tiêu của du khách thường phản đối, cho rằng giới hạn sẽ làm mất đi nguồn thu rất cần thiết. Ngược lại, các nhà môi trường và cư dân cho rằng tăng trưởng không kiểm soát là không bền vững về lâu dài, dẫn chứng bằng những con đường mòn bị xói mòn, nguồn nước cạn kiệt, và động vật hoang dã bị đẩy khỏi môi trường sống tự nhiên do sự hiện diện liên tục của con người.</p>
+    <p><span class="pn">[4]</span> Increasingly, tourism boards are promoting the concept of "regenerative travel", which aims not merely to minimise harm but to leave a destination better than it was found — for instance, by encouraging visitors to volunteer, spend money with local artisans, or travel during off-peak seasons. Whether this approach can be scaled up remains uncertain, but it reflects a broader recognition that the industry must evolve if popular destinations are to remain viable, both economically and environmentally, for generations to come.</p>
+    <p class="vi-para">[4] Ngày càng nhiều cơ quan du lịch quảng bá khái niệm "du lịch tái tạo", vốn không chỉ nhằm giảm thiểu tác hại mà còn để lại một điểm đến tốt đẹp hơn so với trước — chẳng hạn bằng cách khuyến khích du khách làm tình nguyện, chi tiêu cho các nghệ nhân địa phương, hoặc du lịch vào mùa thấp điểm. Liệu cách tiếp cận này có thể được nhân rộng hay không vẫn còn chưa chắc chắn, nhưng nó phản ánh nhận thức ngày càng rộng rãi rằng ngành du lịch phải thay đổi nếu muốn các điểm đến nổi tiếng tiếp tục tồn tại được, cả về kinh tế lẫn môi trường, cho các thế hệ mai sau.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the main idea of the passage?</div>
+    <ul><li>A. Tourism should be banned in historic cities</li><li>B. Overtourism poses problems, prompting destinations to seek more sustainable approaches</li><li>C. Venice is the most beautiful city in the world</li><li>D. Airports need more investment to handle visitors</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Cả bài nói về vấn đề overtourism và các giải pháp (giới hạn khách, regenerative travel) → B bao trùm toàn bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"unconditionally"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. with strict rules</li><li>B. without any restrictions or reservations</li><li>C. occasionally</li><li>D. secretly</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "promoted almost unconditionally" = được cổ vũ gần như tuyệt đối, không điều kiện gì kèm theo.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, why can many residents no longer afford to live in their own neighbourhoods?</div>
+    <ul><li>A. Wages have fallen sharply</li><li>B. Property has been converted into short-term rentals</li><li>C. Taxes have increased dramatically</li><li>D. Cruise ships have polluted the water</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2 nói rõ nhà ở bị biến thành cho thuê ngắn hạn khiến cư dân không đủ tiền ở lại.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"Such measures"</b> refers to:</div>
+    <ul><li>A. entry fees in Venice</li><li>B. capping the number of daily visitors</li><li>C. investment in airports and hotels</li><li>D. eroded hiking trails</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước đó nói về việc "capping the number of visitors permitted each day" → "Such measures" chỉ chính hành động này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that business owners and environmentalists:</div>
+    <ul><li>A. always agree on tourism policy</li><li>B. have conflicting views on visitor limits</li><li>C. both want to ban all tourists</li><li>D. are indifferent to the issue</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Business owners phản đối vì mất doanh thu, còn environmentalists ủng hộ vì lo môi trường → quan điểm trái ngược.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"depleted"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. abundant</li><li>B. seriously reduced or exhausted</li><li>C. newly discovered</li><li>D. purified</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "depleted water supplies" = nguồn nước bị cạn kiệt, suy giảm nghiêm trọng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "regenerative travel" in paragraph 4?</div>
+    <ul><li>A. To criticise all forms of tourism</li><li>B. To present a possible solution to overtourism</li><li>C. To argue that tourism should be free</li><li>D. To describe Venice's history</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 giới thiệu "regenerative travel" như một hướng đi giúp ngành du lịch phát triển bền vững hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as effects of overtourism EXCEPT:</div>
+    <ul><li>A. overcrowded streets</li><li>B. rising local property prices</li><li>C. improved public transport funding</li><li>D. environmental damage to trails and habitats</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> A, B (residents priced out), D đều được nhắc; "improved public transport funding" không xuất hiện trong bài.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's tone toward the tourism industry's future can best be described as:</div>
+    <ul><li>A. dismissive</li><li>B. cautiously hopeful that it can adapt</li><li>C. completely pessimistic</li><li>D. angry and accusatory</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "reflects a broader recognition that the industry must evolve... remains uncertain" — thận trọng nhưng vẫn có kỳ vọng thay đổi.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Sentence insertion</span><span class="c1tag">C1</span> Which sentence best fits at the end of paragraph 1: "____"</div>
+    <ul><li>A. As a result, some once-quiet locations now struggle to cope with the crowds they helped create.</li><li>B. Airports are the safest way to travel long distances.</li><li>C. Most tourists prefer travelling alone rather than in groups.</li><li>D. Hotels are usually more expensive in winter.</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Câu này nối liền mạch ý: các nơi từng đầu tư đón khách nay lại gặp khó vì chính lượng khách đó → dẫn vào đoạn 2 về overtourism.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Travel &amp; Tourism</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>accommodate</td><td>(v)</td><td>đáp ứng, tiếp đón</td></tr>
+    <tr><td>overtourism</td><td>(n)</td><td>tình trạng quá tải du lịch</td></tr>
+    <tr><td>infrastructure</td><td>(n)</td><td>cơ sở hạ tầng</td></tr>
+    <tr><td>cap (visitors)</td><td>(v)</td><td>giới hạn (số lượng)</td></tr>
+    <tr><td>unsustainable</td><td>(adj)</td><td>không bền vững</td></tr>
+    <tr><td>depleted <span class="c1tag">C1</span></td><td>(adj)</td><td>cạn kiệt, suy giảm</td></tr>
+    <tr><td>regenerative <span class="c1tag">C1</span></td><td>(adj)</td><td>có tính phục hồi/tái tạo</td></tr>
+    <tr><td>viable</td><td>(adj)</td><td>khả thi, tồn tại được</td></tr>
+  </table>
+
+  <!-- ============ BÀI 2: MEDIA & COMMUNICATION ============ -->
+  <h2>Bài 2 · Media &amp; Communication <span class="lvl">B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>The Erosion of Trust in the Digital News Era</h3>
+    <p><span class="pn">[1]</span> Not long ago, most people obtained their news from a handful of trusted newspapers or evening broadcasts, each staffed by professional journalists bound by editorial standards. Today, that landscape has been transformed almost beyond recognition. Anyone with a smartphone can publish information — accurate or otherwise — to audiences numbering in the millions, and traditional gatekeepers have lost much of their former influence.</p>
+    <p class="vi-para">[1] Không lâu trước đây, phần lớn mọi người tiếp nhận tin tức từ một số ít tờ báo hoặc chương trình phát sóng buổi tối đáng tin cậy, mỗi nơi đều có đội ngũ nhà báo chuyên nghiệp tuân theo các chuẩn mực biên tập. Ngày nay, bức tranh đó đã thay đổi gần như không còn nhận ra. Bất kỳ ai có điện thoại thông minh cũng có thể đăng tải thông tin — dù chính xác hay không — đến hàng triệu người xem, và những "người gác cổng" truyền thống đã mất phần lớn ảnh hưởng trước đây của mình.</p>
+    <p><span class="pn">[2]</span> This democratisation of information has undeniable benefits: citizen journalists have exposed corruption that mainstream outlets overlooked, and marginalised voices now reach audiences that would once have been unimaginable. However, the same openness that empowers ordinary people also allows misinformation to spread with alarming speed, particularly when sensational claims are amplified by algorithms designed to maximise engagement rather than accuracy.</p>
+    <p class="vi-para">[2] Sự dân chủ hóa thông tin này mang lại những lợi ích không thể phủ nhận: các nhà báo công dân đã phanh phui tham nhũng mà báo chí chính thống bỏ sót, và những tiếng nói bên lề nay tiếp cận được lượng khán giả mà trước kia không thể tưởng tượng nổi. Tuy nhiên, chính sự cởi mở trao quyền cho người dân cũng khiến thông tin sai lệch lan truyền với tốc độ đáng báo động, đặc biệt khi các tuyên bố giật gân được khuếch đại bởi thuật toán được thiết kế để tối đa hóa tương tác hơn là độ chính xác.</p>
+    <p><span class="pn">[3]</span> Compounding the problem is the phenomenon known as the "filter bubble", whereby recommendation systems repeatedly show users content that aligns with their existing beliefs. Over time, this can entrench polarisation, as individuals rarely encounter perspectives that challenge their assumptions. Some researchers argue that this dynamic has contributed to a broader erosion of shared facts, making it increasingly difficult for societies to agree on basic realities, let alone solve complex problems collectively.</p>
+    <p class="vi-para">[3] Làm vấn đề trầm trọng thêm là hiện tượng được gọi là "bong bóng lọc", theo đó hệ thống đề xuất liên tục hiển thị cho người dùng những nội dung phù hợp với niềm tin sẵn có của họ. Theo thời gian, điều này có thể khiến sự phân cực ăn sâu hơn, vì mỗi người hiếm khi tiếp xúc với những quan điểm thách thức giả định của mình. Một số nhà nghiên cứu cho rằng động lực này đã góp phần làm xói mòn những sự thật chung, khiến xã hội ngày càng khó đồng thuận về những thực tế cơ bản, chứ chưa nói đến việc cùng nhau giải quyết các vấn đề phức tạp.</p>
+    <p><span class="pn">[4]</span> In response, several strategies have emerged. Fact-checking organisations now scrutinise viral claims, while some governments have introduced legislation targeting deliberately false content, though critics warn that such laws risk being wielded to suppress legitimate dissent. Media literacy programmes, meanwhile, aim to equip citizens — especially the young — with the critical thinking skills necessary to evaluate sources independently. Whether these measures can keep pace with the sheer volume of content produced daily remains an open question, but few dispute that the health of public discourse depends on finding an answer.</p>
+    <p class="vi-para">[4] Để đối phó, nhiều chiến lược đã ra đời. Các tổ chức kiểm chứng thông tin nay xem xét kỹ các tuyên bố lan truyền, trong khi một số chính phủ đã ban hành luật nhắm vào nội dung sai lệch cố ý, dù các nhà phê bình cảnh báo rằng những luật này có nguy cơ bị lợi dụng để đàn áp tiếng nói bất đồng chính đáng. Trong khi đó, các chương trình giáo dục truyền thông nhằm trang bị cho công dân — đặc biệt là giới trẻ — kỹ năng tư duy phản biện cần thiết để tự đánh giá nguồn tin. Liệu những biện pháp này có theo kịp khối lượng nội dung khổng lồ được sản xuất mỗi ngày hay không vẫn là câu hỏi bỏ ngỏ, nhưng ít ai phủ nhận rằng sự lành mạnh của diễn ngôn công chúng phụ thuộc vào việc tìm ra câu trả lời đó.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage primarily discusses:</div>
+    <ul><li>A. the history of evening television broadcasts</li><li>B. how digital media has changed news but also created challenges to trust</li><li>C. why smartphones are becoming cheaper</li><li>D. the biography of a famous journalist</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài nói về sự thay đổi trong cách tiếp cận tin tức và các vấn đề (misinformation, filter bubble) kèm giải pháp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"gatekeepers"</b> (paragraph 1) most likely refers to:</div>
+    <ul><li>A. security guards at newspaper offices</li><li>B. those who traditionally controlled what information reached the public</li><li>C. people who read the news every morning</li><li>D. software that blocks viruses</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Trong ngữ cảnh truyền thông, "gatekeepers" = những người/tổ chức kiểm soát thông tin trước khi đến công chúng (biên tập viên, tòa soạn).</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what is one benefit of the democratisation of information?</div>
+    <ul><li>A. Algorithms have become more accurate</li><li>B. Citizen journalists have exposed corruption</li><li>C. Newspapers have increased their profits</li><li>D. Editorial standards have become stricter</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "citizen journalists have exposed corruption that mainstream outlets overlooked" là lợi ích được nêu rõ.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"this dynamic"</b> refers to:</div>
+    <ul><li>A. the rise of smartphones</li><li>B. the repeated exposure to content matching one's existing beliefs</li><li>C. the decline of newspaper sales</li><li>D. new legislation against false content</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu trước nói về filter bubble khiến người dùng liên tục thấy nội dung phù hợp niềm tin sẵn có — "this dynamic" chỉ hiện tượng đó.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 4 that laws against false content:</div>
+    <ul><li>A. are universally supported without controversy</li><li>B. carry a risk of being misused to silence legitimate opinions</li><li>C. have completely solved the misinformation problem</li><li>D. are only used in one country</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "critics warn that such laws risk being wielded to suppress legitimate dissent" → nguy cơ bị lạm dụng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"entrench"</b> (paragraph 3) is closest in meaning to:</div>
+    <ul><li>A. to weaken or reduce</li><li>B. to firmly establish or reinforce</li><li>C. to remove completely</li><li>D. to briefly interrupt</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "entrench polarisation" = làm cho sự phân cực trở nên ăn sâu, cố định hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "media literacy programmes" in paragraph 4?</div>
+    <ul><li>A. To criticise young people for using smartphones</li><li>B. To give an example of a response to the misinformation problem</li><li>C. To argue that schools should be abolished</li><li>D. To explain the history of journalism</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 liệt kê các biện pháp đối phó với misinformation, trong đó có media literacy programmes.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as responses to misinformation EXCEPT:</div>
+    <ul><li>A. fact-checking organisations</li><li>B. government legislation</li><li>C. media literacy programmes</li><li>D. banning all smartphones</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều xuất hiện trong đoạn 4; "banning smartphones" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward the future of public discourse is best described as:</div>
+    <ul><li>A. certain that all problems will soon disappear</li><li>B. concerned yet acknowledging ongoing efforts to address the issue</li><li>C. completely unconcerned</li><li>D. convinced that digital media should be banned</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "remains an open question, but few dispute that the health of public discourse depends on finding an answer" — lo ngại nhưng vẫn ghi nhận nỗ lực giải quyết.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Paraphrase</span><span class="c1tag">C1</span> Which sentence best paraphrases: "the same openness that empowers ordinary people also allows misinformation to spread"?</div>
+    <ul><li>A. Openness only benefits journalists, not ordinary citizens.</li><li>B. The very openness that gives ordinary people a voice also enables false information to circulate.</li><li>C. Misinformation prevents ordinary people from speaking freely.</li><li>D. Openness has eliminated the spread of false information.</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu gốc nêu tính hai mặt: sự cởi mở trao quyền cho người dân nhưng cũng tạo điều kiện cho tin giả lan truyền — B diễn đạt lại đúng ý này.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Media &amp; Communication</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>gatekeeper</td><td>(n)</td><td>người/tổ chức kiểm soát thông tin</td></tr>
+    <tr><td>democratisation</td><td>(n)</td><td>sự dân chủ hóa</td></tr>
+    <tr><td>misinformation</td><td>(n)</td><td>thông tin sai lệch</td></tr>
+    <tr><td>amplify</td><td>(v)</td><td>khuếch đại, lan truyền mạnh</td></tr>
+    <tr><td>filter bubble</td><td>(n)</td><td>bong bóng lọc thông tin</td></tr>
+    <tr><td>entrench <span class="c1tag">C1</span></td><td>(v)</td><td>củng cố, ăn sâu</td></tr>
+    <tr><td>polarisation</td><td>(n)</td><td>sự phân cực</td></tr>
+    <tr><td>dissent <span class="c1tag">C1</span></td><td>(n)</td><td>sự bất đồng quan điểm</td></tr>
+  </table>
+
+  <!-- ============ BÀI 3: PSYCHOLOGY & BEHAVIOR ============ -->
+  <h2>Bài 3 · Psychology &amp; Behavior <span class="lvl">B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Why We Procrastinate — and How to Stop</h3>
+    <p><span class="pn">[1]</span> Nearly everyone has, at some point, delayed an important task in favour of something more immediately enjoyable, only to regret it later. Procrastination is often dismissed as simple laziness, yet psychologists increasingly view it as a far more complex phenomenon rooted in emotion regulation rather than a lack of willpower or time-management skills. In essence, people procrastinate not because they fail to understand the consequences of delay, but because they are trying, often unconsciously, to avoid an unpleasant feeling associated with the task itself.</p>
+    <p class="vi-para">[1] Hầu như ai cũng từng có lúc trì hoãn một việc quan trọng để làm điều gì đó thú vị hơn ngay lúc đó, để rồi hối tiếc về sau. Trì hoãn thường bị coi đơn giản là lười biếng, nhưng các nhà tâm lý học ngày càng xem đây là một hiện tượng phức tạp hơn nhiều, bắt nguồn từ việc điều tiết cảm xúc chứ không phải do thiếu ý chí hay kỹ năng quản lý thời gian. Về bản chất, người ta trì hoãn không phải vì không hiểu hậu quả của việc chậm trễ, mà vì họ đang cố gắng, thường là vô thức, né tránh một cảm giác khó chịu gắn liền với chính công việc đó.</p>
+    <p><span class="pn">[2]</span> This unpleasant feeling might stem from anxiety about failure, boredom, or even the fear of succeeding and facing higher expectations afterwards. Crucially, the momentary relief gained by postponing the task reinforces the habit: the brain learns that avoidance brings immediate comfort, even though it usually leads to greater stress once the deadline looms. This creates a vicious cycle that can be remarkably difficult to break, particularly for those who are otherwise conscientious and high-achieving.</p>
+    <p class="vi-para">[2] Cảm giác khó chịu này có thể xuất phát từ lo lắng về thất bại, sự nhàm chán, hoặc thậm chí là nỗi sợ thành công và phải đối mặt với kỳ vọng cao hơn sau đó. Quan trọng là, cảm giác nhẹ nhõm tức thời có được khi trì hoãn công việc lại củng cố thói quen này: bộ não học được rằng việc né tránh mang lại sự thoải mái ngay lập tức, dù nó thường dẫn đến căng thẳng lớn hơn khi hạn chót cận kề. Điều này tạo ra một vòng luẩn quẩn rất khó phá vỡ, đặc biệt với những người vốn tận tâm và có thành tích cao.</p>
+    <p><span class="pn">[3]</span> Traditional advice — simply "try harder" or "manage your time better" — tends to be ineffective precisely because it addresses the symptom rather than the underlying emotional cause. More recent approaches instead focus on self-compassion, encouraging individuals to forgive themselves for previous instances of procrastination rather than dwelling on guilt, which paradoxically tends to fuel further avoidance. Breaking large, intimidating tasks into smaller, more manageable steps has also proved effective, as it reduces the emotional weight attached to getting started.</p>
+    <p class="vi-para">[3] Những lời khuyên truyền thống — đơn giản là "cố gắng hơn" hay "quản lý thời gian tốt hơn" — thường không hiệu quả chính vì chúng chỉ giải quyết triệu chứng chứ không đụng đến nguyên nhân cảm xúc sâu xa. Các phương pháp gần đây hơn thay vào đó tập trung vào sự tự cảm thông, khuyến khích mỗi người tha thứ cho bản thân vì những lần trì hoãn trước đó thay vì day dứt trong cảm giác tội lỗi — điều nghịch lý là lại càng thúc đẩy sự né tránh nhiều hơn. Chia nhỏ những công việc lớn, đáng sợ thành các bước nhỏ, dễ quản lý hơn cũng đã được chứng minh là hiệu quả, vì nó giảm bớt gánh nặng cảm xúc khi bắt đầu.</p>
+    <p><span class="pn">[4]</span> Ultimately, overcoming procrastination requires understanding one's own emotional triggers rather than relying on willpower alone. Some researchers suggest that even minor adjustments to one's environment — removing distracting apps, for instance, or setting a five-minute timer to simply begin a task — can disrupt the cycle of avoidance long enough for momentum to take over. While no single strategy works for everyone, the shift from viewing procrastination as a moral failing to seeing it as an emotional response represents genuine progress in helping people manage the habit.</p>
+    <p class="vi-para">[4] Cuối cùng, việc vượt qua trì hoãn đòi hỏi phải hiểu được những yếu tố cảm xúc kích hoạt của chính mình chứ không chỉ dựa vào ý chí. Một số nhà nghiên cứu cho rằng ngay cả những điều chỉnh nhỏ trong môi trường — chẳng hạn xóa các ứng dụng gây xao nhãng, hoặc đặt hẹn giờ năm phút để đơn giản là bắt đầu công việc — cũng có thể phá vỡ vòng lặp né tránh đủ lâu để đà làm việc tiếp quản. Dù không có chiến lược nào phù hợp với tất cả mọi người, sự chuyển biến từ việc xem trì hoãn như một lỗi lầm đạo đức sang xem nó như một phản ứng cảm xúc là một bước tiến thực sự trong việc giúp con người kiểm soát thói quen này.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> What is the main idea of the passage?</div>
+    <ul><li>A. Procrastination is simply a sign of laziness</li><li>B. Procrastination stems from emotional avoidance and can be managed through specific strategies</li><li>C. Time-management courses always cure procrastination</li><li>D. Only unsuccessful people procrastinate</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Bài giải thích nguồn gốc cảm xúc của trì hoãn và các chiến lược khắc phục — đây là ý chính bao trùm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"conscientious"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. careless and lazy</li><li>B. careful and diligent about one's duties</li><li>C. easily distracted</li><li>D. overly confident</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "conscientious and high-achieving" mô tả người tận tâm, chăm chỉ, có trách nhiệm.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 1, why do people procrastinate?</div>
+    <ul><li>A. They do not understand the consequences of delay</li><li>B. They are trying to avoid an unpleasant feeling linked to the task</li><li>C. They lack any emotional response to tasks</li><li>D. They have too much free time</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 1: "trying...to avoid an unpleasant feeling associated with the task itself."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 2, the word <b class="k">"it"</b> (in "even though it usually leads to greater stress") refers to:</div>
+    <ul><li>A. the deadline</li><li>B. the momentary relief / avoidance</li><li>C. the brain</li><li>D. the habit of high achievement</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu nói việc trì hoãn (avoidance) đem lại nhẹ nhõm tức thời nhưng "it" (việc trì hoãn đó) dẫn đến stress lớn hơn sau này.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 3 that feeling guilty about procrastinating:</div>
+    <ul><li>A. always motivates people to work harder immediately</li><li>B. can actually make procrastination worse</li><li>C. has no effect on future behaviour</li><li>D. is the best strategy to stop avoidance</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "dwelling on guilt, which paradoxically tends to fuel further avoidance" → cảm giác tội lỗi khiến trì hoãn nặng hơn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The phrase <b class="k">"looms"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. disappears quietly</li><li>B. approaches in a way that feels threatening or imminent</li><li>C. becomes less important</li><li>D. is postponed indefinitely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "once the deadline looms" = khi hạn chót đang cận kề, đe dọa.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention "setting a five-minute timer" in paragraph 4?</div>
+    <ul><li>A. To criticise people who use timers</li><li>B. To give a concrete example of a small environmental change that can help</li><li>C. To argue that timers are unnecessary</li><li>D. To describe a scientific experiment in detail</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đây là ví dụ cụ thể minh họa cho việc điều chỉnh môi trường nhỏ giúp phá vỡ vòng lặp trì hoãn.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned as strategies to reduce procrastination EXCEPT:</div>
+    <ul><li>A. practising self-compassion</li><li>B. breaking tasks into smaller steps</li><li>C. removing distracting apps</li><li>D. increasing financial rewards for completed work</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều được nêu trong đoạn 3–4; "financial rewards" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's attitude toward people who procrastinate is best described as:</div>
+    <ul><li>A. judgmental and dismissive</li><li>B. understanding and constructive</li><li>C. completely indifferent</li><li>D. mocking and sarcastic</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả giải thích nguyên nhân sâu xa và đề xuất giải pháp thực tế, không phán xét → thái độ cảm thông, xây dựng.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Inference</span><span class="c1tag">C1</span> It can be inferred from the passage as a whole that overcoming procrastination mainly requires:</div>
+    <ul><li>A. stricter punishment for missed deadlines</li><li>B. addressing the emotional roots rather than relying solely on willpower</li><li>C. avoiding all difficult tasks altogether</li><li>D. working exclusively under pressure</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 4 kết luận: "requires understanding one's own emotional triggers rather than relying on willpower alone."</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Psychology &amp; Behavior</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>procrastination</td><td>(n)</td><td>sự trì hoãn</td></tr>
+    <tr><td>willpower</td><td>(n)</td><td>ý chí</td></tr>
+    <tr><td>reinforce</td><td>(v)</td><td>củng cố (thói quen)</td></tr>
+    <tr><td>vicious cycle</td><td>(n)</td><td>vòng luẩn quẩn</td></tr>
+    <tr><td>conscientious <span class="c1tag">C1</span></td><td>(adj)</td><td>tận tâm, có trách nhiệm</td></tr>
+    <tr><td>self-compassion</td><td>(n)</td><td>sự tự cảm thông với bản thân</td></tr>
+    <tr><td>looms <span class="c1tag">C1</span></td><td>(v)</td><td>cận kề một cách đe dọa</td></tr>
+    <tr><td>momentum</td><td>(n)</td><td>đà, động lực</td></tr>
+  </table>
+
+  <!-- ============ BÀI 4: ARTS & MUSIC ============ -->
+  <h2>Bài 4 · Arts &amp; Music <span class="lvl">B2 + C1</span></h2>
+
+  <div class="passage">
+    <h3>Street Art: From Vandalism to Valued Culture</h3>
+    <p><span class="pn">[1]</span> For much of the twentieth century, graffiti was regarded almost exclusively as an act of vandalism, associated with urban decay and criminal subcultures. City authorities spent considerable sums removing it, and those caught painting walls without permission faced fines or even imprisonment. Yet over the past few decades, public perception has shifted dramatically, and what was once condemned is now, in many cities, celebrated as a legitimate and highly valued art form.</p>
+    <p class="vi-para">[1] Trong phần lớn thế kỷ 20, graffiti gần như chỉ bị coi là hành vi phá hoại, gắn liền với sự xuống cấp đô thị và các tiểu văn hóa phạm pháp. Chính quyền thành phố đã chi những khoản tiền không nhỏ để xóa bỏ nó, và những ai bị bắt vẽ lên tường mà không được phép phải chịu phạt tiền, thậm chí ngồi tù. Thế nhưng trong vài thập kỷ qua, nhận thức của công chúng đã thay đổi mạnh mẽ, và những gì từng bị lên án nay ở nhiều thành phố lại được tôn vinh như một loại hình nghệ thuật chính danh và có giá trị cao.</p>
+    <p><span class="pn">[2]</span> This transformation owes much to a handful of influential artists who elevated street art's status through technical skill, social commentary, and, at times, sheer notoriety. Their works, often executed illegally under cover of darkness, address themes ranging from political corruption to environmental destruction, using humour and irony to provoke reflection among passers-by who might otherwise ignore a conventional gallery exhibit. Paradoxically, some of these artists now command enormous prices at auction houses, the very institutions their work once implicitly criticised.</p>
+    <p class="vi-para">[2] Sự chuyển biến này phần lớn nhờ vào một số ít nghệ sĩ có sức ảnh hưởng đã nâng tầm nghệ thuật đường phố bằng kỹ thuật điêu luyện, những bình luận xã hội sắc bén, và đôi khi chỉ đơn thuần là tiếng tăm gây tranh cãi của họ. Tác phẩm của họ, thường được thực hiện bất hợp pháp trong bóng tối, đề cập đến các chủ đề từ tham nhũng chính trị đến hủy hoại môi trường, dùng sự hài hước và mỉa mai để khơi gợi suy ngẫm nơi những người qua đường vốn có thể bỏ qua một triển lãm phòng tranh thông thường. Nghịch lý thay, một số nghệ sĩ này nay được trả giá cực cao tại các nhà đấu giá — chính những thể chế mà tác phẩm của họ từng ngầm phê phán.</p>
+    <p><span class="pn">[3]</span> This commercial success has sparked considerable debate within the artistic community. Purists argue that street art derives its power precisely from its illegality and impermanence — a mural painted without permission carries a different meaning from one commissioned by a city council eager to attract tourists. Once street art becomes officially sanctioned, they contend, it risks losing the rebellious spirit that originally distinguished it from traditional art forms displayed in museums.</p>
+    <p class="vi-para">[3] Thành công thương mại này đã khơi mào nhiều tranh luận trong giới nghệ thuật. Những người theo chủ nghĩa thuần túy cho rằng sức mạnh của nghệ thuật đường phố chính là đến từ tính bất hợp pháp và tính tạm thời của nó — một bức tranh tường vẽ không xin phép mang ý nghĩa khác hẳn so với một bức được hội đồng thành phố đặt hàng nhằm thu hút du khách. Họ lập luận rằng một khi nghệ thuật đường phố được chính thức công nhận, nó có nguy cơ đánh mất tinh thần nổi loạn vốn là điều khiến nó khác biệt với các loại hình nghệ thuật truyền thống trưng bày trong bảo tàng.</p>
+    <p><span class="pn">[4]</span> Others take a more pragmatic view, arguing that formal recognition need not extinguish street art's subversive character entirely. Numerous artists continue to produce unsanctioned work alongside commissioned pieces, deliberately straddling both worlds. Meanwhile, cities have discovered that vibrant, artist-designed murals can revitalise neglected neighbourhoods, attracting visitors and fostering local pride. Whatever one's stance on this ongoing tension, it seems clear that street art has permanently altered how societies define the boundary between vandalism and legitimate artistic expression.</p>
+    <p class="vi-para">[4] Những người khác có cái nhìn thực dụng hơn, cho rằng sự công nhận chính thức không nhất thiết sẽ dập tắt hoàn toàn tính chất nổi loạn của nghệ thuật đường phố. Nhiều nghệ sĩ vẫn tiếp tục sáng tác cả những tác phẩm không xin phép lẫn các tác phẩm được đặt hàng, cố tình đứng chân ở cả hai thế giới. Trong khi đó, các thành phố đã nhận ra rằng những bức tranh tường sống động do nghệ sĩ thiết kế có thể hồi sinh những khu phố bị bỏ quên, thu hút du khách và nuôi dưỡng niềm tự hào của cộng đồng địa phương. Dù quan điểm của mỗi người về sự căng thẳng dai dẳng này ra sao, có thể thấy rõ rằng nghệ thuật đường phố đã thay đổi vĩnh viễn cách xã hội định nghĩa ranh giới giữa phá hoại và biểu đạt nghệ thuật chính danh.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Main idea</span> The passage mainly discusses:</div>
+    <ul><li>A. how street art shifted from being condemned to being valued, along with the debates this raises</li><li>B. the history of imprisonment for minor crimes</li><li>C. why museums are more important than street murals</li><li>D. techniques used to remove graffiti from walls</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Bài đi từ lịch sử bị xem là phá hoại đến việc được công nhận là nghệ thuật, kèm tranh luận — đây là ý chính.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Vocabulary</span> The word <b class="k">"notoriety"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. quiet obscurity</li><li>B. being widely known, often for controversial reasons</li><li>C. financial poverty</li><li>D. official government approval</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "notoriety" = tiếng tăm (thường mang tính gây tranh cãi), phù hợp với ngữ cảnh nghệ sĩ vẽ graffiti nổi tiếng vì việc làm bất hợp pháp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Detail</span> According to paragraph 2, what themes do street artists' works often address?</div>
+    <ul><li>A. Only nature and landscapes</li><li>B. Political corruption and environmental destruction</li><li>C. Ancient mythology</li><li>D. Sports and celebrity culture</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn 2 nêu rõ: "themes ranging from political corruption to environmental destruction."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · Reference</span> In paragraph 3, the word <b class="k">"they"</b> (in "they contend") refers to:</div>
+    <ul><li>A. auction houses</li><li>B. city councils</li><li>C. purists who value street art's illegality</li><li>D. tourists visiting murals</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> Câu trước nói về "Purists argue..." → "they" chỉ nhóm purists này tiếp tục lập luận.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · Inference</span> It can be inferred from paragraph 4 that some artists:</div>
+    <ul><li>A. refuse to accept any commissioned work</li><li>B. produce both unauthorised and officially commissioned pieces</li><li>C. have completely abandoned street art</li><li>D. only work inside museums now</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "Numerous artists continue to produce unsanctioned work alongside commissioned pieces, deliberately straddling both worlds."</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"subversive"</b> (paragraph 4) is closest in meaning to:</div>
+    <ul><li>A. conventional and obedient</li><li>B. challenging or undermining established norms</li><li>C. financially profitable</li><li>D. purely decorative</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "subversive character" = tính chất nổi loạn, thách thức các chuẩn mực đã được thiết lập.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Purpose</span> Why does the author mention that some street artists' works are now sold at auction houses (paragraph 2)?</div>
+    <ul><li>A. To show a paradox between street art's origins and its current commercial status</li><li>B. To criticise auction houses for being too expensive</li><li>C. To argue that street art should remain illegal</li><li>D. To describe how auctions are organised</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> Câu nhấn mạnh sự nghịch lý: tác phẩm từng phê phán các thể chế nay lại được chính các thể chế đó mua với giá cao.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · NOT / EXCEPT</span> All of the following are mentioned in the passage EXCEPT:</div>
+    <ul><li>A. artists facing fines or imprisonment</li><li>B. murals revitalising neglected neighbourhoods</li><li>C. debate over the loss of street art's rebellious spirit</li><li>D. governments banning all forms of public art entirely</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều xuất hiện trong bài; "banning all public art entirely" không được nhắc đến.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">9 · Tone / Attitude</span> The author's tone toward the debate around street art's commercialisation is best described as:</div>
+    <ul><li>A. one-sided, favouring only purists</li><li>B. balanced, presenting multiple perspectives</li><li>C. dismissive of the entire art form</li><li>D. purely nostalgic for the past</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Tác giả trình bày cả quan điểm của purists (đoạn 3) lẫn cách nhìn thực dụng hơn (đoạn 4) mà không nghiêng hẳn về phía nào.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">10 · Paraphrase</span><span class="c1tag">C1</span> Which sentence best paraphrases: "street art has permanently altered how societies define the boundary between vandalism and legitimate artistic expression"?</div>
+    <ul><li>A. Street art has had no lasting effect on how art is defined.</li><li>B. Street art has lastingly changed the way societies distinguish vandalism from genuine art.</li><li>C. Vandalism and street art are now considered exactly the same crime.</li><li>D. Societies have banned street art from all public spaces.</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu gốc nói street art đã thay đổi vĩnh viễn ranh giới xã hội định nghĩa giữa phá hoại và nghệ thuật hợp pháp — B diễn đạt lại chính xác ý này.</p></details>
+  </div>
+
+  <h2>Từ vựng chủ đề Arts &amp; Music</h2>
+  <table>
+    <tr><th width="28%">Từ / cụm</th><th width="14%">Loại</th><th>Nghĩa</th></tr>
+    <tr><td>vandalism</td><td>(n)</td><td>hành vi phá hoại</td></tr>
+    <tr><td>condemn</td><td>(v)</td><td>lên án</td></tr>
+    <tr><td>notoriety <span class="c1tag">C1</span></td><td>(n)</td><td>tiếng tăm (thường tiêu cực)</td></tr>
+    <tr><td>provoke</td><td>(v)</td><td>khơi gợi, kích thích</td></tr>
+    <tr><td>purist</td><td>(n)</td><td>người theo chủ nghĩa thuần túy</td></tr>
+    <tr><td>impermanence</td><td>(n)</td><td>tính tạm thời, không vĩnh cửu</td></tr>
+    <tr><td>subversive <span class="c1tag">C1</span></td><td>(adj)</td><td>có tính lật đổ/thách thức chuẩn mực</td></tr>
+    <tr><td>revitalise</td><td>(v)</td><td>làm hồi sinh, tái sinh động</td></tr>
+  </table>
+
+  <!-- ============ CHẤM ĐIỂM TOÀN ĐỀ ============ -->
+  <h2>Chấm điểm toàn đề</h2>
+  <div class="card">
+    <b>Bảng đáp án nhanh (40 câu):</b>
+    <table>
+      <tr><th>Bài 1 · Travel</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-C · 9-B · 10-A</td></tr>
+      <tr><th>Bài 2 · Media</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 3 · Psychology</th><td>1-B · 2-B · 3-B · 4-B · 5-B · 6-B · 7-B · 8-D · 9-B · 10-B</td></tr>
+      <tr><th>Bài 4 · Arts</th><td>1-A · 2-B · 3-B · 4-C · 5-B · 6-B · 7-A · 8-D · 9-B · 10-B</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>Sau khi chấm:</b> ghi vào "sổ lỗi" mỗi câu sai theo mẫu <i>"Bài __ · Câu __ · dạng __ · sai vì __"</i>. Dạng nào sai lặp lại ở ≥2 bài → đây là điểm yếu cần luyện thêm trước khi sang Tuần 7.</p>
+    <p style="margin-top:6px; color:var(--muted)">📊 <b>Tự đánh giá /40:</b> 34–40 → nền rất vững, sẵn sàng lên trình độ khó hơn · 26–33 → ổn, đúng hướng, cần củng cố vài dạng câu · 18–25 → cần đọc lại kỹ cả 4 bài + học lại từ vựng · dưới 18 → nên ôn lại toàn bộ Tuần 5–6 trước khi tiếp tục.</p>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Đề full #3?</b> Ngày 6–7 nghỉ, ôn sổ lỗi trước khi bước sang Tuần 7.
+  </div>
+
+</div>
+
+<footer>🗂️ Tuần 6 · Ngày 5 · VSTEP Reading — Đề Full #3 · Làm nghiêm túc hôm nay, tự tin hơn ngày thi thật.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>

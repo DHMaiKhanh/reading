@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngày 38 — Vá điểm yếu · VSTEP Reading</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-card: #131c2e;
+    --bg-card-2: #1a2742;
+    --border: #243049;
+    --primary: #4f8cff;
+    --primary-soft: #1e2f52;
+    --accent: #f5a524;
+    --green: #2dd4a7;
+    --text: #e6edf7;
+    --muted: #8a99b3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    padding-bottom: 60px;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+  header { text-align: center; padding: 38px 22px 18px; }
+  header h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  header p { color: var(--muted); }
+  .meta { display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+  .badge { background: var(--primary-soft); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+  h2 {
+    font-size: 1.3rem; margin: 30px 0 6px; padding: 12px 18px;
+    background: var(--bg-card); border-left: 4px solid var(--primary); border-radius: 10px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  h3 { color: var(--primary); font-size: 1.08rem; margin: 18px 0 8px; }
+
+  .lvl { font-size: 0.78rem; font-weight: 700; padding: 3px 11px; border-radius: 12px; background:#523524; color:#ffd9b0; }
+  .c1tag { display:inline-block; font-size:0.68rem; font-weight:700; padding:1px 8px; border-radius:10px; background:#4a2c33; color:#ffc6d2; margin-left:6px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 12px 0; }
+  .tip { border-left: 4px solid var(--green); }
+  .warn { border-left: 4px solid var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: var(--bg-card-2); text-align: left; padding: 8px 10px; font-size: 0.9rem; border: 1px solid var(--border); }
+  td { border: 1px solid var(--border); padding: 8px 10px; font-size: 0.92rem; vertical-align: top; }
+  td:first-child { color: var(--primary); font-weight: 600; white-space: nowrap; }
+
+  .passage {
+    background: #0e1830; border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    border-radius: 12px; padding: 18px 22px; margin: 14px 0; font-size: 1.02rem;
+  }
+  .passage h3 { color: var(--accent); margin-top: 0; }
+  .passage p { margin: 10px 0; }
+  .passage .pn { color: var(--muted); font-weight: 700; margin-right: 4px; }
+
+  .vi-para {
+    background: var(--bg-card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 4px 0 16px;
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin: 12px 0; }
+  .q .qhead { font-weight: 600; margin-bottom: 8px; }
+  .q .tag { display:inline-block; background: var(--primary-soft); color:#cfe0ff; font-size:0.72rem; padding:2px 9px; border-radius:10px; margin-right:8px; }
+  .q ul { list-style: none; margin: 6px 0; }
+  .q li { padding: 4px 0 4px 6px; }
+  details { margin-top: 10px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; }
+  summary { cursor: pointer; color: var(--green); font-weight: 600; }
+  details[open] summary { margin-bottom: 6px; }
+  .ans { color: var(--green); font-weight: 700; }
+  b.k { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); margin-top: 36px; font-size: 0.88rem; }
+  .lang-toggle { display:flex; justify-content:center; gap:8px; margin-top:14px; }
+  .lang-btn { background: var(--primary-soft); border:1px solid var(--border); color:var(--text); padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:600; cursor:pointer; transition:.15s; }
+  .lang-btn.active { background: var(--primary); color:#fff; border-color:var(--primary); }
+  .vi-para { display:none; }
+  body.show-vi .vi-para { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🩹 Tuần 8 · Ngày 1 — Vá điểm yếu</h1>
+  <p>Rà lại 2–3 dạng câu hay sai nhất: Inference, NOT/EXCEPT &amp; Vocabulary (C1)</p>
+  <div class="meta">
+    <span class="badge">🕐 ~35 phút</span>
+    <span class="badge">🟠 3 đoạn ngắn · 8 câu</span>
+    <span class="badge">🎯 Tập trung đúng 3 dạng khó nhất</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-vi" onclick="setLang('vi')">VI</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card warn">
+    <b>📋 Vì sao hôm nay chỉ luyện 3 dạng?</b>
+    <p style="margin-top:6px;">Qua các tuần luyện đề trước, học viên VSTEP Reading thường mất điểm nhiều nhất ở <b>3 dạng câu</b>:</p>
+    <ol style="margin:6px 0 0 18px;">
+      <li><b>Inference</b> (suy luận) — phải suy ra ý <i>không nói trực tiếp</i> trong bài, dễ bị lừa bởi đáp án "đúng nhưng không phải ý được hỏi".</li>
+      <li><b>NOT / EXCEPT</b> — phải đối chiếu <i>cả 4 phương án</i> với bài, chỉ cần đọc sót 1 ý là chọn sai.</li>
+      <li><b>Vocabulary (C1)</b> — từ vựng học thuật nâng cao, không đoán được nghĩa nếu không nhìn ngữ cảnh kỹ.</li>
+    </ol>
+    <p style="margin-top:8px; color:var(--muted)">👉 Hôm nay <b>không học bài mới</b> — chỉ luyện sâu 3 dạng này qua 3 đoạn văn ngắn thuộc 3 chủ đề khác nhau, để quen "cảm giác" nhận diện bẫy của từng dạng.</p>
+  </div>
+
+  <!-- ============ ĐOẠN 1: INFERENCE ============ -->
+  <h2>Đoạn 1 · Dạng <span class="lvl">Inference</span></h2>
+
+  <div class="card tip">
+    <b>💡 Mẹo nhận diện Inference:</b>
+    <ul style="margin:6px 0 0 18px;">
+      <li>Đề bài thường có từ khóa: <i>"It can be inferred...", "implies that...", "suggests that...", "most likely believes..."</i></li>
+      <li>Đáp án đúng = <b>suy ra hợp lý</b> từ thông tin đã cho, KHÔNG được nói y nguyên trong bài.</li>
+      <li>Loại ngay đáp án dùng từ <b>tuyệt đối</b>: "always", "never", "completely", "all" — bài đọc hiếm khi khẳng định tuyệt đối như vậy.</li>
+      <li>Đáp án đúng thường "vừa phải", có tính khái quát nhẹ từ 1–2 câu cụ thể trong đoạn.</li>
+    </ul>
+  </div>
+
+  <div class="passage">
+    <h3>Society: The Decline of Face-to-Face Communication</h3>
+    <p><span class="pn">[1]</span> Sociologists have observed a notable shift in the way people interact: face-to-face conversation is steadily giving way to text-based exchanges on smartphones. A recent survey found that many teenagers now prefer sending messages even to friends sitting in the same room, citing convenience and reduced awkwardness. While this shift undoubtedly saves time, some researchers worry that it may be eroding essential social skills, such as reading body language and tolerating the discomfort of live disagreement.</p>
+    <p class="vi-para">[1] Các nhà xã hội học đã nhận thấy một sự chuyển dịch đáng chú ý trong cách con người giao tiếp: trò chuyện trực tiếp đang dần nhường chỗ cho việc trao đổi qua tin nhắn trên điện thoại thông minh. Một khảo sát gần đây cho thấy nhiều thanh thiếu niên hiện nay thích nhắn tin ngay cả với bạn bè đang ngồi cùng phòng, với lý do tiện lợi và giảm bớt sự ngượng ngùng. Dù sự thay đổi này chắc chắn giúp tiết kiệm thời gian, một số nhà nghiên cứu lo ngại rằng nó có thể đang bào mòn những kỹ năng xã hội thiết yếu, chẳng hạn như đọc ngôn ngữ cơ thể và chịu đựng sự khó chịu khi tranh luận trực tiếp.</p>
+
+    <p><span class="pn">[2]</span> Not everyone views the trend negatively, however. Supporters argue that digital communication allows shy individuals, who might otherwise avoid social contact altogether, to participate in relationships on their own terms. For these people, texting can serve as a bridge rather than a barrier. Still, most experts agree that a healthy balance between digital and in-person interaction remains important for long-term emotional well-being, particularly during the formative years of adolescence.</p>
+    <p class="vi-para">[2] Tuy nhiên, không phải ai cũng nhìn nhận xu hướng này một cách tiêu cực. Những người ủng hộ cho rằng giao tiếp kỹ thuật số cho phép những người rụt rè — vốn có thể sẽ né tránh tiếp xúc xã hội hoàn toàn — tham gia vào các mối quan hệ theo cách riêng của họ. Đối với những người này, nhắn tin có thể đóng vai trò như một cây cầu chứ không phải một rào cản. Dù vậy, hầu hết các chuyên gia đều đồng ý rằng sự cân bằng lành mạnh giữa tương tác kỹ thuật số và trực tiếp vẫn rất quan trọng đối với sức khỏe tinh thần lâu dài, đặc biệt trong những năm tháng hình thành nhân cách của tuổi vị thành niên.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">1 · Inference</span> It can be inferred from paragraph 1 that reading body language is:</div>
+    <ul><li>A. a skill that requires no practice</li><li>B. a social skill that may weaken with less face-to-face contact</li><li>C. no longer useful in modern society</li><li>D. easier to learn through texting</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Đoạn nói việc chuyển sang nhắn tin "may be eroding essential social skills, such as reading body language" → suy ra kỹ năng này có thể yếu đi khi ít giao tiếp trực tiếp. A, C, D đều là suy diễn quá xa hoặc tuyệt đối.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">2 · Inference</span> The passage suggests that for shy individuals, digital communication:</div>
+    <ul><li>A. is completely harmless with no drawbacks</li><li>B. should always replace face-to-face contact</li><li>C. can offer a more comfortable way to connect with others</li><li>D. is disapproved of by all researchers</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">C.</span> "texting can serve as a bridge rather than a barrier" cho người rụt rè → suy ra đó là cách kết nối thoải mái hơn. A/B/D dùng từ tuyệt đối ("completely", "always", "all") → bẫy điển hình của Inference.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">3 · Inference</span> The overall message of the passage implies that:</div>
+    <ul><li>A. digital communication should be banned entirely</li><li>B. balance between digital and face-to-face interaction is desirable</li><li>C. teenagers no longer need social skills</li><li>D. researchers have reached no conclusions at all</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> Câu cuối đoạn 2: "a healthy balance between digital and in-person interaction remains important" → đây là thông điệp tổng quát được suy ra từ cả bài.</p></details>
+  </div>
+
+  <!-- ============ ĐOẠN 2: NOT/EXCEPT ============ -->
+  <h2>Đoạn 2 · Dạng <span class="lvl">NOT / EXCEPT</span></h2>
+
+  <div class="card tip">
+    <b>💡 Mẹo nhận diện NOT/EXCEPT:</b>
+    <ul style="margin:6px 0 0 18px;">
+      <li>Đề bài có từ khóa: <i>"All of the following... EXCEPT", "which is NOT mentioned/true"</i>.</li>
+      <li>Chiến thuật: gạch từng đáp án A, B, C, D vào lề bài đọc — <b>3/4 đáp án CÓ trong bài</b>, chỉ 1 đáp án KHÔNG có (hoặc sai) → đó là đáp án cần chọn.</li>
+      <li>Đừng dừng lại khi tìm thấy 1 đáp án "có vẻ đúng" — phải kiểm tra hết cả 4 phương án vì bài luôn có ≥3 ý được nhắc rải rác ở các đoạn khác nhau.</li>
+      <li>Đáp án gây bẫy thường là thông tin <b>không xuất hiện ở đâu trong bài</b>, dù nghe có vẻ hợp lý ngoài đời.</li>
+    </ul>
+  </div>
+
+  <div class="passage">
+    <h3>Environment: Urban Green Spaces</h3>
+    <p><span class="pn">[1]</span> City planners increasingly recognise the value of urban green spaces such as parks, community gardens, and tree-lined streets. Beyond their aesthetic appeal, these spaces provide measurable benefits: they reduce air pollution by filtering particulates, lower surrounding temperatures during heatwaves, and offer residents a place to exercise and socialise.</p>
+    <p class="vi-para">[1] Các nhà quy hoạch đô thị ngày càng công nhận giá trị của không gian xanh trong thành phố như công viên, vườn cộng đồng và những con đường rợp bóng cây. Ngoài vẻ đẹp thẩm mỹ, những không gian này còn mang lại lợi ích có thể đo lường được: chúng giảm ô nhiễm không khí bằng cách lọc bụi mịn, hạ nhiệt độ xung quanh trong các đợt nắng nóng, và mang đến cho cư dân một nơi để tập thể dục và giao lưu.</p>
+
+    <p><span class="pn">[2]</span> Research also links access to green spaces with improved mental health, as time spent in natural surroundings has been shown to reduce stress and anxiety. Additionally, well-maintained parks can increase nearby property values, making green infrastructure an attractive investment for local governments.</p>
+    <p class="vi-para">[2] Nghiên cứu cũng cho thấy việc tiếp cận không gian xanh có liên quan đến sức khỏe tinh thần được cải thiện, vì thời gian dành cho thiên nhiên đã được chứng minh giúp giảm căng thẳng và lo âu. Ngoài ra, những công viên được chăm sóc tốt có thể làm tăng giá trị bất động sản xung quanh, khiến hạ tầng xanh trở thành một khoản đầu tư hấp dẫn đối với chính quyền địa phương.</p>
+
+    <p><span class="pn">[3]</span> Despite these advantages, creating new green spaces in densely built cities remains challenging. Land is scarce and expensive, and competing demands for housing often take priority. Some critics also argue that new parks, if poorly planned, can lead to gentrification, pushing long-term low-income residents out of neighbourhoods that suddenly become more desirable.</p>
+    <p class="vi-para">[3] Bất chấp những lợi ích này, việc tạo ra không gian xanh mới trong các thành phố xây dựng dày đặc vẫn là một thách thức. Đất đai khan hiếm và đắt đỏ, còn nhu cầu nhà ở cạnh tranh thường được ưu tiên hơn. Một số nhà phê bình cũng cho rằng nếu quy hoạch kém, các công viên mới có thể dẫn đến hiện tượng "trung lưu hóa", đẩy những cư dân thu nhập thấp lâu năm ra khỏi những khu phố bỗng nhiên trở nên hấp dẫn hơn.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">4 · NOT / EXCEPT</span> All of the following are mentioned as benefits of urban green spaces EXCEPT:</div>
+    <ul><li>A. reducing air pollution</li><li>B. lowering temperatures during heatwaves</li><li>C. increasing nearby property values</li><li>D. eliminating traffic congestion</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A (đoạn 1), B (đoạn 1), C (đoạn 2) đều được nhắc. "Traffic congestion" hoàn toàn không xuất hiện trong bài → đáp án D.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">5 · NOT / EXCEPT</span> According to the passage, all of the following are challenges to creating new green spaces EXCEPT:</div>
+    <ul><li>A. scarce and expensive land</li><li>B. competing demand for housing</li><li>C. risk of gentrification</li><li>D. lack of government funding</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">D.</span> A, B, C đều ở đoạn 3. "Lack of government funding" không được đề cập — thực ra đoạn 2 còn nói chính quyền coi đây là khoản đầu tư hấp dẫn, ngược với D.</p></details>
+  </div>
+
+  <!-- ============ ĐOẠN 3: VOCABULARY C1 ============ -->
+  <h2>Đoạn 3 · Dạng <span class="lvl">Vocabulary</span><span class="c1tag">C1</span></h2>
+
+  <div class="card tip">
+    <b>💡 Mẹo nhận diện Vocabulary (C1):</b>
+    <ul style="margin:6px 0 0 18px;">
+      <li>KHÔNG cố nhớ nghĩa từ điển — hãy nhìn <b>câu chứa từ đó</b> và câu trước/sau để đoán nghĩa qua ngữ cảnh (context clue).</li>
+      <li>Chú ý các dấu hiệu ngữ cảnh: từ nối tương phản (however, but, yet) → từ cần đoán có nghĩa ngược với ý trước; từ nối bổ sung (and, moreover) → nghĩa cùng chiều.</li>
+      <li>Loại các đáp án là từ đồng âm/gần giống về mặt chữ nhưng sai nghĩa (bẫy "false friend").</li>
+      <li>Với từ ghép hoặc cụm động từ (phrasal/collocation), tách nghĩa từng phần rồi ráp lại theo ngữ cảnh.</li>
+    </ul>
+  </div>
+
+  <div class="passage">
+    <h3>Business: The Rise of Remote Work</h3>
+    <p><span class="pn">[1]</span> The widespread adoption of remote work has fundamentally altered corporate culture. Many companies that once viewed physical presence in the office as indispensable now concede that productivity does not necessarily hinge on employees being physically present. This shift has forced managers to rethink how they evaluate performance, relying more on measurable output than on hours logged at a desk.</p>
+    <p class="vi-para">[1] Việc áp dụng rộng rãi hình thức làm việc từ xa đã thay đổi căn bản văn hóa doanh nghiệp. Nhiều công ty từng xem sự có mặt trực tiếp tại văn phòng là điều tất yếu nay đã thừa nhận rằng năng suất không nhất thiết phụ thuộc vào việc nhân viên có mặt trực tiếp. Sự thay đổi này đã buộc các quản lý phải suy nghĩ lại cách đánh giá hiệu suất, dựa nhiều hơn vào kết quả công việc đo lường được thay vì số giờ ngồi tại bàn làm việc.</p>
+
+    <p><span class="pn">[2]</span> However, the transition has not been without friction. Some executives contend that spontaneous collaboration and mentorship suffer when teams are dispersed across different locations. Junior employees, in particular, may find it harder to absorb the tacit knowledge that once passed informally between colleagues sharing the same physical space. Consequently, a growing number of firms are experimenting with hybrid models, hoping to reconcile the flexibility employees crave with the cohesion that in-person interaction fosters.</p>
+    <p class="vi-para">[2] Tuy nhiên, quá trình chuyển đổi này không phải không có trở ngại. Một số lãnh đạo cấp cao cho rằng sự hợp tác tự phát và việc kèm cặp bị ảnh hưởng khi các nhóm làm việc phân tán ở nhiều địa điểm khác nhau. Đặc biệt, nhân viên mới có thể gặp khó khăn hơn trong việc tiếp thu những kiến thức ngầm từng được truyền đạt một cách không chính thức giữa các đồng nghiệp cùng làm việc trong một không gian vật lý. Do đó, ngày càng nhiều công ty đang thử nghiệm mô hình kết hợp (hybrid), với hy vọng dung hòa giữa sự linh hoạt mà nhân viên mong muốn và sự gắn kết mà tương tác trực tiếp mang lại.</p>
+  </div>
+
+  <div class="q">
+    <div class="qhead"><span class="tag">6 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"indispensable"</b> (paragraph 1) is closest in meaning to:</div>
+    <ul><li>A. unnecessary</li><li>B. absolutely essential</li><li>C. temporary</li><li>D. expensive</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "viewed physical presence... as indispensable" nhưng câu sau lại nói "concede that productivity does not necessarily hinge on" → tương phản, cho thấy trước đây họ coi việc có mặt là bắt buộc, tất yếu.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">7 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"hinge on"</b> (paragraph 1) most nearly means:</div>
+    <ul><li>A. depend on</li><li>B. disagree with</li><li>C. be separate from</li><li>D. compete with</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">A.</span> "productivity does not necessarily hinge on employees being physically present" = năng suất không nhất thiết phụ thuộc vào việc nhân viên có mặt trực tiếp.</p></details>
+  </div>
+  <div class="q">
+    <div class="qhead"><span class="tag">8 · Vocabulary</span><span class="c1tag">C1</span> The word <b class="k">"tacit"</b> (paragraph 2) is closest in meaning to:</div>
+    <ul><li>A. written down formally</li><li>B. unspoken or implied, not directly stated</li><li>C. loud and obvious</li><li>D. financial</li></ul>
+    <details><summary>Đáp án &amp; giải thích</summary><p><span class="ans">B.</span> "tacit knowledge that once passed informally between colleagues" — kiến thức truyền đạt không chính thức, ngầm hiểu, không được viết ra hay nói rõ ràng ≈ unspoken, implied.</p></details>
+  </div>
+
+  <!-- ============ LÀM LẠI CÂU TỪNG SAI ============ -->
+  <h2>Làm lại câu từng sai — dùng sổ lỗi</h2>
+  <div class="card">
+    <b>📓 Cách dùng sổ lỗi để tự luyện thêm:</b>
+    <ol style="margin:6px 0 0 18px;">
+      <li>Mở lại sổ lỗi đã ghi từ các ngày luyện đề trước (Tuần 1–7). Lọc ra các câu từng sai thuộc <b>3 dạng</b>: Inference, NOT/EXCEPT, Vocabulary (C1).</li>
+      <li>Với mỗi câu sai, đọc lại nguyên đoạn văn gốc (không chỉ đọc câu hỏi), tự hỏi: <i>"Từ khóa nào trong bài dẫn đến đáp án đúng? Vì sao lúc trước mình chọn nhầm?"</i></li>
+      <li>Chọn 1 chủ đề mình hay sai nhất (ví dụ: nếu hay sai Inference ở bài Environment) → tìm 1 bài đọc cùng chủ đề đó để luyện thêm 5–10 câu Inference.</li>
+      <li>Ghi lại "quy tắc cá nhân" rút ra sau mỗi lần sửa — ví dụ: <i>"Mình hay chọn đáp án tuyệt đối ở câu Inference → từ nay thấy 'always/never/all' là nghi ngờ ngay."</i></li>
+      <li>Lặp lại quy trình này 10–15 phút mỗi ngày cho đến khi tỷ lệ sai ở dạng đó giảm rõ rệt.</li>
+    </ol>
+  </div>
+
+  <div class="card tip" style="margin-top:14px;">
+    ✅ <b>Xong Ngày 1 Tuần 8?</b> Bảng đáp án nhanh: <b>1-B · 2-C · 3-B · 4-D · 5-D · 6-B · 7-A · 8-B</b>. Nếu vẫn sai ≥2 câu ở 1 dạng nào đó, hãy quay lại phần "Mẹo nhận diện" của dạng đó và đọc lại kỹ trước khi làm đề mới ở Ngày 2 tuần này.
+  </div>
+
+</div>
+
+<footer>🩹 Tuần 8 · Ngày 1 — VSTEP Reading · Vá điểm yếu — sai ít lại mỗi ngày mới là tiến bộ thật.</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('show-vi', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+}
+</script>
+</body>
+</html>
